@@ -1,0 +1,111 @@
+{
+  "definitions": {
+    "year": {
+      "#label": "Année: %year%",
+      "2018": {
+        "singular": "%year%: <strong>%d</strong> disparition",
+        "plural": "%year%: <strong> %d</strong> disparitions"
+      },
+      "2019": {
+        "singular": "%year%: <strong>%d</strong> disparition",
+        "plural": "%year%: <strong>%d</strong> disparitions"
+      }
+    },
+    "cause": {
+      "#label": "Causes: %cause%",
+      "suicide": {
+        "singular": "<strong>%d</strong> suicide",
+        "plural": "<strong>%d</strong> suicides"
+      },
+      "deathOnDuty": {
+        "singular": "<strong>%d</strong> mort en service",
+        "plural": "<strong>%d</strong> morts en service"
+      },
+      "accident": {
+        "singular": "<strong>%d</strong> mort accidentellement",
+        "plural": "<strong>%d</strong> morts accidentellement"
+      },
+      "murdered": {
+        "singular": "<strong>%d</strong> assassiné",
+        "plural": "<strong>%d</strong> assassinés"
+      }
+    },
+    "house": {
+      "#label": "Corps: %house%",
+      "gendarmerie": {
+        "singular": "<strong>%d</strong> gendarme",
+        "plural": "<strong>%d</strong> gendarmes"
+      },
+      "police": {
+        "singular": "<strong>%d</strong> policier",
+        "plural": "<strong>%d</strong> policiers"
+      },
+      "douane": {
+        "singular": "<strong>%d</strong> douanier",
+        "plural": "<strong>%d</strong> douaniers"
+      },
+      "pompier": {
+        "singular": "<strong>%d</strong> pompier",
+        "plural": "<strong>%d</strong> pompiers"
+      }
+    }
+  },
+  "deaths": [
+    {
+      "cause": "accident",
+      "year": "2019",
+      "month": "06",
+      "day": "18",
+      "house": "police",
+      "text": "Yann T. est décédé à son domicile à la suite d'un accident.",
+      "section": "CRS 61",
+      "location": "Vélizy-Villacoublay (Yvelines)",
+      "gps": {
+        "lat": 48.783721,
+        "lon": 2.184852
+      }
+    },
+    {
+      "cause": "suicide",
+      "year": "2019",
+      "month": "04",
+      "day": "30",
+      "house": "gendarmerie",
+      "text": "Un commandant de gendarmerie de la caserne, il était père de famille.",
+      "section": "Caserne de l’Entre-Deux",
+      "location": "Entre-Deux (Réunion)",
+      "gps": {
+        "lat": 48.0977,
+        "lon": -4.212
+      }
+    },
+    {
+      "cause": "suicide",
+      "year": "2019",
+      "month": "04",
+      "day": "14",
+      "house": "police",
+      "text": "Un policier de la DOPC (UTJDR) se suicide à son domicile.",
+      "section": "DOPC (UTJDR)",
+      "location": "Paris",
+      "gps": {
+        "lat": 48.826618,
+        "lon": 2.370783
+      }
+    },
+    {
+      "cause": "suicide",
+      "year": "2019",
+      "month": "06",
+      "day": "20",
+      "house": "police",
+      "text": "Un policier de la BT centrale a mis fin à ses jours. Il était père de trois enfants.",
+      "section": "BT centrale",
+      "location": "Toulouse",
+      "gps": {
+        "lat": 43.602366,
+        "lon": 1.450819
+      }
+    }
+  ]
+}
