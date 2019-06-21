@@ -4,14 +4,16 @@
  */
 let main = {
   markers: [],
+  markerCluster: null,
   infoWindows: [],
   currentInfoWindows: null,
   init: function() {
     let options = {
       center: new google.maps.LatLng(48.1, -4.21),
+      mapTypeControl: false,
       zoom: 12,
       maxZoom: 14,
-      mapTypeId: google.maps.MapTypeId.SATELLITE,
+      mapTypeId: google.maps.MapTypeId.HYBRID,
     };
     let formElement = document.getElementById('form-filters');
     let mapElement = document.getElementById('map');
@@ -32,15 +34,21 @@ let main = {
     let self = this;
 
     qwest.get(source).then(function(xhr, response) {
+      let bounds = new google.maps.LatLngBounds(),
+        domTomMarkers = [],
+        nationalMarkers = [];
+
       response = self.filteredResponse(response, filters);
+
+      if (self.markerCluster) {
+        self.markerCluster.clearMarkers();
+      }
       self.clearMarkers();
 
       if (!response.deaths || !response.deaths.length) {
         self.printDefinitionsText(false);
         return;
       }
-
-      let bounds = new google.maps.LatLngBounds();
 
       for (let key in response.deaths) {
         if (response.deaths.hasOwnProperty(key)) {
@@ -53,13 +61,30 @@ let main = {
               './assets/images/' + death.house + '.png'),
           });
 
-          let infoWindows = new google.maps.InfoWindow({
-            content: '<h3>' + death.section + '</h3>'
-              + '<time>Le ' + death.day + '/' + death.month + '/' +
-              death.year + '</time>'
-              + '<p>' + death.text + '</p>',
-          });
+          let infoWindowsContent = '<h3>' + death.section + ' - ' + death.location + '</h3>'
+            + '<span><strong>Date</strong>: '
+            + death.day + '/'
+            + death.month + '/'
+            + death.year
+            + '<br /><br />'
+            + '<strong>Cause</strong>: ' + self.getFilterValueLabel('filter_cause', death.cause)
+            + '<br /><br />'
+            + '<strong>Circonstances</strong>: ' + death.text
+            + '</span>';
 
+          if(death.sources && death.sources.length){
+            let sourcesText = '';
+            for (let key in death.sources) {
+              if (death.sources.hasOwnProperty(key)) {
+                let source = death.sources[key];
+                sourcesText += (sourcesText ? ', ' : '') + ('<a href="' + source.url + '" target="_blank">' + source.titre + '</a>');
+              }
+            }
+            infoWindowsContent += '<br /><br /><strong>Sources:</strong> '  + sourcesText;
+          }
+
+
+          let infoWindows = new google.maps.InfoWindow({content: infoWindowsContent,});
           google.maps.event.addListener(marker, 'click', function() {
             if (self.currentInfoWindows) {
               self.currentInfoWindows.close();
@@ -70,9 +95,35 @@ let main = {
 
           self.infoWindows[key] = infoWindows;
           self.markers[key] = marker;
-          bounds.extend(marker.getPosition());
+          if (death.domtom) {
+            console.log(death);
+            domTomMarkers[key] = marker;
+          }
+          else {
+            nationalMarkers[key] = marker;
+          }
         }
       }
+
+      self.markerCluster = new MarkerClusterer(map, self.markers, {
+        imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
+        gridSize: 50,
+        maxZoom: 14,
+      });
+
+      /**
+       * National marker prioritization:
+       * We only bounds to DomTom if there
+       * nothing else on national territory
+       */
+      let boundsMarkers = (nationalMarkers.length ? nationalMarkers : domTomMarkers);
+      for (let key in boundsMarkers) {
+        if (boundsMarkers.hasOwnProperty(key)) {
+          bounds.extend(boundsMarkers[key].getPosition());
+        }
+      }
+
+
       self.printDefinitionsText(response);
       map.fitBounds(bounds);
     });
@@ -151,6 +202,11 @@ let main = {
     });
 
     return filters;
+  },
+  getFilterValueLabel: function(filterName, filterValue) {
+    let option = document.querySelector('form select[name="' + filterName + '"] > option[value="' + filterValue + '"]');
+
+    return (option ? option.innerText : filterValue);
   },
   filteredResponse: function(response, filters) {
     let filteredResponse = response;

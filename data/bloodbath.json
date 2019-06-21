@@ -47,37 +47,53 @@
       "pompier": {
         "singular": "<strong>%d</strong> pompier",
         "plural": "<strong>%d</strong> pompiers"
+      },
+      "armee": {
+        "singular": "<strong>%d</strong> militaire",
+        "plural": "<strong>%d</strong> militaires"
       }
     }
   },
   "deaths": [
     {
-      "cause": "accident",
+      "cause": "suicide",
       "year": "2019",
-      "month": "06",
-      "day": "18",
+      "month": "03",
+      "day": "07",
       "house": "police",
-      "text": "Yann T. est décédé à son domicile à la suite d'un accident.",
-      "section": "CRS 61",
-      "location": "Vélizy-Villacoublay (Yvelines)",
+      "text": "Un policier se suicide après une violente dispute conjugale. Il était père de deux enfants.",
+      "section": "Ciat Rouen / DDSP 76",
+      "location": "Saint-Saëns (Seine-Maritime)",
+      "domtom": false,
       "gps": {
-        "lat": 48.783721,
-        "lon": 2.184852
-      }
+        "lat": 49.435054,
+        "lon": 1.081077
+      },
+      "sources": [
+        {
+          "url" : "https://www.paris-normandie.fr/actualites/faits-divers/a-saint-saens-le-policier-a-commis-l-irreparable-la-commune-sous-le-choc-CC14702819",
+          "titre" : "Paris-Normadie"
+        }   ,     {
+          "url" : "https://actu.fr/normandie/saint-saens_76648/le-policier-jette-produit-sur-visage-femme-se-suicide-seine-maritime_21919654.html",
+          "titre" : "Actu.fr"
+        }
+      ]
     },
     {
       "cause": "suicide",
       "year": "2019",
       "month": "04",
-      "day": "30",
-      "house": "gendarmerie",
-      "text": "Un commandant de gendarmerie de la caserne, il était père de famille.",
-      "section": "Caserne de l’Entre-Deux",
-      "location": "Entre-Deux (Réunion)",
+      "day": "07",
+      "house": "police",
+      "text": "Une policière de la brigade de nuit se suicide dans un champ. Mère de 2 enfants elle laisse derrière elle une lettre.",
+      "section": "Brigade de nuit de Conflans-Sainte-Honorine (Yvelines)",
+      "location": "Guainville (Eure-et-Loir)",
+      "domtom": false,
       "gps": {
-        "lat": 48.0977,
-        "lon": -4.212
-      }
+        "lat": 49.000324,
+        "lon": 2.093394
+      },
+      "sources": []
     },
     {
       "cause": "suicide",
@@ -88,10 +104,76 @@
       "text": "Un policier de la DOPC (UTJDR) se suicide à son domicile.",
       "section": "DOPC (UTJDR)",
       "location": "Paris",
+      "domtom": false,
       "gps": {
         "lat": 48.826618,
         "lon": 2.370783
-      }
+      },
+      "sources": []
+    },
+    {
+      "cause": "suicide",
+      "year": "2019",
+      "month": "04",
+      "day": "16",
+      "house": "police",
+      "text": "Un policier du CRA se suicide à son domicile. Il était père d'un enfant.",
+      "section": "Centre de Rétention Administrative (CRA)",
+      "location": "Metz (Moselle)",
+      "domtom": false,
+      "gps": {
+        "lat": 49.099270,
+        "lon": 6.209754
+      },
+      "sources": []
+    },
+    {
+      "cause": "suicide",
+      "year": "2019",
+      "month": "04",
+      "day": "30",
+      "house": "gendarmerie",
+      "text": "Un commandant de gendarmerie se suicide, il était père de famille.",
+      "section": "Caserne de l’Entre-Deux",
+      "location": "Entre-Deux (Réunion)",
+      "domtom": true,
+      "gps": {
+        "lat": -21.248367,
+        "lon": 55.469654
+      },
+      "sources": []
+    },
+    {
+      "cause": "accident",
+      "year": "2019",
+      "month": "06",
+      "day": "18",
+      "house": "police",
+      "text": "Yann T. est décédé à son domicile à la suite d'un accident.",
+      "section": "CRS 61",
+      "location": "Vélizy-Villacoublay (Yvelines)",
+      "domtom": false,
+      "gps": {
+        "lat": 48.783721,
+        "lon": 2.184852
+      },
+      "sources": []
+    },
+    {
+      "cause": "suicide",
+      "year": "2019",
+      "month": "06",
+      "day": "18",
+      "house": "police",
+      "text": "Une capitaine se suicide dans son bureau. Elle était mère de deux enfants.",
+      "section": "Sureté Départementale",
+      "location": "Montpellier (Hérault)",
+      "domtom": false,
+      "gps": {
+        "lat": 43.612616,
+        "lon": 3.892701
+      },
+      "sources": []
     },
     {
       "cause": "suicide",
@@ -102,10 +184,12 @@
       "text": "Un policier de la BT centrale a mis fin à ses jours. Il était père de trois enfants.",
       "section": "BT centrale",
       "location": "Toulouse",
+      "domtom": false,
       "gps": {
         "lat": 43.602366,
         "lon": 1.450819
-      }
+      },
+      "sources": []
     }
   ]
 }
