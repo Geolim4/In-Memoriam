@@ -58,6 +58,30 @@
     {
       "cause": "suicide",
       "year": "2019",
+      "month": "01",
+      "day": "02",
+      "house": "police",
+      "text": "Un policier de la PAF se suicide sans faire usage de son arme de service. Il était marié et père de famille.",
+      "section": "PAF Cherbourg",
+      "location": "Querqueville (Manche)",
+      "domtom": false,
+      "gps": {
+        "lat": 49.662767,
+        "lon": -1.697209
+      },
+      "sources": [
+        {
+          "url" : "https://www.lamanchelibre.fr/actualite-641809-un-policier-se-suicide-dans-la-manche",
+          "titre" : "La Manche Libre"
+        }   ,     {
+          "url" : "https://actu17.fr/manche-un-policier-retrouve-mort-a-son-domicile-a-querqueville/",
+          "titre" : "Actu17"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "year": "2019",
       "month": "03",
       "day": "07",
       "house": "police",
@@ -144,6 +168,31 @@
       "sources": []
     },
     {
+      "cause": "suicide",
+      "year": "2019",
+      "month": "06",
+      "day": "03",
+      "house": "gendarmerie",
+      "text": "Un adjudant du Peloté Motorisé de Fougère s’est suicidé avec son arme de service. Il était marié et père de 5 enfants,",
+      "section": "EDSR (PMO Fougères)",
+      "location": "Fougères (Ille-et-Vilaine)",
+      "domtom": false,
+      "gps": {
+        "lat": 48.350400,
+        "lon": -1.183104
+      },
+      "sources": [        {
+        "url" : "https://actu17.fr/ille-et-vilaine-un-gendarme-de-47-ans-sest-suicide-a-fougeres/",
+        "titre" : "Actu17"
+      },  {
+        "url" : "https://lessor.org/a-la-une/suicide-dun-gendarme/",
+        "titre" : "L'essor"
+      },  {
+        "url" : "https://www.assogendarmesetcitoyens.com/post/d%C3%A9c%C3%A8s-d-un-gendarme-2",
+        "titre" : "L'asso gendarmes et citoyens"
+      }]
+    },
+    {
       "cause": "accident",
       "year": "2019",
       "month": "06",
@@ -157,7 +206,7 @@
         "lat": 48.783721,
         "lon": 2.184852
       },
-      "sources": []
+      "sources": [ ]
     },
     {
       "cause": "suicide",
@@ -182,7 +231,7 @@
       "day": "20",
       "house": "police",
       "text": "Un policier de la BT centrale a mis fin à ses jours. Il était père de trois enfants.",
-      "section": "BT centrale",
+      "section": "CSP Toulouse (BT centrale)",
       "location": "Toulouse",
       "domtom": false,
       "gps": {
