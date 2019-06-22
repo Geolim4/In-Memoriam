@@ -20,7 +20,7 @@ let main = {
     let map = new google.maps.Map(mapElement, options);
 
     this.bindFilters(map, mapElement, formElement);
-    this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement));
+    this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
   },
   clearMarkers: function() {
     for (let key in this.markers) {
@@ -67,12 +67,12 @@ let main = {
             + death.month + '/'
             + death.year
             + '<br /><br />'
-            + '<strong>Cause</strong>: ' + self.getFilterValueLabel('filter_cause', death.cause)
+            + '<strong>Cause</strong>: ' + self.getFilterValueLabel('cause', death.cause)
             + '<br /><br />'
             + '<strong>Circonstances</strong>: ' + death.text
             + '</span>';
 
-          if(death.sources && death.sources.length){
+          if (death.sources && death.sources.length) {
             let sourcesText = '';
             for (let key in death.sources) {
               if (death.sources.hasOwnProperty(key)) {
@@ -80,11 +80,11 @@ let main = {
                 sourcesText += (sourcesText ? ', ' : '') + ('<a href="' + source.url + '" target="_blank">' + source.titre + '</a>');
               }
             }
-            infoWindowsContent += '<br /><br /><strong>Sources:</strong> '  + sourcesText;
+            infoWindowsContent += '<br /><br /><strong>Sources:</strong> ' + sourcesText;
           }
 
 
-          let infoWindows = new google.maps.InfoWindow({content: infoWindowsContent,});
+          let infoWindows = new google.maps.InfoWindow({content: infoWindowsContent});
           google.maps.event.addListener(marker, 'click', function() {
             if (self.currentInfoWindows) {
               self.currentInfoWindows.close();
@@ -122,24 +122,24 @@ let main = {
         }
       }
 
-
+      self.buildPermalink(filters);
       self.printDefinitionsText(response);
       map.fitBounds(bounds);
     });
   },
   bindFilters: function(map, mapElement, formElement) {
-    let self = this;
-    let selects = formElement.querySelectorAll('form select'), filters = {};
+    let self = this,
+      filters = this.getFilters(formElement, true),
+      selects = formElement.querySelectorAll('form select');
 
     selects.forEach(function(select) {
+      select.value = filters[select.name];
       self.addEventHandler(select, 'change', function() {
         self.bindMarkers(mapElement.dataset.bloodbathSrc, map,
           self.getFilters(formElement));
         return false;
       });
     });
-
-    return filters;
   },
   printDefinitionsText: function(response) {
     let definitionTexts = [];
@@ -172,6 +172,22 @@ let main = {
     let element = document.querySelector('[data-role="definitionsText"]');
     element.innerHTML = definitionTexts.join('<br />');
   },
+  buildPermalink: function(filters) {
+    let url = location.href.replace(/#.*$/, ''),
+      permalinkElement = document.querySelector('[data-role="permalink"]'),
+      anchor = '';
+
+    for (let key in filters) {
+      if (filters.hasOwnProperty(key)) {
+        let filterValue = filters[key];
+        if (filterValue) {
+          anchor += (anchor ? '|' : '#') + key + ':' + filterValue;
+        }
+      }
+    }
+
+    permalinkElement.value = url + anchor;
+  },
   getDefinitions: function(response) {
     let definitions = {};
     for (let fKey in response.definitions) {
@@ -193,11 +209,25 @@ let main = {
 
     return definitions;
   },
-  getFilters: function(form) {
-    let selects = document.querySelectorAll('form select'), filters = {};
+  getFilters: function(form, fromAnchor) {
+    let selects = document.querySelectorAll('form select'),
+      anchor = location.hash.substr(1).split('|'),
+      exposedFilters = {},
+      filters = {};
+
+    anchor.forEach(function(value){
+      let filter = value.split(':');
+      if(filter.length === 2){
+        exposedFilters[filter[0]] = filter[1];
+      }
+    });
 
     selects.forEach(function(select) {
-      filters[select.id] = select.value;
+      if(fromAnchor && exposedFilters[select.id]){
+        filters[select.id] = exposedFilters[select.id];
+      }else{
+        filters[select.id] = select.value;
+      }
     });
 
     return filters;
@@ -212,7 +242,7 @@ let main = {
 
     for (let fKey in filters) {
       if (filters.hasOwnProperty(fKey)) {
-        let filter = filters[fKey], fieldName = fKey.replace('filter_', '');
+        let filter = filters[fKey], fieldName = fKey;
         if (filter) {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
@@ -235,5 +265,34 @@ let main = {
     else if (elem.attachEvent) {
       elem.attachEvent('on' + eventType, handler);
     }
+  },
+  fallbackCopyTextToClipboard: function(text) {
+    var textArea = document.createElement('textarea');
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Fallback: Copying text command was ' + msg);
+    }
+    catch (err) {
+      console.error('Fallback: Oops, unable to copy', err);
+    }
+
+    document.body.removeChild(textArea);
+  },
+  copyTextToClipboard: function(text) {
+    if (!navigator.clipboard) {
+      this.fallbackCopyTextToClipboard(text);
+      return;
+    }
+    navigator.clipboard.writeText(text).then(function() {
+      console.log('Async: Copying to clipboard was successful!');
+    }, function(err) {
+      console.error('Async: Could not copy text: ', err);
+    });
   },
 };

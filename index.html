@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="main">
-    <h1>Cartographie des décès militaires et civiles Françaises</h1>
+    <h1>Cartographie des décès militaires et civils Français</h1>
     <div class="pure-g">
         <div class="pure-u-1-1">
             <p>Car les années se suivent et se ressemblent tristement, cette cartographie vous permettra de lister les décès tragiques militaires et civiles Françaises.</p>
@@ -17,16 +17,16 @@
         <div class="pure-u-1-1">
             <form class="pure-form pure-g" id="form-filters">
                 <fieldset class="pure-u-1-4">
-                    <label for="filter_year">Année</label>
-                    <select name="filter_year" id="filter_year">
+                    <label for="year">Année</label>
+                    <select name="year" id="year">
                         <option value="">---</option>
                         <option value="2019">2019</option>
                         <option value="2018">2018</option>
                     </select>
                 </fieldset>
                 <fieldset class="pure-u-1-4">
-                    <label for="filter_house">Corps</label>
-                    <select name="filter_house" id="filter_house">
+                    <label for="house">Corps</label>
+                    <select name="house" id="house">
                         <option value="">---</option>
                         <option value="police">Police</option>
                         <option value="gendarmerie">Gendarmerie</option>
@@ -36,8 +36,8 @@
                     </select>
                 </fieldset>
                 <fieldset class="pure-u-1-4">
-                    <label for="filter_cause">Cause</label>
-                    <select name="filter_cause" id="filter_cause">
+                    <label for="cause">Cause</label>
+                    <select name="cause" id="cause">
                         <option value="">---</option>
                         <option value="suicide" selected>Suicide</option>
                         <option value="deathOnDuty">Mort en service</option>
@@ -47,8 +47,8 @@
                     </select>
                 </fieldset>
                 <fieldset class="pure-u-1-4">
-                    <label for="filter_domtom">DOM-TOM</label>
-                    <select name="filter_domtom" id="filter_domtom">
+                    <label for="domtom">DOM-TOM</label>
+                    <select name="domtom" id="domtom">
                         <option value="">---</option>
                         <option value="no" selected>Non</option>
                         <option value="yes">Oui</option>
@@ -56,9 +56,19 @@
                 </fieldset>
             </form>
         </div>
-        <div class="pure-u-1-1"><p data-role="definitionsText"></p></div>
+        <div class="pure-u-1-1">
+            <p data-role="definitionsText"></p>
+        </div>
     </div>
     <div id="map" style="width:100%; height:100%" data-bloodbath-src="./data/bloodbath.json"></div>
+    <div class="pure-u-1-1">
+        <div class="pure-g">
+            <form class="pure-form pure-u-1-2" id="form-permalink">
+                <label for="permalink">Permalien</label>
+                <input id="permalink" type="text" title="Permalien" value="" data-role="permalink" onclick="select()" size="30" readonly>
+            </form>
+        </div>
+    </div>
     <footer>
         <h2>Disclaimer</h2>
         <p>
