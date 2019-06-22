@@ -199,6 +199,27 @@
       ]
     },
     {
+      "cause": "suicide",
+      "year": "2019",
+      "month": "06",
+      "day": "13",
+      "house": "police",
+      "text": "Un Gardien de la Paix du Ciat de police du 19ème à Paris se suicide sur son lieu de villégiature près de Nîmes.",
+      "section": "Ciat Paris 19e",
+      "location": "Saint-Gervasy (Gard)",
+      "domtom": "no",
+      "gps": {
+        "lat": 43.877545,
+        "lon": 4.469124
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-policier-a-mis-fin-a-ses-jours-avec-son-arme-de-service/",
+          "titre": "Actu17"
+        }
+      ]
+    },
+    {
       "cause": "accident",
       "year": "2019",
       "month": "06",
