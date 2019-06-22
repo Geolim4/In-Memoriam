@@ -95,8 +95,7 @@ let main = {
 
           self.infoWindows[key] = infoWindows;
           self.markers[key] = marker;
-          if (death.domtom) {
-            console.log(death);
+          if (death.domtom === 'yes') {
             domTomMarkers[key] = marker;
           }
           else {

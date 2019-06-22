@@ -3,12 +3,12 @@
     "year": {
       "#label": "Année: %year%",
       "2018": {
-        "singular": "%year%: <strong>%d</strong> disparition",
-        "plural": "%year%: <strong> %d</strong> disparitions"
+        "singular": "<strong>%d</strong> disparition en %year%",
+        "plural": "<strong> %d</strong> disparitions en %year%"
       },
       "2019": {
-        "singular": "%year%: <strong>%d</strong> disparition",
-        "plural": "%year%: <strong>%d</strong> disparitions"
+        "singular": "<strong>%d</strong> disparition en %year%",
+        "plural": "<strong>%d</strong> disparitions en %year%"
       }
     },
     "cause": {
@@ -64,18 +64,19 @@
       "text": "Un policier de la PAF se suicide sans faire usage de son arme de service. Il était marié et père de famille.",
       "section": "PAF Cherbourg",
       "location": "Querqueville (Manche)",
-      "domtom": false,
+      "domtom": "no",
       "gps": {
         "lat": 49.662767,
         "lon": -1.697209
       },
       "sources": [
         {
-          "url" : "https://www.lamanchelibre.fr/actualite-641809-un-policier-se-suicide-dans-la-manche",
-          "titre" : "La Manche Libre"
-        }   ,     {
-          "url" : "https://actu17.fr/manche-un-policier-retrouve-mort-a-son-domicile-a-querqueville/",
-          "titre" : "Actu17"
+          "url": "https://www.lamanchelibre.fr/actualite-641809-un-policier-se-suicide-dans-la-manche",
+          "titre": "La Manche Libre"
+        },
+        {
+          "url": "https://actu17.fr/manche-un-policier-retrouve-mort-a-son-domicile-a-querqueville/",
+          "titre": "Actu17"
         }
       ]
     },
@@ -88,18 +89,19 @@
       "text": "Un policier se suicide après une violente dispute conjugale. Il était père de deux enfants.",
       "section": "Ciat Rouen / DDSP 76",
       "location": "Saint-Saëns (Seine-Maritime)",
-      "domtom": false,
+      "domtom": "no",
       "gps": {
         "lat": 49.435054,
         "lon": 1.081077
       },
       "sources": [
         {
-          "url" : "https://www.paris-normandie.fr/actualites/faits-divers/a-saint-saens-le-policier-a-commis-l-irreparable-la-commune-sous-le-choc-CC14702819",
-          "titre" : "Paris-Normadie"
-        }   ,     {
-          "url" : "https://actu.fr/normandie/saint-saens_76648/le-policier-jette-produit-sur-visage-femme-se-suicide-seine-maritime_21919654.html",
-          "titre" : "Actu.fr"
+          "url": "https://www.paris-normandie.fr/actualites/faits-divers/a-saint-saens-le-policier-a-commis-l-irreparable-la-commune-sous-le-choc-CC14702819",
+          "titre": "Paris-Normadie"
+        },
+        {
+          "url": "https://actu.fr/normandie/saint-saens_76648/le-policier-jette-produit-sur-visage-femme-se-suicide-seine-maritime_21919654.html",
+          "titre": "Actu.fr"
         }
       ]
     },
@@ -112,7 +114,7 @@
       "text": "Une policière de la brigade de nuit se suicide dans un champ. Mère de 2 enfants elle laisse derrière elle une lettre.",
       "section": "Brigade de nuit de Conflans-Sainte-Honorine (Yvelines)",
       "location": "Guainville (Eure-et-Loir)",
-      "domtom": false,
+      "domtom": "no",
       "gps": {
         "lat": 49.000324,
         "lon": 2.093394
@@ -128,7 +130,7 @@
       "text": "Un policier de la DOPC (UTJDR) se suicide à son domicile.",
       "section": "DOPC (UTJDR)",
       "location": "Paris",
-      "domtom": false,
+      "domtom": "no",
       "gps": {
         "lat": 48.826618,
         "lon": 2.370783
@@ -144,7 +146,7 @@
       "text": "Un policier du CRA se suicide à son domicile. Il était père d'un enfant.",
       "section": "Centre de Rétention Administrative (CRA)",
       "location": "Metz (Moselle)",
-      "domtom": false,
+      "domtom": "no",
       "gps": {
         "lat": 49.099270,
         "lon": 6.209754
@@ -160,7 +162,7 @@
       "text": "Un commandant de gendarmerie se suicide, il était père de famille.",
       "section": "Caserne de l’Entre-Deux",
       "location": "Entre-Deux (Réunion)",
-      "domtom": true,
+      "domtom": "yes",
       "gps": {
         "lat": -21.248367,
         "lon": 55.469654
@@ -176,21 +178,25 @@
       "text": "Un adjudant du Peloté Motorisé de Fougère s’est suicidé avec son arme de service. Il était marié et père de 5 enfants,",
       "section": "EDSR (PMO Fougères)",
       "location": "Fougères (Ille-et-Vilaine)",
-      "domtom": false,
+      "domtom": "no",
       "gps": {
         "lat": 48.350400,
         "lon": -1.183104
       },
-      "sources": [        {
-        "url" : "https://actu17.fr/ille-et-vilaine-un-gendarme-de-47-ans-sest-suicide-a-fougeres/",
-        "titre" : "Actu17"
-      },  {
-        "url" : "https://lessor.org/a-la-une/suicide-dun-gendarme/",
-        "titre" : "L'essor"
-      },  {
-        "url" : "https://www.assogendarmesetcitoyens.com/post/d%C3%A9c%C3%A8s-d-un-gendarme-2",
-        "titre" : "L'asso gendarmes et citoyens"
-      }]
+      "sources": [
+        {
+          "url": "https://actu17.fr/ille-et-vilaine-un-gendarme-de-47-ans-sest-suicide-a-fougeres/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://lessor.org/a-la-une/suicide-dun-gendarme/",
+          "titre": "L'essor"
+        },
+        {
+          "url": "https://www.assogendarmesetcitoyens.com/post/d%C3%A9c%C3%A8s-d-un-gendarme-2",
+          "titre": "L'asso gendarmes et citoyens"
+        }
+      ]
     },
     {
       "cause": "accident",
@@ -201,12 +207,12 @@
       "text": "Yann T. est décédé à son domicile à la suite d'un accident.",
       "section": "CRS 61",
       "location": "Vélizy-Villacoublay (Yvelines)",
-      "domtom": false,
+      "domtom": "no",
       "gps": {
         "lat": 48.783721,
         "lon": 2.184852
       },
-      "sources": [ ]
+      "sources": []
     },
     {
       "cause": "suicide",
@@ -217,7 +223,7 @@
       "text": "Une capitaine se suicide dans son bureau. Elle était mère de deux enfants.",
       "section": "Sureté Départementale",
       "location": "Montpellier (Hérault)",
-      "domtom": false,
+      "domtom": "no",
       "gps": {
         "lat": 43.612616,
         "lon": 3.892701
@@ -233,12 +239,33 @@
       "text": "Un policier de la BT centrale a mis fin à ses jours. Il était père de trois enfants.",
       "section": "CSP Toulouse (BT centrale)",
       "location": "Toulouse",
-      "domtom": false,
+      "domtom": "no",
       "gps": {
         "lat": 43.602366,
         "lon": 1.450819
       },
       "sources": []
+    },
+    {
+      "cause": "deathOnDuty",
+      "year": "2019",
+      "month": "06",
+      "day": "22",
+      "house": "gendarmerie",
+      "text": "Un gendarme accidentellement lors d'une épreuve sportive.",
+      "section": "CoB Attichy",
+      "location": "Attichy (Oise)",
+      "domtom": "no",
+      "gps": {
+        "lat": 49.410770,
+        "lon": 3.048556
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/Gendarmerie/status/1142405389029429250",
+          "titre": "@Gendarmerie (Twitter Officiel)"
+        }
+      ]
     }
   ]
 }
