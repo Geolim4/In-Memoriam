@@ -61,7 +61,7 @@ let main = {
               './assets/images/' + death.house + '.png'),
           });
 
-          let infoWindowsContent = '<h3>' + death.section + ' - ' + death.location + '</h3>'
+          let infoWindowsContent = '<h3>' + (death.section ? (death.section + ' - ') : '') + death.location + '</h3>'
             + '<span><strong>Date</strong>: '
             + death.day + '/'
             + death.month + '/'
@@ -201,7 +201,11 @@ let main = {
             if (!definitions[fKey][death[fKey]]) {
               definitions[fKey][death[fKey]] = 0;
             }
-            definitions[fKey][death[fKey]]++;
+            if(Number.isInteger(death.count) && death.count > 1){
+              definitions[fKey][death[fKey]] += death.count;
+            }else{
+              definitions[fKey][death[fKey]]++;
+            }
           }
         }
       }

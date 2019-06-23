@@ -57,6 +57,7 @@
   "deaths": [
     {
       "cause": "suicide",
+      "count": 1,
       "year": "2019",
       "month": "01",
       "day": "01",
@@ -82,6 +83,7 @@
     },
     {
       "cause": "suicide",
+      "count": 1,
       "year": "2019",
       "month": "01",
       "day": "02",
@@ -107,6 +109,7 @@
     },
     {
       "cause": "suicide",
+      "count": 1,
       "year": "2019",
       "month": "01",
       "day": "06",
@@ -132,6 +135,167 @@
     },
     {
       "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "01",
+      "day": "15",
+      "house": "police",
+      "text": "Un policier de la BAC se suicide à son domicile de Brunoy (Essonne), avec son arme de service. Il était père d'une petite fille.",
+      "section": "BAC Haÿ-les-Roses",
+      "location": "Haÿ-les-Roses (Marne)",
+      "domtom": "no",
+      "gps": {
+        "lat": 48.698343,
+        "lon": 2.504014
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/essonne-un-policier-sest-donne-la-mort-chez-lui-a-brunoy/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.20minutes.fr/paris/2424539-20190116-essonne-policier-bac-suicide-domicile",
+          "titre": "20 minutes"
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/essonne-un-policier-se-suicide-avec-son-arme-de-service-1612229.html",
+          "titre": "BFM"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "01",
+      "day": "16",
+      "house": "police",
+      "text": "Un policier de la CRS 16 se suicide à son domicile de Saint-Omer (Pas-de-Calais) avec son arme de service. Il était père de trois enfants.",
+      "section": "CRS 16",
+      "location": "Saint-Omer (Pas-de-Calais)",
+      "domtom": "no",
+      "gps": {
+        "lat": 50.753773,
+        "lon": 2.250268
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/3-policiers-se-sont-donnes-la-mort-en-24-heures/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.lechodelalys.fr/9731/article/2019-01-16/saint-omer-vive-emotion-apres-le-deces-brutal-de-stany-specq-referent",
+          "titre": "L'écho de la Lys"
+        },
+        {
+          "url": "https://actupenit.com/2019/01/16/suicide-deux-policiers-se-donnent-la-mort-ce-mercredi/",
+          "titre": "Actupenit"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "01",
+      "day": "16",
+      "house": "police",
+      "text": "Un policier de la CSG (BRF Paris) se suicide à son domicile avec son arme de service.",
+      "section": "CSG BRF Paris",
+      "location": "Paris 18e",
+      "domtom": "no",
+      "gps": {
+        "lat": 48.893970,
+        "lon": 2.364701
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/3-policiers-se-sont-donnes-la-mort-en-24-heures/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actupenit.com/2019/01/16/suicide-deux-policiers-se-donnent-la-mort-ce-mercredi/",
+          "titre": "Actupenit"
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/un-policier-se-suicide-avec-son-arme-de-service-1613442.html",
+          "titre": "BFM"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "01",
+      "day": "17",
+      "house": "police",
+      "text": "Un policier de la BCF se suicide. Peu d'informations disponibles sur ce suicide.",
+      "section": "BCF Gare du Nord - Paris",
+      "location": "Paris 20e",
+      "domtom": "no",
+      "gps": {
+        "lat": 48.849443,
+        "lon": 2.406771
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1087446551125995520",
+          "titre": "@association_mpc (Twitter)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "01",
+      "day": "25",
+      "house": "police",
+      "text": "Un policier se suicide avec son arme de service. Le laisse une lettre derrière lui dénonçant les conditions de travail et les problèmes d'évolutions de carrière.",
+      "section": "CRS 10",
+      "location": "Le Mans (Sarthe)",
+      "domtom": "no",
+      "gps": {
+        "lat": 48.005502,
+        "lon": 0.225123
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/sarthe-un-policier-affecte-a-la-crs-10-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/le-mans-un-crs-se-suicide-avec-son-arme-de-service-a-son-domicile-1548433293",
+          "titre": "France Bleu"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 2,
+      "year": "2019",
+      "month": "01",
+      "day": "27",
+      "house": "police",
+      "text": "Informations issues de l’Administration, pour deux policiers suicidés mais dont nous n’avons aucunes informations à ce jour.",
+      "section": "",
+      "location": "France",
+      "domtom": "no",
+      "gps": {
+        "lat": 48.871773,
+        "lon": 2.316401
+      },
+      "sources": [
+        {
+          "url": "https://mpc-asso.net/2019/06/21/%f0%9f%9a%94%f0%9f%87%ab%f0%9f%87%b7-condoleances-a-la-famille-et-aux-proches-4/",
+          "titre": "MPC"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
       "year": "2019",
       "month": "03",
       "day": "07",
@@ -157,6 +321,7 @@
     },
     {
       "cause": "suicide",
+      "count": 1,
       "year": "2019",
       "month": "04",
       "day": "07",
@@ -173,6 +338,7 @@
     },
     {
       "cause": "suicide",
+      "count": 1,
       "year": "2019",
       "month": "04",
       "day": "14",
@@ -189,6 +355,7 @@
     },
     {
       "cause": "suicide",
+      "count": 1,
       "year": "2019",
       "month": "04",
       "day": "16",
@@ -205,6 +372,7 @@
     },
     {
       "cause": "suicide",
+      "count": 1,
       "year": "2019",
       "month": "04",
       "day": "30",
@@ -221,6 +389,7 @@
     },
     {
       "cause": "suicide",
+      "count": 1,
       "year": "2019",
       "month": "06",
       "day": "03",
@@ -250,6 +419,7 @@
     },
     {
       "cause": "suicide",
+      "count": 1,
       "year": "2019",
       "month": "06",
       "day": "13",
@@ -271,6 +441,7 @@
     },
     {
       "cause": "accident",
+      "count": 1,
       "year": "2019",
       "month": "06",
       "day": "18",
@@ -287,6 +458,7 @@
     },
     {
       "cause": "suicide",
+      "count": 1,
       "year": "2019",
       "month": "06",
       "day": "18",
@@ -303,6 +475,7 @@
     },
     {
       "cause": "suicide",
+      "count": 1,
       "year": "2019",
       "month": "06",
       "day": "20",
@@ -319,6 +492,7 @@
     },
     {
       "cause": "deathOnDuty",
+      "count": 1,
       "year": "2019",
       "month": "06",
       "day": "22",
