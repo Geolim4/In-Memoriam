@@ -59,6 +59,31 @@
       "cause": "suicide",
       "year": "2019",
       "month": "01",
+      "day": "01",
+      "house": "police",
+      "text": "Un policier de la CSP se suicide avec son arme de service. Il était père de deux enfants.",
+      "section": "CSP La Rochelle",
+      "location": "La Rochelle",
+      "domtom": "no",
+      "gps": {
+        "lat": 46.169367,
+        "lon": -1.143569
+      },
+      "sources": [
+        {
+          "url": "http://www.profession-gendarme.com/2019-suicide-dun-policier/",
+          "titre": "Profession Gendarme"
+        },
+        {
+          "url": "https://mpc-asso.net/2019/06/21/%f0%9f%9a%94%f0%9f%87%ab%f0%9f%87%b7-condoleances-a-la-famille-et-aux-proches-4/",
+          "titre": "Asso MPC"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "year": "2019",
+      "month": "01",
       "day": "02",
       "house": "police",
       "text": "Un policier de la PAF se suicide sans faire usage de son arme de service. Il était marié et père de famille.",
@@ -76,6 +101,31 @@
         },
         {
           "url": "https://actu17.fr/manche-un-policier-retrouve-mort-a-son-domicile-a-querqueville/",
+          "titre": "Actu17"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "year": "2019",
+      "month": "01",
+      "day": "06",
+      "house": "police",
+      "text": "Un policier du CIC se suicide à son domicile avec son arme de service. Il était marié et père de famille.",
+      "section": "CIC Reims",
+      "location": "Reims (Marne)",
+      "domtom": "no",
+      "gps": {
+        "lat": 49.256218,
+        "lon": 4.022128
+      },
+      "sources": [
+        {
+          "url": "https://mpc-asso.net/2019/06/21/%f0%9f%9a%94%f0%9f%87%ab%f0%9f%87%b7-condoleances-a-la-famille-et-aux-proches-4/",
+          "titre": "Asso MPC"
+        },
+        {
+          "url": "https://actu17.fr/reims-un-policier-sest-suicide-avec-son-arme-de-service/",
           "titre": "Actu17"
         }
       ]
