@@ -201,9 +201,10 @@ let main = {
             if (!definitions[fKey][death[fKey]]) {
               definitions[fKey][death[fKey]] = 0;
             }
-            if(Number.isInteger(death.count) && death.count > 1){
+            if (Number.isInteger(death.count) && death.count > 1) {
               definitions[fKey][death[fKey]] += death.count;
-            }else{
+            }
+            else {
               definitions[fKey][death[fKey]]++;
             }
           }
@@ -219,17 +220,18 @@ let main = {
       exposedFilters = {},
       filters = {};
 
-    anchor.forEach(function(value){
+    anchor.forEach(function(value) {
       let filter = value.split(':');
-      if(filter.length === 2){
+      if (filter.length === 2) {
         exposedFilters[filter[0]] = filter[1];
       }
     });
 
     selects.forEach(function(select) {
-      if(fromAnchor && exposedFilters[select.id]){
+      if (fromAnchor && exposedFilters[select.id]) {
         filters[select.id] = exposedFilters[select.id];
-      }else{
+      }
+      else {
         filters[select.id] = select.value;
       }
     });

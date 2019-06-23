@@ -289,7 +289,85 @@
       "sources": [
         {
           "url": "https://mpc-asso.net/2019/06/21/%f0%9f%9a%94%f0%9f%87%ab%f0%9f%87%b7-condoleances-a-la-famille-et-aux-proches-4/",
-          "titre": "MPC"
+          "titre": "Asso MPC"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "02",
+      "day": "14",
+      "house": "police",
+      "text": "Un policier en poste en Martinique se suicide. Il était père de famille",
+      "section": "UAAJ",
+      "location": "Fort de France (Martinique)",
+      "domtom": "yes",
+      "gps": {
+        "lat": 14.605298,
+        "lon": -61.068503
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1096133238152671232",
+          "titre": "Asso MPC"
+        },
+        {
+          "url": "https://actupenit.com/2019/02/14/douzieme-suicide-dans-la-police-nationale-depuis-le-debut-de-lannee/",
+          "titre": "Actupenit"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "02",
+      "day": "18",
+      "house": "police",
+      "text": "Un major de police se suicide à son domicile après avoir tué son ex-compagne. Le parquet de Laval s'est saisi de l'affaire mais s'est refusé à tout commentaire.",
+      "section": "Ciat Laval",
+      "location": "Louverné (Mayenne)",
+      "domtom": "no",
+      "gps": {
+        "lat": 48.118888,
+        "lon": -0.718941
+      },
+      "sources": [
+        {
+          "url": "https://www.ouest-france.fr/pays-de-la-loire/louverne-53950/pres-de-laval-le-policier-aurait-tue-son-ex-compagne-avec-son-arme-de-service-6229386",
+          "titre": "Ouest France"
+        },
+        {
+          "url": "http://www.francesoir.fr/societe-faits-divers/laval-un-policier-tue-son-ex-compagne-avec-son-arme-et-se-suicide",
+          "titre": "France Soir"
+        },
+        {
+          "url": "https://actu17.fr/mayenne-un-policier-aurait-tue-sa-compagne-avant-de-se-suicider/",
+          "titre": "Actu17"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "02",
+      "day": "20",
+      "house": "police",
+      "text": "Un policier de la SU de Grand Quevilly se suicide. Peu d'informations disponibles.",
+      "section": "SU Grand Quevilly",
+      "location": "Grand Quevilly (Seine-Maritime)",
+      "domtom": "no",
+      "gps": {
+        "lat":  49.406735,
+        "lon":  1.044756
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1098316890554929159",
+          "titre": "@association_mpc (Twitter)"
         }
       ]
     },
@@ -509,6 +587,10 @@
         {
           "url": "https://twitter.com/Gendarmerie/status/1142405389029429250",
           "titre": "@Gendarmerie (Twitter Officiel)"
+        },
+        {
+          "url": "https://actu17.fr/oise-un-gendarme-de-36-ans-decede-lors-dune-epreuve-sportive/",
+          "titre": "Actu7"
         }
       ]
     }
