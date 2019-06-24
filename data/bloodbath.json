@@ -376,6 +376,92 @@
       "count": 1,
       "year": "2019",
       "month": "03",
+      "day": "04",
+      "house": "police",
+      "text": "Un policier se suicide en se tirant une balle dans la poitrine dans les vestiaires du Ciat. Il était marié et père d'un petit garçon.",
+      "section": "BMo Limoges",
+      "location": "Limoges (Haute-Vienne)",
+      "domtom": "no",
+      "gps": {
+        "lat":  45.844665,
+        "lon":  1.252959
+      },
+      "sources": [
+        {
+          "url": "https://www.ladepeche.fr/2019/03/04/un-policier-se-suicide-au-commissariat-de-limoges,8049537.php",
+          "titre": "La depêche"
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/limoges-un-policier-s-est-suicide-ce-lundi-matin-a-l-hotel-de-police-de-limoges-1551718980",
+          "titre": "France Bleu"
+        },
+        {
+          "url": "https://actu17.fr/limoges-un-policier-sest-suicide-avec-son-arme-de-service-au-commissariat/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/haute-vienne/limoges/policier-se-suicide-au-commissariat-limoges-1632626.html",
+          "titre": "France Info"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "03",
+      "day": "04",
+      "house": "police",
+      "text": "Un policier s'est suicidé, il était affecté à la CSP de Dunkerque. Peu d'informations disponibles sur ce suicide.",
+      "section": "CSP Dunkerque",
+      "location": "Dunkerque (Nord)",
+      "domtom": "no",
+      "gps": {
+        "lat":   51.038376,
+        "lon":  2.376220
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1102717535835865089",
+          "titre": "@association_mpc (Twitter)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "03",
+      "day": "05",
+      "house": "police",
+      "text": "Un policier d’Elancourt se suicide avec son arme de service. Son corps a été retrouvé dans des boix à proximité de son domicile par les gendarmes. Il était père de deux jeunes filles",
+      "section": "Ciat Elancourt",
+      "location": "Elancourt (Yvelines)",
+      "domtom": "no",
+      "gps": {
+        "lat":  48.782620,
+        "lon":  1.754585
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/yvelines-un-policier-se-donne-la-mort-avec-son-arme-de-service/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/elancourt_78208/yvelines-policier-delancourt-se-suicide-arme-service_21922559.html",
+          "titre": "Actu.fr"
+        },
+        {
+          "url": "http://www.leparisien.fr/yvelines-78/elancourt-un-policier-met-fin-a-ses-jours-avec-son-arme-de-service-06-03-2019-8025951.php",
+          "titre": "Le Parisien"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "03",
       "day": "07",
       "house": "police",
       "text": "Un policier se suicide après une violente dispute conjugale. Il était père de deux enfants.",
