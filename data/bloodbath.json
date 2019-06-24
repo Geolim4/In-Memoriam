@@ -361,8 +361,8 @@
       "location": "Grand Quevilly (Seine-Maritime)",
       "domtom": "no",
       "gps": {
-        "lat":  49.406735,
-        "lon":  1.044756
+        "lat": 49.406735,
+        "lon": 1.044756
       },
       "sources": [
         {
@@ -383,8 +383,8 @@
       "location": "Limoges (Haute-Vienne)",
       "domtom": "no",
       "gps": {
-        "lat":  45.844665,
-        "lon":  1.252959
+        "lat": 45.844665,
+        "lon": 1.252959
       },
       "sources": [
         {
@@ -417,8 +417,8 @@
       "location": "Dunkerque (Nord)",
       "domtom": "no",
       "gps": {
-        "lat":   51.038376,
-        "lon":  2.376220
+        "lat": 51.038376,
+        "lon": 2.376220
       },
       "sources": [
         {
@@ -439,8 +439,8 @@
       "location": "Elancourt (Yvelines)",
       "domtom": "no",
       "gps": {
-        "lat":  48.782620,
-        "lon":  1.754585
+        "lat": 48.782620,
+        "lon": 1.754585
       },
       "sources": [
         {
@@ -487,6 +487,96 @@
       "cause": "suicide",
       "count": 1,
       "year": "2019",
+      "month": "03",
+      "day": "15",
+      "house": "police",
+      "text": "Un policier de la CSI de Limay se suicide avec son arme de service. Découvert sans vie à son domicile par ses collègues, il était père de deux enfants.",
+      "section": "CSI Limay (Yvelines)",
+      "location": "Nézel (Yvelines)",
+      "domtom": "no",
+      "gps": {
+        "lat": 48.942885,
+        "lon": 1.840041
+      },
+      "sources": [
+        {
+          "url": "http://www.leparisien.fr/yvelines-78/yvelines-un-policier-se-suicide-avec-son-arme-de-service-16-03-2019-8033049.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://www.mantes-actu.net/limay-un-policier-sest-suicide-a-son-domicile-avec-son-arme-de-service/",
+          "titre": "Mantes Actu"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/un-policier-affecte-a-limay-78-se-suicide/",
+          "titre": "Profession Gendarme"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "03",
+      "day": "19",
+      "house": "police",
+      "text": "Un policier de la 22e CI de Paris se suicide avec son arme de service. Découvert sans vie à son domicile par ses collègues, il était père d'un petit garçon.",
+      "section": "22e CI / DOPC",
+      "location": "Paris 12e",
+      "domtom": "no",
+      "gps": {
+        "lat": 48.841943,
+        "lon": 2.405364
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1108090559086936071",
+          "titre": "@association_mpc (Twitter)"
+        },
+        {
+          "url": "https://actu17.fr/paris-un-policier-a-mis-fin-a-ses-jours-avec-son-arme-de-service/",
+          "titre": "Actu17"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "03",
+      "day": "28",
+      "house": "police",
+      "text": "Un policier se suicide à son domicile après s'être retranché à son domicile dans l'Oise. Affecté dans un Ciat parisien le GIGN n'a pu négocier sa reddition.",
+      "section": "Ciat Paris (inconnu)",
+      "location": "Louveaucourt, Bailleval (Oise)",
+      "domtom": "no",
+      "gps": {
+        "lat":  49.342834,
+        "lon":  2.459641
+      },
+      "sources": [
+        {
+          "url": "https://www.europe1.fr/faits-divers/info-europe-1-oise-un-policier-arme-retranche-chez-lui-sest-suicide-3881687",
+          "titre": "Europe 1"
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2483259-20190328-oise-policier-arme-retranche-chez-gign-place",
+          "titre": "20 minutes"
+        },
+        {
+          "url": "http://www.leparisien.fr/oise-60/un-homme-arme-retranche-chez-lui-a-bailleval-27-03-2019-8041248.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://actu17.fr/oise-un-policier-est-retranche-chez-lui-le-gign-sur-place/",
+          "titre": "Actu17"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
       "month": "04",
       "day": "07",
       "house": "police",
@@ -509,7 +599,7 @@
       "house": "police",
       "text": "Un policier de la DOPC (UTJDR) se suicide à son domicile.",
       "section": "DOPC (UTJDR)",
-      "location": "Paris",
+      "location": "Paris 13e",
       "domtom": "no",
       "gps": {
         "lat": 48.826618,
@@ -558,7 +648,7 @@
       "month": "06",
       "day": "03",
       "house": "gendarmerie",
-      "text": "Un adjudant du Peloté Motorisé de Fougère s’est suicidé avec son arme de service. Il était marié et père de 5 enfants,",
+      "text": "Un adjudant du Peloté Motorisé de Fougère s’est suicidé avec son arme de service. Il était marié et père de 5 enfants.",
       "section": "EDSR (PMO Fougères)",
       "location": "Fougères (Ille-et-Vilaine)",
       "domtom": "no",
