@@ -52,6 +52,17 @@
         "singular": "<strong>%d</strong> militaire",
         "plural": "<strong>%d</strong> militaires"
       }
+    },
+    "domtom": {
+      "#label": "Territorialité: %domtom%",
+      "no": {
+        "singular": "<strong>%d</strong> disparition sur le territoire national",
+        "plural": "<strong>%d</strong> disparitions en territoire national"
+      },
+      "yes": {
+        "singular": "<strong>%d</strong> disparition en outre-mer",
+        "plural": "<strong> %d</strong> disparitions en outre-mer"
+      }
     }
   },
   "deaths": [
