@@ -687,9 +687,51 @@
       "count": 1,
       "year": "2019",
       "month": "04",
+      "day": "07",
+      "house": "police",
+      "text": "Un policier d'Alès se suicide sans faire usage de son arme de service. Son corps a été retrouvé dans les bois à l'issue d'une longue battue",
+      "section": "Ciat Ales",
+      "location": "La Calmette (Gard)",
+      "domtom": "no",
+      "gps": {
+        "lat": 43.931985,
+        "lon": 4.316080
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/policier-dales-disparu-un-corps-decouvert-durant-la-battue-a-la-calmette/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.midilibre.fr/2019/04/08/gard-le-parquet-de-nimes-confirme-que-christophe-sest-bien-suicide,8118063.php",
+          "titre": "Midi Libre"
+        },
+        {
+          "url": "https://actu.fr/societe/suicide-du-policier-dans-le-gard-le-25eme-en-trois-mois_23428689.html",
+          "titre": "Actu.fr"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/54209/",
+          "titre": "Pofession Gendarme"
+        },
+        {
+          "url": "https://www.ladepeche.fr/2019/04/07/un-policier-retrouve-mort-dans-le-gard,8116247.php",
+          "titre": "La Depeche"
+        },
+        {
+          "url": "https://twitter.com/association_mpc/status/1114897579827965953",
+          "titre": "@association_mpc (Twitter)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "04",
       "day": "14",
       "house": "police",
-      "text": "Un policier de la DOPC (UTJDR) se suicide à son domicile.",
+      "text": "Un policier de la DOPC (UTJDR) se suicide à son domicile avec son arme de service.",
       "section": "DOPC (UTJDR)",
       "location": "Paris 13e",
       "domtom": "no",
@@ -697,7 +739,15 @@
         "lat": 48.826618,
         "lon": 2.370783
       },
-      "sources": []
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1117445554336948224",
+          "titre": "@association_mpc (Twitter)"
+        },        {
+          "url": "https://actu17.fr/paris-un-policier-retrouve-mort-a-son-domicile/",
+          "titre": "Actu17"
+        }
+      ]
     },
     {
       "cause": "suicide",
