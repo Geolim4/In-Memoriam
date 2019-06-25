@@ -18,9 +18,10 @@ let main = {
     let formElement = document.getElementById('form-filters');
     let mapElement = document.getElementById('map');
     let map = new google.maps.Map(mapElement, options);
+    let filters = this.getFilters(formElement, true);
 
     this.bindFilters(map, mapElement, formElement);
-    this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
+    this.bindMarkers(mapElement.dataset.bloodbathSrc, map, filters);
   },
   clearMarkers: function() {
     for (let key in this.markers) {
@@ -33,7 +34,7 @@ let main = {
   bindMarkers: function(source, map, filters) {
     let self = this;
 
-    qwest.get(source).then(function(xhr, response) {
+    qwest.get(source.replace('%year%', filters.year)).then(function(xhr, response) {
       let bounds = new google.maps.LatLngBounds(),
         domTomMarkers = [],
         nationalMarkers = [];
@@ -133,7 +134,7 @@ let main = {
   },
   bindFilters: function(map, mapElement, formElement) {
     let self = this,
-      filters = this.getFilters(formElement, true),
+      filters = this.getFilters(formElement),
       selects = formElement.querySelectorAll('form select');
 
     selects.forEach(function(select) {

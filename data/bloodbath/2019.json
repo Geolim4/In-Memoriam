@@ -1,14 +1,10 @@
 {
   "definitions": {
     "year": {
-      "#label": "Année: %year%",
-      "2018": {
-        "singular": "<strong>%d</strong> disparition en %year%",
-        "plural": "<strong> %d</strong> disparitions en %year%"
-      },
+      "#label": "Décompte annuel: %year%",
       "2019": {
-        "singular": "<strong>%d</strong> disparition en %year%",
-        "plural": "<strong>%d</strong> disparitions en %year%"
+        "singular": "<strong>%d</strong> disparition sur l'année %year%",
+        "plural": "<strong>%d</strong> disparitions sur l'année %year%"
       }
     },
     "cause": {
@@ -743,7 +739,8 @@
         {
           "url": "https://twitter.com/association_mpc/status/1117445554336948224",
           "titre": "@association_mpc (Twitter)"
-        },        {
+        },
+        {
           "url": "https://actu17.fr/paris-un-policier-retrouve-mort-a-son-domicile/",
           "titre": "Actu17"
         }
@@ -756,7 +753,7 @@
       "month": "04",
       "day": "16",
       "house": "police",
-      "text": "Un policier du CRA se suicide à son domicile. Il était père d'un enfant.",
+      "text": "Un policier du CRA se suicide à son domicile. Il était père d'un petit garçon.",
       "section": "Centre de Rétention Administrative (CRA)",
       "location": "Metz (Moselle)",
       "domtom": "no",
@@ -764,7 +761,126 @@
         "lat": 49.099270,
         "lon": 6.209754
       },
-      "sources": []
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1118055338056482816",
+          "titre": "@association_mpc (Twitter)"
+        },
+        {
+          "url": "https://actu17.fr/un-policier-affecte-a-metz-a-mis-fin-a-ses-jours/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actu.fr/grand-est/metz_57463/un-policier-affecte-metz-sest-suicide_23003464.html",
+          "titre": "Actu.fr"
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-de-moselle-s-est-suicide-1555521584",
+          "titre": "France Bleu"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "04",
+      "day": "16",
+      "house": "police",
+      "text": "Un policier du CRA se suicide à son domicile. Il était père d'un petit garçon.",
+      "section": "Centre de Rétention Administrative (CRA)",
+      "location": "Metz (Moselle)",
+      "domtom": "no",
+      "gps": {
+        "lat": 49.099270,
+        "lon": 6.209754
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1118055338056482816",
+          "titre": "@association_mpc (Twitter)"
+        },
+        {
+          "url": "https://actu17.fr/un-policier-affecte-a-metz-a-mis-fin-a-ses-jours/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actu.fr/grand-est/metz_57463/un-policier-affecte-metz-sest-suicide_23003464.html",
+          "titre": "Actu.fr"
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-de-moselle-s-est-suicide-1555521584",
+          "titre": "France Bleu"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "04",
+      "day": "18",
+      "house": "police",
+      "text": "Une capitaine de police de la sûreté départementale se tire une balle dans le coeur avec son arme de service. Elle était mère de deux jeunes enfants",
+      "section": "Sûreté Départementale",
+      "location": "Montpellier (Hérault)",
+      "domtom": "no",
+      "gps": {
+        "lat": 43.612616,
+        "lon": 3.892701
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1118878047594262528",
+          "titre": "@association_mpc (Twitter)"
+        },
+        {
+          "url": "https://actu17.fr/montpellier-une-policiere-se-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/occitanie/herault/montpellier/montpellier-suicide-policier-son-arme-service-1656984.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.midilibre.fr/2019/04/19/suicide-dune-policiere-a-montpellier-retour-sur-ce-fleau,8140747.php",
+          "titre": "Midi Libre"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "04",
+      "day": "18",
+      "house": "police",
+      "text": "Un jeune policier de la DOPC se suicide avec son arme de service. Il était chargé des actions de sensibilisation et préventions dans les écoles, les salons et autres événements.",
+      "section": "DRSR (DOPC)",
+      "location": "Paris 4e",
+      "domtom": "no",
+      "gps": {
+        "lat": 48.854916,
+        "lon": 2.345741
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1118878047594262528",
+          "titre": "@association_mpc (Twitter)"
+        },
+        {
+          "url": "https://actu17.fr/un-policier-affecte-a-paris-sest-suicide-a-son-domicile/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.francetvinfo.fr/faits-divers/police/paris-un-policier-se-donne-la-mort-dans-les-locaux-de-son-unite-28e-suicide-dans-la-police-en-2019_3404265.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/paris-un-policier-se-suicide-dans-les-locaux-de-son-unite-18-04-2019-8056041.php",
+          "titre": "Le Parisien"
+        }
+      ]
     },
     {
       "cause": "suicide",
@@ -782,6 +898,104 @@
         "lon": 55.469654
       },
       "sources": []
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "05",
+      "day": "22",
+      "house": "police",
+      "text": "Un policier du Groupe d'Appui Judiciaire (GAJ) a mit fin à ses jours. Peu d'informations disponibles sur ce suicide.",
+      "section": "GAJ",
+      "location": "Lille (Nord)",
+      "domtom": "no",
+      "gps": {
+        "lat": 50.629522,
+        "lon": 3.057458
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1131309085952008192",
+          "titre": "@association_mpc (Twitter)"
+        },
+        {
+          "url": "https://actupenit.com/2019/05/23/lille-un-policier-age-de-46-ans-se-suicide/",
+          "titre": "Actupenit"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/un-policier-du-gaj-de-lille-se-suicide/",
+          "titre": "Profession Gendarme"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "05",
+      "day": "26",
+      "house": "police",
+      "text": "Un policier affecté au commissariat du 7e arrondissement de Paris s’est donné la mort. Il était père de deux très jeunes enfants.",
+      "section": "CSP paris 7e",
+      "location": "Meaux (Seine-et-Marne)",
+      "domtom": "no",
+      "gps": {
+        "lat": 48.956342,
+        "lon": 2.889526
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1132736130951065600",
+          "titre": "@association_mpc (Twitter)"
+        },
+        {
+          "url": "http://www.lefigaro.fr/flash-actu/info-le-figaro-seine-et-marne-un-policier-se-suicide-avec-son-arme-de-service-20190526",
+          "titre": "Le Figaro"
+        },
+        {
+          "url": "http://www.leparisien.fr/seine-et-marne-77/chessy-un-policier-se-suicide-avec-son-arme-de-service-26-05-2019-8080290.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://actu17.fr/seine-et-marne-un-policier-de-38-ans-a-mis-fin-a-ses-jours/",
+          "titre": "Actu17"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "06",
+      "day": "01",
+      "house": "police",
+      "text": "Un officier de police du SDN 77 s'est suicide à son domicile. Son corps a été retrouvé près du Ciat de la commune de Chessy.",
+      "section": "SDN 77",
+      "location": "Chessy (Seine-et-Marne)",
+      "domtom": "no",
+      "gps": {
+        "lat": 48.862258,
+        "lon": 2.785911
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1134941320915628037",
+          "titre": "@association_mpc (Twitter)"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/police-un-commandant-divisionnaire-fonctionnel-se-suicide/",
+          "titre": "Profession Gendarme"
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/seine-et-marne-un-officier-de-police-se-suicide-a-son-domicile-1703656.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "https://actu17.fr/seine-et-marne-un-officier-de-la-police-nationale-sest-suicide/",
+          "titre": "Actu17"
+        }
+      ]
     },
     {
       "cause": "suicide",
@@ -821,7 +1035,7 @@
       "day": "13",
       "house": "police",
       "text": "Un Gardien de la Paix du Ciat de police du 19ème à Paris se suicide sur son lieu de villégiature près de Nîmes.",
-      "section": "Ciat Paris 19e",
+      "section": "CSP Paris 19e",
       "location": "Saint-Gervasy (Gard)",
       "domtom": "no",
       "gps": {
@@ -829,6 +1043,10 @@
         "lon": 4.469124
       },
       "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1139447750356086784",
+          "titre": "@association_mpc (Twitter)"
+        },
         {
           "url": "https://actu17.fr/un-policier-a-mis-fin-a-ses-jours-avec-son-arme-de-service/",
           "titre": "Actu17"
@@ -857,24 +1075,37 @@
       "count": 1,
       "year": "2019",
       "month": "06",
-      "day": "18",
+      "day": "20",
       "house": "police",
-      "text": "Une capitaine se suicide dans son bureau. Elle était mère de deux enfants.",
-      "section": "Sureté Départementale",
-      "location": "Montpellier (Hérault)",
+      "text": "Un brigadier de police s’est suicidé à son domicile en utilisant son arme de service. Il était affecté au STJN (Service de traitement judiciaire de nuit) du 2ème district de la préfecture de police.",
+      "section": "STJN",
+      "location": "Paris 18e",
       "domtom": "no",
       "gps": {
-        "lat": 43.612616,
-        "lon": 3.892701
+        "lat": 48.885721,
+        "lon": 2.351906
       },
-      "sources": []
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1142154410019184646",
+          "titre": "@association_mpc (Twitter)"
+        },
+        {
+          "url": "https://actu17.fr/paris-un-policier-sest-donne-la-mort-avec-son-arme-de-service/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/paris-un-policier-sest-donne-la-mort-avec-son-arme-de-service/",
+          "titre": "Profession Gendarme"
+        }
+      ]
     },
     {
       "cause": "suicide",
       "count": 1,
       "year": "2019",
       "month": "06",
-      "day": "20",
+      "day": "21",
       "house": "police",
       "text": "Un policier de la BT centrale a mis fin à ses jours sans faire usage de son arme. Il était père de trois enfants.",
       "section": "CSP Toulouse (BT centrale)",
@@ -884,7 +1115,24 @@
         "lat": 43.602366,
         "lon": 1.450819
       },
-      "sources": []
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1142154410019184646",
+          "titre": "@association_mpc (Twitter)"
+        },
+        {
+          "url": "https://actu17.fr/toulouse-un-policier-a-mis-fin-a-ses-jours-a-son-domicile/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.lemonde.fr/societe/article/2019/06/21/un-policier-se-suicide-a-toulouse_5479752_3224.html",
+          "titre": "Le Monde"
+        },
+        {
+          "url": "https://www.nouvelobs.com/societe/20190621.OBS14758/suicide-d-un-policier-a-toulouse-le-34e-depuis-janvier.html",
+          "titre": "Nouvel Obs"
+        }
+      ]
     },
     {
       "cause": "deathOnDuty",

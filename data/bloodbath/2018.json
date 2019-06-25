@@ -1,0 +1,65 @@
+{
+  "definitions": {
+    "year": {
+      "#label": "Année: %year%",
+      "2018": {
+        "singular": "<strong>%d</strong> disparition en %year%",
+        "plural": "<strong> %d</strong> disparitions en %year%"
+      }
+    },
+    "cause": {
+      "#label": "Causes: %cause%",
+      "suicide": {
+        "singular": "<strong>%d</strong> suicide",
+        "plural": "<strong>%d</strong> suicides"
+      },
+      "deathOnDuty": {
+        "singular": "<strong>%d</strong> mort en service",
+        "plural": "<strong>%d</strong> morts en service"
+      },
+      "accident": {
+        "singular": "<strong>%d</strong> mort accidentellement",
+        "plural": "<strong>%d</strong> morts accidentellement"
+      },
+      "murdered": {
+        "singular": "<strong>%d</strong> assassiné",
+        "plural": "<strong>%d</strong> assassinés"
+      }
+    },
+    "house": {
+      "#label": "Corps: %house%",
+      "gendarmerie": {
+        "singular": "<strong>%d</strong> gendarme",
+        "plural": "<strong>%d</strong> gendarmes"
+      },
+      "police": {
+        "singular": "<strong>%d</strong> policier",
+        "plural": "<strong>%d</strong> policiers"
+      },
+      "douane": {
+        "singular": "<strong>%d</strong> douanier",
+        "plural": "<strong>%d</strong> douaniers"
+      },
+      "pompier": {
+        "singular": "<strong>%d</strong> pompier",
+        "plural": "<strong>%d</strong> pompiers"
+      },
+      "armee": {
+        "singular": "<strong>%d</strong> militaire",
+        "plural": "<strong>%d</strong> militaires"
+      }
+    },
+    "domtom": {
+      "#label": "Territorialité: %domtom%",
+      "no": {
+        "singular": "<strong>%d</strong> disparition sur le territoire national",
+        "plural": "<strong>%d</strong> disparitions en territoire national"
+      },
+      "yes": {
+        "singular": "<strong>%d</strong> disparition en outre-mer",
+        "plural": "<strong> %d</strong> disparitions en outre-mer"
+      }
+    }
+  },
+  "deaths": []
+}
