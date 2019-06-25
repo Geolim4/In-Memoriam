@@ -562,8 +562,8 @@
       "location": "Louveaucourt, Bailleval (Oise)",
       "domtom": "no",
       "gps": {
-        "lat":  49.342834,
-        "lon":  2.459641
+        "lat": 49.342834,
+        "lon": 2.459641
       },
       "sources": [
         {
@@ -589,6 +589,70 @@
       "count": 1,
       "year": "2019",
       "month": "04",
+      "day": "01",
+      "house": "police",
+      "text": "Un policier de la BCF s'est suicidé à son domicile en Seine-et-Marne. Peu d'informations disponibles sur ce suicide",
+      "section": "BCF Paris",
+      "location": "Seine-et-Marne",
+      "domtom": "no",
+      "gps": {
+        "lat": 48.690206,
+        "lon": 2.993409
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/seine-et-marne-un-policier-de-42-ans-sest-donne-la-mort/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://twitter.com/association_mpc/status/1112833715149963265",
+          "titre": "@association_mpc (Twitter)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "04",
+      "day": "04",
+      "house": "police",
+      "text": "Un policier de la BAC s'est suicidé chez lui sans faire usage de son arme de service. Il était père de 4 enfants.",
+      "section": "BAC D Lyon",
+      "location": "Marlieux (Ain)",
+      "domtom": "no",
+      "gps": {
+        "lat": 46.065072,
+        "lon": 5.071734
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-policier-affecte-a-lyon-sest-suicide-a-son-domicile/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actupenit.com/2019/04/05/lyon-un-policier-se-suicide-par-pendaison-a-son-domicile/",
+          "titre": "Actupenit"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/rhone/lyon/lyon-policier-bac-se-suicide-lui-1650886.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/suicide-dun-policier-a-lyon/",
+          "titre": "Profession Gendarme"
+        },
+        {
+          "url": "https://twitter.com/association_mpc/status/1114160699863896064",
+          "titre": "@association_mpc (Twitter)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "04",
       "day": "07",
       "house": "police",
       "text": "Une policière de la brigade de nuit se suicide dans un champ. Mère de 2 enfants elle laisse derrière elle une lettre.",
@@ -599,7 +663,24 @@
         "lat": 49.000324,
         "lon": 2.093394
       },
-      "sources": []
+      "sources": [
+        {
+          "url": "https://actu.fr/ile-de-france/conflans-sainte-honorine_78172/yvelines-une-policiere-conflans-sainte-honorine-retrouvee-sans-vie-apres-probable-suicide_22814746.html",
+          "titre": "Actu.fr"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/une-policiere-des-yvelines-se-suicide-dans-sa-voiture-07-04-2019-8048067.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/paris-ile-de-france/yvelines/corps-policiere-yvelines-retrouvee-vie-apres-probable-suicide-1651640.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://twitter.com/association_mpc/status/1114897579827965953",
+          "titre": "@association_mpc (Twitter)"
+        }
+      ]
     },
     {
       "cause": "suicide",
