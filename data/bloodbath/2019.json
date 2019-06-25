@@ -71,11 +71,11 @@
       "house": "police",
       "text": "Un policier de la CSP se suicide avec son arme de service. Il était père de deux enfants.",
       "section": "CSP La Rochelle",
-      "location": "La Rochelle",
+      "location": "La Rochelle (Charente-Maritime)",
       "domtom": "no",
       "gps": {
-        "lat": 46.169367,
-        "lon": -1.143569
+        "lat": 46.168667,
+        "lon": -1.152359
       },
       "sources": [
         {
@@ -137,6 +137,28 @@
         {
           "url": "https://actu17.fr/reims-un-policier-sest-suicide-avec-son-arme-de-service/",
           "titre": "Actu17"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "01",
+      "day": "07",
+      "house": "police",
+      "text": "Un policier du CIC de la Rochelle se suicide.Peu d'informations disponibles sur ce suicide.",
+      "section": "CIC La Rochelle",
+      "location": "La Rochelle (Charente-Maritime)",
+      "domtom": "no",
+      "gps": {
+        "lat": 46.170629,
+        "lon": -1.141469
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1082549261559058433",
+          "titre": "@association_mpc (Twitter)"
         }
       ]
     },
@@ -743,40 +765,6 @@
         {
           "url": "https://actu17.fr/paris-un-policier-retrouve-mort-a-son-domicile/",
           "titre": "Actu17"
-        }
-      ]
-    },
-    {
-      "cause": "suicide",
-      "count": 1,
-      "year": "2019",
-      "month": "04",
-      "day": "16",
-      "house": "police",
-      "text": "Un policier du CRA se suicide à son domicile. Il était père d'un petit garçon.",
-      "section": "Centre de Rétention Administrative (CRA)",
-      "location": "Metz (Moselle)",
-      "domtom": "no",
-      "gps": {
-        "lat": 49.099270,
-        "lon": 6.209754
-      },
-      "sources": [
-        {
-          "url": "https://twitter.com/association_mpc/status/1118055338056482816",
-          "titre": "@association_mpc (Twitter)"
-        },
-        {
-          "url": "https://actu17.fr/un-policier-affecte-a-metz-a-mis-fin-a-ses-jours/",
-          "titre": "Actu17"
-        },
-        {
-          "url": "https://actu.fr/grand-est/metz_57463/un-policier-affecte-metz-sest-suicide_23003464.html",
-          "titre": "Actu.fr"
-        },
-        {
-          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-de-moselle-s-est-suicide-1555521584",
-          "titre": "France Bleu"
         }
       ]
     },
