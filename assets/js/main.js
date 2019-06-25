@@ -12,7 +12,7 @@ let main = {
       center: new google.maps.LatLng(48.1, -4.21),
       mapTypeControl: false,
       zoom: 12,
-      maxZoom: 14,
+      maxZoom: 15,
       mapTypeId: google.maps.MapTypeId.HYBRID,
     };
     let formElement = document.getElementById('form-filters');
@@ -61,7 +61,11 @@ let main = {
               './assets/images/' + death.house + '.png'),
           });
 
-          let infoWindowsContent = '<h3>' + (death.section ? (death.section + ' - ') : '') + death.location + '</h3>'
+          let infoWindowsContent = '<h3>'
+            + (death.section ? (death.section + ' - ') : '')
+            + death.location
+            + (death.count > 1 ? (' - <strong style="color: red;">' + death.count + ' décès</strong>') : '')
+            + '</h3>'
             + '<span><strong>Date</strong>: '
             + death.day + '/'
             + death.month + '/'
