@@ -5,6 +5,7 @@
 let main = {
   markers: [],
   markerCluster: null,
+  heatMap: null,
   infoWindows: [],
   currentInfoWindows: null,
   init: function() {
@@ -37,12 +38,18 @@ let main = {
     qwest.get(source.replace('%year%', filters.year)).then(function(xhr, response) {
       let bounds = new google.maps.LatLngBounds(),
         domTomMarkers = [],
-        nationalMarkers = [];
+        nationalMarkers = [],
+        heatMapData = [];
 
       response = self.filteredResponse(response, filters);
 
+      // @todo Make a cleaner method....
       if (self.markerCluster) {
         self.markerCluster.clearMarkers();
+      }
+
+      if (self.heatMap) {
+        self.heatMap.setMap(null);
       }
       self.clearMarkers();
 
@@ -106,6 +113,10 @@ let main = {
           else {
             nationalMarkers[key] = marker;
           }
+          heatMapData.push({
+            location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
+            weight: 50 * Math.pow(death.count, 2)
+          });
         }
       }
 
@@ -126,6 +137,15 @@ let main = {
           bounds.extend(boundsMarkers[key].getPosition());
         }
       }
+
+
+      self.heatMap = new google.maps.visualization.HeatmapLayer({
+        data: heatMapData,
+        radius: 2,
+        dissipating: false,
+        opacity: 0.25
+      });
+      self.heatMap.setMap(map);
 
       self.buildPermalink(filters);
       self.printDefinitionsText(response);
