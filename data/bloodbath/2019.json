@@ -36,6 +36,10 @@
         "singular": "<strong>%d</strong> policier",
         "plural": "<strong>%d</strong> policiers"
       },
+      "pm": {
+        "singular": "<strong>%d</strong> policier municipal",
+        "plural": "<strong>%d</strong> policiers municipaux"
+      },
       "douane": {
         "singular": "<strong>%d</strong> douanier",
         "plural": "<strong>%d</strong> douaniers"
@@ -807,6 +811,36 @@
       "count": 1,
       "year": "2019",
       "month": "04",
+      "day": "16",
+      "house": "pm",
+      "text": "Un policier municipal se suicide avec son arme de service dans la nuit sur son lieu de travail. Très fusionnel avec sa fille, il avait envisagé une réorientation professionnelle au Canada.",
+      "section": "Police Municipale",
+      "location": "Béziers (Hérault)",
+      "domtom": "no",
+      "gps": {
+        "lat": 43.342809,
+        "lon":  3.214062
+      },
+      "sources": [
+        {
+          "url": "https://www.midilibre.fr/2019/04/17/suicide-dun-policier-municipal-a-beziers-personne-ne-sait-ce-qui-sest-passe,8137271.php",
+          "titre": "Midi Libre"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/occitanie/herault/beziers/beziers-policier-municipal-se-suicide-son-arme-son-lieu-travail-1656090.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2497763-20190416-beziers-policier-municipal-retrouve-mort-lieu-travail",
+          "titre": "20 minutes"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "04",
       "day": "18",
       "house": "police",
       "text": "Une capitaine de police de la sûreté départementale se tire une balle dans le coeur avec son arme de service. Elle était mère de deux jeunes enfants",
@@ -886,6 +920,36 @@
         "lon": 55.469654
       },
       "sources": []
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "05",
+      "day": "07",
+      "house": "pm",
+      "text": "Un policier municipal commissariat de Cholet s'est suicidé sans faire usage de son arme de service. Père de trois enfants il avait été désarmé par sa hiérarchie pour des problèmes familliaux.",
+      "section": "Ciat municipal",
+      "location": "Cholet (Maine-et-Loire)",
+      "domtom": "no",
+      "gps": {
+        "lat":  47.061753,
+        "lon": -0.881144
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/maine-et-loire-un-policier-municipal-de-cholet-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/pays-de-la-loire/maine-et-loire/cholet/cholet-policier-municipal-s-est-donne-mort-1666193.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://actupenit.com/2019/05/07/cholet-un-policier-municipal-pere-de-trois-enfants-sest-suicide/",
+          "titre": "Actupenit"
+        }
+      ]
     },
     {
       "cause": "suicide",

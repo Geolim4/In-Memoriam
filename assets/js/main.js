@@ -115,14 +115,14 @@ let main = {
           }
           heatMapData.push({
             location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
-            weight: 10 + (death.count > 1 ? (death.count * 20) : 0)
+            weight: 10 + (death.count > 1 ? (death.count * 5) : 0)
           });
         }
       }
 
       self.markerCluster = new MarkerClusterer(map, self.markers, {
         imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
-        gridSize: 50,
+        gridSize: 60,
         maxZoom: 14,
       });
 
@@ -141,9 +141,9 @@ let main = {
 
       self.heatMap = new google.maps.visualization.HeatmapLayer({
         data: heatMapData,
-        radius: 2,
-        dissipating: false,
-        opacity: 0.2
+        radius: 100,
+        dissipating: true,
+        opacity: 0.3
       });
       self.heatMap.setMap(map);
 
