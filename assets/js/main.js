@@ -5,6 +5,7 @@
 let main = {
   markers: [],
   markerCluster: null,
+  heatMap: null,
   infoWindows: [],
   currentInfoWindows: null,
   init: function() {
@@ -12,12 +13,13 @@ let main = {
       center: new google.maps.LatLng(48.1, -4.21),
       mapTypeControl: false,
       zoom: 12,
-      maxZoom: 14,
+      maxZoom: 15,
       mapTypeId: google.maps.MapTypeId.HYBRID,
     };
     let formElement = document.getElementById('form-filters');
     let mapElement = document.getElementById('map');
     let map = new google.maps.Map(mapElement, options);
+    let filters = this.getFilters(formElement, true);
 
     this.bindFilters(map, mapElement, formElement);
     this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
@@ -34,15 +36,21 @@ let main = {
   bindMarkers: function(source, map, filters) {
     let self = this;
 
-    qwest.get(source).then(function(xhr, response) {
+    qwest.get(source.replace('%year%', filters.year)).then(function(xhr, response) {
       let bounds = new google.maps.LatLngBounds(),
         domTomMarkers = [],
-        nationalMarkers = [];
+        nationalMarkers = [],
+        heatMapData = [];
 
       response = self.filteredResponse(response, filters);
 
+      // @todo Make a cleaner method....
       if (self.markerCluster) {
         self.markerCluster.clearMarkers();
+      }
+
+      if (self.heatMap) {
+        self.heatMap.setMap(null);
       }
       self.clearMarkers();
 
@@ -62,7 +70,11 @@ let main = {
               './assets/images/' + death.house + '.png'),
           });
 
-          let infoWindowsContent = '<h3>' + (death.section ? (death.section + ' - ') : '') + death.location + '</h3>'
+          let infoWindowsContent = '<h3>'
+            + (death.section ? (death.section + ' - ') : '')
+            + death.location
+            + (death.count > 1 ? (' - <strong style="color: red;">' + death.count + ' décès</strong>') : '')
+            + '</h3>'
             + '<span><strong>Date</strong>: '
             + death.day + '/'
             + death.month + '/'
@@ -102,6 +114,10 @@ let main = {
           else {
             nationalMarkers[key] = marker;
           }
+          heatMapData.push({
+            location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
+            weight: 10 + (death.count > 1 ? (death.count * 20) : 0)
+          });
         }
       }
 
@@ -123,6 +139,15 @@ let main = {
         }
       }
 
+
+      self.heatMap = new google.maps.visualization.HeatmapLayer({
+        data: heatMapData,
+        radius: 2,
+        dissipating: false,
+        opacity: 0.2
+      });
+      self.heatMap.setMap(map);
+
       self.buildPermalink(filters);
       self.printDefinitionsText(response);
       map.fitBounds(bounds);
@@ -130,7 +155,7 @@ let main = {
   },
   bindFilters: function(map, mapElement, formElement) {
     let self = this,
-      filters = this.getFilters(formElement, true),
+      filters = this.getFilters(formElement),
       selects = formElement.querySelectorAll('form select');
 
     selects.forEach(function(select) {
