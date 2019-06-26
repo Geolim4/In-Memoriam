@@ -115,7 +115,7 @@ let main = {
           }
           heatMapData.push({
             location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
-            weight: 50 * Math.pow(death.count, 2)
+            weight: 10 + (death.count > 1 ? (death.count * 20) : 0)
           });
         }
       }
@@ -143,7 +143,7 @@ let main = {
         data: heatMapData,
         radius: 2,
         dissipating: false,
-        opacity: 0.25
+        opacity: 0.2
       });
       self.heatMap.setMap(map);
 
