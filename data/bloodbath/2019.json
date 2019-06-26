@@ -151,7 +151,7 @@
       "month": "01",
       "day": "07",
       "house": "police",
-      "text": "Un policier du CIC de la Rochelle se suicide.Peu d'informations disponibles sur ce suicide.",
+      "text": "Un policier du CIC de la Rochelle se suicide. Peu d'informations disponibles sur ce suicide.",
       "section": "CIC La Rochelle",
       "location": "La Rochelle (Charente-Maritime)",
       "domtom": "no",
@@ -819,7 +819,7 @@
       "domtom": "no",
       "gps": {
         "lat": 43.342809,
-        "lon":  3.214062
+        "lon": 3.214062
       },
       "sources": [
         {
@@ -926,6 +926,40 @@
       "count": 1,
       "year": "2019",
       "month": "05",
+      "day": "01",
+      "house": "pm",
+      "text": "Un policier municipal de Paray-le-Monial s'est suicidé. Il était père de deux enfants et divorcé.",
+      "section": "Ciat Paray-le-Monial",
+      "location": "Paray-le-Monial (Saône-et-Loire)",
+      "domtom": "no",
+      "gps": {
+        "lat": 46.452462,
+        "lon": 4.120684
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/_FFOC_/status/1123706030259625994",
+          "titre": "@_FFOC_ (Twitter)"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/55334/",
+          "titre": "Profession Gendarme"
+        },
+        {
+          "url": "https://actu17.fr/saone-et-loire-un-policier-municipal-de-paray-le-monial-a-mis-fin-a-ses-jours/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actupenit.com/2019/05/03/paray-le-monial-un-policier-municipal-se-suicide/",
+          "titre": "Actupenit"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "05",
       "day": "07",
       "house": "pm",
       "text": "Un policier municipal commissariat de Cholet s'est suicidé sans faire usage de son arme de service. Père de trois enfants il avait été désarmé par sa hiérarchie pour des problèmes familliaux.",
@@ -933,7 +967,7 @@
       "location": "Cholet (Maine-et-Loire)",
       "domtom": "no",
       "gps": {
-        "lat":  47.061753,
+        "lat": 47.061753,
         "lon": -0.881144
       },
       "sources": [
@@ -1012,6 +1046,28 @@
         {
           "url": "https://actu17.fr/seine-et-marne-un-policier-de-38-ans-a-mis-fin-a-ses-jours/",
           "titre": "Actu17"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "05",
+      "day": "26",
+      "house": "pm",
+      "text": "Un policier municipal commissariat de Nice s'est suicidé. Peu d'informations disponibles sur ce suicide.",
+      "section": "Ciat Nice",
+      "location": "Nice (Alpes Maritimes)",
+      "domtom": "no",
+      "gps": {
+        "lat": 43.710525,
+        "lon": 7.261837
+      },
+      "sources": [
+        {
+          "url": "http://www.profession-gendarme.com/suicide-dun-policier-municipal-a-nice/",
+          "titre": "Profession Gendarme"
         }
       ]
     },
@@ -1209,6 +1265,40 @@
         {
           "url": "https://actu17.fr/oise-un-gendarme-de-36-ans-decede-lors-dune-epreuve-sportive/",
           "titre": "Actu7"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "06",
+      "day": "25",
+      "house": "gendarmerie",
+      "text": "Un adjudant-chef du PSIG de Nîmes se suicide avec son arme de service. Adjoint du commandant du PSIG, il était marié et père de deux enfants.",
+      "section": "PSIG",
+      "location": "Nîmes (Gard)",
+      "domtom": "no",
+      "gps": {
+        "lat":  43.825462,
+        "lon": 4.362922
+      },
+      "sources": [
+        {
+          "url": "https://france3-regions.francetvinfo.fr/occitanie/gard/nimes/corps-vie-responsables-gendarmerie-du-gard-retrouve-lui-nimes-1690366.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://actu17.fr/nimes-un-gendarme-se-donne-la-mort-avec-son-arme-de-service/",
+          "titre": "Actu7"
+        },
+        {
+          "url": "https://lessor.org/a-la-une/un-gendarme-du-gard-se-suicide/",
+          "titre": "L'Essor"
+        },
+        {
+          "url": "https://actu.fr/occitanie/nimes_30189/nimes-gendarme-se-suicide-arme-service_25195508.html",
+          "titre": "Actu.fr"
         }
       ]
     }
