@@ -49,15 +49,19 @@
         "plural": "<strong>%d</strong> militaires"
       }
     },
-    "domtom": {
-      "#label": "Territorialité: %domtom%",
-      "no": {
+    "origin": {
+      "#label": "Territorialité: %origin%",
+      "interieur": {
         "singular": "<strong>%d</strong> disparition sur le territoire national",
         "plural": "<strong>%d</strong> disparitions en territoire national"
       },
-      "yes": {
+      "domtom": {
         "singular": "<strong>%d</strong> disparition en outre-mer",
         "plural": "<strong> %d</strong> disparitions en outre-mer"
+      },
+      "opex": {
+        "singular": "<strong>%d</strong> disparition en opération extérieure (OPEX)",
+        "plural": "<strong> %d</strong> disparitions en opération extérieure (OPEX)"
       }
     }
   },

@@ -53,15 +53,19 @@
         "plural": "<strong>%d</strong> militaires"
       }
     },
-    "domtom": {
-      "#label": "Territorialité: %domtom%",
-      "no": {
+    "origin": {
+      "#label": "Territorialité: %origin%",
+      "interieur": {
         "singular": "<strong>%d</strong> disparition sur le territoire national",
         "plural": "<strong>%d</strong> disparitions en territoire national"
       },
-      "yes": {
+      "domtom": {
         "singular": "<strong>%d</strong> disparition en outre-mer",
         "plural": "<strong> %d</strong> disparitions en outre-mer"
+      },
+      "opex": {
+        "singular": "<strong>%d</strong> disparition en opération extérieure (OPEX)",
+        "plural": "<strong> %d</strong> disparitions en opération extérieure (OPEX)"
       }
     }
   },
@@ -76,7 +80,7 @@
       "text": "Un policier de la CSP se suicide avec son arme de service. Il était père de deux enfants.",
       "section": "CSP La Rochelle",
       "location": "La Rochelle (Charente-Maritime)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 46.168667,
         "lon": -1.152359
@@ -102,7 +106,7 @@
       "text": "Un policier de la PAF se suicide sans faire usage de son arme de service. Il était marié et père de famille.",
       "section": "PAF Cherbourg",
       "location": "Querqueville (Manche)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 49.662767,
         "lon": -1.697209
@@ -128,7 +132,7 @@
       "text": "Un policier du CIC se suicide à son domicile avec son arme de service. Il était marié et père de famille.",
       "section": "CIC Reims",
       "location": "Reims (Marne)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 49.256218,
         "lon": 4.022128
@@ -154,7 +158,7 @@
       "text": "Un policier du CIC de la Rochelle se suicide. Peu d'informations disponibles sur ce suicide.",
       "section": "CIC La Rochelle",
       "location": "La Rochelle (Charente-Maritime)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 46.170629,
         "lon": -1.141469
@@ -176,7 +180,7 @@
       "text": "Un policier de la BAC se suicide à son domicile de Brunoy (Essonne), avec son arme de service. Il était père d'une petite fille.",
       "section": "BAC Haÿ-les-Roses",
       "location": "Haÿ-les-Roses (Marne)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.698343,
         "lon": 2.504014
@@ -206,7 +210,7 @@
       "text": "Un policier de la CRS 16 se suicide à son domicile de Saint-Omer (Pas-de-Calais) avec son arme de service. Il était père de trois enfants.",
       "section": "CRS 16",
       "location": "Saint-Omer (Pas-de-Calais)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 50.753773,
         "lon": 2.250268
@@ -236,7 +240,7 @@
       "text": "Un policier de la CSG (BRF Paris) se suicide à son domicile avec son arme de service.",
       "section": "CSG BRF Paris",
       "location": "Paris 18e",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.893970,
         "lon": 2.364701
@@ -266,7 +270,7 @@
       "text": "Un policier de la BCF se suicide. Peu d'informations disponibles sur ce suicide.",
       "section": "BCF Gare du Nord - Paris",
       "location": "Paris 20e",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.849443,
         "lon": 2.406771
@@ -288,7 +292,7 @@
       "text": "Un policier se suicide avec son arme de service. Le laisse une lettre derrière lui dénonçant les conditions de travail et les problèmes d'évolutions de carrière.",
       "section": "CRS 10",
       "location": "Le Mans (Sarthe)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.005502,
         "lon": 0.225123
@@ -314,7 +318,7 @@
       "text": "Informations issues de l’Administration, pour deux policiers suicidés mais dont nous n’avons aucunes informations à ce jour.",
       "section": "",
       "location": "France",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.871773,
         "lon": 2.316401
@@ -336,7 +340,7 @@
       "text": "Un policier en poste en Martinique se suicide. Il était père de famille",
       "section": "UAAJ",
       "location": "Fort de France (Martinique)",
-      "domtom": "yes",
+      "origin": "domtom",
       "gps": {
         "lat": 14.605298,
         "lon": -61.068503
@@ -362,7 +366,7 @@
       "text": "Un major de police se suicide à son domicile après avoir tué son ex-compagne. Le parquet de Laval s'est saisi de l'affaire mais s'est refusé à tout commentaire.",
       "section": "Ciat Laval",
       "location": "Louverné (Mayenne)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.118888,
         "lon": -0.718941
@@ -392,7 +396,7 @@
       "text": "Un policier de la SU de Grand Quevilly se suicide. Peu d'informations disponibles.",
       "section": "SU Grand Quevilly",
       "location": "Grand Quevilly (Seine-Maritime)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 49.406735,
         "lon": 1.044756
@@ -414,7 +418,7 @@
       "text": "Un policier se suicide en se tirant une balle dans la poitrine dans les vestiaires du Ciat. Il était marié et père d'un petit garçon.",
       "section": "BMo Limoges",
       "location": "Limoges (Haute-Vienne)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 45.844665,
         "lon": 1.252959
@@ -448,7 +452,7 @@
       "text": "Un policier s'est suicidé, il était affecté à la CSP de Dunkerque. Peu d'informations disponibles sur ce suicide.",
       "section": "CSP Dunkerque",
       "location": "Dunkerque (Nord)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 51.038376,
         "lon": 2.376220
@@ -470,7 +474,7 @@
       "text": "Un policier d’Elancourt se suicide avec son arme de service. Son corps a été retrouvé dans des boix à proximité de son domicile par les gendarmes. Il était père de deux jeunes filles",
       "section": "Ciat Elancourt",
       "location": "Elancourt (Yvelines)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.782620,
         "lon": 1.754585
@@ -500,7 +504,7 @@
       "text": "Un policier se suicide après une violente dispute conjugale. Il était père de deux enfants.",
       "section": "Ciat Rouen / DDSP 76",
       "location": "Saint-Saëns (Seine-Maritime)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 49.435054,
         "lon": 1.081077
@@ -526,7 +530,7 @@
       "text": "Un policier de la CSI de Limay se suicide avec son arme de service. Découvert sans vie à son domicile par ses collègues, il était père de deux enfants.",
       "section": "CSI Limay (Yvelines)",
       "location": "Nézel (Yvelines)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.942885,
         "lon": 1.840041
@@ -556,7 +560,7 @@
       "text": "Un policier de la 22e CI de Paris se suicide avec son arme de service. Découvert sans vie à son domicile par ses collègues, il était père d'un petit garçon.",
       "section": "22e CI / DOPC",
       "location": "Paris 12e",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.841943,
         "lon": 2.405364
@@ -582,7 +586,7 @@
       "text": "Un policier se suicide à son domicile après s'être retranché à son domicile dans l'Oise. Affecté dans un Ciat parisien le GIGN n'a pu négocier sa reddition.",
       "section": "Ciat Paris (inconnu)",
       "location": "Louveaucourt, Bailleval (Oise)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 49.342834,
         "lon": 2.459641
@@ -616,7 +620,7 @@
       "text": "Un policier de la BCF s'est suicidé à son domicile en Seine-et-Marne. Peu d'informations disponibles sur ce suicide",
       "section": "BCF Paris",
       "location": "Seine-et-Marne",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.690206,
         "lon": 2.993409
@@ -642,7 +646,7 @@
       "text": "Un policier de la BAC s'est suicidé chez lui sans faire usage de son arme de service. Il était père de 4 enfants.",
       "section": "BAC D Lyon",
       "location": "Marlieux (Ain)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 46.065072,
         "lon": 5.071734
@@ -680,7 +684,7 @@
       "text": "Une policière de la brigade de nuit se suicide dans un champ. Mère de 2 enfants elle laisse derrière elle une lettre.",
       "section": "Brigade de nuit de Conflans-Sainte-Honorine (Yvelines)",
       "location": "Guainville (Eure-et-Loir)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 49.000324,
         "lon": 2.093394
@@ -714,7 +718,7 @@
       "text": "Un policier d'Alès se suicide sans faire usage de son arme de service. Son corps a été retrouvé dans les bois à l'issue d'une longue battue",
       "section": "Ciat Ales",
       "location": "La Calmette (Gard)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 43.931985,
         "lon": 4.316080
@@ -756,7 +760,7 @@
       "text": "Un policier de la DOPC (UTJDR) se suicide à son domicile avec son arme de service.",
       "section": "DOPC (UTJDR)",
       "location": "Paris 13e",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.826618,
         "lon": 2.370783
@@ -782,7 +786,7 @@
       "text": "Un policier du CRA se suicide à son domicile. Il était père d'un petit garçon.",
       "section": "Centre de Rétention Administrative (CRA)",
       "location": "Metz (Moselle)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 49.099270,
         "lon": 6.209754
@@ -816,7 +820,7 @@
       "text": "Un policier municipal se suicide avec son arme de service dans la nuit sur son lieu de travail. Très fusionnel avec sa fille, il avait envisagé une réorientation professionnelle au Canada.",
       "section": "Police Municipale",
       "location": "Béziers (Hérault)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 43.342809,
         "lon": 3.214062
@@ -846,7 +850,7 @@
       "text": "Une capitaine de police de la sûreté départementale se tire une balle dans le coeur avec son arme de service. Elle était mère de deux jeunes enfants",
       "section": "Sûreté Départementale",
       "location": "Montpellier (Hérault)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 43.612616,
         "lon": 3.892701
@@ -880,7 +884,7 @@
       "text": "Un jeune policier de la DOPC se suicide avec son arme de service. Il était chargé des actions de sensibilisation et préventions dans les écoles, les salons et autres événements.",
       "section": "DRSR (DOPC)",
       "location": "Paris 4e",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.854916,
         "lon": 2.345741
@@ -914,7 +918,7 @@
       "text": "Un commandant de gendarmerie se suicide, il était père de famille.",
       "section": "Caserne de l’Entre-Deux",
       "location": "Entre-Deux (Réunion)",
-      "domtom": "yes",
+      "origin": "domtom",
       "gps": {
         "lat": -21.248367,
         "lon": 55.469654
@@ -931,7 +935,7 @@
       "text": "Un policier municipal de Paray-le-Monial s'est suicidé. Il était père de deux enfants et divorcé.",
       "section": "Ciat Paray-le-Monial",
       "location": "Paray-le-Monial (Saône-et-Loire)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 46.452462,
         "lon": 4.120684
@@ -956,6 +960,43 @@
       ]
     },
     {
+      "cause": "deathOnDuty",
+      "count": 2,
+      "year": "2019",
+      "month": "05",
+      "day": "07",
+      "house": "armee",
+      "text": "Lors d'une opération de libération d'otages au Burkina Faso, le maître Cédric de Pierrepont et le maître Alain Bertoncello ont perdu la vie lors du raid. Tout deux étaient des militaires hautement expérimentés et décorés.",
+      "section": "Commando Hubert, Marine Nationale",
+      "location": "Burkina Faso",
+      "origin": "opex",
+      "gps": {
+        "lat":  13.997536,
+        "lon": -1.954055
+      },
+      "sources": [
+        {
+          "url": "https://www.liberation.fr/planete/2019/05/10/burkina-faso-deux-soldats-francais-tues-quatre-otages-sauves_1726183",
+          "titre": "Libération"
+        },
+        {
+          "url": "https://www.lemonde.fr/international/article/2019/05/10/sahel-quatre-otages-dont-les-deux-francais-enleves-au-benin-ont-ete-liberes_5460497_3210.html",
+          "titre": "Le monde"
+        },
+        {
+          "url": "http://www.lefigaro.fr/international/qui-etaient-cedric-de-pierrepont-et-alain-bertoncello-les-deux-militaires-qui-se-sont-sacrifies-pour-sauver-deux-otages-francais-au-sahel-20190510",
+          "titre": "Le Figaro"
+        },
+        {
+          "url": "https://actu17.fr/otages-liberes-au-burkina-les-2-militaires-francais-tues-etaient-membres-du-commando-hubert/",
+          "titre": "Actu17"
+        },        {
+          "url": "https://www.la-croix.com/France/Securite/Militaires-morts-Burkina-Faso-recit-lassaut-commandos-marine-francais-2019-05-10-1201021006",
+          "titre": "La Croix"
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "year": "2019",
@@ -965,7 +1006,7 @@
       "text": "Un policier municipal commissariat de Cholet s'est suicidé sans faire usage de son arme de service. Père de trois enfants il avait été désarmé par sa hiérarchie pour des problèmes familliaux.",
       "section": "Ciat municipal",
       "location": "Cholet (Maine-et-Loire)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 47.061753,
         "lon": -0.881144
@@ -990,12 +1031,46 @@
       "count": 1,
       "year": "2019",
       "month": "05",
+      "day": "17",
+      "house": "gendarmerie",
+      "text": "Un officier de gendarmerie s’est suicidé dans son logement avec son arme de service. Marié et sans enfant il avait été promu capitaine en 2014 avant de prendre le commandement de la compagnie de Lons-le-Saunier en mars 2019.",
+      "section": "CGD Jura",
+      "location": "Lons-le-Saunier (Jura)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 46.671087,
+        "lon": 5.570432
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/jura-un-officier-de-gendarmerie-sest-donne-la-mort/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/bourgogne-franche-comte/jura/lons-le-saunier/lons-saunier-commandant-gendarmerie-se-suicide-son-arme-service-1671077.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://lessor.org/a-la-une/suicide-du-commandant-de-compagnie-de-lons-le-saunier-jura/",
+          "titre": "L'essor"
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/le-patron-des-gendarmes-de-lons-le-saunier-se-suicide-avec-son-arme-de-service-1558102900",
+          "titre": "France Bleu"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "05",
       "day": "22",
       "house": "police",
       "text": "Un policier du Groupe d'Appui Judiciaire (GAJ) a mit fin à ses jours. Peu d'informations disponibles sur ce suicide.",
       "section": "GAJ",
       "location": "Lille (Nord)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 50.629522,
         "lon": 3.057458
@@ -1025,7 +1100,7 @@
       "text": "Un policier affecté au commissariat du 7e arrondissement de Paris s’est donné la mort. Il était père de deux très jeunes enfants.",
       "section": "CSP paris 7e",
       "location": "Meaux (Seine-et-Marne)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.956342,
         "lon": 2.889526
@@ -1059,7 +1134,7 @@
       "text": "Un policier municipal commissariat de Nice s'est suicidé. Peu d'informations disponibles sur ce suicide.",
       "section": "Ciat Nice",
       "location": "Nice (Alpes Maritimes)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 43.710525,
         "lon": 7.261837
@@ -1081,7 +1156,7 @@
       "text": "Un officier de police du SDN 77 s'est suicide à son domicile. Son corps a été retrouvé près du Ciat de la commune de Chessy.",
       "section": "SDN 77",
       "location": "Chessy (Seine-et-Marne)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.862258,
         "lon": 2.785911
@@ -1115,7 +1190,7 @@
       "text": "Un adjudant du Peloté Motorisé de Fougère s’est suicidé avec son arme de service. Il était marié et père de 5 enfants.",
       "section": "EDSR (PMO Fougères)",
       "location": "Fougères (Ille-et-Vilaine)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.350400,
         "lon": -1.183104
@@ -1145,7 +1220,7 @@
       "text": "Un Gardien de la Paix du Ciat de police du 19ème à Paris se suicide sur son lieu de villégiature près de Nîmes.",
       "section": "CSP Paris 19e",
       "location": "Saint-Gervasy (Gard)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 43.877545,
         "lon": 4.469124
@@ -1171,7 +1246,7 @@
       "text": "Yann T. est décédé à son domicile à la suite d'un accident.",
       "section": "CRS 61",
       "location": "Vélizy-Villacoublay (Yvelines)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.783721,
         "lon": 2.184852
@@ -1188,7 +1263,7 @@
       "text": "Un brigadier de police s’est suicidé à son domicile en utilisant son arme de service. Il était affecté au STJN (Service de traitement judiciaire de nuit) du 2ème district de la préfecture de police.",
       "section": "STJN",
       "location": "Paris 18e",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 48.885721,
         "lon": 2.351906
@@ -1218,7 +1293,7 @@
       "text": "Un policier de la BT centrale a mis fin à ses jours sans faire usage de son arme. Il était père de trois enfants.",
       "section": "CSP Toulouse (BT centrale)",
       "location": "Toulouse",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 43.602366,
         "lon": 1.450819
@@ -1252,7 +1327,7 @@
       "text": "Un gendarme accidentellement lors d'une épreuve sportive.",
       "section": "CoB Attichy",
       "location": "Attichy (Oise)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
         "lat": 49.410770,
         "lon": 3.048556
@@ -1278,9 +1353,9 @@
       "text": "Un adjudant-chef du PSIG de Nîmes se suicide avec son arme de service. Adjoint du commandant du PSIG, il était marié et père de deux enfants.",
       "section": "PSIG",
       "location": "Nîmes (Gard)",
-      "domtom": "no",
+      "origin": "interieur",
       "gps": {
-        "lat":  43.825462,
+        "lat": 43.825462,
         "lon": 4.362922
       },
       "sources": [
@@ -1299,6 +1374,32 @@
         {
           "url": "https://actu.fr/occitanie/nimes_30189/nimes-gendarme-se-suicide-arme-service_25195508.html",
           "titre": "Actu.fr"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "06",
+      "day": "27",
+      "house": "armee",
+      "text": "Un jeune soldat du 27ème Bataillon de Chasseurs Alpins d’Annecy se suicide avec une arme à feu durant un exercice au camp militaire de Caylus, dans le Tarn-et-Garonne.",
+      "section": "27ème BCA",
+      "location": "Caylus (Tarn-et-Garonne)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 44.264690,
+        "lon": 1.751655
+      },
+      "sources": [
+        {
+          "url": "https://www.ladepeche.fr/2019/06/27/le-jeune-militaire-se-suicide-au-camp-de-caylus,8281707.php",
+          "titre": "La Dépêche"
+        },
+        {
+          "url": "https://actu17.fr/tarn-et-garonne-un-militaire-de-19-ans-se-suicide-lors-dun-exercice/",
+          "titre": "Actu7"
         }
       ]
     }

@@ -24,13 +24,34 @@ let main = {
     this.bindFilters(map, mapElement, formElement);
     this.bindMarkers(mapElement.dataset.bloodbathSrc, map, filters);
   },
+  clearMapObjects: function() {
+    this.clearMarkers().clearInfoWindows().clearHeatMap().clearMarkerCluster();
+  },
   clearMarkers: function() {
-    for (let key in this.markers) {
-      if (this.markers.hasOwnProperty(key)) {
-        this.markers[key].setMap(null);
-      }
+    for (let i = 0; i < this.markers.length; i++) {
+      this.markers[i].setMap(null);
     }
-    this.markers = this.infoWindows = [];
+    this.markers = [];
+    return this;
+  },
+  clearInfoWindows: function() {
+    for (let i = 0; i < this.clearInfoWindows.length; i++) {
+      this.clearInfoWindows[i].setMap(null);
+    }
+    this.infoWindows = [];
+    return this;
+  },
+  clearHeatMap: function() {
+    if (this.heatMap) {
+      this.heatMap.setMap(null);
+    }
+    return this;
+  },
+  clearMarkerCluster: function() {
+    if (this.markerCluster) {
+      this.markerCluster.clearMarkers();
+    }
+    return this;
   },
   bindMarkers: function(source, map, filters) {
     let self = this;
@@ -42,16 +63,7 @@ let main = {
         heatMapData = [];
 
       response = self.filteredResponse(response, filters);
-
-      // @todo Make a cleaner method....
-      if (self.markerCluster) {
-        self.markerCluster.clearMarkers();
-      }
-
-      if (self.heatMap) {
-        self.heatMap.setMap(null);
-      }
-      self.clearMarkers();
+      self.clearMapObjects();
 
       if (!response.deaths || !response.deaths.length) {
         self.printDefinitionsText(false);
@@ -105,18 +117,18 @@ let main = {
             self.currentInfoWindows = infoWindows;
           });
 
-          self.infoWindows[key] = infoWindows;
-          self.markers[key] = marker;
-          if (death.domtom === 'yes') {
-            domTomMarkers[key] = marker;
+          self.infoWindows.push(infoWindows);
+          if (death.origin === 'interieur') {
+            nationalMarkers.push(marker);
           }
           else {
-            nationalMarkers[key] = marker;
+            domTomMarkers.push(marker);
           }
           heatMapData.push({
             location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
-            weight: 10 + (death.count > 1 ? (death.count * 5) : 0)
+            weight: 10 + (death.count > 1 ? (death.count * 5) : 0),
           });
+          self.markers.push(marker);
         }
       }
 
@@ -138,14 +150,15 @@ let main = {
         }
       }
 
-
-      self.heatMap = new google.maps.visualization.HeatmapLayer({
-        data: heatMapData,
-        radius: 100,
-        dissipating: true,
-        opacity: 0.3
-      });
-      self.heatMap.setMap(map);
+      if (heatMapData.length) {
+        self.heatMap = new google.maps.visualization.HeatmapLayer({
+          data: heatMapData,
+          radius: 100,
+          dissipating: true,
+          opacity: 0.3,
+        });
+        self.heatMap.setMap(map);
+      }
 
       self.buildPermalink(filters);
       self.printDefinitionsText(response);
@@ -160,8 +173,7 @@ let main = {
     selects.forEach(function(select) {
       select.value = filters[select.name];
       self.addEventHandler(select, 'change', function() {
-        self.bindMarkers(mapElement.dataset.bloodbathSrc, map,
-          self.getFilters(formElement));
+        self.bindMarkers(mapElement.dataset.bloodbathSrc, map, self.getFilters(formElement));
         return false;
       });
     });
