@@ -471,7 +471,7 @@
       "month": "03",
       "day": "05",
       "house": "police",
-      "text": "Un policier d’Elancourt se suicide avec son arme de service. Son corps a été retrouvé dans des boix à proximité de son domicile par les gendarmes. Il était père de deux jeunes filles",
+      "text": "Un policier d’Elancourt se suicide avec son arme de service. Son corps a été retrouvé dans des bois à proximité de son domicile par les gendarmes. Il était père de deux jeunes filles",
       "section": "Ciat Elancourt",
       "location": "Elancourt (Yvelines)",
       "origin": "interieur",
@@ -818,7 +818,7 @@
       "day": "16",
       "house": "pm",
       "text": "Un policier municipal se suicide avec son arme de service dans la nuit sur son lieu de travail. Très fusionnel avec sa fille, il avait envisagé une réorientation professionnelle au Canada.",
-      "section": "Police Municipale",
+      "section": "Poste de Police Béziers",
       "location": "Béziers (Hérault)",
       "origin": "interieur",
       "gps": {
@@ -933,7 +933,7 @@
       "day": "01",
       "house": "pm",
       "text": "Un policier municipal de Paray-le-Monial s'est suicidé. Il était père de deux enfants et divorcé.",
-      "section": "Ciat Paray-le-Monial",
+      "section": "Poste de Police Paray-le-Monial",
       "location": "Paray-le-Monial (Saône-et-Loire)",
       "origin": "interieur",
       "gps": {
@@ -971,7 +971,7 @@
       "location": "Burkina Faso",
       "origin": "opex",
       "gps": {
-        "lat":  13.997536,
+        "lat": 13.997536,
         "lon": -1.954055
       },
       "sources": [
@@ -990,7 +990,8 @@
         {
           "url": "https://actu17.fr/otages-liberes-au-burkina-les-2-militaires-francais-tues-etaient-membres-du-commando-hubert/",
           "titre": "Actu17"
-        },        {
+        },
+        {
           "url": "https://www.la-croix.com/France/Securite/Militaires-morts-Burkina-Faso-recit-lassaut-commandos-marine-francais-2019-05-10-1201021006",
           "titre": "La Croix"
         }
@@ -1004,7 +1005,7 @@
       "day": "07",
       "house": "pm",
       "text": "Un policier municipal commissariat de Cholet s'est suicidé sans faire usage de son arme de service. Père de trois enfants il avait été désarmé par sa hiérarchie pour des problèmes familliaux.",
-      "section": "Ciat municipal",
+      "section": "Poste de Police Cholet",
       "location": "Cholet (Maine-et-Loire)",
       "origin": "interieur",
       "gps": {
@@ -1132,7 +1133,7 @@
       "day": "26",
       "house": "pm",
       "text": "Un policier municipal commissariat de Nice s'est suicidé. Peu d'informations disponibles sur ce suicide.",
-      "section": "Ciat Nice",
+      "section": "Poste de Police Nice",
       "location": "Nice (Alpes Maritimes)",
       "origin": "interieur",
       "gps": {
@@ -1400,6 +1401,36 @@
         {
           "url": "https://actu17.fr/tarn-et-garonne-un-militaire-de-19-ans-se-suicide-lors-dun-exercice/",
           "titre": "Actu7"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "06",
+      "day": "28",
+      "house": "police",
+      "text": "Un capitaine de police âgé de 58 ans a mis fin à ses jours sans son arme de service à son domicile situé à Burbure",
+      "section": "BSU Bruay-La-Buissière",
+      "location": "Burbure (Pas-de-Calais)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 50.538285,
+        "lon": 2.465265
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/_FFOC_/status/1144652718310600705",
+          "titre": "@_FFOC_ (Twitter)"
+        },
+        {
+          "url": "https://actu17.fr/pas-de-calais-un-officier-de-police-retrouve-mort-a-son-domicile-a-burbure/",
+          "titre": "Actu7"
+        },
+        {
+          "url": "https://www.lavenirdelartois.fr/19832/article/2019-06-28/burbure-un-policier-retrouve-mort",
+          "titre": "L'avenir de l'Artois"
         }
       ]
     }
