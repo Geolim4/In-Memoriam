@@ -22,7 +22,8 @@ let main = {
     let filters = this.getFilters(formElement, true);
 
     this.bindFilters(map, mapElement, formElement);
-    this.bindMarkers(mapElement.dataset.bloodbathSrc, map, filters);
+    this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
+    this.initHash();
   },
   clearMapObjects: function() {
     this.clearMarkers().clearInfoWindows().clearHeatMap().clearMarkerCluster();
@@ -171,12 +172,73 @@ let main = {
       selects = formElement.querySelectorAll('form select');
 
     selects.forEach(function(select) {
-      select.value = filters[select.name];
+      select.value = filters[select.name]; // can be : event.currentTarget.value inside the event handler
       self.addEventHandler(select, 'change', function() {
         self.bindMarkers(mapElement.dataset.bloodbathSrc, map, self.getFilters(formElement));
+        self.hashManager(select.id, select.value);
         return false;
       });
     });
+  },
+
+  currentHash: null,
+  currentHashObject:[],
+  initHash () {
+    this.hashToObject();
+
+    this.currentHashObject.map(el => {
+      document.querySelector('#' + Object.keys(el)[0]).value = Object.values(el)[0]
+    })
+  },
+  hashToString() {
+    return this.currentHashObject.map(el => [ Object.keys(el)[ 0 ] + '=' + Object.values(el)[ 0 ] ]).join('&');
+  },
+  hashToObject () {
+    return this.currentHashObject = (this.currentHash || window.location.hash.substring(1)).split('&') // key/value array
+        .map(el => {
+          const p = el.split('=')
+          return {[p[0]]: p[1]}
+        }); // array of object as object key = name and object value = value
+  },
+  removeFromHash (key) {
+    this.currentHashObject = this.currentHashObject.filter(el => !Object.keys(el).includes(key));
+
+    if (!this.currentHashObject.length) {
+      history.replaceState({}, document.title, window.location.href.split('#')[ 0 ]); // remove remaining hash
+
+      return false
+    }
+
+    // hash to string
+    return this.hashToString()
+  },
+  addToHash(key, value) {
+
+    if (this.currentHash.trim() === '') {
+      window.location.hash = `${key}=${value}`;
+    } else {
+      this.removeFromHash(key);
+      this.currentHashObject.push({[key]: value});
+      window.location.hash = this.hashToString();
+    }
+  },
+  hashManager(key, value) {
+    this.currentHash = window.location.hash.substring(1);
+
+    if (this.currentHash.trim() !== '') {
+      this.hashToObject();
+    }
+
+    // remove on empty value
+    if (!value) {
+      this.currentHashObject = this.removeFromHash(key);
+      if (this.currentHashObject !== false) {
+        window.location.hash = this.currentHashObject
+      }
+    } else {
+      this.addToHash(key, value)
+      console.log(this.currentHashObject);
+    }
   },
   printDefinitionsText: function(response) {
     let definitionTexts = [];
