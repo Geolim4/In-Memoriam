@@ -79,7 +79,7 @@ let main = {
             map: map,
             title: death.text,
             icon: new google.maps.MarkerImage(
-              './assets/images/' + death.house + '.png'),
+              './assets/images/corps/' + death.house + '.png'),
           });
 
           let infoWindowsContent = '<h3>'
@@ -134,7 +134,7 @@ let main = {
       }
 
       self.markerCluster = new MarkerClusterer(map, self.markers, {
-        imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
+        imagePath: './assets/images/clustering/m',
         gridSize: 60,
         maxZoom: 14,
       });
