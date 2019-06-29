@@ -196,7 +196,7 @@ let main = {
   hashToObject () {
     return this.currentHashObject = (this.currentHash || window.location.hash.substring(1)).split('&') // key/value array
         .map(el => {
-          const p = el.split('=')
+          const p = el.split('=');
           return {[p[0]]: p[1]}
         }); // array of object as object key = name and object value = value
   },
@@ -280,7 +280,7 @@ let main = {
       if (filters.hasOwnProperty(key)) {
         let filterValue = filters[key];
         if (filterValue) {
-          anchor += (anchor ? '|' : '#') + key + ':' + filterValue;
+          anchor += (anchor ? '&' : '#') + key + '=' + filterValue;
         }
       }
     }
@@ -315,12 +315,12 @@ let main = {
   },
   getFilters: function(form, fromAnchor) {
     let selects = document.querySelectorAll('form select'),
-      anchor = location.hash.substr(1).split('|'),
+      anchor = location.hash.substr(1).split('&'),
       exposedFilters = {},
       filters = {};
 
     anchor.forEach(function(value) {
-      let filter = value.split(':');
+      let filter = value.split('=');
       if (filter.length === 2) {
         exposedFilters[filter[0]] = filter[1];
       }
