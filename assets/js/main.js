@@ -8,6 +8,7 @@ let main = {
   heatMap: null,
   infoWindows: [],
   currentInfoWindows: null,
+  eventHandlers: {},
   init: function() {
     let options = {
       center: new google.maps.LatLng(48.1, -4.21),
@@ -19,8 +20,8 @@ let main = {
     let formElement = document.getElementById('form-filters');
     let mapElement = document.getElementById('map');
     let map = new google.maps.Map(mapElement, options);
-    let filters = this.getFilters(formElement, true);
 
+    this.bindAnchorEvents(map, mapElement, formElement);
     this.bindFilters(map, mapElement, formElement);
     this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
     this.initHash();
@@ -166,57 +167,78 @@ let main = {
       map.fitBounds(bounds);
     });
   },
-  bindFilters: function(map, mapElement, formElement) {
+  bindAnchorEvents: function(map, mapElement, formElement) {
+    let self = this;
+    window.addEventListener('hashchange', function() {
+      self.bindFilters(map, mapElement, formElement, true);
+      self.bindMarkers(mapElement.dataset.bloodbathSrc, map, self.getFilters(formElement, true));
+    }, false);
+  },
+  bindFilters: function(map, mapElement, formElement, fromAnchor) {
     let self = this,
-      filters = this.getFilters(formElement),
       selects = formElement.querySelectorAll('form select');
 
     selects.forEach(function(select) {
+      let filters = self.getFilters(formElement, fromAnchor);
       select.value = filters[select.name]; // can be : event.currentTarget.value inside the event handler
-      self.addEventHandler(select, 'change', function() {
-        self.bindMarkers(mapElement.dataset.bloodbathSrc, map, self.getFilters(formElement));
-        self.hashManager(select.id, select.value);
+
+      if (typeof (self.eventHandlers[select.id]) === 'function') {
+        self.removeEventHandler(select, 'change', self.eventHandlers[select.id]);
+      }
+
+      self.eventHandlers[select.id] = function() {
+        self.bindMarkers(mapElement.dataset.bloodbathSrc, map, self.getFilters(formElement, fromAnchor));
+        //self.hashManager(select.id, select.value);
         return false;
-      });
+      };
+
+      if (fromAnchor) {
+        select.value = (typeof filters[select.name] !== 'undefined' ? filters[select.name] : '');
+      }
+
+      self.addEventHandler(select, 'change', self.eventHandlers[select.id]);
     });
   },
 
   currentHash: null,
-  currentHashObject:[],
-  initHash () {
+  currentHashObject: [],
+  initHash() {
     this.hashToObject();
 
     this.currentHashObject.map(el => {
-      document.querySelector('#' + Object.keys(el)[0]).value = Object.values(el)[0]
-    })
+      if (Object.keys(el)[0]) {
+        document.querySelector('#' + Object.keys(el)[0]).value = Object.values(el)[0];
+      }
+    });
   },
   hashToString() {
-    return this.currentHashObject.map(el => [ Object.keys(el)[ 0 ] + '=' + Object.values(el)[ 0 ] ]).join('&');
+    return this.currentHashObject.map(el => [Object.keys(el)[0] + '=' + Object.values(el)[0]]).join('&');
   },
-  hashToObject () {
+  hashToObject() {
     return this.currentHashObject = (this.currentHash || window.location.hash.substring(1)).split('&') // key/value array
-        .map(el => {
-          const p = el.split('=');
-          return {[p[0]]: p[1]}
-        }); // array of object as object key = name and object value = value
+      .map(el => {
+        const p = el.split('=');
+        return {[p[0]]: p[1]};
+      }); // array of object as object key = name and object value = value
   },
-  removeFromHash (key) {
+  removeFromHash(key) {
     this.currentHashObject = this.currentHashObject.filter(el => !Object.keys(el).includes(key));
 
     if (!this.currentHashObject.length) {
-      history.replaceState({}, document.title, window.location.href.split('#')[ 0 ]); // remove remaining hash
+      history.replaceState({}, document.title, window.location.href.split('#')[0]); // remove remaining hash
 
-      return false
+      return false;
     }
 
     // hash to string
-    return this.hashToString()
+    return this.hashToString();
   },
   addToHash(key, value) {
 
     if (this.currentHash.trim() === '') {
       window.location.hash = `${key}=${value}`;
-    } else {
+    }
+    else {
       this.removeFromHash(key);
       this.currentHashObject.push({[key]: value});
       window.location.hash = this.hashToString();
@@ -230,15 +252,7 @@ let main = {
     }
 
     // remove on empty value
-    if (!value) {
-      this.currentHashObject = this.removeFromHash(key);
-      if (this.currentHashObject !== false) {
-        window.location.hash = this.currentHashObject
-      }
-    } else {
-      this.addToHash(key, value)
-      console.log(this.currentHashObject);
-    }
+    this.addToHash(key, value);
   },
   printDefinitionsText: function(response) {
     let definitionTexts = [];
@@ -326,8 +340,9 @@ let main = {
       }
     });
 
+    console.log(exposedFilters);
     selects.forEach(function(select) {
-      if (fromAnchor && exposedFilters[select.id]) {
+      if (fromAnchor && typeof exposedFilters[select.id] !== 'undefined') {
         filters[select.id] = exposedFilters[select.id];
       }
       else {
@@ -371,16 +386,21 @@ let main = {
       elem.attachEvent('on' + eventType, handler);
     }
   },
+  removeEventHandler: function(elem, eventType, handler) {
+    if (elem.removeEventListener) {
+      elem.removeEventListener(eventType, handler, false);
+    }
+  },
   fallbackCopyTextToClipboard: function(text) {
-    var textArea = document.createElement('textarea');
+    let textArea = document.createElement('textarea');
     textArea.value = text;
     document.body.appendChild(textArea);
     textArea.focus();
     textArea.select();
 
     try {
-      var successful = document.execCommand('copy');
-      var msg = successful ? 'successful' : 'unsuccessful';
+      let successful = document.execCommand('copy');
+      let msg = successful ? 'successful' : 'unsuccessful';
       console.log('Fallback: Copying text command was ' + msg);
     }
     catch (err) {
