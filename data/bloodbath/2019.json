@@ -525,6 +525,70 @@
       "count": 1,
       "year": "2019",
       "month": "03",
+      "day": "07",
+      "house": "gendarmerie",
+      "text": "Un gendarme se suicide avec son arme de service dans son bureau de la CoB de Selles-sur-Cher.",
+      "section": "CoB Selles-sur-Cher",
+      "location": "Selles-sur-Cher (Loir-et-Cher)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 47.278040,
+        "lon": 1.550218
+      },
+      "sources": [
+        {
+          "url": "https://lessor.org/a-la-une/suicide-dun-gendarme-du-loir-et-cher/",
+          "titre": "L'Essor"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/loir-et-cher-un-gendarme-de-32-ans-sest-suicide/",
+          "titre": "Profession Gendarme"
+        },
+        {
+          "url": "https://www.lanouvellerepublique.fr/loir-et-cher/commune/selles-sur-cher/selles-sur-cher-un-gendarme-se-suicide-avec-son-arme",
+          "titre": "La Nouvelle République"
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "year": "2019",
+      "month": "03",
+      "day": "10",
+      "house": "police",
+      "text": "Un ADS du 36' aurait tué accidentellement une gardienne de la paix avec son, arme de service en la touchant à la tête.",
+      "section": "DRPJ",
+      "location": "Paris 17e",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.893906,
+        "lon": 2.308426
+      },
+      "sources": [
+        {
+          "url": "https://www.20minutes.fr/paris/2470107-20190311-policier-accidentellement-tue-policiere-arme-service-suspendu",
+          "titre": "20 minutes"
+        },
+        {
+          "url": "https://la1ere.francetvinfo.fr/adjoint-securite-reunionnais-tue-accident-collegue-policiere-paris-688888.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.rtl.fr/actu/justice-faits-divers/paris-un-policier-tue-une-de-ses-collegues-en-manipulant-son-arme-de-service-7797178699",
+          "titre": "RTL"
+        },
+        {
+          "url": "http://www.lefigaro.fr/actualite-france/2019/03/11/01016-20190311ARTFIG00032-une-policiere-tuee-par-un-collegue-a-paris.php",
+          "titre": "Figaro"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "03",
       "day": "15",
       "house": "police",
       "text": "Un policier de la CSI de Limay se suicide avec son arme de service. Découvert sans vie à son domicile par ses collègues, il était père de deux enfants.",
@@ -755,6 +819,36 @@
       "count": 1,
       "year": "2019",
       "month": "04",
+      "day": "08",
+      "house": "gendarmerie",
+      "text": " Un gendarme de l’Essonne a mis fin à ses jours avec son arme de service à l'extérieur de la caserne. Il était père de deux enfants",
+      "section": "BT Orsay",
+      "location": "Orsay (Essonne)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.708536,
+        "lon": 2.179273
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/essonne-un-gendarme-de-35-ans-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/54401/",
+          "titre": "Profession Gendarme"
+        },
+        {
+          "url": "https://lessor.org/a-la-une/suicide-dun-gendarme-de-lessonne/",
+          "titre": "L'Essor"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "04",
       "day": "14",
       "house": "police",
       "text": "Un policier de la DOPC (UTJDR) se suicide à son domicile avec son arme de service.",
@@ -960,6 +1054,40 @@
       ]
     },
     {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "05",
+      "day": "06",
+      "house": "gendarmerie",
+      "text": "Un gendarme de l'escadron mobile de Aunay-sur-Odon s'est suicidé avec son arme de service. Il était père d'un enfant.",
+      "section": "EGM 24/3",
+      "location": "Aunay-sur-Odon (Calvados)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 49.017022,
+        "lon": -0.636107
+      },
+      "sources": [
+        {
+          "url": "http://www.leparisien.fr/faits-divers/calvados-un-gendarme-se-suicide-avec-son-arme-de-service-07-05-2019-8067132.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://lessor.org/breves/suicide-dun-gendarme-mobile-du-calvados/",
+          "titre": "L'Essor"
+        },
+        {
+          "url": "https://actu.fr/normandie/aunay-sur-odon_14027/un-gendarme-mobile-se-suicide-arme-service-dans-calvados_23584085.html",
+          "titre": "Actu.fr"
+        },
+        {
+          "url": "https://www.ouest-france.fr/normandie/un-gendarme-mobile-met-fin-ses-jours-pres-de-vire-6338353",
+          "titre": "Ouest France"
+        }
+      ]
+    },
+    {
       "cause": "deathOnDuty",
       "count": 2,
       "year": "2019",
@@ -1024,6 +1152,36 @@
         {
           "url": "https://actupenit.com/2019/05/07/cholet-un-policier-municipal-pere-de-trois-enfants-sest-suicide/",
           "titre": "Actupenit"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "05",
+      "day": "13",
+      "house": "gendarmerie",
+      "text": "Un gendarme adjoint volontaire (GAV) des Hautes-Alpes s’est suicidé sans faire usage de son arme de service. Il était affecté au PSIG de Briançon.",
+      "section": "PSIG Briançon (Hautes-Alpes)",
+      "location": "Sassenage (Isère)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 45.202764,
+        "lon": 5.666735
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/hautes-alpes-un-gendarme-adjoint-volontaire-age-de-20-ans-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://lessor.org/a-la-une/suicide-dun-gendarme-adjoint-dans-les-hautes-alpes/",
+          "titre": "L'essor"
+        },
+        {
+          "url": "https://www.ledauphine.com/isere-sud/2019/05/14/sassenage-un-gendarme-de-briancon-se-suicide-au-domicile-de-ses-parents",
+          "titre": "Le Dauphiné"
         }
       ]
     },
