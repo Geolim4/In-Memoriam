@@ -1807,6 +1807,108 @@
           "titre": "La Provence"
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "07",
+      "day": "05",
+      "house": "police",
+      "text": "Une policière s'est suicide sans faire usage de son arme de service. B/C de la CSP de Bordeaux, elle laisse derrière elle une fillette de 12ans.",
+      "section": "CSP Bordeaux",
+      "location": "Bordeaux (Gironde)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 44.834753,
+        "lon": -0.589092
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/_FFOC_/status/1148329916238368768",
+          "titre": "@_FFOC_ (Twitter)"
+        },
+        {
+          "url": "https://policeetrealites.com/2019/07/08/%f0%9f%87%ab%f0%9f%87%b7-suicide-dune-policiere/",
+          "titre": "Police et Realites"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/suicide-dune-policiere-a-bordeaux/",
+          "titre": "Profession Gendarme"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "07",
+      "day": "06",
+      "house": "pompier",
+      "text": "Un sapeur-pompier du centre de secours de Béziers s’est donné la mort dans des circonstances qui restent encore inconnues.",
+      "section": "SDIS 34",
+      "location": "Béziers (Hérault)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.643425,
+        "lon": 3.738543
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/_FFOC_/status/1148143426401132544",
+          "titre": "@_FFOC_ (Twitter)"
+        },
+        {
+          "url": "https://actu17.fr/herault-un-sapeur-pompier-de-beziers-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actupenit.com/2019/07/07/beziers-un-sapeur-pompier-du-sdis-34-sest-suicide-ses-collegues-sous-le-choc/",
+          "titre": "Actu Penit"
+        },
+        {
+          "url": "https://actu.fr/occitanie/beziers_34032/beziers-sapeur-pompier-se-suicide-sdis-34-sous-choc_25718343.html",
+          "titre": "Actu.fr"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "07",
+      "day": "08",
+      "house": "police",
+      "text": "Un policier de la CSP d'Annecy s'est suicide avec son arme de service.",
+      "section": "BAC CSP Annecy",
+      "location": "Béziers (Hérault)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.643425,
+        "lon": 3.738543
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1148277987147730945",
+          "titre": "@association_mpc (Twitter)"
+        },
+        {
+          "url": "https://actu17.fr/annecy-un-policier-sest-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/haute-savoie/annecy/annecy-policier-se-suicide-son-arme-service-devant-commissariat-1696622.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/annecy-un-policier-se-suicide-sur-le-parking-du-commissariat-08-07-2019-8112345.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://www.20minutes.fr/societe/2559587-20190708-annecy-policier-suicide-parking-commissariat",
+          "titre": "20 minutes"
+        }
+      ]
     }
   ]
 }
