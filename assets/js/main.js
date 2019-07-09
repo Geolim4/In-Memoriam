@@ -82,7 +82,6 @@ let main = {
             icon: new google.maps.MarkerImage(
               './assets/images/corps/' + death.house + '.png'),
           });
-
           let infoWindowsContent = '<h3>'
             + (death.section ? (death.section + ' - ') : '')
             + death.location
@@ -109,6 +108,8 @@ let main = {
             infoWindowsContent += '<br /><br /><strong>Sources:</strong> ' + sourcesText;
           }
 
+          let mailtoSubject = 'Erreur trouvée - ' + death.section + ' - '  +  death.day + '/' + death.month + '/' + death.year;
+          infoWindowsContent += '<small style="float: right"><a href="mailto:contact@geolim4.com?subject=' + mailtoSubject + '">Une erreur ?</a></small>';
 
           let infoWindows = new google.maps.InfoWindow({content: infoWindowsContent});
           google.maps.event.addListener(marker, 'click', function() {
@@ -340,7 +341,6 @@ let main = {
       }
     });
 
-    console.log(exposedFilters);
     selects.forEach(function(select) {
       if (fromAnchor && typeof exposedFilters[select.id] !== 'undefined') {
         filters[select.id] = exposedFilters[select.id];

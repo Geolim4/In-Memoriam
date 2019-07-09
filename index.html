@@ -1,88 +1,140 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 <head>
-    <title>Cartographie des décès militaires et civils Françaises.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com/">
+    <link rel="dns-prefetch" href="//maps.google.com/">
+    <link rel="dns-prefetch" href="//stackpath.bootstrapcdn.com/">
+    <link rel="dns-prefetch" href="//code.jquery.com/">
+    <title>Cartographie des décès militaires et civils Françaises</title>
+    <meta name="description" content="Cartographie des décès militaires et civils Françaises pour ne jamais oublier ceux qui ont servi la France au péril de leur vie."/>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/main.css" crossorigin="anonymous">
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/qwest/4.5.0/qwest.min.js"></script>
-    <script type="text/javascript" src="//maps.google.com/maps/api/js?key=AIzaSyBMB4lQqiIf7t6QV8CFFV6IwCqw_7dYREw&libraries=visualization"></script>
 </head>
 <body>
-<div id="main">
-    <h1>Cartographie des décès militaires et civils Français</h1>
-    <div class="pure-g">
-        <div class="pure-u-1-1">
-            <p>Car les années se suivent et se ressemblent tristement, cette cartographie vous permettra de lister les décès tragiques militaires et civiles Françaises.</p>
-        </div>
-        <div class="pure-u-1-1">
-            <form class="pure-form pure-g" id="form-filters">
-                <fieldset class="pure-u-1-4">
-                    <label for="year">Année</label>
-                    <select name="year" id="year">
-                        <option value="2019" selected>2019</option>
-                        <option value="2018">2018</option>
-                    </select>
-                </fieldset>
-                <fieldset class="pure-u-1-4">
-                    <label for="house">Corps</label>
-                    <select name="house" id="house">
-                        <option value="">---</option>
-                        <option value="police">Police</option>
-                        <option value="gendarmerie">Gendarmerie</option>
-                        <option value="pm">Police Municipale</option>
-                        <option value="pompier">Pompier</option>
-                        <option value="douane">Douane</option>
-                        <option value="armee">Armée de terre</option>
-                        <option value="admpen">Administration pénitentiaire</option>
-                    </select>
-                </fieldset>
-                <fieldset class="pure-u-1-4">
-                    <label for="cause">Cause</label>
-                    <select name="cause" id="cause">
-                        <option value="">---</option>
-                        <option value="suicide">Suicide</option>
-                        <option value="deathOnDuty">Mort en service</option>
-                        <option value="accident">Mort accidentelle</option>
-                        <option value="murdered">Assasinat</option>
-                        <option value="other">Autre</option>
-                    </select>
-                </fieldset>
-                <fieldset class="pure-u-1-4">
-                    <label for="origin">Théatre d'action</label>
-                    <select name="origin" id="origin">
-                        <option value="">---</option>
-                        <option value="interieur">Intérieur</option>
-                        <option value="domtom">DOM-TOM</option>
-                        <option value="opex">OPEX</option>
-                    </select>
-                </fieldset>
-            </form>
-        </div>
-        <div class="pure-u-1-1">
-            <p data-role="definitionsText"></p>
-        </div>
-    </div>
-    <div id="map" style="width:100%; height:75%" data-bloodbath-src="./data/bloodbath/%year%.json"></div>
-    <div class="pure-u-1-1">
-        <div class="pure-g">
-            <form class="pure-form pure-u-1-2" id="form-permalink">
-                <label for="permalink">Permalien</label>
-                <input id="permalink" type="text" title="Permalien" value="" data-role="permalink" onclick="select()" size="30" readonly>
-            </form>
-        </div>
-    </div>
-    <footer>
-        <h2>Disclaimer</h2>
-        <p>
-            Ce site n'a pas pour vocation d'être exhaustif mais de regrouper seulement les disparitions tragiques de nos forces de l'ordre, pompiers et militaires sur la base d'informations publiques et sourcées.
-        </p>
-        <p>Un commentaire, une erreur, une modification à apporter ? <a href="mailto:contact@geolim4.com">Contactez-nous</a></p>
-    </footer>
+<div id="fork-me">
+    <a href="https://github.com/Geolim4/In-Memoriam"
+       target="_blank">
+        <img width="130"
+             height="130"
+             src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=130%2C130"
+             class="attachment-full size-full"
+             alt="Fork me on GitHub"
+             data-recalc-dims="1"
+        ></a>
 </div>
+<div id="main">
+    <div class="container-fluid">
+        <h1>Cartographie des décès militaires et civils Français</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text text-primary">
+                    Car les années se suivent et se ressemblent tristement, cette cartographie vous permettra de lister l'ensemble
+                    des décès militaires et civils Français quelqu'en soit la cause.
+                    Afin qu'aucun d'eux ne soit jamais oublié.
+                </p>
+            </div>
+        </div>
+        <div class="row mtop">
+            <div data-role="definitionsText"  class="col-md-12"></div>
+        </div>
+        <form id="form-filters" class="row mtop">
+            <fieldset class="col-md-3">
+                <label for="year">Année</label>
+                <select name="year" id="year" class="form-control">
+                    <option value="2019" selected>2019</option>
+                    <option value="2018">2018</option>
+                </select>
+            </fieldset>
+            <fieldset class="col-md-3">
+                <label for="house">Corps</label>
+                <select name="house" id="house" class="form-control">
+                    <option value="">---</option>
+                    <option value="police">Police</option>
+                    <option value="gendarmerie">Gendarmerie</option>
+                    <option value="pm">Police Municipale</option>
+                    <option value="pompier">Pompier</option>
+                    <option value="douane">Douane</option>
+                    <option value="armee">Armée de terre</option>
+                    <option value="admpen">Administration pénitentiaire</option>
+                </select>
+            </fieldset>
+            <fieldset class="col-md-3">
+                <label for="cause">Cause</label>
+                <select name="cause" id="cause" class="form-control">
+                    <option value="">---</option>
+                    <option value="suicide">Suicide</option>
+                    <option value="deathOnDuty">Mort en service</option>
+                    <option value="accident">Mort accidentelle</option>
+                    <option value="murdered">Assasinat</option>
+                    <option value="other">Autre</option>
+                </select>
+            </fieldset>
+            <fieldset class="col-md-3">
+                <label for="origin">Théatre d'action</label>
+                <select name="origin" id="origin" class="form-control">
+                    <option value="">---</option>
+                    <option value="interieur">Intérieur</option>
+                    <option value="domtom">DOM-TOM</option>
+                    <option value="opex">OPEX</option>
+                </select>
+            </fieldset>
+        </form>
+        <div class="row">
+            <div class="col-xs-12 ">
+                <div class="alert alert-info" role="alert">
+                    <p>
+                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                        <span>Utilisez votre souris ou vos doigts pour zoomer et cliquer sur un pictogramme afin de voir le détail d'un décès.</span>
+                    </p>
+                </div>
+                <div id="map" data-bloodbath-src="./data/bloodbath/%year%.json"></div>
+            </div>
+        </div>
+        <div class="row">
+            <form class="col-md-3" id="form-permalink">
+                <label for="permalink">Permalien</label>
+                <input id="permalink" class="form-control" type="text" title="Permalien" value="" data-role="permalink" onclick="select()" size="30" readonly>
+            </form>
+        </div>
+        <footer class="row">
+            <div class="col-md-12">
+
+                <div class="alert alert-danger" role="alert">
+                    <h2>
+                        <strong>Disclaimer</strong>
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    </h2>
+                    <p>
+                        <span>
+                    Ce site n'a pas pour vocation d'être exhaustif mais de regrouper seulement les disparitions
+                    tragiques de
+                    nos
+                    forces de l'ordre, pompiers et militaires sur la base d'informations publiques et sourcées.
+                    Les sources sont croisées et vérifiées afin de minimiser le plus possible un risque d'erreur.
+                </span>
+                    </p>
+                </div>
+
+
+                <p class="text text-info">Un commentaire, une erreur, une modification à apporter ?
+                    <a href="mailto:contact@geolim4.com">Contactez-nous</a> ou <a href="https://github.com/Geolim4/In-Memoriam/compare">envoyez-nous un "pull request"</a> :)</p>
+            </div>
+        </footer>
+    </div>
+</div>
+<script type="text/javascript" src="//maps.google.com/maps/api/js?key=AIzaSyBMB4lQqiIf7t6QV8CFFV6IwCqw_7dYREw&libraries=visualization"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/qwest/4.5.0/qwest.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 <script type="text/javascript" src="./assets/js/main.js"></script>
-<script type="text/javascript" src="assets/js/marker_clusterer.js"></script>
+<script type="text/javascript" src="./assets/js/marker_clusterer.js"></script>
 <script type="text/javascript">
-document.addEventListener("DOMContentLoaded", () => {main.init()});
+  document.addEventListener('DOMContentLoaded', () => {
+    main.init();
+  });
 </script>
 </body>
 </html>

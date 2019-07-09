@@ -1,75 +1,75 @@
 {
   "definitions": {
     "year": {
-      "#label": "Décompte annuel: %year%",
+      "#label": "<strong>Décompte annuel</strong>: %year%",
       "2019": {
-        "singular": "<strong>%d</strong> disparition sur l'année %year%",
-        "plural": "<strong>%d</strong> disparitions sur l'année %year%"
+        "singular": "<span class=\"label label-danger\">%d</span> disparition sur l'année %year%",
+        "plural": "<span class=\"label label-danger\">%d</span> disparitions sur l'année %year%"
       }
     },
     "cause": {
-      "#label": "Causes: %cause%",
+      "#label": "<strong>Causes</strong>: %cause%",
       "suicide": {
-        "singular": "<strong>%d</strong> suicide",
-        "plural": "<strong>%d</strong> suicides"
+        "singular": "<span class=\"label label-danger\">%d</span> suicide",
+        "plural": "<span class=\"label label-danger\">%d</span> suicides"
       },
       "deathOnDuty": {
-        "singular": "<strong>%d</strong> mort en service",
-        "plural": "<strong>%d</strong> morts en service"
+        "singular": "<span class=\"label label-danger\">%d</span> mort en service",
+        "plural": "<span class=\"label label-danger\">%d</span> morts en service"
       },
       "accident": {
-        "singular": "<strong>%d</strong> mort accidentellement",
-        "plural": "<strong>%d</strong> morts accidentellement"
+        "singular": "<span class=\"label label-danger\">%d</span> mort accidentelle",
+        "plural": "<span class=\"label label-danger\">%d</span> morts accidentelles"
       },
       "murdered": {
-        "singular": "<strong>%d</strong> assassiné",
-        "plural": "<strong>%d</strong> assassinés"
+        "singular": "<span class=\"label label-danger\">%d</span> assassiné",
+        "plural": "<span class=\"label label-danger\">%d</span> assassinés"
       }
     },
     "house": {
-      "#label": "Corps: %house%",
+      "#label": "<strong>Corps</strong>: %house%",
       "gendarmerie": {
-        "singular": "<strong>%d</strong> gendarme",
-        "plural": "<strong>%d</strong> gendarmes"
+        "singular": "<span class=\"label label-danger\">%d</span> gendarme",
+        "plural": "<span class=\"label label-danger\">%d</span> gendarmes"
       },
       "police": {
-        "singular": "<strong>%d</strong> policier",
-        "plural": "<strong>%d</strong> policiers"
+        "singular": "<span class=\"label label-danger\">%d</span> policier",
+        "plural": "<span class=\"label label-danger\">%d</span> policiers"
       },
       "pm": {
-        "singular": "<strong>%d</strong> policier municipal",
-        "plural": "<strong>%d</strong> policiers municipaux"
+        "singular": "<span class=\"label label-danger\">%d</span> policier municipal",
+        "plural": "<span class=\"label label-danger\">%d</span> policiers municipaux"
       },
       "douane": {
-        "singular": "<strong>%d</strong> douanier",
-        "plural": "<strong>%d</strong> douaniers"
+        "singular": "<span class=\"label label-danger\">%d</span> douanier",
+        "plural": "<span class=\"label label-danger\">%d</span> douaniers"
       },
       "pompier": {
-        "singular": "<strong>%d</strong> pompier",
-        "plural": "<strong>%d</strong> pompiers"
+        "singular": "<span class=\"label label-danger\">%d</span> pompier",
+        "plural": "<span class=\"label label-danger\">%d</span> pompiers"
       },
       "armee": {
-        "singular": "<strong>%d</strong> militaire",
-        "plural": "<strong>%d</strong> militaires"
+        "singular": "<span class=\"label label-danger\">%d</span> militaire",
+        "plural": "<span class=\"label label-danger\">%d</span> militaires"
       },
       "admpen": {
-        "singular": "<strong>%d</strong> surveillant pénitentiaire",
-        "plural": "<strong>%d</strong> surveillants pénitentiaire"
+        "singular": "<span class=\"label label-danger\">%d</span> surveillant pénitentiaire",
+        "plural": "<span class=\"label label-danger\">%d</span> surveillants pénitentiaire"
       }
     },
     "origin": {
-      "#label": "Territorialité: %origin%",
+      "#label": "<strong>Territorialité</strong>: %origin%",
       "interieur": {
-        "singular": "<strong>%d</strong> disparition sur le territoire national",
-        "plural": "<strong>%d</strong> disparitions en territoire national"
+        "singular": "<span class=\"label label-danger\">%d</span> disparition sur le territoire national",
+        "plural": "<span class=\"label label-danger\">%d</span> disparitions en territoire national"
       },
       "domtom": {
-        "singular": "<strong>%d</strong> disparition en outre-mer",
-        "plural": "<strong> %d</strong> disparitions en outre-mer"
+        "singular": "<span class=\"label label-danger\">%d</span> disparition en outre-mer",
+        "plural": "<span class=\"label label-danger\"> %d</span> disparitions en outre-mer"
       },
       "opex": {
-        "singular": "<strong>%d</strong> disparition en opération extérieure (OPEX)",
-        "plural": "<strong> %d</strong> disparitions en opération extérieure (OPEX)"
+        "singular": "<span class=\"label label-danger\">%d</span> disparition en opération extérieure (OPEX)",
+        "plural": "<span class=\"label label-danger\"> %d</span> disparitions en opération extérieure (OPEX)"
       }
     }
   },
@@ -327,7 +327,7 @@
       "month": "01",
       "day": "25",
       "house": "police",
-      "text": "Un policier se suicide avec son arme de service. Le laisse une lettre derrière lui dénonçant les conditions de travail et les problèmes d'évolutions de carrière.",
+      "text": "Un policier se suicide avec son arme de service. Il laisse une lettre derrière lui dénonçant les conditions de travail et les problèmes d'évolutions de carrière.",
       "section": "CRS 10",
       "location": "Le Mans (Sarthe)",
       "origin": "interieur",
@@ -1661,7 +1661,7 @@
       "month": "06",
       "day": "22",
       "house": "gendarmerie",
-      "text": "Un gendarme accidentellement lors d'une épreuve sportive.",
+      "text": "Un gendarme décède accidentellement lors d'une épreuve sportive.",
       "section": "CoB Attichy",
       "location": "Attichy (Oise)",
       "origin": "interieur",
