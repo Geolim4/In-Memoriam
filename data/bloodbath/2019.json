@@ -842,6 +842,44 @@
     },
     {
       "cause": "suicide",
+      "count": 2,
+      "year": "2019",
+      "month": "04",
+      "day": "05",
+      "house": "pm",
+      "text": "Deux policiers municipaux, un homme et une femme, ont été retrouvés morts au sein de leurs locaux. Après enquête le féminicide suivi du suicide a été confirmé par les enquêteurs.",
+      "section": "Poste de Police",
+      "location": "Avignon (Vaucluse)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.952490,
+        "lon": 4.818394
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/deux-policiers-municipaux-retrouves-morts-au-poste-de-police-davignon/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/c-est-bien-un-drame-passionnel-qui-a-cause-la-mort-des-deux-policiers-municipaux-a-avignon-1554905671",
+          "titre": "France Bleu"
+        },
+        {
+          "url": "https://www.lci.fr/police/avignon-un-policier-municipal-et-une-policiere-retrouves-morts-dans-un-commissariat-ce-que-l-on-sait-2117595.html",
+          "titre": "LCI"
+        },
+        {
+          "url": "https://www.20minutes.fr/societe/2490267-20190405-drame-deux-policiers-municipaux-retrouves-morts-avignon",
+          "titre": "20 Minutes"
+        },
+        {
+          "url": "https://www.francetvinfo.fr/faits-divers/avignon-deux-policiers-municipaux-retrouves-morts-dans-leurs-locaux_3267509.html",
+          "titre": "France Info"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
       "count": 1,
       "year": "2019",
       "month": "04",
@@ -1570,6 +1608,36 @@
         {
           "url": "https://actu17.fr/un-policier-a-mis-fin-a-ses-jours-avec-son-arme-de-service/",
           "titre": "Actu17"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "06",
+      "day": "16",
+      "house": "pm",
+      "text": "Un policier municipal qui venait de finir sa formation (FIA) a mis fin à ses jours. Peu d'informations disponibles sur ce suicide.",
+      "section": "Poste de Police",
+      "location": "Fos-sur-Mer (Bouches-du-Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.444097,
+        "lon": 4.940126
+      },
+      "sources": [
+        {
+          "url": "http://www.profession-gendarme.com/57169/",
+          "titre": "Profession Gendarme"
+        },
+        {
+          "url": "https://www.maritima.info/depeches/faits-divers/istres/60347/un-policier-municipal-de-fos-sur-mer-se-suicide-.html",
+          "titre": "Maritima"
+        },
+        {
+          "url": "https://policeetrealites.com/2019/06/16/%F0%9F%87%AB%F0%9F%87%B7-suicide-dun-policier-municipal-de-fos-sur-mer/",
+          "titre": "Police & Réalités"
         }
       ]
     },
