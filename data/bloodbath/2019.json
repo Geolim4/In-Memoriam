@@ -175,6 +175,47 @@
       ]
     },
     {
+      "cause": "deathOnDuty",
+      "count": 2,
+      "year": "2019",
+      "month": "01",
+      "day": "12",
+      "house": "pompier",
+      "text": "Deux pompiers de la BSPP ont péri dans une violente explosion due à une fuite de gaz en plein coeur de Paris. Le caporal-chef Simon Cartannaz et le première classe Nathanaël Josselin, en arrêt cardio-respiratoire, n'ont pas survécu à leurs blessures.",
+      "section": "BSPP",
+      "location": "Paris 9e",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.874059,
+        "lon": 2.345338
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/paris-violente-explosion-rue-trevise-plusieurs-blesses/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.lemonde.fr/societe/article/2019/01/14/a-paris-le-mystere-d-une-explosion-au-gaz-devastatrice_5408793_3224.html",
+          "titre": "Le Monde"
+        },
+        {
+          "url": "https://www.europe1.fr/faits-divers/paris-une-explosion-dans-une-boulangerie-fait-plusieurs-blesses-3837212",
+          "titre": "Europe 1"
+        },
+        {
+          "url": "https://www.europe1.fr/faits-divers/paris-une-explosion-dans-une-boulangerie-fait-plusieurs-blesses-3837212",
+          "titre": "Europe 1"
+        },        {
+          "url": "https://www.francetvinfo.fr/economie/emploi/metiers/video-simon-cartannaz-et-nathanael-josselin-pompiers-morts-au-feu-a-paris-rue-de-trevise-le-12-janvier-2019_3152753.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.lexpress.fr/actualite/societe/fait-divers/explosion-mortelle-a-paris-le-reseau-de-gaz-en-question_2057200.html",
+          "titre": "L'express"
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "year": "2019",
@@ -1007,6 +1048,44 @@
         {
           "url": "https://actu17.fr/paris-un-policier-retrouve-mort-a-son-domicile/",
           "titre": "Actu17"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "04",
+      "day": "14",
+      "house": "pompier",
+      "text": "Un lieutenant de la caserne de Saint-Paul, était porté disparu depuis dimanche après-midi. Le corps du pompier a été retrouvé par la suite à Marla.",
+      "section": "SDIS 974",
+      "location": "Marla (Réunion)",
+      "origin": "domtom",
+      "gps": {
+        "lat": -21.101655,
+        "lon": 55.434389
+      },
+      "sources": [
+        {
+          "url": "https://secoursinfo.fr/2019/04/16/apres-une-intervention-difficile-un-pompier-professionnel-se-donne-la-mort/",
+          "titre": "Secours Info"
+        },
+        {
+          "url": "https://actu17.fr/la-reunion-le-corps-du-pompier-disparu-a-ete-retrouve-par-ses-collegues/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actupenit.com/2019/04/17/la-reunion-suite-a-une-intervention-difficile-un-pompier-professionnel-met-fin-a-ses-jours/",
+          "titre": "Actu Penit"
+        },
+        {
+          "url": "https://www.zinfos974.com/Disparu-a-Mafate-le-lieutenant-Daniel-Hoareau-retrouve-mort_a139490.html",
+          "titre": "Zinfos974,"
+        },
+        {
+          "url": "https://www.clicanoo.re/Faits-Divers/Article/2019/04/16/Recherche-depuis-dimanche-Le-corps-du-pompier-retrouve-Marla-par",
+          "titre": "Clicanoo,"
         }
       ]
     },
