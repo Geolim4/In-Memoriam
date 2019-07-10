@@ -3,6 +3,7 @@
  * @licence MIT
  */
 let main = {
+  imgHousePath: './assets/images/corps/%house%.png',
   markers: [],
   markerCluster: null,
   heatMap: null,
@@ -75,18 +76,18 @@ let main = {
       for (let key in response.deaths) {
         if (response.deaths.hasOwnProperty(key)) {
           let death = response.deaths[key];
+          let houseImage = self.imgHousePath.replace('%house%', death.house);
           let marker = new google.maps.Marker({
             position: new google.maps.LatLng(death.gps.lat, death.gps.lon),
             map: map,
             title: death.text,
-            icon: new google.maps.MarkerImage(
-              './assets/images/corps/' + death.house + '.png'),
+            icon: new google.maps.MarkerImage(houseImage)
           });
-          let infoWindowsContent = '<h3>'
+          let infoWindowsContent = '<h4><img height="16" src="' + houseImage + '" alt="House: '+ death.house + '"  title="House: '+ death.house + '" /> '
             + (death.section ? (death.section + ' - ') : '')
             + death.location
             + (death.count > 1 ? (' - <strong style="color: red;">' + death.count + ' décès</strong>') : '')
-            + '</h3>'
+            + '</h4>'
             + '<span><strong>Date</strong>: '
             + death.day + '/'
             + death.month + '/'
@@ -109,7 +110,7 @@ let main = {
           }
 
           let mailtoSubject = 'Erreur trouvée - ' + death.section + ' - '  +  death.day + '/' + death.month + '/' + death.year;
-          infoWindowsContent += '<small style="float: right"><a href="mailto:contact@geolim4.com?subject=' + mailtoSubject + '">Une erreur ?</a></small>';
+          infoWindowsContent += '<br /><small style="float: right"><a href="mailto:contact@geolim4.com?subject=' + mailtoSubject + '">[Une erreur ?]</a></small>';
 
           let infoWindows = new google.maps.InfoWindow({content: infoWindowsContent});
           google.maps.event.addListener(marker, 'click', function() {

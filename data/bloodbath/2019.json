@@ -1880,12 +1880,12 @@
       "day": "08",
       "house": "police",
       "text": "Un policier de la CSP d'Annecy s'est suicide avec son arme de service.",
-      "section": "BAC CSP Annecy",
-      "location": "Béziers (Hérault)",
+      "section": "BAC CSP",
+      "location": "Annecy (Haute-Savoie)",
       "origin": "interieur",
       "gps": {
-        "lat": 43.643425,
-        "lon": 3.738543
+        "lat": 45.897353,
+        "lon": 6.131670
       },
       "sources": [
         {
