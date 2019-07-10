@@ -205,7 +205,8 @@
         {
           "url": "https://www.europe1.fr/faits-divers/paris-une-explosion-dans-une-boulangerie-fait-plusieurs-blesses-3837212",
           "titre": "Europe 1"
-        },        {
+        },
+        {
           "url": "https://www.francetvinfo.fr/economie/emploi/metiers/video-simon-cartannaz-et-nathanael-josselin-pompiers-morts-au-feu-a-paris-rue-de-trevise-le-12-janvier-2019_3152753.html",
           "titre": "France Info"
         },
@@ -406,6 +407,40 @@
         {
           "url": "https://mpc-asso.net/2019/06/21/%f0%9f%9a%94%f0%9f%87%ab%f0%9f%87%b7-condoleances-a-la-famille-et-aux-proches-4/",
           "titre": "Asso MPC"
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "year": "2019",
+      "month": "01",
+      "day": "27",
+      "house": "pompier",
+      "text": "Le sergent Jessy ÈVE, sapeur-pompier professionnel au corps départemental de La Réunion (Sdis974), affecté au centre d’incendie et de secours de Saint-André, et décédé en service commandé, suite à un sur-accident survenu alors qu'il intervenait sur un accident de la circulation et mettait en place le balisage de sécurité et de protection.",
+      "section": "SDIS 974",
+      "location": "Saint-André (Réunion)",
+      "origin": "domtom",
+      "gps": {
+        "lat": -20.984461,
+        "lon": 55.651753
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/la-reunion-un-sapeur-pompier-professionnel-trouve-la-mort-en-intervention/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.pompiers.fr/actualites/avis-de-deces-sergent-jessy-eve-sapeur-pompier-professionnel-la-reunion",
+          "titre": "Pompiers.fr"
+        },
+        {
+          "url": "https://www.zinfos974.com/Un-hommage-rendu-ce-mercredi-au-pompier-Jessy-Eve-promu-adjudant-a-titre-posthume_a136634.html",
+          "titre": "Zinfos974"
+        },
+        {
+          "url": "https://www.departement974.fr/actualite/ceremonie-dhommage-ladjudant-sapeur-pompier-jessy-ricet-eve-2019",
+          "titre": "Département 974,"
         }
       ]
     },
