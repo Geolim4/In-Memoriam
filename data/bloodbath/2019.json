@@ -176,6 +176,44 @@
     },
     {
       "cause": "deathOnDuty",
+      "count": 1,
+      "year": "2019",
+      "month": "01",
+      "day": "09",
+      "house": "pompier",
+      "text": "Le 1ère classe Bertrand PIME, affecté au service d'incendie et de secours du Syndicat intercommunal à vocation multiple (SIVM) Nord, en Nouvelle-Calédonie, est décédé en service commandé ce mercredi 9 janvier 2019, des suites de ses blessures. . Mardi 8 janvier 2019, il avait été grièvement brûlé en combattant un important feu de végétation qui menaçait des habitations, sur la commune de Koumac. Il était en couple et père de deux enfants.",
+      "section": "SIVM Nord",
+      "location": "Koumac (Nouvelle-Calédonie)",
+      "origin": "domtom",
+      "gps": {
+        "lat": -20.549007,
+        "lon": 164.272061
+      },
+      "sources": [
+        {
+          "url": "https://www.pompiers.fr/actualites/avis-de-deces-1e-classe-bertrand-pime-sapeur-pompier-volontaire-en-nouvelle-caledonie",
+          "titre": "Pompiers.fr"
+        },
+        {
+          "url": "https://www.europe1.fr/faits-divers/paris-une-explosion-dans-une-boulangerie-fait-plusieurs-blesses-3837212",
+          "titre": "Europe 1"
+        },
+        {
+          "url": "https://www.europe1.fr/faits-divers/nouvelle-caledonie-un-pompier-entre-la-vie-et-la-mort-apres-une-intervention-sur-un-incendie-3835121",
+          "titre": "Europe 1"
+        },
+        {
+          "url": "https://la1ere.francetvinfo.fr/nouvellecaledonie/pompier-bertrand-pime-recu-honneurs-plusieurs-distinctions-titre-posthume-668993.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "http://www.lefigaro.fr/flash-actu/2019/01/10/97001-20190110FILWWW00054-nouvelle-caledonie-emotion-apres-la-mort-d-un-pompier-volontaire.php",
+          "titre": "Le Figaro"
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
       "count": 2,
       "year": "2019",
       "month": "01",
@@ -875,6 +913,40 @@
         {
           "url": "https://www.centpourcent.com/les-infos-10/le-suicide-d%EF%BF%BD-un-surveillant-du-centre-penitentiaire-de-toulouse-seysses-10343",
           "titre": "100% radio"
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "year": "2019",
+      "month": "04",
+      "day": "02",
+      "house": "armee",
+      "text": "Le médecin Marc Laycuras est décédé des suite de ses bléssures occasionnées un engin explosif détruisant son véhicule au cours d'une mission au Mali le 12 février dans le cadre de l'opération Barkhane. Il était marié et titulaire de la médaille de la Défense nationale.",
+      "section": "2e RIMA (Armée de Terre)",
+      "location": "Mali (Zone Inconnue)",
+      "origin": "opex",
+      "gps": {
+        "lat": 17.949597,
+        "lon": -1.781396
+      },
+      "sources": [
+        {
+          "url": "https://www.defense.gouv.fr/sante/actualites/in-memoriam-deces-du-medecin-marc-laycuras",
+          "titre": "Ministère des Armées - Hommage"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/correze/tulle/medecin-militaire-tue-au-mali-marc-laycuras-inhume-correze-1652610.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://lessor.org/a-la-une/lhommage-au-medecin-principal-marc-laycuras-mort-pour-la-france-au-mali-videos/",
+          "titre": "L'Essor"
+        },
+        {
+          "url": "https://www.la-croix.com/France/Securite/Marc-Laycuras-jeune-medecin-militaire-mort-Mali-2019-04-03-1201013240",
+          "titre": "La Croix"
         }
       ]
     },
