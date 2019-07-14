@@ -2163,6 +2163,44 @@
           "titre": "20 minutes"
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "07",
+      "day": "14",
+      "house": "armee",
+      "text": "Un caporal-chef réserviste s’est donné la mort avec son arme de service dans l’enceinte des Ecoles militaires de Saumur (EMS) en marge des cérémonies du 14-Juillet. Un problème familial  serait à l'origine du drame.",
+      "section": "RICM (9e BIMa)",
+      "location": "Saumur (Maine-et-Loire)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  47.262087,
+        "lon": -0.086942
+      },
+      "sources": [
+        {
+          "url": "https://www.20minutes.fr/societe/2563819-20190714-14-juillet-militaire-suicide-ecoles-militaires-saumur-marge-ceremonies",
+          "titre": "20 minutes"
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/un-militaire-se-suicide-aux-ecoles-militaires-de-saumur-en-marge-des-ceremonies-14-juillet-1730562.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/un-sous-officier-se-suicide-aux-ecoles-militaires-de-saumur-le-jour-du-14-juillet-14-07-2019-8116680.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://www.courrierdelouest.fr/actualite/saumur-un-soldat-de-la-force-sentinelle-se-suicide-en-marge-des-ceremonies-du-14-juillet-14-07-2019-406706",
+          "titre": "Courrier de l'Ouest"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/vienne/poitiers/reserviste-du-ricm-se-suicide-marge-du-defile-du-14-juillet-saumur-1699544.html",
+          "titre": "France Info"
+        }
+      ]
     }
   ]
 }
