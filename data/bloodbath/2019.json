@@ -2169,6 +2169,39 @@
       "count": 1,
       "year": "2019",
       "month": "07",
+      "day": "12",
+      "house": "gendarmerie",
+      "text": "Un adjudant-chef de la BTA de Castelnau-du-Médoc (Gironde) a mis fin à ses jours sans faire usage de son arme de service. Il était marié et père de trois enfants.",
+      "section": "BTA",
+      "location": "Castelnau de Médoc (Gironde)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  45.025095,
+        "lon": -0.792411
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/gironde-un-gendarme-de-castelnau-du-medoc-sest-donne-la-mort/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.assogendarmesetcitoyens.com/post/d%C3%A9c%C3%A8s-d-un-gendarme-3",
+          "titre": "Asso Gendarmes et Citoyens"
+        },
+        {
+          "url": "https://lessor.org/breves/un-gendarme-de-la-gironde-se-suicide/",
+          "titre": "L'essor"
+        },        {
+          "url": "http://www.profession-gendarme.com/un-gendarme-de-la-gironde-se-suicide/",
+          "titre": "Profession gendarme"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "year": "2019",
+      "month": "07",
       "day": "14",
       "house": "armee",
       "text": "Un caporal-chef réserviste s’est donné la mort avec son arme de service dans l’enceinte des Ecoles militaires de Saumur (EMS) en marge des cérémonies du 14-Juillet. Un problème familial  serait à l'origine du drame.",
