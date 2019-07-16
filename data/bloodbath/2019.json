@@ -77,6 +77,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "01",
@@ -103,6 +104,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "02",
@@ -129,6 +131,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "06",
@@ -155,6 +158,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "07",
@@ -177,6 +181,7 @@
     {
       "cause": "deathOnDuty",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "09",
@@ -215,6 +220,7 @@
     {
       "cause": "deathOnDuty",
       "count": 2,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "12",
@@ -257,6 +263,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "15",
@@ -287,6 +294,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "16",
@@ -317,6 +325,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "16",
@@ -347,6 +356,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "17",
@@ -369,6 +379,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "19",
@@ -403,6 +414,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "25",
@@ -429,6 +441,7 @@
     {
       "cause": "suicide",
       "count": 2,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "27",
@@ -451,6 +464,7 @@
     {
       "cause": "deathOnDuty",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "01",
       "day": "27",
@@ -485,6 +499,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "02",
       "day": "14",
@@ -511,6 +526,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "02",
       "day": "18",
@@ -541,6 +557,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "02",
       "day": "20",
@@ -563,6 +580,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "03",
       "day": "04",
@@ -597,6 +615,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "03",
       "day": "04",
@@ -619,6 +638,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "03",
       "day": "05",
@@ -649,6 +669,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "03",
       "day": "07",
@@ -675,6 +696,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "03",
       "day": "07",
@@ -705,6 +727,7 @@
     {
       "cause": "accident",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "03",
       "day": "10",
@@ -739,6 +762,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "03",
       "day": "11",
@@ -773,6 +797,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "03",
       "day": "15",
@@ -803,6 +828,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "03",
       "day": "19",
@@ -829,6 +855,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "03",
       "day": "28",
@@ -863,6 +890,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "01",
@@ -889,6 +917,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "02",
@@ -919,6 +948,7 @@
     {
       "cause": "deathOnDuty",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "02",
@@ -953,6 +983,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "04",
@@ -991,6 +1022,7 @@
     {
       "cause": "suicide",
       "count": 2,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "05",
@@ -1029,6 +1061,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "07",
@@ -1063,6 +1096,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "07",
@@ -1105,6 +1139,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "08",
@@ -1135,6 +1170,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "14",
@@ -1161,6 +1197,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "14",
@@ -1199,6 +1236,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "16",
@@ -1233,6 +1271,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "16",
@@ -1263,6 +1302,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "18",
@@ -1297,6 +1337,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "18",
@@ -1331,6 +1372,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "30",
@@ -1348,6 +1390,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "04",
       "day": "30",
@@ -1382,6 +1425,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "05",
       "day": "01",
@@ -1416,6 +1460,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "05",
       "day": "06",
@@ -1450,6 +1495,7 @@
     {
       "cause": "deathOnDuty",
       "count": 2,
+      "published": true,
       "year": "2019",
       "month": "05",
       "day": "07",
@@ -1488,6 +1534,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "05",
       "day": "07",
@@ -1518,6 +1565,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "05",
       "day": "13",
@@ -1548,6 +1596,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "05",
       "day": "17",
@@ -1582,6 +1631,7 @@
     {
       "cause": "deathOnDuty",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "05",
       "day": "21",
@@ -1624,6 +1674,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "05",
       "day": "22",
@@ -1654,6 +1705,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "05",
       "day": "26",
@@ -1688,6 +1740,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "05",
       "day": "26",
@@ -1710,6 +1763,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "06",
       "day": "01",
@@ -1744,6 +1798,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "06",
       "day": "03",
@@ -1774,6 +1829,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "06",
       "day": "13",
@@ -1800,6 +1856,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "06",
       "day": "16",
@@ -1830,6 +1887,7 @@
     {
       "cause": "accident",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "06",
       "day": "18",
@@ -1847,6 +1905,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "06",
       "day": "20",
@@ -1877,6 +1936,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "06",
       "day": "21",
@@ -1911,6 +1971,7 @@
     {
       "cause": "deathOnDuty",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "06",
       "day": "22",
@@ -1937,6 +1998,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "06",
       "day": "25",
@@ -1971,6 +2033,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "06",
       "day": "27",
@@ -1997,6 +2060,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "06",
       "day": "28",
@@ -2027,6 +2091,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "06",
       "day": "29",
@@ -2065,6 +2130,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "07",
       "day": "05",
@@ -2089,12 +2155,17 @@
         {
           "url": "http://www.profession-gendarme.com/suicide-dune-policiere-a-bordeaux/",
           "titre": "Profession Gendarme"
+        },
+        {
+          "url": "https://www.sudouest.fr/2019/07/16/gironde-deux-suicides-dans-la-police-et-la-gendarmerie-6343263-2780.php",
+          "titre": "Ouest France"
         }
       ]
     },
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "07",
       "day": "06",
@@ -2129,6 +2200,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "07",
       "day": "08",
@@ -2167,6 +2239,7 @@
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "07",
       "day": "12",
@@ -2176,7 +2249,7 @@
       "location": "Castelnau de Médoc (Gironde)",
       "origin": "interieur",
       "gps": {
-        "lat":  45.025095,
+        "lat": 45.025095,
         "lon": -0.792411
       },
       "sources": [
@@ -2191,15 +2264,21 @@
         {
           "url": "https://lessor.org/breves/un-gendarme-de-la-gironde-se-suicide/",
           "titre": "L'essor"
-        },        {
+        },
+        {
           "url": "http://www.profession-gendarme.com/un-gendarme-de-la-gironde-se-suicide/",
           "titre": "Profession gendarme"
+        },
+        {
+          "url": "https://www.sudouest.fr/2019/07/16/gironde-deux-suicides-dans-la-police-et-la-gendarmerie-6343263-2780.php",
+          "titre": "Ouest France"
         }
       ]
     },
     {
       "cause": "suicide",
       "count": 1,
+      "published": true,
       "year": "2019",
       "month": "07",
       "day": "14",
@@ -2209,7 +2288,7 @@
       "location": "Saumur (Maine-et-Loire)",
       "origin": "interieur",
       "gps": {
-        "lat":  47.262087,
+        "lat": 47.262087,
         "lon": -0.086942
       },
       "sources": [

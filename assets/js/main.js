@@ -368,7 +368,7 @@ let main = {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
             if (filteredResponse.deaths.hasOwnProperty(dKey)) {
-              if (filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName] !== filter) {
+              if (filteredResponse.deaths[dKey]['published'] !== true || (filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName] !== filter)) {
                 filteredResponse.deaths.splice(dKey, 1);
               }
             }
