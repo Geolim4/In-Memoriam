@@ -81,9 +81,9 @@ let main = {
             position: new google.maps.LatLng(death.gps.lat, death.gps.lon),
             map: map,
             title: death.text,
-            icon: new google.maps.MarkerImage(houseImage)
+            icon: new google.maps.MarkerImage(houseImage),
           });
-          let infoWindowsContent = '<h4><img height="16" src="' + houseImage + '" alt="House: '+ death.house + '"  title="House: '+ death.house + '" /> '
+          let infoWindowsContent = '<h4><img height="16" src="' + houseImage + '" alt="House: ' + death.house + '"  title="House: ' + death.house + '" /> '
             + (death.section ? (death.section + ' - ') : '')
             + death.location
             + (death.count > 1 ? (' - <strong style="color: red;">' + death.count + ' décès</strong>') : '')
@@ -109,7 +109,7 @@ let main = {
             infoWindowsContent += '<br /><br /><strong>Sources:</strong> ' + sourcesText;
           }
 
-          let mailtoSubject = 'Erreur trouvée - ' + death.section + ' - '  +  death.day + '/' + death.month + '/' + death.year;
+          let mailtoSubject = 'Erreur trouvée - ' + death.section + ' - ' + death.day + '/' + death.month + '/' + death.year;
           infoWindowsContent += '<br /><small style="float: right"><a href="mailto:contact@geolim4.com?subject=' + mailtoSubject + '">[Une erreur ?]</a></small>';
 
           let infoWindows = new google.maps.InfoWindow({content: infoWindowsContent});
@@ -178,11 +178,16 @@ let main = {
   },
   bindFilters: function(map, mapElement, formElement, fromAnchor) {
     let self = this,
-      selects = formElement.querySelectorAll('form select');
+      selects = formElement.querySelectorAll('form select, form input');
+
+    self.addEventHandler(formElement, 'submit', function(e) {
+      //self.bindMarkers(mapElement.dataset.bloodbathSrc, map, self.getFilters(formElement, fromAnchor));
+      e.preventDefault();
+    });
 
     selects.forEach(function(select) {
       let filters = self.getFilters(formElement, fromAnchor);
-      select.value = filters[select.name]; // can be : event.currentTarget.value inside the event handler
+      select.value = (typeof filters[select.name] !== 'undefined' ? filters[select.name] : ''); // can be : event.currentTarget.value inside the event handler
 
       if (typeof (self.eventHandlers[select.id]) === 'function') {
         self.removeEventHandler(select, 'change', self.eventHandlers[select.id]);
@@ -330,7 +335,7 @@ let main = {
     return definitions;
   },
   getFilters: function(form, fromAnchor) {
-    let selects = document.querySelectorAll('form select'),
+    let selects = document.querySelectorAll('form select, form input'),
       anchor = location.hash.substr(1).split('&'),
       exposedFilters = {},
       filters = {};
@@ -361,15 +366,29 @@ let main = {
   filteredResponse: function(response, filters) {
     let filteredResponse = response;
 
+    console.log(filters);
     for (let fKey in filters) {
       if (filters.hasOwnProperty(fKey)) {
-        let filter = filters[fKey], fieldName = fKey;
+        let filter = filters[fKey],
+          safeFilter = filter.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(),
+          fieldName = fKey;
+
         if (filter) {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
-            if (filteredResponse.deaths.hasOwnProperty(dKey)) {
-              if (filteredResponse.deaths[dKey]['published'] !== true || (filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName] !== filter)) {
+            if(fieldName === 'search' && filter.length >= 3){
+              // @todo Make some string helper to "de-uglify" this !
+              if(!filteredResponse.deaths[dKey]['text'].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(safeFilter)
+                && !filteredResponse.deaths[dKey]['section'].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(safeFilter)
+                && !filteredResponse.deaths[dKey]['location'].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(safeFilter)
+              ){
                 filteredResponse.deaths.splice(dKey, 1);
+              }
+            }else{
+              if (filteredResponse.deaths.hasOwnProperty(dKey)) {
+                if (filteredResponse.deaths[dKey]['published'] !== true || (filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName] !== filter)) {
+                  filteredResponse.deaths.splice(dKey, 1);
+                }
               }
             }
           }
