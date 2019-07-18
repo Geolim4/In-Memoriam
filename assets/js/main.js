@@ -386,7 +386,7 @@ let main = {
   getFilterValueLabel: function(filterName, filterValue) {
     let option = document.querySelector('form select[name="' + filterName + '"] > option[value="' + filterValue + '"]');
 
-    return (option ? option.innerText : filterValue);
+    return (option ? option.innerText : filterValue).replace(/\([\d]+\)/, '').trim();
   },
   filteredResponse: function(response, filters) {
     let filteredResponse = response;
