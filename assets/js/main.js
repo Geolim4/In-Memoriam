@@ -1,23 +1,99 @@
-"use strict";
+'use strict';
 
 /**
  * @author Georges.L <contact@geolim4.com>
  * @licence MIT
  */
 class InMemoriam {
-  constructor(){
+  constructor() {
     this.imgHousePath = './assets/images/corps/%house%.png';
-    this.markers= [];
+    this.markers = [];
     this.markerCluster = null;
     this.heatMap = null;
-    this.infoWindows= [];
-    this.currentInfoWindows= null;
-    this.eventHandlers =  {};
+    this.infoWindows = [];
+    this.currentInfoWindows = null;
+    this.eventHandlers = {};
     this.currentHash = null;
     this.currentHashObject = [];
   }
 
-  init () {
+  static printDefinitionsText(response) {
+    let definitionTexts = [];
+    if (response) {
+      let definitions = InMemoriam.getDefinitions(response);
+      for (let fieldKey in definitions) {
+        if (definitions.hasOwnProperty(fieldKey)) {
+          let field = definitions[fieldKey], definitionText = '';
+          for (let fieldValue in field) {
+            if (field.hasOwnProperty(fieldValue)) {
+              let count = field[fieldValue], isPlural = count > 1;
+              if (response.definitions[fieldKey][fieldValue]) {
+                let text = response.definitions[fieldKey][fieldValue][isPlural ? 'plural' : 'singular'];
+                definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace('%' + fieldKey + '%', fieldValue);
+              }
+              else {
+                definitionText += (definitionText ? ', ' : '') + ('[' + fieldValue + '] (' + count + ')');
+              }
+            }
+          }
+
+          definitionTexts.push(response.definitions[fieldKey]['#label'].replace('%' + fieldKey + '%', definitionText));
+        }
+      }
+    }
+    else {
+      definitionTexts.push('Aucun r&#233;sultat trouv&#233;');
+    }
+
+    let element = document.querySelector('[data-role="definitionsText"]');
+    element.innerHTML = definitionTexts.join('<br />');
+  }
+
+  static buildPermalink(filters) {
+    let url = location.href.replace(/#.*$/, ''),
+      permalinkElement = document.querySelector('[data-role="permalink"]'),
+      anchor = '';
+
+    for (let key in filters) {
+      if (filters.hasOwnProperty(key)) {
+        let filterValue = filters[key];
+        if (filterValue) {
+          anchor += (anchor ? '&' : '#') + key + '=' + filterValue;
+        }
+      }
+    }
+
+    permalinkElement.value = url + anchor;
+  }
+
+  static getDefinitions(response) {
+    let definitions = {};
+    for (let fKey in response.definitions) {
+      if (response.definitions.hasOwnProperty(fKey)) {
+        for (let dKey in response.deaths) {
+          if (response.deaths.hasOwnProperty(dKey)) {
+            let death = response.deaths[dKey];
+            if (!definitions[fKey]) {
+              definitions[fKey] = {};
+            }
+            if (!definitions[fKey][death[fKey]]) {
+              definitions[fKey][death[fKey]] = 0;
+            }
+            if (Number.isInteger(death.count) && death.count > 1) {
+              definitions[fKey][death[fKey]] += death.count;
+            }
+            else {
+              definitions[fKey][death[fKey]]++;
+            }
+          }
+        }
+      }
+    }
+
+    return definitions;
+  }
+
+  init() {
     let options = {
       center: new google.maps.LatLng(48.1, -4.21),// Paris...
       mapTypeControl: false,
@@ -29,13 +105,88 @@ class InMemoriam {
     let mapElement = document.getElementById('map');
     let map = new google.maps.Map(mapElement, options);
 
+    this.bindLocalizationButton(map);
     this.bindAnchorEvents(map, mapElement, formElement);
     this.bindFilters(map, mapElement, formElement);
     this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
     this.initHash();
   }
 
-  clearMapObjects () {
+  bindLocalizationButton(map) {
+    let controlDiv = document.createElement('div');
+    let firstChild = document.createElement('button');
+    let marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: {lat: 31.4181, lng: 73.0776},
+      icon: new google.maps.MarkerImage('./assets/images/map/bluedot.png')
+    });
+
+    firstChild.style.backgroundColor = '#FFF';
+    firstChild.style.border = 'none';
+    firstChild.style.outline = 'none';
+    firstChild.style.width = '28px';
+    firstChild.style.height = '28px';
+    firstChild.style.borderRadius = '2px';
+    firstChild.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
+    firstChild.style.cursor = 'pointer';
+    firstChild.style.marginRight = '10px';
+    firstChild.style.padding = '0px';
+    firstChild.title = 'Voir autour de moi';
+    controlDiv.appendChild(firstChild);
+
+    let secondChild = document.createElement('div');
+    secondChild.style.margin = '5px';
+    secondChild.style.width = '18px';
+    secondChild.style.height = '18px';
+    secondChild.style.backgroundImage = 'url(https://maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png)';
+    secondChild.style.backgroundSize = '180px 18px';
+    secondChild.style.backgroundPosition = '0px 0px';
+    secondChild.style.backgroundRepeat = 'no-repeat';
+    secondChild.id = 'localizationImg';
+    firstChild.appendChild(secondChild);
+
+    google.maps.event.addListener(map, 'dragend', () => {
+      document.querySelector('#localizationImg').backgroundPosition = '0px 0px';
+    });
+
+    firstChild.addEventListener('click', () => {
+      let imgX = '0';
+      let animationInterval = setInterval(() => {
+        imgX = (parseInt(imgX) === -18 ? '0' : '-18');
+        document.querySelector('#localizationImg').style.backgroundPosition = imgX + 'px 0px';
+      }, 500);
+      let confirmation = confirm('La demande de localisation ne servira qu\'à positionner la carte autour de vous, aucune donnée ne sera envoyée ni même conservée nulle part.');
+      if (confirmation && navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          let latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+          marker.setPosition(latlng);
+          map.setCenter(latlng);
+          map.setZoom(13);
+          let infoWindows = new google.maps.InfoWindow({content: 'Ma position approximative'});
+          google.maps.event.addListener(marker, 'click', () => {
+            if (this.currentInfoWindows) {
+              this.currentInfoWindows.close();
+            }
+            infoWindows.open(map, marker);
+            this.currentInfoWindows = infoWindows;
+          });
+          infoWindows.open(map, marker);
+          document.querySelector('#localizationImg').style.backgroundPosition = '-144px 0px';
+          clearInterval(animationInterval);
+        });
+      }
+      else {
+        clearInterval(animationInterval);
+        document.querySelector('#localizationImg').style.backgroundPosition = '0px 0px';
+      }
+    });
+
+    controlDiv.index = 1;
+    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(controlDiv);
+  }
+
+  clearMapObjects() {
     this.clearMarkers().clearInfoWindows().clearHeatMap().clearMarkerCluster();
   }
 
@@ -61,12 +212,14 @@ class InMemoriam {
     }
     return this;
   }
+
   clearMarkerCluster() {
     if (this.markerCluster) {
       this.markerCluster.clearMarkers();
     }
     return this;
   }
+
   bindMarkers(source, map, filters) {
     qwest.get(source.replace('%year%', filters.year) + '?_=' + (new Date()).getTime()).then((xhr, response) => {
       let bounds = new google.maps.LatLngBounds(),
@@ -276,81 +429,6 @@ class InMemoriam {
     this.addToHash(key, value);
   }
 
-  static printDefinitionsText(response) {
-    let definitionTexts = [];
-    if (response) {
-      let definitions = InMemoriam.getDefinitions(response);
-      for (let fieldKey in definitions) {
-        if (definitions.hasOwnProperty(fieldKey)) {
-          let field = definitions[fieldKey], definitionText = '';
-          for (let fieldValue in field) {
-            if (field.hasOwnProperty(fieldValue)) {
-              let count = field[fieldValue], isPlural = count > 1;
-              if (response.definitions[fieldKey][fieldValue]) {
-                let text = response.definitions[fieldKey][fieldValue][isPlural ? 'plural' : 'singular'];
-                definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace('%' + fieldKey + '%', fieldValue);
-              }
-              else {
-                definitionText += (definitionText ? ', ' : '') + ('[' + fieldValue + '] (' + count + ')');
-              }
-            }
-          }
-
-          definitionTexts.push(response.definitions[fieldKey]['#label'].replace('%' + fieldKey + '%', definitionText));
-        }
-      }
-    }
-    else {
-      definitionTexts.push('Aucun r&#233;sultat trouv&#233;');
-    }
-
-    let element = document.querySelector('[data-role="definitionsText"]');
-    element.innerHTML = definitionTexts.join('<br />');
-  }
-
-  static buildPermalink(filters) {
-    let url = location.href.replace(/#.*$/, ''),
-      permalinkElement = document.querySelector('[data-role="permalink"]'),
-      anchor = '';
-
-    for (let key in filters) {
-      if (filters.hasOwnProperty(key)) {
-        let filterValue = filters[key];
-        if (filterValue) {
-          anchor += (anchor ? '&' : '#') + key + '=' + filterValue;
-        }
-      }
-    }
-
-    permalinkElement.value = url + anchor;
-  }
-
-  static getDefinitions(response) {
-    let definitions = {};
-    for (let fKey in response.definitions) {
-      if (response.definitions.hasOwnProperty(fKey)) {
-        for (let dKey in response.deaths) {
-          if (response.deaths.hasOwnProperty(dKey)) {
-            let death = response.deaths[dKey];
-            if (!definitions[fKey]) {
-              definitions[fKey] = {};
-            }
-            if (!definitions[fKey][death[fKey]]) {
-              definitions[fKey][death[fKey]] = 0;
-            }
-            if (Number.isInteger(death.count) && death.count > 1) {
-              definitions[fKey][death[fKey]] += death.count;
-            }
-            else {
-              definitions[fKey][death[fKey]]++;
-            }
-          }
-        }
-      }
-    }
-
-    return definitions;
-  }
   getFilters(form, fromAnchor) {
     let selects = document.querySelectorAll('form select, form input'),
       anchor = location.hash.substr(1).split('&'),
@@ -381,7 +459,7 @@ class InMemoriam {
 
     selects.forEach((select) => {
       let options = select.querySelectorAll('option');
-      if(select.dataset.countable === 'true'){
+      if (select.dataset.countable === 'true') {
         options.forEach((option) => {
           if (option.value !== '') {
             option.dataset.deathCount = 0;
