@@ -59,12 +59,13 @@ let main = {
   bindMarkers: function(source, map, filters) {
     let self = this;
 
-    qwest.get(source.replace('%year%', filters.year)).then(function(xhr, response) {
+    qwest.get(source.replace('%year%', filters.year) + '?_=' + (new Date()).getTime()).then(function(xhr, response) {
       let bounds = new google.maps.LatLngBounds(),
         domTomMarkers = [],
         nationalMarkers = [],
         heatMapData = [];
 
+      self.alterFiltersLabels(response);
       response = self.filteredResponse(response, filters);
       self.clearMapObjects();
 
@@ -194,7 +195,9 @@ let main = {
       }
 
       self.eventHandlers[select.id] = function() {
-        self.bindMarkers(mapElement.dataset.bloodbathSrc, map, self.getFilters(formElement, fromAnchor));
+        let filters = self.getFilters(formElement, fromAnchor);
+        self.bindMarkers(mapElement.dataset.bloodbathSrc, map, filters);
+
         //self.hashManager(select.id, select.value);
         return false;
       };
@@ -358,6 +361,28 @@ let main = {
 
     return filters;
   },
+  alterFiltersLabels: function(unfilteredResponse) {
+    let selects = document.querySelectorAll('form select');
+
+    selects.forEach(function(select) {
+      let options = select.querySelectorAll('option');
+      options.forEach(function(option) {
+        if (option.value !== '') {
+          option.dataset.deathCount = 0;
+          for (let key in unfilteredResponse.deaths) {
+            if (unfilteredResponse.deaths.hasOwnProperty(key)) {
+              let death = unfilteredResponse.deaths[key];
+              if (option.value === death[select.name]) {
+                option.dataset.deathCount = parseInt(option.dataset.deathCount) + death.count;
+              }
+            }
+          }
+          option.innerText = option.innerText.replace(/\([\d]+\)/, '') + ' (' + option.dataset.deathCount + ')';
+        }
+      });
+    });
+
+  },
   getFilterValueLabel: function(filterName, filterValue) {
     let option = document.querySelector('form select[name="' + filterName + '"] > option[value="' + filterValue + '"]');
 
@@ -370,21 +395,22 @@ let main = {
     for (let fKey in filters) {
       if (filters.hasOwnProperty(fKey)) {
         let filter = filters[fKey],
-          safeFilter = filter.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(),
+          safeFilter = filter.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(),
           fieldName = fKey;
 
         if (filter) {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
-            if(fieldName === 'search' && filter.length >= 3){
+            if (fieldName === 'search' && filter.length >= 3) {
               // @todo Make some string helper to "de-uglify" this !
-              if(!filteredResponse.deaths[dKey]['text'].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(safeFilter)
-                && !filteredResponse.deaths[dKey]['section'].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(safeFilter)
-                && !filteredResponse.deaths[dKey]['location'].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(safeFilter)
-              ){
+              if (!filteredResponse.deaths[dKey]['text'].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(safeFilter)
+                && !filteredResponse.deaths[dKey]['section'].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(safeFilter)
+                && !filteredResponse.deaths[dKey]['location'].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(safeFilter)
+              ) {
                 filteredResponse.deaths.splice(dKey, 1);
               }
-            }else{
+            }
+            else {
               if (filteredResponse.deaths.hasOwnProperty(dKey)) {
                 if (filteredResponse.deaths[dKey]['published'] !== true || (filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName] !== filter)) {
                   filteredResponse.deaths.splice(dKey, 1);
