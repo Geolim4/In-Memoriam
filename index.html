@@ -49,13 +49,13 @@
                 <label for="year">Année</label>/<label for="month">Mois</label>
                 <div class="row">
                     <div class="col-xs-6">
-                        <select name="year" id="year" class="form-control ">
+                        <select name="year" id="year" class="form-control">
                             <option value="2019" selected>2019</option>
                             <option value="2018">2018</option>
                         </select>
                     </div>
                     <div class="col-xs-6">
-                        <select name="month" id="month" class="form-control">
+                        <select name="month" id="month" class="form-control" data-countable="true">
                             <option value="">---</option>
                             <option value="01">Janvier</option>
                             <option value="02">Février</option>
@@ -75,7 +75,7 @@
             </fieldset>
             <fieldset class="col-md-2">
                 <label for="house">Corps</label>
-                <select name="house" id="house" class="form-control">
+                <select name="house" id="house" class="form-control" data-countable="true">
                     <option value="">---</option>
                     <option value="police">Police</option>
                     <option value="gendarmerie">Gendarmerie</option>
@@ -88,7 +88,7 @@
             </fieldset>
             <fieldset class="col-md-2">
                 <label for="cause">Cause</label>
-                <select name="cause" id="cause" class="form-control">
+                <select name="cause" id="cause" class="form-control" data-countable="true">
                     <option value="">---</option>
                     <option value="suicide">Suicide</option>
                     <option value="deathOnDuty">Mort en service</option>
@@ -99,7 +99,7 @@
             </fieldset>
             <fieldset class="col-md-2">
                 <label for="origin">Théatre d'action</label>
-                <select name="origin" id="origin" class="form-control">
+                <select name="origin" id="origin" class="form-control" data-countable="true">
                     <option value="">---</option>
                     <option value="interieur">Intérieur</option>
                     <option value="domtom">DOM-TOM</option>
@@ -157,9 +157,7 @@
 <script type="text/javascript" src="./assets/js/main.js"></script>
 <script type="text/javascript" src="./assets/js/marker_clusterer.js"></script>
 <script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', () => {
-    main.init();
-  });
+  document.addEventListener('DOMContentLoaded', () => {(new InMemoriam()).init()});
 </script>
 </body>
 </html>

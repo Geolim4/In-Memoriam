@@ -1,18 +1,25 @@
+"use strict";
+
 /**
  * @author Georges.L <contact@geolim4.com>
  * @licence MIT
  */
-let main = {
-  imgHousePath: './assets/images/corps/%house%.png',
-  markers: [],
-  markerCluster: null,
-  heatMap: null,
-  infoWindows: [],
-  currentInfoWindows: null,
-  eventHandlers: {},
-  init: function() {
+class InMemoriam {
+  constructor(){
+    this.imgHousePath = './assets/images/corps/%house%.png';
+    this.markers= [];
+    this.markerCluster = null;
+    this.heatMap = null;
+    this.infoWindows= [];
+    this.currentInfoWindows= null;
+    this.eventHandlers =  {};
+    this.currentHash = null;
+    this.currentHashObject = [];
+  }
+
+  init () {
     let options = {
-      center: new google.maps.LatLng(48.1, -4.21),
+      center: new google.maps.LatLng(48.1, -4.21),// Paris...
       mapTypeControl: false,
       zoom: 12,
       maxZoom: 15,
@@ -26,40 +33,44 @@ let main = {
     this.bindFilters(map, mapElement, formElement);
     this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
     this.initHash();
-  },
-  clearMapObjects: function() {
+  }
+
+  clearMapObjects () {
     this.clearMarkers().clearInfoWindows().clearHeatMap().clearMarkerCluster();
-  },
-  clearMarkers: function() {
+  }
+
+  clearMarkers() {
     for (let i = 0; i < this.markers.length; i++) {
       this.markers[i].setMap(null);
     }
     this.markers = [];
     return this;
-  },
-  clearInfoWindows: function() {
+  }
+
+  clearInfoWindows() {
     for (let i = 0; i < this.clearInfoWindows.length; i++) {
       this.clearInfoWindows[i].setMap(null);
     }
     this.infoWindows = [];
     return this;
-  },
-  clearHeatMap: function() {
+  }
+
+  clearHeatMap() {
     if (this.heatMap) {
       this.heatMap.setMap(null);
     }
     return this;
-  },
-  clearMarkerCluster: function() {
+  }
+  clearMarkerCluster() {
     if (this.markerCluster) {
       this.markerCluster.clearMarkers();
     }
     return this;
-  },
-  bindMarkers: function(source, map, filters) {
+  }
+  bindMarkers(source, map, filters) {
     let self = this;
 
-    qwest.get(source.replace('%year%', filters.year) + '?_=' + (new Date()).getTime()).then(function(xhr, response) {
+    qwest.get(source.replace('%year%', filters.year) + '?_=' + (new Date()).getTime()).then((xhr, response) => {
       let bounds = new google.maps.LatLngBounds(),
         domTomMarkers = [],
         nationalMarkers = [],
@@ -70,7 +81,7 @@ let main = {
       self.clearMapObjects();
 
       if (!response.deaths || !response.deaths.length) {
-        self.printDefinitionsText(false);
+        InMemoriam.printDefinitionsText(false);
         return;
       }
 
@@ -114,7 +125,7 @@ let main = {
           infoWindowsContent += '<br /><small style="float: right"><a href="mailto:contact@geolim4.com?subject=' + mailtoSubject + '">[Une erreur ?]</a></small>';
 
           let infoWindows = new google.maps.InfoWindow({content: infoWindowsContent});
-          google.maps.event.addListener(marker, 'click', function() {
+          google.maps.event.addListener(marker, 'click', () => {
             if (self.currentInfoWindows) {
               self.currentInfoWindows.close();
             }
@@ -165,28 +176,30 @@ let main = {
         self.heatMap.setMap(map);
       }
 
-      self.buildPermalink(filters);
-      self.printDefinitionsText(response);
+      InMemoriam.buildPermalink(filters);
+      InMemoriam.printDefinitionsText(response);
       map.fitBounds(bounds);
     });
-  },
-  bindAnchorEvents: function(map, mapElement, formElement) {
+  }
+
+  bindAnchorEvents(map, mapElement, formElement) {
     let self = this;
-    window.addEventListener('hashchange', function() {
+    window.addEventListener('hashchange', () => {
       self.bindFilters(map, mapElement, formElement, true);
       self.bindMarkers(mapElement.dataset.bloodbathSrc, map, self.getFilters(formElement, true));
     }, false);
-  },
-  bindFilters: function(map, mapElement, formElement, fromAnchor) {
+  }
+
+  bindFilters(map, mapElement, formElement, fromAnchor) {
     let self = this,
       selects = formElement.querySelectorAll('form select, form input');
 
-    self.addEventHandler(formElement, 'submit', function(e) {
+    self.addEventHandler(formElement, 'submit', (e) => {
       //self.bindMarkers(mapElement.dataset.bloodbathSrc, map, self.getFilters(formElement, fromAnchor));
       e.preventDefault();
     });
 
-    selects.forEach(function(select) {
+    selects.forEach((select) => {
       let filters = self.getFilters(formElement, fromAnchor);
       select.value = (typeof filters[select.name] !== 'undefined' ? filters[select.name] : ''); // can be : event.currentTarget.value inside the event handler
 
@@ -194,7 +207,7 @@ let main = {
         self.removeEventHandler(select, 'change', self.eventHandlers[select.id]);
       }
 
-      self.eventHandlers[select.id] = function() {
+      self.eventHandlers[select.id] = () => {
         let filters = self.getFilters(formElement, fromAnchor);
         self.bindMarkers(mapElement.dataset.bloodbathSrc, map, filters);
 
@@ -208,10 +221,8 @@ let main = {
 
       self.addEventHandler(select, 'change', self.eventHandlers[select.id]);
     });
-  },
+  }
 
-  currentHash: null,
-  currentHashObject: [],
   initHash() {
     this.hashToObject();
 
@@ -220,17 +231,20 @@ let main = {
         document.querySelector('#' + Object.keys(el)[0]).value = Object.values(el)[0];
       }
     });
-  },
+  }
+
   hashToString() {
     return this.currentHashObject.map(el => [Object.keys(el)[0] + '=' + Object.values(el)[0]]).join('&');
-  },
+  }
+
   hashToObject() {
     return this.currentHashObject = (this.currentHash || window.location.hash.substring(1)).split('&') // key/value array
       .map(el => {
         const p = el.split('=');
         return {[p[0]]: p[1]};
       }); // array of object as object key = name and object value = value
-  },
+  }
+
   removeFromHash(key) {
     this.currentHashObject = this.currentHashObject.filter(el => !Object.keys(el).includes(key));
 
@@ -242,7 +256,8 @@ let main = {
 
     // hash to string
     return this.hashToString();
-  },
+  }
+
   addToHash(key, value) {
 
     if (this.currentHash.trim() === '') {
@@ -253,7 +268,8 @@ let main = {
       this.currentHashObject.push({[key]: value});
       window.location.hash = this.hashToString();
     }
-  },
+  }
+
   hashManager(key, value) {
     this.currentHash = window.location.hash.substring(1);
 
@@ -263,11 +279,12 @@ let main = {
 
     // remove on empty value
     this.addToHash(key, value);
-  },
-  printDefinitionsText: function(response) {
+  }
+
+  static printDefinitionsText(response) {
     let definitionTexts = [];
     if (response) {
-      let definitions = this.getDefinitions(response);
+      let definitions = InMemoriam.getDefinitions(response);
       for (let fieldKey in definitions) {
         if (definitions.hasOwnProperty(fieldKey)) {
           let field = definitions[fieldKey], definitionText = '';
@@ -294,8 +311,9 @@ let main = {
 
     let element = document.querySelector('[data-role="definitionsText"]');
     element.innerHTML = definitionTexts.join('<br />');
-  },
-  buildPermalink: function(filters) {
+  }
+
+  static buildPermalink(filters) {
     let url = location.href.replace(/#.*$/, ''),
       permalinkElement = document.querySelector('[data-role="permalink"]'),
       anchor = '';
@@ -310,8 +328,9 @@ let main = {
     }
 
     permalinkElement.value = url + anchor;
-  },
-  getDefinitions: function(response) {
+  }
+
+  static getDefinitions(response) {
     let definitions = {};
     for (let fKey in response.definitions) {
       if (response.definitions.hasOwnProperty(fKey)) {
@@ -336,21 +355,21 @@ let main = {
     }
 
     return definitions;
-  },
-  getFilters: function(form, fromAnchor) {
+  }
+  getFilters(form, fromAnchor) {
     let selects = document.querySelectorAll('form select, form input'),
       anchor = location.hash.substr(1).split('&'),
       exposedFilters = {},
       filters = {};
 
-    anchor.forEach(function(value) {
+    anchor.forEach((value) => {
       let filter = value.split('=');
       if (filter.length === 2) {
         exposedFilters[filter[0]] = filter[1];
       }
     });
 
-    selects.forEach(function(select) {
+    selects.forEach((select) => {
       if (fromAnchor && typeof exposedFilters[select.id] !== 'undefined') {
         filters[select.id] = exposedFilters[select.id];
       }
@@ -360,38 +379,41 @@ let main = {
     });
 
     return filters;
-  },
-  alterFiltersLabels: function(unfilteredResponse) {
+  }
+
+  alterFiltersLabels(unfilteredResponse) {
     let selects = document.querySelectorAll('form select');
 
-    selects.forEach(function(select) {
+    selects.forEach((select) => {
       let options = select.querySelectorAll('option');
-      options.forEach(function(option) {
-        if (option.value !== '') {
-          option.dataset.deathCount = 0;
-          for (let key in unfilteredResponse.deaths) {
-            if (unfilteredResponse.deaths.hasOwnProperty(key)) {
-              let death = unfilteredResponse.deaths[key];
-              if (option.value === death[select.name]) {
-                option.dataset.deathCount = parseInt(option.dataset.deathCount) + death.count;
+      if(select.dataset.countable === 'true'){
+        options.forEach((option) => {
+          if (option.value !== '') {
+            option.dataset.deathCount = 0;
+            for (let key in unfilteredResponse.deaths) {
+              if (unfilteredResponse.deaths.hasOwnProperty(key)) {
+                let death = unfilteredResponse.deaths[key];
+                if (option.value === death[select.name]) {
+                  option.dataset.deathCount = parseInt(option.dataset.deathCount) + death.count;
+                }
               }
             }
+            option.innerText = option.innerText.replace(/\([\d]+\)/, '') + ' (' + option.dataset.deathCount + ')';
           }
-          option.innerText = option.innerText.replace(/\([\d]+\)/, '') + ' (' + option.dataset.deathCount + ')';
-        }
-      });
+        });
+      }
     });
+  }
 
-  },
-  getFilterValueLabel: function(filterName, filterValue) {
+  getFilterValueLabel(filterName, filterValue) {
     let option = document.querySelector('form select[name="' + filterName + '"] > option[value="' + filterValue + '"]');
 
     return (option ? option.innerText : filterValue).replace(/\([\d]+\)/, '').trim();
-  },
-  filteredResponse: function(response, filters) {
+  }
+
+  filteredResponse(response, filters) {
     let filteredResponse = response;
 
-    console.log(filters);
     for (let fKey in filters) {
       if (filters.hasOwnProperty(fKey)) {
         let filter = filters[fKey],
@@ -423,21 +445,24 @@ let main = {
     }
 
     return filteredResponse;
-  },
-  addEventHandler: function(elem, eventType, handler) {
+  }
+
+  addEventHandler(elem, eventType, handler) {
     if (elem.addEventListener) {
       elem.addEventListener(eventType, handler, false);
     }
     else if (elem.attachEvent) {
       elem.attachEvent('on' + eventType, handler);
     }
-  },
-  removeEventHandler: function(elem, eventType, handler) {
+  }
+
+  removeEventHandler(elem, eventType, handler) {
     if (elem.removeEventListener) {
       elem.removeEventListener(eventType, handler, false);
     }
-  },
-  fallbackCopyTextToClipboard: function(text) {
+  }
+
+  fallbackCopyTextToClipboard(text) {
     let textArea = document.createElement('textarea');
     textArea.value = text;
     document.body.appendChild(textArea);
@@ -454,16 +479,17 @@ let main = {
     }
 
     document.body.removeChild(textArea);
-  },
-  copyTextToClipboard: function(text) {
+  }
+
+  copyTextToClipboard(text) {
     if (!navigator.clipboard) {
       this.fallbackCopyTextToClipboard(text);
       return;
     }
-    navigator.clipboard.writeText(text).then(function() {
+    navigator.clipboard.writeText(text).then(() => {
       console.log('Async: Copying to clipboard was successful!');
-    }, function(err) {
+    }, (err) => {
       console.error('Async: Could not copy text: ', err);
     });
-  },
-};
+  }
+}
