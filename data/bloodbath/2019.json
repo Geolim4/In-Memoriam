@@ -2325,7 +2325,7 @@
       "text": "Trois militaires français sont décédés accidentellement dans le cadre de la mission « Harpie » de lutte contre l’orpaillage illégal en Guyane lors d'une opération « Wilau » dans une zone isolée en forêt du secteur « Saint-Jean/Abounami » dans la région de Maripasoula.",
       "section": "9e RIMa (Dét. 19e RG)",
       "location": "St-Jean d’Abounami (Guyane)",
-      "origin": "opex",
+      "origin": "domtom",
       "gps": {
         "lat": 3.843046,
         "lon": -53.910905
