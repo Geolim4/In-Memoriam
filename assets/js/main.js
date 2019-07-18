@@ -265,7 +265,7 @@ class InMemoriam {
             for (let key in death.sources) {
               if (death.sources.hasOwnProperty(key)) {
                 let source = death.sources[key];
-                sourcesText += (sourcesText ? ', ' : '') + (`<a href="'${source.url}" target="_blank">${source.titre}</a>`);
+                sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${source.titre}</a>`);
               }
             }
             infoWindowsContent += '<br /><br /><strong>Sources:</strong> ' + sourcesText;
