@@ -95,34 +95,33 @@ class InMemoriam {
             title: death.text,
             icon: new google.maps.MarkerImage(houseImage),
           });
-          let infoWindowsContent = '<h4><img height="16" src="' + houseImage + '" alt="House: ' + death.house + '"  title="House: ' + death.house + '" /> '
-            + (death.section ? (death.section + ' - ') : '')
-            + death.location
-            + (death.count > 1 ? (' - <strong style="color: red;">' + death.count + ' décès</strong>') : '')
-            + '</h4>'
-            + '<span><strong>Date</strong>: '
-            + death.day + '/'
-            + death.month + '/'
-            + death.year
-            + '<br /><br />'
-            + '<strong>Cause</strong>: ' + self.getFilterValueLabel('cause', death.cause)
-            + '<br /><br />'
-            + '<strong>Circonstances</strong>: ' + death.text
-            + '</span>';
+          let infoWindowsContent = `'<h4>
+              <img height="16" src="${houseImage}" alt="House: ${death.house}"  title="House: ${death.house}" />
+              ${(death.section ? (death.section + ' - ') : '')}
+              ${death.location}
+              ${(death.count > 1 ? (' - <strong style="color: red;">' + death.count + ' décès</strong>') : '')}
+            </h4>
+            <span> 
+              <strong>Date</strong>: ${death.day} / ${death.month} / ${death.year}
+              <br /><br />
+              <strong>Cause</strong>: ${self.getFilterValueLabel('cause', death.cause)}
+              <br /><br />
+              <strong>Circonstances</strong>:  ${death.text}
+            </span>`;
 
           if (death.sources && death.sources.length) {
             let sourcesText = '';
             for (let key in death.sources) {
               if (death.sources.hasOwnProperty(key)) {
                 let source = death.sources[key];
-                sourcesText += (sourcesText ? ', ' : '') + ('<a href="' + source.url + '" target="_blank">' + source.titre + '</a>');
+                sourcesText += (sourcesText ? ', ' : '') + (`<a href="'${source.url}" target="_blank">${source.titre}</a>`);
               }
             }
             infoWindowsContent += '<br /><br /><strong>Sources:</strong> ' + sourcesText;
           }
 
-          let mailtoSubject = 'Erreur trouvée - ' + death.section + ' - ' + death.day + '/' + death.month + '/' + death.year;
-          infoWindowsContent += '<br /><small style="float: right"><a href="mailto:contact@geolim4.com?subject=' + mailtoSubject + '">[Une erreur ?]</a></small>';
+          let mailtoSubject = `Erreur trouvée - ${death.section} + -  ${death.day}/${death.month}/${death.year}`;
+          infoWindowsContent += `<br /><small style="float: right"><a href="mailto:contact@geolim4.com?subject=${mailtoSubject}">[Une erreur ?]</a></small>`;
 
           let infoWindows = new google.maps.InfoWindow({content: infoWindowsContent});
           google.maps.event.addListener(marker, 'click', () => {
