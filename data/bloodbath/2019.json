@@ -2360,15 +2360,15 @@
     {
       "cause": "suicide",
       "count": 1,
-      "published": false,
+      "published": true,
       "year": "2019",
       "month": "07",
       "day": "16",
       "house": "police",
-      "text": "(WIP)",
+      "text": "Un policier de la CSP de Douai a mis fin à ses jours. Peu d'informations disponibles sur ce suicide.",
       "section": "CSP",
       "location": "Douai (Nord)",
-      "origin": "opex",
+      "origin": "interieur",
       "gps": {
         "lat":  50.376203,
         "lon": 3.085565
