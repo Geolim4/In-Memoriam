@@ -68,17 +68,15 @@ class InMemoriam {
     return this;
   }
   bindMarkers(source, map, filters) {
-    let self = this;
-
     qwest.get(source.replace('%year%', filters.year) + '?_=' + (new Date()).getTime()).then((xhr, response) => {
       let bounds = new google.maps.LatLngBounds(),
         domTomMarkers = [],
         nationalMarkers = [],
         heatMapData = [];
 
-      self.alterFiltersLabels(response);
-      response = self.filteredResponse(response, filters);
-      self.clearMapObjects();
+      this.alterFiltersLabels(response);
+      response = this.filteredResponse(response, filters);
+      this.clearMapObjects();
 
       if (!response.deaths || !response.deaths.length) {
         InMemoriam.printDefinitionsText(false);
@@ -88,7 +86,7 @@ class InMemoriam {
       for (let key in response.deaths) {
         if (response.deaths.hasOwnProperty(key)) {
           let death = response.deaths[key];
-          let houseImage = self.imgHousePath.replace('%house%', death.house);
+          let houseImage = this.imgHousePath.replace('%house%', death.house);
           let marker = new google.maps.Marker({
             position: new google.maps.LatLng(death.gps.lat, death.gps.lon),
             map: map,
@@ -104,7 +102,7 @@ class InMemoriam {
             <span> 
               <strong>Date</strong>: ${death.day} / ${death.month} / ${death.year}
               <br /><br />
-              <strong>Cause</strong>: ${self.getFilterValueLabel('cause', death.cause)}
+              <strong>Cause</strong>: ${this.getFilterValueLabel('cause', death.cause)}
               <br /><br />
               <strong>Circonstances</strong>:  ${death.text}
             </span>`;
@@ -125,14 +123,14 @@ class InMemoriam {
 
           let infoWindows = new google.maps.InfoWindow({content: infoWindowsContent});
           google.maps.event.addListener(marker, 'click', () => {
-            if (self.currentInfoWindows) {
-              self.currentInfoWindows.close();
+            if (this.currentInfoWindows) {
+              this.currentInfoWindows.close();
             }
             infoWindows.open(map, marker);
-            self.currentInfoWindows = infoWindows;
+            this.currentInfoWindows = infoWindows;
           });
 
-          self.infoWindows.push(infoWindows);
+          this.infoWindows.push(infoWindows);
           if (death.origin === 'interieur') {
             nationalMarkers.push(marker);
           }
@@ -143,11 +141,11 @@ class InMemoriam {
             location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
             weight: 10 + (death.count > 1 ? (death.count * 5) : 0),
           });
-          self.markers.push(marker);
+          this.markers.push(marker);
         }
       }
 
-      self.markerCluster = new MarkerClusterer(map, self.markers, {
+      this.markerCluster = new MarkerClusterer(map, this.markers, {
         imagePath: './assets/images/clustering/m',
         gridSize: 60,
         maxZoom: 14,
@@ -166,13 +164,13 @@ class InMemoriam {
       }
 
       if (heatMapData.length) {
-        self.heatMap = new google.maps.visualization.HeatmapLayer({
+        this.heatMap = new google.maps.visualization.HeatmapLayer({
           data: heatMapData,
           radius: 100,
           dissipating: true,
           opacity: 0.3,
         });
-        self.heatMap.setMap(map);
+        this.heatMap.setMap(map);
       }
 
       InMemoriam.buildPermalink(filters);
@@ -182,35 +180,33 @@ class InMemoriam {
   }
 
   bindAnchorEvents(map, mapElement, formElement) {
-    let self = this;
     window.addEventListener('hashchange', () => {
-      self.bindFilters(map, mapElement, formElement, true);
-      self.bindMarkers(mapElement.dataset.bloodbathSrc, map, self.getFilters(formElement, true));
+      this.bindFilters(map, mapElement, formElement, true);
+      this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
     }, false);
   }
 
   bindFilters(map, mapElement, formElement, fromAnchor) {
-    let self = this,
-      selects = formElement.querySelectorAll('form select, form input');
+    let selects = formElement.querySelectorAll('form select, form input');
 
-    self.addEventHandler(formElement, 'submit', (e) => {
-      //self.bindMarkers(mapElement.dataset.bloodbathSrc, map, self.getFilters(formElement, fromAnchor));
+    this.addEventHandler(formElement, 'submit', (e) => {
+      //this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, fromAnchor));
       e.preventDefault();
     });
 
     selects.forEach((select) => {
-      let filters = self.getFilters(formElement, fromAnchor);
+      let filters = this.getFilters(formElement, fromAnchor);
       select.value = (typeof filters[select.name] !== 'undefined' ? filters[select.name] : ''); // can be : event.currentTarget.value inside the event handler
 
-      if (typeof (self.eventHandlers[select.id]) === 'function') {
-        self.removeEventHandler(select, 'change', self.eventHandlers[select.id]);
+      if (typeof (this.eventHandlers[select.id]) === 'function') {
+        this.removeEventHandler(select, 'change', this.eventHandlers[select.id]);
       }
 
-      self.eventHandlers[select.id] = () => {
-        let filters = self.getFilters(formElement, fromAnchor);
-        self.bindMarkers(mapElement.dataset.bloodbathSrc, map, filters);
+      this.eventHandlers[select.id] = () => {
+        let filters = this.getFilters(formElement, fromAnchor);
+        this.bindMarkers(mapElement.dataset.bloodbathSrc, map, filters);
 
-        //self.hashManager(select.id, select.value);
+        //this.hashManager(select.id, select.value);
         return false;
       };
 
@@ -218,7 +214,7 @@ class InMemoriam {
         select.value = (typeof filters[select.name] !== 'undefined' ? filters[select.name] : '');
       }
 
-      self.addEventHandler(select, 'change', self.eventHandlers[select.id]);
+      this.addEventHandler(select, 'change', this.eventHandlers[select.id]);
     });
   }
 
