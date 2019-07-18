@@ -2313,6 +2313,72 @@
           "titre": "France Info"
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 3,
+      "published": true,
+      "year": "2019",
+      "month": "07",
+      "day": "17",
+      "house": "armee",
+      "text": "Trois militaires français sont décédés accidentellement dans le cadre de la mission « Harpie » de lutte contre l’orpaillage illégal en Guyane lors d'une opération « Wilau » dans une zone isolée en forêt du secteur « Saint-Jean/Abounami » dans la région de Maripasoula.",
+      "section": "9e RIMa (Dét. 19e RG)",
+      "location": "St-Jean d’Abounami (Guyane)",
+      "origin": "opex",
+      "gps": {
+        "lat": 3.843046,
+        "lon": -53.910905
+      },
+      "sources": [
+        {
+          "url": "https://www.defense.gouv.fr/salle-de-presse/communiques/communiques-du-ministere-des-armees/communique-de-l-etat-major-des-armees",
+          "titre": "État-major des armées"
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2566519-20190718-guyane-trois-militaires-decedent-accidentellement-cours-operation-anti-orpaillage",
+          "titre": "20 minutes"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/guyane-trois-soldats-meurent-pendant-une-operation-contre-l-orpaillage-18-07-2019-8119278.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://actupenit.com/2019/07/18/guyane-3-militaires-decedent-en-operation-contre-lorpaillage/",
+          "titre": "Actu Penit"
+        },
+        {
+          "url": "https://www.francetvinfo.fr/france/guyane-francaise/guyane-trois-militaires-francais-tues-accidentellement-le-plan-blanc-declenche_3541083.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://actu17.fr/guyane-les-3-militaires-sont-morts-dans-un-accident-lors-dune-operation-un-quatrieme-dans-un-etat-grave/",
+          "titre": "Actu17"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": false,
+      "year": "2019",
+      "month": "07",
+      "day": "16",
+      "house": "police",
+      "text": "(WIP)",
+      "section": "CSP",
+      "location": "Douai (Nord)",
+      "origin": "opex",
+      "gps": {
+        "lat":  50.376203,
+        "lon": 3.085565
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/association_mpc/status/1151764484496773120",
+          "titre": "@association_mpc (Twitter)"
+        }
+      ]
     }
   ]
 }
