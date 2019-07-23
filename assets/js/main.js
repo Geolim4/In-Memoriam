@@ -253,7 +253,7 @@ class InMemoriam {
               ${(death.count > 1 ? (' - <strong style="color: red;">' + death.count + ' décès</strong>') : '')}
             </h4>
             <span> 
-              <strong>Date</strong>: ${death.day} / ${death.month} / ${death.year}
+              <strong>Date</strong>: ${death.day}/${death.month}/${death.year}
               <br /><br />
               <strong>Cause</strong>: ${this.getFilterValueLabel('cause', death.cause)}
               <br /><br />
