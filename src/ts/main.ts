@@ -3,15 +3,15 @@
 /// <reference types="@types/qwest" />
 
 import { Filters } from './models';
+import { Bloodbath } from './models/bloodbath.model';
 
 /**
  * @author Georges.L <contact@geolim4.com>
  * @licence MIT
  */
 class InMemoriam {
-
   private currentInfoWindows: google.maps.InfoWindow;
-  private eventHandlers: string[];
+  private eventHandlers: Object;
   private heatMap: google.maps.visualization.HeatmapLayer;
   private imgHousePath: string;
   private infoWindows: google.maps.InfoWindow[];
@@ -20,7 +20,7 @@ class InMemoriam {
 
   constructor() {
     this.currentInfoWindows = null;
-    this.eventHandlers = [];
+    this.eventHandlers = {};
     this.heatMap = null;
     this.imgHousePath = './assets/images/corps/%house%.png';
     this.infoWindows = [];
@@ -35,6 +35,7 @@ class InMemoriam {
       mapTypeControl: false,
       mapTypeId: google.maps.MapTypeId.HYBRID,
       maxZoom: 15,
+      streetViewControl: false,
       zoom: 12,
     };
 
@@ -64,9 +65,9 @@ class InMemoriam {
     return (option ? option.innerText : filterValue).replace(/\([\d]+\)/, '').trim();
   }
 
-  private filteredResponse(response: { deaths: any[] }, filters: Filters): { deaths: any[] } {
+  private filteredResponse(response: Bloodbath, filters: Filters): Bloodbath {
 
-    const filteredResponse = response;
+    const filteredResponse = <Bloodbath>response;
 
     for (const fKey in filters) {
       if (filters.hasOwnProperty(fKey)) {
@@ -78,11 +79,11 @@ class InMemoriam {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
             if (fieldName === 'search' && filter.length >= 3) {
-              // @todo Make some string helper to "de-uglify" this !
+                            // @todo Make some string helper to "de-uglify" this !
               if (!filteredResponse.deaths[dKey]['text'].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(safeFilter)
-                && !filteredResponse.deaths[dKey]['section'].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(safeFilter)
-                && !filteredResponse.deaths[dKey]['location'].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(safeFilter)
-              ) {
+                                && !filteredResponse.deaths[dKey]['section'].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(safeFilter)
+                                && !filteredResponse.deaths[dKey]['location'].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(safeFilter)
+                            ) {
                 filteredResponse.deaths.splice(dKey, 1);
               }
             } else {
@@ -98,10 +99,9 @@ class InMemoriam {
     }
 
     return filteredResponse;
-
   }
 
-  private getFilters(_form: HTMLInputElement, fromAnchor: boolean): { year?: string } {
+  private getFilters(_form: HTMLInputElement, fromAnchor: boolean): Filters {
 
     const anchor = location.hash.substr(1).split('&');
     const exposedFilters = {};
@@ -124,10 +124,9 @@ class InMemoriam {
     });
 
     return filters;
-
   }
 
-  private alterFiltersLabels(unfilteredResponse: { deaths: Object }): void {
+  private alterFiltersLabels(unfilteredResponse: Bloodbath): void {
     const selects = <NodeListOf<HTMLInputElement>>document.querySelectorAll('form select');
 
     selects.forEach((select) => {
@@ -163,7 +162,7 @@ class InMemoriam {
     const selects = <NodeListOf<HTMLInputElement>>formElement.querySelectorAll('form select, form input');
 
     this.addEventHandler(formElement, 'submit', (e) => {
-      // this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, fromAnchor));
+            // this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, fromAnchor));
       e.preventDefault();
     });
 
@@ -179,7 +178,7 @@ class InMemoriam {
         const filters = this.getFilters(formElement, fromAnchor);
         this.bindMarkers(mapElement.dataset.bloodbathSrc, map, filters);
 
-        // this.hashManager(select.id, select.value);
+                // this.hashManager(select.id, select.value);
         return false;
       };
 
@@ -199,9 +198,9 @@ class InMemoriam {
     return this;
   }
 
-  private bindMarkers(source: string, map: google.maps.Map, filters: { year?: string }): void {
+  private bindMarkers(source: string, map: google.maps.Map, filters: Filters): void {
 
-    qwest.get(`${source.replace('%year%', filters.year)}?_=${(new Date()).getTime()}`).then((_xhr, response) => {
+    qwest.get(`${source.replace('%year%', filters.year)}?_=${(new Date()).getTime()}`).then((_xhr, response: Bloodbath) => {
 
       const bounds = new google.maps.LatLngBounds();
       const domTomMarkers = [];
@@ -285,11 +284,11 @@ class InMemoriam {
         maxZoom: 14,
       });
 
-      /**
-       * National marker prioritization:
-       * We only bounds to DomTom if there
-       * nothing else on national territory
-       */
+            /**
+             * National marker prioritization:
+             * We only bounds to DomTom if there
+             * nothing else on national territory
+             */
       const boundsMarkers = (nationalMarkers.length ? nationalMarkers : domTomMarkers);
       for (const key in boundsMarkers) {
         if (boundsMarkers.hasOwnProperty(key)) {
@@ -327,6 +326,7 @@ class InMemoriam {
   private clearInfoWindows(): InMemoriam {
     for (let i = 0; i < this.clearInfoWindows.length; i++) this.clearInfoWindows[i].setMap(null);
     this.infoWindows = [];
+
     return this;
   }
 
@@ -378,8 +378,9 @@ class InMemoriam {
     firstChild.addEventListener('click', () => {
       let imgX = '0';
       const animationInterval = setInterval(() => {
+        const localizationImgElmt = document.querySelector('#localizationImg') as HTMLInputElement;
         imgX = (+imgX === -18 ? '0' : '-18');
-        (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = `${imgX}px 0px`;
+        localizationImgElmt.style.backgroundPosition = `${imgX}px 0px`;
       }, 500);
       const confirmation = confirm('La demande de localisation ne servira qu\'à positionner la carte autour de vous, aucune donnée ne sera envoyée ni même conservée nulle part.');
       if (confirmation && navigator.geolocation) {
@@ -406,13 +407,10 @@ class InMemoriam {
       }
     });
 
-    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push({
-      ...controlDiv,
-    });
-
+    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(controlDiv);
   }
 
-  private getDefinitions(response: { deaths?: Object; definitions: Object }): Object {
+  private getDefinitions(response: Bloodbath): Object {
     const definitions = {};
     for (const fKey in response.definitions) {
       if (response.definitions.hasOwnProperty(fKey)) {
@@ -437,7 +435,7 @@ class InMemoriam {
     return definitions;
   }
 
-  private printDefinitionsText(response: { definitions: Object }): void {
+  private printDefinitionsText(response: Bloodbath): void {
     const definitionTexts = [];
     if (response) {
       const definitions = this.getDefinitions(response);
@@ -488,4 +486,6 @@ class InMemoriam {
 
 }
 
-document.addEventListener('DOMContentLoaded', () => { (new InMemoriam()).init(); });
+document.addEventListener('DOMContentLoaded', () => {
+  (new InMemoriam()).init();
+});

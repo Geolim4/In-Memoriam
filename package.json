@@ -14,7 +14,9 @@
   "watch": {
     "build": {
       "extensions": "ts",
-      "patterns": ["src/ts"]
+      "patterns": [
+        "src/ts"
+      ]
     }
   },
   "dependencies": {
