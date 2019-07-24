@@ -224,6 +224,49 @@
       "year": "2019",
       "month": "01",
       "day": "12",
+      "house": "armee",
+      "text": "Le capitaine Baptiste Chirié et la lieutenant Audrey Michelon ont péri lors du crash de leur Mirage 2000D à la frontière du Doubs et du Jura, dans la Combe Noire. Les circonstances du crash sont pour l'heure toujours inconnues.",
+      "section": "BA 113",
+      "location": "Mignovillard (Jura)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 46.774568,
+        "lon": 6.192054
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/crash-du-mirage-2000d-dans-le-jura-qui-sont-les-2-militaires-tues-en-service-commande/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actu.fr/bourgogne-franche-comte/mignovillard_39331/crash-mirage-2000-mignovillard-deux-militaires-sont-decedes_20765067.html",
+          "titre": "Actu.fr"
+        },
+        {
+          "url": "http://www.lefigaro.fr/actualite-france/2019/01/09/01016-20190109ARTFIG00227-un-mirage-2000-disparait-entre-le-doubs-et-le-jura.php",
+          "titre": "Le Figaro"
+        },
+        {
+          "url": "https://www.francetvinfo.fr/economie/emploi/metiers/video-simon-cartannaz-et-nathanael-josselin-pompiers-morts-au-feu-a-paris-rue-de-trevise-le-12-janvier-2019_3152753.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.rtl.fr/actu/justice-faits-divers/accident-de-mirage-2000-les-deux-membres-d-equipage-sont-morts-7796192671",
+          "titre": "RTL"
+        },
+        {
+          "url": "https://www.defense.gouv.fr/fre/actualites/la-vie-du-ministere/inmemoriam-deces-du-capitaine-baptiste-chirie-et-de-la-lieutenant-audrey-michelon",
+          "titre": "Ministère des Armées - Hommage"
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 2,
+      "published": true,
+      "year": "2019",
+      "month": "01",
+      "day": "12",
       "house": "pompier",
       "text": "Deux pompiers de la BSPP ont péri dans une violente explosion due à une fuite de gaz en plein coeur de Paris. Le caporal-chef Simon Cartannaz et le première classe Nathanaël Josselin, en arrêt cardio-respiratoire, n'ont pas survécu à leurs blessures.",
       "section": "BSPP",
@@ -1377,7 +1420,7 @@
       "month": "04",
       "day": "30",
       "house": "gendarmerie",
-      "text": "Un commandant de gendarmerie se suicide, il était père de famille.",
+      "text": "Un commandant de gendarmerie se suicide avec son arme de service, il était marié et père de famille de 4 enfants.",
       "section": "Caserne de l’Entre-Deux",
       "location": "Entre-Deux (Réunion)",
       "origin": "domtom",
@@ -1385,7 +1428,28 @@
         "lat": -21.248367,
         "lon": 55.469654
       },
-      "sources": []
+      "sources": [
+        {
+          "url": "https://actu17.fr/la-reunion-un-gendarme-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://la1ere.francetvinfo.fr/reunion/entre-deux/gendarme-se-suicide-son-arme-service-705875.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2509251-20190502-reunion-gendarme-suicide-caserne-arme-service",
+          "titre": "20 minutes"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/la-reunion-un-gendarme-se-suicide-dans-sa-caserne-01-05-2019-8063751.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://www.lepoint.fr/faits-divers/la-reunion-suicide-d-un-gendarme-dans-sa-caserne-01-05-2019-2310292_2627.php",
+          "titre": "Le Point"
+        }
+      ]
     },
     {
       "cause": "suicide",
@@ -1892,7 +1956,7 @@
       "month": "06",
       "day": "18",
       "house": "police",
-      "text": "Yann T. est décédé à son domicile à la suite d'un accident.",
+      "text": "Un CRS de la compagnie de CRS 61 est décédé à son domicile à la suite d'une coupure accidentelle sur le bras.",
       "section": "CRS 61",
       "location": "Vélizy-Villacoublay (Yvelines)",
       "origin": "interieur",
@@ -1900,7 +1964,24 @@
         "lat": 48.783721,
         "lon": 2.184852
       },
-      "sources": []
+      "sources": [
+        {
+          "url": "https://actu17.fr/yvelines-un-policier-affecte-a-la-crs-61-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.lepoint.fr/societe/le-34e-suicide-dans-la-police-n-est-pas-un-suicide-18-06-2019-2319672_23.php",
+          "titre": "Le point"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/suicide-dun-policier-de-34-ans-de-la-crs61-a-velizy/",
+          "titre": "Profession Gendarme"
+        },
+        {
+          "url": "https://actu.fr/faits-divers/paris-yvelines-meurt-se-faisant-tatouage-sur-bras_25110181.html",
+          "titre": "Actu.fr"
+        }
+      ]
     },
     {
       "cause": "suicide",
@@ -2370,13 +2451,130 @@
       "location": "Douai (Nord)",
       "origin": "interieur",
       "gps": {
-        "lat":  50.376203,
+        "lat": 50.376203,
         "lon": 3.085565
       },
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1151764484496773120",
           "titre": "@association_mpc (Twitter)"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/40eme-suicide-dans-la-police-nationale-depuis-le-debut-de-lannee-2019/",
+          "titre": "Profession Gendarme"
+        },
+        {
+          "url": "https://www.facebook.com/ZoneHDF/posts/2366256266955556",
+          "titre": "@ZoneHDF (Facebook)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "07",
+      "day": "21",
+      "house": "police",
+      "text": "Un policier de la CRS 15 de Béthune a mis fin à ses jours avec son arme de service en se tirant une balle dans le coeur dans la chambre de la compagnie. Peu d'informations disponibles sur ce suicide.",
+      "section": "CRS 15",
+      "location": "Béthune (Pas-de-Calais)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 50.518094,
+        "lon": 2.640785
+      },
+      "sources": [
+        {
+          "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/pas-calais/bethune/bethune-crs-se-suicide-son-arme-service-1702334.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.lavenirdelartois.fr/21092/article/2019-07-22/bethune-un-crs-se-suicide-avec-son-arme-feu",
+          "titre": "Avenir de l'Artois"
+        },
+        {
+          "url": "http://www.lefigaro.fr/flash-actu/deux-nouveaux-suicides-de-policiers-dans-le-pas-de-calais-et-le-gard-20190722",
+          "titre": "Figaro"
+        },
+        {
+          "url": "https://actu17.fr/deux-policiers-ont-ete-retrouves-morts/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.20minutes.fr/lille/2568951-20190722-calais-crs-bethune-suicide-arme-feu",
+          "titre": "20 minutes"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "07",
+      "day": "21",
+      "house": "police",
+      "text": "Un policier formateur à l'ENP de Nîmes s'est suicidé à son domicile sans faire usage de son arme de service. Son corps a été retrouvé en début de semaine à son domicile de Poulx.",
+      "section": "ENP Nîmes",
+      "location": "Poulx (Gard)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.910943,
+        "lon": 4.424375
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/deux-policiers-ont-ete-retrouves-morts/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.estrepublicain.fr/faits-divers-justice/2019/07/22/deux-policiers-se-suicident-dans-le-gard-et-le-pas-de-calais",
+          "titre": "Est Republicain"
+        },
+        {
+          "url": "https://twitter.com/BNUNSAPoliceCRS/status/1153202388301430784",
+          "titre": "@BNUNSAPoliceCRS (Twitter)"
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/police/deux-nouveaux-policiers-mettent-fin-leurs-jours-dans-le-pas-de-calais-et-le-gard-6454552",
+          "titre": "Ouest France"
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/deux-policiers-se-suicident-dans-la-nuit-de-dimanche-a-lundi-1735098.html",
+          "titre": "BFM"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "07",
+      "day": "23",
+      "house": "police",
+      "text": "Un policier du Groupe d’appui judiciaire (GAJ) s'est suicidé avec son arme de service à son domicile situé à La Buisse. Il était père de 3 enfants.",
+      "section": "GAJ - DDSP 38",
+      "location": "La Buisse (Isère)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 45.335312,
+        "lon": 5.621302
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/isere-un-policier-de-49-ans-sest-suicide-le-3eme-en-48-heures/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "http://www.lefigaro.fr/flash-actu/un-policier-se-suicide-pres-de-grenoble-20190723",
+          "titre": "Le Figaro"
+        },
+        {
+          "url": "https://twitter.com/BNUNSAPoliceCRS/status/1153587359667146753",
+          "titre": "@BNUNSAPoliceCRS (Twitter)"
         }
       ]
     }

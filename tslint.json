@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    "align": [true, "elements", "members", "parameters", "statements"],
+    "arrow-return-shorthand": true,
+    "max-line-length": false,
+    "member-access": true,
+    "member-ordering": [true, {
+      "order": "fields-first"
+    }],
+    "no-constant-condition": true,
+    "no-else-after-return": false,
+    "no-increment-decrement": false,
+    "no-return-undefined": true,
+    "no-unnecessary-else": true,
+    "no-unnecessary-type-annotation": true,
+    "no-unused": true,
+    "no-unused-expression": true,
+    "no-var-before-return": true,
+    "object-literal-sort-keys": [true, "shorthand-first"],
+    "ordered-imports": {
+      "options": {
+        "import-sources-order": "any",
+        "named-imports-order": "case-insensitive"
+      }
+    },
+    "ter-arrow-parens": [true, "always"],
+    "typedef": [
+      true,
+      "array-destructuring",
+      "call-signature",
+      "member-variable-declaration",
+      "parameter",
+      "property-declaration"
+    ],
+    "variable-name": false,
+    "unnecessary-constructor": true
+  }
+}
