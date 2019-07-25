@@ -7,6 +7,7 @@ import { Bloodbath } from './models/bloodbath.model';
 
 /**
  * @author Georges.L <contact@geolim4.com>
+ * @author Jbz797
  * @licence MIT
  */
 class InMemoriam {
