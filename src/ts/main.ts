@@ -62,7 +62,7 @@ class InMemoriam {
   }
 
   private getFilterValueLabel(filterName: string, filterValue: string): string {
-    const option = <HTMLInputElement>document.querySelector(`form select[name="${filterName}"] > option[value="${filterValue}"]`);
+    const option = <HTMLInputElement>document.querySelector(`form select[name="${filterName}"] option[value="${filterValue}"]`);
     return (option ? option.innerText : filterValue).replace(/\([\d]+\)/, '').trim();
   }
 
@@ -107,7 +107,7 @@ class InMemoriam {
     const anchor = location.hash.substr(1).split('&');
     const exposedFilters = {};
     const filters = {};
-    const selects = <NodeListOf<HTMLInputElement>>document.querySelectorAll('form select, form input');
+    const selects = <NodeListOf<HTMLInputElement>>document.querySelectorAll('form select[data-filterable="true"], form input[data-filterable="true"]');
 
     anchor.forEach((value) => {
       const filter = value.split('=');
@@ -477,7 +477,7 @@ class InMemoriam {
     for (const key in filters) {
       if (filters.hasOwnProperty(key)) {
         const filterValue = filters[key];
-        if (filterValue) anchor += `${anchor ? '&' : '#'}{key}=${filterValue}`;
+        if (filterValue) anchor += `${anchor ? '&' : '#'}${key}=${filterValue}`;
       }
     }
 
