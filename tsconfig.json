@@ -2,12 +2,13 @@
   "compilerOptions": {
     "lib": ["dom"],
     "moduleResolution": "node",
-    "outDir": "assets/js",
+    "outDir": "assets/js/dist",
     "target": "es5",
     "typeRoots": ["node_modules/@types"]
   },
   "exclude": [
     "node_modules"
+
   ],
   "files": ["./src/ts/main.ts"]
 }

@@ -9,6 +9,7 @@
   "private": false,
   "scripts": {
     "build": "npx tsc-bundle ./tsconfig.json && terser assets/js/dist/main.js -c -m -o assets/js/dist/main.js",
+    "lint": "tslint ./tsconfig.json",
     "watch": "npm run build && npm-watch"
   },
   "watch": {
@@ -23,7 +24,7 @@
     "typescript": "^3.5.3"
   },
   "devDependencies": {
-    "@types/googlemaps": "^3.2.1",
+    "@types/googlemaps": "^3.37.0",
     "@types/markerclustererplus": "^2.1.33",
     "@types/node": "^12.6.8",
     "@types/qwest": "^1.7.28",
