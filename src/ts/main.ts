@@ -4,6 +4,7 @@
 
 import { Filters } from './models';
 import { Bloodbath } from './models/bloodbath.model';
+import { Permalink } from './permalink';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -307,7 +308,7 @@ class InMemoriam {
         this.heatMap.setMap(map);
       }
 
-      this.buildPermalink(filters);
+      Permalink.build(filters);
       this.printDefinitionsText(response);
       map.fitBounds(bounds);
     });
@@ -467,24 +468,6 @@ class InMemoriam {
     const element = document.querySelector('[data-role="definitionsText"]');
     element.innerHTML = definitionTexts.join('<br />');
   }
-
-  private buildPermalink(filters: Object): void {
-
-    const permalinkElement = <HTMLInputElement>document.querySelector('[data-role="permalink"]');
-    const url = location.href.replace(/#.*$/, '');
-    let anchor = '';
-
-    for (const key in filters) {
-      if (filters.hasOwnProperty(key)) {
-        const filterValue = filters[key];
-        if (filterValue) anchor += `${anchor ? '&' : '#'}${key}=${filterValue}`;
-      }
-    }
-
-    permalinkElement.value = url + anchor;
-
-  }
-
 }
 
 document.addEventListener('DOMContentLoaded', () => {
