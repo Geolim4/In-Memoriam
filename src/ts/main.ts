@@ -70,10 +70,9 @@ class InMemoriam {
 
     const filteredResponse = <Bloodbath>response;
 
-    for (const fKey in filters) {
+    for (const [fKey, filter] of Object.entries(filters)) {
       if (filters.hasOwnProperty(fKey)) {
         const fieldName = fKey;
-        const filter = filters[fKey];
         const safeFilter = filter.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
         if (filter) {
@@ -137,11 +136,9 @@ class InMemoriam {
           if (option.value !== '') {
             option.dataset.deathCount = '0';
             for (const key in unfilteredResponse.deaths) {
-              if (unfilteredResponse.deaths.hasOwnProperty(key)) {
-                const death = unfilteredResponse.deaths[key];
-                if (option.value === death[select.name]) {
-                  option.dataset.deathCount = `${+(option.dataset.deathCount) + death.count}`;
-                }
+              const death = unfilteredResponse.deaths[key];
+              if (option.value === death[select.name]) {
+                option.dataset.deathCount = `${+(option.dataset.deathCount) + death.count}`;
               }
             }
             option.innerText = `${option.innerText.replace(/\([\d]+\)/, '')} (${option.dataset.deathCount})`;
@@ -204,10 +201,10 @@ class InMemoriam {
     qwest.get(`${source.replace('%year%', filters.year)}?_=${(new Date()).getTime()}`).then((_xhr, response: Bloodbath) => {
 
       const bounds = new google.maps.LatLngBounds();
-      const domTomMarkers = [];
-      const heatMapData = [];
-      const nationalMarkers = [];
-      let filteredResponse = response;
+      const domTomMarkers = <google.maps.Marker[]> [];
+      const heatMapData = <{location: google.maps.LatLng, weight: number}[]> [];
+      const nationalMarkers = <google.maps.Marker[]> [];
+      let filteredResponse = <Bloodbath> response;
 
       this.alterFiltersLabels(filteredResponse);
       filteredResponse = this.filteredResponse(filteredResponse, filters);
@@ -219,16 +216,15 @@ class InMemoriam {
       }
 
       for (const key in filteredResponse.deaths) {
-        if (filteredResponse.deaths.hasOwnProperty(key)) {
-          const death = filteredResponse.deaths[key];
-          const houseImage = this.imgHousePath.replace('%house%', death.house);
-          const marker = new google.maps.Marker({
-            map,
-            icon: new (google.maps as any).MarkerImage(houseImage),
-            position: new google.maps.LatLng(death.gps.lat, death.gps.lon),
-            title: death.text,
-          });
-          let infoWindowsContent = `'<h4>
+        const death = filteredResponse.deaths[key];
+        const houseImage = this.imgHousePath.replace('%house%', death.house);
+        const marker = new google.maps.Marker({
+          map,
+          icon: new (google.maps as any).MarkerImage(houseImage),
+          position: new google.maps.LatLng(death.gps.lat, death.gps.lon),
+          title: death.text,
+        });
+        let infoWindowsContent = `'<h4>
               <img height="16" src="${houseImage}" alt="House: ${death.house}"  title="House: ${death.house}" />
               ${(death.section ? `${death.section} - ` : '')}
               ${death.location}
@@ -242,41 +238,38 @@ class InMemoriam {
               <strong>Circonstances</strong>:  ${death.text}
             </span>`;
 
-          if (death.sources && death.sources.length) {
-            let sourcesText = '';
-            for (const key in death.sources) {
-              if (death.sources.hasOwnProperty(key)) {
-                const source = death.sources[key];
-                sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${source.titre}</a>`);
-              }
-            }
-            infoWindowsContent += `<br /><br /><strong>Sources:</strong>${sourcesText}`;
+        if (death.sources && death.sources.length) {
+          let sourcesText = '';
+          for (const key in death.sources) {
+            const source = death.sources[key];
+            sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${source.titre}</a>`);
           }
-
-          const mailtoSubject = `Erreur trouvée - ${death.section} + -  ${death.day}/${death.month}/${death.year}`;
-          infoWindowsContent += `<br /><small style="float: right"><a href="mailto:contact@geolim4.com?subject=${mailtoSubject}">[Une erreur ?]</a></small>`;
-
-          const infoWindows = new google.maps.InfoWindow({ content: infoWindowsContent });
-          google.maps.event.addListener(marker, 'click', () => {
-            if (this.currentInfoWindows) {
-              this.currentInfoWindows.close();
-            }
-            infoWindows.open(map, marker);
-            this.currentInfoWindows = infoWindows;
-          });
-
-          this.infoWindows.push(infoWindows);
-          if (death.origin === 'interieur') {
-            nationalMarkers.push(marker);
-          } else {
-            domTomMarkers.push(marker);
-          }
-          heatMapData.push({
-            location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
-            weight: 10 + (death.count > 1 ? (death.count * 5) : 0),
-          });
-          this.markers.push(marker);
+          infoWindowsContent += `<br /><br /><strong>Sources:</strong>${sourcesText}`;
         }
+
+        const mailtoSubject = `Erreur trouvée - ${death.section} + -  ${death.day}/${death.month}/${death.year}`;
+        infoWindowsContent += `<br /><small style="float: right"><a href="mailto:contact@geolim4.com?subject=${mailtoSubject}">[Une erreur ?]</a></small>`;
+
+        const infoWindows = new google.maps.InfoWindow({ content: infoWindowsContent });
+        google.maps.event.addListener(marker, 'click', () => {
+          if (this.currentInfoWindows) {
+            this.currentInfoWindows.close();
+          }
+          infoWindows.open(map, marker);
+          this.currentInfoWindows = infoWindows;
+        });
+
+        this.infoWindows.push(infoWindows);
+        if (death.origin === 'interieur') {
+          nationalMarkers.push(marker);
+        } else {
+          domTomMarkers.push(marker);
+        }
+        heatMapData.push({
+          location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
+          weight: 10 + (death.count > 1 ? (death.count * 5) : 0),
+        });
+        this.markers.push(marker);
       }
 
       this.markerCluster = new MarkerClusterer(map, this.markers, {

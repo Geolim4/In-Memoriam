@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "npx tsc-bundle ./tsconfig.json && terser assets/js/main.js -c -m -o assets/js/main.js",
+    "build": "npx tsc-bundle ./tsconfig.json && terser assets/js/dist/main.js -c -m -o assets/js/dist/main.js",
     "watch": "npm run build && npm-watch"
   },
   "watch": {
