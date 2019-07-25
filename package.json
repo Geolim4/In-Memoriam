@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "cd src/ts && tsc && cd ../.. && terser assets/js/main.js -c -m -o assets/js/main.js",
+    "build": "npx tsc-bundle ./tsconfig.json && terser assets/js/dist/main.js -c -m -o assets/js/dist/main.js",
     "watch": "npm run build && npm-watch"
   },
   "watch": {
@@ -23,14 +23,14 @@
     "typescript": "^3.5.3"
   },
   "devDependencies": {
-    "@types/google-maps": "^3.2.1",
+    "@types/googlemaps": "^3.2.1",
     "@types/markerclustererplus": "^2.1.33",
     "@types/node": "^12.6.8",
     "@types/qwest": "^1.7.28",
     "npm-watch": "^0.6.0",
     "terser": "^4.1.2",
-    "tsc": "^1.20150623.0",
     "tslint": "^5.18.0",
-    "tslint-config-airbnb": "^5.11.1"
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript-bundle": "^1.0.16"
   }
 }

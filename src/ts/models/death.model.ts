@@ -11,5 +11,5 @@ export interface Death {
   section: string;
   origin: string;
   gps: {lat: number, lon: number};
-  sources: {url: number, titre: number}[];
+  sources: {url: string, titre: string}[];
 }
