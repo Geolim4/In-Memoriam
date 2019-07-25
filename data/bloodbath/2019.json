@@ -2577,6 +2577,49 @@
           "titre": "@BNUNSAPoliceCRS (Twitter)"
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "07",
+      "day": "24",
+      "house": "police",
+      "text": "Un commandant de la PJ de Versaille (Antenne Cergy) en faisant usage d'une arme à feu. Père de famille, il avait travaillé plus de 25ans au sein de la PJ et a laissé un courrier derrière lui.",
+      "section": "PJ Versaille (Antenne Cergy)",
+      "location": "Cergy (Val d'Oise)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 49.038047,
+        "lon": 2.085481
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/cergy-un-policier-sest-suicide-le-4eme-en-72-heures-en-france/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/cergy_95127/val-doise-policier-se-suicide-commissariat-cergy_26103613.html",
+          "titre": "Actu.fr"
+        },
+        {
+          "url": "http://www.leparisien.fr/val-d-oise-95/cergy-un-policier-se-suicide-a-l-hotel-de-police-24-07-2019-8123088.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/paris-ile-de-france/val-d-oise/cergy-pontoise/cergy-val-oise-suicide-policier-1703404.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/un-commandant-de-police-sest-suicide-ce-mercredi-24-juillet-2019-au-commissariat-de-cergy-val-doise/",
+          "titre": "Profession Gendarme"
+        },
+        {
+          "url": "https://twitter.com/association_mpc/status/1154126620460036097",
+          "titre": "@association_mpc (Twitter)"
+        }
+      ]
     }
   ]
 }

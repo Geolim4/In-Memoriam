@@ -1,0 +1,36 @@
+{
+  "name": "in-memoriam",
+  "version": "1.0.0",
+  "description": "Cartographie des décès militaires et civils Françaises",
+  "main": "index.html",
+  "repository": "https://github.com/Geolim4/In-Memoriam.git",
+  "author": "Georges.L <contact@geolim4.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "cd src/ts && tsc && cd ../.. && terser assets/js/main.js -c -m -o assets/js/main.js",
+    "watch": "npm run build && npm-watch"
+  },
+  "watch": {
+    "build": {
+      "extensions": "ts",
+      "patterns": [
+        "src/ts"
+      ]
+    }
+  },
+  "dependencies": {
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/google-maps": "^3.2.1",
+    "@types/markerclustererplus": "^2.1.33",
+    "@types/node": "^12.6.8",
+    "@types/qwest": "^1.7.28",
+    "npm-watch": "^0.6.0",
+    "terser": "^4.1.2",
+    "tsc": "^1.20150623.0",
+    "tslint": "^5.18.0",
+    "tslint-config-airbnb": "^5.11.1"
+  }
+}
