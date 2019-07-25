@@ -2,8 +2,7 @@
 /// <reference types="@types/markerclustererplus" />
 /// <reference types="@types/qwest" />
 
-import { Filters } from './models';
-import { Bloodbath } from './models/bloodbath.model';
+import { Bloodbath, Filters } from './models';
 import { Permalink } from './permalink';
 
 /**
