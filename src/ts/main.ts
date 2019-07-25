@@ -2,8 +2,9 @@
 /// <reference types="@types/markerclustererplus" />
 /// <reference types="@types/qwest" />
 
-import { Filters } from './models';
-import { Bloodbath } from './models/bloodbath.model';
+import { Bloodbath, Filters } from './models';
+import { Permalink } from './permalink';
+import { Events } from './events';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -12,9 +13,9 @@ import { Bloodbath } from './models/bloodbath.model';
  */
 class InMemoriam {
   private currentInfoWindows: google.maps.InfoWindow;
-  private eventHandlers: Object;
+  private readonly eventHandlers: Object = { Function };
   private heatMap: google.maps.visualization.HeatmapLayer;
-  private imgHousePath: string;
+  private readonly imgHousePath: string;
   private infoWindows: google.maps.InfoWindow[];
   private markerCluster: MarkerClusterer;
   private markers: google.maps.Marker[];
@@ -29,8 +30,12 @@ class InMemoriam {
     this.markers = [];
   }
 
-  public init(): void {
+  private static getFilterValueLabel(filterName: string, filterValue: string): string {
+    const option = <HTMLInputElement>document.querySelector(`form select[name="${filterName}"] option[value="${filterValue}"]`);
+    return (option ? option.innerText : filterValue).replace(/\([\d]+\)/, '').trim();
+  }
 
+  public init(): void {
     const options = {
       center: new google.maps.LatLng(48.1, -4.21), // Paris...
       mapTypeControl: false,
@@ -49,31 +54,14 @@ class InMemoriam {
     this.bindFilters(map, mapElement, formElement);
     this.bindLocalizationButton(map);
     this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
-
-  }
-
-  private addEventHandler(elem: HTMLInputElement | any, eventType: string, handler: EventListenerOrEventListenerObject): void {
-    if (elem.addEventListener) elem.addEventListener(eventType, handler, false);
-    else if (elem.attachEvent) elem.attachEvent(`on ${eventType}`, handler);
-  }
-
-  private removeEventHandler(elem: HTMLInputElement, eventType: string, handler: EventListenerOrEventListenerObject): void {
-    if (elem.removeEventListener) elem.removeEventListener(eventType, handler, false);
-  }
-
-  private getFilterValueLabel(filterName: string, filterValue: string): string {
-    const option = <HTMLInputElement>document.querySelector(`form select[name="${filterName}"] option[value="${filterValue}"]`);
-    return (option ? option.innerText : filterValue).replace(/\([\d]+\)/, '').trim();
   }
 
   private filteredResponse(response: Bloodbath, filters: Filters): Bloodbath {
-
     const filteredResponse = <Bloodbath>response;
 
-    for (const fKey in filters) {
+    for (const [fKey, filter] of Object.entries(filters)) {
       if (filters.hasOwnProperty(fKey)) {
         const fieldName = fKey;
-        const filter = filters[fKey];
         const safeFilter = filter.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
         if (filter) {
@@ -102,12 +90,11 @@ class InMemoriam {
     return filteredResponse;
   }
 
-  private getFilters(_form: HTMLInputElement, fromAnchor: boolean): Filters {
-
+  private getFilters(form: HTMLInputElement, fromAnchor: boolean): Filters {
     const anchor = location.hash.substr(1).split('&');
     const exposedFilters = {};
     const filters = {};
-    const selects = <NodeListOf<HTMLInputElement>>document.querySelectorAll('form select[data-filterable="true"], form input[data-filterable="true"]');
+    const selects = <NodeListOf<HTMLInputElement>>form.querySelectorAll('select[data-filterable="true"], input[data-filterable="true"]');
 
     anchor.forEach((value) => {
       const filter = value.split('=');
@@ -137,11 +124,9 @@ class InMemoriam {
           if (option.value !== '') {
             option.dataset.deathCount = '0';
             for (const key in unfilteredResponse.deaths) {
-              if (unfilteredResponse.deaths.hasOwnProperty(key)) {
-                const death = unfilteredResponse.deaths[key];
-                if (option.value === death[select.name]) {
-                  option.dataset.deathCount = `${+(option.dataset.deathCount) + death.count}`;
-                }
+              const death = unfilteredResponse.deaths[key];
+              if (option.value === death[select.name]) {
+                option.dataset.deathCount = `${+(option.dataset.deathCount) + death.count}`;
               }
             }
             option.innerText = `${option.innerText.replace(/\([\d]+\)/, '')} (${option.dataset.deathCount})`;
@@ -162,7 +147,7 @@ class InMemoriam {
 
     const selects = <NodeListOf<HTMLInputElement>>formElement.querySelectorAll('form select, form input');
 
-    this.addEventHandler(formElement, 'submit', (e) => {
+    Events.addEventHandler(formElement, 'submit', (e) => {
             // this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, fromAnchor));
       e.preventDefault();
     });
@@ -172,7 +157,7 @@ class InMemoriam {
       select.value = (typeof filters[select.name] !== 'undefined' ? filters[select.name] : ''); // can be : event.currentTarget.value inside the event handler
 
       if (typeof (this.eventHandlers[select.id]) === 'function') {
-        this.removeEventHandler(select, 'change', this.eventHandlers[select.id]);
+        Events.removeEventHandler(select, 'change', this.eventHandlers[select.id]);
       }
 
       this.eventHandlers[select.id] = () => {
@@ -187,7 +172,7 @@ class InMemoriam {
         select.value = (typeof filters[select.name] !== 'undefined' ? filters[select.name] : '');
       }
 
-      this.addEventHandler(select, 'change', this.eventHandlers[select.id]);
+      Events.addEventHandler(select, 'change', this.eventHandlers[select.id]);
     });
 
   }
@@ -204,10 +189,10 @@ class InMemoriam {
     qwest.get(`${source.replace('%year%', filters.year)}?_=${(new Date()).getTime()}`).then((_xhr, response: Bloodbath) => {
 
       const bounds = new google.maps.LatLngBounds();
-      const domTomMarkers = [];
-      const heatMapData = [];
-      const nationalMarkers = [];
-      let filteredResponse = response;
+      const domTomMarkers = <google.maps.Marker[]> [];
+      const heatMapData = <{location: google.maps.LatLng, weight: number}[]> [];
+      const nationalMarkers = <google.maps.Marker[]> [];
+      let filteredResponse = <Bloodbath> response;
 
       this.alterFiltersLabels(filteredResponse);
       filteredResponse = this.filteredResponse(filteredResponse, filters);
@@ -219,16 +204,15 @@ class InMemoriam {
       }
 
       for (const key in filteredResponse.deaths) {
-        if (filteredResponse.deaths.hasOwnProperty(key)) {
-          const death = filteredResponse.deaths[key];
-          const houseImage = this.imgHousePath.replace('%house%', death.house);
-          const marker = new google.maps.Marker({
-            map,
-            icon: new (google.maps as any).MarkerImage(houseImage),
-            position: new google.maps.LatLng(death.gps.lat, death.gps.lon),
-            title: death.text,
-          });
-          let infoWindowsContent = `'<h4>
+        const death = filteredResponse.deaths[key];
+        const houseImage = this.imgHousePath.replace('%house%', death.house);
+        const marker = new google.maps.Marker({
+          map,
+          icon: new (google.maps as any).MarkerImage(houseImage),
+          position: new google.maps.LatLng(death.gps.lat, death.gps.lon),
+          title: death.text,
+        });
+        let infoWindowsContent = `'<h4>
               <img height="16" src="${houseImage}" alt="House: ${death.house}"  title="House: ${death.house}" />
               ${(death.section ? `${death.section} - ` : '')}
               ${death.location}
@@ -237,46 +221,43 @@ class InMemoriam {
             <span>
               <strong>Date</strong>: ${death.day}/${death.month}/${death.year}
               <br /><br />
-              <strong>Cause</strong>: ${this.getFilterValueLabel('cause', death.cause)}
+              <strong>Cause</strong>: ${InMemoriam.getFilterValueLabel('cause', death.cause)}
               <br /><br />
               <strong>Circonstances</strong>:  ${death.text}
             </span>`;
 
-          if (death.sources && death.sources.length) {
-            let sourcesText = '';
-            for (const key in death.sources) {
-              if (death.sources.hasOwnProperty(key)) {
-                const source = death.sources[key];
-                sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${source.titre}</a>`);
-              }
-            }
-            infoWindowsContent += `<br /><br /><strong>Sources:</strong>${sourcesText}`;
+        if (death.sources && death.sources.length) {
+          let sourcesText = '';
+          for (const key in death.sources) {
+            const source = death.sources[key];
+            sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${source.titre}</a>`);
           }
-
-          const mailtoSubject = `Erreur trouvée - ${death.section} + -  ${death.day}/${death.month}/${death.year}`;
-          infoWindowsContent += `<br /><small style="float: right"><a href="mailto:contact@geolim4.com?subject=${mailtoSubject}">[Une erreur ?]</a></small>`;
-
-          const infoWindows = new google.maps.InfoWindow({ content: infoWindowsContent });
-          google.maps.event.addListener(marker, 'click', () => {
-            if (this.currentInfoWindows) {
-              this.currentInfoWindows.close();
-            }
-            infoWindows.open(map, marker);
-            this.currentInfoWindows = infoWindows;
-          });
-
-          this.infoWindows.push(infoWindows);
-          if (death.origin === 'interieur') {
-            nationalMarkers.push(marker);
-          } else {
-            domTomMarkers.push(marker);
-          }
-          heatMapData.push({
-            location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
-            weight: 10 + (death.count > 1 ? (death.count * 5) : 0),
-          });
-          this.markers.push(marker);
+          infoWindowsContent += `<br /><br /><strong>Sources:</strong>${sourcesText}`;
         }
+
+        const mailtoSubject = `Erreur trouvée - ${death.section} + -  ${death.day}/${death.month}/${death.year}`;
+        infoWindowsContent += `<br /><small style="float: right"><a href="mailto:contact@geolim4.com?subject=${mailtoSubject}">[Une erreur ?]</a></small>`;
+
+        const infoWindows = new google.maps.InfoWindow({ content: infoWindowsContent });
+        google.maps.event.addListener(marker, 'click', () => {
+          if (this.currentInfoWindows) {
+            this.currentInfoWindows.close();
+          }
+          infoWindows.open(map, marker);
+          this.currentInfoWindows = infoWindows;
+        });
+
+        this.infoWindows.push(infoWindows);
+        if (death.origin === 'interieur') {
+          nationalMarkers.push(marker);
+        } else {
+          domTomMarkers.push(marker);
+        }
+        heatMapData.push({
+          location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
+          weight: 10 + (death.count > 1 ? (death.count * 5) : 0),
+        });
+        this.markers.push(marker);
       }
 
       this.markerCluster = new MarkerClusterer(map, this.markers, {
@@ -307,7 +288,7 @@ class InMemoriam {
         this.heatMap.setMap(map);
       }
 
-      this.buildPermalink(filters);
+      Permalink.build(filters);
       this.printDefinitionsText(response);
       map.fitBounds(bounds);
     });
@@ -319,20 +300,26 @@ class InMemoriam {
   }
 
   private clearMarkers(): InMemoriam {
-    for (let i = 0; i < this.markers.length; i++) this.markers[i].setMap(null);
+    for (let i = 0; i < this.markers.length; i++) {
+      this.markers[i].setMap(null);
+    }
     this.markers = [];
     return this;
   }
 
   private clearInfoWindows(): InMemoriam {
-    for (let i = 0; i < this.clearInfoWindows.length; i++) this.clearInfoWindows[i].setMap(null);
+    for (let i = 0; i < this.infoWindows.length; i++) {
+      google.maps.event.clearInstanceListeners(this.infoWindows[i]);
+      this.infoWindows[i].close();
+    }
     this.infoWindows = [];
-
     return this;
   }
 
   private clearHeatMap(): InMemoriam {
-    if (this.heatMap) this.heatMap.setMap(null);
+    if (this.heatMap) {
+      this.heatMap.setMap(null);
+    }
     return this;
   }
 
@@ -440,25 +427,18 @@ class InMemoriam {
     const definitionTexts = [];
     if (response) {
       const definitions = this.getDefinitions(response);
-      for (const fieldKey in definitions) {
-        if (definitions.hasOwnProperty(fieldKey)) {
-          const field = definitions[fieldKey];
-          let definitionText = '';
-          for (const fieldValue in field) {
-            if (field.hasOwnProperty(fieldValue)) {
-              const count = field[fieldValue];
-              const isPlural = count > 1;
-              if (response.definitions[fieldKey][fieldValue]) {
-                const text = response.definitions[fieldKey][fieldValue][isPlural ? 'plural' : 'singular'];
-                definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace(`%${fieldKey}%`, fieldValue);
-              } else {
-                definitionText += (definitionText ? ', ' : '') + (`[${fieldValue}] (${count})`);
-              }
-            }
+      for (const [fieldKey, field] of Object.entries(definitions)) {
+        let definitionText = '';
+        for (const [fieldValue, count] of Object.entries(field)) {
+          const isPlural = count > 1;
+          if (response.definitions[fieldKey][fieldValue]) {
+            const text = response.definitions[fieldKey][fieldValue][isPlural ? 'plural' : 'singular'];
+            definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace(`%${fieldKey}%`, fieldValue);
+          } else {
+            definitionText += (definitionText ? ', ' : '') + (`[${fieldValue}] (${count})`);
           }
-
-          definitionTexts.push(response.definitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
         }
+        definitionTexts.push(response.definitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
       }
     } else {
       definitionTexts.push('Aucun r&#233;sultat trouv&#233;');
@@ -467,24 +447,6 @@ class InMemoriam {
     const element = document.querySelector('[data-role="definitionsText"]');
     element.innerHTML = definitionTexts.join('<br />');
   }
-
-  private buildPermalink(filters: Object): void {
-
-    const permalinkElement = <HTMLInputElement>document.querySelector('[data-role="permalink"]');
-    const url = location.href.replace(/#.*$/, '');
-    let anchor = '';
-
-    for (const key in filters) {
-      if (filters.hasOwnProperty(key)) {
-        const filterValue = filters[key];
-        if (filterValue) anchor += `${anchor ? '&' : '#'}${key}=${filterValue}`;
-      }
-    }
-
-    permalinkElement.value = url + anchor;
-
-  }
-
 }
 
 document.addEventListener('DOMContentLoaded', () => {
