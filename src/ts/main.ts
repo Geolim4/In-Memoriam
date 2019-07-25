@@ -450,7 +450,7 @@ class InMemoriam {
               const isPlural = count > 1;
               if (response.definitions[fieldKey][fieldValue]) {
                 const text = response.definitions[fieldKey][fieldValue][isPlural ? 'plural' : 'singular'];
-                definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace(`%${fieldKey}%'`, fieldValue);
+                definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace(`%${fieldKey}%`, fieldValue);
               } else {
                 definitionText += (definitionText ? ', ' : '') + (`[${fieldValue}] (${count})`);
               }
