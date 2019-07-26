@@ -5,6 +5,7 @@
 import { Bloodbath, Filters } from './models';
 import { Permalink } from './permalink';
 import { Events } from './events';
+import { StringUtils } from './helper/StringUtils';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -69,17 +70,15 @@ class InMemoriam {
           while (dKey--) {
             if (fieldName === 'search' && filter.length >= 3) {
                             // @todo Make some string helper to "de-uglify" this !
-              if (!filteredResponse.deaths[dKey]['text'].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(safeFilter)
-                                && !filteredResponse.deaths[dKey]['section'].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(safeFilter)
-                                && !filteredResponse.deaths[dKey]['location'].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(safeFilter)
-                            ) {
+              if (!StringUtils.containsString(filteredResponse.deaths[dKey]['text'], safeFilter)
+                    && ! StringUtils.containsString(filteredResponse.deaths[dKey]['section'], safeFilter)
+                    && ! StringUtils.containsString(filteredResponse.deaths[dKey]['location'], safeFilter)
+              ) {
                 filteredResponse.deaths.splice(dKey, 1);
               }
             } else {
-              if (filteredResponse.deaths.hasOwnProperty(dKey)) {
-                if (filteredResponse.deaths[dKey]['published'] !== true || (filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName] !== filter)) {
-                  filteredResponse.deaths.splice(dKey, 1);
-                }
+              if (filteredResponse.deaths[dKey]['published'] !== true || (filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName] !== filter)) {
+                filteredResponse.deaths.splice(dKey, 1);
               }
             }
           }
