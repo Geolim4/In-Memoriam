@@ -7,7 +7,7 @@ export class Events {
   public static addEventHandler(elem: HTMLInputElement | any, eventType: string, handler: EventListenerOrEventListenerObject): void {
     if (elem.addEventListener) {
       elem.addEventListener(eventType, handler, false);
-    } else if (elem.attachEvent){
+    } else if (elem.attachEvent) {
       elem.attachEvent(`on ${eventType}`, handler);
     }
   }
