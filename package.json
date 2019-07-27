@@ -8,11 +8,11 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "npm run lint && npx tsc-bundle ./tsconfig.json && npm run minify",
+    "build": "yarn run lint && npx tsc-bundle ./tsconfig.json && yarn run minify",
     "lint": "tslint --project ./tsconfig.json",
     "lint-fix": "tslint --project ./tsconfig.json --fix",
     "minify": "terser assets/js/dist/main.js -c -m -o assets/js/dist/main.js",
-    "watch": "npm run build && npm-watch"
+    "watch": "yarn run build && npm-watch"
   },
   "watch": {
     "build": {
