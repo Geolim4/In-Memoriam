@@ -77,7 +77,7 @@ class InMemoriam {
                 filteredResponse.deaths.splice(dKey, 1);
               }
             } else {
-              if (filteredResponse.deaths[dKey]['published'] !== true || (filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName] !== filter)) {
+              if (!filteredResponse.deaths[dKey]['published'] || (filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName] !== filter)) {
                 filteredResponse.deaths.splice(dKey, 1);
               }
             }
