@@ -7,12 +7,12 @@
  * @author Jbz797
  * @licence MIT
  */
-export class StringUtils {
+export class StringUtilsHelper {
   public static normalizeString(string: string): string {
     return string.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   }
 
   public static containsString(haystack: string, needle: string): boolean {
-    return StringUtils.normalizeString(haystack).includes(needle);
+    return StringUtilsHelper.normalizeString(haystack).includes(needle);
   }
 }
