@@ -575,7 +575,7 @@
       "day": "18",
       "house": "police",
       "text": "Un major de police se suicide à son domicile après avoir tué son ex-compagne. Le parquet de Laval s'est saisi de l'affaire mais s'est refusé à tout commentaire.",
-      "section": "Ciat Laval",
+      "section": "CSP Laval",
       "location": "Louverné (Mayenne)",
       "origin": "interieur",
       "gps": {
@@ -628,7 +628,7 @@
       "month": "03",
       "day": "04",
       "house": "police",
-      "text": "Un policier se suicide en se tirant une balle dans la poitrine dans les vestiaires du Ciat. Il était marié et père d'un petit garçon.",
+      "text": "Un policier se suicide en se tirant une balle dans la poitrine dans les vestiaires du CSP. Il était marié et père d'un petit garçon.",
       "section": "BMo Limoges",
       "location": "Limoges (Haute-Vienne)",
       "origin": "interieur",
@@ -687,7 +687,7 @@
       "day": "05",
       "house": "police",
       "text": "Un policier d’Elancourt se suicide avec son arme de service. Son corps a été retrouvé dans des bois à proximité de son domicile par les gendarmes. Il était père de deux jeunes filles",
-      "section": "Ciat Elancourt",
+      "section": "CSP Elancourt",
       "location": "Elancourt (Yvelines)",
       "origin": "interieur",
       "gps": {
@@ -718,7 +718,7 @@
       "day": "07",
       "house": "police",
       "text": "Un policier se suicide après une violente dispute conjugale. Il était père de deux enfants.",
-      "section": "Ciat Rouen / DDSP 76",
+      "section": "CSP Rouen / DDSP 76",
       "location": "Saint-Saëns (Seine-Maritime)",
       "origin": "interieur",
       "gps": {
@@ -903,8 +903,8 @@
       "month": "03",
       "day": "28",
       "house": "police",
-      "text": "Un policier se suicide à son domicile après s'être retranché à son domicile dans l'Oise. Affecté dans un Ciat parisien le GIGN n'a pu négocier sa reddition.",
-      "section": "Ciat Paris (inconnu)",
+      "text": "Un policier se suicide à son domicile après s'être retranché à son domicile dans l'Oise. Affecté dans un CSP parisien le GIGN n'a pu négocier sa reddition.",
+      "section": "CSP Paris (inconnu)",
       "location": "Louveaucourt, Bailleval (Oise)",
       "origin": "interieur",
       "gps": {
@@ -1145,7 +1145,7 @@
       "day": "07",
       "house": "police",
       "text": "Un policier d'Alès se suicide sans faire usage de son arme de service. Son corps a été retrouvé dans les bois à l'issue d'une longue battue",
-      "section": "Ciat Ales",
+      "section": "CSP Ales",
       "location": "La Calmette (Gard)",
       "origin": "interieur",
       "gps": {
@@ -1832,7 +1832,7 @@
       "month": "06",
       "day": "01",
       "house": "police",
-      "text": "Un officier de police du SDN 77 s'est suicide à son domicile. Son corps a été retrouvé près du Ciat de la commune de Chessy.",
+      "text": "Un officier de police du SDN 77 s'est suicide à son domicile. Son corps a été retrouvé près du CSP de la commune de Chessy.",
       "section": "SDN 77",
       "location": "Chessy (Seine-et-Marne)",
       "origin": "interieur",
@@ -1898,7 +1898,7 @@
       "month": "06",
       "day": "13",
       "house": "police",
-      "text": "Un Gardien de la Paix du Ciat de police du 19ème à Paris se suicide sur son lieu de villégiature près de Nîmes.",
+      "text": "Un Gardien de la Paix du CSP de police du 19ème à Paris se suicide sur son lieu de villégiature près de Nîmes.",
       "section": "CSP Paris 19e",
       "location": "Saint-Gervasy (Gard)",
       "origin": "interieur",
@@ -2617,6 +2617,49 @@
         },
         {
           "url": "https://twitter.com/association_mpc/status/1154126620460036097",
+          "titre": "@association_mpc (Twitter)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "07",
+      "day": "28",
+      "house": "police",
+      "text": "Un policier du commissariat d’Aulnay-sous-Bois (Seine-Saint-Denis) s'est suicidé avec son arme de service à son domicile. Récemment nommé brigadier de police il laisse un terrible mot derrière lui: \"Ne pas me ranimer\".",
+      "section": "CSP",
+      "location": "Aulnay-sous-Bois (Seine-Saint-Denis)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.927220,
+        "lon": 2.500290
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/seine-saint-denis-un-policier-affecte-a-aulnay-sous-bois-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/aulnay-sous-bois_93005/a-aulnay-sous-bois-guillaume-fonctionnaire-police-sest-donne-mort-arme-service_26167505.html",
+          "titre": "Actu.fr"
+        },
+        {
+          "url": "http://www.leparisien.fr/seine-saint-denis-93/seine-saint-denis-un-policier-d-aulnay-se-suicide-avec-son-arme-de-service-28-07-2019-8125071.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://www.bfmtv.com/societe/un-policier-affecte-a-aulnay-sous-bois-se-suicide-a-son-domicile-1738720.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "https://www.sudouest.fr/2019/07/28/seine-saint-denis-suicide-d-un-policier-a-aulnay-sous-bois-le-5e-en-france-en-une-semaine-6389552-10407.php",
+          "titre": "Sud Ouest"
+        },
+        {
+          "url": "https://twitter.com/association_mpc/status/1155440015297646592",
           "titre": "@association_mpc (Twitter)"
         }
       ]
