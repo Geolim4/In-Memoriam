@@ -231,7 +231,7 @@ export class InMemoriam {
             const source = death.sources[key];
             sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${source.titre}</a>`);
           }
-          infoWindowsContent += `<br /><br /><strong>Sources:</strong>${sourcesText}`;
+          infoWindowsContent += `<br /><br /><strong>Sources: </strong>${sourcesText}`;
         }
 
         const mailtoSubject = `Erreur trouvée - ${death.section} + -  ${death.day}/${death.month}/${death.year}`;
