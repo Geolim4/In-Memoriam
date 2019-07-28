@@ -69,10 +69,10 @@ export class InMemoriam {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
             if (fieldName === 'search' && filter.length >= 3) {
-                            // @todo Make some string helper to "de-uglify" this !
+              // @todo Make some string helper to "de-uglify" this !
               if (!StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['text'], safeFilter)
-                    && ! StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['section'], safeFilter)
-                    && ! StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['location'], safeFilter)
+                && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['section'], safeFilter)
+                && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['location'], safeFilter)
               ) {
                 filteredResponse.deaths.splice(dKey, 1);
               }
@@ -147,7 +147,7 @@ export class InMemoriam {
     const selects = <NodeListOf<HTMLInputElement>>formElement.querySelectorAll('form select, form input');
 
     Events.addEventHandler(formElement, 'submit', (e) => {
-            // this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, fromAnchor));
+      // this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, fromAnchor));
       e.preventDefault();
     });
 
@@ -163,7 +163,7 @@ export class InMemoriam {
         const filters = this.getFilters(formElement, fromAnchor);
         this.bindMarkers(mapElement.dataset.bloodbathSrc, map, filters);
 
-                // this.hashManager(select.id, select.value);
+        // this.hashManager(select.id, select.value);
         return false;
       };
 
@@ -188,10 +188,10 @@ export class InMemoriam {
     qwest.get(`${source.replace('%year%', filters.year)}?_=${(new Date()).getTime()}`).then((_xhr, response: Bloodbath) => {
 
       const bounds = new google.maps.LatLngBounds();
-      const domTomMarkers = <google.maps.Marker[]> [];
-      const heatMapData = <{location: google.maps.LatLng, weight: number}[]> [];
-      const nationalMarkers = <google.maps.Marker[]> [];
-      let filteredResponse = <Bloodbath> response;
+      const domTomMarkers = <google.maps.Marker[]>[];
+      const heatMapData = <{ location: google.maps.LatLng, weight: number }[]>[];
+      const nationalMarkers = <google.maps.Marker[]>[];
+      let filteredResponse = <Bloodbath>response;
 
       this.alterFiltersLabels(filteredResponse);
       filteredResponse = this.filteredResponse(filteredResponse, filters);
@@ -265,11 +265,11 @@ export class InMemoriam {
         maxZoom: 14,
       });
 
-            /**
-             * National marker prioritization:
-             * We only bounds to DomTom if there
-             * nothing else on national territory
-             */
+      /**
+       * National marker prioritization:
+       * We only bounds to DomTom if there
+       * nothing else on national territory
+       */
       const boundsMarkers = (nationalMarkers.length ? nationalMarkers : domTomMarkers);
       for (const key in boundsMarkers) {
         if (boundsMarkers.hasOwnProperty(key)) {
@@ -447,7 +447,3 @@ export class InMemoriam {
     element.innerHTML = definitionTexts.join('<br />');
   }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  (new InMemoriam()).init();
-});
