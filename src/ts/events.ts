@@ -1,6 +1,6 @@
 /**
  * @author Georges.L <contact@geolim4.com>
- * @author Jbz797
+ * @author Jbz797 <jean.benoit.gautier@gmail.com>
  * @licence MIT
  */
 export class Events {
