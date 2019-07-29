@@ -13,13 +13,14 @@ import { StringUtilsHelper } from './helper/stringUtils.helper';
  * @licence MIT
  */
 export class InMemoriam {
+
   private currentInfoWindows: google.maps.InfoWindow;
-  private readonly eventHandlers: Object = { Function };
   private heatMap: google.maps.visualization.HeatmapLayer;
-  private readonly imgHousePath: string;
   private infoWindows: google.maps.InfoWindow[];
   private markerCluster: MarkerClusterer;
   private markers: google.maps.Marker[];
+  private readonly eventHandlers: { [name: string]: EventListenerOrEventListenerObject};
+  private readonly imgHousePath: string;
 
   constructor() {
     this.currentInfoWindows = null;
