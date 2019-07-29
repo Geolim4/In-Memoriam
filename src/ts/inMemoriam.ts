@@ -4,6 +4,7 @@
 
 import { Bloodbath, Filters } from './models';
 import { Permalink } from './permalink';
+import { Config } from './config';
 import { Events } from './events';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
 
@@ -20,6 +21,7 @@ export class InMemoriam {
   private infoWindows: google.maps.InfoWindow[];
   private markerCluster: MarkerClusterer;
   private markers: google.maps.Marker[];
+  private configObject: Config;
 
   constructor() {
     this.currentInfoWindows = null;
@@ -29,6 +31,7 @@ export class InMemoriam {
     this.infoWindows = [];
     this.markerCluster = null;
     this.markers = [];
+    this.configObject = null;
   }
 
   private static getFilterValueLabel(filterName: string, filterValue: string): string {
@@ -36,19 +39,28 @@ export class InMemoriam {
     return (option ? option.innerText : filterValue).replace(/\([\d]+\)/, '').trim();
   }
 
-  public init(): void {
+  public boot(): void {
+    this.configObject = (new Config(() => {
+      this.run();
+    }));
+  }
+
+  public getConfig(): Object {
+    return this.configObject.getConfig();
+  }
+
+  public run(): void {
     const options = {
-      center: new google.maps.LatLng(48.1, -4.21), // Paris...
+      center: new google.maps.LatLng(this.getConfig()['defaultLat'], this.getConfig()['defaultLon']),
       mapTypeControl: false,
       mapTypeId: google.maps.MapTypeId.HYBRID,
-      maxZoom: 15,
+      maxZoom: this.getConfig()['maxZoom'],
       streetViewControl: false,
-      zoom: 12,
+      zoom: this.getConfig()['defaultZoom'],
     };
 
     const formElement = <HTMLInputElement>document.getElementById('form-filters');
     const mapElement = <HTMLInputElement>document.getElementById('map');
-
     const map = new google.maps.Map(mapElement, options);
 
     this.bindAnchorEvents(map, mapElement, formElement);
@@ -63,13 +75,12 @@ export class InMemoriam {
     for (const [fKey, filter] of Object.entries(filters)) {
       if (filters.hasOwnProperty(fKey)) {
         const fieldName = fKey;
-        const safeFilter = filter.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+        const safeFilter = StringUtilsHelper.normalizeString(filter);
 
         if (filter) {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
             if (fieldName === 'search' && filter.length >= 3) {
-              // @todo Make some string helper to "de-uglify" this !
               if (!StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['text'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['section'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['location'], safeFilter)
