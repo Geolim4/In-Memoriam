@@ -19,7 +19,7 @@ export class InMemoriam {
   private infoWindows: google.maps.InfoWindow[];
   private markerCluster: MarkerClusterer;
   private markers: google.maps.Marker[];
-  private readonly eventHandlers: { [name: string]: EventListenerOrEventListenerObject};
+  private readonly eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
   private readonly imgHousePath: string;
 
   constructor() {
