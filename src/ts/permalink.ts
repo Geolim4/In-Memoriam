@@ -3,7 +3,7 @@ import { Filters } from './models';
 /**
  * @author Georges.L <contact@geolim4.com>
  * @author Jbz797 <jean.benoit.gautier@gmail.com>
- * @licence MIT
+ * @licence GPL-2.0
  */
 export class Permalink {
   public static build(filters: Filters): void {

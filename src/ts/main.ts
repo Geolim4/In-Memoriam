@@ -1,5 +1,5 @@
 import { InMemoriam } from './inMemoriam';
 
 document.addEventListener('DOMContentLoaded', () => {
-  (new InMemoriam()).init();
+  (new InMemoriam()).boot();
 });
