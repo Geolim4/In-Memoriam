@@ -2,7 +2,7 @@
 
 /**
  * @author Georges.L <contact@geolim4.com>
- * @licence MIT
+ * @licence GPL-2.0
  */
 export class Config {
   private config: Object;

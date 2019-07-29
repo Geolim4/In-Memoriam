@@ -5,7 +5,7 @@
 /**
  * @author Georges.L <contact@geolim4.com>
  * @author Jbz797
- * @licence MIT
+ * @licence GPL-2.0
  */
 export class StringUtilsHelper {
   public static normalizeString(string: string): string {

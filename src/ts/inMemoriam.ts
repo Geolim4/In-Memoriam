@@ -11,7 +11,7 @@ import { StringUtilsHelper } from './helper/stringUtils.helper';
 /**
  * @author Georges.L <contact@geolim4.com>
  * @author Jbz797
- * @licence MIT
+ * @licence GPL-2.0
  */
 export class InMemoriam {
   private currentInfoWindows: google.maps.InfoWindow;
