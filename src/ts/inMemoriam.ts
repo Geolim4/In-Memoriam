@@ -290,11 +290,10 @@ export class InMemoriam {
       }
 
       if (heatMapData.length) {
+
         this.heatMap = new google.maps.visualization.HeatmapLayer({
-          data: heatMapData,
-          dissipating: true,
-          opacity: 0.3,
-          radius: 100,
+          ...{ data: heatMapData },
+          ... this.getConfig()['heatmapOptions'],
         });
         this.heatMap.setMap(map);
       }
