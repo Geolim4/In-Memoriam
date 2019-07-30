@@ -10,18 +10,19 @@ import { StringUtilsHelper } from './helper/stringUtils.helper';
 
 /**
  * @author Georges.L <contact@geolim4.com>
- * @author Jbz797
+ * @author Jbz797 <jean.benoit.gautier@gmail.com>
  * @licence GPL-2.0
  */
 export class InMemoriam {
+
+  private configObject: Config;
   private currentInfoWindows: google.maps.InfoWindow;
-  private readonly eventHandlers: Object = { Function };
   private heatMap: google.maps.visualization.HeatmapLayer;
-  private readonly imgHousePath: string;
   private infoWindows: google.maps.InfoWindow[];
   private markerCluster: MarkerClusterer;
   private markers: google.maps.Marker[];
-  private configObject: Config;
+  private readonly eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
+  private readonly imgHousePath: string;
 
   constructor() {
     this.currentInfoWindows = null;
