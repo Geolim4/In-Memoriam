@@ -2663,6 +2663,45 @@
           "titre": "@association_mpc (Twitter)"
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "07",
+      "day": "31",
+      "house": "police",
+      "text": "Un policier de la CRS 9 de Saint-Jacques-de-la-Lande (Ille-et-Vilaine) s'est suicidé avec son arme de service. Il était marié et père de trois enfants.",
+      "section": "CRS 9",
+      "location": "Saint-Jacques-de-la-Lande (Ille-et-Vilaine)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.927220,
+        "lon": 2.500290
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/rennes-un-policier-affecte-a-la-crs-9-sest-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.ouest-france.fr/bretagne/rennes-35000/pres-de-rennes-un-policier-de-la-crs-9-se-suicide-avec-son-arme-de-service-6465160",
+          "titre": "Ouest France"
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/rennes-un-policier-se-suicide-avec-son-arme-de-service-1740574.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "https://www.europe1.fr/faits-divers/rennes-un-policier-sest-suicide-ce-matin-avec-son-arme-de-service-3912337",
+          "titre": "Europe 1"
+        },
+        {
+          "url": "https://twitter.com/association_mpc/status/1155440015297646592",
+          "titre": "@association_mpc (Twitter)"
+        }
+      ]
     }
   ]
 }
