@@ -1,11 +1,11 @@
 {
   "name": "in-memoriam",
-  "version": "1.0.0",
+  "version": "0.0.7",
   "description": "Cartographie des décès militaires et civils Françaises",
   "main": "index.html",
   "repository": "https://github.com/Geolim4/In-Memoriam.git",
   "author": "Georges.L <contact@geolim4.com>",
-  "license": "MIT",
+  "license": "GPL-2.0",
   "private": false,
   "scripts": {
     "build": "yarn run lint && npx tsc-bundle ./tsconfig.json && yarn run minify",

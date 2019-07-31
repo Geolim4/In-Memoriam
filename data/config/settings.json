@@ -2,5 +2,10 @@
   "defaultLat": 48.1,
   "defaultLon": -4.21,
   "defaultZoom": 12,
-  "maxZoom": 15
+  "maxZoom": 15,
+  "heatmapOptions": {
+    "dissipating": true,
+    "opacity": 0.3,
+    "radius": 100
+  }
 }
