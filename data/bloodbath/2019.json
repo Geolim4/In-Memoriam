@@ -2677,8 +2677,8 @@
       "location": "Saint-Jacques-de-la-Lande (Ille-et-Vilaine)",
       "origin": "interieur",
       "gps": {
-        "lat": 48.927220,
-        "lon": 2.500290
+        "lat": 48.093528,
+        "lon": -1.694163
       },
       "sources": [
         {
@@ -2700,6 +2700,49 @@
         {
           "url": "https://twitter.com/association_mpc/status/1155440015297646592",
           "titre": "@association_mpc (Twitter)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "08",
+      "day": "01",
+      "house": "police",
+      "text": "Un policier de la CRS 11 de Lambersart (Nord) s'est suicidé avec son arme de service. Il était marié et père de trois enfants.",
+      "section": "CRS 11",
+      "location": "Lambersart (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 50.645740,
+        "lon": 3.027687
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/nord-un-policier-affecte-a-la-crs-11-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.ledauphine.com/france-monde/2019/08/01/nord-un-policier-se-suicide-par-arme-a-feu",
+          "titre": "Le Dauphiné"
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/rennes-un-policier-se-suicide-avec-son-arme-de-service-1740574.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "https://www.estrepublicain.fr/faits-divers-justice/2019/08/01/nord-un-policier-se-suicide-par-arme-a-feu",
+          "titre": "Est Républicain"
+        },
+        {
+          "url": "https://www.leprogres.fr/faits-divers-justice/2019/08/01/nord-un-policier-se-suicide-par-arme-a-feu",
+          "titre": "Le progrès"
+        },
+        {
+          "url": "http://www.lefigaro.fr/un-crs-se-suicide-pres-de-lille-20190801",
+          "titre": "Le Figaro"
         }
       ]
     }
