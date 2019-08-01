@@ -23,7 +23,7 @@ export class Config {
     });
   }
 
-  public getConfig(): Object {
-    return this.config;
+  public getConfig(setting: string): any {
+    return this.config[setting];
   }
 }

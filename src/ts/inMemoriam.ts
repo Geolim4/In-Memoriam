@@ -41,23 +41,18 @@ export class InMemoriam {
   }
 
   public boot(): void {
-    this.configObject = (new Config(() => {
-      this.run();
-    }));
-  }
-
-  public getConfig(): Object {
-    return this.configObject.getConfig();
+    this.configObject = (new Config(() => this.run()));
   }
 
   public run(): void {
+
     const options = {
-      center: new google.maps.LatLng(this.getConfig()['defaultLat'], this.getConfig()['defaultLon']),
+      center: new google.maps.LatLng(this.getConfig('defaultLat'), this.getConfig('defaultLon')),
       mapTypeControl: false,
       mapTypeId: google.maps.MapTypeId.HYBRID,
-      maxZoom: this.getConfig()['maxZoom'],
+      maxZoom: this.getConfig('maxZoom'),
       streetViewControl: false,
-      zoom: this.getConfig()['defaultZoom'],
+      zoom: this.getConfig('defaultZoom'),
     };
 
     const formElement = <HTMLInputElement>document.getElementById('form-filters');
@@ -68,6 +63,11 @@ export class InMemoriam {
     this.bindFilters(map, mapElement, formElement);
     this.bindLocalizationButton(map);
     this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
+
+  }
+
+  private getConfig(setting: string): any {
+    return this.configObject.getConfig(setting);
   }
 
   private filteredResponse(response: Bloodbath, filters: Filters): Bloodbath {
@@ -293,7 +293,7 @@ export class InMemoriam {
 
         this.heatMap = new google.maps.visualization.HeatmapLayer({
           ...{ data: heatMapData },
-          ... this.getConfig()['heatmapOptions'],
+          ... this.getConfig('heatmapOptions'),
         });
         this.heatMap.setMap(map);
       }
