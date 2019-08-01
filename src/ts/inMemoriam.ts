@@ -15,24 +15,24 @@ import { StringUtilsHelper } from './helper/stringUtils.helper';
  */
 export class InMemoriam {
 
-  private configObject: Config;
-  private currentInfoWindows: google.maps.InfoWindow;
-  private heatMap: google.maps.visualization.HeatmapLayer;
-  private infoWindows: google.maps.InfoWindow[];
-  private markerCluster: MarkerClusterer;
-  private markers: google.maps.Marker[];
-  private readonly eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
-  private readonly imgHousePath: string;
+  private _configObject: Config;
+  private _currentInfoWindows: google.maps.InfoWindow;
+  private _heatMap: google.maps.visualization.HeatmapLayer;
+  private _infoWindows: google.maps.InfoWindow[];
+  private _markerCluster: MarkerClusterer;
+  private _markers: google.maps.Marker[];
+  private readonly _eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
+  private readonly _imgHousePath: string;
 
   constructor() {
-    this.currentInfoWindows = null;
-    this.eventHandlers = {};
-    this.heatMap = null;
-    this.imgHousePath = './assets/images/corps/%house%.png';
-    this.infoWindows = [];
-    this.markerCluster = null;
-    this.markers = [];
-    this.configObject = null;
+    this._currentInfoWindows = null;
+    this._eventHandlers = {};
+    this._heatMap = null;
+    this._imgHousePath = './assets/images/corps/%house%.png';
+    this._infoWindows = [];
+    this._markerCluster = null;
+    this._markers = [];
+    this._configObject = null;
   }
 
   private static getFilterValueLabel(filterName: string, filterValue: string): string {
@@ -41,7 +41,7 @@ export class InMemoriam {
   }
 
   public boot(): void {
-    this.configObject = (new Config(() => this.run()));
+    this._configObject = (new Config(() => this.run()));
   }
 
   public run(): void {
@@ -67,7 +67,7 @@ export class InMemoriam {
   }
 
   private getConfig(setting: string): any {
-    return this.configObject.getConfig(setting);
+    return this._configObject.getConfig(setting);
   }
 
   private filteredResponse(response: Bloodbath, filters: Filters): Bloodbath {
@@ -167,11 +167,11 @@ export class InMemoriam {
       const filters = this.getFilters(formElement, fromAnchor);
       select.value = (typeof filters[select.name] !== 'undefined' ? filters[select.name] : ''); // can be : event.currentTarget.value inside the event handler
 
-      if (typeof (this.eventHandlers[select.id]) === 'function') {
-        Events.removeEventHandler(select, 'change', this.eventHandlers[select.id]);
+      if (typeof (this._eventHandlers[select.id]) === 'function') {
+        Events.removeEventHandler(select, 'change', this._eventHandlers[select.id]);
       }
 
-      this.eventHandlers[select.id] = () => {
+      this._eventHandlers[select.id] = () => {
         const filters = this.getFilters(formElement, fromAnchor);
         this.bindMarkers(mapElement.dataset.bloodbathSrc, map, filters);
 
@@ -183,15 +183,13 @@ export class InMemoriam {
         select.value = (typeof filters[select.name] !== 'undefined' ? filters[select.name] : '');
       }
 
-      Events.addEventHandler(select, 'change', this.eventHandlers[select.id]);
+      Events.addEventHandler(select, 'change', this._eventHandlers[select.id]);
     });
 
   }
 
   private clearMarkerCluster(): this {
-    if (this.markerCluster) {
-      this.markerCluster.clearMarkers();
-    }
+    if (this._markerCluster) this._markerCluster.clearMarkers();
     return this;
   }
 
@@ -216,7 +214,7 @@ export class InMemoriam {
 
       for (const key in filteredResponse.deaths) {
         const death = filteredResponse.deaths[key];
-        const houseImage = this.imgHousePath.replace('%house%', death.house);
+        const houseImage = this._imgHousePath.replace('%house%', death.house);
         const marker = new google.maps.Marker({
           map,
           icon: new (google.maps as any).MarkerImage(houseImage),
@@ -251,14 +249,12 @@ export class InMemoriam {
 
         const infoWindows = new google.maps.InfoWindow({ content: infoWindowsContent });
         google.maps.event.addListener(marker, 'click', () => {
-          if (this.currentInfoWindows) {
-            this.currentInfoWindows.close();
-          }
+          if (this._currentInfoWindows) this._currentInfoWindows.close();
           infoWindows.open(map, marker);
-          this.currentInfoWindows = infoWindows;
+          this._currentInfoWindows = infoWindows;
         });
 
-        this.infoWindows.push(infoWindows);
+        this._infoWindows.push(infoWindows);
         if (death.origin === 'interieur') {
           nationalMarkers.push(marker);
         } else {
@@ -268,10 +264,10 @@ export class InMemoriam {
           location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
           weight: 10 + (death.count > 1 ? (death.count * 5) : 0),
         });
-        this.markers.push(marker);
+        this._markers.push(marker);
       }
 
-      this.markerCluster = new MarkerClusterer(map, this.markers, {
+      this._markerCluster = new MarkerClusterer(map, this._markers, {
         gridSize: 60,
         imagePath: './assets/images/clustering/m',
         maxZoom: 14,
@@ -291,11 +287,11 @@ export class InMemoriam {
 
       if (heatMapData.length) {
 
-        this.heatMap = new google.maps.visualization.HeatmapLayer({
+        this._heatMap = new google.maps.visualization.HeatmapLayer({
           ...{ data: heatMapData },
           ... this.getConfig('heatmapOptions'),
         });
-        this.heatMap.setMap(map);
+        this._heatMap.setMap(map);
       }
 
       Permalink.build(filters);
@@ -310,26 +306,22 @@ export class InMemoriam {
   }
 
   private clearMarkers(): InMemoriam {
-    for (let i = 0; i < this.markers.length; i++) {
-      this.markers[i].setMap(null);
-    }
-    this.markers = [];
+    for (let i = 0; i < this._markers.length; i++) this._markers[i].setMap(null);
+    this._markers = [];
     return this;
   }
 
   private clearInfoWindows(): InMemoriam {
-    for (let i = 0; i < this.infoWindows.length; i++) {
-      google.maps.event.clearInstanceListeners(this.infoWindows[i]);
-      this.infoWindows[i].close();
+    for (let i = 0; i < this._infoWindows.length; i++) {
+      google.maps.event.clearInstanceListeners(this._infoWindows[i]);
+      this._infoWindows[i].close();
     }
-    this.infoWindows = [];
+    this._infoWindows = [];
     return this;
   }
 
   private clearHeatMap(): InMemoriam {
-    if (this.heatMap) {
-      this.heatMap.setMap(null);
-    }
+    if (this._heatMap)this._heatMap.setMap(null);
     return this;
   }
 
@@ -389,11 +381,9 @@ export class InMemoriam {
           map.setZoom(13);
           const infoWindows = new google.maps.InfoWindow({ content: 'Ma position approximative' });
           google.maps.event.addListener(marker, 'click', () => {
-            if (this.currentInfoWindows) {
-              this.currentInfoWindows.close();
-            }
+            if (this._currentInfoWindows) this._currentInfoWindows.close();
             infoWindows.open(map, marker);
-            this.currentInfoWindows = infoWindows;
+            this._currentInfoWindows = infoWindows;
           });
           infoWindows.open(map, marker);
           (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '-144px 0px';
