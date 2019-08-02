@@ -55,6 +55,14 @@
       "admpen": {
         "singular": "<span class=\"label label-danger\">%d</span> surveillant pénitentiaire",
         "plural": "<span class=\"label label-danger\">%d</span> surveillants pénitentiaire"
+      },
+      "secciv": {
+        "singular": "<span class=\"label label-danger\">%d</span> personnel de la sécurité civile",
+        "plural": "<span class=\"label label-danger\">%d</span> personnels de la sécurité civile"
+      },
+      "misc": {
+        "singular": "<span class=\"label label-danger\">%d</span> fonctionnaire ou bénévole civil",
+        "plural": "<span class=\"label label-danger\">%d</span> fonctionnaires ou bénévoles civils"
       }
     },
     "origin": {
@@ -1891,6 +1899,45 @@
       ]
     },
     {
+      "cause": "deathOnDuty",
+      "count": 3,
+      "published": true,
+      "year": "2019",
+      "month": "06",
+      "day": "07",
+      "house": "misc",
+      "text": "En pleine tempête Miguel, trois sauveteurs de la SNSM des Sables d'Olonnes ont péri lors d'une intervention pour secourir un bateau de pêche. La navette des sauveteurs, le SNS 061 Jack Morisseau, a chaviré à 800m des côtes.",
+      "section": "SNSM",
+      "location": "Sables-d’Olonne (Vendée)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 46.494841,
+        "lon": -1.823473
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/tempete-miguel-un-bateau-des-sauveteurs-de-la-snsm-a-chavire-aux-sables-dolonne-au-moins-3-morts/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.sudouest.fr/2019/06/08/naufrage-d-un-bateau-de-secours-de-la-snsm-en-vendee-les-rescapes-racontent-6185859-4971.php",
+          "titre": "Sud Ouest"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/bretagne/finistere/brest/deces-trois-sauveteurs-snsm-dernier-accident-tragique-avait-eu-lieu-1986-aber-wrac-h-1682380.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.bfmtv.com/mediaplayer/video/le-president-de-la-snsm-evoque-un-traumatisme-il-n-y-avait-pas-eu-d-accident-grave-depuis-1986-1166868.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2535479-20190607-tempete-miguel-vendee-vedette-snsm-chavire-sept-marins-bord",
+          "titre": "20 minutes"
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
@@ -2743,6 +2790,49 @@
         {
           "url": "http://www.lefigaro.fr/un-crs-se-suicide-pres-de-lille-20190801",
           "titre": "Le Figaro"
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "08",
+      "day": "02",
+      "house": "secciv",
+      "text": "Un pilote de bombardier d'eau (type Tracker) s'est crashé près de Générac lors d'une intervention sur un incendie. Il a été tué sur le coup.",
+      "section": "Sécurité Civile",
+      "location": "Générac (Gard)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  43.728572,
+        "lon": 4.346717
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/incendies-dans-le-gard-un-avion-bombardier-deau-sest-crashe/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/incendies-dans-le-gard-crash-d-un-bombardier-d-eau-en-intervention-02-08-2019-8127936.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://www.bfmtv.com/mediaplayer/video/crash-d-un-bombardier-d-eau-dans-le-gard-le-pilote-de-l-avion-est-mort-1178824.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "https://www.midilibre.fr/2019/08/02/gard-un-accident-de-canadair-sur-lincendie-de-generac,8343971.php",
+          "titre": "Midi Libre"
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2576543-20190802-gard-crash-bombardier-eau-intervenant-incendie-generac",
+          "titre": "20 Minutes"
+        },
+        {
+          "url": "https://www.francetvinfo.fr/faits-divers/incendie/direct-incendies-dans-le-gard-un-avion-bombardier-d-eau-s-ecrase-pres-de-generac_3562137.html",
+          "titre": "France Info"
         }
       ]
     }
