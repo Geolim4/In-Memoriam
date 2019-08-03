@@ -2751,6 +2751,37 @@
       ]
     },
     {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "07",
+      "day": "31",
+      "house": "police",
+      "text": "Un élève Gardien de la Paix s'est tué sur la route de Lyon à Charvieu-Chavagneux en rentrant à son domicile. Il était père de deux enfants.",
+      "section": "ENP",
+      "location": "Charvieu-Chavagneux (Isère)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 45.752849,
+        "lon": 5.148249
+      },
+      "sources": [
+        {
+          "url": "https://www.ledauphine.com/isere-nord/2019/08/01/un-motard-se-tue-dans-un-rond-point",
+          "titre": "Le Dauphiné"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/isere/charvieu-chavagneux-isere-jeune-motard-perd-vie-sortie-route-1706166.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://twitter.com/association_mpc/status/1157289042431696897",
+          "titre": "@association_mpc (Twitter)"
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
@@ -2806,7 +2837,7 @@
       "location": "Générac (Gard)",
       "origin": "interieur",
       "gps": {
-        "lat":  43.728572,
+        "lat": 43.728572,
         "lon": 4.346717
       },
       "sources": [
