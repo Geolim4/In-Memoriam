@@ -62,6 +62,7 @@ export class InMemoriam {
     this.bindAnchorEvents(map, mapElement, formElement);
     this.bindFilters(map, mapElement, formElement);
     this.bindLocalizationButton(map);
+    this.bindRandomizationButton(map);
     this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
 
   }
@@ -85,6 +86,7 @@ export class InMemoriam {
               if (!StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['text'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['section'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['location'], safeFilter)
+                && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['keywords'], safeFilter)
               ) {
                 filteredResponse.deaths.splice(dKey, 1);
               }
@@ -351,7 +353,8 @@ export class InMemoriam {
     firstChild.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
     firstChild.style.cursor = 'pointer';
     firstChild.style.height = '28px';
-    firstChild.style.marginRight = '10px';
+    firstChild.style.marginTop = '10px';
+    firstChild.style.marginLeft = '10px';
     firstChild.style.outline = 'none';
     firstChild.style.padding = '0px';
     firstChild.style.width = '28px';
@@ -405,7 +408,51 @@ export class InMemoriam {
       }
     });
 
-    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(controlDiv);
+    map.controls[google.maps.ControlPosition.LEFT_TOP].push(controlDiv);
+  }
+
+  private bindRandomizationButton(map: google.maps.Map): void {
+    const controlDiv = <HTMLInputElement>document.createElement('div');
+    const firstChild = <HTMLInputElement>document.createElement('button');
+
+    firstChild.style.backgroundColor = '#FFF';
+    firstChild.style.border = 'none';
+    firstChild.style.borderRadius = '2px';
+    firstChild.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
+    firstChild.style.cursor = 'pointer';
+    firstChild.style.height = '28px';
+    firstChild.style.marginTop = '10px';
+    firstChild.style.marginLeft = '10px';
+    firstChild.style.outline = 'none';
+    firstChild.style.padding = '0px';
+    firstChild.style.width = '28px';
+    firstChild.title = 'Voir autour de moi';
+    controlDiv.appendChild(firstChild);
+
+    const secondChild = document.createElement('div');
+    secondChild.id = 'randomizationImg';
+    secondChild.style.backgroundImage = 'url(./assets/images/map/random.png)';
+    secondChild.style.backgroundPosition = '-2px -2px';
+    secondChild.style.backgroundRepeat = 'no-repeat';
+    secondChild.style.backgroundSize = '120%';
+    secondChild.style.height = '18px';
+    secondChild.style.margin = '5px';
+    secondChild.style.width = '18px';
+    firstChild.appendChild(secondChild);
+
+    firstChild.addEventListener('click', () => {
+      const randomIndex = Math.floor(Math.random() * this.markers.length);
+
+      this.markers.map((marker: google.maps.Marker, index) => {
+        if (randomIndex === index) {
+          map.setCenter(marker.getPosition());
+          map.setZoom(13);
+          google.maps.event.trigger(marker, 'click');
+        }
+      });
+    });
+
+    map.controls[google.maps.ControlPosition.LEFT_TOP].push(controlDiv);
   }
 
   private getDefinitions(response: Bloodbath): Object {
