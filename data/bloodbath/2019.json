@@ -2949,6 +2949,38 @@
           "titre": "France Info"
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "08",
+      "day": "06",
+      "keywords": "",
+      "house": "pm",
+      "text": "Un policier municipal d’Orléans (Loiret) a mis fin à ses jours à son domicile de Neung-sur-Beuvron (Loir-et-Cher). Aux premières constatations, l'arme utilisé n'était pas son arme de service.",
+      "section": "Poste de police d’Orléans",
+      "location": "Neung-sur-Beuvron (Loir-et-Cher)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 47.535496,
+        "lon": 1.805878
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-policier-municipal-dorleans-sest-suicide-par-arme-a-feu/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://policeetrealites.com/2019/08/06/%F0%9F%87%AB%F0%9F%87%B7-suicide-dun-policier-municipal/",
+          "titre": "Police & Réalites"
+        },
+        {
+          "url": "https://www.lanouvellerepublique.fr/loir-et-cher/commune/neung-sur-beuvron/un-policier-municipal-d-orleans-met-fin-a-ses-jours-a-neung-sur-beuvron",
+          "titre": "La nouvelle République"
+        }
+      ]
     }
   ]
 }
