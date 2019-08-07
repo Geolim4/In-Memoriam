@@ -1,69 +1,130 @@
 {
   "definitions": {
     "year": {
-      "#label": "Année: %year%",
+      "#label": "<strong>Décompte annuel</strong>: %year%",
       "2018": {
-        "singular": "<strong>%d</strong> disparition en %year%",
-        "plural": "<strong> %d</strong> disparitions en %year%"
+        "singular": "<span class=\"label label-danger\">%d</span> disparition sur l'année %year%",
+        "plural": "<span class=\"label label-danger\">%d</span> disparitions sur l'année %year%"
       }
     },
     "cause": {
-      "#label": "Causes: %cause%",
+      "#label": "<strong>Causes</strong>: %cause%",
       "suicide": {
-        "singular": "<strong>%d</strong> suicide",
-        "plural": "<strong>%d</strong> suicides"
+        "singular": "<span class=\"label label-danger\">%d</span> suicide",
+        "plural": "<span class=\"label label-danger\">%d</span> suicides"
       },
       "deathOnDuty": {
-        "singular": "<strong>%d</strong> mort en service",
-        "plural": "<strong>%d</strong> morts en service"
+        "singular": "<span class=\"label label-danger\">%d</span> mort en service",
+        "plural": "<span class=\"label label-danger\">%d</span> morts en service"
       },
       "accident": {
-        "singular": "<strong>%d</strong> mort accidentellement",
-        "plural": "<strong>%d</strong> morts accidentellement"
+        "singular": "<span class=\"label label-danger\">%d</span> mort accidentelle",
+        "plural": "<span class=\"label label-danger\">%d</span> morts accidentelles"
       },
       "murdered": {
-        "singular": "<strong>%d</strong> assassiné",
-        "plural": "<strong>%d</strong> assassinés"
+        "singular": "<span class=\"label label-danger\">%d</span> assassiné",
+        "plural": "<span class=\"label label-danger\">%d</span> assassinés"
       }
     },
     "house": {
-      "#label": "Corps: %house%",
+      "#label": "<strong>Corps</strong>: %house%",
       "gendarmerie": {
-        "singular": "<strong>%d</strong> gendarme",
-        "plural": "<strong>%d</strong> gendarmes"
+        "singular": "<span class=\"label label-danger\">%d</span> gendarme",
+        "plural": "<span class=\"label label-danger\">%d</span> gendarmes"
       },
       "police": {
-        "singular": "<strong>%d</strong> policier",
-        "plural": "<strong>%d</strong> policiers"
+        "singular": "<span class=\"label label-danger\">%d</span> policier",
+        "plural": "<span class=\"label label-danger\">%d</span> policiers"
+      },
+      "pm": {
+        "singular": "<span class=\"label label-danger\">%d</span> policier municipal",
+        "plural": "<span class=\"label label-danger\">%d</span> policiers municipaux"
       },
       "douane": {
-        "singular": "<strong>%d</strong> douanier",
-        "plural": "<strong>%d</strong> douaniers"
+        "singular": "<span class=\"label label-danger\">%d</span> douanier",
+        "plural": "<span class=\"label label-danger\">%d</span> douaniers"
       },
       "pompier": {
-        "singular": "<strong>%d</strong> pompier",
-        "plural": "<strong>%d</strong> pompiers"
+        "singular": "<span class=\"label label-danger\">%d</span> pompier",
+        "plural": "<span class=\"label label-danger\">%d</span> pompiers"
       },
       "armee": {
-        "singular": "<strong>%d</strong> militaire",
-        "plural": "<strong>%d</strong> militaires"
+        "singular": "<span class=\"label label-danger\">%d</span> militaire",
+        "plural": "<span class=\"label label-danger\">%d</span> militaires"
+      },
+      "admpen": {
+        "singular": "<span class=\"label label-danger\">%d</span> surveillant pénitentiaire",
+        "plural": "<span class=\"label label-danger\">%d</span> surveillants pénitentiaire"
+      },
+      "secciv": {
+        "singular": "<span class=\"label label-danger\">%d</span> personnel de la sécurité civile",
+        "plural": "<span class=\"label label-danger\">%d</span> personnels de la sécurité civile"
+      },
+      "misc": {
+        "singular": "<span class=\"label label-danger\">%d</span> fonctionnaire ou bénévole civil",
+        "plural": "<span class=\"label label-danger\">%d</span> fonctionnaires ou bénévoles civils"
       }
     },
     "origin": {
-      "#label": "Territorialité: %origin%",
+      "#label": "<strong>Territorialité</strong>: %origin%",
       "interieur": {
-        "singular": "<strong>%d</strong> disparition sur le territoire national",
-        "plural": "<strong>%d</strong> disparitions en territoire national"
+        "singular": "<span class=\"label label-danger\">%d</span> disparition sur le territoire national",
+        "plural": "<span class=\"label label-danger\">%d</span> disparitions en territoire national"
       },
       "domtom": {
-        "singular": "<strong>%d</strong> disparition en outre-mer",
-        "plural": "<strong> %d</strong> disparitions en outre-mer"
+        "singular": "<span class=\"label label-danger\">%d</span> disparition en outre-mer",
+        "plural": "<span class=\"label label-danger\"> %d</span> disparitions en outre-mer"
       },
       "opex": {
-        "singular": "<strong>%d</strong> disparition en opération extérieure (OPEX)",
-        "plural": "<strong> %d</strong> disparitions en opération extérieure (OPEX)"
+        "singular": "<span class=\"label label-danger\">%d</span> disparition en opération extérieure (OPEX)",
+        "plural": "<span class=\"label label-danger\"> %d</span> disparitions en opération extérieure (OPEX)"
       }
     }
   },
-  "deaths": []
+  "deaths": [
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2018",
+      "month": "11",
+      "day": "12",
+      "keywords": "",
+      "house": "police",
+      "text": "Maggy Biskupski, figure emblématique de l'association MPC et gardienne de la paix à la BAC de Sartrouville, a mis fin à ses jours à son domicile. Elle laisse une lettre derrière expliquant les raisons de son geste. Son décès a provoqué une très vive émotion dans les rangs des forces de l'ordre.",
+      "section": "BAC - CSP Sartrouville",
+      "location": "Carrières-sous-Poissy (Yvelines)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.945384,
+        "lon": 2.032418
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/la-presidente-de-lassociation-mobilisation-des-policiers-en-colere-mpc-maggy-biskupski-sest-suicidee/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://mpc-asso.net/2019/06/21/%f0%9f%9a%94%f0%9f%87%ab%f0%9f%87%b7-condoleances-a-la-famille-et-aux-proches-4/",
+          "titre": "Asso MPC"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/suicide-de-maggy-biskupski-la-policiere-evoquait-des-problemes-avec-son-association-13-11-2018-7941549.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://www.lexpress.fr/actualite/societe/suicide-policier-une-marche-en-memoire-de-maggy-biskupski_2050282.html",
+          "titre": "L'Express"
+        },
+        {
+          "url": "https://www.europe1.fr/societe/une-policiere-se-tue-avec-son-arme-de-service-dans-les-yvelines-3799244",
+          "titre": "Europe 1"
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Maggy_Biskupski",
+          "titre": "Wikipédia"
+        }
+      ]
+    }
+  ]
 }
