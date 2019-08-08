@@ -1,6 +1,6 @@
 {
   "name": "in-memoriam",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "Cartographie des décès militaires et civils Françaises",
   "main": "index.html",
   "repository": "https://github.com/Geolim4/In-Memoriam.git",

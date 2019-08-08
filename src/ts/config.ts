@@ -5,18 +5,19 @@
  * @licence GPL-2.0
  */
 export class Config {
-  private config: Object;
-  private configPath: string;
 
-  constructor(onceInitialized ?: Function) {
-    this.config = {};
-    this.configPath = './data/config/settings.json';
+  private _config: Object;
+  private _configPath: string;
+
+  constructor(onceInitialized?: Function) {
+    this._config = {};
+    this._configPath = './data/config/settings.json';
     this.init(onceInitialized);
   }
 
-  public init(onceInitialized ?: Function): void {
-    qwest.get(this.configPath).then((_xhr, response: Object) => {
-      this.config = response;
+  public init(onceInitialized?: Function): void {
+    qwest.get(this._configPath).then((_xhr, response: Object) => {
+      this._config = response;
       if (onceInitialized) {
         onceInitialized();
       }
@@ -24,6 +25,7 @@ export class Config {
   }
 
   public getConfig(setting: string): any {
-    return this.config[setting];
+    return this._config[setting];
   }
+
 }
