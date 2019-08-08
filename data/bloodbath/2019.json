@@ -55,6 +55,14 @@
       "admpen": {
         "singular": "<span class=\"label label-danger\">%d</span> surveillant pénitentiaire",
         "plural": "<span class=\"label label-danger\">%d</span> surveillants pénitentiaire"
+      },
+      "secciv": {
+        "singular": "<span class=\"label label-danger\">%d</span> personnel de la sécurité civile",
+        "plural": "<span class=\"label label-danger\">%d</span> personnels de la sécurité civile"
+      },
+      "misc": {
+        "singular": "<span class=\"label label-danger\">%d</span> fonctionnaire ou bénévole civil",
+        "plural": "<span class=\"label label-danger\">%d</span> fonctionnaires ou bénévoles civils"
       }
     },
     "origin": {
@@ -81,6 +89,7 @@
       "year": "2019",
       "month": "01",
       "day": "01",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la CSP se suicide avec son arme de service. Il était père de deux enfants.",
       "section": "CSP La Rochelle",
@@ -108,6 +117,7 @@
       "year": "2019",
       "month": "01",
       "day": "02",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la PAF se suicide sans faire usage de son arme de service. Il était marié et père de famille.",
       "section": "PAF Cherbourg",
@@ -135,6 +145,7 @@
       "year": "2019",
       "month": "01",
       "day": "06",
+      "keywords": "",
       "house": "police",
       "text": "Un policier du CIC se suicide à son domicile avec son arme de service. Il était marié et père d'un enfant'.",
       "section": "CIC Reims",
@@ -162,6 +173,7 @@
       "year": "2019",
       "month": "01",
       "day": "07",
+      "keywords": "",
       "house": "police",
       "text": "Un policier du CIC de la Rochelle se suicide. Peu d'informations disponibles sur ce suicide.",
       "section": "CIC La Rochelle",
@@ -185,6 +197,7 @@
       "year": "2019",
       "month": "01",
       "day": "09",
+      "keywords": "",
       "house": "pompier",
       "text": "Le 1ère classe Bertrand PIME, affecté au service d'incendie et de secours du Syndicat intercommunal à vocation multiple (SIVM) Nord, en Nouvelle-Calédonie, est décédé en service commandé ce mercredi 9 janvier 2019, des suites de ses blessures. . Mardi 8 janvier 2019, il avait été grièvement brûlé en combattant un important feu de végétation qui menaçait des habitations, sur la commune de Koumac. Il était en couple et père de deux enfants.",
       "section": "SIVM Nord",
@@ -224,6 +237,7 @@
       "year": "2019",
       "month": "01",
       "day": "12",
+      "keywords": "",
       "house": "armee",
       "text": "Le capitaine Baptiste Chirié et la lieutenant Audrey Michelon ont péri lors du crash de leur Mirage 2000D à la frontière du Doubs et du Jura, dans la Combe Noire. Les circonstances du crash sont pour l'heure toujours inconnues. Le capitaine était père de deux enfants.",
       "section": "BA 113",
@@ -267,6 +281,7 @@
       "year": "2019",
       "month": "01",
       "day": "12",
+      "keywords": "",
       "house": "pompier",
       "text": "Deux pompiers de la BSPP ont péri dans une violente explosion due à une fuite de gaz en plein coeur de Paris. Le caporal-chef Simon Cartannaz et le première classe Nathanaël Josselin, en arrêt cardio-respiratoire, n'ont pas survécu à leurs blessures.",
       "section": "BSPP",
@@ -310,6 +325,7 @@
       "year": "2019",
       "month": "01",
       "day": "15",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la BAC se suicide à son domicile de Brunoy (Essonne), avec son arme de service. Il était père d'une petite fille.",
       "section": "BAC Haÿ-les-Roses",
@@ -341,6 +357,7 @@
       "year": "2019",
       "month": "01",
       "day": "16",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la CRS 16 se suicide à son domicile de Saint-Omer (Pas-de-Calais) avec son arme de service. Il était père de trois enfants.",
       "section": "CRS 16",
@@ -372,6 +389,7 @@
       "year": "2019",
       "month": "01",
       "day": "16",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la CSG (BRF Paris) se suicide à son domicile avec son arme de service.",
       "section": "CSG BRF Paris",
@@ -403,6 +421,7 @@
       "year": "2019",
       "month": "01",
       "day": "17",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la BCF se suicide. Peu d'informations disponibles sur ce suicide.",
       "section": "BCF Gare du Nord - Paris",
@@ -426,6 +445,7 @@
       "year": "2019",
       "month": "01",
       "day": "19",
+      "keywords": "",
       "house": "admpen",
       "text": "Un surveillant pénitentiaire du centre de détention de Bédenac s'est suicidé par pendaison. Il était marié et père de trois enfants.",
       "section": "Centre de détention",
@@ -461,6 +481,7 @@
       "year": "2019",
       "month": "01",
       "day": "25",
+      "keywords": "",
       "house": "police",
       "text": "Un policier se suicide avec son arme de service. Il laisse une lettre derrière lui dénonçant les conditions de travail et les problèmes d'évolutions de carrière.",
       "section": "CRS 10",
@@ -488,6 +509,7 @@
       "year": "2019",
       "month": "01",
       "day": "27",
+      "keywords": "",
       "house": "police",
       "text": "Informations issues de l’Administration, pour deux policiers suicidés mais dont nous n’avons aucunes informations à ce jour.",
       "section": "",
@@ -511,6 +533,7 @@
       "year": "2019",
       "month": "01",
       "day": "27",
+      "keywords": "",
       "house": "pompier",
       "text": "Le sergent Jessy ÈVE, sapeur-pompier professionnel au corps départemental de La Réunion (Sdis974), affecté au centre d’incendie et de secours de Saint-André, et décédé en service commandé, suite à un sur-accident survenu alors qu'il intervenait sur un accident de la circulation et mettait en place le balisage de sécurité et de protection. Il était père de deux garçon.",
       "section": "SDIS 974",
@@ -546,6 +569,7 @@
       "year": "2019",
       "month": "02",
       "day": "14",
+      "keywords": "",
       "house": "police",
       "text": "Un policier en poste en Martinique se suicide. Il était père de famille",
       "section": "UAAJ",
@@ -573,6 +597,7 @@
       "year": "2019",
       "month": "02",
       "day": "18",
+      "keywords": "",
       "house": "police",
       "text": "Un major de police se suicide à son domicile après avoir tué son ex-compagne. Le parquet de Laval s'est saisi de l'affaire mais s'est refusé à tout commentaire.",
       "section": "CSP Laval",
@@ -604,6 +629,7 @@
       "year": "2019",
       "month": "02",
       "day": "20",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la SU de Grand Quevilly se suicide. Peu d'informations disponibles.",
       "section": "SU Grand Quevilly",
@@ -627,6 +653,7 @@
       "year": "2019",
       "month": "03",
       "day": "04",
+      "keywords": "",
       "house": "police",
       "text": "Un policier se suicide en se tirant une balle dans la poitrine dans les vestiaires du CSP. Il était marié et père d'un petit garçon.",
       "section": "BMo Limoges",
@@ -662,6 +689,7 @@
       "year": "2019",
       "month": "03",
       "day": "04",
+      "keywords": "",
       "house": "police",
       "text": "Un policier s'est suicidé, il était affecté à la CSP de Dunkerque. Peu d'informations disponibles sur ce suicide.",
       "section": "CSP Dunkerque",
@@ -685,6 +713,7 @@
       "year": "2019",
       "month": "03",
       "day": "05",
+      "keywords": "",
       "house": "police",
       "text": "Un policier d’Elancourt se suicide avec son arme de service. Son corps a été retrouvé dans des bois à proximité de son domicile par les gendarmes. Il était père de deux jeunes filles",
       "section": "CSP Elancourt",
@@ -716,6 +745,7 @@
       "year": "2019",
       "month": "03",
       "day": "07",
+      "keywords": "",
       "house": "police",
       "text": "Un policier se suicide après une violente dispute conjugale. Il était père de deux enfants.",
       "section": "CSP Rouen / DDSP 76",
@@ -743,6 +773,7 @@
       "year": "2019",
       "month": "03",
       "day": "07",
+      "keywords": "",
       "house": "gendarmerie",
       "text": "Un gendarme se suicide avec son arme de service dans son bureau de la CoB de Selles-sur-Cher.",
       "section": "CoB Selles-sur-Cher",
@@ -774,6 +805,7 @@
       "year": "2019",
       "month": "03",
       "day": "10",
+      "keywords": "",
       "house": "police",
       "text": "Un ADS du 36' aurait tué accidentellement une gardienne de la paix avec son, arme de service en la touchant à la tête.",
       "section": "DRPJ",
@@ -809,6 +841,7 @@
       "year": "2019",
       "month": "03",
       "day": "11",
+      "keywords": "",
       "house": "armee",
       "text": "Une militaire engagée dans l’opération intérieure Sentinelle a mis fin à ses jours avec son arme de service dans les locaux occupés par son unité à l’aéroport de Roissy.",
       "section": "Opération Sentinelle",
@@ -844,6 +877,7 @@
       "year": "2019",
       "month": "03",
       "day": "15",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la CSI de Limay se suicide avec son arme de service. Découvert sans vie à son domicile par ses collègues, il était père de deux enfants.",
       "section": "CSI Limay (Yvelines)",
@@ -875,6 +909,7 @@
       "year": "2019",
       "month": "03",
       "day": "19",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la 22e CI de Paris se suicide avec son arme de service. Découvert sans vie à son domicile par ses collègues, il était père d'un petit garçon.",
       "section": "22e CI / DOPC",
@@ -902,6 +937,7 @@
       "year": "2019",
       "month": "03",
       "day": "28",
+      "keywords": "",
       "house": "police",
       "text": "Un policier se suicide à son domicile après s'être retranché à son domicile dans l'Oise. Affecté dans un CSP parisien le GIGN n'a pu négocier sa reddition.",
       "section": "CSP Paris (inconnu)",
@@ -937,6 +973,7 @@
       "year": "2019",
       "month": "04",
       "day": "01",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la BCF s'est suicidé à son domicile en Seine-et-Marne. Peu d'informations disponibles sur ce suicide",
       "section": "BCF Paris",
@@ -964,6 +1001,7 @@
       "year": "2019",
       "month": "04",
       "day": "02",
+      "keywords": "",
       "house": "admpen",
       "text": "Un surveillant pénitentiaire affecté au Quartier Disciplinaire de l’établissement du centre de détention de Toulouse-Seysses s'est suicidé par pendaisonc à son domicile. Il père de deux enfants.",
       "section": "Centre de détention",
@@ -995,6 +1033,7 @@
       "year": "2019",
       "month": "04",
       "day": "02",
+      "keywords": "",
       "house": "armee",
       "text": "Le médecin Marc Laycuras est décédé des suite de ses bléssures occasionnées un engin explosif détruisant son véhicule au cours d'une mission au Mali le 12 février dans le cadre de l'opération Barkhane. Il était marié et titulaire de la médaille de la Défense nationale.",
       "section": "2e RIMA (Armée de Terre)",
@@ -1030,6 +1069,7 @@
       "year": "2019",
       "month": "04",
       "day": "04",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la BAC s'est suicidé chez lui sans faire usage de son arme de service. Il était père de 4 enfants.",
       "section": "BAC D Lyon",
@@ -1069,6 +1109,7 @@
       "year": "2019",
       "month": "04",
       "day": "05",
+      "keywords": "",
       "house": "pm",
       "text": "Deux policiers municipaux, un homme et une femme, ont été retrouvés morts au sein de leurs locaux. Après enquête le féminicide suivi du suicide a été confirmé par les enquêteurs.",
       "section": "Poste de Police",
@@ -1108,6 +1149,7 @@
       "year": "2019",
       "month": "04",
       "day": "07",
+      "keywords": "",
       "house": "police",
       "text": "Une policière de la brigade de nuit se suicide dans un champ. Mère de 2 enfants elle laisse derrière elle une lettre.",
       "section": "Brigade de nuit de Conflans-Sainte-Honorine (Yvelines)",
@@ -1143,6 +1185,7 @@
       "year": "2019",
       "month": "04",
       "day": "07",
+      "keywords": "",
       "house": "police",
       "text": "Un policier d'Alès se suicide sans faire usage de son arme de service. Son corps a été retrouvé dans les bois à l'issue d'une longue battue",
       "section": "CSP Ales",
@@ -1186,6 +1229,7 @@
       "year": "2019",
       "month": "04",
       "day": "08",
+      "keywords": "",
       "house": "gendarmerie",
       "text": " Un gendarme de l’Essonne a mis fin à ses jours avec son arme de service à l'extérieur de la caserne. Il était père de deux enfants",
       "section": "BT Orsay",
@@ -1217,6 +1261,7 @@
       "year": "2019",
       "month": "04",
       "day": "14",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la DOPC (UTJDR) se suicide à son domicile avec son arme de service.",
       "section": "DOPC (UTJDR)",
@@ -1244,6 +1289,7 @@
       "year": "2019",
       "month": "04",
       "day": "14",
+      "keywords": "",
       "house": "pompier",
       "text": "Un lieutenant de la caserne de Saint-Paul, était porté disparu depuis dimanche après-midi. Le corps du pompier a été retrouvé par la suite à Marla.",
       "section": "SDIS 974",
@@ -1283,6 +1329,7 @@
       "year": "2019",
       "month": "04",
       "day": "16",
+      "keywords": "",
       "house": "police",
       "text": "Un policier du CRA se suicide à son domicile. Il était père d'un petit garçon.",
       "section": "Centre de Rétention Administrative (CRA)",
@@ -1318,6 +1365,7 @@
       "year": "2019",
       "month": "04",
       "day": "16",
+      "keywords": "",
       "house": "pm",
       "text": "Un policier municipal se suicide avec son arme de service dans la nuit sur son lieu de travail. Très fusionnel avec sa fille, il avait envisagé une réorientation professionnelle au Canada.",
       "section": "Poste de Police Béziers",
@@ -1349,6 +1397,7 @@
       "year": "2019",
       "month": "04",
       "day": "18",
+      "keywords": "",
       "house": "police",
       "text": "Une capitaine de police de la sûreté départementale se tire une balle dans le coeur avec son arme de service. Elle était mère de deux jeunes enfants",
       "section": "Sûreté Départementale",
@@ -1384,6 +1433,7 @@
       "year": "2019",
       "month": "04",
       "day": "18",
+      "keywords": "",
       "house": "police",
       "text": "Un jeune policier de la DOPC se suicide avec son arme de service. Il était chargé des actions de sensibilisation et préventions dans les écoles, les salons et autres événements.",
       "section": "DRSR (DOPC)",
@@ -1419,6 +1469,7 @@
       "year": "2019",
       "month": "04",
       "day": "30",
+      "keywords": "",
       "house": "gendarmerie",
       "text": "Un commandant de gendarmerie se suicide avec son arme de service, il était marié et père de famille de 4 enfants.",
       "section": "Caserne de l’Entre-Deux",
@@ -1458,6 +1509,7 @@
       "year": "2019",
       "month": "04",
       "day": "30",
+      "keywords": "",
       "house": "armee",
       "text": "Un militaire du 4e régiment de Chasseurs basé à Gap (Hautes-Alpes) s’est suicidé avec son arme de service. Il se serait éloigné de son groupe pour s’isoler et se donner la mort.",
       "section": "4e RCh",
@@ -1493,6 +1545,7 @@
       "year": "2019",
       "month": "05",
       "day": "01",
+      "keywords": "",
       "house": "pm",
       "text": "Un policier municipal de Paray-le-Monial s'est suicidé. Il était père de deux enfants et divorcé.",
       "section": "Poste de Police Paray-le-Monial",
@@ -1528,6 +1581,7 @@
       "year": "2019",
       "month": "05",
       "day": "06",
+      "keywords": "",
       "house": "gendarmerie",
       "text": "Un gendarme de l'escadron mobile de Aunay-sur-Odon s'est suicidé avec son arme de service. Il était père d'un enfant.",
       "section": "EGM 24/3",
@@ -1563,6 +1617,7 @@
       "year": "2019",
       "month": "05",
       "day": "07",
+      "keywords": "",
       "house": "armee",
       "text": "Lors d'une opération de libération d'otages au Burkina Faso, le maître Cédric de Pierrepont et le maître Alain Bertoncello ont perdu la vie lors du raid. Tout deux étaient des militaires hautement expérimentés et décorés.",
       "section": "Commando Hubert, Marine Nationale",
@@ -1602,6 +1657,7 @@
       "year": "2019",
       "month": "05",
       "day": "07",
+      "keywords": "",
       "house": "pm",
       "text": "Un policier municipal commissariat de Cholet s'est suicidé sans faire usage de son arme de service. Père de trois enfants il avait été désarmé par sa hiérarchie pour des problèmes familliaux.",
       "section": "Poste de Police Cholet",
@@ -1633,6 +1689,7 @@
       "year": "2019",
       "month": "05",
       "day": "13",
+      "keywords": "",
       "house": "gendarmerie",
       "text": "Un gendarme adjoint volontaire (GAV) des Hautes-Alpes s’est suicidé sans faire usage de son arme de service. Il était affecté au PSIG de Briançon.",
       "section": "PSIG Briançon (Hautes-Alpes)",
@@ -1664,6 +1721,7 @@
       "year": "2019",
       "month": "05",
       "day": "17",
+      "keywords": "",
       "house": "gendarmerie",
       "text": "Un officier de gendarmerie s’est suicidé dans son logement avec son arme de service. Marié et sans enfant il avait été promu capitaine en 2014 avant de prendre le commandement de la compagnie de Lons-le-Saunier en mars 2019.",
       "section": "CGD Jura",
@@ -1699,6 +1757,7 @@
       "year": "2019",
       "month": "05",
       "day": "21",
+      "keywords": "",
       "house": "armee",
       "text": "Un chasseur du 501e régiment de chars de combat de Moumelon-le-Grand dans la Marne est décédé des suites de ses blessures dans une OPEX au sud du Liban en février 2018.",
       "section": "501e RCC",
@@ -1742,6 +1801,7 @@
       "year": "2019",
       "month": "05",
       "day": "22",
+      "keywords": "",
       "house": "police",
       "text": "Un policier du Groupe d'Appui Judiciaire (GAJ) a mit fin à ses jours. Peu d'informations disponibles sur ce suicide.",
       "section": "GAJ",
@@ -1773,6 +1833,7 @@
       "year": "2019",
       "month": "05",
       "day": "26",
+      "keywords": "",
       "house": "police",
       "text": "Un policier affecté au commissariat du 7e arrondissement de Paris s’est donné la mort. Il était père de deux très jeunes enfants.",
       "section": "CSP paris 7e",
@@ -1808,6 +1869,7 @@
       "year": "2019",
       "month": "05",
       "day": "26",
+      "keywords": "",
       "house": "pm",
       "text": "Un policier municipal commissariat de Nice s'est suicidé. Peu d'informations disponibles sur ce suicide.",
       "section": "Poste de Police Nice",
@@ -1831,6 +1893,7 @@
       "year": "2019",
       "month": "06",
       "day": "01",
+      "keywords": "",
       "house": "police",
       "text": "Un officier de police du SDN 77 s'est suicide à son domicile. Son corps a été retrouvé près du CSP de la commune de Chessy.",
       "section": "SDN 77",
@@ -1866,6 +1929,7 @@
       "year": "2019",
       "month": "06",
       "day": "03",
+      "keywords": "",
       "house": "gendarmerie",
       "text": "Un adjudant du Peloté Motorisé de Fougère s’est suicidé avec son arme de service. Il était marié et père de 5 enfants.",
       "section": "EDSR (PMO Fougères)",
@@ -1891,12 +1955,53 @@
       ]
     },
     {
+      "cause": "deathOnDuty",
+      "count": 3,
+      "published": true,
+      "year": "2019",
+      "month": "06",
+      "day": "07",
+      "keywords": "",
+      "house": "misc",
+      "text": "En pleine tempête Miguel, trois sauveteurs de la SNSM des Sables d'Olonnes ont péri lors d'une intervention pour secourir un bateau de pêche. La navette des sauveteurs, le SNS 061 Jack Morisseau, a chaviré à 800m des côtes.",
+      "section": "SNSM",
+      "location": "Sables-d’Olonne (Vendée)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 46.494841,
+        "lon": -1.823473
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/tempete-miguel-un-bateau-des-sauveteurs-de-la-snsm-a-chavire-aux-sables-dolonne-au-moins-3-morts/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.sudouest.fr/2019/06/08/naufrage-d-un-bateau-de-secours-de-la-snsm-en-vendee-les-rescapes-racontent-6185859-4971.php",
+          "titre": "Sud Ouest"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/bretagne/finistere/brest/deces-trois-sauveteurs-snsm-dernier-accident-tragique-avait-eu-lieu-1986-aber-wrac-h-1682380.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.bfmtv.com/mediaplayer/video/le-president-de-la-snsm-evoque-un-traumatisme-il-n-y-avait-pas-eu-d-accident-grave-depuis-1986-1166868.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2535479-20190607-tempete-miguel-vendee-vedette-snsm-chavire-sept-marins-bord",
+          "titre": "20 minutes"
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
       "year": "2019",
       "month": "06",
       "day": "13",
+      "keywords": "",
       "house": "police",
       "text": "Un Gardien de la Paix du CSP de police du 19ème à Paris se suicide sur son lieu de villégiature près de Nîmes.",
       "section": "CSP Paris 19e",
@@ -1924,6 +2029,7 @@
       "year": "2019",
       "month": "06",
       "day": "16",
+      "keywords": "",
       "house": "pm",
       "text": "Un policier municipal qui venait de finir sa formation (FIA) a mis fin à ses jours. Peu d'informations disponibles sur ce suicide.",
       "section": "Poste de Police",
@@ -1955,6 +2061,7 @@
       "year": "2019",
       "month": "06",
       "day": "18",
+      "keywords": "",
       "house": "police",
       "text": "Un CRS de la compagnie de CRS 61 est décédé à son domicile à la suite d'une coupure accidentelle sur le bras.",
       "section": "CRS 61",
@@ -1990,6 +2097,7 @@
       "year": "2019",
       "month": "06",
       "day": "20",
+      "keywords": "",
       "house": "police",
       "text": "Un brigadier de police s’est suicidé à son domicile en utilisant son arme de service. Il était affecté au STJN (Service de traitement judiciaire de nuit) du 2ème district de la préfecture de police.",
       "section": "STJN",
@@ -2021,6 +2129,7 @@
       "year": "2019",
       "month": "06",
       "day": "21",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la BT centrale a mis fin à ses jours sans faire usage de son arme. Il était père de trois enfants.",
       "section": "CSP Toulouse (BT centrale)",
@@ -2056,6 +2165,7 @@
       "year": "2019",
       "month": "06",
       "day": "22",
+      "keywords": "",
       "house": "gendarmerie",
       "text": "Un gendarme décède accidentellement lors d'une épreuve sportive.",
       "section": "CoB Attichy",
@@ -2083,6 +2193,7 @@
       "year": "2019",
       "month": "06",
       "day": "25",
+      "keywords": "",
       "house": "gendarmerie",
       "text": "Un adjudant-chef du PSIG de Nîmes se suicide avec son arme de service. Adjoint du commandant du PSIG, il était marié et père de deux enfants.",
       "section": "PSIG",
@@ -2118,6 +2229,7 @@
       "year": "2019",
       "month": "06",
       "day": "27",
+      "keywords": "",
       "house": "armee",
       "text": "Un jeune soldat du 27ème Bataillon de Chasseurs Alpins d’Annecy se suicide avec une arme à feu durant un exercice au camp militaire de Caylus, dans le Tarn-et-Garonne.",
       "section": "27ème BCA",
@@ -2145,6 +2257,7 @@
       "year": "2019",
       "month": "06",
       "day": "28",
+      "keywords": "",
       "house": "police",
       "text": "Un capitaine de police âgé de 58 ans a mis fin à ses jours sans son arme de service à son domicile situé à Burbure. Il a été découvert par l'un de ses quatres enfants.",
       "section": "BSU Bruay-La-Buissière",
@@ -2176,6 +2289,7 @@
       "year": "2019",
       "month": "06",
       "day": "29",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la division sud de la DDSP des Bouches-du-Rhône a mis fin à ses jours sans faire usage de son arme de service. Il était père de deux enfants.",
       "section": "Division Sud / DDSP 13",
@@ -2215,6 +2329,7 @@
       "year": "2019",
       "month": "07",
       "day": "05",
+      "keywords": "",
       "house": "police",
       "text": "Une policière s'est suicide sans faire usage de son arme de service. B/C de la CSP de Bordeaux, elle laisse derrière elle une fillette de 12ans.",
       "section": "CSP Bordeaux",
@@ -2250,6 +2365,7 @@
       "year": "2019",
       "month": "07",
       "day": "06",
+      "keywords": "",
       "house": "pompier",
       "text": "Un sapeur-pompier du centre de secours de Béziers s’est donné la mort dans des circonstances qui restent encore inconnues.",
       "section": "SDIS 34",
@@ -2285,6 +2401,7 @@
       "year": "2019",
       "month": "07",
       "day": "08",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la CSP d'Annecy s'est suicide avec son arme de service.",
       "section": "BAC CSP",
@@ -2324,6 +2441,7 @@
       "year": "2019",
       "month": "07",
       "day": "12",
+      "keywords": "",
       "house": "gendarmerie",
       "text": "Un adjudant-chef de la BTA de Castelnau-du-Médoc (Gironde) a mis fin à ses jours sans faire usage de son arme de service. Il était marié et père de trois enfants.",
       "section": "BTA",
@@ -2363,6 +2481,7 @@
       "year": "2019",
       "month": "07",
       "day": "14",
+      "keywords": "",
       "house": "armee",
       "text": "Un caporal-chef réserviste s’est donné la mort avec son arme de service dans l’enceinte des Ecoles militaires de Saumur (EMS) en marge des cérémonies du 14-Juillet. Un problème familial  serait à l'origine du drame.",
       "section": "RICM (9e BIMa)",
@@ -2402,6 +2521,7 @@
       "year": "2019",
       "month": "07",
       "day": "17",
+      "keywords": "",
       "house": "armee",
       "text": "Trois militaires français sont décédés accidentellement dans le cadre de la mission « Harpie » de lutte contre l’orpaillage illégal en Guyane lors d'une opération « Wilau » dans une zone isolée en forêt du secteur « Saint-Jean/Abounami » dans la région de Maripasoula.",
       "section": "9e RIMa (Dét. 19e RG)",
@@ -2445,6 +2565,7 @@
       "year": "2019",
       "month": "07",
       "day": "16",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la CSP de Douai a mis fin à ses jours. Peu d'informations disponibles sur ce suicide.",
       "section": "CSP",
@@ -2476,6 +2597,7 @@
       "year": "2019",
       "month": "07",
       "day": "21",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la CRS 15 de Béthune a mis fin à ses jours avec son arme de service en se tirant une balle dans le coeur dans la chambre de la compagnie. Peu d'informations disponibles sur ce suicide.",
       "section": "CRS 15",
@@ -2515,6 +2637,7 @@
       "year": "2019",
       "month": "07",
       "day": "21",
+      "keywords": "",
       "house": "police",
       "text": "Un policier formateur à l'ENP de Nîmes s'est suicidé à son domicile sans faire usage de son arme de service. Son corps a été retrouvé en début de semaine à son domicile de Poulx.",
       "section": "ENP Nîmes",
@@ -2554,6 +2677,7 @@
       "year": "2019",
       "month": "07",
       "day": "23",
+      "keywords": "",
       "house": "police",
       "text": "Un policier du Groupe d’appui judiciaire (GAJ) s'est suicidé avec son arme de service à son domicile situé à La Buisse. Il était père de 3 enfants.",
       "section": "GAJ - DDSP 38",
@@ -2585,6 +2709,7 @@
       "year": "2019",
       "month": "07",
       "day": "24",
+      "keywords": "",
       "house": "police",
       "text": "Un commandant de la PJ de Versaille (Antenne Cergy) en faisant usage d'une arme à feu. Père de famille, il avait travaillé plus de 25ans au sein de la PJ et a laissé un courrier derrière lui.",
       "section": "PJ Versaille (Antenne Cergy)",
@@ -2628,6 +2753,7 @@
       "year": "2019",
       "month": "07",
       "day": "28",
+      "keywords": "",
       "house": "police",
       "text": "Un policier du commissariat d’Aulnay-sous-Bois (Seine-Saint-Denis) s'est suicidé avec son arme de service à son domicile. Récemment nommé brigadier de police il laisse un terrible mot derrière lui: \"Ne pas me ranimer\".",
       "section": "CSP",
@@ -2671,14 +2797,15 @@
       "year": "2019",
       "month": "07",
       "day": "31",
+      "keywords": "",
       "house": "police",
       "text": "Un policier de la CRS 9 de Saint-Jacques-de-la-Lande (Ille-et-Vilaine) s'est suicidé avec son arme de service. Il était marié et père de trois enfants.",
       "section": "CRS 9",
       "location": "Saint-Jacques-de-la-Lande (Ille-et-Vilaine)",
       "origin": "interieur",
       "gps": {
-        "lat": 48.927220,
-        "lon": 2.500290
+        "lat": 48.093528,
+        "lon": -1.694163
       },
       "sources": [
         {
@@ -2700,6 +2827,158 @@
         {
           "url": "https://twitter.com/association_mpc/status/1155440015297646592",
           "titre": "@association_mpc (Twitter)"
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "07",
+      "day": "31",
+      "keywords": "EGPX, accident, moto",
+      "house": "police",
+      "text": "Un élève Gardien de la Paix s'est tué sur la route de Lyon à Charvieu-Chavagneux en rentrant à son domicile. Il était père de deux enfants.",
+      "section": "ENP",
+      "location": "Charvieu-Chavagneux (Isère)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 45.752849,
+        "lon": 5.148249
+      },
+      "sources": [
+        {
+          "url": "https://www.ledauphine.com/isere-nord/2019/08/01/un-motard-se-tue-dans-un-rond-point",
+          "titre": "Le Dauphiné"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/isere/charvieu-chavagneux-isere-jeune-motard-perd-vie-sortie-route-1706166.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://twitter.com/association_mpc/status/1157289042431696897",
+          "titre": "@association_mpc (Twitter)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "08",
+      "day": "01",
+      "keywords": "",
+      "house": "police",
+      "text": "Un policier de la CRS 11 de Lambersart (Nord) s'est suicidé avec son arme de service. Il était marié et père de trois enfants.",
+      "section": "CRS 11",
+      "location": "Lambersart (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 50.645740,
+        "lon": 3.027687
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/nord-un-policier-affecte-a-la-crs-11-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.ledauphine.com/france-monde/2019/08/01/nord-un-policier-se-suicide-par-arme-a-feu",
+          "titre": "Le Dauphiné"
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/rennes-un-policier-se-suicide-avec-son-arme-de-service-1740574.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "https://www.estrepublicain.fr/faits-divers-justice/2019/08/01/nord-un-policier-se-suicide-par-arme-a-feu",
+          "titre": "Est Républicain"
+        },
+        {
+          "url": "https://www.leprogres.fr/faits-divers-justice/2019/08/01/nord-un-policier-se-suicide-par-arme-a-feu",
+          "titre": "Le progrès"
+        },
+        {
+          "url": "http://www.lefigaro.fr/un-crs-se-suicide-pres-de-lille-20190801",
+          "titre": "Le Figaro"
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "08",
+      "day": "02",
+      "keywords": "tracker S-2F",
+      "house": "secciv",
+      "text": "Un pilote de bombardier d'eau (type Tracker) s'est crashé près de Générac lors d'une intervention sur un incendie. Il a été tué sur le coup.",
+      "section": "Sécurité Civile",
+      "location": "Générac (Gard)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.728572,
+        "lon": 4.346717
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/incendies-dans-le-gard-un-avion-bombardier-deau-sest-crashe/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/incendies-dans-le-gard-crash-d-un-bombardier-d-eau-en-intervention-02-08-2019-8127936.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://www.bfmtv.com/mediaplayer/video/crash-d-un-bombardier-d-eau-dans-le-gard-le-pilote-de-l-avion-est-mort-1178824.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "https://www.midilibre.fr/2019/08/02/gard-un-accident-de-canadair-sur-lincendie-de-generac,8343971.php",
+          "titre": "Midi Libre"
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2576543-20190802-gard-crash-bombardier-eau-intervenant-incendie-generac",
+          "titre": "20 Minutes"
+        },
+        {
+          "url": "https://www.francetvinfo.fr/faits-divers/incendie/direct-incendies-dans-le-gard-un-avion-bombardier-d-eau-s-ecrase-pres-de-generac_3562137.html",
+          "titre": "France Info"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "08",
+      "day": "06",
+      "keywords": "",
+      "house": "pm",
+      "text": "Un policier municipal d’Orléans (Loiret) a mis fin à ses jours à son domicile de Neung-sur-Beuvron (Loir-et-Cher). Aux premières constatations, l'arme utilisé n'était pas son arme de service.",
+      "section": "Poste de police d’Orléans",
+      "location": "Neung-sur-Beuvron (Loir-et-Cher)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 47.535496,
+        "lon": 1.805878
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-policier-municipal-dorleans-sest-suicide-par-arme-a-feu/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://policeetrealites.com/2019/08/06/%F0%9F%87%AB%F0%9F%87%B7-suicide-dun-policier-municipal/",
+          "titre": "Police & Réalites"
+        },
+        {
+          "url": "https://www.lanouvellerepublique.fr/loir-et-cher/commune/neung-sur-beuvron/un-policier-municipal-d-orleans-met-fin-a-ses-jours-a-neung-sur-beuvron",
+          "titre": "La nouvelle République"
         }
       ]
     }
