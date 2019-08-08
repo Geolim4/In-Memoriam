@@ -191,7 +191,9 @@ export class InMemoriam {
   }
 
   private clearMarkerCluster(): this {
-    if (this._markerCluster) this._markerCluster.clearMarkers();
+    if (this._markerCluster) {
+      this._markerCluster.clearMarkers();
+    }
     return this;
   }
 
@@ -251,7 +253,9 @@ export class InMemoriam {
 
         const infoWindows = new google.maps.InfoWindow({ content: infoWindowsContent });
         google.maps.event.addListener(marker, 'click', () => {
-          if (this._currentInfoWindows) this._currentInfoWindows.close();
+          if (this._currentInfoWindows) {
+            this._currentInfoWindows.close();
+          }
           infoWindows.open(map, marker);
           this._currentInfoWindows = infoWindows;
         });
@@ -308,7 +312,9 @@ export class InMemoriam {
   }
 
   private clearMarkers(): InMemoriam {
-    for (let i = 0; i < this._markers.length; i++) this._markers[i].setMap(null);
+    for (let i = 0; i < this._markers.length; i++) {
+      this._markers[i].setMap(null);
+    }
     this._markers = [];
     return this;
   }
@@ -323,7 +329,9 @@ export class InMemoriam {
   }
 
   private clearHeatMap(): InMemoriam {
-    if (this._heatMap)this._heatMap.setMap(null);
+    if (this._heatMap) {
+      this._heatMap.setMap(null);
+    }
     return this;
   }
 
@@ -384,7 +392,9 @@ export class InMemoriam {
           map.setZoom(13);
           const infoWindows = new google.maps.InfoWindow({ content: 'Ma position approximative' });
           google.maps.event.addListener(marker, 'click', () => {
-            if (this._currentInfoWindows) this._currentInfoWindows.close();
+            if (this._currentInfoWindows) {
+              this._currentInfoWindows.close();
+            }
             infoWindows.open(map, marker);
             this._currentInfoWindows = infoWindows;
           });
