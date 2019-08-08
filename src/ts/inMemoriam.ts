@@ -7,6 +7,7 @@ import { Permalink } from './permalink';
 import { Config } from './config';
 import { Events } from './events';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
+import { GmapUtils } from './helper/gmapUtils.helper';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -336,47 +337,22 @@ export class InMemoriam {
   }
 
   private bindLocalizationButton(map: google.maps.Map): void {
+    const buttonOptions = {
+      ctrlChildId: 'localizationImg',
+      ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
+      defaultCtrlChildBgSize: '180px 18px',
+      imagePath: this.getConfig('imagePath')['localize'],
+      title: 'Voir autour de moi',
+    };
 
-    const controlDiv = <HTMLInputElement>document.createElement('div');
-    const firstChild = <HTMLInputElement>document.createElement('button');
+    GmapUtils.bindButton(map, () => {
+      const marker = new google.maps.Marker({
+        map,
+        animation: google.maps.Animation.DROP,
+        icon: new (google.maps as any).MarkerImage(this.getConfig('imagePath')['bluedot']),
+        position: { lat: 31.4181, lng: 73.0776 },
+      });
 
-    const marker = new google.maps.Marker({
-      map,
-      animation: google.maps.Animation.DROP,
-      icon: new (google.maps as any).MarkerImage('./assets/images/map/bluedot.png'),
-      position: { lat: 31.4181, lng: 73.0776 },
-    });
-
-    firstChild.style.backgroundColor = '#FFF';
-    firstChild.style.border = 'none';
-    firstChild.style.borderRadius = '2px';
-    firstChild.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
-    firstChild.style.cursor = 'pointer';
-    firstChild.style.height = '28px';
-    firstChild.style.marginTop = '10px';
-    firstChild.style.marginLeft = '10px';
-    firstChild.style.outline = 'none';
-    firstChild.style.padding = '0px';
-    firstChild.style.width = '28px';
-    firstChild.title = 'Voir autour de moi';
-    controlDiv.appendChild(firstChild);
-
-    const secondChild = document.createElement('div');
-    secondChild.id = 'localizationImg';
-    secondChild.style.backgroundImage = 'url(https://maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png)';
-    secondChild.style.backgroundPosition = '0px 0px';
-    secondChild.style.backgroundRepeat = 'no-repeat';
-    secondChild.style.backgroundSize = '180px 18px';
-    secondChild.style.height = '18px';
-    secondChild.style.margin = '5px';
-    secondChild.style.width = '18px';
-    firstChild.appendChild(secondChild);
-
-    google.maps.event.addListener(map, 'dragend', () => {
-      (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
-    });
-
-    firstChild.addEventListener('click', () => {
       let imgX = '0';
       const animationInterval = setInterval(() => {
         const localizationImgElmt = document.querySelector('#localizationImg') as HTMLInputElement;
@@ -389,7 +365,7 @@ export class InMemoriam {
           const latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
           marker.setPosition(latlng);
           map.setCenter(latlng);
-          map.setZoom(13);
+          map.setZoom(12);
           const infoWindows = new google.maps.InfoWindow({ content: 'Ma position approximative' });
           google.maps.event.addListener(marker, 'click', () => {
             if (this.currentInfoWindows) {
@@ -406,53 +382,31 @@ export class InMemoriam {
         clearInterval(animationInterval);
         (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
       }
-    });
+    }, buttonOptions);
 
-    map.controls[google.maps.ControlPosition.LEFT_TOP].push(controlDiv);
+    google.maps.event.addListener(map, 'dragend', () => {
+      (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
+    });
   }
 
   private bindRandomizationButton(map: google.maps.Map): void {
-    const controlDiv = <HTMLInputElement>document.createElement('div');
-    const firstChild = <HTMLInputElement>document.createElement('button');
+    const buttonOptions = {
+      ctrlChildId: 'ramdomImg',
+      ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
+      defaultCtrlChildBgPos: '-2px -2px',
+      defaultCtrlChildBgSize: '120%',
+      imagePath: this.getConfig('imagePath')['random'],
+      title: 'Marqueur aléatoire',
+    };
 
-    firstChild.style.backgroundColor = '#FFF';
-    firstChild.style.border = 'none';
-    firstChild.style.borderRadius = '2px';
-    firstChild.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
-    firstChild.style.cursor = 'pointer';
-    firstChild.style.height = '28px';
-    firstChild.style.marginTop = '10px';
-    firstChild.style.marginLeft = '10px';
-    firstChild.style.outline = 'none';
-    firstChild.style.padding = '0px';
-    firstChild.style.width = '28px';
-    firstChild.title = 'Voir autour de moi';
-    controlDiv.appendChild(firstChild);
-
-    const secondChild = document.createElement('div');
-    secondChild.id = 'randomizationImg';
-    secondChild.style.backgroundImage = 'url(./assets/images/map/random.png)';
-    secondChild.style.backgroundPosition = '-2px -2px';
-    secondChild.style.backgroundRepeat = 'no-repeat';
-    secondChild.style.backgroundSize = '120%';
-    secondChild.style.height = '18px';
-    secondChild.style.margin = '5px';
-    secondChild.style.width = '18px';
-    firstChild.appendChild(secondChild);
-
-    firstChild.addEventListener('click', () => {
+    GmapUtils.bindButton(map, () => {
       const randomIndex = Math.floor(Math.random() * this.markers.length);
+      const randomMarker = this.markers[randomIndex];
 
-      this.markers.map((marker: google.maps.Marker, index) => {
-        if (randomIndex === index) {
-          map.setCenter(marker.getPosition());
-          map.setZoom(13);
-          google.maps.event.trigger(marker, 'click');
-        }
-      });
-    });
-
-    map.controls[google.maps.ControlPosition.LEFT_TOP].push(controlDiv);
+      map.setCenter(randomMarker.getPosition());
+      map.setZoom(13);
+      google.maps.event.trigger(randomMarker, 'click');
+    }, buttonOptions);
   }
 
   private getDefinitions(response: Bloodbath): Object {
