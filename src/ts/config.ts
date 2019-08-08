@@ -18,7 +18,9 @@ export class Config {
   public init(onceInitialized?: Function): void {
     qwest.get(this._configPath).then((_xhr, response: Object) => {
       this._config = response;
-      if (onceInitialized) onceInitialized();
+      if (onceInitialized) {
+        onceInitialized();
+      }
     });
   }
 
