@@ -2899,6 +2899,38 @@
           "titre": "La nouvelle République"
         }
       ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "08",
+      "day": "07",
+      "keywords": "Dervaux, Gambetta, STJA",
+      "house": "police",
+      "text": "Un policier affecté à la Direction générale de la sécurité intérieure s'est tué dans un accident en moto en quittant son travail. Il était pacsé et en poste à la DGSI depuis plusieurs années.",
+      "section": "DGSI",
+      "location": "Asnières-sur-Seine (Hauts-de-Seine)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.909220,
+        "lon": 2.293562
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/hauts-de-seine-un-policier-se-tue-dans-un-accident-de-moto-en-sortant-de-son-travail/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actupenit.com/2019/08/08/asnieres-sur-seine-un-policier-de-32-ans-se-tue-a-moto-en-repartant-de-son-travail/",
+          "titre": "Actupenit"
+        },
+        {
+          "url": "https://twitter.com/association_mpc",
+          "titre": "@association_mpc (Twitter)"
+        }
+      ]
     }
   ]
 }
