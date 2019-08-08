@@ -2,7 +2,7 @@
 /// <reference types="@types/markerclustererplus" />
 /// <reference types="@types/qwest" />
 
-import { Bloodbath, Filters } from './models';
+import { Bloodbath, Definition, Filters } from './models';
 import { Permalink } from './permalink';
 import { Config } from './config';
 import { Events } from './events';
@@ -17,6 +17,7 @@ import { GmapUtils } from './helper/gmapUtils.helper';
 export class InMemoriam {
 
   private _configObject: Config;
+  private _definitions: Definition[];
   private _currentInfoWindows: google.maps.InfoWindow;
   private _heatMap: google.maps.visualization.HeatmapLayer;
   private _infoWindows: google.maps.InfoWindow[];
@@ -70,6 +71,10 @@ export class InMemoriam {
 
   private getConfig(setting: string): any {
     return this._configObject.getConfig(setting);
+  }
+
+  private getConfigDefinitions(): Definition[] {
+    return this._configObject.getDefinitions();
   }
 
   private filteredResponse(response: Bloodbath, filters: Filters): Bloodbath {
@@ -400,8 +405,8 @@ export class InMemoriam {
     };
 
     GmapUtils.bindButton(map, () => {
-      const randomIndex = Math.floor(Math.random() * this.markers.length);
-      const randomMarker = this.markers[randomIndex];
+      const randomIndex = Math.floor(Math.random() * this._markers.length);
+      const randomMarker = this._markers[randomIndex];
 
       map.setCenter(randomMarker.getPosition());
       map.setZoom(13);
@@ -411,26 +416,25 @@ export class InMemoriam {
 
   private getDefinitions(response: Bloodbath): Object {
     const definitions = {};
-    for (const fKey in response.definitions) {
-      if (response.definitions.hasOwnProperty(fKey)) {
-        for (const dKey in response.deaths) {
-          if (response.deaths.hasOwnProperty(dKey)) {
-            const death = response.deaths[dKey];
-            if (!definitions[fKey]) {
-              definitions[fKey] = {};
-            }
-            if (!definitions[fKey][death[fKey]]) {
-              definitions[fKey][death[fKey]] = 0;
-            }
-            if (Number.isInteger(death.count) && death.count > 1) {
-              definitions[fKey][death[fKey]] += death.count;
-            } else {
-              definitions[fKey][death[fKey]]++;
-            }
+    for (const fKey in this.getConfigDefinitions()) {
+      for (const dKey in response.deaths) {
+        if (response.deaths.hasOwnProperty(dKey)) {
+          const death = response.deaths[dKey];
+          if (!definitions[fKey]) {
+            definitions[fKey] = {};
+          }
+          if (!definitions[fKey][death[fKey]]) {
+            definitions[fKey][death[fKey]] = 0;
+          }
+          if (Number.isInteger(death.count) && death.count > 1) {
+            definitions[fKey][death[fKey]] += death.count;
+          } else {
+            definitions[fKey][death[fKey]]++;
           }
         }
       }
     }
+
     return definitions;
   }
 
@@ -438,18 +442,22 @@ export class InMemoriam {
     const definitionTexts = [];
     if (response) {
       const definitions = this.getDefinitions(response);
+      const configDefinitions = this.getConfigDefinitions();
       for (const [fieldKey, field] of Object.entries(definitions)) {
         let definitionText = '';
         for (const [fieldValue, count] of Object.entries(field)) {
           const isPlural = count > 1;
-          if (response.definitions[fieldKey][fieldValue]) {
-            const text = response.definitions[fieldKey][fieldValue][isPlural ? 'plural' : 'singular'];
+          if (configDefinitions[fieldKey][fieldValue]) {
+            const text = configDefinitions[fieldKey][fieldValue][isPlural ? 'plural' : 'singular'];
+            definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace(`%${fieldKey}%`, fieldValue);
+          } else if (configDefinitions[fieldKey]['#any']) {
+            const text = configDefinitions[fieldKey]['#any'][isPlural ? 'plural' : 'singular'];
             definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace(`%${fieldKey}%`, fieldValue);
           } else {
             definitionText += (definitionText ? ', ' : '') + (`[${fieldValue}] (${count})`);
           }
         }
-        definitionTexts.push(response.definitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
+        definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
       }
     } else {
       definitionTexts.push('Aucun r&#233;sultat trouv&#233;');
