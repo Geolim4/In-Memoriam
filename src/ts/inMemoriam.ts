@@ -2,11 +2,12 @@
 /// <reference types="@types/markerclustererplus" />
 /// <reference types="@types/qwest" />
 
-import { Bloodbath, Filters } from './models';
+import { Bloodbath, Definition, Filters } from './models';
 import { Permalink } from './permalink';
 import { Config } from './config';
 import { Events } from './events';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
+import { GmapUtils } from './helper/gmapUtils.helper';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -16,6 +17,7 @@ import { StringUtilsHelper } from './helper/stringUtils.helper';
 export class InMemoriam {
 
   private _configObject: Config;
+  private _definitions: Definition[];
   private _currentInfoWindows: google.maps.InfoWindow;
   private _heatMap: google.maps.visualization.HeatmapLayer;
   private _infoWindows: google.maps.InfoWindow[];
@@ -69,6 +71,10 @@ export class InMemoriam {
 
   private getConfig(setting: string): any {
     return this._configObject.getConfig(setting);
+  }
+
+  private getConfigDefinitions(): Definition[] {
+    return this._configObject.getDefinitions();
   }
 
   private filteredResponse(response: Bloodbath, filters: Filters): Bloodbath {
@@ -336,47 +342,22 @@ export class InMemoriam {
   }
 
   private bindLocalizationButton(map: google.maps.Map): void {
+    const buttonOptions = {
+      ctrlChildId: 'localizationImg',
+      ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
+      defaultCtrlChildBgSize: '180px 18px',
+      imagePath: this.getConfig('imagePath')['localize'],
+      title: 'Voir autour de moi',
+    };
 
-    const controlDiv = <HTMLInputElement>document.createElement('div');
-    const firstChild = <HTMLInputElement>document.createElement('button');
+    GmapUtils.bindButton(map, () => {
+      const marker = new google.maps.Marker({
+        map,
+        animation: google.maps.Animation.DROP,
+        icon: new (google.maps as any).MarkerImage(this.getConfig('imagePath')['bluedot']),
+        position: { lat: 31.4181, lng: 73.0776 },
+      });
 
-    const marker = new google.maps.Marker({
-      map,
-      animation: google.maps.Animation.DROP,
-      icon: new (google.maps as any).MarkerImage('./assets/images/map/bluedot.png'),
-      position: { lat: 31.4181, lng: 73.0776 },
-    });
-
-    firstChild.style.backgroundColor = '#FFF';
-    firstChild.style.border = 'none';
-    firstChild.style.borderRadius = '2px';
-    firstChild.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
-    firstChild.style.cursor = 'pointer';
-    firstChild.style.height = '28px';
-    firstChild.style.marginTop = '10px';
-    firstChild.style.marginLeft = '10px';
-    firstChild.style.outline = 'none';
-    firstChild.style.padding = '0px';
-    firstChild.style.width = '28px';
-    firstChild.title = 'Voir autour de moi';
-    controlDiv.appendChild(firstChild);
-
-    const secondChild = document.createElement('div');
-    secondChild.id = 'localizationImg';
-    secondChild.style.backgroundImage = 'url(https://maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png)';
-    secondChild.style.backgroundPosition = '0px 0px';
-    secondChild.style.backgroundRepeat = 'no-repeat';
-    secondChild.style.backgroundSize = '180px 18px';
-    secondChild.style.height = '18px';
-    secondChild.style.margin = '5px';
-    secondChild.style.width = '18px';
-    firstChild.appendChild(secondChild);
-
-    google.maps.event.addListener(map, 'dragend', () => {
-      (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
-    });
-
-    firstChild.addEventListener('click', () => {
       let imgX = '0';
       const animationInterval = setInterval(() => {
         const localizationImgElmt = document.querySelector('#localizationImg') as HTMLInputElement;
@@ -389,7 +370,7 @@ export class InMemoriam {
           const latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
           marker.setPosition(latlng);
           map.setCenter(latlng);
-          map.setZoom(13);
+          map.setZoom(12);
           const infoWindows = new google.maps.InfoWindow({ content: 'Ma position approximative' });
           google.maps.event.addListener(marker, 'click', () => {
             if (this._currentInfoWindows) {
@@ -406,77 +387,54 @@ export class InMemoriam {
         clearInterval(animationInterval);
         (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
       }
-    });
+    }, buttonOptions);
 
-    map.controls[google.maps.ControlPosition.LEFT_TOP].push(controlDiv);
+    google.maps.event.addListener(map, 'dragend', () => {
+      (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
+    });
   }
 
   private bindRandomizationButton(map: google.maps.Map): void {
-    const controlDiv = <HTMLInputElement>document.createElement('div');
-    const firstChild = <HTMLInputElement>document.createElement('button');
+    const buttonOptions = {
+      ctrlChildId: 'ramdomImg',
+      ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
+      defaultCtrlChildBgPos: '-2px -2px',
+      defaultCtrlChildBgSize: '120%',
+      imagePath: this.getConfig('imagePath')['random'],
+      title: 'Marqueur aléatoire',
+    };
 
-    firstChild.style.backgroundColor = '#FFF';
-    firstChild.style.border = 'none';
-    firstChild.style.borderRadius = '2px';
-    firstChild.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
-    firstChild.style.cursor = 'pointer';
-    firstChild.style.height = '28px';
-    firstChild.style.marginTop = '10px';
-    firstChild.style.marginLeft = '10px';
-    firstChild.style.outline = 'none';
-    firstChild.style.padding = '0px';
-    firstChild.style.width = '28px';
-    firstChild.title = 'Voir autour de moi';
-    controlDiv.appendChild(firstChild);
+    GmapUtils.bindButton(map, () => {
+      const randomIndex = Math.floor(Math.random() * this._markers.length);
+      const randomMarker = this._markers[randomIndex];
 
-    const secondChild = document.createElement('div');
-    secondChild.id = 'randomizationImg';
-    secondChild.style.backgroundImage = 'url(./assets/images/map/random.png)';
-    secondChild.style.backgroundPosition = '-2px -2px';
-    secondChild.style.backgroundRepeat = 'no-repeat';
-    secondChild.style.backgroundSize = '120%';
-    secondChild.style.height = '18px';
-    secondChild.style.margin = '5px';
-    secondChild.style.width = '18px';
-    firstChild.appendChild(secondChild);
-
-    firstChild.addEventListener('click', () => {
-      const randomIndex = Math.floor(Math.random() * this.markers.length);
-
-      this.markers.map((marker: google.maps.Marker, index) => {
-        if (randomIndex === index) {
-          map.setCenter(marker.getPosition());
-          map.setZoom(13);
-          google.maps.event.trigger(marker, 'click');
-        }
-      });
-    });
-
-    map.controls[google.maps.ControlPosition.LEFT_TOP].push(controlDiv);
+      map.setCenter(randomMarker.getPosition());
+      map.setZoom(13);
+      google.maps.event.trigger(randomMarker, 'click');
+    }, buttonOptions);
   }
 
   private getDefinitions(response: Bloodbath): Object {
     const definitions = {};
-    for (const fKey in response.definitions) {
-      if (response.definitions.hasOwnProperty(fKey)) {
-        for (const dKey in response.deaths) {
-          if (response.deaths.hasOwnProperty(dKey)) {
-            const death = response.deaths[dKey];
-            if (!definitions[fKey]) {
-              definitions[fKey] = {};
-            }
-            if (!definitions[fKey][death[fKey]]) {
-              definitions[fKey][death[fKey]] = 0;
-            }
-            if (Number.isInteger(death.count) && death.count > 1) {
-              definitions[fKey][death[fKey]] += death.count;
-            } else {
-              definitions[fKey][death[fKey]]++;
-            }
+    for (const fKey in this.getConfigDefinitions()) {
+      for (const dKey in response.deaths) {
+        if (response.deaths.hasOwnProperty(dKey)) {
+          const death = response.deaths[dKey];
+          if (!definitions[fKey]) {
+            definitions[fKey] = {};
+          }
+          if (!definitions[fKey][death[fKey]]) {
+            definitions[fKey][death[fKey]] = 0;
+          }
+          if (Number.isInteger(death.count) && death.count > 1) {
+            definitions[fKey][death[fKey]] += death.count;
+          } else {
+            definitions[fKey][death[fKey]]++;
           }
         }
       }
     }
+
     return definitions;
   }
 
@@ -484,18 +442,22 @@ export class InMemoriam {
     const definitionTexts = [];
     if (response) {
       const definitions = this.getDefinitions(response);
+      const configDefinitions = this.getConfigDefinitions();
       for (const [fieldKey, field] of Object.entries(definitions)) {
         let definitionText = '';
         for (const [fieldValue, count] of Object.entries(field)) {
           const isPlural = count > 1;
-          if (response.definitions[fieldKey][fieldValue]) {
-            const text = response.definitions[fieldKey][fieldValue][isPlural ? 'plural' : 'singular'];
+          if (configDefinitions[fieldKey][fieldValue]) {
+            const text = configDefinitions[fieldKey][fieldValue][isPlural ? 'plural' : 'singular'];
+            definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace(`%${fieldKey}%`, fieldValue);
+          } else if (configDefinitions[fieldKey]['#any']) {
+            const text = configDefinitions[fieldKey]['#any'][isPlural ? 'plural' : 'singular'];
             definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace(`%${fieldKey}%`, fieldValue);
           } else {
             definitionText += (definitionText ? ', ' : '') + (`[${fieldValue}] (${count})`);
           }
         }
-        definitionTexts.push(response.definitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
+        definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
       }
     } else {
       definitionTexts.push('Aucun r&#233;sultat trouv&#233;');
