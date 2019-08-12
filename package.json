@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@google/markerclusterer": "^1.0.3",
+    "qwest": "^4.5.0",
     "typescript": "^3.5.3"
   },
   "devDependencies": {

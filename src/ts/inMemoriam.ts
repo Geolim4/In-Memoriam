@@ -3,6 +3,7 @@
 /// <reference types="@types/qwest" />
 
 import * as MarkerClusterer from '@google/markerclusterer';
+import * as qwest from 'qwest';
 
 import { Bloodbath, Definition, Filters } from './models';
 import { Config } from './config';
