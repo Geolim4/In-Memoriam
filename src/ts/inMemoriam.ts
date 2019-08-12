@@ -2,12 +2,14 @@
 /// <reference types="@types/markerclustererplus" />
 /// <reference types="@types/qwest" />
 
+import * as MarkerClusterer from '@google/markerclusterer';
+
 import { Bloodbath, Definition, Filters } from './models';
-import { Permalink } from './permalink';
 import { Config } from './config';
 import { Events } from './events';
-import { StringUtilsHelper } from './helper/stringUtils.helper';
 import { GmapUtils } from './helper/gmapUtils.helper';
+import { Permalink } from './permalink';
+import { StringUtilsHelper } from './helper/stringUtils.helper';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -17,7 +19,6 @@ import { GmapUtils } from './helper/gmapUtils.helper';
 export class InMemoriam {
 
   private _configObject: Config;
-  private _definitions: Definition[];
   private _currentInfoWindows: google.maps.InfoWindow;
   private _heatMap: google.maps.visualization.HeatmapLayer;
   private _infoWindows: google.maps.InfoWindow[];

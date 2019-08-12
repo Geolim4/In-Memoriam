@@ -1,5 +1,4 @@
 /// <reference types="@types/googlemaps" />
-/// <reference types="@types/markerclustererplus" />
 /// <reference types="@types/qwest" />
 
 /**
@@ -8,7 +7,7 @@
  * @licence GPL-2.0
  */
 export class GmapUtils {
-  public static bindButton(map: google.maps.Map, onclickCallback: VoidFunction, opts: {imagePath: string,  ctrlPosition: number, title?: string, ctrlChildId?: string, defaultCtrlChildBgPos?: string, defaultCtrlChildBgSize?: string}): HTMLInputElement {
+  public static bindButton(map: google.maps.Map, onclickCallback: VoidFunction, opts: { imagePath: string, ctrlPosition: number, title?: string, ctrlChildId?: string, defaultCtrlChildBgPos?: string, defaultCtrlChildBgSize?: string }): HTMLInputElement {
     const controlDiv = <HTMLInputElement>document.createElement('div');
     const firstChild = <HTMLInputElement>document.createElement('button');
     const secondChild = document.createElement('div');

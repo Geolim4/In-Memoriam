@@ -1,5 +1,4 @@
 /// <reference types="@types/googlemaps" />
-/// <reference types="@types/markerclustererplus" />
 /// <reference types="@types/qwest" />
 
 /**
