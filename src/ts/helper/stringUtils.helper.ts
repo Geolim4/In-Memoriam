@@ -1,5 +1,4 @@
 /// <reference types="@types/googlemaps" />
-/// <reference types="@types/qwest" />
 
 /**
  * @author Georges.L <contact@geolim4.com>
