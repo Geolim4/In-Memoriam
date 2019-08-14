@@ -1,5 +1,6 @@
 {
   "settings": {
+    "searchMinLength": 3,
     "imagePath": {
       "random": "./assets/images/map/random.png",
       "localize": "https://maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png",

@@ -1232,11 +1232,11 @@
         },
         {
           "url": "https://www.zinfos974.com/Disparu-a-Mafate-le-lieutenant-Daniel-Hoareau-retrouve-mort_a139490.html",
-          "titre": "Zinfos974,"
+          "titre": "Zinfos974"
         },
         {
           "url": "https://www.clicanoo.re/Faits-Divers/Article/2019/04/16/Recherche-depuis-dimanche-Le-corps-du-pompier-retrouve-Marla-par",
-          "titre": "Clicanoo,"
+          "titre": "Clicanoo"
         }
       ]
     },
@@ -1441,6 +1441,10 @@
         {
           "url": "http://www.opex360.com/2019/04/30/un-militaire-du-4e-regiment-de-chasseurs-sest-donne-la-mort-avec-son-arme-de-service/",
           "titre": "Opex360"
+        },
+        {
+          "url": "https://actu17.fr/haute-alpes-un-militaire-sest-donne-la-mort-avec-son-arme-de-service/",
+          "titre": "Actu17"
         },
         {
           "url": "https://www.ouest-france.fr/provence-alpes-cote-dazur/hautes-alpes/hautes-alpes-un-militaire-met-fin-ses-jours-avec-son-arme-de-service-6330511",
@@ -2929,6 +2933,54 @@
         {
           "url": "https://twitter.com/association_mpc",
           "titre": "@association_mpc (Twitter)"
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "08",
+      "day": "14",
+      "keywords": "Sébastien Berger, Edgard Petit",
+      "house": "gendarmerie",
+      "text": "Un gendarme décède dans un accident de la circulation en se rendant sur une opération judiciaire planifiée près de Noyon. Père de deux enfants il était en poste au PSIG de Compiègne (Oise).",
+      "section": "PSIG Compiègne",
+      "location": "Clairoix (Oise)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  49.447426,
+        "lon": 2.821140
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/oise-un-gendarme-du-psig-de-compiegne-tue-dans-un-accident-en-se-rendant-sur-une-intervention/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://lessor.org/a-la-une/un-gendarme-de-loise-decede-dans-un-accident-de-la-circulation/",
+          "titre": "L'essor"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/oise/compiegne/gendarme-compiegne-decede-accident-lors-intervention-1710460.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2583163-20190814-picardie-gendarme-decede-accident-route-lors-intervention",
+          "titre": "20 minutes"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/oise/compiegne/gendarme-compiegne-decede-accident-lors-intervention-1710460.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.europe1.fr/societe/oise-deces-accidentel-dun-gendarme-3914209",
+          "titre": "France Info"
+        },
+        {
+          "url": "http://www.leparisien.fr/oise-60/un-gendarme-de-l-oise-decede-dans-un-accident-de-la-route-14-08-2019-8133384.php",
+          "titre": "Le Parisien"
         }
       ]
     }

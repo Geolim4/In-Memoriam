@@ -1,6 +1,4 @@
 /// <reference types="@types/googlemaps" />
-/// <reference types="@types/markerclustererplus" />
-/// <reference types="@types/qwest" />
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -14,5 +12,14 @@ export class StringUtilsHelper {
 
   public static containsString(haystack: string, needle: string): boolean {
     return StringUtilsHelper.normalizeString(haystack).includes(needle);
+  }
+
+  public static arrayContainsString(needle: string, haystack: string[]): boolean {
+    for (const str of haystack) {
+      if (StringUtilsHelper.containsString(needle, str)) {
+        return true;
+      }
+    }
+    return false;
   }
 }

@@ -1,5 +1,7 @@
 /// <reference types="@types/qwest" />
 
+import * as qwest from 'qwest';
+
 import { Definition } from './models';
 
 /**

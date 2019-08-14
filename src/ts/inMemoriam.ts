@@ -2,12 +2,15 @@
 /// <reference types="@types/markerclustererplus" />
 /// <reference types="@types/qwest" />
 
+import * as MarkerClusterer from '@google/markerclusterer';
+import * as qwest from 'qwest';
+
 import { Bloodbath, Definition, Filters } from './models';
-import { Permalink } from './permalink';
 import { Config } from './config';
 import { Events } from './events';
-import { StringUtilsHelper } from './helper/stringUtils.helper';
 import { GmapUtils } from './helper/gmapUtils.helper';
+import { Permalink } from './permalink';
+import { StringUtilsHelper } from './helper/stringUtils.helper';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -17,7 +20,6 @@ import { GmapUtils } from './helper/gmapUtils.helper';
 export class InMemoriam {
 
   private _configObject: Config;
-  private _definitions: Definition[];
   private _currentInfoWindows: google.maps.InfoWindow;
   private _heatMap: google.maps.visualization.HeatmapLayer;
   private _infoWindows: google.maps.InfoWindow[];
@@ -83,16 +85,24 @@ export class InMemoriam {
     for (const [fKey, filter] of Object.entries(filters)) {
       if (filters.hasOwnProperty(fKey)) {
         const fieldName = fKey;
-        const safeFilter = StringUtilsHelper.normalizeString(filter);
+        const safeFilter = <string> StringUtilsHelper.normalizeString(filter);
+        const safeFilterBlocks = <string[]> StringUtilsHelper.normalizeString(filter).split(' ').map((str) => str.trim());
+        const safeFilterSplited = <string[]> [];
+
+        for (const block of safeFilterBlocks) {
+          if (block.length >= this.getConfig('searchMinLength')) {
+            safeFilterSplited.push(block);
+          }
+        }
 
         if (filter) {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
-            if (fieldName === 'search' && filter.length >= 3) {
+            if (fieldName === 'search' && filter.length >= this.getConfig('searchMinLength')) {
               if (!StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['text'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['section'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['location'], safeFilter)
-                && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['keywords'], safeFilter)
+                && !StringUtilsHelper.arrayContainsString(filteredResponse.deaths[dKey]['keywords'], safeFilterSplited)
               ) {
                 filteredResponse.deaths.splice(dKey, 1);
               }
