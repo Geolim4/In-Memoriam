@@ -10,6 +10,7 @@ export interface Death {
   location: string;
   section: string;
   origin: string;
+  keywords: string;
   gps: { lat: number, lon: number };
   sources: { url: string, titre: string }[];
 }

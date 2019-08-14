@@ -85,16 +85,30 @@ export class InMemoriam {
     for (const [fKey, filter] of Object.entries(filters)) {
       if (filters.hasOwnProperty(fKey)) {
         const fieldName = fKey;
-        const safeFilter = StringUtilsHelper.normalizeString(filter);
+        const safeFilter = <string> StringUtilsHelper.normalizeString(filter);
+        const safeFilterBlocks = <string[]> StringUtilsHelper.normalizeString(filter).split(' ').map((str) => str.trim());
+        const safeFilterSplited = <string[]> [];
+
+        for (const block of safeFilterBlocks) {
+          if (block.length >= this.getConfig('searchMinLength')) {
+            safeFilterSplited.push(block);
+          }
+        }
+
+        if (fKey === 'search') {
+          console.log(this.getConfig('searchMinLength'));
+          console.log(safeFilterBlocks);
+          console.log(safeFilterSplited);
+        }
 
         if (filter) {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
-            if (fieldName === 'search' && filter.length >= 3) {
+            if (fieldName === 'search' && filter.length >= this.getConfig('searchMinLength')) {
               if (!StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['text'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['section'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['location'], safeFilter)
-                && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['keywords'], safeFilter)
+                && !StringUtilsHelper.arrayContainsString(filteredResponse.deaths[dKey]['keywords'], safeFilterSplited)
               ) {
                 filteredResponse.deaths.splice(dKey, 1);
               }
