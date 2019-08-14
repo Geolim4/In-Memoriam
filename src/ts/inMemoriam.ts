@@ -95,12 +95,6 @@ export class InMemoriam {
           }
         }
 
-        if (fKey === 'search') {
-          console.log(this.getConfig('searchMinLength'));
-          console.log(safeFilterBlocks);
-          console.log(safeFilterSplited);
-        }
-
         if (filter) {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
