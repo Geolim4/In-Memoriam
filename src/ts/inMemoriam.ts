@@ -323,6 +323,14 @@ export class InMemoriam {
 
   }
 
+  private setupSkeleton(): void {
+    const searchInput =  document.querySelector('#search');
+    const searchMinLength = this.getConfig('searchMinLength');
+
+    searchInput.setAttribute('minlength', searchMinLength);
+    searchInput.setAttribute('placeholder', searchInput.getAttribute('placeholder').replace('%d', searchMinLength));
+  }
+
   private clearMapObjects(): void {
     this.clearMarkers().clearInfoWindows().clearHeatMap().clearMarkerCluster();
   }
