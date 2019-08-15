@@ -66,14 +66,14 @@
       }
     },
     "origin": {
-      "#label": "<strong>Territorialité</strong>: %origin%",
+      "#label": "<strong>Théatre d'action</strong>: %origin%",
       "interieur": {
         "singular": "<span class=\"label label-danger\">%d</span> disparition sur le territoire national",
         "plural": "<span class=\"label label-danger\">%d</span> disparitions en territoire national"
       },
       "domtom": {
-        "singular": "<span class=\"label label-danger\">%d</span> disparition en outre-mer",
-        "plural": "<span class=\"label label-danger\"> %d</span> disparitions en outre-mer"
+        "singular": "<span class=\"label label-danger\">%d</span> disparition en DOM-TOM",
+        "plural": "<span class=\"label label-danger\"> %d</span> disparitions en DOM-TOM"
       },
       "opex": {
         "singular": "<span class=\"label label-danger\">%d</span> disparition en opération extérieure (OPEX)",
