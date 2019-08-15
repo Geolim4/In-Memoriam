@@ -51,12 +51,12 @@ export class InMemoriam {
   public run(): void {
 
     const options = {
-      center: new google.maps.LatLng(this.getConfig('defaultLat'), this.getConfig('defaultLon')),
+      center: new google.maps.LatLng(this._configObject.config['defaultLat'], this._configObject.config['defaultLon']),
       mapTypeControl: false,
       mapTypeId: google.maps.MapTypeId.HYBRID,
-      maxZoom: this.getConfig('maxZoom'),
+      maxZoom: this._configObject.config['maxZoom'],
       streetViewControl: false,
-      zoom: this.getConfig('defaultZoom'),
+      zoom: this._configObject.config['defaultZoom'],
     };
 
     const formElement = <HTMLInputElement>document.getElementById('form-filters');
@@ -71,12 +71,8 @@ export class InMemoriam {
     this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
   }
 
-  private getConfig(setting: string): any {
-    return this._configObject.getConfig(setting);
-  }
-
   private getConfigDefinitions(): Definition[] {
-    return this._configObject.getDefinitions();
+    return this._configObject.definitions;
   }
 
   private filteredResponse(response: Bloodbath, filters: Filters): Bloodbath {
@@ -90,7 +86,7 @@ export class InMemoriam {
         const safeFilterSplited = <string[]> [];
 
         for (const block of safeFilterBlocks) {
-          if (block.length >= this.getConfig('searchMinLength')) {
+          if (block.length >= this._configObject.config['searchMinLength']) {
             safeFilterSplited.push(block);
           }
         }
@@ -98,7 +94,7 @@ export class InMemoriam {
         if (filter) {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
-            if (fieldName === 'search' && filter.length >= this.getConfig('searchMinLength')) {
+            if (fieldName === 'search' && filter.length >= this._configObject.config['searchMinLength']) {
               if (!StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['text'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['section'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['location'], safeFilter)
@@ -308,10 +304,9 @@ export class InMemoriam {
       }
 
       if (heatMapData.length) {
-
         this._heatMap = new google.maps.visualization.HeatmapLayer({
           ...{ data: heatMapData },
-          ... this.getConfig('heatmapOptions'),
+          ... this._configObject.config['heatmapOptions'],
         });
         this._heatMap.setMap(map);
       }
@@ -325,7 +320,7 @@ export class InMemoriam {
 
   private setupSkeleton(): void {
     const searchInput =  document.querySelector('#search');
-    const searchMinLength = this.getConfig('searchMinLength');
+    const searchMinLength = this._configObject.config['searchMinLength'];
 
     searchInput.setAttribute('minlength', searchMinLength);
     searchInput.setAttribute('placeholder', searchInput.getAttribute('placeholder').replace('%d', searchMinLength));
@@ -364,7 +359,7 @@ export class InMemoriam {
       ctrlChildId: 'localizationImg',
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgSize: '180px 18px',
-      imagePath: this.getConfig('imagePath')['localize'],
+      imagePath: this._configObject.config['imagePath']['localize'],
       title: 'Voir autour de moi',
     };
 
@@ -372,7 +367,7 @@ export class InMemoriam {
       const marker = new google.maps.Marker({
         map,
         animation: google.maps.Animation.DROP,
-        icon: new (google.maps as any).MarkerImage(this.getConfig('imagePath')['bluedot']),
+        icon: new (google.maps as any).MarkerImage(this._configObject.config['imagePath']['bluedot']),
         position: { lat: 31.4181, lng: 73.0776 },
       });
 
@@ -418,7 +413,7 @@ export class InMemoriam {
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '-2px -2px',
       defaultCtrlChildBgSize: '120%',
-      imagePath: this.getConfig('imagePath')['random'],
+      imagePath: this._configObject.config['imagePath']['random'],
       title: 'Marqueur aléatoire',
     };
 
@@ -478,7 +473,12 @@ export class InMemoriam {
         definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
       }
     } else {
-      definitionTexts.push('Aucun r&#233;sultat trouv&#233;');
+      definitionTexts.push(`<div class="alert alert-warning" role="alert">
+                      <p>
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;
+                        <strong>Aucun r&eacute;sultat trouv&eacute;, essayez avec d'autres crit&egrave;res de recherche.</strong>
+                      </p>
+                  </div>`);
     }
 
     const element = document.querySelector('[data-role="definitionsText"]');
