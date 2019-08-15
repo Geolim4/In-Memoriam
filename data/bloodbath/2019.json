@@ -2950,7 +2950,7 @@
       "location": "Clairoix (Oise)",
       "origin": "interieur",
       "gps": {
-        "lat":  49.447426,
+        "lat": 49.447426,
         "lon": 2.821140
       },
       "sources": [
@@ -2981,6 +2981,54 @@
         {
           "url": "http://www.leparisien.fr/oise-60/un-gendarme-de-l-oise-decede-dans-un-accident-de-la-route-14-08-2019-8133384.php",
           "titre": "Le Parisien"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "08",
+      "day": "14",
+      "keywords": "place Paul-Éluard",
+      "house": "gendarmerie",
+      "text": "Un gendarme du Peloton Spécialisé de Protection de la gendarmerie s'est suicidé dans son logement de fonction avec son arme de service.",
+      "section": "PSPG",
+      "location": "Cruas (Ardèche)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 44.662162,
+        "lon": 4.774612
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/ardeche-un-gendarme-sest-suicide-avec-son-arme-de-service-a-cruas/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "http://www.francesoir.fr/societe-faits-divers/ardeche-un-gendarme-se-suicide-avec-son-arme-de-service-cruas",
+          "titre": "France Soir"
+        },
+        {
+          "url": "https://www.ledauphine.com/ardeche/2019/08/15/cruas-un-gendarme-se-donne-la-mort-avec-son-arme-de-service",
+          "titre": "Le Dauphiné"
+        },
+        {
+          "url": "https://www.ledauphine.com/ardeche/2019/08/15/cruas-un-gendarme-se-donne-la-mort-avec-son-arme-de-service",
+          "titre": "Le Dauphiné"
+        },
+        {
+          "url": "https://www.estrepublicain.fr/faits-divers-justice/2019/08/15/un-gendarme-se-suicide-avec-son-arme-de-service",
+          "titre": "Est Républicain"
+        },
+        {
+          "url": "https://www.leprogres.fr/faits-divers-justice/2019/08/15/un-gendarme-se-suicide-avec-son-arme-de-service",
+          "titre": "Le Progrès"
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/suicide-d-un-gendarme-a-cruas-1565863729",
+          "titre": "France Bleu"
         }
       ]
     }
