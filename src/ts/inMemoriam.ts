@@ -11,6 +11,7 @@ import { Events } from './events';
 import { GmapUtils } from './helper/gmapUtils.helper';
 import { Permalink } from './permalink';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
+import { Death } from './models/death.model';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -451,10 +452,28 @@ export class InMemoriam {
     return definitions;
   }
 
+  private getLatestDeath(response: Bloodbath): Death|null {
+    let score = 0;
+    let latestDeath = <Death> null;
+
+    for (const death of response.deaths) {
+      const tmpScore = (Number(death.year) + (Number(death.month) * 100) + Number(death.day));
+
+      if (score <= tmpScore) {
+        score = tmpScore;
+        latestDeath = death;
+      }
+    }
+
+    return latestDeath;
+  }
+
   private printDefinitionsText(response: Bloodbath): void {
     const definitionTexts = [];
     if (response) {
       const definitions = this.getDefinitions(response);
+      const latestDeath = this.getLatestDeath(response);
+
       const configDefinitions = this.getConfigDefinitions();
       for (const [fieldKey, field] of Object.entries(definitions)) {
         let definitionText = '';
@@ -472,6 +491,8 @@ export class InMemoriam {
         }
         definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
       }
+      definitionTexts.push('');
+      definitionTexts.push(`<em>Date de dernière mise à jour des données: ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${latestDeath.location}</em>`);
     } else {
       definitionTexts.push(`<div class="alert alert-warning" role="alert">
                       <p>
