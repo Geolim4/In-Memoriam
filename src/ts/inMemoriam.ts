@@ -63,12 +63,12 @@ export class InMemoriam {
     const mapElement = <HTMLInputElement>document.getElementById('map');
     const map = new google.maps.Map(mapElement, options);
 
+    this.setupSkeleton();
     this.bindAnchorEvents(map, mapElement, formElement);
     this.bindFilters(map, mapElement, formElement);
     this.bindLocalizationButton(map);
     this.bindRandomizationButton(map);
     this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
-
   }
 
   private getConfig(setting: string): any {
