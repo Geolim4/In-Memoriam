@@ -86,7 +86,7 @@ export class InMemoriam {
         const safeFilterSplited = <string[]> [];
 
         for (const block of safeFilterBlocks) {
-          if (block.length >= this.getConfig('searchMinLength')) {
+          if (block.length >= this._configObject.config['searchMinLength']) {
             safeFilterSplited.push(block);
           }
         }
@@ -94,7 +94,7 @@ export class InMemoriam {
         if (filter) {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
-            if (fieldName === 'search' && filter.length >= this.getConfig('searchMinLength')) {
+            if (fieldName === 'search' && filter.length >= this._configObject.config['searchMinLength']) {
               if (!StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['text'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['section'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['location'], safeFilter)
@@ -304,7 +304,6 @@ export class InMemoriam {
       }
 
       if (heatMapData.length) {
-
         this._heatMap = new google.maps.visualization.HeatmapLayer({
           ...{ data: heatMapData },
           ... this._configObject.config['heatmapOptions'],
@@ -321,7 +320,7 @@ export class InMemoriam {
 
   private setupSkeleton(): void {
     const searchInput =  document.querySelector('#search');
-    const searchMinLength = this.getConfig('searchMinLength');
+    const searchMinLength = this._configObject.config['searchMinLength'];
 
     searchInput.setAttribute('minlength', searchMinLength);
     searchInput.setAttribute('placeholder', searchInput.getAttribute('placeholder').replace('%d', searchMinLength));
@@ -474,7 +473,12 @@ export class InMemoriam {
         definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
       }
     } else {
-      definitionTexts.push('Aucun r&#233;sultat trouv&#233;');
+      definitionTexts.push(`<div class="alert alert-warning" role="alert">
+                      <p>
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;
+                        <strong>Aucun r&eacute;sultat trouv&eacute;, essayez avec d'autres crit&egrave;res de recherche.</strong>
+                      </p>
+                  </div>`);
     }
 
     const element = document.querySelector('[data-role="definitionsText"]');
