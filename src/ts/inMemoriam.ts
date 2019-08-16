@@ -492,7 +492,7 @@ export class InMemoriam {
         definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
       }
       definitionTexts.push('');
-      definitionTexts.push(`<em>Date de dernière mise à jour des données: ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${latestDeath.location}</em>`);
+      definitionTexts.push(`<em>Dernier décès indexé: ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${latestDeath.location}</em>`);
     } else {
       definitionTexts.push(`<div class="alert alert-warning" role="alert">
                       <p>
