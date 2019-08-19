@@ -27,20 +27,21 @@
   },
   "dependencies": {
     "@google/markerclusterer": "^1.0.3",
+    "load-google-maps-api": "^2.0.1",
     "qwest": "^4.5.0",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
-    "@types/googlemaps": "^3.37.0",
+    "@types/googlemaps": "^3.37.4",
     "@types/markerclustererplus": "^2.1.33",
-    "@types/node": "^12.6.8",
+    "@types/node": "^12.7.2",
     "@types/qwest": "^1.7.28",
     "npm-watch": "^0.6.0",
     "path": "^0.12.7",
     "ts-loader": "^6.0.4",
     "tslint": "^5.18.0",
     "tslint-config-airbnb": "^5.11.1",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
   }
 }
