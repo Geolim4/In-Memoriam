@@ -11,6 +11,7 @@ import { Events } from './events';
 import { GmapUtils } from './helper/gmapUtils.helper';
 import { Permalink } from './permalink';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
+import { Death } from './models/death.model';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -63,12 +64,12 @@ export class InMemoriam {
     const mapElement = <HTMLInputElement>document.getElementById('map');
     const map = new google.maps.Map(mapElement, options);
 
+    this.setupSkeleton();
     this.bindAnchorEvents(map, mapElement, formElement);
     this.bindFilters(map, mapElement, formElement);
     this.bindLocalizationButton(map);
     this.bindRandomizationButton(map);
     this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
-
   }
 
   private getConfigDefinitions(): Definition[] {
@@ -81,16 +82,24 @@ export class InMemoriam {
     for (const [fKey, filter] of Object.entries(filters)) {
       if (filters.hasOwnProperty(fKey)) {
         const fieldName = fKey;
-        const safeFilter = StringUtilsHelper.normalizeString(filter);
+        const safeFilter = <string> StringUtilsHelper.normalizeString(filter);
+        const safeFilterBlocks = <string[]> StringUtilsHelper.normalizeString(filter).split(' ').map((str) => str.trim());
+        const safeFilterSplited = <string[]> [];
+
+        for (const block of safeFilterBlocks) {
+          if (block.length >= this._configObject.config['searchMinLength']) {
+            safeFilterSplited.push(block);
+          }
+        }
 
         if (filter) {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
-            if (fieldName === 'search' && filter.length >= 3) {
+            if (fieldName === 'search' && filter.length >= this._configObject.config['searchMinLength']) {
               if (!StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['text'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['section'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['location'], safeFilter)
-                && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['keywords'], safeFilter)
+                && !StringUtilsHelper.arrayContainsString(filteredResponse.deaths[dKey]['keywords'], safeFilterSplited)
               ) {
                 filteredResponse.deaths.splice(dKey, 1);
               }
@@ -296,7 +305,6 @@ export class InMemoriam {
       }
 
       if (heatMapData.length) {
-
         this._heatMap = new google.maps.visualization.HeatmapLayer({
           ...{ data: heatMapData },
           ... this._configObject.config['heatmapOptions'],
@@ -309,6 +317,14 @@ export class InMemoriam {
       map.fitBounds(bounds);
     });
 
+  }
+
+  private setupSkeleton(): void {
+    const searchInput =  document.querySelector('#search');
+    const searchMinLength = this._configObject.config['searchMinLength'];
+
+    searchInput.setAttribute('minlength', searchMinLength);
+    searchInput.setAttribute('placeholder', searchInput.getAttribute('placeholder').replace('%d', searchMinLength));
   }
 
   private clearMapObjects(): void {
@@ -436,10 +452,28 @@ export class InMemoriam {
     return definitions;
   }
 
+  private getLatestDeath(response: Bloodbath): Death|null {
+    let score = 0;
+    let latestDeath = <Death> null;
+
+    for (const death of response.deaths) {
+      const tmpScore = (Number(death.year) + (Number(death.month) * 100) + Number(death.day));
+
+      if (score <= tmpScore) {
+        score = tmpScore;
+        latestDeath = death;
+      }
+    }
+
+    return latestDeath;
+  }
+
   private printDefinitionsText(response: Bloodbath): void {
     const definitionTexts = [];
     if (response) {
       const definitions = this.getDefinitions(response);
+      const latestDeath = this.getLatestDeath(response);
+
       const configDefinitions = this.getConfigDefinitions();
       for (const [fieldKey, field] of Object.entries(definitions)) {
         let definitionText = '';
@@ -457,8 +491,15 @@ export class InMemoriam {
         }
         definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
       }
+      definitionTexts.push('');
+      definitionTexts.push(`<em>Dernier décès indexé: ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${latestDeath.location}</em>`);
     } else {
-      definitionTexts.push('Aucun r&#233;sultat trouv&#233;');
+      definitionTexts.push(`<div class="alert alert-warning" role="alert">
+                      <p>
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;
+                        <strong>Aucun r&eacute;sultat trouv&eacute;, essayez avec d'autres crit&egrave;res de recherche.</strong>
+                      </p>
+                  </div>`);
     }
 
     const element = document.querySelector('[data-role="definitionsText"]');

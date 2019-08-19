@@ -1,5 +1,10 @@
 {
   "settings": {
+    "googleMaps": {
+      "key": "AIzaSyBMB4lQqiIf7t6QV8CFFV6IwCqw_7dYREw",
+      "libraries": ["visualization"]
+    },
+    "searchMinLength": 3,
     "imagePath": {
       "random": "./assets/images/map/random.png",
       "localize": "https://maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png",

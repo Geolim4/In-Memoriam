@@ -38,7 +38,7 @@
       <form id="form-filters" class="row mtop">
         <fieldset class="col-md-4">
           <label for="search">Recherche</label>
-          <input class="form-control" type="text" name="search" id="search" data-filterable="true" placeholder="Saisissez 3 caractères minimum pour rechercher" />
+          <input class="form-control" type="text" name="search" id="search" data-filterable="true" placeholder="Saisissez %d caractères minimum pour rechercher" minlength=""/>
         </fieldset>
         <fieldset class="col-md-2">
           <label for="year">Année</label>/<label for="month">Mois</label>
@@ -98,7 +98,7 @@
           <label for="origin">Théatre d'action</label>
           <select name="origin" id="origin" class="form-control" data-filterable="true" data-countable="true">
             <option value="">---</option>
-            <option value="interieur">Intérieur</option>
+            <option value="interieur">Territoire national</option>
             <option value="domtom">DOM-TOM</option>
             <option value="opex">OPEX</option>
           </select>
@@ -109,7 +109,7 @@
           <div class="alert alert-info" role="alert">
             <p>
               <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-              <span>Utilisez votre souris ou vos doigts pour zoomer et cliquer sur un pictogramme afin de voir le détail d'un décès.</span>
+              <span>Utilisez votre souris ou vos doigts pour zoomer et cliquez sur un pictogramme afin de voir le détail d'un décès.</span>
             </p>
           </div>
           <div id="map" data-bloodbath-src="./data/bloodbath/%year%.json"></div>
