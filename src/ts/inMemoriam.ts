@@ -1,8 +1,5 @@
-/// <reference types="@types/googlemaps" />
-/// <reference types="@types/markerclustererplus" />
-/// <reference types="@types/qwest" />
-
 import * as MarkerClusterer from '@google/markerclusterer';
+import * as loadGoogleMapsApi from 'load-google-maps-api';
 import * as qwest from 'qwest';
 
 import { Bloodbath, Definition, Filters } from './models';
@@ -51,25 +48,34 @@ export class InMemoriam {
 
   public run(): void {
 
-    const options = {
-      center: new google.maps.LatLng(this._configObject.config['defaultLat'], this._configObject.config['defaultLon']),
-      mapTypeControl: false,
-      mapTypeId: google.maps.MapTypeId.HYBRID,
-      maxZoom: this._configObject.config['maxZoom'],
-      streetViewControl: false,
-      zoom: this._configObject.config['defaultZoom'],
-    };
+    loadGoogleMapsApi({
+      key: this._configObject.config.googleMaps['key'],
+      libraries: this._configObject.config.googleMaps['libraries'],
+    }).then(() => {
 
-    const formElement = <HTMLInputElement>document.getElementById('form-filters');
-    const mapElement = <HTMLInputElement>document.getElementById('map');
-    const map = new google.maps.Map(mapElement, options);
+      const formElement = <HTMLInputElement>document.getElementById('form-filters');
+      const mapElement = <HTMLInputElement>document.getElementById('map');
 
-    this.setupSkeleton();
-    this.bindAnchorEvents(map, mapElement, formElement);
-    this.bindFilters(map, mapElement, formElement);
-    this.bindLocalizationButton(map);
-    this.bindRandomizationButton(map);
-    this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
+      const options = {
+        center: new google.maps.LatLng(this._configObject.config['defaultLat'], this._configObject.config['defaultLon']),
+        mapTypeControl: false,
+        mapTypeId: google.maps.MapTypeId.HYBRID,
+        maxZoom: this._configObject.config['maxZoom'],
+        streetViewControl: false,
+        zoom: this._configObject.config['defaultZoom'],
+      };
+
+      const map = new google.maps.Map(mapElement, options);
+
+      this.setupSkeleton();
+      this.bindAnchorEvents(map, mapElement, formElement);
+      this.bindFilters(map, mapElement, formElement);
+      this.bindLocalizationButton(map);
+      this.bindRandomizationButton(map);
+      this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
+
+    });
+
   }
 
   private getConfigDefinitions(): Definition[] {
@@ -82,9 +88,9 @@ export class InMemoriam {
     for (const [fKey, filter] of Object.entries(filters)) {
       if (filters.hasOwnProperty(fKey)) {
         const fieldName = fKey;
-        const safeFilter = <string> StringUtilsHelper.normalizeString(filter);
-        const safeFilterBlocks = <string[]> StringUtilsHelper.normalizeString(filter).split(' ').map((str) => str.trim());
-        const safeFilterSplited = <string[]> [];
+        const safeFilter = <string>StringUtilsHelper.normalizeString(filter);
+        const safeFilterBlocks = <string[]>StringUtilsHelper.normalizeString(filter).split(' ').map((str) => str.trim());
+        const safeFilterSplited = <string[]>[];
 
         for (const block of safeFilterBlocks) {
           if (block.length >= this._configObject.config['searchMinLength']) {
@@ -320,7 +326,7 @@ export class InMemoriam {
   }
 
   private setupSkeleton(): void {
-    const searchInput =  document.querySelector('#search');
+    const searchInput = document.querySelector('#search');
     const searchMinLength = this._configObject.config['searchMinLength'];
 
     searchInput.setAttribute('minlength', searchMinLength);
@@ -452,9 +458,9 @@ export class InMemoriam {
     return definitions;
   }
 
-  private getLatestDeath(response: Bloodbath): Death|null {
+  private getLatestDeath(response: Bloodbath): Death | null {
     let score = 0;
-    let latestDeath = <Death> null;
+    let latestDeath = <Death>null;
 
     for (const death of response.deaths) {
       const tmpScore = (Number(death.year) + (Number(death.month) * 100) + Number(death.day));
