@@ -18,6 +18,6 @@
       "bluedot": "./assets/images/map/bluedot.png"
     },
     "maxZoom": 15,
-    "searchMinLength": 3,
+    "searchMinLength": 3
   }
 }
