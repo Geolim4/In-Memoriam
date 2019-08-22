@@ -3035,6 +3035,34 @@
           "titre": "France Bleu"
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "08",
+      "day": "20",
+      "keywords": "",
+      "house": "admpen",
+      "text": "Un surveillant du centre pénitentiaire de la Santé s'est suicidé en se jetant sous un train. Père de deux enfants il avait intégré le centre pénitentiaire de la Santé à sa réouverture.",
+      "section": "Centre de détention de la santé",
+      "location": "Paris 14e",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.834107,
+        "lon": 2.340962
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/paris-un-surveillant-penitentiaire-de-45-ans-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actupenit.com/2019/08/21/paris-la-sante-un-surveillant-sest-suicide-cette-nuit/",
+          "titre": "ActuPenit"
+        }
+      ]
     }
   ]
 }

@@ -1,9 +1,13 @@
+<!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="dns-prefetch" href="//stackpath.bootstrapcdn.com/">
-  <title>Cartographie des décès militaires et civils Françaises</title>
+  <title>In Memporiam - Cartographie des décès militaires et civils Françaises</title>
+  <link rel="manifest" href="./manifest.json">
+
   <meta name="description" content="Cartographie des décès militaires et civils Françaises pour ne jamais oublier ceux qui ont servi la France au péril de leur vie." />
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -101,7 +105,7 @@
           </select>
         </fieldset>
       </form>
-      <div class="row">
+      <div class="row mtop">
         <div class="col-xs-12 ">
           <div class="alert alert-info" role="alert">
             <p>
@@ -112,13 +116,13 @@
           <div id="map" data-bloodbath-src="./data/bloodbath/%year%.json"></div>
         </div>
       </div>
-      <div class="row">
+      <div class="row mtop">
         <form class="col-md-3" id="form-permalink">
           <label for="permalink">Permalien</label>
           <input id="permalink" class="form-control" type="text" title="Permalien" value="" data-role="permalink" onclick="select()" size="30" readonly>
         </form>
       </div>
-      <footer class="row">
+      <footer class="row mtop">
         <div class="col-md-12">
 
           <div class="alert alert-danger" role="alert">
