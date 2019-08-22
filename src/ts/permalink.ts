@@ -6,8 +6,8 @@ import { Filters } from './models';
  * @licence GPL-2.0
  */
 export class Permalink {
-  public static build(filters: Filters): void {
-    const permalinkElement = <HTMLInputElement>document.querySelector('[data-role="permalink"]');
+  public static build(filters: Filters, selector?: string): void {
+    const permalinkElement = <HTMLInputElement>document.querySelector(selector ? selector : '[data-role="permalink"]');
     const url = location.href.replace(/#.*$/, '');
     let anchor = '';
 

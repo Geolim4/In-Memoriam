@@ -3063,6 +3063,46 @@
           "titre": "ActuPenit"
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "08",
+      "day": "20",
+      "keywords": "",
+      "house": "police",
+      "text": "Une policière s'est suicidé avec son arme de service sur le parking de son logement à Drancy. Retrouvée sans vie par son compagnon en état de choc, elle était affectée à la 21e CI de la DOPC.",
+      "section": "22e CI / DOPC",
+      "location": "Paris 19e",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.924410,
+        "lon": 2.445095
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/seine-saint-denis-une-policiere-sest-suicidee-a-drancy/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/une-policiere-de-la-prefecture-de-police-de-paris-se-suicide-avec-son-arme-de-service-1753777.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "https://actupenit.com/2019/08/22/drancy-une-policiere-de-la-prefecture-de-police-de-paris-se-suicide-avec-son-arme-de-service/",
+          "titre": "ActuPenit"
+        },
+        {
+          "url": "https://www.20minutes.fr/paris/2587499-20190822-paris-policiere-26-ans-suicidee-arme-service",
+          "titre": "20 minutes"
+        },
+        {
+          "url": "https://actupenit.com/2019/08/21/paris-la-sante-un-surveillant-sest-suicide-cette-nuit/",
+          "titre": "ActuPenit"
+        }
+      ]
     }
   ]
 }

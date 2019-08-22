@@ -1,4 +1,5 @@
 export interface Settings {
+  contactEmail: string;
   defaultLat: number;
   defaultLon: number;
   defaultZoom: number;
