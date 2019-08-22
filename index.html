@@ -3,134 +3,136 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="dns-prefetch" href="//stackpath.bootstrapcdn.com/">
-  <title>In Memoriam - Cartographie des décès militaires et civils Françaises</title>
-  <link rel="manifest" href="./manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="dns-prefetch" href="//stackpath.bootstrapcdn.com/">
+    <title>In Memoriam - Cartographie des décès militaires et civils Françaises</title>
+    <link rel="manifest" href="./manifest.json"/>
+    <link rel="icon" href="./favicon.ico"/>
 
-  <meta name="description" content="Cartographie des décès militaires et civils Françaises pour ne jamais oublier ceux qui ont servi la France au péril de leur vie." />
+    <meta name="description" content="Cartographie des décès militaires et civils Françaises pour ne jamais oublier ceux qui ont servi la France au péril de leur vie."/>
 
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/main.css" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/main.css" crossorigin="anonymous">
 </head>
 
 <body>
-  <div id="fork-me">
+<div id="fork-me">
     <a href="https://github.com/Geolim4/In-Memoriam" target="_blank">
-      <img width="130" height="130" src="./assets/images/github/forkme_right_white_ffffff.png" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-  </div>
-  <div id="main">
+        <img width="130" height="130" src="./assets/images/github/forkme_right_white_ffffff.png" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+</div>
+<div id="main">
     <div class="container-fluid">
-      <h1>Cartographie des décès militaires et civils Français</h1>
+        <h1>Cartographie des décès militaires et civils Français</h1>
 
-      <div class="row">
-        <div class="col-md-6">
-          <p class="text text-primary">
-            Car les années se suivent et se ressemblent tristement, cette cartographie vous permettra de lister l'ensemble
-            des décès militaires et civils Français quelqu'en soit la cause.
-            Afin qu'aucun d'eux ne soit jamais oublié.
-          </p>
-        </div>
-      </div>
-      <div class="row mtop">
-        <div data-role="definitionsText" class="col-md-12"></div>
-      </div>
-      <form id="form-filters" class="row mtop">
-        <fieldset class="col-md-4">
-          <label for="search">Recherche</label>
-          <input class="form-control" type="text" name="search" id="search" data-filterable="true" placeholder="Saisissez %d caractères minimum pour rechercher" minlength="" />
-        </fieldset>
-        <fieldset class="col-md-2">
-          <label for="year">Année</label>/<label for="month">Mois</label>
-          <div class="row">
-            <div class="col-xs-6">
-              <select name="year" id="year" class="form-control" data-filterable="true">
-                <option value="2019" selected>2019</option>
-                <option value="2018">2018</option>
-              </select>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text text-primary">
+                    Car les années se suivent et se ressemblent tristement, cette cartographie vous permettra de lister
+                    l'ensemble
+                    des décès militaires et civils Français quelqu'en soit la cause.
+                    Afin qu'aucun d'eux ne soit jamais oublié.
+                </p>
             </div>
-            <div class="col-xs-6">
-              <select name="month" id="month" class="form-control" data-filterable="true" data-countable="true">
-                <option value="">---</option>
-                <option value="01">Janvier</option>
-                <option value="02">Février</option>
-                <option value="03">Mars</option>
-                <option value="04">Avril</option>
-                <option value="05">Mai</option>
-                <option value="06">Juin</option>
-                <option value="07">Juillet</option>
-                <option value="08">Aout</option>
-                <option value="09">Septembre</option>
-                <option value="10">Octobre</option>
-                <option value="11">Novembre</option>
-                <option value="12">Décembre</option>
-              </select>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset class="col-md-2">
-          <label for="house">Corps</label>
-          <select name="house" id="house" class="form-control" data-filterable="true" data-countable="true">
-            <option value="">---</option>
-            <option value="police">Police</option>
-            <option value="gendarmerie">Gendarmerie</option>
-            <option value="pm">Police Municipale</option>
-            <option value="pompier">Pompier</option>
-            <option value="douane">Douane</option>
-            <option value="armee">Armée (Air, Terre, Marine)</option>
-            <option value="admpen">Administration pénitentiaire</option>
-            <option value="secciv">Sécurité Civile</option>
-            <option value="misc">Autres personnels civils</option>
-          </select>
-        </fieldset>
-        <fieldset class="col-md-2">
-          <label for="cause">Cause</label>
-          <select name="cause" id="cause" class="form-control" data-filterable="true" data-countable="true">
-            <option value="">---</option>
-            <option value="suicide">Suicide</option>
-            <option value="deathOnDuty">Mort en service</option>
-            <option value="accident">Mort accidentelle</option>
-            <option value="murdered">Assasinat</option>
-            <option value="other">Autre</option>
-          </select>
-        </fieldset>
-        <fieldset class="col-md-2">
-          <label for="origin">Théatre d'action</label>
-          <select name="origin" id="origin" class="form-control" data-filterable="true" data-countable="true">
-            <option value="">---</option>
-            <option value="interieur">Territoire national</option>
-            <option value="domtom">DOM-TOM</option>
-            <option value="opex">OPEX</option>
-          </select>
-        </fieldset>
-      </form>
-      <div class="row mtop">
-        <div class="col-xs-12 ">
-          <div class="alert alert-info" role="alert">
-            <p>
-              <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-              <span>Utilisez votre souris ou vos doigts pour zoomer et cliquez sur un pictogramme afin de voir le détail d'un décès.</span>
-            </p>
-          </div>
-          <div id="map" data-bloodbath-src="./data/bloodbath/%year%.json"></div>
         </div>
-      </div>
-      <div class="row mtop">
-        <form class="col-md-3" id="form-permalink">
-          <label for="permalink">Permalien</label>
-          <input id="permalink" class="form-control" type="text" title="Permalien" value="" data-role="permalink" onclick="select()" size="30" readonly>
+        <div class="row mtop">
+            <div data-role="definitionsText" class="col-md-12"></div>
+        </div>
+        <form id="form-filters" class="row mtop">
+            <fieldset class="col-md-4">
+                <label for="search">Recherche</label>
+                <input class="form-control" type="text" name="search" id="search" data-filterable="true" placeholder="Saisissez %d caractères minimum pour rechercher" minlength=""/>
+            </fieldset>
+            <fieldset class="col-md-2">
+                <label for="year">Année</label>/<label for="month">Mois</label>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <select name="year" id="year" class="form-control" data-filterable="true">
+                            <option value="2019" selected>2019</option>
+                            <option value="2018">2018</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-6">
+                        <select name="month" id="month" class="form-control" data-filterable="true" data-countable="true">
+                            <option value="">---</option>
+                            <option value="01">Janvier</option>
+                            <option value="02">Février</option>
+                            <option value="03">Mars</option>
+                            <option value="04">Avril</option>
+                            <option value="05">Mai</option>
+                            <option value="06">Juin</option>
+                            <option value="07">Juillet</option>
+                            <option value="08">Aout</option>
+                            <option value="09">Septembre</option>
+                            <option value="10">Octobre</option>
+                            <option value="11">Novembre</option>
+                            <option value="12">Décembre</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="col-md-2">
+                <label for="house">Corps</label>
+                <select name="house" id="house" class="form-control" data-filterable="true" data-countable="true">
+                    <option value="">---</option>
+                    <option value="police">Police</option>
+                    <option value="gendarmerie">Gendarmerie</option>
+                    <option value="pm">Police Municipale</option>
+                    <option value="pompier">Pompier</option>
+                    <option value="douane">Douane</option>
+                    <option value="armee">Armée (Air, Terre, Marine)</option>
+                    <option value="admpen">Administration pénitentiaire</option>
+                    <option value="secciv">Sécurité Civile</option>
+                    <option value="misc">Autres personnels civils</option>
+                </select>
+            </fieldset>
+            <fieldset class="col-md-2">
+                <label for="cause">Cause</label>
+                <select name="cause" id="cause" class="form-control" data-filterable="true" data-countable="true">
+                    <option value="">---</option>
+                    <option value="suicide">Suicide</option>
+                    <option value="deathOnDuty">Mort en service</option>
+                    <option value="accident">Mort accidentelle</option>
+                    <option value="murdered">Assasinat</option>
+                    <option value="other">Autre</option>
+                </select>
+            </fieldset>
+            <fieldset class="col-md-2">
+                <label for="origin">Théatre d'action</label>
+                <select name="origin" id="origin" class="form-control" data-filterable="true" data-countable="true">
+                    <option value="">---</option>
+                    <option value="interieur">Territoire national</option>
+                    <option value="domtom">DOM-TOM</option>
+                    <option value="opex">OPEX</option>
+                </select>
+            </fieldset>
         </form>
-      </div>
-      <footer class="row mtop">
-        <div class="col-md-12">
+        <div class="row mtop">
+            <div class="col-xs-12 ">
+                <div class="alert alert-info" role="alert">
+                    <p>
+                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                        <span>Utilisez votre souris ou vos doigts pour zoomer et cliquez sur un pictogramme afin de voir le détail d'un décès.</span>
+                    </p>
+                </div>
+                <div id="map" data-bloodbath-src="./data/bloodbath/%year%.json"></div>
+            </div>
+        </div>
+        <div class="row mtop">
+            <form class="col-md-3" id="form-permalink">
+                <label for="permalink">Permalien</label>
+                <input id="permalink" class="form-control" type="text" title="Permalien" value="" data-role="permalink" onclick="select()" size="30" readonly>
+            </form>
+        </div>
+        <footer class="row mtop">
+            <div class="col-md-12">
 
-          <div class="alert alert-danger" role="alert">
-            <h2>
-              <strong>Disclaimer</strong>
-              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            </h2>
-            <p>
+                <div class="alert alert-danger" role="alert">
+                    <h2>
+                        <strong>Disclaimer</strong>
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    </h2>
+                    <p>
               <span>
                 Ce site n'a pas pour vocation d'être exhaustif mais de regrouper seulement les disparitions
                 tragiques de
@@ -138,15 +140,16 @@
                 forces de l'ordre, pompiers et militaires sur la base d'informations publiques et sourcées.
                 Les sources sont croisées et vérifiées afin de minimiser le plus possible un risque d'erreur.
               </span>
-            </p>
-          </div>
-          <p class="text text-info">Un commentaire, une erreur, une modification à apporter ?
-            <a href="mailto:contact@geolim4.com">Contactez-nous</a> ou <a href="https://github.com/Geolim4/In-Memoriam/compare">envoyez-nous un "pull request"</a> :)</p>
-        </div>
-      </footer>
+                    </p>
+                </div>
+                <p class="text text-info">Un commentaire, une erreur, une modification à apporter ?
+                    <a href="mailto:contact@geolim4.com">Contactez-nous</a> ou
+                    <a href="https://github.com/Geolim4/In-Memoriam/compare">envoyez-nous un "pull request"</a> :)</p>
+            </div>
+        </footer>
     </div>
-  </div>
-  <script type="text/javascript" src="./assets/js/bundle.js"></script>
+</div>
+<script type="text/javascript" src="./assets/js/bundle.js"></script>
 </body>
 
 </html>
