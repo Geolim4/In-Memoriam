@@ -5,6 +5,84 @@
       "count": 1,
       "published": true,
       "year": "2018",
+      "month": "01",
+      "day": "01",
+      "keywords": "",
+      "house": "police",
+      "text": "Un policier de la brigade nuit du commisariant de Dunkerque nord s'est suicidé avec son arme de service. Père de trois enfants il était arrivé dans sa circonscription en 2004.",
+      "section": "BN - CSP Dunkerque",
+      "location": "Dunkerque",
+      "origin": "interieur",
+      "gps": {
+        "lat":  51.038295,
+        "lon": 2.376198
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/2-policiers-se-donnes-mort-1er-janvier-lun-a-dunkerque-lautre-a-quimper/",
+          "titre": "Actu17"
+        },        {
+          "url": "http://www.leparisien.fr/faits-divers/suicide-de-deux-policiers-a-dunkerque-et-quimper-03-01-2018-7481295.php",
+          "titre": "Le parisien"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/nord-0/nord-deux-suicides-deux-jours-rangs-police-1394315.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.lepharedunkerquois.fr/archive/recup/fait-divers/dunkerque-un-policier-de-la-brigade-de-nuit-se-suicide-ia685b0n232530",
+          "titre": "Le phare Dunkerquois"
+        },
+        {
+          "url": "https://mpc-asso.net/liste-funebre-2018/",
+          "titre": "Asso MPC (Liste Funèbre)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2018",
+      "month": "01",
+      "day": "01",
+      "keywords": "",
+      "house": "police",
+      "text": "Un policier de la brigade nuit du commisariant de Quimper s'est suicidé avec son arme de service. Peu de détails disponibles sur ce suicide",
+      "section": "CSP Quimper",
+      "location": "Quimper",
+      "origin": "interieur",
+      "gps": {
+        "lat": 47.994612,
+        "lon": -4.099695
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/2-policiers-se-donnes-mort-1er-janvier-lun-a-dunkerque-lautre-a-quimper/",
+          "titre": "Actu17"
+        },        {
+          "url": "http://www.leparisien.fr/faits-divers/suicide-de-deux-policiers-a-dunkerque-et-quimper-03-01-2018-7481295.php",
+          "titre": "Le parisien"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/nord-0/nord-deux-suicides-deux-jours-rangs-police-1394315.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.letelegramme.fr/finistere/quimper-un-policier-se-suicide-avec-son-arme-de-service-03-01-2018-11799904.php",
+          "titre": "Le Télégramme"
+        },
+        {
+          "url": "https://mpc-asso.net/liste-funebre-2018/",
+          "titre": "Asso MPC (Liste Funèbre)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2018",
       "month": "11",
       "day": "12",
       "keywords": "",
