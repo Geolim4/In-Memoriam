@@ -268,7 +268,7 @@ export class InMemoriam {
         }
 
         const mailtoSubject = `Erreur trouvée - ${death.section} + -  ${death.day}/${death.month}/${death.year}`;
-        infoWindowsContent += `<br /><small style="float: right"><a href="mailto:contact@geolim4.com?subject=${mailtoSubject}">[Une erreur ?]</a></small>`;
+        infoWindowsContent += `<br /><small style="float: right"><a href="mailto:${this._configObject.config.contactEmail}?subject=${mailtoSubject}">[Une erreur ?]</a></small>`;
 
         const infoWindows = new google.maps.InfoWindow({ content: infoWindowsContent });
         google.maps.event.addListener(marker, 'click', () => {
