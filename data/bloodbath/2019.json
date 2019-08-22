@@ -3074,7 +3074,7 @@
       "keywords": "",
       "house": "police",
       "text": "Une policière s'est suicidé avec son arme de service sur le parking de son logement à Drancy. Retrouvée sans vie par son compagnon en état de choc, elle était affectée à la 21e CI de la DOPC.",
-      "section": "22e CI / DOPC",
+      "section": "21e CI / DOPC",
       "location": "Paris 19e",
       "origin": "interieur",
       "gps": {
@@ -3099,8 +3099,8 @@
           "titre": "20 minutes"
         },
         {
-          "url": "https://actupenit.com/2019/08/21/paris-la-sante-un-surveillant-sest-suicide-cette-nuit/",
-          "titre": "ActuPenit"
+          "url": "http://www.leparisien.fr/seine-saint-denis-93/drancy-une-policiere-se-suicide-avec-son-arme-de-service-22-08-2019-8137647.php#xtor=AD-1481423553",
+          "titre": "Le Parisien"
         }
       ]
     }
