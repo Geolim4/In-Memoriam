@@ -24,24 +24,16 @@ const scssConfig = {
   module: {
     rules: [{
       test: /\.scss$/,
-      use: [{
-          loader: 'file-loader',
-          options: {
-            name: '.bundle.css'
-          }
-        },
-        'extract-loader',
-        'css-loader',
-        {
-          loader: 'sass-loader',
-          options: {
-            includePaths: ['./node_modules']
-          }
-        }
-      ],
+      loaders: [
+        "file-loader?name=[name].css",
+        "extract-loader",
+        "css-loader",
+        "sass-loader"
+      ]
     }],
   },
   output: {
+    filename: null,
     path: path.resolve(__dirname, 'assets/css')
   }
 };
