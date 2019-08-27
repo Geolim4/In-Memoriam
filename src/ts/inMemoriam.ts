@@ -292,6 +292,12 @@ export class InMemoriam {
         this._markers.push(marker);
       }
 
+      // We assume that if only have a single result
+      // that the infoWindow should be opened by default
+      if (this._markers.length === 1 && this._infoWindows.length === 1) {
+        this._infoWindows[0].open(map, this._markers[0]);
+      }
+
       this._markerCluster = new MarkerClusterer(map, this._markers, {
         gridSize: 60,
         imagePath: './assets/images/clustering/m',
