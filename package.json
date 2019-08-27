@@ -15,13 +15,13 @@
   },
   "watch": {
     "build": {
-      "extensions": "ts",
+      "extensions": ["scss", "ts"],
       "ignore": [
-        "dist",
+        "assets",
         "node_modules"
       ],
       "patterns": [
-        "src/ts"
+        "src/"
       ]
     }
   },
@@ -53,6 +53,7 @@
     "tslint": "^5.19.0",
     "tslint-config-airbnb": "^5.11.1",
     "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7"
+    "webpack-cli": "^3.3.7",
+    "webpack-fix-style-only-entries": "^0.3.1"
   }
 }

@@ -1,3 +1,4 @@
+const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const path = require('path');
 
 const tsConfig = {
@@ -19,23 +20,45 @@ const tsConfig = {
 };
 
 const scssConfig = {
-  entry: "./assets/scss/main.scss",
+  entry: "./src/scss/main.scss",
   mode: "production",
   module: {
     rules: [{
+      use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].css',
+            outputPath: 'assets/css/',
+          }
+        },
+        {
+          loader: 'extract-loader',
+        },
+        {
+          loader: 'css-loader',
+        },
+        {
+          loader: 'sass-loader',
+        }
+      ],
       test: /\.scss$/,
-      loaders: [
-        "file-loader?name=[name].css",
-        "extract-loader",
-        "css-loader",
-        "sass-loader"
-      ]
+    }, {
+      use: [{
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/',
+        }
+      }],
+      test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
     }],
   },
   output: {
-    filename: null,
     path: path.resolve(__dirname, 'assets/css')
-  }
+  },
+  plugins: [
+    new FixStyleOnlyEntriesPlugin()
+  ]
 };
 
 module.exports = [
