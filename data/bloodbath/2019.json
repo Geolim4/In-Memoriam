@@ -845,6 +845,14 @@
         {
           "url": "https://actu17.fr/paris-un-policier-a-mis-fin-a-ses-jours-avec-son-arme-de-service/",
           "titre": "Actu17"
+        },
+        {
+          "url": "http://www.leparisien.fr/paris-75/paris-un-jeune-policier-se-suicide-avec-son-arme-de-service-20-03-2019-8035797.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://www.20minutes.fr/paris/2478363-20190321-paris-policier-29-ans-suicide-arme-service",
+          "titre": "20 minutes"
         }
       ]
     },
@@ -1286,7 +1294,7 @@
       "keywords": "",
       "house": "pm",
       "text": "Un policier municipal se suicide avec son arme de service dans la nuit sur son lieu de travail. Très fusionnel avec sa fille, il avait envisagé une réorientation professionnelle au Canada.",
-      "section": "Poste de Police Béziers",
+      "section": "Poste de Police",
       "location": "Béziers (Hérault)",
       "origin": "interieur",
       "gps": {
@@ -1470,7 +1478,7 @@
       "keywords": "",
       "house": "pm",
       "text": "Un policier municipal de Paray-le-Monial s'est suicidé. Il était père de deux enfants et divorcé.",
-      "section": "Poste de Police Paray-le-Monial",
+      "section": "Poste de Police",
       "location": "Paray-le-Monial (Saône-et-Loire)",
       "origin": "interieur",
       "gps": {
@@ -1582,7 +1590,7 @@
       "keywords": "",
       "house": "pm",
       "text": "Un policier municipal commissariat de Cholet s'est suicidé sans faire usage de son arme de service. Père de trois enfants il avait été désarmé par sa hiérarchie pour des problèmes familliaux.",
-      "section": "Poste de Police Cholet",
+      "section": "Poste de Police",
       "location": "Cholet (Maine-et-Loire)",
       "origin": "interieur",
       "gps": {
@@ -1794,7 +1802,7 @@
       "keywords": "",
       "house": "pm",
       "text": "Un policier municipal commissariat de Nice s'est suicidé. Peu d'informations disponibles sur ce suicide.",
-      "section": "Poste de Police Nice",
+      "section": "Poste de Police",
       "location": "Nice (Alpes Maritimes)",
       "origin": "interieur",
       "gps": {
@@ -2882,7 +2890,7 @@
       "keywords": "",
       "house": "pm",
       "text": "Un policier municipal d’Orléans (Loiret) a mis fin à ses jours à son domicile de Neung-sur-Beuvron (Loir-et-Cher). Aux premières constatations, l'arme utilisé n'était pas son arme de service.",
-      "section": "Poste de police d’Orléans",
+      "section": "Poste de police",
       "location": "Neung-sur-Beuvron (Loir-et-Cher)",
       "origin": "interieur",
       "gps": {
@@ -3071,10 +3079,10 @@
       "year": "2019",
       "month": "08",
       "day": "20",
-      "keywords": "",
+      "keywords": "sandra, boxeuse, championne, boxe",
       "house": "police",
       "text": "Une policière s'est suicidé avec son arme de service sur le parking de son logement à Drancy. Retrouvée sans vie par son compagnon en état de choc, elle était affectée à la 21e CI de la DOPC.",
-      "section": "22e CI / DOPC",
+      "section": "21e CI / DOPC",
       "location": "Paris 19e",
       "origin": "interieur",
       "gps": {
@@ -3099,8 +3107,8 @@
           "titre": "20 minutes"
         },
         {
-          "url": "https://actupenit.com/2019/08/21/paris-la-sante-un-surveillant-sest-suicide-cette-nuit/",
-          "titre": "ActuPenit"
+          "url": "http://www.leparisien.fr/seine-saint-denis-93/drancy-une-policiere-se-suicide-avec-son-arme-de-service-22-08-2019-8137647.php#xtor=AD-1481423553",
+          "titre": "Le Parisien"
         }
       ]
     }
