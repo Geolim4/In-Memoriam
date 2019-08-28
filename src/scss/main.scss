@@ -1,29 +1,28 @@
-#fork-me
-{
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+#fork-me {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-#map
-{
+#map {
   width: 100%;
   height: 50em;
 }
 
-.mtop{
+.mtop {
   margin-top: 20px;
 }
+
 /**
  * "Responsive"
  */
-
 @media (max-width: 992px) {
-  #fork-me{
+  #fork-me {
     display: none;
   }
-  #map
-  {
+  #map {
     height: 30em;
   }
 }
