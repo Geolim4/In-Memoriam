@@ -1,4 +1,8 @@
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin')
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 const path = require('path');
 
 const tsConfig = {
@@ -16,6 +20,13 @@ const tsConfig = {
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
+  },
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        extractComments: true,
+      })
+    ]
   }
 };
 
@@ -28,7 +39,6 @@ const scssConfig = {
           loader: 'file-loader',
           options: {
             name: '[name].css',
-            outputPath: 'assets/css/',
           }
         },
         {
@@ -36,6 +46,14 @@ const scssConfig = {
         },
         {
           loader: 'css-loader',
+        },
+        {
+          loader: 'postcss-loader',
+          options: {
+            plugins: () => [
+              autoprefixer(),
+            ]
+          }
         },
         {
           loader: 'sass-loader',
@@ -57,7 +75,13 @@ const scssConfig = {
     path: path.resolve(__dirname, 'assets/css')
   },
   plugins: [
-    new FixStyleOnlyEntriesPlugin()
+    new FixStyleOnlyEntriesPlugin(),
+    new OptimizeCssAssetsPlugin({
+      cssProcessor: cssnano,
+      cssProcessorPluginOptions: {
+        preset: ['default', { discardComments: { removeAll: true } }],
+      },
+    })
   ]
 };
 
