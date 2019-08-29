@@ -8,7 +8,9 @@
   "license": "GPL-2.0",
   "private": false,
   "scripts": {
-    "build": "yarn run lint && npx webpack",
+    "build-css": "stylelint 'src/**/*.scss' && yarn webpack --config './webpack/cssConfig.js'",
+    "build-js": "yarn lint && yarn webpack --config './webpack/jsConfig.js'",
+    "build": "yarn build-css && yarn build-js",
     "lint": "tslint --project ./tsconfig.json",
     "lint-fix": "tslint --project ./tsconfig.json --fix",
     "watch": "npm-watch"
@@ -18,9 +20,20 @@
     "last 2 versions"
   ],
   "watch": {
-    "build": {
+    "build-css": {
       "extensions": [
-        "scss",
+        "scss"
+      ],
+      "ignore": [
+        "assets",
+        "node_modules"
+      ],
+      "patterns": [
+        "src/"
+      ]
+    },
+    "build-js": {
+      "extensions": [
         "ts"
       ],
       "ignore": [

@@ -1,38 +1,12 @@
-const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin')
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const path = require('path');
 
-const tsConfig = {
-  entry: "./src/ts/main.ts",
-  mode: "production",
-  module: {
-    rules: [{
-      loader: "ts-loader",
-      test: /\.tsx?$/,
-    }],
-  },
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, 'assets/js')
-  },
-  resolve: {
-    extensions: [".ts", ".tsx", ".js"]
-  },
-  optimization: {
-    minimizer: [
-      new TerserPlugin({
-        extractComments: true,
-      })
-    ]
-  }
-};
-
-const scssConfig = {
-  entry: "./src/scss/main.scss",
-  mode: "production",
+module.exports = {
+  entry: path.resolve(__dirname, '../src/scss/main.scss'),
+  mode: 'production',
   module: {
     rules: [{
       use: [{
@@ -72,7 +46,7 @@ const scssConfig = {
     }],
   },
   output: {
-    path: path.resolve(__dirname, 'assets/css')
+    path: path.resolve(__dirname, '../assets/css')
   },
   plugins: [
     new FixStyleOnlyEntriesPlugin(),
@@ -84,7 +58,3 @@ const scssConfig = {
     })
   ]
 };
-
-module.exports = [
-  tsConfig, scssConfig
-];
