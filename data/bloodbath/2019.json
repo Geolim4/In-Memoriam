@@ -3111,6 +3111,38 @@
           "titre": "Le Parisien"
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "09",
+      "day": "01",
+      "keywords": "Sébastien, STN",
+      "house": "police",
+      "text": "Un policier s’est suicidé avec son arme de service dans son véhicule, près de son domicile à Aulnoy. Il était affecté à la BJN 94 (brigade judiciaire de nuit).",
+      "section": "BJN 94",
+      "location": "Aulnoy (Val-de-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.846778,
+        "lon": 3.089718
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/seine-et-marne-un-policier-de-31-ans-qui-exercait-dans-le-val-de-marne-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/val-de-marne-un-policier-se-suicide-avec-son-arme-de-service-1759150.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "https://actupenit.com/2019/09/01/seine-et-marne-nouveau-drame-dans-les-rangs-de-la-police-nationale/",
+          "titre": "ActuPenit"
+        }
+      ]
     }
   ]
 }
