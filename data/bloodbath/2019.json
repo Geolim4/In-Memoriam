@@ -3139,8 +3139,20 @@
           "titre": "BFM"
         },
         {
+          "url": "https://actu.fr/ile-de-france/aulnoy_77013/val-marne-policier-se-suicide-domicile-seine-marne_26908941.html",
+          "titre": "Actu.fr"
+        },
+        {
           "url": "https://actupenit.com/2019/09/01/seine-et-marne-nouveau-drame-dans-les-rangs-de-la-police-nationale/",
           "titre": "ActuPenit"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/un-policier-de-31-ans-se-suicide-avec-son-arme-de-service-01-09-2019-8143269.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/paris-ile-de-france/val-de-marne/policier-du-val-marne-se-suicide-son-arme-service-1716655.html",
+          "titre": "France Info"
         }
       ]
     }
