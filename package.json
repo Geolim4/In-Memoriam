@@ -8,7 +8,7 @@
   "license": "GPL-2.0",
   "private": false,
   "scripts": {
-    "build-css": "stylelint 'src/**/*.scss' && yarn webpack --config './webpack/cssConfig.js'",
+    "build-css": "stylelint \"src/**/*.scss\" && yarn webpack --config './webpack/cssConfig.js'",
     "build-js": "yarn lint && yarn webpack --config './webpack/jsConfig.js'",
     "build": "yarn build-css && yarn build-js",
     "lint": "tslint --project ./tsconfig.json",
