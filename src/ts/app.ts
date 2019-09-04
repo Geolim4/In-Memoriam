@@ -15,7 +15,7 @@ import { Death } from './models/death.model';
  * @author Jbz797 <jean.benoit.gautier@gmail.com>
  * @licence GPL-2.0
  */
-export class InMemoriam {
+export class App {
 
   private _configObject: Config;
   private _currentInfoWindows: google.maps.InfoWindow;
@@ -253,7 +253,7 @@ export class InMemoriam {
             <span>
               <strong>Date</strong>: ${death.day}/${death.month}/${death.year}
               <br /><br />
-              <strong>Cause</strong>: ${InMemoriam.getFilterValueLabel('cause', death.cause)}
+              <strong>Cause</strong>: ${App.getFilterValueLabel('cause', death.cause)}
               <br /><br />
               <strong>Circonstances</strong>:  ${death.text}
             </span>`;
@@ -343,7 +343,7 @@ export class InMemoriam {
     this.clearMarkers().clearInfoWindows().clearHeatMap().clearMarkerCluster();
   }
 
-  private clearMarkers(): InMemoriam {
+  private clearMarkers(): App {
     for (let i = 0; i < this._markers.length; i++) {
       this._markers[i].setMap(null);
     }
@@ -351,7 +351,7 @@ export class InMemoriam {
     return this;
   }
 
-  private clearInfoWindows(): InMemoriam {
+  private clearInfoWindows(): App {
     for (let i = 0; i < this._infoWindows.length; i++) {
       google.maps.event.clearInstanceListeners(this._infoWindows[i]);
       this._infoWindows[i].close();
@@ -360,7 +360,7 @@ export class InMemoriam {
     return this;
   }
 
-  private clearHeatMap(): InMemoriam {
+  private clearHeatMap(): App {
     if (this._heatMap) {
       this._heatMap.setMap(null);
     }

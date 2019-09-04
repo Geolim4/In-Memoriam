@@ -1859,7 +1859,7 @@
       "year": "2019",
       "month": "06",
       "day": "03",
-      "keywords": "",
+      "keywords": "Jean FOURRAY",
       "house": "gendarmerie",
       "text": "Un adjudant du Peloté Motorisé de Fougère s’est suicidé avec son arme de service. Il était marié et père de 5 enfants.",
       "section": "EDSR (PMO Fougères)",
@@ -3139,8 +3139,52 @@
           "titre": "BFM"
         },
         {
+          "url": "https://actu.fr/ile-de-france/aulnoy_77013/val-marne-policier-se-suicide-domicile-seine-marne_26908941.html",
+          "titre": "Actu.fr"
+        },
+        {
           "url": "https://actupenit.com/2019/09/01/seine-et-marne-nouveau-drame-dans-les-rangs-de-la-police-nationale/",
           "titre": "ActuPenit"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/un-policier-de-31-ans-se-suicide-avec-son-arme-de-service-01-09-2019-8143269.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/paris-ile-de-france/val-de-marne/policier-du-val-marne-se-suicide-son-arme-service-1716655.html",
+          "titre": "France Info"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "09",
+      "day": "04",
+      "keywords": "gav",
+      "house": "gendarmerie",
+      "text": "Un gendarme adjoint volontaire s’est suicidé avec son arme de service, ce mercredi. Affecté à la base aérienne 126, son corps a été retrouvé sur la plage de Quarcione.",
+      "section": "BA 126",
+      "location": " Ventiseri (Corse)",
+      "origin": "domtom",
+      "gps": {
+        "lat": 41.922992,
+        "lon": 9.413479
+      },
+      "sources": [
+        {
+          "url": "https://www.corsematin.com/article/ventiseri/ventiseri-suicide-d%E2%80%99un-gendarme",
+          "titre": "Corse Matin"
+        },
+        {
+          "url": "https://actu17.fr/haute-corse-un-gendarme-se-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actupenit.com/2019/09/04/corse-un-jeune-gendarme-de-23-ans-se-suicide-a-laide-de-son-arme-de-service/",
+          "titre": "Actupenit"
         }
       ]
     }
