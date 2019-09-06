@@ -3167,7 +3167,7 @@
       "house": "gendarmerie",
       "text": "Un gendarme adjoint volontaire s’est suicidé avec son arme de service, ce mercredi. Affecté à la base aérienne 126, son corps a été retrouvé sur la plage de Quarcione.",
       "section": "BA 126",
-      "location": " Ventiseri (Corse)",
+      "location": "Ventiseri (Corse)",
       "origin": "domtom",
       "gps": {
         "lat": 41.922992,
@@ -3185,6 +3185,38 @@
         {
           "url": "https://actupenit.com/2019/09/04/corse-un-jeune-gendarme-de-23-ans-se-suicide-a-laide-de-son-arme-de-service/",
           "titre": "Actupenit"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "09",
+      "day": "04",
+      "keywords": "",
+      "house": "police",
+      "text": "Un ancien policier du Port s'est suicidé avec son arme de service alors qu'il se battait pour obtenir sa réintégration dans la police après sa révocation. Père de quatre enfants il a été retrouvé sans vie à son domicile à Saint-Leu",
+      "section": "CSP Saint-Pierre",
+      "location": "Saint-Leu (Réunion)",
+      "origin": "domtom",
+      "gps": {
+        "lat": -21.174773,
+        "lon": 55.287824
+      },
+      "sources": [
+        {
+          "url": "https://la1ere.francetvinfo.fr/reunion/ancien-policier-retrouve-mort-son-domicile-saint-leu-746477.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.zinfos974.com/St-Leu-Un-policier-retrouve-mort-a-son-domicile_a144118.html",
+          "titre": "zinfos974"
+        },
+        {
+          "url": "http://www.ipreunion.com/actualites-reunion/reportage/2019/09/06/il-avait-une-trentaine-d-annees-un-ancien-policier-retrouve-mort-a-son-domicile,107488.html",
+          "titre": "Imazpress"
         }
       ]
     }
