@@ -3219,6 +3219,46 @@
           "titre": "Imazpress"
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "year": "2019",
+      "month": "09",
+      "day": "06",
+      "keywords": "Guillaume Massias, RN21, moirax",
+      "house": "pompier",
+      "text": "Un capitaine du SDIS à Foulayronnes a trouvé la mort dans un violent accident de circulation. Père de deux enfants il était en poste au service prévention du groupement opération-prévention-prévision du SDIS 47.",
+      "section": "SDIS 47",
+      "location": "Foulayronnes (Lot-et-Garonne)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 44.134610,
+        "lon": 0.659457
+      },
+      "sources": [
+        {
+          "url": "https://actu.fr/faits-divers/moirax-pompier-centre-departemental-trouve-mort-dans-une-collision_27053755.html",
+          "titre": "Actu.fr"
+        },
+        {
+          "url": "https://www.ladepeche.fr/2019/09/06/lot-et-garonne-deux-gendarmes-blesses-dans-une-collision-lun-est-heliporte-a-bordeaux,8397271.php",
+          "titre": "La depêche"
+        },
+        {
+          "url": "https://actupenit.com/2019/09/06/lot-et-garonne-un-pompier-trouve-la-mort-dans-une-collision-avec-un-poids-lourd/",
+          "titre": "Actupenit"
+        },
+        {
+          "url": "https://www.sudouest.fr/2019/09/06/lot-et-garonne-un-automobiliste-de-42-ans-se-tue-sur-la-route-6530149-3603.php",
+          "titre": "Sud Ouest"
+        },
+        {
+          "url": "https://twitter.com/sdis47/status/1169978608254930945",
+          "titre": "@sdis47 (Twitter)"
+        }
+      ]
     }
   ]
 }
