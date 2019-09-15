@@ -1,7 +1,8 @@
 export interface Death {
   cause: string;
   count: number;
-  published?: boolean;
+  published: boolean;
+  unpublished_reason?: string;
   year: string;
   month: string;
   day: string;
