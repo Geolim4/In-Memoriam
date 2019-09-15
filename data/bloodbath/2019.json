@@ -3191,7 +3191,8 @@
     {
       "cause": "suicide",
       "count": 1,
-      "published": true,
+      "published": false,
+      "unpublished_reason": "Pas un suicide d'après des informations récentes.",
       "year": "2019",
       "month": "09",
       "day": "04",
@@ -3263,43 +3264,50 @@
     {
       "cause": "suicide",
       "count": 1,
-      "published": true,
+      "published": false,
       "year": "2019",
       "month": "09",
-      "day": "10",
-      "keywords": "",
-      "house": "police",
-      "text": "Un motard de la police affecté à la DDSP de la Seine-Maritime a mis fin à ses jours. Celui-ci était en arrêt de travail depuis sa mission au G7.",
-      "section": "CSP Le havre / DDSP 76",
-      "location": "Le havre (Seine-Maritime)",
+      "day": "14",
+      "keywords": "WIP ...",
+      "house": "gendarmerie",
+      "text": "WIP ...",
+      "section": "WIP ...",
+      "location": "Maisons-Alfort",
       "origin": "interieur",
       "gps": {
-        "lat":  49.492297,
+        "lat": 49.492297,
         "lon": 0.120466
       },
       "sources": [
         {
-          "url": "https://actu17.fr/le-havre-un-policier-de-46-ans-sest-suicide/",
+          "url": "https://actu17.fr/val-de-marne-un-gendarme-se-suicide-dans-sa-caserne-a-maison-alfort/",
           "titre": "Actu17"
         },
         {
-          "url": "https://twitter.com/PoliceNat76/status/1171468147901128710",
-          "titre": "@PoliceNat76 (Twitter)"
-        },
-        {
-          "url": "https://www.ouest-france.fr/normandie/le-havre-76600/le-havre-un-policier-mis-fin-ses-jours-6513984",
-          "titre": "Ouest France"
-        },
-        {
-          "url": "https://actu.fr/normandie/havre_76351/suicides-dans-police-motard-havre-met-fin-ses-jours_27136268.html",
-          "titre": "Actu.fr"
-        },        {
-          "url": "http://www.lefigaro.fr/flash-actu/info-le-figaro-un-policier-du-havre-se-suicide-le-49e-depuis-le-debut-de-l-annee-20190910",
-          "titre": "Le Figaro"
-        },        {
-          "url": "https://actupenit.com/2019/09/10/le-havre-un-policier-de-la-direction-centrale-de-la-securite-publique-s-est-suicide/",
+          "url": "https://actupenit.com/2019/09/15/maison-alfort-nouveau-drame-dans-les-rangs-des-forces-de-lordre/",
           "titre": "Actupenit"
         }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": false,
+      "year": "2019",
+      "month": "09",
+      "day": "14",
+      "keywords": "WIP ...",
+      "house": "police",
+      "text": "WIP ...",
+      "section": "WIP ...",
+      "location": "Cergy",
+      "origin": "interieur",
+      "gps": {
+        "lat": 49.492297,
+        "lon": 0.120466
+      },
+      "sources": [
+
       ]
     }
   ]
