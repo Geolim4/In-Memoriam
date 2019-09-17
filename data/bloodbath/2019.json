@@ -3440,7 +3440,7 @@
       "day": "14",
       "keywords": "Marc Le Solleu",
       "house": "police",
-      "text": "Un commissaire de police de la circonscription de Cergy s'est suicidé avec son arme de service. Père de deux enfants il était affecté à ce commissariat depuis avril 2017.",
+      "text": "Un commissaire de police de la circonscription de Cergy s'est suicidé avec une arme autre que son arme administrative. Père de deux enfants il était affecté à ce commissariat depuis avril 2017.",
       "section": "CSP Cergy",
       "location": "Cergy (Val d'Oise)",
       "origin": "interieur",
@@ -3468,6 +3468,31 @@
         {
           "url": "https://www.20minutes.fr/faits_divers/2605399-20190916-cergy-pontoise-commissaire-police-retrouve-mort-domicile-femme-garde-vue",
           "titre": "20 minutes"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "09",
+      "day": "15",
+      "keywords": "",
+      "house": "admpen",
+      "text": "Un surveillant Brigadier du centre pénitentiaire de Borgo s'est suicidé. Peu d'informations disponibles sur ce suicide.",
+      "section": "Maison d'arrêt de Borgo",
+      "location": "Borgo (Corse)",
+      "origin": "domtom",
+      "gps": {
+        "lat": 42.577651,
+        "lon": 9.446075
+      },
+      "sources": [
+        {
+          "url": "https://actupenit.com/2019/09/17/borgo-un-surveillant-du-centre-penitentiaire-a-mis-fin-a-ses-jours/",
+          "titre": "ActuPenit"
         }
       ]
     }
