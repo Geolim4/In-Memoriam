@@ -157,7 +157,7 @@ export class App {
             option.dataset.deathCount = '0';
             for (const key in unfilteredResponse.deaths) {
               const death = unfilteredResponse.deaths[key];
-              if (option.value === death[select.name]) {
+              if (option.value === death[select.name] && death.published) {
                 option.dataset.deathCount = `${+(option.dataset.deathCount) + death.count}`;
               }
             }
