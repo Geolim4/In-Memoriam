@@ -3495,6 +3495,43 @@
           "titre": "ActuPenit"
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "09",
+      "day": "19",
+      "keywords": "",
+      "house": "police",
+      "text": "Un policier du Ciat de Louvroil a mis fin à ses jours avec son arme de service. Affecté depuis deux ans au  Ciat de Louvroil il était marié et père de deux enfants.",
+      "section": "CSP Louvroil",
+      "location": "Louvroil (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  50.257780,
+        "lon":  3.950672
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/hauts-de-france-un-policier-affecte-a-maubeuge-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/louvroil-policier-se-suicide-au-commissariat-son-arme-service-1724935.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/639801/article/2019-09-19/un-policier-se-suicide-au-commissariat-de-louvroil",
+          "titre": "La VDN"
+        },
+        {
+          "url": "https://www.lci.fr/police/nord-fait-divers-un-policier-met-fin-a-ses-jours-au-poste-de-police-de-louvroil-avec-son-arme-de-service-2132643.html",
+          "titre": "LCI"
+        }
+      ]
     }
   ]
 }
