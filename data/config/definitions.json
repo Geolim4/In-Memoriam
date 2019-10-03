@@ -22,8 +22,8 @@
         "plural": "<span class=\"label label-danger\">%d</span> morts accidentelles"
       },
       "murdered": {
-        "singular": "<span class=\"label label-danger\">%d</span> assassiné",
-        "plural": "<span class=\"label label-danger\">%d</span> assassinés"
+        "singular": "<span class=\"label label-danger\">%d</span> meurtre",
+        "plural": "<span class=\"label label-danger\">%d</span> meurtres"
       }
     },
     "house": {

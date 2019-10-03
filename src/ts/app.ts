@@ -255,7 +255,7 @@ export class App {
               <br /><br />
               <strong>Cause</strong>: ${App.getFilterValueLabel('cause', death.cause)}
               <br /><br />
-              <strong>Circonstances</strong>:  ${death.text}
+              <strong>Circonstances</strong>:  ${death.text.replace('\n', '<br />')}
             </span>`;
 
         if (death.sources && death.sources.length) {
@@ -287,7 +287,7 @@ export class App {
         }
         heatMapData.push({
           location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
-          weight: 10 + (death.count > 1 ? (death.count * 5) : 0),
+          weight: 10 * (death.count > 1 ? Math.pow(2, death.count) : 1),
         });
         this._markers.push(marker);
       }
