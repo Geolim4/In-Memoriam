@@ -1401,15 +1401,15 @@
       "year": "2019",
       "month": "04",
       "day": "18",
-      "keywords": "",
+      "keywords": "préfecture",
       "house": "police",
       "text": "Un jeune policier de la DOPC se suicide avec son arme de service. Il était chargé des actions de sensibilisation et préventions dans les écoles, les salons et autres événements.",
       "section": "DRSR (DOPC)",
       "location": "Paris 4e",
       "origin": "interieur",
       "gps": {
-        "lat": 48.854916,
-        "lon": 2.345741
+        "lat": 48.854157,
+        "lon": 2.345969
       },
       "sources": [
         {
@@ -3446,7 +3446,7 @@
       "origin": "interieur",
       "gps": {
         "lat": 49.038314,
-        "lon":  2.086410
+        "lon": 2.086410
       },
       "sources": [
         {
@@ -3511,8 +3511,8 @@
       "location": "Louvroil (Nord)",
       "origin": "interieur",
       "gps": {
-        "lat":  50.257780,
-        "lon":  3.950672
+        "lat": 50.257780,
+        "lon": 3.950672
       },
       "sources": [
         {
@@ -3530,6 +3530,51 @@
         {
           "url": "https://www.lci.fr/police/nord-fait-divers-un-policier-met-fin-a-ses-jours-au-poste-de-police-de-louvroil-avec-son-arme-de-service-2132643.html",
           "titre": "LCI"
+        }
+      ]
+    },
+    {
+      "cause": "murdered",
+      "count": 3,
+      "published": true,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "10",
+      "day": "03",
+      "keywords": "Mickaël, DRPP",
+      "house": "police",
+      "text": "Un agent administratif a attaqués des policiers et agents administratifs de la Préfecture de Police. \n Trois policiers de la DRPP ainsi qu'un agent administratif sont décédés des suites de leurs blessures. L'attaquant a été abattu par un policier après plusieurs sommations.",
+      "section": "Préfecture de Police",
+      "location": "Paris",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.854729,
+        "lon": 2.347289
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/paris-un-homme-arme-dun-couteau-a-attaque-des-policiers-a-la-prefecture-de-police/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.francetvinfo.fr/faits-divers/police/direct-attaque-couteau-homme-arme-paris-policier-prefecture-police-parquet-blesse-cite_3642867.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2619719-20191003-video-attaque-couteau-prefecture-police-motivations-assaillant-restent-floues",
+          "titre": "20 Minutes"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/paris-un-homme-arme-abattu-a-l-interieur-de-la-prefecture-deux-policiers-blesses-03-10-2019-8165307.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/paris-un-policier-grievement-blesse-apres-une-agression-au-couteau-a-la-prefecture-de-police-1780003.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "http://www.lefigaro.fr/actualite-france/attaque-au-couteau-a-la-prefecture-de-police-de-paris-syndicats-20191003",
+          "titre": "Le Figaro"
         }
       ]
     }

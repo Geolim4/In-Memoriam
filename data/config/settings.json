@@ -10,7 +10,7 @@
     },
     "heatmapOptions": {
       "dissipating": true,
-      "opacity": 0.3,
+      "opacity": 0.4,
       "radius": 100
     },
     "imagePath": {
