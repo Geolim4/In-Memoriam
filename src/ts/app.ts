@@ -237,7 +237,7 @@ export class App {
 
       for (const key in filteredResponse.deaths) {
         const death = filteredResponse.deaths[key];
-        const houseImage = this._imgHousePath.replace('%house%', death.house);
+        const houseImage = this._imgHousePath.replace('%house%', (death.count > 1 ? `${death.house}-m` : death.house));
         const marker = new google.maps.Marker({
           map,
           icon: new (google.maps as any).MarkerImage(houseImage),
@@ -268,9 +268,9 @@ export class App {
         }
 
         const mailtoSubject = `Erreur trouvée - ${death.section} + -  ${death.day}/${death.month}/${death.year}`;
-        infoWindowsContent += `<br /><small style="float: right"><a href="mailto:${this._configObject.config.contactEmail}?subject=${mailtoSubject}">[Une erreur ?]</a></small>`;
+        infoWindowsContent += `<br /><small class="report-error"><a href="mailto:${this._configObject.config.contactEmail}?subject=${mailtoSubject}">[Une erreur ?]</a></small>`;
 
-        const infoWindows = new google.maps.InfoWindow({ content: infoWindowsContent });
+        const infoWindows = new google.maps.InfoWindow({ content: `<div class="death-container${death.count > 1 ? ' multiple-deaths' : ''}">${infoWindowsContent}</div>` });
         google.maps.event.addListener(marker, 'click', () => {
           if (this._currentInfoWindows) {
             this._currentInfoWindows.close();
@@ -287,7 +287,7 @@ export class App {
         }
         heatMapData.push({
           location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
-          weight: 10 * (death.count > 1 ? Math.pow(2, death.count) : 1),
+          weight: 10 * (death.count > 1 ? 5 : 1),
         });
         this._markers.push(marker);
       }

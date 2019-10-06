@@ -9,9 +9,9 @@
       "libraries": ["visualization"]
     },
     "heatmapOptions": {
-      "dissipating": true,
+      "dissipating": false,
       "opacity": 0.4,
-      "radius": 100
+      "radius": 1
     },
     "imagePath": {
       "random": "./assets/images/map/random.png",
