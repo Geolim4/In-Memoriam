@@ -857,7 +857,7 @@
       "keywords": "",
       "house": "police",
       "text": "Un policier de la 22e CI de Paris se suicide avec son arme de service. Découvert sans vie à son domicile par ses collègues, il était père d'un petit garçon.",
-      "section": "22e CI / DOPC",
+      "section": "22e CI (DOPC)",
       "location": "Paris 12e",
       "origin": "interieur",
       "gps": {
@@ -1226,8 +1226,8 @@
       "day": "14",
       "keywords": "",
       "house": "police",
-      "text": "Un policier de la DOPC (UTJDR) se suicide à son domicile avec son arme de service.",
-      "section": "DOPC (UTJDR)",
+      "text": "Un policier de l'UTJDR se suicide à son domicile avec son arme de service.",
+      "section": "UTJDR (DOPC)",
       "location": "Paris 13e",
       "origin": "interieur",
       "gps": {
@@ -3171,7 +3171,7 @@
       "keywords": "sandra, boxeuse, championne, boxe",
       "house": "police",
       "text": "Une policière s'est suicidé avec son arme de service sur le parking de son logement à Drancy. Retrouvée sans vie par son compagnon en état de choc, elle était affectée à la 21e CI de la DOPC.",
-      "section": "21e CI / DOPC",
+      "section": "21e CI (DOPC)",
       "location": "Paris 19e",
       "origin": "interieur",
       "gps": {
@@ -3541,9 +3541,9 @@
       "year": "2019",
       "month": "10",
       "day": "03",
-      "keywords": "Michael Harpon, DRPP, Damien, Brice, Anthony, Aurélia",
+      "keywords": "Michael Harpon, DRPP, Aurélia Trifiro, Brice Le Mescam, Damien Ernest, Anthony Lancelot",
       "house": "police",
-      "text": "Un agent administratif a attaqués des policiers et agents administratifs de la Préfecture de Police. \n Trois policiers de la DRPP ainsi qu'un agent administratif sont décédés des suites de leurs blessures. L'attaquant a été abattu par un policier après plusieurs sommations.",
+      "text": "Un agent administratif a attaqués des policiers et agents administratifs de la Préfecture de Police. \n Trois policiers de la DRPP ainsi qu'un agent administratif sont décédés des suites de leurs blessures. L'attaquant a été abattu par un policier après plusieurs sommations. Sur les quatres fonctionnaires tués, 3 d'entre eux étaient chacun parent de deux enfants.",
       "section": "Préfecture de Police",
       "location": "Paris",
       "origin": "interieur",
@@ -3575,6 +3575,55 @@
         {
           "url": "http://www.lefigaro.fr/actualite-france/attaque-au-couteau-a-la-prefecture-de-police-de-paris-syndicats-20191003",
           "titre": "Le Figaro"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "10",
+      "day": "09",
+      "keywords": "vincent",
+      "house": "police",
+      "text": "Un gardien de la paix du dépôt du TGI de Bobigny (Seine-Saint-Denis), s’est suicidé dans les locaux du TGI avec son arme de service tôt le matin. Célibataire et sans enfant, il était affecté à la brigade nuit (BN) du dépôt.",
+      "section": "Dépôt de police TGI (DSPAP)",
+      "location": "Bobigny (Seine-Saint-Denis)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.909373,
+        "lon": 2.450061
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/seine-saint-denis-un-policier-sest-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.francetvinfo.fr/faits-divers/police/seine-saint-denis-un-policier-de-34-ans-se-suicide-au-tribunal-de-grande-instance-de-bobigny_3651163.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "http://www.leparisien.fr/seine-saint-denis-93/seine-saint-denis-un-policier-se-suicide-au-tribunal-de-bobigny-09-10-2019-8169210.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://rmc.bfmtv.com/emission/un-policier-se-suicide-avec-son-arme-de-service-a-bobigny-1783455.html",
+          "titre": "RMC"
+        },
+        {
+          "url": "https://www.nouvelobs.com/justice/20191009.OBS19527/un-policier-se-suicide-dans-l-enceinte-du-tribunal-de-bobigny.html",
+          "titre": "L'OBS"
+        },
+        {
+          "url": "https://www.europe1.fr/faits-divers/info-europe-1-nouveau-suicide-dun-policier-mercredi-matin-au-tribunal-de-bobigny-3924373",
+          "titre": "Europe 1"
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-se-suicide-avec-son-arme-de-service-au-tribunal-de-grande-instance-de-bobigny-1570609102",
+          "titre": "France Bleu"
         }
       ]
     }
