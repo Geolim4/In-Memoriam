@@ -325,7 +325,7 @@ export class App {
       }
 
       Permalink.build(filters);
-      this.printDefinitionsText(response);
+      this.printDefinitionsText(response, filters);
       map.fitBounds(bounds);
     });
 
@@ -442,25 +442,31 @@ export class App {
 
   private getDefinitions(response: Bloodbath): Object {
     const definitions = {};
-    for (const fKey in this.getConfigDefinitions()) {
+    const configDefinitions = this.getConfigDefinitions();
+
+    for (const fKey in configDefinitions) {
       for (const dKey in response.deaths) {
         if (response.deaths.hasOwnProperty(dKey)) {
           const death = response.deaths[dKey];
+          const counterProperty = <string> (configDefinitions[fKey]['#counter_property'] ? configDefinitions[fKey]['#counter_property'] : 'death');
+          const counterStrategy = <string> (configDefinitions[fKey]['#counter_strategy'] ? configDefinitions[fKey]['#counter_strategy'] : 'distinct');
+          const counterIndex = (counterStrategy === 'distinct' ? death[fKey] : 0);
+
           if (!definitions[fKey]) {
             definitions[fKey] = {};
           }
-          if (!definitions[fKey][death[fKey]]) {
-            definitions[fKey][death[fKey]] = 0;
+          if (!definitions[fKey][counterIndex]) {
+            definitions[fKey][counterIndex] = 0;
           }
-          if (Number.isInteger(death.count) && death.count > 1) {
-            definitions[fKey][death[fKey]] += death.count;
-          } else {
-            definitions[fKey][death[fKey]]++;
+
+          if (Number.isInteger(death[counterProperty])) {
+            definitions[fKey][counterIndex] += death[counterProperty];
           }
         }
       }
     }
 
+    console.log(definitions);
     return definitions;
   }
 
@@ -480,7 +486,7 @@ export class App {
     return latestDeath;
   }
 
-  private printDefinitionsText(response: Bloodbath): void {
+  private printDefinitionsText(response: Bloodbath, filters?: Filters): void {
     const definitionTexts = [];
     if (response) {
       const definitions = this.getDefinitions(response);
@@ -490,21 +496,25 @@ export class App {
       for (const [fieldKey, field] of Object.entries(definitions)) {
         let definitionText = '';
         for (const [fieldValue, count] of Object.entries(field)) {
-          const isPlural = count > 1;
+          const plurality = (count > 0 ? (count > 1 ? 'plural' : 'singular') : 'none');
+
           if (configDefinitions[fieldKey][fieldValue]) {
-            const text = configDefinitions[fieldKey][fieldValue][isPlural ? 'plural' : 'singular'];
+            const text = configDefinitions[fieldKey][fieldValue][plurality];
             definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace(`%${fieldKey}%`, fieldValue);
           } else if (configDefinitions[fieldKey]['#any']) {
-            const text = configDefinitions[fieldKey]['#any'][isPlural ? 'plural' : 'singular'];
+            const text = configDefinitions[fieldKey]['#any'][plurality];
             definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace(`%${fieldKey}%`, fieldValue);
           } else {
             definitionText += (definitionText ? ', ' : '') + (`[${fieldValue}] (${count})`);
           }
+          definitionText = definitionText.replace(/%([a-zA-Z_]+)%/, (arg1, arg2): string => {
+            return (filters && filters[arg2] !== undefined ? filters[arg2] : arg1);
+          });
         }
         definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
       }
       definitionTexts.push('');
-      definitionTexts.push(`<em>Dernier décès indexé: ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${latestDeath.location}</em>`);
+      definitionTexts.push(`<em>Dernier décès indexé: ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${latestDeath.location} - ${latestDeath.section}</em>`);
     } else {
       definitionTexts.push(`<div class="alert alert-warning" role="alert">
                       <p>

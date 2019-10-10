@@ -2,6 +2,7 @@ export interface Death {
   cause: string;
   count: number;
   published: boolean;
+  orphans: number;
   unpublished_reason?: string;
   year: string;
   month: string;
