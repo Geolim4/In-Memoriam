@@ -3677,6 +3677,52 @@
       ]
     },
     {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "10",
+      "day": "07",
+      "keywords": "",
+      "house": "armee",
+      "text": "Un agent de la DGSE est décédé à la suite d'un accident de tir au CPES de Cercottes. Au cours d’un entraînement à balles réelles, l’agent a été mortellement touché par un tir accidentel. Aucune information disponible quand à la l'identité de la personne de par la nature de ses missions.",
+      "section": "DGSE (Ministère des Armées)",
+      "location": "Cercottes (Loiret)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 47.956313,
+        "lon": 1.910223
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/loiret-un-agent-de-la-dgse-tue-par-balle-lors-dun-entrainement/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.francetvinfo.fr/economie/emploi/metiers/armee-et-securite/info-franceinfo-un-agent-de-la-dgse-est-mort-au-cours-d-un-entrainement-dans-le-loiret_3654687.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.larep.fr/cercottes-45520/actualites/un-agent-de-la-dgse-tue-au-cours-d-un-entrainement-a-cercottes-dans-le-loiret_13661437/",
+          "titre": "La République"
+        },
+        {
+          "url": "http://www.opex360.com/2019/10/11/un-militaire-de-la-dgse-tue-par-un-tir-accidentel-a-cercottes/",
+          "titre": "Opex 360"
+        },
+        {
+          "url": "https://www.lexpress.fr/actualite/societe/fait-divers/un-agent-de-la-dgse-meurt-lors-d-un-entrainement-dans-le-loiret_2102858.html",
+          "titre": "L'express"
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-militaire-de-la-dgse-tue-dans-un-accident-de-tir-a-cercottes-loiret-1570799902",
+          "titre": "France Bleu"
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
