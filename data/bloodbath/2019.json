@@ -3771,6 +3771,52 @@
           "titre": "France Bleu"
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "10",
+      "day": "12",
+      "keywords": "Nicolas REVELLO",
+      "house": "police",
+      "text": "Un secouriste expérimenté de la CRS-Alpes (Grenoble) est décédé lors d'un intervention de secours à des alpinistes en difficulté. Il aurait dévissé d'une chute de 150m, pris en charge par le médecin d'intervention il est décédé à l'hôpital de Grenoble. Père de deux enfants il était affecté à l'unité de secours en montagne depuis une vingtaine d'années.",
+      "section": "CRS 47 / CRS-Alpes",
+      "location": "Grenoble (Isère)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  45.176424,
+        "lon": 5.703974
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/alpes-un-crs-de-haute-montagne-trouve-la-mort-lors-dune-intervention-de-secours/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/hautes-alpes-un-secouriste-decede-lors-d-un-secours-en-montagne-20191012",
+          "titre": "La Provence"
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/hautes-alpes-un-secouriste-decede-lors-d-un-secours-en-montagne-20191012",
+          "titre": "Le Figaro"
+        },
+        {
+          "url": "https://twitter.com/PoliceNat38/status/1183082784908296193",
+          "titre": "@PoliceNat38 (Twitter)"
+        },
+        {
+          "url": "https://www.ledauphine.com/isere-sud/2019/10/12/un-secouriste-en-montagne-de-la-crs-alpes-de-grenoble-est-decede",
+          "titre": "Le Dauphiné"
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/grenoble-un-secouriste-de-la-crs-alpes-de-grenoble-est-decedee-lors-d-une-intervention-en-montagne-1570906414",
+          "titre": "France Bleu"
+        }
+      ]
     }
   ]
 }
