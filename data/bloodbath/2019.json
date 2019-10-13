@@ -3499,10 +3499,10 @@
       "year": "2019",
       "month": "09",
       "day": "14",
-      "keywords": "",
+      "keywords": "EGM",
       "house": "gendarmerie",
       "text": "Un gendarme de la caserne de gendarmerie mobile de Maisons-Alfort s'est suicidé dans son logement avec son arme de service. Peu d'informations disponibles sur ce suicide.",
-      "section": "EGM (Escadron Inconnu)",
+      "section": "GGM II/1  (Escadron Inconnu)",
       "location": "Maisons-Alfort",
       "origin": "interieur",
       "gps": {
@@ -3815,6 +3815,52 @@
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/grenoble-un-secouriste-de-la-crs-alpes-de-grenoble-est-decedee-lors-d-une-intervention-en-montagne-1570906414",
           "titre": "France Bleu"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "10",
+      "day": "12",
+      "keywords": "EGM",
+      "house": "gendarmerie",
+      "text": "Un gendarme s’est suicidé avec son arme de service dans l’enceinte du pôle régional de gendarmerie à Sathonay-Camp. Il laisse derrière lui un lettre expliquant son geste.",
+      "section": "GGM I/5 (Escadron Inconnu)",
+      "location": "Sathonay-Camp (Rhône).",
+      "origin": "interieur",
+      "gps": {
+        "lat":  45.820840,
+        "lon":  4.868264
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/rhone-un-gendarme-sest-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.laprovence.com/actu/en-direct/5717382/un-gendarme-se-suicide-avec-son-arme-de-service-pres-de-lyon.html",
+          "titre": "La Provence"
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/un-gendarme-mobile-se-suicide-au-qg-regional-pres-de-lyon-20191013",
+          "titre": "Le Figaro"
+        },
+        {
+          "url": "https://www.leprogres.fr/rhone-69-edition-val-de-saone/2019/10/13/suicide-d-un-gendarme-mobile-au-pole-regional-de-gendarmerie-de-sathonay-camp",
+          "titre": "Le progrès"
+        },
+        {
+          "url": "https://www.20minutes.fr/lyon/2627091-20191013-lyon-gendarme-mobile-suicide-quartier-general-regional",
+          "titre": "20 Minutes"
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/un-gendarme-mobile-se-suicide-au-quartier-general-regional-pres-de-lyon-1786721.html",
+          "titre": "BFM"
         }
       ]
     }
