@@ -1603,7 +1603,7 @@
       "year": "2019",
       "month": "05",
       "day": "06",
-      "keywords": "",
+      "keywords": "GGM",
       "house": "gendarmerie",
       "text": "Un gendarme de l'escadron mobile de Aunay-sur-Odon s'est suicidé avec son arme de service. Il était père d'un enfant.",
       "section": "EGM 24/3",
@@ -3788,7 +3788,7 @@
       "location": "Grenoble (Isère)",
       "origin": "interieur",
       "gps": {
-        "lat":  45.176424,
+        "lat": 45.176424,
         "lon": 5.703974
       },
       "sources": [
@@ -3834,8 +3834,8 @@
       "location": "Sathonay-Camp (Rhône).",
       "origin": "interieur",
       "gps": {
-        "lat":  45.820840,
-        "lon":  4.868264
+        "lat": 45.820840,
+        "lon": 4.868264
       },
       "sources": [
         {
@@ -3861,6 +3861,44 @@
         {
           "url": "https://www.bfmtv.com/police-justice/un-gendarme-mobile-se-suicide-au-quartier-general-regional-pres-de-lyon-1786721.html",
           "titre": "BFM"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "10",
+      "day": "14",
+      "keywords": "Michaël",
+      "house": "police",
+      "text": "Un gardien de la paix de la Formation Motocycliste Urbaine (FMU) c'est suicidé avec son arme de service. Père de famille il était en fonction au poste de Trith-Saint-Léger.",
+      "section": "FMU Valenciennes",
+      "location": "Cambrésis (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 50.355159,
+        "lon": 3.518339
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/nord-un-policier-affecte-a-valenciennes-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/nord-0/valenciennes/valenciennes-policier-s-est-suicide-son-arme-service-1736305.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/651553/article/2019-10-14/un-policier-du-valenciennois-se-serait-suicide-son-domicile-dans-le-cambresis",
+          "titre": "La voix du Nord"
+        },
+        {
+          "url": "https://twitter.com/PoliceNat59/status/1183731788469940226",
+          "titre": "@PoliceNat59 (Twitter)"
         }
       ]
     }
