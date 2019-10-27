@@ -3901,6 +3901,40 @@
           "titre": "@PoliceNat59 (Twitter)"
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "10",
+      "day": "25",
+      "keywords": "Mdl, Sébastien Devaud",
+      "house": "gendarmerie",
+      "text": "Un gendarme du PSIG d'Ancenis est décédé suite à un malaise pendant une patrouille de surveillance nocturne. Marié et père d'une fille le maréchal des logis-chef n'a pu être réanimé.",
+      "section": "PSIG Ancenis",
+      "location": "Ancenis (Loire-Atlantique)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  47.370773,
+        "lon":  -1.187142
+      },
+      "sources": [
+        {
+          "url": "https://actupenit.com/2019/10/25/un-gendarme-fait-un-malaise-lors-dune-patrouille-et-ne-peut-etre-reanime/",
+          "titre": "Actupenit"
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/index.php/2019/10/25/7147/",
+          "titre": "La voix du gendarme"
+        },
+        {
+          "url": "https://unprg.fr/2019/10/25/deces-dun-camarade/",
+          "titre": "UNPRG"
+        }
+      ]
     }
   ]
 }
