@@ -48,6 +48,7 @@
   "dependencies": {
     "@google/markerclusterer": "^1.0.3",
     "bootstrap": "^3.4.1",
+    "es6-promise": "^4.2.8",
     "jquery": "^3.4.1",
     "load-google-maps-api": "^2.0.1",
     "popper.js": "^1.15.0",
