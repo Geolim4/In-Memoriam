@@ -264,7 +264,7 @@ export class App {
             const source = death.sources[key];
             sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${source.titre}</a>`);
           }
-          infoWindowsContent += `<br /><br /><strong>Sources: </strong>${sourcesText}`;
+          infoWindowsContent += `<br /><br /><div class="death-sources"><strong>Sources: </strong>${sourcesText}</div>`;
         }
 
         const mailtoSubject = `Erreur trouvée - ${death.section} + -  ${death.day}/${death.month}/${death.year}`;
