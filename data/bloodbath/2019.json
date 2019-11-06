@@ -200,7 +200,7 @@
         },
         {
           "url": "https://www.defense.gouv.fr/fre/actualites/la-vie-du-ministere/inmemoriam-deces-du-capitaine-baptiste-chirie-et-de-la-lieutenant-audrey-michelon",
-          "titre": "Ministère des Armées - Hommage"
+          "titre": "MINARM - Hommage"
         }
       ]
     },
@@ -1034,7 +1034,7 @@
       "sources": [
         {
           "url": "https://www.defense.gouv.fr/sante/actualites/in-memoriam-deces-du-medecin-marc-laycuras",
-          "titre": "Ministère des Armées - Hommage"
+          "titre": "MINARM - Hommage"
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/correze/tulle/medecin-militaire-tue-au-mali-marc-laycuras-inhume-correze-1652610.html",
@@ -1526,7 +1526,7 @@
       "keywords": "",
       "house": "armee",
       "text": "Un militaire du 4e régiment de Chasseurs basé à Gap (Hautes-Alpes) s’est suicidé avec son arme de service. Il se serait éloigné de son groupe pour s’isoler et se donner la mort.",
-      "section": "4e RCh",
+      "section": "4e RCh (Armée de Terre)",
       "location": "Gap (Hautes-Alpes)",
       "origin": "interieur",
       "gps": {
@@ -1644,7 +1644,7 @@
       "keywords": "",
       "house": "armee",
       "text": "Lors d'une opération de libération d'otages au Burkina Faso, le maître Cédric de Pierrepont et le maître Alain Bertoncello ont perdu la vie lors du raid. Tout deux étaient des militaires hautement expérimentés et décorés.",
-      "section": "Commando Hubert, Marine Nationale",
+      "section": "Commando Hubert (Marine Nationale)",
       "location": "Burkina Faso",
       "origin": "opex",
       "gps": {
@@ -1792,7 +1792,7 @@
       "keywords": "",
       "house": "armee",
       "text": "Un chasseur du 501e régiment de chars de combat de Moumelon-le-Grand dans la Marne est décédé des suites de ses blessures dans une OPEX au sud du Liban en février 2018.",
-      "section": "501e RCC",
+      "section": "501e RCC (Armée de Terre)",
       "location": "Mourmelon-le-Grand (Marne)",
       "origin": "opex",
       "gps": {
@@ -2292,7 +2292,7 @@
       "keywords": "",
       "house": "armee",
       "text": "Un jeune soldat du 27ème Bataillon de Chasseurs Alpins d’Annecy se suicide avec une arme à feu durant un exercice au camp militaire de Caylus, dans le Tarn-et-Garonne.",
-      "section": "27ème BCA",
+      "section": "27ème BCA (Armée de Terre)",
       "location": "Caylus (Tarn-et-Garonne)",
       "origin": "interieur",
       "gps": {
@@ -2474,7 +2474,7 @@
       "keywords": "",
       "house": "police",
       "text": "Un policier de la CSP d'Annecy s'est suicide avec son arme de service dans son véhicule personnel sur le parking du commissariat.",
-      "section": "BAC CSP",
+      "section": "BAC - CSP",
       "location": "Annecy (Haute-Savoie)",
       "origin": "interieur",
       "gps": {
@@ -2558,7 +2558,7 @@
       "keywords": "",
       "house": "armee",
       "text": "Un caporal-chef réserviste s’est donné la mort avec son arme de service dans l’enceinte des Ecoles militaires de Saumur (EMS) en marge des cérémonies du 14-Juillet. Un problème familial serait à l'origine du drame.",
-      "section": "RICM (9e BIMa)",
+      "section": "RICM (9e BIMa, Armée de Terre)",
       "location": "Saumur (Maine-et-Loire)",
       "origin": "interieur",
       "gps": {
@@ -2600,7 +2600,7 @@
       "keywords": "",
       "house": "armee",
       "text": "Trois militaires français sont décédés accidentellement dans le cadre de la mission « Harpie » de lutte contre l’orpaillage illégal en Guyane lors d'une opération « Wilau » dans une zone isolée en forêt du secteur « Saint-Jean/Abounami » dans la région de Maripasoula.",
-      "section": "9e RIMa (Dét. 19e RG)",
+      "section": "9e RIMa (Dét. 19e RG, Armée de Terre)",
       "location": "St-Jean d’Abounami (Guyane)",
       "origin": "domtom",
       "gps": {
@@ -3918,8 +3918,8 @@
       "location": "Ancenis (Loire-Atlantique)",
       "origin": "interieur",
       "gps": {
-        "lat":  47.370773,
-        "lon":  -1.187142
+        "lat": 47.370773,
+        "lon": -1.187142
       },
       "sources": [
         {
@@ -3933,6 +3933,148 @@
         {
           "url": "https://unprg.fr/2019/10/25/deces-dun-camarade/",
           "titre": "UNPRG"
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "11",
+      "day": "02",
+      "keywords": "Ronan POINTEAU, Barkhane, régiment de Spahis",
+      "house": "armee",
+      "text": "Un militaire français du 1er régiment de spahis de Valence a été tué au Mali, dans la région de Menaka. Son convoi a été pris au piège dans une IED improvisé.",
+      "section": "1er RS (6e BLB, Armée de Terre)",
+      "location": "Région de Menaka, Mali",
+      "origin": "opex",
+      "gps": {
+        "lat": 15.917866,
+        "lon": 2.383294
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-soldat-francais-en-operation-a-ete-tue-au-mali-annonce-lelysee/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.huffingtonpost.fr/entry/un-soldat-francais-tue-en-operation-au-mali_fr_5dbdbc8fe4b0576b62a2c338",
+          "titre": "Huff Post"
+        },
+        {
+          "url": "https://www.lefigaro.fr/international/un-soldat-francais-tue-au-mali-20191102",
+          "titre": "Le Figaro"
+        },
+        {
+          "url": "https://www.francetvinfo.fr/monde/afrique/mali/guerre-au-mali/un-militaire-francais-a-ete-tue-au-mali-par-un-engin-explosif_3685865.html",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.lepoint.fr/societe/un-militaire-francais-tue-au-mali-par-un-engin-explosif-02-11-2019-2344878_23.php",
+          "titre": "Le Point"
+        },
+        {
+          "url": "https://www.defense.gouv.fr/operations/actualites2/mort-en-operation-du-brigadier-ronan-pointeau",
+          "titre": "MINARM - Hommage"
+        },
+        {
+          "url": "https://twitter.com/CEMAT_FR/status/1190690913242226689",
+          "titre": "@CEMAT_FR (Twitter)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "11",
+      "day": "05",
+      "keywords": "Grégory",
+      "house": "police",
+      "text": "Un policier affecté à la BSTC de de la circonscription de Nantes s'est suicidé à son domicile avec son arme de service. Agé de 38 ans et sans enfants, il aurait laissé une lettre derrière lui expliquant les raisons de son geste.",
+      "section": "BSTC - CSP Nantes",
+      "location": "Nantes (Loire-Atlantique)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 47.227579,
+        "lon": -1.551646
+      },
+      "sources": [
+        {
+          "url": "https://actupenit.com/2019/11/04/nantes-nouveau-drame-dans-les-rangs-de-la-police-nationale/",
+          "titre": "Actupenit"
+        },
+        {
+          "url": "https://actu17.fr/un-policier-de-38-ans-affecte-a-nantes-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://twitter.com/PoliceNat44/status/1191659928706068480",
+          "titre": "@PoliceNat44 (Twitter)"
+        },
+        {
+          "url": "https://www.ouest-france.fr/pays-de-la-loire/nantes-44000/un-policier-nantais-se-donne-la-mort-avec-son-arme-de-service-f8565286-ffa6-11e9-a439-20de9ba1463f",
+          "titre": "Ouest France"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/un-policier-se-suicide-avec-son-arme-de-service-a-nantes-05-11-2019-8186817.php",
+          "titre": "Le Parisien"
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/nantes-un-policier-se-suicide-avec-son-arme-de-service-1800279.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "https://www.rtl.fr/actu/justice-faits-divers/nantes-un-policier-de-38-ans-a-mis-fin-a-ses-jours-7799398530",
+          "titre": "RTL"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 4,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "11",
+      "day": "05",
+      "keywords": "Pascal Cini",
+      "house": "gendarmerie",
+      "text": "Un gendarme adjudant-chef, commandant la brigade de proximité (BP) de Saint Vallier de Thiey (Cob de Peymeinade-compagnie de Grasse), s'est suicidé avec son arme de service. Il était âgé de 53 ans, marié et père de quatre enfants.",
+      "section": "Brigade de Proximité",
+      "location": "Saint Vallier de Thiey (Alpes Maritimes)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.693304,
+        "lon": 6.858785
+      },
+      "sources": [
+        {
+          "url": "https://actupenit.com/2019/11/04/la-serie-noire-continue-chez-les-forces-de-lordre-avec-le-suicide-dun-gendarme/",
+          "titre": "Actupenit"
+        },
+        {
+          "url": "https://actu17.fr/alpes-maritimes-un-gendarme-de-53-ans-sest-donne-la-mort/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://lessor.org/a-la-une/un-gendarme-des-alpes-maritimes-met-fin-a-ses-jours/",
+          "titre": "L'Essor"
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/index.php/2019/11/04/in-memoriam-un-gendarme-des-alpes-maritimes-a-decide-de-nous-quitter/",
+          "titre": "La voix du gendarme"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/suicide-dun-commandant-de-brigade-pere-de-4-enfants/",
+          "titre": "Profession Gendarme"
         }
       ]
     }
