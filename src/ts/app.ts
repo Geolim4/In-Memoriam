@@ -25,6 +25,8 @@ export class App {
   private _markers: google.maps.Marker[];
   private readonly _eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
   private readonly _imgHousePath: string;
+  private heatmapEnabled: boolean;
+  private clusteringEnabled: boolean;
 
   constructor() {
     this._currentInfoWindows = null;
@@ -35,6 +37,8 @@ export class App {
     this._markerCluster = null;
     this._markers = [];
     this._configObject = null;
+    this.heatmapEnabled = true;
+    this.clusteringEnabled = true;
   }
 
   private static getFilterValueLabel(filterName: string, filterValue: string): string {
@@ -70,12 +74,16 @@ export class App {
       this.setupSkeleton();
       this.bindAnchorEvents(map, mapElement, formElement);
       this.bindFilters(map, mapElement, formElement);
-      this.bindLocalizationButton(map);
-      this.bindRandomizationButton(map);
+      this.bindCustomButtons(map);
       this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
-
     });
+  }
 
+  private bindCustomButtons(map: google.maps.Map): void {
+    this.bindLocalizationButton(map);
+    this.bindRandomizationButton(map);
+    this.bindHeatmapButton(map);
+    this.bindClusteringButton(map);
   }
 
   private getConfigDefinitions(): Definition[] {
@@ -216,6 +224,13 @@ export class App {
     return this;
   }
 
+  private reloadMarkers(map: google.maps.Map, fromAnchor: boolean): void {
+    const formElement = <HTMLInputElement>document.getElementById('form-filters');
+    const mapElement = <HTMLInputElement>document.getElementById('map');
+
+    this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, fromAnchor));
+  }
+
   private bindMarkers(source: string, map: google.maps.Map, filters: Filters): void {
 
     qwest.get(`${source.replace('%year%', filters.year)}?_=${(new Date()).getTime()}`).then((_xhr, response: Bloodbath) => {
@@ -289,6 +304,7 @@ export class App {
           location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
           weight: 10 * (death.count > 1 ? 5 : 1),
         });
+
         this._markers.push(marker);
       }
 
@@ -298,11 +314,13 @@ export class App {
         this._infoWindows[0].open(map, this._markers[0]);
       }
 
-      this._markerCluster = new MarkerClusterer(map, this._markers, {
-        gridSize: 60,
-        imagePath: './assets/images/clustering/m',
-        maxZoom: 14,
-      });
+      if (this.clusteringEnabled) {
+        this._markerCluster = new MarkerClusterer(map, this._markers, {
+          gridSize: 60,
+          imagePath: './assets/images/clustering/m',
+          maxZoom: 14,
+        });
+      }
 
       /**
        * National marker prioritization:
@@ -316,7 +334,7 @@ export class App {
         }
       }
 
-      if (heatMapData.length) {
+      if (heatMapData.length && this.heatmapEnabled) {
         this._heatMap = new google.maps.visualization.HeatmapLayer({
           ...{ data: heatMapData },
           ... this._configObject.config['heatmapOptions'],
@@ -437,6 +455,44 @@ export class App {
       map.setCenter(randomMarker.getPosition());
       map.setZoom(13);
       google.maps.event.trigger(randomMarker, 'click');
+    }, buttonOptions);
+  }
+
+  private bindHeatmapButton(map: google.maps.Map): void {
+    const buttonOptions = {
+      ctrlChildId: 'heatmapImg',
+      ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
+      defaultCtrlChildBgPos: '-2px -2px',
+      defaultCtrlChildBgSize: '120%',
+      imagePath: this._configObject.config['imagePath']['heatmap']['on'],
+      title: 'Thermographie',
+    };
+
+    GmapUtils.bindButton(map, () => {
+      this.heatmapEnabled = !this.heatmapEnabled;
+      const heatmapImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}`) as HTMLInputElement;
+      const imgUrl = this._configObject.config['imagePath']['heatmap'][this.heatmapEnabled ? 'on' : 'off'];
+      heatmapImgElmt.style.backgroundImage = `url("${imgUrl}")`;
+      this.reloadMarkers(map, false);
+    }, buttonOptions);
+  }
+
+  private bindClusteringButton(map: google.maps.Map): void {
+    const buttonOptions = {
+      ctrlChildId: 'clusteringImg',
+      ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
+      defaultCtrlChildBgPos: '-2px -2px',
+      defaultCtrlChildBgSize: '120%',
+      imagePath: this._configObject.config['imagePath']['clustering']['on'],
+      title: 'Clustering',
+    };
+
+    GmapUtils.bindButton(map, () => {
+      this.clusteringEnabled = !this.clusteringEnabled;
+      const clusteringImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}`) as HTMLInputElement;
+      const imgUrl = this._configObject.config['imagePath']['clustering'][this.clusteringEnabled ? 'on' : 'off'];
+      clusteringImgElmt.style.backgroundImage = `url("${imgUrl}")`;
+      this.reloadMarkers(map, false);
     }, buttonOptions);
   }
 
