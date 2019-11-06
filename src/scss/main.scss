@@ -31,6 +31,7 @@
   .gm-style-iw.gm-style-iw-c {
     padding: 0 !important;
   }
+
   .gm-style-iw-d {
     overflow: auto !important;
   }
@@ -38,11 +39,10 @@
 
 .death-container {
   padding: 8px 8px 8px 12px;
-}
 
-.multiple-deaths {
-  box-shadow: inset rgba(255, 0, 0, 0.7) 0 0 3px 1px;
-  background: rgba(255, 0, 0, 0.3);
+  .death-sources {
+    padding-right: 70px;
+  }
 }
 
 .report-error {
@@ -52,4 +52,13 @@
   background: white;
   padding: 2px 2px;
   box-shadow: rgba(0, 0, 0, 0.4) 0 0 4px 1px;
+}
+
+.multiple-deaths {
+  box-shadow: inset rgba(255, 0, 0, 0.7) 0 0 3px 1px;
+  background: rgba(255, 0, 0, 0.3);
+
+  .report-error {
+    background: rgba(255, 0, 0, 0.1);
+  }
 }
