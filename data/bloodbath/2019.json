@@ -327,7 +327,7 @@
       "year": "2019",
       "month": "01",
       "day": "16",
-      "keywords": "",
+      "keywords": "Julien.P",
       "house": "police",
       "text": "Un policier de la CSG (BRF Paris) se suicide à son domicile avec son arme de service.",
       "section": "CSG BRF Paris",
@@ -349,6 +349,10 @@
         {
           "url": "https://www.bfmtv.com/police-justice/un-policier-se-suicide-avec-son-arme-de-service-1613442.html",
           "titre": "BFM"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/un-policier-de-37-de-la-csg-brf-parisienne-se-suicide/",
+          "titre": "Profession Gendarme"
         }
       ]
     },
@@ -725,6 +729,10 @@
         {
           "url": "https://actu.fr/normandie/saint-saens_76648/le-policier-jette-produit-sur-visage-femme-se-suicide-seine-maritime_21919654.html",
           "titre": "Actu.fr"
+        },
+        {
+          "url": "https://actu17.fr/seine-maritime-un-policier-jette-de-lacide-au-visage-de-sa-compagne-et-se-suicide/",
+          "titre": "Actu17"
         }
       ]
     },
@@ -4079,6 +4087,48 @@
         {
           "url": "http://www.profession-gendarme.com/suicide-dun-commandant-de-brigade-pere-de-4-enfants/",
           "titre": "Profession Gendarme"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "11",
+      "day": "11",
+      "keywords": "Artaix",
+      "house": "admpen",
+      "text": "Un surveillant du centre de détention de Roanne s'est suicidé par pendaison en bordure de Loire à proximité de Cordelle.\n Surveillant pénitentiaire depuis 2012 il avait été affecté au centre de détention de Roanne depuis 2015.",
+      "section": "Centre de Détention ",
+      "location": "Roanne (Loire)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 45.926310,
+        "lon": 4.045625
+      },
+      "sources": [
+        {
+          "url": "https://actupenit.com/2019/11/11/roanne-un-surveillant-penitentiaire-disparu-depuis-10-jours-retrouve-mort/",
+          "titre": "Actupenit"
+        },
+        {
+          "url": "https://actu17.fr/loire-disparu-depuis-10-jours-un-surveillant-penitentiaire-a-ete-retrouve-mort/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.leprogres.fr/loire-42-edition-roanne-roannais/2019/11/11/un-surveillant-du-centre-de-detention-de-roanne-retrouve-pendu-dans-un-bois",
+          "titre": "Le progrès"
+        },
+        {
+          "url": "https://www.cnews.fr/france/2019-11-11/un-surveillant-de-la-prison-de-roanne-retrouve-pendu-dans-une-foret-898328",
+          "titre": "Cnews"
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/un-surveillant-de-prison-retrouve-pendu-dans-une-foret-de-la-loire-20191111",
+          "titre": "Le Figaro"
         }
       ]
     }
