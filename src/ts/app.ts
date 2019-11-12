@@ -255,6 +255,7 @@ export class App {
         const houseImage = this._imgHousePath.replace('%house%', (death.count > 1 ? `${death.house}-m` : death.house));
         const marker = new google.maps.Marker({
           map,
+          animation: google.maps.Animation.DROP,
           icon: new (google.maps as any).MarkerImage(houseImage),
           position: new google.maps.LatLng(death.gps.lat, death.gps.lon),
           title: death.text,
@@ -285,16 +286,19 @@ export class App {
         const mailtoSubject = `Erreur trouvée - ${death.section} + -  ${death.day}/${death.month}/${death.year}`;
         infoWindowsContent += `<br /><small class="report-error"><a href="mailto:${this._configObject.config.contactEmail}?subject=${mailtoSubject}">[Une erreur ?]</a></small>`;
 
-        const infoWindows = new google.maps.InfoWindow({ content: `<div class="death-container${death.count > 1 ? ' multiple-deaths' : ''}">${infoWindowsContent}</div>` });
+        const infoWindow = new google.maps.InfoWindow({
+          content: `<div class="death-container${death.count > 1 ? ' multiple-deaths' : ''}">${infoWindowsContent}</div>`,
+          position: marker.getPosition(),
+        });
         google.maps.event.addListener(marker, 'click', () => {
           if (this._currentInfoWindows) {
             this._currentInfoWindows.close();
           }
-          infoWindows.open(map, marker);
-          this._currentInfoWindows = infoWindows;
+          infoWindow.open(map, marker);
+          this._currentInfoWindows = infoWindow;
         });
 
-        this._infoWindows.push(infoWindows);
+        this._infoWindows.push(infoWindow);
         if (death.origin === 'interieur') {
           nationalMarkers.push(marker);
         } else {
@@ -395,13 +399,13 @@ export class App {
     };
 
     GmapUtils.bindButton(map, () => {
-      const marker = new google.maps.Marker({
+      const bounds = new google.maps.LatLngBounds();
+      const localizationMarker = new google.maps.Marker({
         map,
-        animation: google.maps.Animation.DROP,
+        animation: google.maps.Animation.BOUNCE,
         icon: new (google.maps as any).MarkerImage(this._configObject.config['imagePath']['bluedot']),
         position: { lat: 31.4181, lng: 73.0776 },
       });
-
       let imgX = '0';
       const animationInterval = setInterval(() => {
         const localizationImgElmt = document.querySelector('#localizationImg') as HTMLInputElement;
@@ -411,19 +415,43 @@ export class App {
       const confirmation = confirm('La demande de localisation ne servira qu\'à positionner la carte autour de vous, aucune donnée ne sera envoyée ni même conservée nulle part.');
       if (confirmation && navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
-          const latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-          marker.setPosition(latlng);
-          map.setCenter(latlng);
-          map.setZoom(12);
-          const infoWindows = new google.maps.InfoWindow({ content: 'Ma position approximative' });
-          google.maps.event.addListener(marker, 'click', () => {
+          const localizationLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+          localizationMarker.setPosition(localizationLatLng);
+          map.setCenter(localizationLatLng);
+          bounds.extend(localizationLatLng);
+          const localizationInfoWindow = new google.maps.InfoWindow({
+            content: '<div class="info-window-container">Ma position approximative</div>',
+          });
+          localizationInfoWindow.setPosition(localizationLatLng);
+
+          google.maps.event.addListener(localizationMarker, 'click', () => {
             if (this._currentInfoWindows) {
               this._currentInfoWindows.close();
             }
-            infoWindows.open(map, marker);
-            this._currentInfoWindows = infoWindows;
+            localizationInfoWindow.open(map, localizationMarker);
+            this._currentInfoWindows = localizationInfoWindow;
           });
-          infoWindows.open(map, marker);
+          localizationInfoWindow.open(map, localizationMarker);
+
+          let closestMarker = <google.maps.Marker> null;
+          let closestDistance = <number> null;
+
+          for (const marker of this._markers) {
+            const markerPosition = marker.getPosition();
+
+            if (markerPosition && localizationLatLng) {
+              const currentDistance = <number> google.maps.geometry.spherical.computeDistanceBetween(markerPosition, localizationLatLng);
+              if ((closestMarker === null && closestDistance === null) || (closestMarker && closestDistance && currentDistance <= closestDistance)) {
+                closestMarker = marker;
+                closestDistance = currentDistance;
+              }
+            }
+          }
+
+          google.maps.event.trigger(closestMarker, 'click');
+          bounds.extend(closestMarker.getPosition());
+          map.fitBounds(bounds);
+
           (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '-144px 0px';
           clearInterval(animationInterval);
         });
@@ -522,7 +550,6 @@ export class App {
       }
     }
 
-    console.log(definitions);
     return definitions;
   }
 
