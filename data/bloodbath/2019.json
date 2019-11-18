@@ -4131,6 +4131,90 @@
           "titre": "Le Figaro"
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "11",
+      "day": "17",
+      "keywords": "BERTAUD Adrien",
+      "house": "gendarmerie",
+      "text": "Un Mdl/Chef de la brigade territoriale autonome (BTA) des Arcs a mis fins à ses jours avec son arme de service. Père d'une petite fille de 10 ans il a été retrouvé par ses camarades en fin de soirée.",
+      "section": "BTA des Arcs",
+      "location": "Les Arcs (Var)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.448623,
+        "lon": 6.474457
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/var-un-gendarme-de-37-ans-retrouve-mort-a-son-domicile/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://lessor.org/a-la-une/un-gendarme-retrouve-mort-a-son-domicile-de-fonction-dans-le-var/",
+          "titre": "L'Essor"
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2654055-20191118-var-gendarme-decouvert-mort-domicile-fonction",
+          "titre": "20 Minutes"
+        },
+        {
+          "url": "https://www.varmatin.com/faits-divers/un-gendarme-retrouve-mort-a-son-domicile-432218",
+          "titre": "Var Matin"
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/index.php/2019/11/18/deces-dun-gendarme-en-haute-marne/",
+          "titre": "La voix du gendarme"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "11",
+      "day": "17",
+      "keywords": "Mathieu GAUTHERON",
+      "house": "gendarmerie",
+      "text": "Un Adjudant de la communauté de brigades (CoB) de Châteauvillain s'est suicidé dans des causes qui demeurent encore inconnues. Affecté à cette brigade depuis de nombreuses années, il était père de 3 enfants.",
+      "section": "CoB Chateauvillain",
+      "location": "Chateauvillain (Haute-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  48.027951,
+        "lon": 4.912392
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/haute-marne-un-gendarme-retrouve-sans-vie-dans-son-logement-a-chateauvillain/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://lessor.org/a-la-une/un-gendarme-retrouve-mort-a-son-domicile-de-fonction-dans-le-var/",
+          "titre": "L'Essor"
+        },
+        {
+          "url": "https://www.assogendarmesetcitoyens.com/post/un-camarade-nous-a-quitt%C3%A9s-5",
+          "titre": "APNM G&C"
+        },
+        {
+          "url": "https://actupenit.com/2019/11/18/chateauvillain-un-deuxieme-gendarme-decede-tragiquement-ce-week-end/",
+          "titre": "Actupenit"
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/index.php/2019/11/18/deces-dun-gendarme-en-haute-marne/",
+          "titre": "La voix du gendarme"
+        }
+      ]
     }
   ]
 }
