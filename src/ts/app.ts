@@ -251,7 +251,7 @@ export class App {
       }
 
       for (const key in filteredResponse.deaths) {
-        const death = filteredResponse.deaths[key];
+        const death = <Death> filteredResponse.deaths[key];
         const houseImage = this._imgHousePath.replace('%house%', (death.count > 1 ? `${death.house}-m` : death.house));
         const marker = new google.maps.Marker({
           map,
@@ -271,7 +271,7 @@ export class App {
               <br /><br />
               <strong>Cause</strong>: ${App.getFilterValueLabel('cause', death.cause)}
               <br /><br />
-              <strong>Circonstances</strong>:  ${death.text.replace('\n', '<br />')}
+              <strong>Circonstances</strong>:  ${death.text.replace(new RegExp('\n', 'g'), '<br />')}
             </span>`;
 
         if (death.sources && death.sources.length) {
@@ -602,6 +602,15 @@ export class App {
       }
       definitionTexts.push('');
       definitionTexts.push(`<em>Dernier décès indexé: ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${latestDeath.location} - ${latestDeath.section}</em>`);
+
+      if (!response.settings.up_to_date) {
+        definitionTexts.push(`<div class="alert alert-warning" role="alert">
+                      <p>
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;
+                        <strong>Les r&eacute;sultats de cette ann&eacute;e peuvent &ecirc;tre incomplets car tous les d&eacute;c&egrave;s n'ont pas encore &eacute;t&eacute; ind&eacute;x&eacute;s.</strong>
+                      </p>
+                  </div>`);
+      }
     } else {
       definitionTexts.push(`<div class="alert alert-warning" role="alert">
                       <p>

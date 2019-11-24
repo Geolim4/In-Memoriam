@@ -1,4 +1,7 @@
 {
+  "settings": {
+    "up_to_date": false
+  },
   "deaths": [
     {
       "cause": "suicide",

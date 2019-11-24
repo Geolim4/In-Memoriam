@@ -12,7 +12,7 @@
 }
 
 .mtop {
-  margin-top: 20px;
+  margin-top: 1.5em;
 }
 
 /**
@@ -62,4 +62,8 @@
   .report-error {
     background: rgba(255, 0, 0, 0.1);
   }
+}
+
+.alert {
+  margin-bottom: 0;
 }
