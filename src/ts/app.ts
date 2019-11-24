@@ -604,7 +604,7 @@ export class App {
       definitionTexts.push(`<em>Dernier décès indexé: ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${latestDeath.location} - ${latestDeath.section}</em>`);
 
       if (!response.settings.up_to_date) {
-        definitionTexts.push(`<div class="alert alert-warning" role="alert">
+        definitionTexts.push(`<div class="alert alert-warning mtop" role="alert">
                       <p>
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;
                         <strong>Les r&eacute;sultats de cette ann&eacute;e peuvent &ecirc;tre incomplets car tous les d&eacute;c&egrave;s n'ont pas encore &eacute;t&eacute; ind&eacute;x&eacute;s.</strong>
