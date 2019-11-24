@@ -3915,6 +3915,32 @@
       ]
     },
     {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "10",
+      "day": "14",
+      "keywords": "",
+      "house": "gendarmerie",
+      "text": "Un gendarme adjoint volontaire (GAV) de la compagnie de Paris-Orly s'est suicidé. Très peu d'informations disponibles sur ce suicide.",
+      "section": "PSIG Sabre (CGD Paris-Orly)",
+      "location": "Orly",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.732939,
+        "lon": 2.372164
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "Anonyme (décès non médiatisé)"
+        }
+      ]
+    },
+    {
       "cause": "deathOnDuty",
       "count": 1,
       "published": true,
@@ -4190,7 +4216,7 @@
       "location": "Chateauvillain (Haute-Marne)",
       "origin": "interieur",
       "gps": {
-        "lat":  48.027951,
+        "lat": 48.027951,
         "lon": 4.912392
       },
       "sources": [
@@ -4213,6 +4239,40 @@
         {
           "url": "https://lavoixdugendarme.fr/index.php/2019/11/18/deces-dun-gendarme-en-haute-marne/",
           "titre": "La voix du gendarme"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "11",
+      "day": "17",
+      "keywords": "Franck",
+      "house": "armee",
+      "text": "Un militaire de la 7e brigade blindée (BB) s’est suicidé son arme de service à Valdahon dans le Doubs. L'adjudant-chef aurait mit fin à ses jours après son tour de garde.",
+      "section": "7e BB",
+      "location": "Valdahon (Doubs)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 47.152224,
+        "lon": 6.317709
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/doubs-un-militaire-se-donne-la-mort-avec-son-arme-de-service-a-valdahon/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.estrepublicain.fr/edition-de-besancon/2019/11/19/valdahon-un-militaire-se-suicide-avec-son-arme-de-service",
+          "titre": "Est Republicain"
+        },
+        {
+          "url": "https://actupenit.com/2019/11/20/valdahon-un-militaire-de-la-7e-brigade-blindee-se-suicide-avec-son-arme-de-service/",
+          "titre": "Actupenit"
         }
       ]
     }
