@@ -278,7 +278,11 @@ export class App {
           let sourcesText = '';
           for (const key in death.sources) {
             const source = death.sources[key];
-            sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${source.titre}</a>`);
+            if (!source.url) {
+              sourcesText += (sourcesText ? ', ' : '') + (`<strong>${source.titre}</strong>`);
+            } else {
+              sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${source.titre}</a>`);
+            }
           }
           infoWindowsContent += `<br /><br /><div class="death-sources"><strong>Sources: </strong>${sourcesText}</div>`;
         }
