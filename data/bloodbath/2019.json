@@ -3921,7 +3921,7 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
-      "orphans": 1,
+      "orphans": 0,
       "unpublished_reason": "",
       "year": "2019",
       "month": "10",
