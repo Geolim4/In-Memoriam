@@ -3921,7 +3921,7 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
-      "orphans": 1,
+      "orphans": 0,
       "unpublished_reason": "",
       "year": "2019",
       "month": "10",
@@ -3939,7 +3939,7 @@
       "sources": [
         {
           "url": "https://twitter.com/_FFOC_/status/1198182029973737472",
-          "titre": "FFOC"
+          "titre": "@_FFOC_ (Twitter)"
         }
       ]
     },
