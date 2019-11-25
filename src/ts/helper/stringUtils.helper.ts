@@ -26,8 +26,8 @@ export class StringUtilsHelper {
       return i.replace(/[.?*+^$[\]\\(){}|-]/g, '\\$&');
     }).join('|');
 
-    return str.replace(new RegExp(`(${replaced})`, 'g'), (s) => {
-      return `<abbr data-title="${findReplace[s]}">${s}</abbr>`;
+    return str.replace(new RegExp(`(${replaced})\\b`, 'g'), (s) => {
+      return `<abbr data-tippy-content="${findReplace[s]}">${s}</abbr>`;
     });
   }
 }

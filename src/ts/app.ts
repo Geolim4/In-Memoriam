@@ -1,6 +1,7 @@
 import * as MarkerClusterer from '@google/markerclusterer';
 import * as loadGoogleMapsApi from 'load-google-maps-api';
 import * as qwest from 'qwest';
+import tippyJs from 'tippy.js';
 
 import { Bloodbath, Definition, Filters } from './models';
 import { Config } from './config';
@@ -306,6 +307,9 @@ export class App {
         const infoWindow = new google.maps.InfoWindow({
           content: `<div class="death-container${death.count > 1 ? ' multiple-deaths' : ''}">${infoWindowsContent}</div>`,
           position: marker.getPosition(),
+        });
+        google.maps.event.addListener(infoWindow, 'domready', () => {
+          tippyJs('[data-tippy-content]');
         });
         google.maps.event.addListener(marker, 'click', () => {
           if (this._currentInfoWindows) {
@@ -635,5 +639,6 @@ export class App {
 
     const element = document.querySelector('[data-role="definitionsText"]');
     element.innerHTML = definitionTexts.join('<br />');
+    tippyJs('[data-tippy-content]');
   }
 }
