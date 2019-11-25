@@ -3,6 +3,7 @@
     "ADS": "Adjoint De Sécurité",
     "BAC": "Brigade Anti Criminalité",
     "BCA": "Bataillon de Chasseurs Alpins",
+    "BN": "Brigade Nuit",
     "B/C": "Brigadier-Chef",
     "BCF": "Brigade Centrale des Chemins de Fer",
     "BRF": "Brigade des Réseaux Ferroviaires",
@@ -18,6 +19,7 @@
     "Ciat": "Commissariat (diminutif)",
     "CPES": "Centre Parachutiste d'Entraînement Spécialisé (Service Action de la DGSE)",
     "CoB": "Communauté de Brigades",
+    "CRA": "Centre de Rétention Administrative",
     "CRS": "Compagnies Républicaines de Sécurité",
     "CSG": "Compagnie de Sécurisation Générale (Milieu ferroviaire)",
     "CSI": "Compagnie de Sécurisation et d'Intervention",
@@ -48,8 +50,10 @@
     "PSPG": "Peloton Spécialisé de Protection de la gendarmerie",
     "RIMa": "Régiment d'Infanterie de Marine",
     "RICM": "Régiment d'Infanterie Chars de Marine",
+    "RCC": "Régiment de Chars de Combat",
     "SDIS": "Service Départemental d'Incendie et de Secours",
     "SDN": "Service Départemental de Nuit",
+    "SNSM": "Société Nationale de Sauvetage en Mer",
     "STJN": "Service de Traitement Judiciaire de Nuit",
     "UTJDR": "Unité de Traitement Judiciaire des Délits Routiers"
   }

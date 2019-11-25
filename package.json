@@ -53,6 +53,7 @@
     "load-google-maps-api": "^2.0.1",
     "popper.js": "^1.15.0",
     "qwest": "^4.5.0",
+    "tippy.js": "^5.1.1",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
