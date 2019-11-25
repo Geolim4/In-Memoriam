@@ -27,6 +27,7 @@ export class App {
   private readonly _imgHousePath: string;
   private heatmapEnabled: boolean;
   private clusteringEnabled: boolean;
+  private glossary: {};
 
   constructor() {
     this._currentInfoWindows = null;
@@ -39,6 +40,7 @@ export class App {
     this._configObject = null;
     this.heatmapEnabled = true;
     this.clusteringEnabled = true;
+    this.glossary = {};
   }
 
   private static getFilterValueLabel(filterName: string, filterValue: string): string {
@@ -47,7 +49,11 @@ export class App {
   }
 
   public boot(): void {
+    // Run this synchronously...
     this._configObject = (new Config(() => this.run()));
+
+    // ... then this asynchronously
+    this.loadGlossary();
   }
 
   public run(): void {
@@ -76,6 +82,13 @@ export class App {
       this.bindFilters(map, mapElement, formElement);
       this.bindCustomButtons(map);
       this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
+    });
+  }
+
+  private loadGlossary(): void {
+    const glossaryPath = './data/config/glossary.json';
+    qwest.get(glossaryPath).then((_xhr, response: {glossary: {}}) => {
+      this.glossary = response.glossary;
     });
   }
 
@@ -262,7 +275,7 @@ export class App {
         });
         let infoWindowsContent = `'<h4>
               <img height="16" src="${houseImage}" alt="House: ${death.house}"  title="House: ${death.house}" />
-              ${(death.section ? `${death.section} - ` : '')}
+              ${(death.section ? `${StringUtilsHelper.replaceAcronyms(death.section, this.glossary)} - ` : '')}
               ${death.location}
               ${(death.count > 1 ? ` - <strong style="color: red;">${death.count} décès</strong>` : '')}
             </h4>
@@ -271,7 +284,7 @@ export class App {
               <br /><br />
               <strong>Cause</strong>: ${App.getFilterValueLabel('cause', death.cause)}
               <br /><br />
-              <strong>Circonstances</strong>:  ${death.text.replace(new RegExp('\n', 'g'), '<br />')}
+              <strong>Circonstances</strong>:  ${StringUtilsHelper.replaceAcronyms(death.text.replace(new RegExp('\n', 'g'), '<br />'), this.glossary)}
             </span>`;
 
         if (death.sources && death.sources.length) {
@@ -279,9 +292,9 @@ export class App {
           for (const key in death.sources) {
             const source = death.sources[key];
             if (!source.url) {
-              sourcesText += (sourcesText ? ', ' : '') + (`<strong>${source.titre}</strong>`);
+              sourcesText += (sourcesText ? ', ' : '') + (`<strong>${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</strong>`);
             } else {
-              sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${source.titre}</a>`);
+              sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</a>`);
             }
           }
           infoWindowsContent += `<br /><br /><div class="death-sources"><strong>Sources: </strong>${sourcesText}</div>`;
@@ -601,7 +614,7 @@ export class App {
         definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
       }
       definitionTexts.push('');
-      definitionTexts.push(`<em>Dernier décès indexé: ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${latestDeath.location} - ${latestDeath.section}</em>`);
+      definitionTexts.push(`<em>Dernier décès indexé: ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${latestDeath.location} - ${StringUtilsHelper.replaceAcronyms(latestDeath.section, this.glossary)}</em>`);
 
       if (!response.settings.up_to_date) {
         definitionTexts.push(`<div class="alert alert-warning mtop" role="alert">

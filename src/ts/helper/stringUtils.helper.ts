@@ -20,4 +20,14 @@ export class StringUtilsHelper {
     }
     return false;
   }
+
+  public static replaceAcronyms(str: string, findReplace: {}): string {
+    const replaced = Object.keys(findReplace).map((i) => {
+      return i.replace(/[.?*+^$[\]\\(){}|-]/g, '\\$&');
+    }).join('|');
+
+    return str.replace(new RegExp(`(${replaced})`, 'g'), (s) => {
+      return `<abbr data-title="${findReplace[s]}">${s}</abbr>`;
+    });
+  }
 }
