@@ -1656,7 +1656,7 @@
       "house": "armee",
       "text": "Lors d'une opération de libération d'otages au Burkina Faso, le maître Cédric de Pierrepont et le maître Alain Bertoncello ont perdu la vie lors du raid. Tout deux étaient des militaires hautement expérimentés et décorés.",
       "section": "Commando Hubert (Marine Nationale)",
-      "location": "Burkina Faso",
+      "location": "Sahel Nord, Burkina Faso",
       "origin": "opex",
       "gps": {
         "lat": 13.997536,
@@ -4276,6 +4276,48 @@
         {
           "url": "https://actupenit.com/2019/11/20/valdahon-un-militaire-de-la-7e-brigade-blindee-se-suicide-avec-son-arme-de-service/",
           "titre": "Actupenit"
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 13,
+      "published": true,
+      "orphans": 13,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "11",
+      "day": "26",
+      "keywords": "",
+      "house": "armee",
+      "text": "A la suite d'une collision de deux hélicoptères, treize militaires de plusieurs régiments ont périt pendant une opération de combat visant à épauler des troupes au sol. L'accident est survenu à Liptako dans la région de Ménaka, frontalière du Burkina Faso et du Niger. Plus d'informations dans les sources ci-dessous.",
+      "section": "5e RHC (4e BAC), 4e RCh, 93e RAM, 2e REG (27e BIM)",
+      "location": "Liptako, Région de Ménaka, Mali",
+      "origin": "opex",
+      "gps": {
+        "lat":  15.852774,
+        "lon": 1.468974
+      },
+      "sources": [
+        {
+          "url": "https://www.francetvinfo.fr/monde/afrique/mali/qui-sont-les-treize-militaires-morts-dans-un-accident-d-helicopteres-au-mali_3719517.html#xtor=CS3-794",
+          "titre": "France Info"
+        },
+        {
+          "url": "https://www.defense.gouv.fr/actualites/articles/deces-de-13-militaires-au-mali",
+          "titre": "MINARM - Hommage"
+        },
+        {
+          "url": "https://actu17.fr/mali-les-13-militaires-francais-tues-avaient-entre-22-et-43-ans/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.bfmtv.com/international/mali-treize-militaires-francais-tues-dans-l-accident-de-deux-helicopteres-1813238.html",
+          "titre": "BFM"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=Dje5JsBMVrc",
+          "titre": "AFP (Youtube)"
         }
       ]
     }

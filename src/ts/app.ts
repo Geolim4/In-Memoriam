@@ -46,7 +46,7 @@ export class App {
 
   private static getFilterValueLabel(filterName: string, filterValue: string): string {
     const option = <HTMLInputElement>document.querySelector(`form select[name="${filterName}"] option[value="${filterValue}"]`);
-    return (option ? option.innerText : filterValue).replace(/\([\d]+\)/, '').trim();
+    return (option ? option.innerText : filterValue).replace(/\(.*\)/, '').trim();
   }
 
   public boot(): void {
@@ -274,13 +274,19 @@ export class App {
           position: new google.maps.LatLng(death.gps.lat, death.gps.lon),
           title: death.text,
         });
-        let infoWindowsContent = `'<h4>
+        let infoWindowsContent = `<h4>
               <img height="16" src="${houseImage}" alt="House: ${death.house}"  title="House: ${death.house}" />
-              ${(death.section ? `${StringUtilsHelper.replaceAcronyms(death.section, this.glossary)} - ` : '')}
-              ${death.location}
-              ${(death.count > 1 ? ` - <strong style="color: red;">${death.count} décès</strong>` : '')}
+              ${(death.section ? `${StringUtilsHelper.replaceAcronyms(death.section, this.glossary)}` : '')}
+              - ${(death.count > 1 ? `<strong style="color: red;">${death.count} décès</strong>` : '')}
+              - ${App.getFilterValueLabel('house', death.house)}
             </h4>
+            <br />
             <span>
+              <strong>Emplacement</strong>: ${death.location}
+              <a href="http://maps.google.com/?ll=${death.gps.lat},${death.gps.lon}&q=${death.location}" target="_blank">
+               <span class="glyphicon  glyphicon-map-marker" aria-hidden="true"></span>
+              </a>
+              <br /><br />
               <strong>Date</strong>: ${death.day}/${death.month}/${death.year}
               <br /><br />
               <strong>Cause</strong>: ${App.getFilterValueLabel('cause', death.cause)}
@@ -327,7 +333,7 @@ export class App {
         }
         heatMapData.push({
           location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
-          weight: 10 * (death.count > 1 ? 5 : 1),
+          weight: 10 * (death.count > 1 ?  (death.count > 5 ? 20 : 5) : 1),
         });
 
         this._markers.push(marker);
