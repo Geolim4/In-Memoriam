@@ -277,7 +277,7 @@ export class App {
         let infoWindowsContent = `<h4>
               <img height="16" src="${houseImage}" alt="House: ${death.house}"  title="House: ${death.house}" />
               ${(death.section ? `${StringUtilsHelper.replaceAcronyms(death.section, this.glossary)}` : '')}
-              - ${(death.count > 1 ? `<strong style="color: red;">${death.count} décès</strong>` : '')}
+              ${(death.count > 1 ? ` - <strong style="color: red;">${death.count} décès</strong>` : '')}
               - ${App.getFilterValueLabel('house', death.house)}
             </h4>
             <br />
