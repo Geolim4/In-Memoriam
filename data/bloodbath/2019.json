@@ -1652,10 +1652,10 @@
       "year": "2019",
       "month": "05",
       "day": "07",
-      "keywords": "",
+      "keywords": "Barkhane",
       "house": "armee",
       "text": "Lors d'une opération de libération d'otages au Burkina Faso, le maître Cédric de Pierrepont et le maître Alain Bertoncello ont perdu la vie lors du raid. Tout deux étaient des militaires hautement expérimentés et décorés.",
-      "section": "Commando Hubert (Marine Nationale)",
+      "section": "Commando Hubert - Marine Nationale (COS)",
       "location": "Sahel Nord, Burkina Faso",
       "origin": "opex",
       "gps": {
@@ -2569,7 +2569,7 @@
       "keywords": "",
       "house": "armee",
       "text": "Un caporal-chef réserviste s’est donné la mort avec son arme de service dans l’enceinte des Ecoles militaires de Saumur (EMS) en marge des cérémonies du 14-Juillet. Un problème familial serait à l'origine du drame.",
-      "section": "RICM (9e BIMa, Armée de Terre)",
+      "section": "RICM (9e BIMa)",
       "location": "Saumur (Maine-et-Loire)",
       "origin": "interieur",
       "gps": {
@@ -3929,7 +3929,7 @@
       "keywords": "PSIG Sabre, CGD",
       "house": "gendarmerie",
       "text": "Un gendarme adjoint volontaire (GAV) de la compagnie de Paris-Orly s'est suicidé.\n « H. » avait 19ans.\n Très peu d'informations disponibles sur ce suicide.",
-      "section": "Gendarmerie",
+      "section": "Compagnie de Paris-Orly",
       "location": "Orly",
       "origin": "interieur",
       "gps": {
@@ -3986,7 +3986,7 @@
       "year": "2019",
       "month": "11",
       "day": "02",
-      "keywords": "Ronan POINTEAU, Barkhane, régiment de Spahis",
+      "keywords": "Barkhane, Ronan POINTEAU, Barkhane",
       "house": "armee",
       "text": "Un militaire français du 1er régiment de spahis de Valence a été tué au Mali, dans la région de Menaka. Son convoi a été pris au piège dans une IED improvisé.",
       "section": "1er RS (6e BLB, Armée de Terre)",
@@ -4288,14 +4288,14 @@
       "year": "2019",
       "month": "11",
       "day": "26",
-      "keywords": "",
+      "keywords": "Barkhane, Nicolas MÉGARD, Benjamin GIREUD, Clément FRISONROCHE, Alex MORISSE, Pierre BOCKEL, Julien CARETTE, Romain SALLES SAINT PAUL, Romain CHOMEL JARNIEU, Alexandre PROTIN, Antoine SERRE, Valentin DUVAL, Jérémy LEUSIE, Andreï JOUK",
       "house": "armee",
       "text": "A la suite d'une collision de deux hélicoptères, treize militaires de plusieurs régiments ont périt pendant une opération de combat visant à épauler des troupes au sol. L'accident est survenu à Liptako dans la région de Ménaka, frontalière du Burkina Faso et du Niger. Plus d'informations dans les sources ci-dessous.",
       "section": "5e RHC (4e BAC), 4e RCh, 93e RAM, 2e REG (27e BIM)",
       "location": "Liptako, Région de Ménaka, Mali",
       "origin": "opex",
       "gps": {
-        "lat":  15.852774,
+        "lat": 15.852774,
         "lon": 1.468974
       },
       "sources": [
@@ -4318,6 +4318,82 @@
         {
           "url": "https://www.youtube.com/watch?v=Dje5JsBMVrc",
           "titre": "AFP (Youtube)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "11",
+      "day": "27",
+      "keywords": "",
+      "house": "gendarmerie",
+      "text": "Une gendarme de la caserne d'Evry a mis fin à ses jours. Peu de détails disponibles sur ce décès au vu de la \"douleur\" provoquée par cet évènement comme expliqué par la Commandante de groupement de l’Essonne.",
+      "section": "BTA Evry",
+      "location": "Evry (Essonne)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  48.617595,
+        "lon": 2.443203
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/essonne-un-gendarme-sest-suicide-a-evry/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/essonne-un-gendarme-sest-suicide-a-evry/",
+          "titre": "Profession Gendarme"
+        },
+        {
+          "url": "https://actupenit.com/2019/11/26/evry-nouveau-drame-dans-les-rangs-de-la-gendarmerie-nationale/",
+          "titre": "Actupenit"
+        },
+        {
+          "url": "https://lessor.org/a-la-une/nouveau-suicide-dune-gendarme-a-evry/",
+          "titre": "L'Essor"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "11",
+      "day": "27",
+      "keywords": "Antonio",
+      "house": "police",
+      "text": "Un gardien de la paix du Ciat du Bouscat s'est suicidé avec son arme de service à son domicile.\n Il était marié et père de deux enfants.",
+      "section": "CSP du Bouscat",
+      "location": "Le Bouscat (Gironde)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 44.866753,
+        "lon": -0.596418
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/gironde-un-policier-affecte-au-bouscat-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "http://www.profession-gendarme.com/lebouscat-33-un-gardien-de-la-paix-age-de-43-ans-a-mis-fin-a-ses-jours-cette-nuit/",
+          "titre": "Profession Gendarme"
+        },
+        {
+          "url": "https://actupenit.com/2019/11/27/le-bouscat-un-policier-pere-de-deux-enfant-sest-suicide-cette-nuit/",
+          "titre": "Actupenit"
+        },
+        {
+          "url": "https://twitter.com/PoliceNat33/status/1199715190981505024",
+          "titre": "@PoliceNat33 (Twitter)"
         }
       ]
     }
