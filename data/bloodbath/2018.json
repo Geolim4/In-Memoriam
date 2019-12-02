@@ -13,19 +13,21 @@
       "day": "01",
       "keywords": "",
       "house": "police",
+      "peers": [],
       "text": "Un policier de la brigade nuit du commisariant de Dunkerque nord s'est suicidé avec son arme de service. Père de trois enfants il était arrivé dans sa circonscription en 2004.",
       "section": "BN - CSP Dunkerque",
       "location": "Dunkerque",
       "origin": "interieur",
       "gps": {
-        "lat":  51.038295,
+        "lat": 51.038295,
         "lon": 2.376198
       },
       "sources": [
         {
           "url": "https://actu17.fr/2-policiers-se-donnes-mort-1er-janvier-lun-a-dunkerque-lautre-a-quimper/",
           "titre": "Actu17"
-        },        {
+        },
+        {
           "url": "http://www.leparisien.fr/faits-divers/suicide-de-deux-policiers-a-dunkerque-et-quimper-03-01-2018-7481295.php",
           "titre": "Le parisien"
         },
@@ -53,6 +55,7 @@
       "day": "01",
       "keywords": "",
       "house": "police",
+      "peers": [],
       "text": "Un policier de la brigade nuit du commisariant de Quimper s'est suicidé avec son arme de service. Peu de détails disponibles sur ce suicide",
       "section": "CSP Quimper",
       "location": "Quimper",
@@ -65,7 +68,8 @@
         {
           "url": "https://actu17.fr/2-policiers-se-donnes-mort-1er-janvier-lun-a-dunkerque-lautre-a-quimper/",
           "titre": "Actu17"
-        },        {
+        },
+        {
           "url": "http://www.leparisien.fr/faits-divers/suicide-de-deux-policiers-a-dunkerque-et-quimper-03-01-2018-7481295.php",
           "titre": "Le parisien"
         },
@@ -93,6 +97,7 @@
       "day": "12",
       "keywords": "",
       "house": "police",
+      "peers": [],
       "text": "Maggy Biskupski, figure emblématique de l'association MPC et gardienne de la paix à la BAC de Sartrouville, a mis fin à ses jours à son domicile. Elle laisse une lettre derrière expliquant les raisons de son geste. Son décès a provoqué une très vive émotion dans les rangs des forces de l'ordre.",
       "section": "BAC - CSP Sartrouville",
       "location": "Carrières-sous-Poissy (Yvelines)",

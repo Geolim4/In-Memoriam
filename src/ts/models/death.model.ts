@@ -8,6 +8,11 @@ export interface Death {
   month: string;
   day: string;
   house: string;
+  peers: {
+    count: number;
+    house: string;
+    section: string;
+  }[];
   text: string;
   location: string;
   section: string;
