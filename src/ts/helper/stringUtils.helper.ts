@@ -5,7 +5,7 @@
  */
 export class StringUtilsHelper {
   public static normalizeString(string: string): string {
-    return string.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    return string.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
   }
 
   public static containsString(haystack: string, needle: string): boolean {

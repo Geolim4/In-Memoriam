@@ -129,10 +129,35 @@ export class App {
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['location'], safeFilter)
                 && !StringUtilsHelper.arrayContainsString(filteredResponse.deaths[dKey]['keywords'], safeFilterSplited)
               ) {
+                if (filteredResponse.deaths[dKey].peers.length) {
+                  let continueFlag = false;
+                  for (const peer of filteredResponse.deaths[dKey].peers) {
+                    if (StringUtilsHelper.containsString(peer.section, safeFilter)) {
+                      continueFlag = true;
+                      break;
+                    }
+                  }
+                  if (continueFlag) {
+                    continue;
+                  }
+                }
                 filteredResponse.deaths.splice(dKey, 1);
               }
             } else {
-              if (!filteredResponse.deaths[dKey]['published'] || (filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName] !== filter)) {
+              if (!filteredResponse.deaths[dKey]['published']
+                || (filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName] !== filter)) {
+                if (filteredResponse.deaths[dKey].peers.length) {
+                  let continueFlag = false;
+                  for (const peer of filteredResponse.deaths[dKey].peers) {
+                    if ((fieldName === 'house' && peer.house === filter)) {
+                      continueFlag = true;
+                      break;
+                    }
+                  }
+                  if (continueFlag) {
+                    continue;
+                  }
+                }
                 filteredResponse.deaths.splice(dKey, 1);
               }
             }
@@ -266,7 +291,23 @@ export class App {
 
       for (const key in filteredResponse.deaths) {
         const death = <Death> filteredResponse.deaths[key];
-        const houseImage = this._imgHousePath.replace('%house%', (death.count > 1 ? `${death.house}-m` : death.house));
+
+        let peersText = '';
+        let peersCount = 0;
+        for (const peer of death.peers) {
+          const peerHouseImage = this._imgHousePath.replace('%house%', (peer.count > 1 ? `${peer.house}-m` : peer.house));
+          const peerHouseFormatted =  App.getFilterValueLabel('house', peer.house);
+          peersText += `<h5>
+              <img height="16" src="${peerHouseImage}" alt="House: ${peer.house}"  title="House: ${peer.house}" />
+              ${(peer.section ? `${StringUtilsHelper.replaceAcronyms(peer.section, this.glossary)}` : '')}
+              ${(` - <strong${peer.count > 1 ? ' style="color: red;"' : ''}>${peer.count} décès</strong>`)}
+              ${peerHouseFormatted !== peer.section ?  ` - ${StringUtilsHelper.replaceAcronyms(peerHouseFormatted, this.glossary)}` : ''}
+            </h5>`;
+          peersCount += peer.count;
+        }
+
+        const totalDeathCount = death.count + peersCount;
+        const houseImage = this._imgHousePath.replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
         const marker = new google.maps.Marker({
           map,
           animation: google.maps.Animation.DROP,
@@ -274,12 +315,15 @@ export class App {
           position: new google.maps.LatLng(death.gps.lat, death.gps.lon),
           title: death.text,
         });
+
+        const houseFormatted =  App.getFilterValueLabel('house', death.house);
         let infoWindowsContent = `<h4>
               <img height="16" src="${houseImage}" alt="House: ${death.house}"  title="House: ${death.house}" />
               ${(death.section ? `${StringUtilsHelper.replaceAcronyms(death.section, this.glossary)}` : '')}
               ${(death.count > 1 ? ` - <strong style="color: red;">${death.count} décès</strong>` : '')}
-              - ${App.getFilterValueLabel('house', death.house)}
+              ${houseFormatted !== death.section ?  ` - ${StringUtilsHelper.replaceAcronyms(houseFormatted, this.glossary)}` : ''}
             </h4>
+            ${peersText}
             <br />
             <span>
               <strong>Emplacement</strong>: ${death.location}
@@ -311,7 +355,7 @@ export class App {
         infoWindowsContent += `<br /><small class="report-error"><a href="mailto:${this._configObject.config.contactEmail}?subject=${mailtoSubject}">[Une erreur ?]</a></small>`;
 
         const infoWindow = new google.maps.InfoWindow({
-          content: `<div class="death-container${death.count > 1 ? ' multiple-deaths' : ''}">${infoWindowsContent}</div>`,
+          content: `<div class="death-container${totalDeathCount > 1 ? ' multiple-deaths' : ''}">${infoWindowsContent}</div>`,
           position: marker.getPosition(),
         });
         google.maps.event.addListener(infoWindow, 'domready', () => {
@@ -333,7 +377,7 @@ export class App {
         }
         heatMapData.push({
           location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
-          weight: 10 * (death.count > 1 ?  (death.count > 5 ? 20 : 5) : 1),
+          weight: 10 * (totalDeathCount > 1 ?  (totalDeathCount > 5 ? 20 : 5) : 1),
         });
 
         this._markers.push(marker);
@@ -559,6 +603,7 @@ export class App {
       for (const dKey in response.deaths) {
         if (response.deaths.hasOwnProperty(dKey)) {
           const death = response.deaths[dKey];
+          const peers = response.deaths[dKey].peers;
           const counterProperty = <string> (configDefinitions[fKey]['#counter_property'] ? configDefinitions[fKey]['#counter_property'] : 'death');
           const counterStrategy = <string> (configDefinitions[fKey]['#counter_strategy'] ? configDefinitions[fKey]['#counter_strategy'] : 'distinct');
           const counterIndex = (counterStrategy === 'distinct' ? death[fKey] : 0);
@@ -572,6 +617,16 @@ export class App {
 
           if (Number.isInteger(death[counterProperty])) {
             definitions[fKey][counterIndex] += death[counterProperty];
+            // Include peers losses
+            if (counterProperty === 'count' && peers.length) {
+              for (const peer of peers) {
+                const fieldIdentifier = (fKey === 'house' ? peer.house : counterIndex);
+                if (!definitions[fKey][fieldIdentifier]) {
+                  definitions[fKey][fieldIdentifier] = 0;
+                }
+                definitions[fKey][fieldIdentifier] += peer.count;
+              }
+            }
           }
         }
       }
