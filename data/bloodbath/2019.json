@@ -4401,7 +4401,7 @@
       "year": "2019",
       "month": "11",
       "day": "26",
-      "keywords": "Barkhane, Nicolas MÉGARD, Benjamin GIREUD, Clément FRISONROCHE, Alex MORISSE, Pierre BOCKEL, Julien CARETTE, Romain SALLES SAINT PAUL, Romain CHOMEL JARNIEU, Alexandre PROTIN, Antoine SERRE, Valentin DUVAL, Jérémy LEUSIE, Andreï JOUK",
+      "keywords": "Barkhane, Nicolas MÉGARD, Benjamin GIREUD, Clément FRISON-ROCHE, Alex MORISSE, Pierre BOCKEL, Julien CARETTE, Romain SALLES SAINT PAUL, Romain CHOMEL JARNIEU, Alexandre PROTIN, Antoine SERRE, Valentin DUVAL, Jérémy LEUSIE, Andreï JOUK",
       "house": "armee",
       "peers": [],
       "text": "A la suite d'une collision de deux hélicoptères, treize militaires de plusieurs régiments ont périt pendant une opération de combat visant à épauler des troupes au sol. L'accident est survenu à Liptako dans la région de Ménaka, frontalière du Burkina Faso et du Niger. Plus d'informations dans les sources ci-dessous.",
@@ -4594,6 +4594,45 @@
         {
           "url": "http://www.profession-gendarme.com/63641/",
           "titre": "Profession Gendarme"
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 6,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "12",
+      "day": "16",
+      "keywords": "Didier Foulon",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un Sergent-Chef âgé de la caserne de Crécy-la-Chapelle est décédé d'un malaise cardique alors qu'il s’apprêtait à prendre sa garde à Crécy-la-Chapelle.\n Marié et père de six enfants, il était en poste depuis 2012.",
+      "section": "SDIS 77",
+      "location": "Crécy-la-Chapelle (Seine-et-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  48.861568,
+        "lon": 2.901092
+      },
+      "sources": [
+        {
+          "url": "https://secoursinfo.fr/2019/12/16/seine-et-marne-un-pompier-perd-la-vie-en-se-rendant-a-sa-garde/",
+          "titre": "SecoursInfo"
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/crecy-la-chapelle_77142/seine-marne-crecy-chapelle-mort-dun-sapeur-pompier-se-rendait-caserne_30210836.html",
+          "titre": "Actu.fr"
+        },
+        {
+          "url": "https://twitter.com/Sdis77/status/1206535045747544064",
+          "titre": "@Sdis77 (Twitter)"
+        },
+        {
+          "url": "https://twitter.com/SecCivileFrance/status/1206507083727814657",
+          "titre": "@SecCivileFrance (Twitter)"
         }
       ]
     }
