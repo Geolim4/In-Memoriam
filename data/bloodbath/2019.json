@@ -4614,7 +4614,7 @@
       "location": "Crécy-la-Chapelle (Seine-et-Marne)",
       "origin": "interieur",
       "gps": {
-        "lat":  48.861568,
+        "lat": 48.861568,
         "lon": 2.901092
       },
       "sources": [
@@ -4633,6 +4633,64 @@
         {
           "url": "https://twitter.com/SecCivileFrance/status/1206507083727814657",
           "titre": "@SecCivileFrance (Twitter)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "12",
+      "day": "21",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un élève de l'ENP de Nîmes aurait mis fin à ses jours dans des circonstances inexpliquées.",
+      "section": "ENP Nîmes",
+      "location": "Poulx (Gard)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.860105,
+        "lon": 4.404430
+      },
+      "sources": [
+        {
+          "url": false,
+          "titre": "Source anonyme non vérifiée"
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "12",
+      "day": "25",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un motard de la police décède dans un accident de la route en rentrant de son service. Peu d'informations disponibles sur ce décès.",
+      "section": "CSP Menton",
+      "location": "Èze (Var)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.729127,
+        "lon": 7.367132
+      },
+      "sources": [
+        {
+          "url": "https://www.varmatin.com/faits-divers/un-policier-se-tue-a-moto-en-rentrant-de-son-service-sur-la-cote-dazur-443120",
+          "titre": "Var Matin"
+        },
+        {
+          "url": "https://actu17.fr/alpes-maritimes-un-policier-de-menton-se-tue-a-moto-en-rentrant-de-son-service/",
+          "titre": "Actu17"
         }
       ]
     }
