@@ -4693,6 +4693,49 @@
           "titre": "Actu17"
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "12",
+      "day": "25",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier du CIC de Nanterre a mis fins à ses jours avec son arme de service dans les locaux de l’état-major des Hauts-de-Seine.\n Marié et père de deux enfants il était en poste depuis une dizaine d'années.",
+      "section": "CIC Nanterre",
+      "location": "Nanterre (Hauts-de-Seine)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.898332,
+        "lon": 2.215728
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/hauts-de-seine-un-policier-se-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.20minutes.fr/paris/2684583-20191230-hauts-seine-policier-suicide-sein-etat-major-police",
+          "titre": "20 minutes"
+        },
+        {
+          "url": "https://www.lepoint.fr/faits-divers/hauts-de-seine-un-policier-se-suicide-avec-son-arme-de-service-30-12-2019-2355197_2627.php",
+          "titre": "Le Point"
+        },
+        {
+          "url": "https://www.lefigaro.fr/actualite-france/hauts-de-seine-un-policier-se-suicide-et-laisse-trois-lettres-20191230",
+          "titre": "Le Figaro"
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/nanterre_92050/nanterre-policier-letat-major-sest-suicide-cette-nuit-son-arme-service_30468137.html",
+          "titre": "Actu.fr"
+        }
+      ]
     }
   ]
 }
