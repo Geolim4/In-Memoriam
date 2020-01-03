@@ -4736,8 +4736,39 @@
           "titre": "Le Figaro"
         },
         {
+          "url": "http://www.leparisien.fr/hauts-de-seine-92/hauts-de-seine-un-policier-se-suicide-avec-son-arme-de-service-30-12-2019-8226081.php",
+          "titre": "Le Parisien"
+        },
+        {
           "url": "https://actu.fr/ile-de-france/nanterre_92050/nanterre-policier-letat-major-sest-suicide-cette-nuit-son-arme-service_30468137.html",
           "titre": "Actu.fr"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "12",
+      "day": "27",
+      "keywords": "",
+      "house": "pm",
+      "peers": [],
+      "text": "Une policière municipale a mis fins à ses jours dans des circonstances encore indéterminées. Peu d'informations disponibles sur ce suicide.",
+      "section": "Poste de Police",
+      "location": "Marseille (Bouche-du-Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.320753,
+        "lon": 5.376351
+      },
+      "sources": [
+        {
+          "url": "http://www.profession-gendarme.com/suicide-dune-policiere-municipale-elle-se-prenommait-claude/",
+          "titre": "Profession Gendarme"
         }
       ]
     }
