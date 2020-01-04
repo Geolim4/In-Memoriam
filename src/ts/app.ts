@@ -2,6 +2,7 @@ import * as MarkerClusterer from '@google/markerclusterer';
 import * as loadGoogleMapsApi from 'load-google-maps-api';
 import * as qwest from 'qwest';
 import tippyJs from 'tippy.js';
+import micromodal from 'micromodal';
 
 import { Bloodbath, Definition, Filters } from './models';
 import { Config } from './config';
@@ -55,6 +56,17 @@ export class App {
 
     // ... then this asynchronously
     this.loadGlossary();
+    micromodal.init({
+      awaitCloseAnimation: false, // [8]
+      awaitOpenAnimation: false, // [7]
+      closeTrigger: 'data-micromodal-close', // [4]
+      debugMode: true, // [9]
+      disableFocus: false, // [6]
+      disableScroll: true, // [5]
+      onClose: (modal) => console.info(`${modal.id} is hidden`), // [2]
+      onShow: (modal) => console.info(`${modal.id} is shown`), // [1]
+      openTrigger: 'data-micromodal-open', // [3]
+    });
   }
 
   public run(): void {
@@ -98,6 +110,7 @@ export class App {
     this.bindRandomizationButton(map);
     this.bindHeatmapButton(map);
     this.bindClusteringButton(map);
+    this.bindListButton(map);
   }
 
   private getConfigDefinitions(): Definition[] {
@@ -278,6 +291,8 @@ export class App {
       const domTomMarkers = <google.maps.Marker[]>[];
       const heatMapData = <{ location: google.maps.LatLng, weight: number }[]>[];
       const nationalMarkers = <google.maps.Marker[]>[];
+      const modalBloodbathElement = <HTMLInputElement>document.getElementById('modal-bloodbath-list-content');
+      let modalBloodbathListContent = '<ul>';
       let filteredResponse = <Bloodbath>response;
 
       this.alterFiltersLabels(filteredResponse);
@@ -317,6 +332,7 @@ export class App {
         });
 
         const houseFormatted =  App.getFilterValueLabel('house', death.house);
+        const causeFormatted = App.getFilterValueLabel('cause', death.cause);
         let infoWindowsContent = `<h4>
               <img height="16" src="${houseImage}" alt="House: ${death.house}"  title="House: ${death.house}" />
               ${(death.section ? `${StringUtilsHelper.replaceAcronyms(death.section, this.glossary)}` : '')}
@@ -333,7 +349,7 @@ export class App {
               <br /><br />
               <strong>Date</strong>: ${death.day}/${death.month}/${death.year}
               <br /><br />
-              <strong>Cause</strong>: ${App.getFilterValueLabel('cause', death.cause)}
+              <strong>Cause</strong>: ${causeFormatted}
               <br /><br />
               <strong>Circonstances</strong>:  ${StringUtilsHelper.replaceAcronyms(death.text.replace(new RegExp('\n', 'g'), '<br />'), this.glossary)}
             </span>`;
@@ -380,8 +396,16 @@ export class App {
           weight: 10 * (totalDeathCount > 1 ?  (totalDeathCount > 5 ? 20 : 5) : 1),
         });
 
+        modalBloodbathListContent += `<li>
+    <strong>${death.day}/${death.month}/${death.year} [${causeFormatted}] - ${houseFormatted}:</strong>
+    <span>${death.section}, ${death.location} ${totalDeathCount > 1 ? `(${totalDeathCount} décès)` : ''}</span>
+</li>`;
+
         this._markers.push(marker);
       }
+
+      modalBloodbathListContent += '</ul>';
+      modalBloodbathElement.innerHTML = StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, this.glossary);
 
       // We assume that if only have a single result
       // that the infoWindow should be opened by default
@@ -592,6 +616,25 @@ export class App {
       const imgUrl = this._configObject.config['imagePath']['clustering'][this.clusteringEnabled ? 'on' : 'off'];
       clusteringImgElmt.style.backgroundImage = `url("${imgUrl}")`;
       this.reloadMarkers(map, false);
+    }, buttonOptions);
+  }
+
+  private bindListButton(map: google.maps.Map): void {
+    const buttonOptions = {
+      ctrlChildId: 'clusteringImg',
+      ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
+      defaultCtrlChildBgPos: '0px 2px',
+      defaultCtrlChildBgSize: '90%',
+      imagePath: this._configObject.config['imagePath']['list'],
+      title: 'Clustering',
+    };
+
+    GmapUtils.bindButton(map, () => {
+      if (this._markers.length) {
+        micromodal.show('modal-bloodbath-list');
+      } else {
+        alert('Cartographie vide !');
+      }
     }, buttonOptions);
   }
 
