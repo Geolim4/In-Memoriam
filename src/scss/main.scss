@@ -2,6 +2,7 @@
 @import '~tippy.js/dist/tippy.css';
 @import '~tippy.js/dist/backdrop.css';
 @import '~tippy.js/themes/material.css';
+@import '../css/micromodal.css';
 
 #fork-me {
   position: absolute;
@@ -78,4 +79,12 @@ abbr[data-title] {
   border-bottom: 2px dotted #01a2d2;
   text-decoration: none;
   line-height: 18px;
+}
+
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
 }

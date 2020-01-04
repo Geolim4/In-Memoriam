@@ -18,6 +18,7 @@
     },
     "imagePath": {
       "random": "./assets/images/map/random.png",
+      "list": "./assets/images/map/list.png",
       "clustering": {
         "on": "./assets/images/map/clustering_on.png",
         "off": "./assets/images/map/clustering_off.png"

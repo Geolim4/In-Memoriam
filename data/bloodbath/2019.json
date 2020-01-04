@@ -478,9 +478,9 @@
       "keywords": "",
       "house": "police",
       "peers": [],
-      "text": "Informations issues de l’Administration, pour deux policiers suicidés mais dont nous n’avons aucunes informations à ce jour.",
-      "section": "",
-      "location": "France",
+      "text": "Informations issues de l’Administration, pour deux policiers suicidés mais dont nous n’avons aucune information à ce jour.",
+      "section": "Ministère de l'Intérieur",
+      "location": "Emplacement inconnu",
       "origin": "interieur",
       "gps": {
         "lat": 48.871773,
