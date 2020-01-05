@@ -3,6 +3,36 @@
     "up_to_date": true
   },
   "deaths": [
-
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "04",
+      "keywords": "Thierry",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier du SDLP s'est défenestré du 6ème étage dans le 20e arrondissement de Paris. Il était marié et père de trois enfants et travaillait à la sous-direction des moyens mobiles du SDLP.",
+      "section": "SDLP",
+      "location": "Paris 8e",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.864504,
+        "lon": 2.412077
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/paris-un-policier-se-suicide-en-se-jetant-du-6e-etage/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://actupenit.com/2020/01/05/paris-nouveau-drame-dans-les-rangs-de-la-police-nationale-en-ce-debut-dannee/",
+          "titre": "Actupenit"
+        }
+      ]
+    }
   ]
 }

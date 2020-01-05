@@ -7,7 +7,7 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
-      "orphans": 0,
+      "orphans": 3,
       "year": "2018",
       "month": "01",
       "day": "01",
@@ -49,7 +49,7 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
-      "orphans": 0,
+      "orphans": 3,
       "year": "2018",
       "month": "01",
       "day": "01",
@@ -70,6 +70,10 @@
           "titre": "Actu17"
         },
         {
+          "url": "https://www.lepharedunkerquois.fr/art/fait-divers/dunkerque-un-policier-de-la-brigade-de-nuit-se-suicide-ia685b0n232530",
+          "titre": "Le phare Dunkerquois"
+        },
+        {
           "url": "http://www.leparisien.fr/faits-divers/suicide-de-deux-policiers-a-dunkerque-et-quimper-03-01-2018-7481295.php",
           "titre": "Le parisien"
         },
@@ -84,6 +88,154 @@
         {
           "url": "https://mpc-asso.net/liste-funebre-2018/",
           "titre": "Asso MPC (Liste Funèbre)"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2018",
+      "month": "01",
+      "day": "02",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CRS 11 de Lambersart (Nord) s'est suicidé avec son arme de service. Il était marié et père de famille.",
+      "section": "CRS 11",
+      "location": "Lambersart (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 50.645740,
+        "lon": 3.027687
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/policier-affecte-a-crs-11-sest-suicide-3eme-a-se-donner-mort-48-heures/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/nord-0/nord-deux-suicides-deux-jours-rangs-police-1394315.html",
+          "titre": "France Info"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2018",
+      "month": "01",
+      "day": "20",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier affecté à la BN de de la circonscription de Nantes s'est suicidé à son domicile sans faire usage de son arme de service. Il était marié et père de trois enfants.",
+      "section": "BN - CSP Nantes",
+      "location": "Nantes (Loire-Atlantique)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 47.227579,
+        "lon": -1.551646
+      },
+      "sources": [
+        {
+          "url": "https://www.ouest-france.fr/pays-de-la-loire/nantes-44000/un-policier-nantais-se-suicide-son-domicile-5513380",
+          "titre": "Ouest France"
+        },
+        {
+          "url": "https://actu17.fr/nantes-policier-sest-donne-mort/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/nantes-un-policier-se-suicide-a-son-domicile-20-01-2018-7513092.php",
+          "titre": "Le Parisien"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2018",
+      "month": "01",
+      "day": "21",
+      "keywords": "Hervé Hinschberger",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CSP de Saint-Avold s'est suicidé avec son arme de service au bord d'un étang à Puttelange-aux-lacs. En conflit avec sa hiérarchie il était à la ête de la BN de Freyming-Merlebach.",
+      "section": "CSP St Avold",
+      "location": "Puttelange-aux-Lacs (Moselle)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 49.051811,
+        "lon": 6.943230
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/moselle-policier-affecte-saint-avold-sest-suicide/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://www.republicain-lorrain.fr/edition-de-forbach/2018/01/22/un-policier-retrouve-mort-a-puttelange-aux-lacs",
+          "titre": "Républicain Lorrain"
+        },
+        {
+          "url": "https://www.20minutes.fr/justice/2210255-20180128-moselle-apres-suicide-policier-parents-veulent-porter-plainte-harcelement-moral",
+          "titre": "20 minutes"
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/suicide-d-un-policier-les-parents-vont-porter-plainte-pour-harcelement-moral-1517049364",
+          "titre": "France Bleu"
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2018",
+      "month": "01",
+      "day": "26",
+      "keywords": "Fabien SOULA",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme du CSTAG a retourné son arme contre lui lors d'une séance de tir. Il était affecté l’état-major de la région de gendarmerie",
+      "section": "",
+      "location": "Marseille",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.283780,
+        "lon": 5.397460
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/marseille-gendarme-se-donne-mort-durant-seance-de-tir/",
+          "titre": "Actu17"
+        },
+        {
+          "url": "https://lessor.org/a-la-une/gendarme-se-suicide-arme-lors-dune-seance-de-tir/",
+          "titre": "L'essor"
+        },
+        {
+          "url": "https://www.europe1.fr/societe/un-gendarme-se-suicide-avec-son-arme-lors-dune-seance-de-tir-3557291",
+          "titre": "Europe 1"
+        },
+        {
+          "url": "https://www.20minutes.fr/marseille/2209855-20180126-marseille-gendarme-suicide-arme-lors-seance-tir",
+          "titre": "20 minutes"
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/2018/01/26/97001-20180126FILWWW00286-un-gendarme-se-suicide-avec-son-arme.php",
+          "titre": "Le Figaro"
         }
       ]
     },
