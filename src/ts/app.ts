@@ -358,10 +358,11 @@ export class App {
           let sourcesText = '';
           for (const key in death.sources) {
             const source = death.sources[key];
+            const paywall = source.paywall ? '<span aria-hidden="true" class="glyphicon glyphicon-lock"  data-tippy-content="Article réservé aux abonnés"></span>' : '';
             if (!source.url) {
-              sourcesText += (sourcesText ? ', ' : '') + (`<strong>${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</strong>`);
+              sourcesText += (sourcesText ? ', ' : '') + (`<strong>${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</strong> ${paywall} `);
             } else {
-              sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</a>`);
+              sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</a> ${paywall}`);
             }
           }
           infoWindowsContent += `<br /><br /><div class="death-sources"><strong>Sources: </strong>${sourcesText}</div>`;
@@ -398,7 +399,7 @@ export class App {
 
         modalBloodbathListContent += `<li>
     <strong>${death.day}/${death.month}/${death.year} [${causeFormatted}] - ${houseFormatted}:</strong>
-    <span>${death.section}, ${death.location} ${totalDeathCount > 1 ? `(${totalDeathCount} décès)` : ''}</span>
+    <span>${death.section}, ${death.location} ${totalDeathCount > 1 ? `(<strong style="color: red">${totalDeathCount} décès</strong>)` : ''}</span>
 </li>`;
 
         this._markers.push(marker);
@@ -626,7 +627,7 @@ export class App {
       defaultCtrlChildBgPos: '0px 2px',
       defaultCtrlChildBgSize: '90%',
       imagePath: this._configObject.config['imagePath']['list'],
-      title: 'Clustering',
+      title: 'Exporter en liste',
     };
 
     GmapUtils.bindButton(map, () => {

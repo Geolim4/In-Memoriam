@@ -26,11 +26,32 @@
       "sources": [
         {
           "url": "https://actu17.fr/paris-un-policier-se-suicide-en-se-jetant-du-6e-etage/",
-          "titre": "Actu17"
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1213791690349305858",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/paris-suicide-d-un-policier-du-sdlp-05-01-2020-8229174.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/paris/2687795-20200105-paris-policier-sdlp-suicide",
+          "titre": "20 minutes",
+          "paywall": false
+        },        {
+          "url": "https://www.lexpress.fr/actualite/societe/paris-un-policier-s-est-suicide_2113454.html",
+          "titre": "L'Express",
+          "paywall": false
         },
         {
           "url": "https://actupenit.com/2020/01/05/paris-nouveau-drame-dans-les-rangs-de-la-police-nationale-en-ce-debut-dannee/",
-          "titre": "Actupenit"
+          "titre": "Actupenit",
+          "paywall": false
         }
       ]
     }
