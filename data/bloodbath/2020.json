@@ -43,7 +43,8 @@
           "url": "https://www.20minutes.fr/paris/2687795-20200105-paris-policier-sdlp-suicide",
           "titre": "20 minutes",
           "paywall": false
-        },        {
+        },
+        {
           "url": "https://www.lexpress.fr/actualite/societe/paris-un-policier-s-est-suicide_2113454.html",
           "titre": "L'Express",
           "paywall": false
@@ -51,6 +52,180 @@
         {
           "url": "https://actupenit.com/2020/01/05/paris-nouveau-drame-dans-les-rangs-de-la-police-nationale-en-ce-debut-dannee/",
           "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "13",
+      "keywords": "Marielle Macquet",
+      "house": "police",
+      "peers": [],
+      "text": "Une policière du GSP de Saint-Nazaire a mis fin à ses jours avec son arme administrative dans le Ciat de Saint-Nazaire. \nMajor en poste dans cette circonscription depuis de nombreuses années, elle était mère de deux enfants.",
+      "section": "GSP - CSP Saint-Nazaire",
+      "location": "Saint-Nazaire (Loire-Atlantique)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 47.274538,
+        "lon": -2.216227
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/saint-nazaire-une-policiere-sest-suicidee-au-commissariat/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat44/status/1216722214986375168",
+          "titre": "@PoliceNat44 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/loire-atlantique-une-policiere-se-suicide-dans-son-commissariat-de-saint-nazaire-13-01-2020-8235090.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2693987-20200113-saint-nazaire-policiere-met-fin-jours-commissariat",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/pays-de-la-loire/saint-nazaire-une-policiere-se-donne-la-mort-au-commissariat-6687385",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/une-policiere-de-52-ans-s-est-suicidee-au-commissariat-de-saint-nazaire-1840062.html",
+          "titre": "BFM",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/pays-de-la-loire/saint-nazaire_44184/saint-nazaire-une-policiere-se-suicide-commissariat_30732054.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "13",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un brigadier-chef de la PAF a mis fin à ses jours avec son arme administrative dans les locaux du CRA de Rennes. Peu d'informations disponibles sur ce suicide.",
+      "section": "CRA - DZPAF Rennes",
+      "location": "Rennes (Ille-et-Vilaine)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.061764,
+        "lon": -1.737779
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/rennes-un-policier-sest-suicide-au-centre-de-retention-administrative/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat44/status/1216722214986375168",
+          "titre": "@PoliceNat44 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/rennes-un-policier-s-est-suicide-au-centre-de-retention-13-01-2020-8235360.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2694179-20200113-rennes-policier-met-fin-jours-centre-retention-administratif",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/bretagne/rennes-35000/rennes-suicide-d-un-policier-au-centre-de-retention-administrative-6687897",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.sudouest.fr/2020/01/13/saint-nazaire-une-policiere-de-52-ans-s-est-suicidee-dans-son-commissariat-7056352-5458.php",
+          "titre": "Sud Ouest",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "13",
+      "keywords": "Franck",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier a été grièvement percuté par un chauffard à Bron en banlieue de Lyon (Rhône) lors d'une opération de police.\n Il est décédé quelques jours plus tard des suites de ses blessures.",
+      "section": "GAO - SD 69",
+      "location": "Bron (Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  45.750490,
+        "lon":  4.907776
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/rhone-le-policier-percute-par-un-malfaiteur-a-bron-est-decede/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat69/status/1216778118708584448",
+          "titre": "@PoliceNat69 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/deces-du-policier-percute-par-un-chauffard-a-bron-pres-de-lyon-13-01-2020-8235099.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/police/lyon-le-policier-percute-volontairement-par-un-fourgon-est-mort-6687555",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leprogres.fr/rhone/2020/01/13/le-policier-fauche-par-un-fourgon-a-bron-pres-de-lyon-est-decede",
+          "titre": "Le Progrès",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/actualite-france/bron-le-policier-renverse-volontairement-samedi-par-un-fourgon-est-decede-20200113",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.midilibre.fr/2020/01/13/lyon-le-policier-percute-par-le-fourgon-dun-malfaiteur-en-fuite-na-pas-survecu,8658641.php",
+          "titre": "Midi Libre",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francetvinfo.fr/faits-divers/police/rhone-le-policier-renverse-volontairement-par-un-fourgon-pres-de-lyon-est-mort_3783219.html",
+          "titre": "France Info",
           "paywall": false
         }
       ]
