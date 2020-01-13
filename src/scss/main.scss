@@ -29,6 +29,11 @@
   #map {
     height: 30em;
   }
+  .need-help {
+    strong {
+      font-size: 10px;
+    }
+  }
 }
 
 .gm-style {
@@ -90,4 +95,19 @@ abbr[data-title] {
 
 .modal.is-open {
   display: block;
+}
+
+.need-help {
+  margin: 5px 10px;
+  border: 1px solid #d9534f;
+  display: inline-block;
+  padding: 1px 2px 2px 3px;
+  .label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  strong {
+    margin-left: 5px;
+    vertical-align: middle;
+  }
 }
