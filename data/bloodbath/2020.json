@@ -184,8 +184,8 @@
       "location": "Bron (Rhône)",
       "origin": "interieur",
       "gps": {
-        "lat":  45.750490,
-        "lon":  4.907776
+        "lat": 45.750490,
+        "lon": 4.907776
       },
       "sources": [
         {
@@ -267,8 +267,51 @@
           "paywall": false
         },
         {
+          "url": "https://actu.fr/ile-de-france/fleury-merogis_91235/essonne-lieutenant-colonel-sapeurs-pompiers-retrouve-mort-lecole-departementale-dincendie-secours_30863036.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
           "url": "https://secoursinfo.fr/2020/01/18/essonne-un-officier-de-sapeurs-pompiers-retrouve-mort-sur-son-lieu-de-travail/",
           "titre": "Secours Info ",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "23",
+      "keywords": "William",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la PAF d'Orly a mis fins à ses jours après une violente dispute conjugale dans le nord de la France.\n Major de l'UEL (PAF), il était père d'un adolescent.",
+      "section": "UEL - PAF Orly",
+      "location": "Faches-Thumesnil (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 50.597155,
+        "lon": 3.078778
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/nord-un-policier-affecte-a-la-paf-dorly-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/orly_94054/un-policier-police-frontieres-d-orly-met-fin-jours-suicide_30984246.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/699485/article/2020-01-23/un-policier-parisien-s-est-suicide-avec-son-arme-dans-une-rue-de-faches",
+          "titre": "La Voix du Nord",
           "paywall": false
         }
       ]
