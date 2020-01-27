@@ -5,22 +5,25 @@ on:
     - cron:  '0 1 * * *'
   push:
     branches:
-      - 'master'
+      - "master"
   pull_request:
     branches:
-      - master
+      - "master"
 jobs:
   merge-branch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: "Merge to Github Pages branch (gh-pages)"
-        uses: devmasx/merge-branch@v1.1.0
+      - uses: devmasx/merge-branch@v1.1.0
+        name: "Merge to Github Pages branch (gh-pages)"
         with:
           type: now
           target_branch: 'gh-pages'
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - uses: actions/checkout@v2
+        with:
+          ref: 'gh-pages'
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install # will run `yarn install` command
