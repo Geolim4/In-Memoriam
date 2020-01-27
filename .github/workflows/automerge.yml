@@ -42,15 +42,17 @@ jobs:
           # repository: .
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  deploye-gh-pages:
-    - uses: peaceiris/actions-gh-pages@v2
-      name: Deploy on Github Pages
-      env:
-        # ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: .
-      with:
-        emptyCommits: false
-        forceOrphan: true
+  deploy-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: peaceiris/actions-gh-pages@v2
+        name: Deploy on Github Pages
+        env:
+          # ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: .
+        with:
+          emptyCommits: false
+          forceOrphan: true
