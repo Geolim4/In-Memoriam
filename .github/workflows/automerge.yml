@@ -47,6 +47,11 @@ jobs:
           # repository: .
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'gh-pages'
   deploy-gh-pages:
     needs: merge-build-then-commit
     runs-on: ubuntu-latest
