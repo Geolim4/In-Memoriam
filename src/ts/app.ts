@@ -627,14 +627,14 @@ export class App {
       defaultCtrlChildBgPos: '0px 2px',
       defaultCtrlChildBgSize: '90%',
       imagePath: this._configObject.config['imagePath']['list'],
-      title: 'Exporter en liste',
+      title: 'Exporter la liste',
     };
 
     GmapUtils.bindButton(map, () => {
       if (this._markers.length) {
         micromodal.show('modal-bloodbath-list');
       } else {
-        alert('La cartographie est vide (aucun marqueur) !');
+        alert('La cartographie est vide ...');
       }
     }, buttonOptions);
   }
