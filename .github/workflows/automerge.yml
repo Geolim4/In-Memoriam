@@ -52,3 +52,4 @@ jobs:
           PUBLISH_DIR: .
         with:
           emptyCommits: false
+          forceOrphan: true
