@@ -42,6 +42,9 @@ jobs:
           # repository: .
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  deploy-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
       - uses: peaceiris/actions-gh-pages@v2
         name: Deploy on Github Pages
         env:
