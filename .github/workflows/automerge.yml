@@ -10,7 +10,7 @@ on:
     branches:
       - "master"
 jobs:
-  merge-branch:
+  merge-build-then-commit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -21,9 +21,6 @@ jobs:
           target_branch: 'gh-pages'
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-  build-and-commit:
-    runs-on: ubuntu-latest
-    steps:
       - uses: actions/checkout@v2
         with:
           ref: 'gh-pages'
