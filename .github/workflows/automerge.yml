@@ -21,24 +21,25 @@ jobs:
           target_branch: 'gh-pages'
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - uses: actions/checkout@v2
-        with:
-          ref: 'gh-pages'
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: build # will run `yarn build` command
-      - uses: stefanzweifel/git-auto-commit-action@v2.5.0
-        with:
-          commit_message: Automatic build commit
-          branch: ${{ github.head_ref }}
-          # Optional git params
-          commit_options: '--no-verify --signoff'
-          # Optional glob pattern of files which should be added to the commit
-          # file_pattern: src/\*.js
-          # Optional repository path
-          # repository: .
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  build-and-commit:
+    - uses: actions/checkout@v2
+      with:
+        ref: 'gh-pages'
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: install # will run `yarn install` command
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: build # will run `yarn build` command
+    - uses: stefanzweifel/git-auto-commit-action@v2.5.0
+      with:
+        commit_message: Automatic build commit
+        branch: ${{ github.head_ref }}
+        # Optional git params
+        commit_options: '--no-verify --signoff'
+        # Optional glob pattern of files which should be added to the commit
+        # file_pattern: src/\*.js
+        # Optional repository path
+        # repository: .
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
