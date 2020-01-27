@@ -1,0 +1,23 @@
+name: Automerge
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 1 * * *'
+  push:
+    branches:
+      - 'master'
+  pull_request:
+    branches:
+      - master
+jobs:
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: "Merge to Github Pages branch (gh-pages)"
+        uses: devmasx/merge-branch@v1.1.0
+        with:
+          type: now
+          target_branch: 'gh-pages'
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
