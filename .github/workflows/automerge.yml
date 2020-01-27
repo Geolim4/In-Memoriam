@@ -1,0 +1,68 @@
+name: Automerge
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 1 * * *'
+  push:
+    branches:
+      - "master"
+  pull_request:
+    branches:
+      - "master"
+jobs:
+  merge-build-then-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: devmasx/merge-branch@v1.1.0
+        name: "Merge to Github Pages branch (gh-pages)"
+        with:
+          type: now
+          target_branch: 'gh-pages'
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'gh-pages'
+      - uses: actions/checkout@v2
+        with:
+          ref: 'gh-pages'
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: build # will run `yarn build` command
+      - uses: stefanzweifel/git-auto-commit-action@v2.5.0
+        with:
+          commit_message: Automatic build commit
+          branch: "gh-pages"
+          # Optional git params
+          # commit_options: '--no-verify --signoff'
+          # Optional glob pattern of files which should be added to the commit
+          # file_pattern: src/\*.js
+          # Optional repository path
+          # repository: .
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'gh-pages'
+  deploy-gh-pages:
+    needs: merge-build-then-commit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: peaceiris/actions-gh-pages@v2
+        name: Deploy on Github Pages
+        env:
+          # ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./public
+        with:
+          keepFiles: true
