@@ -634,7 +634,7 @@ export class App {
       if (this._markers.length) {
         micromodal.show('modal-bloodbath-list');
       } else {
-        alert('La cartographie est vide !');
+        alert('La cartographie est vide (aucun marqueur) !');
       }
     }, buttonOptions);
   }
