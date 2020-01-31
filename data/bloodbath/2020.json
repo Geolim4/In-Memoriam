@@ -391,6 +391,49 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "30",
+      "keywords": "Arthur",
+      "house": "armee",
+      "peers": [],
+      "text": "Un jeune militaire originaire d'Auch a mis fins à ses jours avec son FAMAS dans le camp militaire de Caylus (Tarn-et-Garonne).\nIl avait été incorporé à l’ENSOA de Saint-Maixent (Deux-Sèvres) pour faire carrière dans l’armée.",
+      "section": "ENSOA Saint-Maixent",
+      "location": "Caylus (Tarn-et-Garonne)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  44.266096,
+        "lon": 1.750616
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/tarn-et-garonne-un-jeune-militaire-de-18-ans-se-suicide-avec-son-famas-au-camp-militaire-de-caylus/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ladepeche.fr/2020/01/30/un-jeune-militaire-se-suicide-au-camp-de-caylus,8698358.php",
+          "titre": "La Dépêche",
+          "paywall": true
+        },
+        {
+          "url": "https://actupenit.com/2020/01/30/caylus-un-militaire-de-lecole-nationale-des-sous-officiers-de-larmee-de-terre-sest-suicide/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lanouvellerepublique.fr/deux-sevres/commune/saint-maixent-l-ecole/saint-maixent-l-ecole-un-jeune-sous-officier-se-suicide-au-camp-de-caylus",
+          "titre": "La Nouvelle République",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
