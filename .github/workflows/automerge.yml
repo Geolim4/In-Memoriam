@@ -18,11 +18,11 @@ jobs:
           target_branch: 'gh-pages'
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: 'gh-pages'
+#      - name: Push changes
+#        uses: ad-m/github-push-action@master
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          branch: 'gh-pages'
       - uses: actions/checkout@v2
         with:
           ref: 'gh-pages'
