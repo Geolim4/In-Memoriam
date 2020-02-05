@@ -434,6 +434,44 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "04",
+      "keywords": "",
+      "house": "douane",
+      "peers": [],
+      "text": "Un Douanier de la DRDDI d'Amiens a mis fins à ses jours dans les locaux de la Douanes d'Amiens. Marié, il était le directeur Adjoint du bureau.",
+      "section": "DRDDI Amiens",
+      "location": "Amiens (Somme)",
+      "origin": "interieur",
+      "gps": {
+        "lat":   49.931596,
+        "lon":  2.276175
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-agent-des-douanes-retrouve-pendu-dans-son-bureau-a-amiens/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/amiens-un-agent-des-douanes-retrouve-pendu-sur-son-lieu-de-travail-1580914331",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/02/05/amiens-un-douanier-decouvert-pendu-sur-son-lieu-de-travail/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
