@@ -2615,7 +2615,7 @@
           "url": "https://actu17.fr/oise-un-gendarme-de-36-ans-decede-lors-dune-epreuve-sportive/",
           "titre": "Actu7",
           "paywall": false
-        }        ,
+        },
         {
           "url": "http://www.leparisien.fr/oise-60/oise-la-gendarmerie-nationale-endeuillee-apres-la-mort-d-un-des-siens-22-06-2019-8100474.php",
           "titre": "Le Parisien",
@@ -3828,6 +3828,44 @@
           "url": "https://www.ladepeche.fr/2019/08/23/la-jeune-policiere-qui-sest-suicidee-avec-son-arme-de-service-a-drancy-etait-du-tarn-et-garonne,8373144.php",
           "titre": "La Depêche",
           "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "other",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "08",
+      "day": "29",
+      "keywords": "Christophe Pensec",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Le Major Christophe Pensec s’est éteint à Biarritz lors de son détachement au G7 pendant son sommeil.\n Militaire hautement décoré il était père de trois enfants.",
+      "section": "CoB Gacé (Orne)",
+      "location": "Biarritz (Pyrénées-Atlantiques)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  43.486350,
+        "lon": -1.557026
+      },
+      "sources": [
+        {
+          "url": "https://lessor.org/a-la-une/lhommage-au-major-pensec-commandant-de-la-brigade-de-gace-61-mort-en-mission-au-g7/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/normandie/argentan_61006/un-dernier-hommage-major-christophe-pensec-gendarmerie-dargentan_26849073.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/normandie/orne-la-gendarmerie-en-deuil-apres-le-deces-du-major-christophe-pensec-6494853",
+          "titre": "L'Ouest France",
+          "paywall": true
         }
       ]
     },

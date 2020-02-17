@@ -32,6 +32,11 @@
         "none": "<span class=\"label label-success\">%d</span> meurtre",
         "singular": "<span class=\"label label-danger\">%d</span> meurtre",
         "plural": "<span class=\"label label-danger\">%d</span> meurtres"
+      },
+      "other": {
+        "none": "",
+        "singular": "<span class=\"label label-danger\">%d</span> autre décès",
+        "plural": "<span class=\"label label-danger\">%d</span> autres décès"
       }
     },
     "house": {
