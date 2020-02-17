@@ -349,7 +349,7 @@
         }
       ]
     },
-     {
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
@@ -366,7 +366,7 @@
       "location": "Rouen (Seine-Maritime)",
       "origin": "interieur",
       "gps": {
-        "lat": 49.449746, 
+        "lat": 49.449746,
         "lon": 1.093060
       },
       "sources": [
@@ -380,7 +380,7 @@
           "titre": "Info Normandie",
           "paywall": false
         },
-                {
+        {
           "url": "hhttps://actu.fr/normandie/rouen_76540/a-rouen-jeune-homme-22-ans-sest-tue-se-jetant-cinquieme-etage-dun-immeuble_31028691.html",
           "titre": "Actu.fr",
           "paywall": false
@@ -409,7 +409,7 @@
       "location": "Caylus (Tarn-et-Garonne)",
       "origin": "interieur",
       "gps": {
-        "lat":  44.266096,
+        "lat": 44.266096,
         "lon": 1.750616
       },
       "sources": [
@@ -452,8 +452,8 @@
       "location": "Amiens (Somme)",
       "origin": "interieur",
       "gps": {
-        "lat":   49.931596,
-        "lon":  2.276175
+        "lat": 49.931596,
+        "lon": 2.276175
       },
       "sources": [
         {
@@ -469,6 +469,59 @@
         {
           "url": "https://actupenit.com/2020/02/05/amiens-un-douanier-decouvert-pendu-sur-son-lieu-de-travail/",
           "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "other",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "16",
+      "keywords": "Morgan Henry",
+      "house": "armee",
+      "peers": [],
+      "text": "Un sous-officier du 54e Régiment de Transmission de Haguenau a été retrouvé décédé dans son campement sans que le cause du décès ne soit encore connue.\n Militaire hautement décoré, il opérait au sein de Barkhane depuis novembre 2019.",
+      "section": "54e RT (COM-RENS)",
+      "location": "Burkina Faso",
+      "origin": "opex",
+      "gps": {
+        "lat": 12.275095,
+        "lon": -1.635452
+      },
+      "sources": [
+        {
+          "url": "http://www.opex360.com/2020/02/17/barkhane-un-sous-officier-du-54e-regiment-de-transmissions-decouvert-mort-a-son-campement/",
+          "titre": "Opex 360",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/international/deces-d-origine-inconnue-d-un-soldat-francais-au-burkina-20200217",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/un-militaire-francais-de-loperation-barkhane-meurt-au-burkina-faso/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/faits-divers/un-militaire-francais-retrouve-mort-dans-campement-burkina-faso_31522132.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/CEMAT_FR/status/1229322542848057344",
+          "titre": "@CEMAT_FR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/monde/2720351-20200217-burkina-faso-deces-origine-inconnue-soldat-francais-sein-operation-barkhane",
+          "titre": "20 minutes",
           "paywall": false
         }
       ]

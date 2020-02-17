@@ -70,6 +70,44 @@
       ]
     },
     {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "01",
+      "day": "4",
+      "keywords": "Clémence Luchs",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Une jeune GAV est décédée de ses blessures à la suite d'une blessure en service dans des circonstances encore inconnues, elle était affecté à la Garde Républicaine. Peu d'informations disponibles sur ce décès.",
+      "section": "1er peloton du 2ème escadron du régiment de cavalerie de la Garde Républicaine",
+      "location": "Château-Salins (Moselle)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.822908,
+        "lon": 6.509771
+      },
+      "sources": [
+        {
+          "url": "https://www.assogendarmesetcitoyens.com/post/2019/01/06/d-c3-a9c-c3-a8s-dune-camarade",
+          "titre": "APNM",
+          "paywall": false
+        },
+        {
+          "url": "https://www.republicain-lorrain.fr/edition-de-sarrebourg-chateau-salins/2019/01/10/la-garde-republicaine-rend-hommage-a-clemence-luchs",
+          "titre": "Républicain Lorrain",
+          "paywall": false
+        },
+        {
+          "url": "https://lyc-agricole-verdun.monbureaunumerique.fr/l-etablissement/actualites/deces-de-clemence-luchs-1003.htm",
+          "titre": "Lycée Agricole de la Meuse (Hommage)",
+          "paywall": false
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
@@ -574,6 +612,54 @@
         {
           "url": "https://www.departement974.fr/actualite/ceremonie-dhommage-ladjudant-sapeur-pompier-jessy-ricet-eve-2019",
           "titre": "Département 974,",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "02",
+      "day": "06",
+      "keywords": "Isabelle JENSEN",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Une Maréchale des Logis-Chef de la section équipements et logistique du bureau des soutiens et des finances de Nouméa (DSF) a succombé à une infection de la dingue.\n Mère de deux enfants elle était affecté à la DSF depuis plus d'un an.",
+      "section": "DSF",
+      "location": "Nouméa (Nouvelle-Calédonie)",
+      "origin": "domtom",
+      "gps": {
+        "lat": -22.273289,
+        "lon": 166.444771
+      },
+      "sources": [
+        {
+          "url": "https://lessor.org/lactualite-nouvelle-caledonie/une-gendarme-meurt-de-la-dengue-en-nouvelle-caledonie/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://www.sudouest.fr/2019/02/07/une-gendarme-tuee-par-la-dengue-en-nouvelle-caledonie-5801019-4696.php",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2019/02/08/nouvelle-caledonie-une-gendarme-decede-de-la-dengue/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/une-gendarme-de-43-ans-meurt-de-la-dengue-en-nouvelle-caledonie-07-02-2019-8006226.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.facebook.com/ComgendNC/posts/2307502849317299:0",
+          "titre": "@ComgendNC (Facebook)",
           "paywall": false
         }
       ]
@@ -2508,10 +2594,10 @@
       "year": "2019",
       "month": "06",
       "day": "22",
-      "keywords": "",
+      "keywords": "Gendarme Benjamin Delhaye",
       "house": "gendarmerie",
       "peers": [],
-      "text": "Un gendarme décède accidentellement lors d'une épreuve sportive.",
+      "text": "Un gendarme décède accidentellement lors d'une épreuve sportive. Peu d'informations disponibles sur ce décès.",
       "section": "CoB Attichy",
       "location": "Attichy (Oise)",
       "origin": "interieur",
@@ -2528,6 +2614,21 @@
         {
           "url": "https://actu17.fr/oise-un-gendarme-de-36-ans-decede-lors-dune-epreuve-sportive/",
           "titre": "Actu7",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/oise-60/oise-la-gendarmerie-nationale-endeuillee-apres-la-mort-d-un-des-siens-22-06-2019-8100474.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/604264/article/2019-06-25/le-gendarme-decede-lors-d-une-epreuve-sportive-etait-originaire-de-meteren",
+          "titre": "La Voix du Nord",
+          "paywall": false
+        },
+        {
+          "url": "https://www.gendinfo.fr/L-info-en-continu/Deces-en-service-d-un-gendarme-dans-l-Oise",
+          "titre": "GendInfo",
           "paywall": false
         }
       ]
@@ -3727,6 +3828,44 @@
           "url": "https://www.ladepeche.fr/2019/08/23/la-jeune-policiere-qui-sest-suicidee-avec-son-arme-de-service-a-drancy-etait-du-tarn-et-garonne,8373144.php",
           "titre": "La Depêche",
           "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "other",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2019",
+      "month": "08",
+      "day": "29",
+      "keywords": "Christophe Pensec",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Le Major Christophe Pensec s’est éteint à Biarritz lors de son détachement au G7 pendant son sommeil.\n Militaire hautement décoré il était père de trois enfants.",
+      "section": "CoB Gacé (Orne)",
+      "location": "Biarritz (Pyrénées-Atlantiques)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  43.486350,
+        "lon": -1.557026
+      },
+      "sources": [
+        {
+          "url": "https://lessor.org/a-la-une/lhommage-au-major-pensec-commandant-de-la-brigade-de-gace-61-mort-en-mission-au-g7/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/normandie/argentan_61006/un-dernier-hommage-major-christophe-pensec-gendarmerie-dargentan_26849073.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/normandie/orne-la-gendarmerie-en-deuil-apres-le-deces-du-major-christophe-pensec-6494853",
+          "titre": "L'Ouest France",
+          "paywall": true
         }
       ]
     },
