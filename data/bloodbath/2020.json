@@ -481,6 +481,49 @@
       "unpublished_reason": "",
       "year": "2020",
       "month": "02",
+      "day": "15",
+      "keywords": "François Sangiovanni",
+      "house": "armee",
+      "peers": [],
+      "text": "Un capitaine du 19e RG est décédé lors de son rapatriement des suites d'un malaise survenu lors d'un entraînement. \nIl était déployé au sein des EFS depuis décembre 2019 en tant que chef de corps du 19e RG.",
+      "section": "19e RG (1re DIV)",
+      "location": "BA 160 - Dakar (Sénégal)",
+      "origin": "opex",
+      "gps": {
+        "lat": 14.713272,
+        "lon": -17.482845
+      },
+      "sources": [
+        {
+          "url": "https://www.45enord.fr/2020/02/deces-militaire-19e-regiment-genie-senegal-francois-sangiovanni/",
+          "titre": "45e Nord",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/02/17/senegal-un-capitaine-de-35-ans-du-19eme-regiment-du-genie-decede-apres-un-entrainement/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "http://lignesdedefense.blogs.ouest-france.fr/archive/2020/02/18/deces-d-un-capitaine-du-19e-rg-au-senegal-20905.html",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "http://www.opex360.com/2020/02/18/deces-dun-officier-du-19e-regiment-du-genie-qui-servait-au-sein-des-elements-francais-au-senegal/",
+          "titre": "Opex 360",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "other",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
       "day": "16",
       "keywords": "Morgan Henry",
       "house": "armee",
@@ -502,6 +545,11 @@
         {
           "url": "https://www.lefigaro.fr/international/deces-d-origine-inconnue-d-un-soldat-francais-au-burkina-20200217",
           "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.45enord.fr/2020/02/deces-militaire-54e-regiment-transmissions-burkina-faso-morgan-henry/",
+          "titre": "45e Nord",
           "paywall": false
         },
         {
