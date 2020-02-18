@@ -476,9 +476,9 @@
     {
       "cause": "other",
       "count": 1,
-      "published": false,
+      "published": true,
       "orphans": 0,
-      "unpublished_reason": "Waiting for more sources",
+      "unpublished_reason": "",
       "year": "2020",
       "month": "02",
       "day": "15",
@@ -502,6 +502,16 @@
         {
           "url": "https://actupenit.com/2020/02/17/senegal-un-capitaine-de-35-ans-du-19eme-regiment-du-genie-decede-apres-un-entrainement/",
           "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "http://lignesdedefense.blogs.ouest-france.fr/archive/2020/02/18/deces-d-un-capitaine-du-19e-rg-au-senegal-20905.html",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "http://www.opex360.com/2020/02/18/deces-dun-officier-du-19e-regiment-du-genie-qui-servait-au-sein-des-elements-francais-au-senegal/",
+          "titre": "Opex 360",
           "paywall": false
         }
       ]
