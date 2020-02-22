@@ -354,25 +354,30 @@ export class App {
               <strong>Circonstances</strong>:  ${StringUtilsHelper.replaceAcronyms(death.text.replace(new RegExp('\n', 'g'), '<br />'), this.glossary)}
             </span>`;
 
+        const confidentialSource = death.sources.length === 1 && death.sources[0].titre === '__CONFIDENTIAL__' && !death.sources[0].url;
         if (death.sources && death.sources.length) {
           let sourcesText = '';
-          for (const key in death.sources) {
-            const source = death.sources[key];
-            const paywall = source.paywall ? '<span aria-hidden="true" class="glyphicon glyphicon-lock"  data-tippy-content="Article réservé aux abonnés"></span>' : '';
-            if (!source.url) {
-              sourcesText += (sourcesText ? ', ' : '') + (`<strong>${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</strong> ${paywall} `);
-            } else {
-              sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</a> ${paywall}`);
+          if (confidentialSource) {
+            sourcesText = '<span aria-hidden="true" class="glyphicon glyphicon-alert" style="color: orange;" ></span>&nbsp;<strong data-tippy-content="La source étant anonyme, ce décès peut ne pas être fiable à 100%.">Source anonyme</strong>';
+          } else {
+            for (const key in death.sources) {
+              const source = death.sources[key];
+              const paywall = source.paywall ? '<span aria-hidden="true" class="glyphicon glyphicon-lock" data-tippy-content="Article réservé aux abonnés"></span>' : '';
+              if (!source.url) {
+                sourcesText += (sourcesText ? ', ' : '') + (`<strong>${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</strong> ${paywall} `);
+              } else {
+                sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</a> ${paywall}`);
+              }
             }
           }
-          infoWindowsContent += `<br /><br /><div class="death-sources"><strong>Sources: </strong>${sourcesText}</div>`;
+          infoWindowsContent += `<br /><br /><div class="death-sources">${confidentialSource ? '' : '<strong>Sources: </strong>'}${sourcesText}</div>`;
         }
 
         const mailtoSubject = `Erreur trouvée - ${death.section} + -  ${death.day}/${death.month}/${death.year}`;
         infoWindowsContent += `<br /><small class="report-error"><a href="mailto:${this._configObject.config.contactEmail}?subject=${mailtoSubject}">[Une erreur ?]</a></small>`;
 
         const infoWindow = new google.maps.InfoWindow({
-          content: `<div class="death-container${totalDeathCount > 1 ? ' multiple-deaths' : ''}">${infoWindowsContent}</div>`,
+          content: `<div class="death-container${totalDeathCount > 1 ? ' multiple-deaths' : ''}${confidentialSource ? ' confidential-death' : ''}">${infoWindowsContent}</div>`,
           position: marker.getPosition(),
         });
         google.maps.event.addListener(infoWindow, 'domready', () => {

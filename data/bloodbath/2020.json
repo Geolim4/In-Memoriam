@@ -513,6 +513,16 @@
           "url": "http://www.opex360.com/2020/02/18/deces-dun-officier-du-19e-regiment-du-genie-qui-servait-au-sein-des-elements-francais-au-senegal/",
           "titre": "Opex 360",
           "paywall": false
+        },
+        {
+          "url": "https://www.cnews.fr/france/2020-02-19/un-militaire-francais-deploye-au-senegal-meurt-apres-un-entrainement-de-boxe",
+          "titre": "CNEWS",
+          "paywall": false
+        },
+        {
+          "url": "https://www.estrepublicain.fr/france-monde/2020/02/18/un-militaire-du-19e-rg-meurt-a-l-entrainement",
+          "titre": "Est Républicain",
+          "paywall": false
         }
       ]
     },
@@ -570,6 +580,34 @@
         {
           "url": "https://www.20minutes.fr/monde/2720351-20200217-burkina-faso-deces-origine-inconnue-soldat-francais-sein-operation-barkhane",
           "titre": "20 minutes",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "20",
+      "keywords": "Mathias",
+      "house": "police",
+      "peers": [],
+      "text": "Un ADS de la PAF de l'aéroport de Nantes a mis fin à ses jours à son domicile. Il était père d'un jeune enfant et avait réussi son concours de Gardien de la Paix.",
+      "section": "DZPAF",
+      "location": "Aéroport Nantes-Atlantique (Loire Atlantique)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  47.157763,
+        "lon":  -1.601265
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
           "paywall": false
         }
       ]
