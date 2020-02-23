@@ -611,6 +611,64 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "23",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la BAC nuit de Toulon a retourné son arme de service contre lui après avoir abattu sa femme suite à une dispute conjugale près de Brignoles (Var).",
+      "section": "BAC Nuit - Toulon",
+      "location": "Le Val (Var)",
+      "origin": "interieur",
+      "gps": {
+        "lat":  43.438115,
+        "lon": 6.071830
+      },
+      "sources": [
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/le-val-un-policier-de-la-bac-de-toulon-tue-sa-compagne-puis-se-suicide-avec-son-arme-de-service-1582468025",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/provence-alpes-cote-d-azur/var/policier-toulon-tue-sa-compagne-puis-se-suicide-pres-brignoles-1791185.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.laprovence.com/actu/en-direct/5903202/var-un-policier-tue-son-ex-compagne-et-se-suicide.html",
+          "titre": "La Provence",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/var-un-policier-tue-son-ex-compagne-avec-son-arme-et-se-suicide-23-02-2020-8265459.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/societe/var-un-homme-tue-son-ex-compagne-avant-de-se-suicider-1862996.html",
+          "titre": "BFM",
+          "paywall": false
+        },
+        {
+          "url": "https://www.varmatin.com/faits-divers/un-policier-de-toulon-tue-son-ex-compagne-de-plusieurs-balles-avant-de-se-suicider-468850",
+          "titre": "Var Matin",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/var-un-policier-de-la-bac-de-toulon-tue-sa-compagne-par-balle-et-se-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
