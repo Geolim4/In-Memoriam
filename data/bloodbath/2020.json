@@ -588,6 +588,39 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "19",
+      "keywords": "Yann Hamonier",
+      "house": "admpen",
+      "peers": [],
+      "text": "Un surveillant du centre de détention de Val-De-Reuil a mis fins à ses jours dans des circonstances inconnues.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Centre de Détention",
+      "location": "Val-De-Reuil (Eure)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 49.284277,
+        "lon": 1.222375
+      },
+      "sources": [
+        {
+          "url": "https://actupenit.com/2020/02/22/val-de-reuil-un-surveillant-penitentiaire-age-de-38-ans-sest-donne-la-mort/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/_FFOC_/status/1231176668682702848",
+          "titre": "@_FFOC_ (Twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
       "orphans": 1,
       "unpublished_reason": "",
       "year": "2020",
@@ -601,8 +634,8 @@
       "location": "Aéroport Nantes-Atlantique (Loire Atlantique)",
       "origin": "interieur",
       "gps": {
-        "lat":  47.157763,
-        "lon":  -1.601265
+        "lat": 47.157763,
+        "lon": -1.601265
       },
       "sources": [
         {
@@ -629,7 +662,7 @@
       "location": "Le Val (Var)",
       "origin": "interieur",
       "gps": {
-        "lat":  43.438115,
+        "lat": 43.438115,
         "lon": 6.071830
       },
       "sources": [
