@@ -474,6 +474,54 @@
       ]
     },
     {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "05",
+      "keywords": "",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal a mis fin à ses jours à l'aide d'une arme à feu après avoir été mis en cause dans une affaire de meurtre d'un septuagénaire.",
+      "section": "Police Municipale (Ville inconnue)",
+      "location": "Noisy-le-Grand (Seine-Saint-Denis)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.848171,
+        "lon": 2.553278
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/seine-saint-denis-soupconne-du-meurtre-dun-homme-de-75-ans-un-policier-municipal-se-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/seine-saint-denis-un-policier-municipal-confesse-un-meurtre-puis-se-suicide-1581099758",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/breves-et-depeches/seine-saint-denis-un-policier-municipal-confesse-un-meurtre-puis-se-suicide-1854062.html",
+          "titre": "BFM",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/paris-ile-de-france/seine-saint-denis/seine-saint-denis-policier-municipal-se-suicide-apres-avoir-confesser-meurtre-1784939.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lexpress.fr/actualite/societe/fait-divers/seine-saint-denis-un-policier-municipal-avoue-un-meurtre-et-se-suicide_2117647.html",
+          "titre": "L'Express",
+          "paywall": false
+        }
+      ]
+    },
+    {
       "cause": "other",
       "count": 1,
       "published": true,
@@ -698,6 +746,64 @@
         },
         {
           "url": "https://actu17.fr/var-un-policier-de-la-bac-de-toulon-tue-sa-compagne-par-balle-et-se-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "03",
+      "day": "05",
+      "keywords": "",
+      "house": "admpen",
+      "peers": [],
+      "text": "Un surveillant pénitentiaire de la maison d'arrêt de Luynes a mis fins à ses jours avec son arme de service à l'interieur du mirador.\n Affecté depuis deux ans à la maison d'arrêt de Luynes, il avait laissé une lettre derrière lui.",
+      "section": "Maison d'arrêt",
+      "location": "Luynes (Bouches-du-Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.481622,
+        "lon": 5.398251
+      },
+      "sources": [
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-surveillant-de-la-maison-d-arret-de-luynes-se-suicide-avec-son-arme-1583413601",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/provence-alpes-cote-d-azur/bouches-du-rhone/surveillant-prison-luynes-se-suicide-son-arme-service-1795245.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.laprovence.com/article/edition-aix-pays-daix/5920075/un-surveillant-se-suicide-dans-un-mirador.html",
+          "titre": "La Provence",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/var-un-policier-tue-son-ex-compagne-avec-son-arme-et-se-suicide-23-02-2020-8265459.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.rtl.fr/actu/justice-faits-divers/un-surveillant-de-prison-se-suicide-avec-son-arme-de-service-a-luynes-7800208102",
+          "titre": "RTL",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/03/05/aix-luynes-un-terrible-drame-sest-produit-cette-nuit-dans-les-rangs-de-la-penitentiaire/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/un-surveillant-penitentiaire-de-25-ans-se-suicide-pendant-son-service-avec-une-arme-a-luyne/",
           "titre": "Actu17",
           "paywall": false
         }
