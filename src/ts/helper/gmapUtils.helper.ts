@@ -3,6 +3,7 @@
  * @author Jbz797 <jean.benoit.gautier@gmail.com>
  * @licence GPL-2.0
  */
+
 export class GmapUtils {
   public static bindButton(map: google.maps.Map, onclickCallback: VoidFunction, opts: { imagePath: string, ctrlPosition: number, title?: string, ctrlChildId?: string, defaultCtrlChildBgPos?: string, defaultCtrlChildBgSize?: string }): HTMLInputElement {
     const controlDiv = <HTMLInputElement>document.createElement('div');

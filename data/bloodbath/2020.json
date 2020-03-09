@@ -1,0 +1,856 @@
+{
+  "settings": {
+    "up_to_date": true
+  },
+  "deaths": [
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "04",
+      "keywords": "Thierry",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier du SDLP s'est défenestré du 6ème étage dans le 20e arrondissement de Paris. Il était marié et père de trois enfants et travaillait à la sous-direction des moyens mobiles du SDLP.",
+      "section": "SDLP",
+      "location": "Paris 8e",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.864504,
+        "lon": 2.412077
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/paris-un-policier-se-suicide-en-se-jetant-du-6e-etage/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1213791690349305858",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/paris-suicide-d-un-policier-du-sdlp-05-01-2020-8229174.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/paris/2687795-20200105-paris-policier-sdlp-suicide",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lexpress.fr/actualite/societe/paris-un-policier-s-est-suicide_2113454.html",
+          "titre": "L'Express",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/01/05/paris-nouveau-drame-dans-les-rangs-de-la-police-nationale-en-ce-debut-dannee/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "13",
+      "keywords": "Marielle Macquet",
+      "house": "police",
+      "peers": [],
+      "text": "Une policière du GSP de Saint-Nazaire a mis fin à ses jours avec son arme administrative dans le Ciat de Saint-Nazaire. \nMajor en poste dans cette circonscription depuis de nombreuses années, elle était mère de deux enfants.",
+      "section": "GSP - CSP Saint-Nazaire",
+      "location": "Saint-Nazaire (Loire-Atlantique)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 47.274538,
+        "lon": -2.216227
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/saint-nazaire-une-policiere-sest-suicidee-au-commissariat/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat44/status/1216722214986375168",
+          "titre": "@PoliceNat44 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/loire-atlantique-une-policiere-se-suicide-dans-son-commissariat-de-saint-nazaire-13-01-2020-8235090.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2693987-20200113-saint-nazaire-policiere-met-fin-jours-commissariat",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/pays-de-la-loire/saint-nazaire-une-policiere-se-donne-la-mort-au-commissariat-6687385",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/une-policiere-de-52-ans-s-est-suicidee-au-commissariat-de-saint-nazaire-1840062.html",
+          "titre": "BFM",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/pays-de-la-loire/saint-nazaire_44184/saint-nazaire-une-policiere-se-suicide-commissariat_30732054.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "13",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un brigadier-chef de la PAF a mis fin à ses jours avec son arme administrative dans les locaux du CRA de Rennes. Peu d'informations disponibles sur ce suicide.",
+      "section": "CRA - DZPAF Rennes",
+      "location": "Rennes (Ille-et-Vilaine)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.061764,
+        "lon": -1.737779
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/rennes-un-policier-sest-suicide-au-centre-de-retention-administrative/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat44/status/1216722214986375168",
+          "titre": "@PoliceNat44 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/rennes-un-policier-s-est-suicide-au-centre-de-retention-13-01-2020-8235360.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2694179-20200113-rennes-policier-met-fin-jours-centre-retention-administratif",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/bretagne/rennes-35000/rennes-suicide-d-un-policier-au-centre-de-retention-administrative-6687897",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.sudouest.fr/2020/01/13/saint-nazaire-une-policiere-de-52-ans-s-est-suicidee-dans-son-commissariat-7056352-5458.php",
+          "titre": "Sud Ouest",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "13",
+      "keywords": "Franck Labois",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier a été grièvement percuté par un chauffard à Bron en banlieue de Lyon (Rhône) lors d'une opération de police.\n Il est décédé quelques jours plus tard des suites de ses blessures.",
+      "section": "GAO - SD 69",
+      "location": "Bron (Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 45.750490,
+        "lon": 4.907776
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/rhone-le-policier-percute-par-un-malfaiteur-a-bron-est-decede/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat69/status/1216778118708584448",
+          "titre": "@PoliceNat69 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/deces-du-policier-percute-par-un-chauffard-a-bron-pres-de-lyon-13-01-2020-8235099.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/police/lyon-le-policier-percute-volontairement-par-un-fourgon-est-mort-6687555",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leprogres.fr/rhone/2020/01/13/le-policier-fauche-par-un-fourgon-a-bron-pres-de-lyon-est-decede",
+          "titre": "Le Progrès",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/actualite-france/bron-le-policier-renverse-volontairement-samedi-par-un-fourgon-est-decede-20200113",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.midilibre.fr/2020/01/13/lyon-le-policier-percute-par-le-fourgon-dun-malfaiteur-en-fuite-na-pas-survecu,8658641.php",
+          "titre": "Midi Libre",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francetvinfo.fr/faits-divers/police/rhone-le-policier-renverse-volontairement-par-un-fourgon-pres-de-lyon-est-mort_3783219.html",
+          "titre": "France Info",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "17",
+      "keywords": "",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un lieutenant-colonel des sapeurs-pompiers a mis fins à ses jours à l’EDIS de Fleury-Mérogis.\n Père de deux enfants il a servi en tant que pompier dans l'Essonne pendant plus de 20 ans.",
+      "section": "EDIS 91",
+      "location": "Fleury-Mérogis (Essonne)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.639516,
+        "lon": 2.374619
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/essonne-un-lieutenant-colonel-des-sapeurs-pompiers-retrouve-sans-vie/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/info-paris-ile-de-france-oise/essonne-un-lieutenant-colonel-des-sapeurs-pompiers-retrouve-mort-sur-son-lieu-de-travail-18-01-2020-8238933.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/fleury-merogis_91235/essonne-lieutenant-colonel-sapeurs-pompiers-retrouve-mort-lecole-departementale-dincendie-secours_30863036.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/fleury-merogis_91235/essonne-lieutenant-colonel-sapeurs-pompiers-retrouve-mort-lecole-departementale-dincendie-secours_30863036.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://secoursinfo.fr/2020/01/18/essonne-un-officier-de-sapeurs-pompiers-retrouve-mort-sur-son-lieu-de-travail/",
+          "titre": "Secours Info ",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "23",
+      "keywords": "William",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la PAF d'Orly a mis fins à ses jours après une violente dispute conjugale dans le nord de la France.\n Major de l'UEL (PAF), il était père d'un adolescent.",
+      "section": "UEL - PAF Orly",
+      "location": "Faches-Thumesnil (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 50.597155,
+        "lon": 3.078778
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/nord-un-policier-affecte-a-la-paf-dorly-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/orly_94054/un-policier-police-frontieres-d-orly-met-fin-jours-suicide_30984246.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/699485/article/2020-01-23/un-policier-parisien-s-est-suicide-avec-son-arme-dans-une-rue-de-faches",
+          "titre": "La Voix du Nord",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "23",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de la BTA de Valenciennes a mis fin à ses jours avec son arme de service. Peu d'informations disponibles sur ce suicide.",
+      "section": "BTA Valenciennes",
+      "location": "Valenciennes (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 50.363930,
+        "lon": 3.525418
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/valenciennes-un-gendarme-se-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/701100/article/2020-01-27/valenciennes-un-gendarme-de-38ans-se-suicide-avec-son-arme-de-service",
+          "titre": "La Voix du Nord",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "25",
+      "keywords": "",
+      "house": "armee",
+      "peers": [],
+      "text": "Un jeune militaire de l'armée de l'air aurait mis fin à ses jours en se jetant du haut d'un immeuble. Peu d'informations disponibles sur ce suicide.",
+      "section": "Armée de l'Air",
+      "location": "Rouen (Seine-Maritime)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 49.449746,
+        "lon": 1.093060
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/rouen-un-jeune-militaire-de-21-ans-retrouve-mort-la-piste-du-suicide-privilegiee/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.infonormandie.com/Rouen-un-jeune-militaire-met-fin-a-ses-jours-en-sautant-d-un-parking-aerien-a-la-gare_a26551.html",
+          "titre": "Info Normandie",
+          "paywall": false
+        },
+        {
+          "url": "hhttps://actu.fr/normandie/rouen_76540/a-rouen-jeune-homme-22-ans-sest-tue-se-jetant-cinquieme-etage-dun-immeuble_31028691.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/01/28/rouen-un-jeune-militaire-retrouve-mort-la-piste-du-suicide-privilegiee/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "30",
+      "keywords": "Arthur",
+      "house": "armee",
+      "peers": [],
+      "text": "Un jeune militaire originaire d'Auch a mis fins à ses jours avec son FAMAS dans le camp militaire de Caylus (Tarn-et-Garonne).\nIl avait été incorporé à l’ENSOA de Saint-Maixent (Deux-Sèvres) pour faire carrière dans l’armée.",
+      "section": "ENSOA Saint-Maixent",
+      "location": "Caylus (Tarn-et-Garonne)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 44.266096,
+        "lon": 1.750616
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/tarn-et-garonne-un-jeune-militaire-de-18-ans-se-suicide-avec-son-famas-au-camp-militaire-de-caylus/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ladepeche.fr/2020/01/30/un-jeune-militaire-se-suicide-au-camp-de-caylus,8698358.php",
+          "titre": "La Dépêche",
+          "paywall": true
+        },
+        {
+          "url": "https://actupenit.com/2020/01/30/caylus-un-militaire-de-lecole-nationale-des-sous-officiers-de-larmee-de-terre-sest-suicide/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lanouvellerepublique.fr/deux-sevres/commune/saint-maixent-l-ecole/saint-maixent-l-ecole-un-jeune-sous-officier-se-suicide-au-camp-de-caylus",
+          "titre": "La Nouvelle République",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "04",
+      "keywords": "",
+      "house": "douane",
+      "peers": [],
+      "text": "Un Douanier de la DRDDI d'Amiens a mis fins à ses jours dans les locaux de la Douanes d'Amiens. Marié, il était le directeur Adjoint du bureau.",
+      "section": "DRDDI Amiens",
+      "location": "Amiens (Somme)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 49.931596,
+        "lon": 2.276175
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-agent-des-douanes-retrouve-pendu-dans-son-bureau-a-amiens/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/amiens-un-agent-des-douanes-retrouve-pendu-sur-son-lieu-de-travail-1580914331",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/02/05/amiens-un-douanier-decouvert-pendu-sur-son-lieu-de-travail/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "05",
+      "keywords": "",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal a mis fin à ses jours à l'aide d'une arme à feu après avoir été mis en cause dans une affaire de meurtre d'un septuagénaire.",
+      "section": "Police Municipale (Ville inconnue)",
+      "location": "Noisy-le-Grand (Seine-Saint-Denis)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 48.848171,
+        "lon": 2.553278
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/seine-saint-denis-soupconne-du-meurtre-dun-homme-de-75-ans-un-policier-municipal-se-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/seine-saint-denis-un-policier-municipal-confesse-un-meurtre-puis-se-suicide-1581099758",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/breves-et-depeches/seine-saint-denis-un-policier-municipal-confesse-un-meurtre-puis-se-suicide-1854062.html",
+          "titre": "BFM",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/paris-ile-de-france/seine-saint-denis/seine-saint-denis-policier-municipal-se-suicide-apres-avoir-confesser-meurtre-1784939.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lexpress.fr/actualite/societe/fait-divers/seine-saint-denis-un-policier-municipal-avoue-un-meurtre-et-se-suicide_2117647.html",
+          "titre": "L'Express",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "other",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "15",
+      "keywords": "François Sangiovanni",
+      "house": "armee",
+      "peers": [],
+      "text": "Un capitaine du 19e RG est décédé lors de son rapatriement des suites d'un malaise survenu lors d'un entraînement. \nIl était déployé au sein des EFS depuis décembre 2019 en tant que chef de corps du 19e RG.",
+      "section": "19e RG (1re DIV)",
+      "location": "BA 160 - Dakar (Sénégal)",
+      "origin": "opex",
+      "gps": {
+        "lat": 14.713272,
+        "lon": -17.482845
+      },
+      "sources": [
+        {
+          "url": "https://www.45enord.fr/2020/02/deces-militaire-19e-regiment-genie-senegal-francois-sangiovanni/",
+          "titre": "45e Nord",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/02/17/senegal-un-capitaine-de-35-ans-du-19eme-regiment-du-genie-decede-apres-un-entrainement/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "http://lignesdedefense.blogs.ouest-france.fr/archive/2020/02/18/deces-d-un-capitaine-du-19e-rg-au-senegal-20905.html",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "http://www.opex360.com/2020/02/18/deces-dun-officier-du-19e-regiment-du-genie-qui-servait-au-sein-des-elements-francais-au-senegal/",
+          "titre": "Opex 360",
+          "paywall": false
+        },
+        {
+          "url": "https://www.cnews.fr/france/2020-02-19/un-militaire-francais-deploye-au-senegal-meurt-apres-un-entrainement-de-boxe",
+          "titre": "CNEWS",
+          "paywall": false
+        },
+        {
+          "url": "https://www.estrepublicain.fr/france-monde/2020/02/18/un-militaire-du-19e-rg-meurt-a-l-entrainement",
+          "titre": "Est Républicain",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "other",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "16",
+      "keywords": "Morgan Henry",
+      "house": "armee",
+      "peers": [],
+      "text": "Un sous-officier du 54e Régiment de Transmission de Haguenau a été retrouvé décédé dans son campement sans que le cause du décès ne soit encore connue.\n Militaire hautement décoré, il opérait au sein de Barkhane depuis novembre 2019.",
+      "section": "54e RT (COM-RENS)",
+      "location": "Burkina Faso",
+      "origin": "opex",
+      "gps": {
+        "lat": 12.275095,
+        "lon": -1.635452
+      },
+      "sources": [
+        {
+          "url": "http://www.opex360.com/2020/02/17/barkhane-un-sous-officier-du-54e-regiment-de-transmissions-decouvert-mort-a-son-campement/",
+          "titre": "Opex 360",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/international/deces-d-origine-inconnue-d-un-soldat-francais-au-burkina-20200217",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.45enord.fr/2020/02/deces-militaire-54e-regiment-transmissions-burkina-faso-morgan-henry/",
+          "titre": "45e Nord",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/un-militaire-francais-de-loperation-barkhane-meurt-au-burkina-faso/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/faits-divers/un-militaire-francais-retrouve-mort-dans-campement-burkina-faso_31522132.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/CEMAT_FR/status/1229322542848057344",
+          "titre": "@CEMAT_FR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/monde/2720351-20200217-burkina-faso-deces-origine-inconnue-soldat-francais-sein-operation-barkhane",
+          "titre": "20 minutes",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "19",
+      "keywords": "Yann Hamonier",
+      "house": "admpen",
+      "peers": [],
+      "text": "Un surveillant du centre de détention de Val-De-Reuil a mis fins à ses jours dans des circonstances inconnues.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Centre de Détention",
+      "location": "Val-De-Reuil (Eure)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 49.284277,
+        "lon": 1.222375
+      },
+      "sources": [
+        {
+          "url": "https://actupenit.com/2020/02/22/val-de-reuil-un-surveillant-penitentiaire-age-de-38-ans-sest-donne-la-mort/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/_FFOC_/status/1231176668682702848",
+          "titre": "@_FFOC_ (Twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "20",
+      "keywords": "Mathias",
+      "house": "police",
+      "peers": [],
+      "text": "Un ADS de la PAF de l'aéroport de Nantes a mis fin à ses jours à son domicile. Il était père d'un jeune enfant et avait réussi son concours de Gardien de la Paix.",
+      "section": "DZPAF",
+      "location": "Aéroport Nantes-Atlantique (Loire Atlantique)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 47.157763,
+        "lon": -1.601265
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "23",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la BAC nuit de Toulon a retourné son arme de service contre lui après avoir abattu sa femme suite à une dispute conjugale près de Brignoles (Var).",
+      "section": "BAC Nuit - Toulon",
+      "location": "Le Val (Var)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.438115,
+        "lon": 6.071830
+      },
+      "sources": [
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/le-val-un-policier-de-la-bac-de-toulon-tue-sa-compagne-puis-se-suicide-avec-son-arme-de-service-1582468025",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/provence-alpes-cote-d-azur/var/policier-toulon-tue-sa-compagne-puis-se-suicide-pres-brignoles-1791185.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.laprovence.com/actu/en-direct/5903202/var-un-policier-tue-son-ex-compagne-et-se-suicide.html",
+          "titre": "La Provence",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/var-un-policier-tue-son-ex-compagne-avec-son-arme-et-se-suicide-23-02-2020-8265459.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/societe/var-un-homme-tue-son-ex-compagne-avant-de-se-suicider-1862996.html",
+          "titre": "BFM",
+          "paywall": false
+        },
+        {
+          "url": "https://www.varmatin.com/faits-divers/un-policier-de-toulon-tue-son-ex-compagne-de-plusieurs-balles-avant-de-se-suicider-468850",
+          "titre": "Var Matin",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/var-un-policier-de-la-bac-de-toulon-tue-sa-compagne-par-balle-et-se-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "03",
+      "day": "05",
+      "keywords": "",
+      "house": "admpen",
+      "peers": [],
+      "text": "Un surveillant pénitentiaire de la maison d'arrêt de Luynes a mis fins à ses jours avec son arme de service à l'interieur du mirador.\n Affecté depuis deux ans à la maison d'arrêt de Luynes, il avait laissé une lettre derrière lui.",
+      "section": "Maison d'arrêt",
+      "location": "Luynes (Bouches-du-Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "lat": 43.481622,
+        "lon": 5.398251
+      },
+      "sources": [
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-surveillant-de-la-maison-d-arret-de-luynes-se-suicide-avec-son-arme-1583413601",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/provence-alpes-cote-d-azur/bouches-du-rhone/surveillant-prison-luynes-se-suicide-son-arme-service-1795245.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.laprovence.com/article/edition-aix-pays-daix/5920075/un-surveillant-se-suicide-dans-un-mirador.html",
+          "titre": "La Provence",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/var-un-policier-tue-son-ex-compagne-avec-son-arme-et-se-suicide-23-02-2020-8265459.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.rtl.fr/actu/justice-faits-divers/un-surveillant-de-prison-se-suicide-avec-son-arme-de-service-a-luynes-7800208102",
+          "titre": "RTL",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/03/05/aix-luynes-un-terrible-drame-sest-produit-cette-nuit-dans-les-rangs-de-la-penitentiaire/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/un-surveillant-penitentiaire-de-25-ans-se-suicide-pendant-son-service-avec-une-arme-a-luyne/",
+          "titre": "Actu17",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 4,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "03",
+      "day": "08",
+      "keywords": "",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier volontaire est décédé des suites d'un malaise après une intervention sur un feu de broussailles dans la commune du Prêcheur. Volontaire depuis plus d'une dizaine d'années il était père de 4 enfants.",
+      "section": "SDIS 972",
+      "location": "Prêcheur (Martinique)",
+      "origin": "domtom",
+      "gps": {
+        "lat":  14.618595,
+        "lon": -61.102521
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PompiersFR/status/1236944404042207233",
+          "titre": "@PompiersFR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://la1ere.francetvinfo.fr/martinique/pompier-volontaire-decede-lors-intervention-au-precheur-808479.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/03/09/martinique-un-pompier-volontaire-pere-de-quatre-enfants-decede-lors-dune-intervention/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/un-pompier-volontaire-decede-lors-dune-intervention-en-martinique/",
+          "titre": "Actu17",
+          "paywall": false
+        }
+      ]
+    }
+  ]
+}

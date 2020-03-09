@@ -1,7 +1,8 @@
 import { Death } from './death.model';
-import { Definition } from './definition.model';
 
 export interface Bloodbath {
-  definitions?: Definition[];
+  settings: {
+    up_to_date: boolean,
+  };
   deaths?: Death[];
 }

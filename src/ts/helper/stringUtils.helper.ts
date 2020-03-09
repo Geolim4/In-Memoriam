@@ -5,7 +5,7 @@
  */
 export class StringUtilsHelper {
   public static normalizeString(string: string): string {
-    return string.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    return string.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
   }
 
   public static containsString(haystack: string, needle: string): boolean {
@@ -19,5 +19,15 @@ export class StringUtilsHelper {
       }
     }
     return false;
+  }
+
+  public static replaceAcronyms(str: string, findReplace: {}): string {
+    const replaced = Object.keys(findReplace).map((i) => {
+      return i.replace(/[.?*+^$[\]\\(){}|-]/g, '\\$&');
+    }).join('|');
+
+    return str.replace(new RegExp(`(${replaced})\\b`, 'g'), (s) => {
+      return `<abbr data-tippy-content="${findReplace[s]}">${s}</abbr>`;
+    });
   }
 }

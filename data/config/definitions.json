@@ -2,14 +2,20 @@
   "definitions": {
     "year": {
       "#label": "<strong>Décompte annuel</strong>: %year%",
+      "#counter_property": "count",
+      "#counter_strategy": "distinct",
       "#any": {
+        "none": "<span class=\"label label-success\">%d</span> disparition sur l'année %year%",
         "singular": "<span class=\"label label-danger\">%d</span> disparition sur l'année %year%",
         "plural": "<span class=\"label label-danger\">%d</span> disparitions sur l'année %year%"
       }
     },
     "cause": {
       "#label": "<strong>Causes</strong>: %cause%",
+      "#counter_property": "count",
+      "#counter_strategy": "distinct",
       "suicide": {
+        "none": "<span class=\"label label-success\">%d</span> suicide",
         "singular": "<span class=\"label label-danger\">%d</span> suicide",
         "plural": "<span class=\"label label-danger\">%d</span> suicides"
       },
@@ -18,66 +24,99 @@
         "plural": "<span class=\"label label-danger\">%d</span> morts en service"
       },
       "accident": {
+        "none": "<span class=\"label label-success\">%d</span> mort accidentelle",
         "singular": "<span class=\"label label-danger\">%d</span> mort accidentelle",
         "plural": "<span class=\"label label-danger\">%d</span> morts accidentelles"
       },
       "murdered": {
-        "singular": "<span class=\"label label-danger\">%d</span> assassiné",
-        "plural": "<span class=\"label label-danger\">%d</span> assassinés"
+        "none": "<span class=\"label label-success\">%d</span> meurtre",
+        "singular": "<span class=\"label label-danger\">%d</span> meurtre",
+        "plural": "<span class=\"label label-danger\">%d</span> meurtres"
+      },
+      "other": {
+        "none": "",
+        "singular": "<span class=\"label label-danger\">%d</span> autre décès",
+        "plural": "<span class=\"label label-danger\">%d</span> autres décès"
       }
     },
     "house": {
       "#label": "<strong>Corps</strong>: %house%",
+      "#counter_property": "count",
+      "#counter_strategy": "distinct",
       "gendarmerie": {
+        "none": "<span class=\"label label-success\">%d</span> gendarme",
         "singular": "<span class=\"label label-danger\">%d</span> gendarme",
         "plural": "<span class=\"label label-danger\">%d</span> gendarmes"
       },
       "police": {
+        "none": "<span class=\"label label-success\">%d</span> policier",
         "singular": "<span class=\"label label-danger\">%d</span> policier",
         "plural": "<span class=\"label label-danger\">%d</span> policiers"
       },
       "pm": {
+        "none": "<span class=\"label label-success\">%d</span> policier municipal",
         "singular": "<span class=\"label label-danger\">%d</span> policier municipal",
         "plural": "<span class=\"label label-danger\">%d</span> policiers municipaux"
       },
       "douane": {
+        "none": "<span class=\"label label-success\">%d</span> douanier",
         "singular": "<span class=\"label label-danger\">%d</span> douanier",
         "plural": "<span class=\"label label-danger\">%d</span> douaniers"
       },
       "pompier": {
+        "none": "<span class=\"label label-success\">%d</span> pompier",
         "singular": "<span class=\"label label-danger\">%d</span> pompier",
         "plural": "<span class=\"label label-danger\">%d</span> pompiers"
       },
       "armee": {
+        "none": "<span class=\"label label-success\">%d</span> militaire",
         "singular": "<span class=\"label label-danger\">%d</span> militaire",
         "plural": "<span class=\"label label-danger\">%d</span> militaires"
       },
       "admpen": {
+        "none": "<span class=\"label label-success\">%d</span> surveillant pénitentiaire",
         "singular": "<span class=\"label label-danger\">%d</span> surveillant pénitentiaire",
         "plural": "<span class=\"label label-danger\">%d</span> surveillants pénitentiaire"
       },
       "secciv": {
+        "none": "<span class=\"label label-success\">%d</span> personnel de la sécurité civile",
         "singular": "<span class=\"label label-danger\">%d</span> personnel de la sécurité civile",
         "plural": "<span class=\"label label-danger\">%d</span> personnels de la sécurité civile"
       },
       "misc": {
+        "none": "<span class=\"label label-success\">%d</span> fonctionnaire ou bénévole civil",
         "singular": "<span class=\"label label-danger\">%d</span> fonctionnaire ou bénévole civil",
         "plural": "<span class=\"label label-danger\">%d</span> fonctionnaires ou bénévoles civils"
       }
     },
     "origin": {
       "#label": "<strong>Théatre d'action</strong>: %origin%",
+      "#counter_property": "count",
+      "#counter_strategy": "distinct",
       "interieur": {
+        "none": "<span class=\"label label-success\">%d</span> disparition sur le territoire national",
         "singular": "<span class=\"label label-danger\">%d</span> disparition sur le territoire national",
         "plural": "<span class=\"label label-danger\">%d</span> disparitions en territoire national"
       },
       "domtom": {
+        "none": "<span class=\"label label-success\">%d</span> disparition en DOM-TOM",
         "singular": "<span class=\"label label-danger\">%d</span> disparition en DOM-TOM",
         "plural": "<span class=\"label label-danger\"> %d</span> disparitions en DOM-TOM"
       },
       "opex": {
+        "none": "<span class=\"label label-success\">%d</span> disparition en opération extérieure (OPEX)",
         "singular": "<span class=\"label label-danger\">%d</span> disparition en opération extérieure (OPEX)",
         "plural": "<span class=\"label label-danger\"> %d</span> disparitions en opération extérieure (OPEX)"
+      }
+    },
+    "orphans": {
+      "#label": "<strong>Orphelins</strong>: %orphans%",
+      "#counter_property": "orphans",
+      "#counter_strategy": "sum",
+      "#any": {
+        "none": "<span class=\"label label-success\">%d</span> enfant orphelin sur l'année %year%",
+        "singular": "<span class=\"label label-danger\">%d</span> enfant orphelin sur l'année %year%",
+        "plural": "<span class=\"label label-danger\">%d</span> enfants orphelins <strong>connus au minimum</strong> sur l'année %year%"
       }
     }
   }

@@ -6,15 +6,27 @@
     "defaultZoom": 12,
     "googleMaps": {
       "key": "AIzaSyBMB4lQqiIf7t6QV8CFFV6IwCqw_7dYREw",
-      "libraries": ["visualization"]
+      "libraries": [
+        "visualization",
+        "geometry"
+      ]
     },
     "heatmapOptions": {
-      "dissipating": true,
-      "opacity": 0.3,
-      "radius": 100
+      "dissipating": false,
+      "opacity": 0.4,
+      "radius": 1
     },
     "imagePath": {
       "random": "./assets/images/map/random.png",
+      "list": "./assets/images/map/list.png",
+      "clustering": {
+        "on": "./assets/images/map/clustering_on.png",
+        "off": "./assets/images/map/clustering_off.png"
+      },
+      "heatmap": {
+        "on": "./assets/images/map/heatmap_on.png",
+        "off": "./assets/images/map/heatmap_off.png"
+      },
       "localize": "https://maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png",
       "bluedot": "./assets/images/map/bluedot.png"
     },
