@@ -808,6 +808,49 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 4,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "03",
+      "day": "08",
+      "keywords": "",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier volontaire est décédé des suites d'un malaise après une intervention sur un feu de broussailles dans la commune du Prêcheur. Volontaire depuis plus d'une dizaine d'années il était père de 4 enfants.",
+      "section": "SDIS 972",
+      "location": "Prêcheur (Martinique)",
+      "origin": "domtom",
+      "gps": {
+        "lat":  14.618595,
+        "lon": -61.102521
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PompiersFR/status/1236944404042207233",
+          "titre": "@PompiersFR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://la1ere.francetvinfo.fr/martinique/pompier-volontaire-decede-lors-intervention-au-precheur-808479.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/03/09/martinique-un-pompier-volontaire-pere-de-quatre-enfants-decede-lors-dune-intervention/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/un-pompier-volontaire-decede-lors-dune-intervention-en-martinique/",
+          "titre": "Actu17",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
