@@ -877,6 +877,31 @@
           "url": "https://actu17.fr/un-policier-affecte-a-vitry-sur-seine-sest-suicide-a-son-domicile/",
           "titre": "Actu17",
           "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/un-policier-de-vitry-sur-seine-se-suicide-par-arme-a-feu-1872634.html",
+          "titre": "BFM",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/vitry-sur-seine_94081/un-policier-vitry-sur-seine-se-suicide-son-arme-service-chez-lui_32061097.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/val-de-marne-94/hauts-de-seine-un-policier-de-vitry-se-donne-la-mort-09-03-2020-8276241.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/03/10/vitry-sur-seine-nouveau-drame-dans-les-rangs-de-la-police-nationale/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/prefpolice/status/1237265854561124352",
+          "titre": "@prefpolice (Twitter)",
+          "paywall": false
         }
       ]
     }
