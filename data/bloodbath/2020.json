@@ -705,8 +705,8 @@
       "keywords": "",
       "house": "police",
       "peers": [],
-      "text": "Un policier de la BAC nuit de Toulon a retourné son arme de service contre lui après avoir abattu sa femme suite à une dispute conjugale près de Brignoles (Var).",
-      "section": "BAC Nuit - Toulon",
+      "text": "Un policier de la BAC-N de Toulon a retourné son arme de service contre lui après avoir abattu sa femme suite à une dispute conjugale près de Brignoles (Var).",
+      "section": "BAC-N - Toulon",
       "location": "Le Val (Var)",
       "origin": "interieur",
       "gps": {
@@ -865,7 +865,7 @@
       "house": "police",
       "peers": [],
       "text": "Un policier de la BAC-N de Vitry-sur-Seine a mis fins à ses jours avec son arme de service dans son logement au Plessis-Robinson.",
-      "section": "BAC-N Vitry-sur-Seine (Val-de-Marne) ",
+      "section": "BAC-N Vitry-sur-Seine (Val-de-Marne)",
       "location": "Le Plessis-Robinson (Hauts-de-Seine)",
       "origin": "interieur",
       "gps": {
@@ -901,6 +901,69 @@
         {
           "url": "https://twitter.com/prefpolice/status/1237265854561124352",
           "titre": "@prefpolice (Twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "03",
+      "day": "10",
+      "keywords": "Jean-Marc",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CRS 48 a mis fin à ses jours avec son arme de service dans les locaux de la compagnie.\n Père de deux enfants, ce major cumulait de longues années de carrière.",
+      "section": "CRS 48",
+      "location": "Châtel-Guyon (Puy-de-Dôme)",
+      "origin": "interieur",
+      "gps": {
+        "lat":   45.922881,
+        "lon":   3.069135
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/puy-de-dome-un-policier-affecte-a-la-crs-48-sest-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/puy-de-dome/puy-dome-policier-crs-48-se-suicide-son-arme-service-1798258.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/chatel-guyon-un-policier-de-la-crs-48-se-donne-la-mort-sur-son-lieu-de-travail-1583924310",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/suicide-d-un-crs-dans-le-puy-de-dome-20200311",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lamontagne.fr/chatel-guyon-63140/actualites/un-policier-de-la-crs-48-se-suicide-avec-son-arme-de-service-a-chatel-guyon-puy-de-dome_13763076/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lamontagne.fr/chatel-guyon-63140/actualites/un-policier-de-la-crs-48-se-suicide-avec-son-arme-de-service-a-chatel-guyon-puy-de-dome_13763076/",
+          "titre": "La Montagne",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/auvergne-rhone-alpes/chatel-guyon-63140/puy-de-dome-un-crs-de-chatel-guyon-met-fin-ses-jours-6775057",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1237697387885400064",
+          "titre": "@PoliceNationale (Twitter)",
           "paywall": false
         }
       ]
