@@ -19,6 +19,7 @@
       "location": "Dunkerque",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 51.038295,
         "lon": 2.376198
       },
@@ -66,6 +67,7 @@
       "location": "Quimper",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 47.994612,
         "lon": -4.099695
       },
@@ -119,6 +121,7 @@
       "location": "Lambersart (Nord)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 50.645740,
         "lon": 3.027687
       },
@@ -152,6 +155,7 @@
       "location": "Nantes (Loire-Atlantique)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 47.227579,
         "lon": -1.551646
       },
@@ -190,6 +194,7 @@
       "location": "Puttelange-aux-Lacs (Moselle)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.051811,
         "lon": 6.943230
       },
@@ -233,6 +238,7 @@
       "location": "Marseille",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.283780,
         "lon": 5.397460
       },
@@ -281,6 +287,7 @@
       "location": "Bussy-Lettrée, Aéroport de Paris-Vatry (Marne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.780702,
         "lon": 4.191550
       },
@@ -344,6 +351,7 @@
       "location": "Metz (Moselle)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.112410,
         "lon": 6.177239
       },
@@ -376,6 +384,7 @@
       "location": "Carrières-sous-Poissy (Yvelines)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.945384,
         "lon": 2.032418
       },
@@ -429,6 +438,7 @@
       "location": "Saint-Astier (Dordogne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.142386,
         "lon": 0.524803
       },
@@ -482,6 +492,7 @@
       "location": "Ambérieu-en-Bugey (Ain)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.960641,
         "lon": 5.337742
       },

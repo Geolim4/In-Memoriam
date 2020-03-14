@@ -20,6 +20,7 @@
       "location": "Paris 8e",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.864504,
         "lon": 2.412077
       },
@@ -73,6 +74,7 @@
       "location": "Saint-Nazaire (Loire-Atlantique)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 47.274538,
         "lon": -2.216227
       },
@@ -131,6 +133,7 @@
       "location": "Rennes (Ille-et-Vilaine)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.061764,
         "lon": -1.737779
       },
@@ -184,6 +187,7 @@
       "location": "Bron (Rhône)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.750490,
         "lon": 4.907776
       },
@@ -247,6 +251,7 @@
       "location": "Fleury-Mérogis (Essonne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.639516,
         "lon": 2.374619
       },
@@ -295,6 +300,7 @@
       "location": "Faches-Thumesnil (Nord)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 50.597155,
         "lon": 3.078778
       },
@@ -333,6 +339,7 @@
       "location": "Valenciennes (Nord)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 50.363930,
         "lon": 3.525418
       },
@@ -366,6 +373,7 @@
       "location": "Rouen (Seine-Maritime)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.449746,
         "lon": 1.093060
       },
@@ -381,7 +389,7 @@
           "paywall": false
         },
         {
-          "url": "hhttps://actu.fr/normandie/rouen_76540/a-rouen-jeune-homme-22-ans-sest-tue-se-jetant-cinquieme-etage-dun-immeuble_31028691.html",
+          "url": "https://actu.fr/normandie/rouen_76540/a-rouen-jeune-homme-22-ans-sest-tue-se-jetant-cinquieme-etage-dun-immeuble_31028691.html",
           "titre": "Actu.fr",
           "paywall": false
         },
@@ -409,6 +417,7 @@
       "location": "Caylus (Tarn-et-Garonne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 44.266096,
         "lon": 1.750616
       },
@@ -452,6 +461,7 @@
       "location": "Amiens (Somme)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.931596,
         "lon": 2.276175
       },
@@ -490,6 +500,7 @@
       "location": "Noisy-le-Grand (Seine-Saint-Denis)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.848171,
         "lon": 2.553278
       },
@@ -538,6 +549,7 @@
       "location": "BA 160 - Dakar (Sénégal)",
       "origin": "opex",
       "gps": {
+        "accurate": true,
         "lat": 14.713272,
         "lon": -17.482845
       },
@@ -591,6 +603,7 @@
       "location": "Burkina Faso",
       "origin": "opex",
       "gps": {
+        "accurate": true,
         "lat": 12.275095,
         "lon": -1.635452
       },
@@ -649,6 +662,7 @@
       "location": "Val-De-Reuil (Eure)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.284277,
         "lon": 1.222375
       },
@@ -682,6 +696,7 @@
       "location": "Aéroport Nantes-Atlantique (Loire Atlantique)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 47.157763,
         "lon": -1.601265
       },
@@ -710,6 +725,7 @@
       "location": "Le Val (Var)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.438115,
         "lon": 6.071830
       },
@@ -768,6 +784,7 @@
       "location": "Luynes (Bouches-du-Rhône)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.481622,
         "lon": 5.398251
       },
@@ -826,6 +843,7 @@
       "location": "Prêcheur (Martinique)",
       "origin": "domtom",
       "gps": {
+        "accurate": true,
         "lat":  14.618595,
         "lon": -61.102521
       },
@@ -869,6 +887,7 @@
       "location": "Le Plessis-Robinson (Hauts-de-Seine)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat":  48.782346,
         "lon":  2.262282
       },
@@ -922,6 +941,7 @@
       "location": "Châtel-Guyon (Puy-de-Dôme)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat":   45.922881,
         "lon":   3.069135
       },
@@ -964,6 +984,70 @@
         {
           "url": "https://twitter.com/PoliceNationale/status/1237697387885400064",
           "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "03",
+      "day": "13",
+      "keywords": "Volodymyr RYBONTCHOUK",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 1er REG, détaché auprès de la FCR/FINUL dans section la du génie, est décédé dans un accident de véhicule lors d'une mission de reconnaissance au sud du Liban.",
+      "section": "1er REG, FCR (6eme BLB)",
+      "location": "Sud du Liban",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "lat":  33.249274,
+        "lon": 35.420509
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/EtatMajorFR/status/1238470824539181056",
+          "titre": "@EtatMajorFR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/occitanie/gard/caporal-du-1er-regiment-etranger-genie-laudun-ardoise-gard-perd-vie-au-liban-1799710.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/liban-un-casque-bleu-francais-meurt-dans-un-accident-de-la-route-13-03-2020-8279733.php#xtor=AD-1481423553",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/03/13/liban-mort-dun-militaire-du-1er-regiment-etranger-du-genie-1er-reg-dans-le-cadre-de-loperation-daman/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://www.midilibre.fr/2020/03/13/gard-rhodanien-un-caporal-du-1er-regiment-etranger-de-genie-trouve-la-mort-au-liban,8796856.php",
+          "titre": "Midi Libre",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/monde/liban/liban-deces-d-un-casque-bleu-francais-dans-un-accident-de-la-route-6779244",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ledauphine.com/france-monde/2020/03/13/liban-un-soldat-francais-decede-dans-un-accident-de-la-route",
+          "titre": "Le Dauphiné",
+          "paywall": false
+        },
+        {
+          "url": "https://www.defense.gouv.fr/operations/actualites2/daman-deces-du-caporal-volodymyr-rybontchouk-au-liban",
+          "titre": "MINARM - Hommage",
           "paywall": false
         }
       ]
