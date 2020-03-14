@@ -20,6 +20,7 @@
       "location": "La Rochelle (Charente-Maritime)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 46.168667,
         "lon": -1.152359
       },
@@ -53,6 +54,7 @@
       "location": "Querqueville (Manche)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.662767,
         "lon": -1.697209
       },
@@ -86,6 +88,7 @@
       "location": "Château-Salins (Moselle)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.822908,
         "lon": 6.509771
       },
@@ -124,6 +127,7 @@
       "location": "Reims (Marne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.256218,
         "lon": 4.022128
       },
@@ -157,6 +161,7 @@
       "location": "La Rochelle (Charente-Maritime)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 46.170629,
         "lon": -1.141469
       },
@@ -185,6 +190,7 @@
       "location": "Koumac (Nouvelle-Calédonie)",
       "origin": "domtom",
       "gps": {
+        "accurate": true,
         "lat": -20.549007,
         "lon": 164.272061
       },
@@ -233,6 +239,7 @@
       "location": "Mignovillard (Jura)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 46.774568,
         "lon": 6.192054
       },
@@ -286,6 +293,7 @@
       "location": "Paris 9e",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.874059,
         "lon": 2.345338
       },
@@ -339,6 +347,7 @@
       "location": "Haÿ-les-Roses (Marne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.698343,
         "lon": 2.504014
       },
@@ -377,6 +386,7 @@
       "location": "Saint-Omer (Pas-de-Calais)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 50.753773,
         "lon": 2.250268
       },
@@ -415,6 +425,7 @@
       "location": "Paris 18e",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.893970,
         "lon": 2.364701
       },
@@ -458,6 +469,7 @@
       "location": "Paris 20e",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.849443,
         "lon": 2.406771
       },
@@ -486,6 +498,7 @@
       "location": "Bédenac (Charente-Maritime)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.201326,
         "lon": -0.339256
       },
@@ -529,6 +542,7 @@
       "location": "Le Mans (Sarthe)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.005502,
         "lon": 0.225123
       },
@@ -562,6 +576,7 @@
       "location": "Emplacement inconnu",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.871773,
         "lon": 2.316401
       },
@@ -590,6 +605,7 @@
       "location": "Saint-André (Réunion)",
       "origin": "domtom",
       "gps": {
+        "accurate": true,
         "lat": -20.984461,
         "lon": 55.651753
       },
@@ -633,6 +649,7 @@
       "location": "Nouméa (Nouvelle-Calédonie)",
       "origin": "domtom",
       "gps": {
+        "accurate": true,
         "lat": -22.273289,
         "lon": 166.444771
       },
@@ -681,6 +698,7 @@
       "location": "Fort de France (Martinique)",
       "origin": "domtom",
       "gps": {
+        "accurate": true,
         "lat": 14.605298,
         "lon": -61.068503
       },
@@ -714,6 +732,7 @@
       "location": "Louverné (Mayenne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.118888,
         "lon": -0.718941
       },
@@ -752,6 +771,7 @@
       "location": "Grand Quevilly (Seine-Maritime)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.406735,
         "lon": 1.044756
       },
@@ -780,6 +800,7 @@
       "location": "Limoges (Haute-Vienne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.844665,
         "lon": 1.252959
       },
@@ -823,6 +844,7 @@
       "location": "Dunkerque (Nord)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 51.038376,
         "lon": 2.376220
       },
@@ -851,6 +873,7 @@
       "location": "Elancourt (Yvelines)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.782620,
         "lon": 1.754585
       },
@@ -889,6 +912,7 @@
       "location": "Saint-Saëns (Seine-Maritime)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.435054,
         "lon": 1.081077
       },
@@ -927,6 +951,7 @@
       "location": "Selles-sur-Cher (Loir-et-Cher)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 47.278040,
         "lon": 1.550218
       },
@@ -965,6 +990,7 @@
       "location": "Paris 17e",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.893906,
         "lon": 2.308426
       },
@@ -1008,6 +1034,7 @@
       "location": "Aéroport Roissy (Val-d'Oise)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.007683,
         "lon": 2.546527
       },
@@ -1051,6 +1078,7 @@
       "location": "Nézel (Yvelines)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.942885,
         "lon": 1.840041
       },
@@ -1089,6 +1117,7 @@
       "location": "Paris 12e",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.841943,
         "lon": 2.405364
       },
@@ -1132,6 +1161,7 @@
       "location": "Louveaucourt, Bailleval (Oise)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.342834,
         "lon": 2.459641
       },
@@ -1175,6 +1205,7 @@
       "location": "Seine-et-Marne",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.690206,
         "lon": 2.993409
       },
@@ -1208,6 +1239,7 @@
       "location": "Toulouse-Seysses (Haute-Garonne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.489376,
         "lon": 1.324897
       },
@@ -1246,6 +1278,7 @@
       "location": "Mali (Zone Inconnue)",
       "origin": "opex",
       "gps": {
+        "accurate": true,
         "lat": 17.949597,
         "lon": -1.781396
       },
@@ -1289,6 +1322,7 @@
       "location": "Marlieux (Ain)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 46.065072,
         "lon": 5.071734
       },
@@ -1337,6 +1371,7 @@
       "location": "Avignon (Vaucluse)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.952490,
         "lon": 4.818394
       },
@@ -1385,6 +1420,7 @@
       "location": "Guainville (Eure-et-Loir)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.000324,
         "lon": 2.093394
       },
@@ -1428,6 +1464,7 @@
       "location": "La Calmette (Gard)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.931985,
         "lon": 4.316080
       },
@@ -1481,6 +1518,7 @@
       "location": "Orsay (Essonne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.708536,
         "lon": 2.179273
       },
@@ -1519,6 +1557,7 @@
       "location": "Paris 13e",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.826618,
         "lon": 2.370783
       },
@@ -1552,6 +1591,7 @@
       "location": "Marla (Réunion)",
       "origin": "domtom",
       "gps": {
+        "accurate": true,
         "lat": -21.101655,
         "lon": 55.434389
       },
@@ -1600,6 +1640,7 @@
       "location": "Metz (Moselle)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.099270,
         "lon": 6.209754
       },
@@ -1643,6 +1684,7 @@
       "location": "Béziers (Hérault)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.342809,
         "lon": 3.214062
       },
@@ -1681,6 +1723,7 @@
       "location": "Montpellier (Hérault)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.612616,
         "lon": 3.892701
       },
@@ -1724,6 +1767,7 @@
       "location": "Paris 4e",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.854157,
         "lon": 2.345969
       },
@@ -1767,6 +1811,7 @@
       "location": "Entre-Deux (Réunion)",
       "origin": "domtom",
       "gps": {
+        "accurate": true,
         "lat": -21.248367,
         "lon": 55.469654
       },
@@ -1815,6 +1860,7 @@
       "location": "Gap (Hautes-Alpes)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 44.533705,
         "lon": 6.050899
       },
@@ -1863,6 +1909,7 @@
       "location": "Paray-le-Monial (Saône-et-Loire)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 46.452462,
         "lon": 4.120684
       },
@@ -1906,6 +1953,7 @@
       "location": "Aunay-sur-Odon (Calvados)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.017022,
         "lon": -0.636107
       },
@@ -1949,6 +1997,7 @@
       "location": "Sahel Nord, Burkina Faso",
       "origin": "opex",
       "gps": {
+        "accurate": true,
         "lat": 13.997536,
         "lon": -1.954055
       },
@@ -1997,6 +2046,7 @@
       "location": "Cholet (Maine-et-Loire)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 47.061753,
         "lon": -0.881144
       },
@@ -2035,6 +2085,7 @@
       "location": "Sassenage (Isère)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.202764,
         "lon": 5.666735
       },
@@ -2073,6 +2124,7 @@
       "location": "Lons-le-Saunier (Jura)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 46.671087,
         "lon": 5.570432
       },
@@ -2116,6 +2168,7 @@
       "location": "Mourmelon-le-Grand (Marne)",
       "origin": "opex",
       "gps": {
+        "accurate": true,
         "lat": 49.128843,
         "lon": 4.379439
       },
@@ -2169,6 +2222,7 @@
       "location": "Lille (Nord)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 50.629522,
         "lon": 3.057458
       },
@@ -2207,6 +2261,7 @@
       "location": "Meaux (Seine-et-Marne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.956342,
         "lon": 2.889526
       },
@@ -2250,6 +2305,7 @@
       "location": "Nice (Alpes Maritimes)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.710525,
         "lon": 7.261837
       },
@@ -2278,6 +2334,7 @@
       "location": "Chessy (Seine-et-Marne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.862258,
         "lon": 2.785911
       },
@@ -2321,6 +2378,7 @@
       "location": "Fougères (Ille-et-Vilaine)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.350400,
         "lon": -1.183104
       },
@@ -2359,6 +2417,7 @@
       "location": "Sables-d’Olonne (Vendée)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 46.494841,
         "lon": -1.823473
       },
@@ -2407,6 +2466,7 @@
       "location": "Saint-Gervasy (Gard)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.877545,
         "lon": 4.469124
       },
@@ -2440,6 +2500,7 @@
       "location": "Fos-sur-Mer (Bouches-du-Rhône)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.444097,
         "lon": 4.940126
       },
@@ -2478,6 +2539,7 @@
       "location": "Vélizy-Villacoublay (Yvelines)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.783721,
         "lon": 2.184852
       },
@@ -2521,6 +2583,7 @@
       "location": "Paris 18e",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.885721,
         "lon": 2.351906
       },
@@ -2559,6 +2622,7 @@
       "location": "Toulouse",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.602366,
         "lon": 1.450819
       },
@@ -2602,6 +2666,7 @@
       "location": "Attichy (Oise)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.410770,
         "lon": 3.048556
       },
@@ -2650,6 +2715,7 @@
       "location": "Nîmes (Gard)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.825462,
         "lon": 4.362922
       },
@@ -2693,6 +2759,7 @@
       "location": "Caylus (Tarn-et-Garonne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 44.264690,
         "lon": 1.751655
       },
@@ -2726,6 +2793,7 @@
       "location": "Burbure (Pas-de-Calais)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 50.538285,
         "lon": 2.465265
       },
@@ -2764,6 +2832,7 @@
       "location": "Marseille (Bouches-du-Rhône)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.299959,
         "lon": 5.366154
       },
@@ -2812,6 +2881,7 @@
       "location": "Bordeaux (Gironde)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 44.834753,
         "lon": -0.589092
       },
@@ -2855,6 +2925,7 @@
       "location": "Béziers (Hérault)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.643425,
         "lon": 3.738543
       },
@@ -2898,6 +2969,7 @@
       "location": "Annecy (Haute-Savoie)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.897353,
         "lon": 6.131670
       },
@@ -2946,6 +3018,7 @@
       "location": "Castelnau de Médoc (Gironde)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.025095,
         "lon": -0.792411
       },
@@ -2994,6 +3067,7 @@
       "location": "Saumur (Maine-et-Loire)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 47.262087,
         "lon": -0.086942
       },
@@ -3042,6 +3116,7 @@
       "location": "St-Jean d’Abounami (Guyane)",
       "origin": "domtom",
       "gps": {
+        "accurate": true,
         "lat": 3.843046,
         "lon": -53.910905
       },
@@ -3095,6 +3170,7 @@
       "location": "Douai (Nord)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 50.376203,
         "lon": 3.085565
       },
@@ -3133,6 +3209,7 @@
       "location": "Béthune (Pas-de-Calais)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 50.518094,
         "lon": 2.640785
       },
@@ -3181,6 +3258,7 @@
       "location": "Poulx (Gard)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.910943,
         "lon": 4.424375
       },
@@ -3229,6 +3307,7 @@
       "location": "La Buisse (Isère)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.335312,
         "lon": 5.621302
       },
@@ -3267,6 +3346,7 @@
       "location": "Cergy (Val d'Oise)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.038047,
         "lon": 2.085481
       },
@@ -3320,6 +3400,7 @@
       "location": "Aulnay-sous-Bois (Seine-Saint-Denis)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.927220,
         "lon": 2.500290
       },
@@ -3373,6 +3454,7 @@
       "location": "Saint-Jacques-de-la-Lande (Ille-et-Vilaine)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.093528,
         "lon": -1.694163
       },
@@ -3421,6 +3503,7 @@
       "location": "Charvieu-Chavagneux (Isère)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.752849,
         "lon": 5.148249
       },
@@ -3459,6 +3542,7 @@
       "location": "Lambersart (Nord)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 50.645740,
         "lon": 3.027687
       },
@@ -3512,6 +3596,7 @@
       "location": "Générac (Gard)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.728572,
         "lon": 4.346717
       },
@@ -3565,6 +3650,7 @@
       "location": "Neung-sur-Beuvron (Loir-et-Cher)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 47.535496,
         "lon": 1.805878
       },
@@ -3603,6 +3689,7 @@
       "location": "Asnières-sur-Seine (Hauts-de-Seine)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.909220,
         "lon": 2.293562
       },
@@ -3641,6 +3728,7 @@
       "location": "Clairoix (Oise)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.447426,
         "lon": 2.821140
       },
@@ -3699,6 +3787,7 @@
       "location": "Cruas (Ardèche)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 44.662162,
         "lon": 4.774612
       },
@@ -3762,6 +3851,7 @@
       "location": "Paris 14e",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.834107,
         "lon": 2.340962
       },
@@ -3795,6 +3885,7 @@
       "location": "Paris 19e",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.924410,
         "lon": 2.445095
       },
@@ -3848,6 +3939,7 @@
       "location": "Biarritz (Pyrénées-Atlantiques)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat":  43.486350,
         "lon": -1.557026
       },
@@ -3886,6 +3978,7 @@
       "location": "Aulnoy (Val-de-Marne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.846778,
         "lon": 3.089718
       },
@@ -3939,6 +4032,7 @@
       "location": "Ventiseri (Corse)",
       "origin": "domtom",
       "gps": {
+        "accurate": true,
         "lat": 41.922992,
         "lon": 9.413479
       },
@@ -3976,6 +4070,7 @@
       "location": "Saint-Leu (Réunion)",
       "origin": "domtom",
       "gps": {
+        "accurate": true,
         "lat": -21.174773,
         "lon": 55.287824
       },
@@ -4014,6 +4109,7 @@
       "location": "Foulayronnes (Lot-et-Garonne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 44.134610,
         "lon": 0.659457
       },
@@ -4061,6 +4157,7 @@
       "location": "Le havre (Seine-Maritime)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.492297,
         "lon": 0.120466
       },
@@ -4114,6 +4211,7 @@
       "location": "Maisons-Alfort",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.808122,
         "lon": 2.432417
       },
@@ -4152,6 +4250,7 @@
       "location": "Cergy (Val d'Oise)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 49.038314,
         "lon": 2.086410
       },
@@ -4200,6 +4299,7 @@
       "location": "Borgo (Corse)",
       "origin": "domtom",
       "gps": {
+        "accurate": true,
         "lat": 42.577651,
         "lon": 9.446075
       },
@@ -4228,6 +4328,7 @@
       "location": "Louvroil (Nord)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 50.257780,
         "lon": 3.950672
       },
@@ -4271,6 +4372,7 @@
       "location": "Paris",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.854729,
         "lon": 2.347289
       },
@@ -4324,6 +4426,7 @@
       "location": "Cercottes (Loiret)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 47.956313,
         "lon": 1.910223
       },
@@ -4377,6 +4480,7 @@
       "location": "Bobigny (Seine-Saint-Denis)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.909373,
         "lon": 2.450061
       },
@@ -4435,6 +4539,7 @@
       "location": "Grenoble (Isère)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.176424,
         "lon": 5.703974
       },
@@ -4493,6 +4598,7 @@
       "location": "Sathonay-Camp (Rhône).",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.820840,
         "lon": 4.868264
       },
@@ -4546,6 +4652,7 @@
       "location": "Cambrésis (Nord)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 50.355159,
         "lon": 3.518339
       },
@@ -4589,6 +4696,7 @@
       "location": "Orly",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.732939,
         "lon": 2.372164
       },
@@ -4617,6 +4725,7 @@
       "location": "Ancenis (Loire-Atlantique)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 47.370773,
         "lon": -1.187142
       },
@@ -4655,6 +4764,7 @@
       "location": "Région de Menaka, Mali",
       "origin": "opex",
       "gps": {
+        "accurate": true,
         "lat": 15.917866,
         "lon": 2.383294
       },
@@ -4713,6 +4823,7 @@
       "location": "Nantes (Loire-Atlantique)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 47.227579,
         "lon": -1.551646
       },
@@ -4771,6 +4882,7 @@
       "location": "Saint Vallier de Thiey (Alpes Maritimes)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.693304,
         "lon": 6.858785
       },
@@ -4819,6 +4931,7 @@
       "location": "Roanne (Loire)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.926310,
         "lon": 4.045625
       },
@@ -4867,6 +4980,7 @@
       "location": "Les Arcs (Var)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.448623,
         "lon": 6.474457
       },
@@ -4915,6 +5029,7 @@
       "location": "Chateauvillain (Haute-Marne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.027951,
         "lon": 4.912392
       },
@@ -4963,6 +5078,7 @@
       "location": "Valdahon (Doubs)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 47.152224,
         "lon": 6.317709
       },
@@ -5001,6 +5117,7 @@
       "location": "Liptako, Région de Ménaka, Mali",
       "origin": "opex",
       "gps": {
+        "accurate": true,
         "lat": 15.852774,
         "lon": 1.468974
       },
@@ -5049,6 +5166,7 @@
       "location": "Evry (Essonne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.617595,
         "lon": 2.443203
       },
@@ -5092,6 +5210,7 @@
       "location": "Le Bouscat (Gironde)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 44.866753,
         "lon": -0.596418
       },
@@ -5141,6 +5260,7 @@
       "location": "Massif de la Nerthe, Rove (Bouches-du-Rhône)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.374255,
         "lon": 5.287941
       },
@@ -5194,6 +5314,7 @@
       "location": "La Couronne (Charente)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 45.608453,
         "lon": 0.101473
       },
@@ -5227,6 +5348,7 @@
       "location": "Crécy-la-Chapelle (Seine-et-Marne)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.861568,
         "lon": 2.901092
       },
@@ -5270,6 +5392,7 @@
       "location": "Poulx (Gard)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.860105,
         "lon": 4.404430
       },
@@ -5298,6 +5421,7 @@
       "location": "Èze (Var)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.729127,
         "lon": 7.367132
       },
@@ -5331,6 +5455,7 @@
       "location": "Nanterre (Hauts-de-Seine)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 48.898332,
         "lon": 2.215728
       },
@@ -5389,6 +5514,7 @@
       "location": "Marseille (Bouche-du-Rhône)",
       "origin": "interieur",
       "gps": {
+        "accurate": true,
         "lat": 43.320753,
         "lon": 5.376351
       },

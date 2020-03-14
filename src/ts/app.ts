@@ -342,7 +342,7 @@ export class App {
             ${peersText}
             <br />
             <span>
-              <strong>Emplacement</strong>: ${death.location}
+              <strong>Emplacement</strong>: ${death.location} ${death.gps.accurate ? '' : '<strong style="color: orange;"><abbr data-tippy-content="Indique que l\'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>'}
               <a href="http://maps.google.com/?ll=${death.gps.lat},${death.gps.lon}&q=${death.location}" target="_blank">
                <span class="glyphicon  glyphicon-map-marker" aria-hidden="true"></span>
               </a>
