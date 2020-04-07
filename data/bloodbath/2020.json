@@ -844,7 +844,7 @@
       "origin": "domtom",
       "gps": {
         "accurate": true,
-        "lat":  14.618595,
+        "lat": 14.618595,
         "lon": -61.102521
       },
       "sources": [
@@ -888,8 +888,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  48.782346,
-        "lon":  2.262282
+        "lat": 48.782346,
+        "lon": 2.262282
       },
       "sources": [
         {
@@ -942,8 +942,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":   45.922881,
-        "lon":   3.069135
+        "lat": 45.922881,
+        "lon": 3.069135
       },
       "sources": [
         {
@@ -1001,12 +1001,12 @@
       "house": "armee",
       "peers": [],
       "text": "Un militaire du 1er REG, détaché auprès de la FCR/FINUL dans section la du génie, est décédé dans un accident de véhicule lors d'une mission de reconnaissance au sud du Liban.",
-      "section": "1er REG, FCR (6eme BLB)",
+      "section": "1er REG, FCR (6e BLB)",
       "location": "Sud du Liban",
       "origin": "opex",
       "gps": {
         "accurate": false,
-        "lat":  33.249274,
+        "lat": 33.249274,
         "lon": 35.420509
       },
       "sources": [
@@ -1048,6 +1048,374 @@
         {
           "url": "https://www.defense.gouv.fr/operations/actualites2/daman-deces-du-caporal-volodymyr-rybontchouk-au-liban",
           "titre": "MINARM - Hommage",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "03",
+      "day": "19",
+      "keywords": "Steeve SCAFFA",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier volontaire de la Force 06 est décédé dans un accident de la circulation lors d'une mission du SDIS 06.\n Marié et père de trois enfant il était pompier volontaire depuis 2010.",
+      "section": "SDIS 06 (Saint-Auban)",
+      "location": "Col de Vence (Alpes-Maritimes)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 43.761137,
+        "lon": 7.074776
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/sdis_06/status/1240242397994516481",
+          "titre": "@sdis_06 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2742943-20200318-cote-azur-pompier-volontaire-meurt-accident-route-court-mission",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/alpes-maritimes-un-pompier-volontaire-en-mission-trouve-la-mort-dans-un-accident/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "http://www.presseagence.fr/lettre-economique-politique-paca/2020/03/18/nice-deces-du-sergent-steeve-scaffa-sapeur-pompier-volontaire-a-saint-auban/",
+          "titre": "Presse Agence",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/03/18/nice-un-sapeur-pompier-age-de-34-ans-decede-en-service/",
+          "titre": "Actu Penit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathViaDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "03",
+      "day": "25",
+      "keywords": "COVID-19, COVID19",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme du GIC (Groupement Interministériel de Contrôle) est décédé suite a une dégradation de son état de santé provoqué par une contamination du coronavirus.\n Marié et père de trois enfants, il est décédé dans son logement de service à Maison-Alfort.",
+      "section": "GIC - GGM II/1",
+      "location": " Maison-Alfort (Val-de-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 48.808091,
+        "lon": 2.432358
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PorteparoleGN/status/1243075831926317056",
+          "titre": "@PorteparoleGN (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/societe/2748431-20200326-coronavirus-gendarme-decede-covid-19-apres-degradation-brutale-etat",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/coronavirus-un-gendarme-de-51-ans-est-decede/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/coronavirus-mort-d-un-premier-gendarme-1882430.html",
+          "titre": "BFM",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ladepeche.fr/2020/03/26/qui-etait-le-premier-gendarme-decede-du-coronavirus,8819517.php",
+          "titre": "La dépêche",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lepoint.fr/societe/coronavirus-un-premier-gendarme-est-mort-en-france-26-03-2020-2368870_23.php",
+          "titre": "Le Point",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/a-la-une/un-gendarme-decede-des-suites-coronavirus-covid-19/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/societe/coronavirus-un-premier-gendarme-est-mort-des-suites-du-covid-19-a-maisons-alfort-val-de-marne-1585217243",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francetvinfo.fr/sante/maladie/coronavirus/coronavirus-premier-deces-d-un-gendarme-des-suites-du-covid-19_3885543.html",
+          "titre": "France Info",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathViaDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "04",
+      "day": "03",
+      "keywords": "COVID-19, COVID19",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier du centre de formation de Lognes (DCRFPN) est décédé suite a une dégradation de son état de santé provoqué par une contamination du coronavirus.\n Marié et père de deux enfants, il est décédé à l'hôpital où il avait été admis.",
+      "section": "Centre de Formation - DCRFPN",
+      "location": "Lognes (Seine-et-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 48.837422,
+        "lon": 2.637248
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1246006366885552128",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/societe/2754079-20200403-coronavirus-premier-deces-policier-seine-marne",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/coronavirus-un-policier-qui-avait-ete-teste-positif-au-covid-19-est-decede/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/coronavirus-mort-d-un-premier-policier-1887951.html",
+          "titre": "BFM",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/735654/article/2020-04-03/coronavirus-un-premier-deces-chez-les-policiers",
+          "titre": "La voix du nord",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/sante/virus/coronavirus/coronavirus-premier-deces-d-un-policier-des-suites-du-covid-19-6799252",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/societe/coronavirus-un-policier-de-seine-et-marne-succombe-au-virus-1585911506",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francetvinfo.fr/sante/maladie/coronavirus/coronavirus-premier-deces-d-un-gendarme-des-suites-du-covid-19_3885543.html",
+          "titre": "France Info",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "other",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "04",
+      "day": "06",
+      "keywords": "Jean-Bernard Russon",
+      "house": "armee",
+      "peers": [],
+      "text": "Un sous-officier du groupement munitions (EPMu) de Brienne-le-Château (Aube) a été retrouvé mort lors d’une mission en Républicaine centrafricaine.\n Affecté comme chef du dépôt de munitions, son corps a été retrouvé dans sa chambre au sein du camp de M’POKO de Bangui dans des circonstances qui demeurent inconnues.",
+      "section": "EPMu - SIMu (DETAO)",
+      "location": "Bangui (République Centrafricaine)",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "lat": 4.398862,
+        "lon": 18.523847
+      },
+      "sources": [
+        {
+          "url": "https://www.defense.gouv.fr/operations/actualites2/biographie-de-l-adjudant-jean-bernard-russon-service-interarmees-des-munitions-simu",
+          "titre": "MINARM - Hommage",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/EtatMajorFR/status/1247157833273085952",
+          "titre": "@EtatMajorFR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/faits-divers/un-militaire-francais-decede-lors-dune-mission-republique-centrafricaine_32826491.html",
+          "titre": "actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.45enord.fr/2020/04/deces-dun-militaire-en-republique-centrafricaine/",
+          "titre": "45eNord.fr",
+          "paywall": false
+        },
+        {
+          "url": "http://www.opex360.com/2020/04/06/deces-dun-militaire-francais-en-centrafrique/",
+          "titre": "Opex360",
+          "paywall": false
+        },
+        {
+          "url": "https://www.gendinfo.fr/l-info-en-continu/l-armee-de-terre-deplore-le-deces-d-un-militaire-en-republique-centrafricaine",
+          "titre": "GendInfo",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathViaDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "04",
+      "day": "06",
+      "keywords": "Cyril Boulanger",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un sous-officier réserviste de la gendarmerie au CRT de Amiens (Somme) et fonctionnaire du GPSR, est décédé suite a une dégradation de son état de santé provoqué par une contamination du coronavirus.\n Marié et père de deux enfants, il est décédé à l'hôpital où il avait été admis.",
+      "section": "GPSR / CRT 80/4 (ROGN)",
+      "location": "Lille (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 50.610886,
+        "lon": 3.034709
+      },
+      "sources": [
+        {
+          "url": "https://lessor.org/societe/avec-le-deces-de-cyril-boulanger-la-gendarmerie-de-nouveau-frappee-par-le-coronavirus/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/nord-0/lille/coronavirus-picard-37-ans-sportif-haut-niveau-decede-au-chu-lille-1811920.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/paris_75056/coronavirus-cyril-boulanger-agent-la-ratp-champion-judo-est-decede-37-ans_32810072.html",
+          "titre": "actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/info-paris-ile-de-france-oise/transports/agent-de-surete-a-la-ratp-et-judoka-de-haut-niveau-cyril-37-ans-est-decede-du-covid-19-05-04-2020-8294301.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lci.fr/population/coronavirus-pandemie-un-agent-de-surete-de-la-ratp-et-judoka-de-haut-niveau-decede-du-covid-19-2150140.html",
+          "titre": "LCI",
+          "paywall": false
+        },
+        {
+          "url": "https://www.courrier-picard.fr/id79348/article/2020-04-05/le-champion-de-france-de-judo-cyril-boulanger-desmery-hallon-est-decede-du-covid",
+          "titre": "Courrier Picard",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "04",
+      "day": "07",
+      "keywords": "Lionel",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de l'ENP de Sens a mis fins à ses jours à son domicile.\n Marié et père de deux enfants ce major occupait le poste de FTSI au sein de l'école.",
+      "section": "ENP SENS - DCRFPN",
+      "location": "Sens (Yonne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 48.201058,
+        "lon": 3.292783
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1247424747190747138",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.facebook.com/PECnational/posts/2672673959638779",
+          "titre": "@PECnational (Facebook)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/yonne-un-policier-de-lecole-nationale-de-police-de-sens-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/04/07/sens-nouveau-drame-dans-les-rangs-de-la-police-nationale/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "http://www.profession-gendarme.com/yonne-un-policier-de-lecole-nationale-de-police-de-sens-sest-suicide/",
+          "titre": "Profession Gendarme",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "Source potentielle: https://www.facebook.com/PECnational/posts/2672847836288058",
+      "year": "2020",
+      "month": "04",
+      "day": "07",
+      "keywords": "Thierry",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la PAF de la Mayotte a mis fins à ses jours.",
+      "section": "PAF (DZPAF)",
+      "location": "Sens (Yonne)",
+      "origin": "domtom",
+      "gps": {
+        "accurate": true,
+        "lat": -12.799244,
+        "lon": 45.285517
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
           "paywall": false
         }
       ]
