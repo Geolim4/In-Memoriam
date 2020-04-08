@@ -1396,16 +1396,16 @@
       "count": 1,
       "published": true,
       "orphans": 2,
-      "unpublished_reason": "Source potentielle: https://www.facebook.com/PECnational/posts/2672847836288058",
+      "unpublished_reason": "",
       "year": "2020",
       "month": "04",
       "day": "07",
       "keywords": "Thierry",
       "house": "police",
       "peers": [],
-      "text": "Un policier de la PAF de la Mayotte a mis fins à ses jours.",
+      "text": "Un policier de la PAF de la Mayotte a mis fins à ses jours.\n Il était marié et père de deux enfants.",
       "section": "PAF (DZPAF)",
-      "location": "Sens (Yonne)",
+      "location": "Mayotte",
       "origin": "domtom",
       "gps": {
         "accurate": true,
@@ -1414,8 +1414,33 @@
       },
       "sources": [
         {
-          "url": "",
-          "titre": "__CONFIDENTIAL__",
+          "url": "https://twitter.com/PoliceNationale/status/1247802101951901700",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.facebook.com/PECnational/posts/2672847836288058",
+          "titre": "@PECnational (Facebook)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/mayotte-un-policier-de-42-ans-affecte-a-la-police-aux-frontieres-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/04/08/mayotte-un-policier-age-de-42-ans-sest-suicide-il-etait-affecte-a-la-police-aux-frontieres/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "http://www.profession-gendarme.com/thierry-policier-a-mayotte-vient-de-se-suicider/",
+          "titre": "Profession Gendarme",
+          "paywall": false
+        },
+        {
+          "url": "https://fl24.net/2020/04/07/drame-a-mayotte-deuxieme-suicide-de-policier-dans-la-meme-journee/",
+          "titre": "fl24.net",
           "paywall": false
         }
       ]
