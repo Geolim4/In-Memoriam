@@ -23,6 +23,10 @@
         "singular": "<span class=\"label label-danger\">%d</span> mort en service",
         "plural": "<span class=\"label label-danger\">%d</span> morts en service"
       },
+      "deathViaDuty": {
+        "singular": "<span class=\"label label-danger\">%d</span> mort lié au service",
+        "plural": "<span class=\"label label-danger\">%d</span> morts liés au service"
+      },
       "accident": {
         "none": "<span class=\"label label-success\">%d</span> mort accidentelle",
         "singular": "<span class=\"label label-danger\">%d</span> mort accidentelle",
