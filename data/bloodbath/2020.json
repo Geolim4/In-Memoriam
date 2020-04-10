@@ -1354,7 +1354,7 @@
       "keywords": "Lionel",
       "house": "police",
       "peers": [],
-      "text": "Un policier de l'ENP de Sens a mis fins à ses jours à son domicile.\n Marié et père de deux enfants ce major occupait le poste de FTSI au sein de l'école.",
+      "text": "Un formateur de l'ENP de Sens a mis fins à ses jours à son domicile.\n Marié et père de deux enfants ce major occupait le poste de FTSI au sein de l'école.",
       "section": "ENP SENS - DCRFPN",
       "location": "Sens (Yonne)",
       "origin": "interieur",
@@ -1441,6 +1441,45 @@
         {
           "url": "https://fl24.net/2020/04/07/drame-a-mayotte-deuxieme-suicide-de-policier-dans-la-meme-journee/",
           "titre": "fl24.net",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "04",
+      "day": "10",
+      "keywords": "Celine",
+      "house": "police",
+      "peers": [],
+      "text": "Une policière du SCRT a mis fin à ses jours dans son domicile de Charenton-le-Pont (Val-De-Marne) le jour de son anniversaire.",
+      "section": "SCRT (DCSP)",
+      "location": "Charenton-le-Pont (Val-De-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 48.823011,
+        "lon": 2.409681
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1247802101951901700",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/val-de-marne-une-policiere-de-45-ans-se-suicide-a-son-domicile/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/04/10/charenton-le-pont-le-jour-de-son-anniversaire-une-policiere-se-suicide/",
+          "titre": "Actupenit",
           "paywall": false
         }
       ]
