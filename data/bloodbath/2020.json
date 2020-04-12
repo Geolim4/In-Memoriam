@@ -1365,11 +1365,6 @@
       },
       "sources": [
         {
-          "url": "https://twitter.com/PoliceNationale/status/1247424747190747138",
-          "titre": "@PoliceNationale (Twitter)",
-          "paywall": false
-        },
-        {
           "url": "https://www.facebook.com/PECnational/posts/2672673959638779",
           "titre": "@PECnational (Facebook)",
           "paywall": false
@@ -1480,6 +1475,55 @@
         {
           "url": "https://actupenit.com/2020/04/10/charenton-le-pont-le-jour-de-son-anniversaire-une-policiere-se-suicide/",
           "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathViaDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 4,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "04",
+      "day": "11",
+      "keywords": "Olivier Lugand",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier du SDIS 78 (Yvelines) est décédé suite a une dégradation de son état de santé provoqué par une contamination du coronavirus.\n Marié et père de quatre enfants, il est décédé à l'hôpital où il avait été admis.",
+      "section": "SDIS 78",
+      "location": " St-Germain-en-Laye (Yvelines)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 48.814873,
+        "lon": 2.255656
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/coronavirus-un-premier-sapeur-pompier-meurt-du-covid-19-dans-les-yvelines/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/pompiers78/status/1248895777038090241",
+          "titre": "@pompiers78 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/saint-germain-en-laye_78551/coronavirus-pompiers-yvelines-pleurent-deces-leur-collegue-infirmier_32959088.html",
+          "titre": "actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/info-paris-ile-de-france-oise/coronavirus-un-premier-pompier-decede-du-covid-19-dans-les-yvelines-11-04-2020-8298006.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/societe/yvelines-un-pompier-volontaire-meurt-du-coronavirus-1892504.html",
+          "titre": "BFM",
           "paywall": false
         }
       ]
