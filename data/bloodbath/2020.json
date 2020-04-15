@@ -1540,7 +1540,7 @@
       "keywords": "Meidi DELRIEU",
       "house": "gendarmerie",
       "peers": [],
-      "text": "Une jeune gendarme du GELAC de Nouméa a mis fin à ses jours avec son arme de service.\n Peu d'informations disponibles sur ce suicide.",
+      "text": "Une jeune gendarme du détachement GELAC de Nouméa a mis fin à ses jours avec son arme de service.\n Peu d'informations disponibles sur ce suicide.",
       "section": "GELAC - BR (BTA Dumbéa)",
       "location": "Nouméa",
       "origin": "domtom",
@@ -1561,6 +1561,11 @@
           "paywall": false
         },
         {
+          "url": "https://lessor.org/breves/suicide-dune-sous-officiere-de-gendarmerie-en-nouvelle-caledonie/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
           "url": "https://actupenit.com/2020/04/14/nouvelle-caledonie-une-jeune-gendarme-sest-donne-la-mort-par-arme-a-feu/",
           "titre": "Actupenit",
           "paywall": false
@@ -1573,6 +1578,65 @@
         {
           "url": "https://www.bfmtv.com/societe/yvelines-un-pompier-volontaire-meurt-du-coronavirus-1892504.html",
           "titre": "BFM",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 2,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "https://lemamouth.blogspot.com/2020/04/in-memoriam-adc-olivier-michel-5e-rhc.html  https://lemamouth.blogspot.com/2020/04/in-memoriam-bri-vincent-monguillon-5e.html",
+      "year": "2020",
+      "month": "04",
+      "day": "16",
+      "keywords": "Olivier MICHEL, Vincent MONGUILLON",
+      "house": "armee",
+      "peers": [],
+      "text": "Un hélicoptère du 5e RHC s'est écrasé dans la commune de Bouilh-Devant (Hautes-Pyrénées) pour une raison encore inconnue.\n Deux militaires ont péris lors du crash et 5 autres blessés graves ont été secourus.",
+      "section": "5e RHC (4e BAC)",
+      "location": "Bouilh-Devant (Hautes-Pyrénées)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 43.342442,
+        "lon": 0.268007
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/hautes-pyrenees-un-helicoptere-militaire-sest-ecrase-pres-de-tarbes-2-morts-et-5-blesses/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/armeedeterre/status/1250546404432457728",
+          "titre": "@armeedeterre (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/occitanie/hautes-pyrenees/tarbes/crash-tarbes-hautes-pyrenees-deja-endeuillees-accident-helicoptere-2016-1816840.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/societe/2761399-20200415-hautes-pyrenees-deux-morts-cinq-blesses-crash-helicoptere-militaire",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lepoint.fr/societe/hautes-pyrenees-deux-morts-dans-le-crash-d-un-helicoptere-militaire-15-04-2020-2371616_23.php",
+          "titre": "Le Point",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/hautes-pyrenees-deux-morts-et-cinq-blesses-dans-le-crash-d-un-helicoptere-militaire-15-04-2020-8300271.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "http://www.opex360.com/2020/04/15/un-helicoptere-de-laviation-legere-de-larmee-de-terre-sest-ecrase-dans-les-hautes-pyrenees/",
+          "titre": "Opex 360",
           "paywall": false
         }
       ]
