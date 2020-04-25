@@ -1640,6 +1640,94 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "04",
+      "day": "25",
+      "keywords": "Christian VIVES-QUEROL",
+      "house": "police",
+      "peers": [],
+      "text": "Un brigadier-chef de la Compagnie Musique des Gardiens de la Paix de Paris a mis fins à ses jours à son domicile.",
+      "section": "Compagnie Musique des Gardiens de la Paix de Paris",
+      "location": "Meudon (Hauts-de-Seine)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat":  48.812843,
+        "lon":  2.235298
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/hauts-de-seine-un-policier-de-51-ans-sest-suicide-a-meudon/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/04/25/paris-nouveau-suicide-dans-les-rangs-de-la-police-nationale/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://www.facebook.com/collectifpoliciersidf/posts/2642629422673936",
+          "titre": "@collectifpoliciersidf (Facebook)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "04",
+      "day": "16",
+      "keywords": "Gil Encognère",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier de Lacanau a succombé à ses blessures suite à un accident corporel survenu le 9 avril lors du reconditionnement d'un véhicule.\n Marié et père de deux enfants, il était pompier à Lacanau depuis 14 ans.",
+      "section": "SDIS 33",
+      "location": "Lacanau (Gironde)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat":  44.978759,
+        "lon":  -1.082876
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/gironde-un-sapeur-pompier-de-lacanau-meurt-des-suites-dun-accident-en-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/04/25/lacanau-blesse-en-intervention-un-sapeur-pompier-volontaire-na-pas-survecu-a-ses-blessures/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://pompieractu.fr/gironde-33-deces-dun-sapeur-pompier-volontaire-en-service/",
+          "titre": "Pompieractu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.sudouest.fr/2020/04/25/gironde-un-pompier-de-lacanau-decede-suite-a-un-accident-en-service-7438576-2921.php",
+          "titre": "Sud Ouest",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lepoint.fr/societe/hautes-pyrenees-deux-morts-dans-le-crash-d-un-helicoptere-militaire-15-04-2020-2371616_23.php",
+          "titre": "Le Point",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
