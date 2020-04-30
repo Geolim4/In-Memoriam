@@ -1799,8 +1799,14 @@
       "day": "30",
       "keywords": "Pierre Pougin",
       "house": "armee",
-      "peers": [],
-      "text": "Un militaire est décédé accidentellement lors d'un entraînement de mission de sauvetage des suites d'une chute de plusieurs mètres. Il était sauveteur-plongeur héliporté breveté depuis un an.",
+      "peers": [
+        {
+          "house": "armee",
+          "count": 1,
+          "section": "186e AM"
+        }
+      ],
+      "text": "Deux militaires sont décédés accidentellement lors d'un entraînement de mission de sauvetage des suites d'une chute de plusieurs mètres.\n L'un était sauveteur-plongeur héliporté breveté depuis un an, le second était infirmier en soins généraux de premier grade (ISG 1G) au SSA.",
       "section": "EH 1/67 - BA 120",
       "location": "Cazaux (Gironde)",
       "origin": "interieur",
@@ -1811,13 +1817,23 @@
       },
       "sources": [
         {
-          "url": "https://actu17.fr/landes-un-militaire-decede-lors-dun-entrainement-a-biscarrosse/",
-          "titre": "Actu17",
+          "url": "https://www.defense.gouv.fr/actualites/articles/deces-du-sergent-pierre-pougin-au-cours-d-un-entrainement-a-la-mission-permanente-de-search-and-rescue",
+          "titre": "MINARM - Hommage #1",
+          "paywall": false
+        },
+        {
+          "url": "https://www.defense.gouv.fr/sante/a-la-une/in-memoriam-deces-de-l-infirmier-en-soins-generaux-de-1er-grade-quentin-le-dillau",
+          "titre": "MINARM - Hommage #2",
           "paywall": false
         },
         {
           "url": "https://twitter.com/Armee_de_lair/status/1255604460090535936",
           "titre": "@Armee_de_lair (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/accident-dhelicoptere-mortel-dans-les-landes-le-second-militaire-est-decede/",
+          "titre": "Actu17",
           "paywall": false
         },
         {
@@ -1838,11 +1854,6 @@
         {
           "url": "https://www.sudouest.fr/2020/04/29/landes-un-militaire-est-mort-lors-d-un-entrainement-7448907-3307.php",
           "titre": "Sud Ouest",
-          "paywall": false
-        },
-        {
-          "url": "http://www.leparisien.fr/faits-divers/landes-mort-d-un-militaire-lors-d-un-exercice-en-helicoptere-29-04-2020-8308380.php",
-          "titre": "Le Parisien",
           "paywall": false
         }
       ]
