@@ -1,6 +1,7 @@
 {
   "glossary": {
     "ADS": "Adjoint De Sécurité",
+    "AM": "Antenne Médicale",
     "BA": "Base Aérienne",
     "BAC-N": "Brigade Anti Criminalité de Nuit",
     "BAC": "Brigade Anti Criminalité (Police), Brigade d'AéroCombat (Armée)",
@@ -103,6 +104,7 @@
     "SIMu": "Service Interarmées des MUnitions",
     "SNSM": "Société Nationale de Sauvetage en Mer",
     "SD": "Sûreté Départementale",
+    "SSA": "Service de Santé des Armées",
     "SU": "Sûreté Urbaine",
     "STJN": "Service de Traitement Judiciaire de Nuit",
     "UEL": "Unité d’ÉLoignement (PAF, Police)",
