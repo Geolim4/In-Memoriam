@@ -1,6 +1,7 @@
 {
   "glossary": {
     "ADS": "Adjoint De Sécurité",
+    "BA": "Base Aérienne",
     "BAC-N": "Brigade Anti Criminalité de Nuit",
     "BAC": "Brigade Anti Criminalité (Police), Brigade d'AéroCombat (Armée)",
     "BCA": "Bataillon de Chasseurs Alpins",
@@ -48,10 +49,12 @@
     "DSF": "Direction des Soutiens et des Finances",
     "DSPAP": "Direction de la Sécurité de Proximité de l'Agglomération Parisienne",
     "DZPAF": "Direction Zonale de la Police Aux Frontières ",
+    "DZCRS": "Direction Zonale de Compagnie Républicaine de Sécurité",
     "EDIS": "École Départementale d'Incendie et de Secours",
     "EDSR": "Escadron Départemental de Sécurité Routière",
     "EFS": "Éléments Français au Sénégal (Armée de Terre)",
     "EGM": "Escadron de Gendarmerie Mobile",
+    "EH": "Escadron d'Hélicoptères",
     "ENP": "École Nationale de Police",
     "ENSOA": "École Nationale des Sous-Officiers d'Active",
     "EPMu": "Établissement Principal des Munitions",

@@ -1659,8 +1659,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
-        "lat":  48.812843,
-        "lon":  2.235298
+        "lat": 48.812843,
+        "lon": 2.235298
       },
       "sources": [
         {
@@ -1688,7 +1688,7 @@
       "unpublished_reason": "",
       "year": "2020",
       "month": "04",
-      "day": "16",
+      "day": "25",
       "keywords": "Gil Encognère",
       "house": "pompier",
       "peers": [],
@@ -1698,8 +1698,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  44.978759,
-        "lon":  -1.082876
+        "lat": 44.978759,
+        "lon": -1.082876
       },
       "sources": [
         {
@@ -1725,6 +1725,124 @@
         {
           "url": "https://www.lepoint.fr/societe/hautes-pyrenees-deux-morts-dans-le-crash-d-un-helicoptere-militaire-15-04-2020-2371616_23.php",
           "titre": "Le Point",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathViaDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "04",
+      "day": "27",
+      "keywords": "COVID-19, COVID19, Philippe Donnadieu",
+      "house": "police",
+      "peers": [],
+      "text": "Un commandant divisionnaire fonctionnel de la DZCRS Est est décédé suite a une dégradation de son état de santé provoqué par une contamination du coronavirus.",
+      "section": "DZCRS Est",
+      "location": "Chatel St Germain (Moselle)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 49.110512,
+        "lon": 6.101725
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1254879022485590026",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/04/28/le-commandant-divisionnaire-de-la-crs-57-est-decede-des-suites-du-coronavirus/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/metz-un-commandant-de-police-de-54-ans-est-decede-des-suites-du-covid-19/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lepoint.fr/societe/coronavirus-deces-d-un-commandant-de-police-a-metz-colere-des-syndicats-29-04-2020-2373495_23.php",
+          "titre": "Le Point",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/coronavirus-mort-d-un-commandant-de-police-a-metz-colere-des-syndicats-29-04-2020-8308002.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/sante/virus/coronavirus/coronavirus-le-deces-d-un-commandant-de-police-metz-suscite-la-colere-des-syndicats-6820874",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-commandant-de-police-de-metz-decede-du-coronavirus-1588100426",
+          "titre": "France Bleu",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "04",
+      "day": "30",
+      "keywords": "Pierre Pougin",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire est décédé accidentellement lors d'un entraînement de mission de sauvetage des suites d'une chute de plusieurs mètres. Il était sauveteur-plongeur héliporté breveté depuis un an.",
+      "section": "EH 1/67 - BA 120",
+      "location": "Cazaux (Gironde)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 44.367149,
+        "lon": -1.259417
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/landes-un-militaire-decede-lors-dun-entrainement-a-biscarrosse/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/Armee_de_lair/status/1255604460090535936",
+          "titre": "@Armee_de_lair (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/landes-un-militaire-de-la-base-de-cazaux-meurt-lors-d-un-exercice-1588197965",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ladepeche.fr/2020/04/29/un-militaire-tue-lors-dun-exercice-a-biscarosse-dans-les-landes,8868309.php",
+          "titre": "La Dépêche",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/faits-divers/un-militaire-tue-au-cours-d-un-exercice-dans-les-landes-deuxieme-accident-mortel-en-15-jours-6821424",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.sudouest.fr/2020/04/29/landes-un-militaire-est-mort-lors-d-un-entrainement-7448907-3307.php",
+          "titre": "Sud Ouest",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/landes-mort-d-un-militaire-lors-d-un-exercice-en-helicoptere-29-04-2020-8308380.php",
+          "titre": "Le Parisien",
           "paywall": false
         }
       ]
