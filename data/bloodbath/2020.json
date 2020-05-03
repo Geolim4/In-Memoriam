@@ -1857,6 +1857,70 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "05",
+      "day": "02",
+      "keywords": "Dmytro Martynyouk",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 1er REC a succombé des suites de ses blessures lors d'une explosion survenue le 23 avril par un IED dans la région du Liptako-Gourma au Mali.",
+      "section": "1er REC (6e BLB)",
+      "location": "Liptako Gourma (Mali)",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "lat": 15.211649,
+        "lon": 0.322254
+      },
+      "sources": [
+        {
+          "url": "https://www.defense.gouv.fr/terre/actu-terre/barkhane-deces-du-brigadier-dmytro-martynyouk",
+          "titre": "MINARM - Hommage",
+          "paywall": false
+        },
+        {
+          "url": "http://www.opex360.com/2020/05/02/gravement-touche-lors-de-lexplosion-dun-ied-au-mali-un-legionnaire-du-1er-rec-a-succombe-a-ses-blessures/",
+          "titre": "Opex 360",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/armeedeterre/status/1256458131305046016",
+          "titre": "@armeedeterre (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/un-legionnaire-est-mort-apres-avoir-ete-blesse-au-mali-au-cours-dune-operation-contre-des-groupes-terroristes/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/l-elysee-annonce-la-mort-d-un-legionnaire-etranger-blesse-au-mali-20200502",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.huffingtonpost.fr/entry/mali-mort-de-dmytro-martynyouk-legionnaire-etranger-blesse-fin-avril_fr_5ead219ac5b687c2e051242b",
+          "titre": "HuffingtonPost",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/operation-barkhane-un-legionnaire-etranger-blesse-le-23-avril-est-mort-au-mali-02-05-2020-8309508.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/nanterre_92050/nanterre-policier-letat-major-sest-suicide-cette-nuit-son-arme-service_30468137.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
