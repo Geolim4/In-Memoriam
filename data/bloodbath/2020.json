@@ -125,7 +125,7 @@
       "year": "2020",
       "month": "01",
       "day": "13",
-      "keywords": "",
+      "keywords": "Laurent",
       "house": "police",
       "peers": [],
       "text": "Un brigadier-chef de la PAF a mis fin à ses jours avec son arme administrative dans les locaux du CRA de Rennes. Peu d'informations disponibles sur ce suicide.",
@@ -243,7 +243,7 @@
       "year": "2020",
       "month": "01",
       "day": "17",
-      "keywords": "",
+      "keywords": "Denis Serka",
       "house": "pompier",
       "peers": [],
       "text": "Un lieutenant-colonel des sapeurs-pompiers a mis fins à ses jours à l’EDIS de Fleury-Mérogis.\n Père de deux enfants il a servi en tant que pompier dans l'Essonne pendant plus de 20 ans.",
@@ -331,7 +331,7 @@
       "year": "2020",
       "month": "01",
       "day": "23",
-      "keywords": "",
+      "keywords": "Benjamin Billoir",
       "house": "gendarmerie",
       "peers": [],
       "text": "Un gendarme de la BTA de Valenciennes a mis fin à ses jours avec son arme de service. Peu d'informations disponibles sur ce suicide.",
@@ -492,7 +492,7 @@
       "year": "2020",
       "month": "02",
       "day": "05",
-      "keywords": "",
+      "keywords": "Richard Alexis",
       "house": "pm",
       "peers": [],
       "text": "Un policier municipal a mis fin à ses jours à l'aide d'une arme à feu après avoir été mis en cause dans une affaire de meurtre d'un septuagénaire.",
@@ -687,7 +687,7 @@
       "unpublished_reason": "",
       "year": "2020",
       "month": "02",
-      "day": "20",
+      "day": "22",
       "keywords": "Mathias",
       "house": "police",
       "peers": [],
@@ -776,7 +776,7 @@
       "year": "2020",
       "month": "03",
       "day": "05",
-      "keywords": "",
+      "keywords": "Mickael Faucon",
       "house": "admpen",
       "peers": [],
       "text": "Un surveillant pénitentiaire de la maison d'arrêt de Luynes a mis fins à ses jours avec son arme de service à l'interieur du mirador.\n Affecté depuis deux ans à la maison d'arrêt de Luynes, il avait laissé une lettre derrière lui.",
@@ -879,7 +879,7 @@
       "year": "2020",
       "month": "03",
       "day": "09",
-      "keywords": "Thomas",
+      "keywords": "Thomas Sellami",
       "house": "police",
       "peers": [],
       "text": "Un policier de la BAC-N de Vitry-sur-Seine a mis fins à ses jours avec son arme de service dans son logement au Plessis-Robinson.",
@@ -1351,7 +1351,7 @@
       "year": "2020",
       "month": "04",
       "day": "07",
-      "keywords": "Lionel",
+      "keywords": "Lionel Teron",
       "house": "police",
       "peers": [],
       "text": "Un formateur de l'ENP de Sens a mis fins à ses jours à son domicile.\n Marié et père de deux enfants ce major occupait le poste de FTSI au sein de l'école.",
@@ -1918,6 +1918,64 @@
         {
           "url": "https://actu.fr/ile-de-france/nanterre_92050/nanterre-policier-letat-major-sest-suicide-cette-nuit-son-arme-service_30468137.html",
           "titre": "Actu.fr",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 4,
+      "year": "2020",
+      "month": "05",
+      "day": "04",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Une policière de la circonscription du Havre a mis fins à ses jours avec son arme de service.\n Elle était mère de 4 enfants.",
+      "section": "CSP Le Havre",
+      "location": "Le havre (Seine-Maritime)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 49.492297,
+        "lon": 0.120466
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/le-havre-une-policiere-sest-suicidee-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat76/status/1257227938455605248",
+          "titre": "@PoliceNat76 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/normandie/le-havre-76600/au-havre-le-corps-d-une-policiere-retrouve-en-foret-la-piste-du-suicide-est-privilegiee-6824459",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/normandie/havre_76351/une-policiere-havre-retrouvee-decedee-dans-foret-piste-suicide-privilegiee_33400660.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "http://www.lefigaro.fr/flash-actu/info-le-figaro-un-policier-du-havre-se-suicide-le-49e-depuis-le-debut-de-l-annee-20190910",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/une-policiere-se-suicide-avec-son-arme-de-service-dans-une-foret-pres-du-havre-1588589629",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.facebook.com/PECnational/posts/2699494986956676",
+          "titre": "@PECnational (Facebook)",
           "paywall": false
         }
       ]
