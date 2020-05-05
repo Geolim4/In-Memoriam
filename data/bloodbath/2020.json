@@ -1930,7 +1930,7 @@
       "year": "2020",
       "month": "05",
       "day": "04",
-      "keywords": "",
+      "keywords": "Naïma",
       "house": "police",
       "peers": [],
       "text": "Une policière de la circonscription du Havre a mis fins à ses jours avec son arme de service.\n Elle était mère de 4 enfants.",
@@ -1976,6 +1976,65 @@
         {
           "url": "https://www.facebook.com/PECnational/posts/2699494986956676",
           "titre": "@PECnational (Facebook)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "05",
+      "day": "05",
+      "keywords": "Kévin Clément",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 1er REC est décédé à l’antenne chirurgicale de Barkhane à Gao après une grave blessure liée à un action de combat dans la région du Liptako-Gourma au Mali.",
+      "section": "1er REC (6e BLB)",
+      "location": "Liptako Gourma (Mali)",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "lat": 15.880885,
+        "lon": 2.377800
+      },
+      "sources": [
+        {
+          "url": "https://www.defense.gouv.fr/terre/actu-terre/barkhane-deces-du-legionnaire-de-1re-classe-kevin-clement",
+          "titre": "MINARM - Hommage",
+          "paywall": false
+        },
+        {
+          "url": "http://www.opex360.com/2020/05/05/un-legionnaire-du-1er-regiment-etranger-de-cavalerie-tue-au-combat-au-mali/",
+          "titre": "Opex 360",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/CEMAT_FR/status/1257409055049613313",
+          "titre": "@CEMAT_FR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/un-legionnaire-de-21-ans-a-ete-tue-dans-une-action-de-combat-au-mali/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francetvinfo.fr/monde/terrorisme-djihadistes/operation-barkhane/un-legionnaire-de-21-ans-a-ete-tue-au-combat-au-mali-annonce-l-elysee_3948663.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/international/l-elysee-annonce-la-mort-d-un-legionnaire-tue-au-combat-au-mali-20200504",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/monde/2772943-20200504-mali-legionnaire-francais-mort-lundi-tue-combat",
+          "titre": "20 minutes",
           "paywall": false
         }
       ]
