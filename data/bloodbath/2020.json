@@ -2038,6 +2038,181 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "05",
+      "day": "07",
+      "keywords": "Eric Mayer",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal décède dans ses fonctions d'un arrêt cardiaque pendant la tentative d’interpellation d’un individu.\n Il était en poste à Lognes depuis un peu plus d'un an.",
+      "section": "Poste de Police",
+      "location": "Logne (Seine-et-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 48.839428,
+        "lon": 2.629965
+      },
+      "sources": [
+        {
+          "url": "https://actu.fr/ile-de-france/lognes_77258/seine-marne-policier-municipal-lognes-decede-dans-lexercice-fonctions_33675360.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/ile-de-france/seine-et-marne/seine-et-marne-un-policier-municipal-meurt-d-un-arret-cardiaque-en-poursuivant-un-suspect-6839118",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://policeetrealites.com/2020/05/12/%F0%9F%87%AB%F0%9F%87%B7-deces-dun-policier-municipal-qui-tentait-dinterpeller-un-individu/",
+          "titre": "Police et Réalités",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathViaDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "05",
+      "day": "13",
+      "keywords": "Denis de Masure",
+      "house": "pm",
+      "peers": [],
+      "text": "Un Policier Municipal est décédé suite a une dégradation de son état de santé provoqué par une contamination du coronavirus.\n Marié et père de deux filles, il est décédé sur son lit d'hôpital.",
+      "section": "Poste de Police",
+      "location": "Roissy-Porte-de-France (Val-d'Oise)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 49.003214,
+        "lon": 2.518364
+      },
+      "sources": [
+        {
+          "url": "http://www.leparisien.fr/val-d-oise-95/roissy-plaine-de-france-denis-de-masure-chef-de-la-police-municipale-est-decede-du-covid-19-14-05-2020-8317212.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/roissy-en-france_95527/val-doise-roissy-france-chef-police-denis-masure-est-decede-covid-19_33613556.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/05/13/roissy-porte-de-france-un-policier-municipal-decede-des-suites-du-covid-19/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathViaDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "05",
+      "day": "13",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un Policier Municipal est décédé suite a une dégradation de son état de santé provoqué par une contamination du coronavirus.\n Marié et père de deux filles, il est décédé sur son lit d'hôpital.",
+      "section": "Poste de Police",
+      "location": "Roissy-Porte-de-France (Val-d'Oise)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 49.003214,
+        "lon": 2.518364
+      },
+      "sources": [
+        {
+          "url": "http://www.leparisien.fr/val-d-oise-95/roissy-plaine-de-france-denis-de-masure-chef-de-la-police-municipale-est-decede-du-covid-19-14-05-2020-8317212.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/roissy-en-france_95527/val-doise-roissy-france-chef-police-denis-masure-est-decede-covid-19_33613556.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/05/13/roissy-porte-de-france-un-policier-municipal-decede-des-suites-du-covid-19/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "06",
+      "day": "01",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier du commissariat de Reims se suicide à son domicile avec son arme de service. Peu d'informations disponibles sur ce suicide.",
+      "section": "CSP Reims",
+      "location": "Reims (Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 49.256218,
+        "lon": 4.022128
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/marne-un-policier-affecte-a-reims-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lunion.fr/id154250/article/2020-06-02/un-policier-de-reims-se-donne-la-mort-avec-son-arme-de-service",
+          "titre": "L'Union",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": false,
+      "orphans": 0,
+      "unpublished_reason": "Source à confirmer ? => https://twitter.com/UniformesEn/status/1268879507974389766",
+      "year": "2020",
+      "month": "06",
+      "day": "04",
+      "keywords": "",
+      "house": "pm",
+      "peers": [],
+      "text": "",
+      "section": "Poste de Police",
+      "location": "Drancy",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 49.003214,
+        "lon": 2.518364
+      },
+      "sources": [
+      ]
     }
   ]
 }
