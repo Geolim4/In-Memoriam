@@ -2193,25 +2193,55 @@
     {
       "cause": "suicide",
       "count": 1,
-      "published": false,
+      "published": true,
       "orphans": 0,
-      "unpublished_reason": "Source à confirmer ? => https://twitter.com/UniformesEn/status/1268879507974389766",
+      "unpublished_reason": "",
       "year": "2020",
       "month": "06",
       "day": "04",
       "keywords": "",
       "house": "pm",
       "peers": [],
-      "text": "",
+      "text": "Un policier municipal de la ville de Raon-l’Étape a mis fins à ses jours avec son arme de service.\n Découvert par ses collègues dans la soirée il était père d'une petite fille.",
       "section": "Poste de Police",
-      "location": "Drancy",
+      "location": "Raon-l’Étape (Vosges)",
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat": 49.003214,
-        "lon": 2.518364
+        "lat": 48.406451,
+        "lon": 6.844591
       },
       "sources": [
+        {
+          "url": "https://actu17.fr/vosges-un-policier-municipal-de-raon-letape-sest-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/vosges-suicide-d-un-policier-municipal-avec-son-arme-de-service-20200605",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.vosgesmatin.fr/edition-saint-die/2020/06/05/un-policier-municipal-se-suicide-avec-son-arme-de-service",
+          "titre": "Vosges Matin",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-municipal-de-raon-l-etape-se-suicide-avec-son-arme-de-service-1591364634",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leprogres.fr/faits-divers-justice/2020/06/05/vosges-un-policier-municipal-se-suicide-avec-son-arme-de-service",
+          "titre": "Le Progrès",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/marne-un-policier-affecte-a-reims-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        }
       ]
     }
   ]
