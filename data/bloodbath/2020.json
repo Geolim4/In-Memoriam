@@ -2118,45 +2118,6 @@
       ]
     },
     {
-      "cause": "deathViaDuty",
-      "count": 1,
-      "published": true,
-      "orphans": 2,
-      "unpublished_reason": "",
-      "year": "2020",
-      "month": "05",
-      "day": "13",
-      "keywords": "",
-      "house": "police",
-      "peers": [],
-      "text": "Un Policier Municipal est décédé suite a une dégradation de son état de santé provoqué par une contamination du coronavirus.\n Marié et père de deux filles, il est décédé sur son lit d'hôpital.",
-      "section": "Poste de Police",
-      "location": "Roissy-Porte-de-France (Val-d'Oise)",
-      "origin": "interieur",
-      "gps": {
-        "accurate": true,
-        "lat": 49.003214,
-        "lon": 2.518364
-      },
-      "sources": [
-        {
-          "url": "http://www.leparisien.fr/val-d-oise-95/roissy-plaine-de-france-denis-de-masure-chef-de-la-police-municipale-est-decede-du-covid-19-14-05-2020-8317212.php",
-          "titre": "Le Parisien",
-          "paywall": false
-        },
-        {
-          "url": "https://actu.fr/ile-de-france/roissy-en-france_95527/val-doise-roissy-france-chef-police-denis-masure-est-decede-covid-19_33613556.html",
-          "titre": "Actu.fr",
-          "paywall": false
-        },
-        {
-          "url": "https://actupenit.com/2020/05/13/roissy-porte-de-france-un-policier-municipal-decede-des-suites-du-covid-19/",
-          "titre": "Actupenit",
-          "paywall": false
-        }
-      ]
-    },
-    {
       "cause": "suicide",
       "count": 1,
       "published": true,
