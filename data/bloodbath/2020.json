@@ -2223,8 +2223,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  48.893571,
-        "lon":  2.308409
+        "lat": 48.893571,
+        "lon": 2.308409
       },
       "sources": [
         {
@@ -2240,6 +2240,55 @@
         {
           "url": "https://twitter.com/prefpolice/status/1270370428096217088",
           "titre": "@prefpolice (Twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "06",
+      "day": "11",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la Paf de Chambéry a mis fin à ses jours avec son arme de service au pied .\n Père de deux enfants il était affecté à la PAF depuis plus de 3 ans.",
+      "section": "PAF Chambéry",
+      "location": "Sillingy (Haute-Savoie)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 45.976130,
+        "lon": 6.079828
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/haute-savoie-un-policier-de-49-ans-sest-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/06/12/chambery-la-police-nationale-une-nouvelle-fois-endeuillee/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lessorsavoyard.fr/10731/article/2020-06-13/sillingy-un-policier-chamberien-se-donne-la-mort-au-pied-de-la-mandallaz",
+          "titre": "L'Essor Savoyard",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-chamberien-se-suicide-avec-son-arme-de-service-a-sillingy-1592038048",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2020/06/13/haute-savoie-un-fonctionnaire-de-police-s-est-donne-la-mort-a-sillingy",
+          "titre": "Le Dauphiné",
           "paywall": false
         }
       ]
