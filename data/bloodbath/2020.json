@@ -2256,7 +2256,7 @@
       "keywords": "",
       "house": "police",
       "peers": [],
-      "text": "Un policier de la Paf de Chambéry a mis fin à ses jours avec son arme de service au pied .\n Père de deux enfants il était affecté à la PAF depuis plus de 3 ans.",
+      "text": "Un policier de la PAF de Chambéry a mis fin à ses jours avec son arme de service au pied de la Mandallaz.\n Père de deux enfants il était affecté à la PAF depuis plus de 3 ans.",
       "section": "PAF Chambéry",
       "location": "Sillingy (Haute-Savoie)",
       "origin": "interieur",
@@ -2289,6 +2289,295 @@
         {
           "url": "https://www.ledauphine.com/faits-divers-justice/2020/06/13/haute-savoie-un-fonctionnaire-de-police-s-est-donne-la-mort-a-sillingy",
           "titre": "Le Dauphiné",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "06",
+      "day": "20",
+      "keywords": "",
+      "house": "admpen",
+      "peers": [],
+      "text": "Un surveillant pénitentiaire a mis fin à ses jours dans l'armurerie de la prison de .\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Maison d'Arrêt",
+      "location": "Nevers (Nièvre)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat":  46.992518,
+        "lon":  3.156231
+      },
+      "sources": [
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/nievre-un-surveillant-se-suicide-a-la-prison-de-nevers-1592733139",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.rtl.fr/actu/justice-faits-divers/nevers-un-gardien-se-suicide-dans-la-prison-7800618406",
+          "titre": "RTL",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/nievre-suicide-d-un-gardien-dans-la-prison-de-nevers-20200620",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ladepeche.fr/2020/06/20/nievre-un-gardien-se-suicide-a-la-prison-de-nevers,8941528.php",
+          "titre": "La dépêche",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2804067-20200620-nevers-suicide-gardien-prison",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/767549/article/2020-06-20/nievre-un-gardien-de-la-prison-de-nevers-s-est-suicide-dans-l-armurerie",
+          "titre": "La voix du Nord",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "06",
+      "day": "24",
+      "keywords": "Alexis Battu",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 40e RA est décédé d'un tir fratricide accidentel devant le palais du gouverneur militaire de Metz.\n Il était engagé au titre de la réserve opérationnelle depuis octobre 2019.",
+      "section": "40e RA",
+      "location": "Metz (Moselle)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 49.113362,
+        "lon": 6.168450
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/metz-le-militaire-de-20-ans-touche-en-pleine-tete-par-un-tir-accidentel-est-decede/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/CEMAT_FR/status/1276048425239396357",
+          "titre": "@CEMAT_FR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://www.opex360.com/2020/06/25/en-mission-a-metz-un-reserviste-du-40e-ra-a-ete-mortellement-blesse-par-un-tir-accidentel/",
+          "titre": "Opex 360",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francetvinfo.fr/economie/emploi/metiers/metz-un-soldat-reserviste-age-de-20-ans-tue-par-un-tir-accidentel-en-pleine-tete_4021425.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/tir-accidentel-a-metz-un-militaire-dans-un-etat-desespere-1593058916",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.republicain-lorrain.fr/faits-divers-justice/2020/06/24/tir-accidentel-un-militaire-messin-en-mort-cerebrale",
+          "titre": "Républicain Lorrain",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/actualite-france/metz-un-militaire-de-20-ans-tue-lors-d-un-tir-accidentel-20200625",
+          "titre": "Le Figaro",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "06",
+      "day": "29",
+      "keywords": "Alexis",
+      "house": "police",
+      "peers": [],
+      "text": "Un jeune ADS du commissariat de Rouen à mis fin à ses jours. Peu d'informations disponibles sur ce suicide.",
+      "section": "CSP Rouen",
+      "location": "Saint-Saëns (Seine-Maritime)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 49.435054,
+        "lon": 1.081077
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1277671095802507267",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/seine-maritime-un-policier-age-de-24-ans-affecte-a-rouen-sest-suicide/",
+          "titre": "Actu 17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.24matins.fr/seine-maritime-suicide-dun-policier-de-24-ans-affecte-a-rouen-1198254",
+          "titre": "24 matins",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "06",
+      "day": "29",
+      "keywords": "Mathias",
+      "house": "police",
+      "peers": [],
+      "text": "Un jeune ADS du commissariat central de Marseille (Noailles) à mis fin à ses jours.\n Il avait réussi le concours de gardien de la paix et s'apprêtait à rentrer en ENP.",
+      "section": "CSP Noailles",
+      "location": "Marseille 1er (Bouches-du-Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 43.297284,
+        "lon": 5.380773
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNat13/status/1277849359569297408",
+          "titre": "@PoliceNat13 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/marseille-un-jeune-policier-de-20-ans-se-suicide-avec-son-arme-de-service-au-commissariat/",
+          "titre": "Actu 17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.laprovence.com/actu/en-direct/6032717/push.html",
+          "titre": "La Provence",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/actualite-france/marseille-un-policier-de-19-ans-se-suicide-dans-un-commissariat-20200630",
+          "titre": "Le Figaro",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathViaDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "06",
+      "day": "30",
+      "keywords": "COVID-19, COVID19, François-Xavier Pepin",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme du DRSD à Maison-Alfort est décédé suite a une dégradation de son état de santé provoqué par une contamination du coronavirus.\n Marié et père de deux enfants, il est décédé sur son lit d'hôpital.",
+      "section": "DRSD",
+      "location": "Maison-Alfort (Val-de-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat":  48.798193,
+        "lon":  2.451853
+      },
+      "sources": [
+        {
+          "url": "https://lessor.org/a-la-une/un-troisieme-gendarme-dactive-decede-de-la-covid-19/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/06/29/maison-alfort-un-gendarme-de-46-ans-est-mort-des-suites-du-covid-19/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "07",
+      "day": "02",
+      "keywords": "Ludovic",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier du SDRT à mis fin à ses jours dans l'armurerie du commissariat de Nancy.\n Il était père d'une fillette.",
+      "section": "SDRT Nancy",
+      "location": "Nancy",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 48.688185,
+        "lon": 6.194198
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNat54/status/1278634993456201728",
+          "titre": "@PoliceNat54 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/nancy-un-policier-sest-suicide-avec-son-arme-de-service-dans-le-commissariat/",
+          "titre": "Actu 17",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/grand-est/nancy_54395/un-policier-se-suicide-a-l-hotel-de-police-de-nancy_34705270.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/grand-est/meurthe-et-moselle/nancy/nancy-suicide-policier-locaux-du-commissariat-du-boulevard-lobau-1849326.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/nancy-un-policier-met-fin-a-ses-jours-au-commissariat-02-07-2020-8346090.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/meurthe-et-moselle-suicide-d-un-brigadier-chef-de-49-ans-au-commissariat-de-nancy-20200702",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.estrepublicain.fr/faits-divers-justice/2020/07/02/un-policier-se-suicide-avec-son-arme-de-service-a-l-hotel-de-police",
+          "titre": "L'Est Républicain",
           "paywall": false
         }
       ]
