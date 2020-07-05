@@ -2311,8 +2311,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  46.992518,
-        "lon":  3.156231
+        "lat": 46.992518,
+        "lon": 3.156231
       },
       "sources": [
         {
@@ -2507,8 +2507,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  48.798193,
-        "lon":  2.451853
+        "lat": 48.798193,
+        "lon": 2.451853
       },
       "sources": [
         {
@@ -2578,6 +2578,65 @@
         {
           "url": "https://www.estrepublicain.fr/faits-divers-justice/2020/07/02/un-policier-se-suicide-avec-son-arme-de-service-a-l-hotel-de-police",
           "titre": "L'Est Républicain",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "07",
+      "day": "04",
+      "keywords": "Mélanie Lemée",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Une jeune gendarme est décédé des suites de ses blessures après avoir été grièvement blessée par un chauffard.\n Affectée en 2016 à la brigade de proximité d’Aiguillon (Lot-et-Garonne), elle était une championne accomplie de Judo.",
+      "section": "BP Aiguillon (Lot-et-Garonne)",
+      "location": "Port-Sainte-Marie (Lot-et-Garonne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 44.252848,
+        "lon": 0.379254
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/Gendarmerie/status/1279670823083741185",
+          "titre": "@Gendarmerie (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.interieur.gouv.fr/Le-ministre/Communiques/Deces-du-gendarme-Melanie-Lemee-du-groupement-de-gendarmerie-du-Lot-et-Garonne",
+          "titre": "MININT - Hommage",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/lot-et-garonne-une-gendarme-de-26-ans-tuee-par-un-chauffard-lors-dun-controle-lauteur-en-fuite/",
+          "titre": "Actu 17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ladepeche.fr/2020/07/04/une-gendarme-tuee-lors-dun-controle-en-lot-et-garonne-8964272.php",
+          "titre": "La dépêche",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lemonde.fr/societe/article/2020/07/05/lot-et-garonne-une-gendarme-de-26-ans-tuee-lors-d-un-controle-routier_6045248_3224.html",
+          "titre": "Le Monde",
+          "paywall": false
+        },
+        {
+          "url": "https://www.sudouest.fr/2020/07/05/lot-et-garonne-une-gendarme-de-26-ans-tuee-par-un-automobiliste-7629194-3603.php",
+          "titre": "Sud Ouest",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/lot-et-garonne/port-saint-marie-femme-gendarme-percutee-tuee-lors-controle-1850354.html",
+          "titre": "France Info",
           "paywall": false
         }
       ]
