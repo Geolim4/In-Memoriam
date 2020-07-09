@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "@google/markerclusterer": "^1.0.3",
+    "activity-detector": "^3.0.0",
     "bootstrap": "^3.4.1",
     "es6-promise": "^4.2.8",
     "jquery": "^3.5.0",
