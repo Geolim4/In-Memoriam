@@ -3,6 +3,7 @@ import * as loadGoogleMapsApi from 'load-google-maps-api';
 import * as qwest from 'qwest';
 import tippyJs from 'tippy.js';
 import micromodal from 'micromodal';
+import activityDetector from 'activity-detector';
 
 import { Bloodbath, Definition, Filters } from './models';
 import { Config } from './config';
@@ -89,12 +90,29 @@ export class App {
       };
 
       const map = new google.maps.Map(mapElement, options);
+      const activityDetectorMonitoring = activityDetector({
+        timeToIdle: 2 * 60 * 1000, // wait 2min of inactivity to consider the user is idle
+      });
 
       this.setupSkeleton();
       this.bindAnchorEvents(map, mapElement, formElement);
       this.bindFilters(map, mapElement, formElement);
       this.bindCustomButtons(map);
       this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
+
+      let handler;
+      activityDetectorMonitoring.on('idle', () => {
+        console.log('User is now idle...');
+        handler = setInterval(() => {
+          this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, false));
+          console.log('Reloading map...');
+        }, 300 * 1000); // Reload every 5min
+      });
+
+      activityDetectorMonitoring.on('active', () => {
+        console.log('User is now active...');
+        clearInterval(handler);
+      });
     });
   }
 
