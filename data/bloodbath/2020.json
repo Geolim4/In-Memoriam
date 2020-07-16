@@ -2684,6 +2684,55 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "07",
+      "day": "16",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de la BR de Meylan a mis fin à ses jours avec son arme de service dans son logement de fonction.\n Père de deux fillettes, il était en poste depuis 6 ans.",
+      "section": "BR Meylan",
+      "location": "Meylan (Isère)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat":  45.212001,
+        "lon":  5.792895
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/isere-un-gendarme-de-36-ans-sest-suicide-avec-son-arme-de-service-dans-la-caserne-de-meylan/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/index.php/2020/07/15/mort-tragique-dun-gendarme-de-lisere-le-suicide-privilegie/",
+          "titre": "La Voix du gendarme",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/a-la-une/un-gendarme-de-36-ans-se-suicide-en-isere/",
+          "titre": "L'Essor'",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2020/07/15/isere-un-gendarme-se-donne-la-mort-avec-son-arme-de-service-a-meylan",
+          "titre": "Le Dauphiné",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/07/15/meylan-un-jeune-gendarme-sest-suicide-avec-son-arme-de-service-dans-la-caserne/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
