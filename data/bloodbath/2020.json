@@ -2600,8 +2600,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
-        "lat":  44.251744,
-        "lon":  0.381642
+        "lat": 44.251744,
+        "lon": 0.381642
       },
       "sources": [
         {
@@ -2659,7 +2659,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  47.326769,
+        "lat": 47.326769,
         "lon": 2.828274
       },
       "sources": [
@@ -2703,8 +2703,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  45.212001,
-        "lon":  5.792895
+        "lat": 45.212001,
+        "lon": 5.792895
       },
       "sources": [
         {
@@ -2730,6 +2730,133 @@
         {
           "url": "https://actupenit.com/2020/07/15/meylan-un-jeune-gendarme-sest-suicide-avec-son-arme-de-service-dans-la-caserne/",
           "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "07",
+      "day": "23",
+      "keywords": "Tojohasina Razafintsalama",
+      "house": "armee",
+      "peers": [],
+      "text": "Un jeune militaire du 1er RHP, détaché auprès du GTD est décédé lors de l'explosion d’un véhicule suicide type VBIED entre Gossi et Gao.",
+      "section": "1er RHP, GTD (11e BP)",
+      "location": "Sud du Liban",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "lat": 16.183826,
+        "lon": -0.700089
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/CEMAT_FR/status/1286347864671739905",
+          "titre": "@CEMAT_FR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://www.opex360.com/2020/07/23/mali-un-hussard-parachutiste-mortellement-blesse-par-lexplosion-dun-vehicule-suicide/",
+          "titre": "Opex360",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/politique/soldat-francais-mort-au-mali-un-hommage-lui-sera-rendu-lundi-aux-invalides-26-07-2020-8359059.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.midilibre.fr/2020/07/26/une-ceremonie-aux-invalides-en-hommage-a-tojohasina-razafintsalama-le-militaire-decede-au-mali-8995371.php",
+          "titre": "Midi Libre",
+          "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/societe/qui-etait-tojohasina-razafintsalama-le-soldat-mort-au-mali_AN-202007230174.html",
+          "titre": "BFM",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/un-soldat-francais-tue-au-mali-lors-de-combats-contre-les-groupes-armes-terroristes-annonce-lelysee/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.defense.gouv.fr/actualites/articles/barkhane-deces-du-premiere-classe-tojohasina-razafintsalama",
+          "titre": "MINARM - Hommage",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "07",
+      "day": "23",
+      "keywords": "Maud Le Gall",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Une gendarme réserviste est décédée dans un accident de moto en se rendant à la CRT 17/3 en Charente-Maritime.",
+      "section": "CRT 17/3",
+      "location": "Saujon (Charente-Maritime)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 45.677477,
+        "lon": -0.935173
+      },
+      "sources": [
+        {
+          "url": "https://lavoixdugendarme.fr/index.php/2020/07/25/une-gendarme-reserviste-decede-dans-un-accident-en-allant-prendre-son-service/",
+          "titre": "La Voix du gendarme",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/a-la-une/charente-maritime-une-reserviste-de-43-ans-decede-en-se-rendant-a-son-renfort/",
+          "titre": "L'Essor'",
+          "paywall": false
+        },
+        {
+          "url": "https://www.sudouest.fr/2020/07/23/charente-maritime-accident-mortel-entre-une-moto-et-un-poids-lourd-7684335-1613.php",
+          "titre": "Sud Ouest",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "07",
+      "day": "28",
+      "keywords": "",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal de Chartres de Bretagne a mis fins à ses jours avec son arme de service.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Poste de Police (Chartres de Bretagne)",
+      "location": "Chartres de Bretagne (Île-et-Vilaine)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 48.040943,
+        "lon":  -1.707110
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
           "paywall": false
         }
       ]

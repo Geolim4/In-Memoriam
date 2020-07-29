@@ -8,7 +8,7 @@
     "BCA": "Bataillon de Chasseurs Alpins",
     "BLB": "Brigade Légère Blindée",
     "BN": "Brigade Nuit",
-    "BP": "Brigade de Proximité",
+    "BP": "Brigade de Proximité (Police), Brigade Parachutiste (Armée)",
     "BT": "Brigade Territoriale",
     "B/C": "Brigadier-Chef",
     "BCF": "Brigade Centrale des Chemins de Fer",
@@ -78,6 +78,7 @@
     "GR": "Garde Républicaine",
     "GPSR": "Groupe de Protection et de Sécurité des Réseaux",
     "GSP": "Groupe de Sécurité de Proximité",
+    "GTD": "Groupement Tactique Désert",
     "Harpie": "Opération interministérielle française réalisée en Guyane",
     "MINARM": "Ministère des Armées",
     "MININT": "Ministère de l'Intérieur",
@@ -101,6 +102,7 @@
     "RC": "Régiment de Cavalerie",
     "ROGN": "Réserve Opérationnelle de la Gendarmerie Nationale",
     "RG": "Régiment du Génie (Armée), Renseignement Généraux (Ancêtre de la DGSI)",
+    "RHP": "Régiment de Hussards Parachutistes",
     "RT": "Régiment de Transmissions",
     "SCRT": "Service Central du Renseignement Territorial",
     "SDIS": "Service Départemental d'Incendie et de Secours",
@@ -115,6 +117,7 @@
     "SU": "Sûreté Urbaine",
     "STJN": "Service de Traitement Judiciaire de Nuit",
     "UEL": "Unité d’ÉLoignement (PAF, Police)",
+    "VBIED": "Véhicule Piégé (Vehicle Borne Improvised Explosive Devices)",
     "UTJDR": "Unité de Traitement Judiciaire des Délits Routiers"
   }
 }
