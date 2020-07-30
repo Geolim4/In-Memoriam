@@ -2851,12 +2851,46 @@
       "gps": {
         "accurate": false,
         "lat": 48.040943,
-        "lon":  -1.707110
+        "lon": -1.707110
       },
       "sources": [
         {
           "url": "",
           "titre": "__CONFIDENTIAL__",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "07",
+      "day": "29",
+      "keywords": "Laurent",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CSP d'Agen a mis fin à ses jours avec son arme de service.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "CSP Agen",
+      "location": "Agen (Lot-et-Garonne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 44.200075,
+        "lon": 0.612391
+      },
+      "sources": [
+        {
+          "url": "https://www.ladepeche.fr/2020/07/30/lot-et-garonne-le-commissariat-dagen-endeuille-par-le-deces-dun-policier-9000402.php",
+          "titre": "La dépêche",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/lot-et-garonne-un-policier-affecte-a-agen-sest-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17",
           "paywall": false
         }
       ]
