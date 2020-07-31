@@ -2892,6 +2892,114 @@
           "url": "https://actu17.fr/lot-et-garonne-un-policier-affecte-a-agen-sest-suicide-avec-son-arme-de-service/",
           "titre": "Actu17",
           "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1288833712487006213",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "07",
+      "day": "30",
+      "keywords": "Pierre-Hugues",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la BST de Strasbourg a mis fin à ses jours avec son arme de service.\n En poste depuis 5 ans à Strasbourg, il venait de réussir le concours de brigadier.",
+      "section": "BST - CSP Strasbourg",
+      "location": "Strasbourg (Bas-Rhin)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat":  48.572710,
+        "lon":  7.749920
+      },
+      "sources": [
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2020/07/31/strasbourg-un-jeune-policier-se-suicide-a-son-domicile",
+          "titre": "Le Dauphiné",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/un-policier-de-strasbourg-age-de-26-ans-sest-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat67/status/1289097556828594176",
+          "titre": "@PoliceNat67 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/strasbourg/2832539-20200731-strasbourg-jeune-policier-suicide-arme-service",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/grand-est/strasbourg_67482/strasbourg-un-policier-de-26-ans-se-donne-la-mort-a-son-domicile_35270321.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.dna.fr/faits-divers-justice/2020/07/31/un-policier-de-26-ans-se-donne-la-mort-a-domicile",
+          "titre": "DNA",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "07",
+      "day": "30",
+      "keywords": "Andy Fila",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 14e RISLP est décédé accidentellement dans une opération de maintenance au sein de la base.\n Il était père d'une petite fille.",
+      "section": "14e RISLP, Force Barkhane (COM-LOG)",
+      "location": "Sud du Liban",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "lat": 12.133639,
+        "lon": 15.032179
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/EtatMajorFR/status/1289273304222638080",
+          "titre": "@EtatMajorFR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/politique/tchad-mort-du-soldat-francais-andy-fila-31-07-2020-8361939.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/deces-accidentel-d-un-soldat-francais-au-mali-20200731",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.midilibre.fr/2020/07/31/mort-dun-militaire-toulousain-membre-de-la-force-barkhane-en-operation-au-tchad-9002616.php",
+          "titre": "Midilibre",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/tchad-un-militaire-francais-de-la-force-barkhane-est-decede-en-operation/",
+          "titre": "Actu17",
+          "paywall": false
         }
       ]
     }
