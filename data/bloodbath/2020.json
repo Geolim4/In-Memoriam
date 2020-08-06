@@ -2918,8 +2918,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  48.572710,
-        "lon":  7.749920
+        "lat": 48.572710,
+        "lon": 7.749920
       },
       "sources": [
         {
@@ -2999,6 +2999,65 @@
         {
           "url": "https://actu17.fr/tchad-un-militaire-francais-de-la-force-barkhane-est-decede-en-operation/",
           "titre": "Actu17",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "07",
+      "day": "06",
+      "keywords": "Eric",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier a été mortellement percuté par un chauffard à Bron en banlieue de Lyon (Rhône) lors d'une opération de police.\n Père de 3 fillettes, il a été tué sur le coup.",
+      "section": "CSP Mans",
+      "location": "Le Mans (Sarthe)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 47.995051,
+        "lon": 0.177409
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/le-mans-un-policier-tue-lors-dune-intervention/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1291276840821239808",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://www.leparisien.fr/faits-divers/deces-du-policier-percute-par-un-chauffard-a-bron-pres-de-lyon-13-01-2020-8235099.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/pays-de-la-loire/le-mans-72000/info-le-maine-libre-le-mans-un-policier-tue-pendant-un-controle-routier-fc1a05f6-d7ab-11ea-9398-e3ca7c9d7866",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2835331-20200806-mans-policier-tue-marge-intervention-homme-interpelle",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/actualite-france/le-mans-un-policier-mortellement-renverse-durant-une-intervention-20200806",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/normandie/alencon_61001/le-policier-tue-au-mans-vivait-au-sein-de-la-communaute-urbaine-d-alencon_35382190.html",
+          "titre": "Actu.fr",
           "paywall": false
         }
       ]
