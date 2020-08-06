@@ -310,6 +310,7 @@ export class App {
       const heatMapData = <{ location: google.maps.LatLng, weight: number }[]>[];
       const nationalMarkers = <google.maps.Marker[]>[];
       const modalBloodbathElement = <HTMLInputElement>document.getElementById('modal-bloodbath-list-content');
+      const modalBloodbathCounter = <HTMLInputElement>document.getElementById('modal-bloodbath-death-counter');
       let modalBloodbathListContent = '<ul>';
       let filteredResponse = <Bloodbath>response;
 
@@ -430,6 +431,7 @@ export class App {
 
       modalBloodbathListContent += '</ul>';
       modalBloodbathElement.innerHTML = StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, this.glossary);
+      modalBloodbathCounter.innerHTML = `(${this._markers.length} décès)`;
 
       // We assume that if only have a single result
       // that the infoWindow should be opened by default
