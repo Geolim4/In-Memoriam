@@ -3012,7 +3012,7 @@
       "year": "2020",
       "month": "07",
       "day": "06",
-      "keywords": "Eric",
+      "keywords": "Eric MONROY",
       "house": "police",
       "peers": [],
       "text": "Un policier a été mortellement percuté par un chauffard dans boulevard du Mans lors d'une opération de police.\n Père de 3 fillettes, il a été tué sur le coup.",
@@ -3058,6 +3058,99 @@
         {
           "url": "https://actu.fr/normandie/alencon_61001/le-policier-tue-au-mans-vivait-au-sein-de-la-communaute-urbaine-d-alencon_35382190.html",
           "titre": "Actu.fr",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "08",
+      "day": "17",
+      "keywords": "Laurent",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal a mis fin à ses jours en se jetant du haut d'une falaise.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Police Municipale Nice",
+      "location": "Nice (Alpes Maritimes)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 43.710457,
+        "lon": 7.261839
+      },
+      "sources": [
+        {
+          "url": "http://www.sdpm.net/2020/08/nice-06-condoleances.html",
+          "titre": "SDPM",
+          "paywall": false
+        },
+        {
+          "url": "http://www.profession-gendarme.com/nice-un-policier-a-mis-fin-a-ses-jours-en-se-jetant-dune-falaise/",
+          "titre": "Profession Gendarme",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceMun/status/1295634421832388608",
+          "titre": "@PoliceMun (Twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "Pour info: https://www.ouest-france.fr/normandie/tessy-bocage-50420/tessy-bocage-olivier-degardin-nouveau-la-brigade-de-gendarmerie-6856383",
+      "year": "2020",
+      "month": "08",
+      "day": "18",
+      "keywords": "Olivier Degardin",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de la BP de Tessy-Bocage a mis fin à ses jours avec son arme de service.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "BP Tessy-Bocage",
+      "location": "Tessy-Bocage (Manche)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat":   48.968845,
+        "lon":   -1.065419
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/manche-un-gendarme-de-34-ans-retrouve-mort-dans-son-logement-de-service-a-tessy-bocage/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/index.php/2020/08/18/deces-tragique-dun-gendarme-de-tessy-bocage-manche/",
+          "titre": "La Voix du Gendarme",
+          "paywall": false
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/index.php/2020/08/18/deces-tragique-dun-gendarme-de-tessy-bocage-manche/",
+          "titre": "La Voix du Gendarme",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/normandie/tessy-bocage_50592/manche-un-gendarme-se-suicide-avec-son-arme-de-dotation_35592579.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/manche-un-gendarme-se-suicide-dans-son-logement/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lamanchelibre.fr/actualite-901631-manche-un-gendarme-de-tessy-bocage-se-donne-la-mort",
+          "titre": "La manche libre",
           "paywall": false
         }
       ]
