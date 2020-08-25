@@ -3119,18 +3119,13 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":   48.968845,
-        "lon":   -1.065419
+        "lat": 48.968845,
+        "lon": -1.065419
       },
       "sources": [
         {
           "url": "https://actu17.fr/manche-un-gendarme-de-34-ans-retrouve-mort-dans-son-logement-de-service-a-tessy-bocage/",
           "titre": "Actu17",
-          "paywall": false
-        },
-        {
-          "url": "https://lavoixdugendarme.fr/index.php/2020/08/18/deces-tragique-dun-gendarme-de-tessy-bocage-manche/",
-          "titre": "La Voix du Gendarme",
           "paywall": false
         },
         {
@@ -3151,6 +3146,163 @@
         {
           "url": "https://www.lamanchelibre.fr/actualite-901631-manche-un-gendarme-de-tessy-bocage-se-donne-la-mort",
           "titre": "La manche libre",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "Plus d'info: https://twitter.com/_FFOC_/status/1297288640268251140",
+      "year": "2020",
+      "month": "08",
+      "day": "22",
+      "keywords": "Benoît",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier a mis fin à ses jours avec son arme de service au bord d'un lac près de la commune de Koenigsmacker.\n Affecté au CCPD du Luxembourg, il était père d'une jeune fille.",
+      "section": "CCPD Luxembourg",
+      "location": "Koenigsmacker (Moselle)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 49.422347,
+        "lon": 6.234450
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/moselle-un-policier-de-47-ans-sest-donne-la-mort-par-arme-a-feu/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1297884308112318465",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.estrepublicain.fr/faits-divers-justice/2020/08/23/moselle-un-policier-de-47-ans-se-suicide",
+          "titre": "Est Républicain",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/08/23/thionville-nouveau-suicide-dun-policier-par-arme-a-feu-le-24eme-depuis-le-debut-de-lannee/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "08",
+      "day": "23",
+      "keywords": "Stéphane",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier a mis fin à ses jours avec son arme de service dans son commissariat.\n Affecté au service de renseignement de Marseille, il était père de deux enfants.",
+      "section": "CSP Marseille",
+      "location": "Marseille (Bouches-du-Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 43.302610,
+        "lon": 5.366721
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/marseille-un-policier-de-50-ans-sest-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat13/status/1297870769872142336",
+          "titre": "@PoliceNat13 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2845523-20200824-marseille-policier-suicide-arme-service",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.sudouest.fr/2020/08/24/un-policier-de-51-ans-se-suicide-sur-son-lieu-de-travail-a-marseille-7771944-10407.php",
+          "titre": "Sud Ouest",
+          "paywall": false
+        },
+        {
+          "url": "https://www.laprovence.com/actu/en-direct/6086388/.html",
+          "titre": "La provence",
+          "paywall": false
+        },
+        {
+          "url": "https://www.rtl.fr/actu/justice-faits-divers/marseille-suicide-d-un-policier-sur-son-lieu-de-travail-7800744080",
+          "titre": "RTL",
+          "paywall": false
+        },
+        {
+          "url": "https://www.nicematin.com/faits-divers/un-policier-se-suicide-sur-son-lieu-de-travail-a-marseille-560962",
+          "titre": "Nice Matin",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "08",
+      "day": "25",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme adjoint volontaire (GAV) de la BTA de Colmar a mis fin à ses jours avec son arme de service.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "BTA Colmar",
+      "location": "Colmar (Haut-Rhin)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat":  48.082832,
+        "lon":  7.357703
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/colmar-un-gendarme-adjoint-volontaire-de-19-ans-se-donne-la-mort-dans-les-locaux-de-sa-brigade/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/grand-est/haut-rhin/colmar/colmar-suicide-jeune-gendarme-locaux-sa-brigade-1866002.html",
+          "titre": "La Voix du Gendarme",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/grand-est/haut-rhin/colmar/colmar-suicide-jeune-gendarme-locaux-sa-brigade-1866002.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-gendarme-se-suicide-a-la-brigade-territoriale-de-colmar-1598365920",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/a-la-une/un-gendarme-adjoint-volontaire-se-donne-la-mort-a-colmar/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://www.dna.fr/faits-divers-justice/2020/08/25/un-jeune-gendarme-se-donne-la-mort-a-la-brigade-de-colmar",
+          "titre": "DNA",
           "paywall": false
         }
       ]
