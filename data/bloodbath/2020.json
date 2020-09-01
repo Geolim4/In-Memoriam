@@ -2845,7 +2845,7 @@
       "house": "pm",
       "peers": [],
       "text": "Un policier municipal de Chartres de Bretagne a mis fins à ses jours avec son arme de service.\n Peu d'informations disponibles sur ce suicide.",
-      "section": "Poste de Police (Chartres de Bretagne)",
+      "section": "Poste de Police",
       "location": "Chartres de Bretagne (Île-et-Vilaine)",
       "origin": "interieur",
       "gps": {
@@ -3075,7 +3075,7 @@
       "house": "pm",
       "peers": [],
       "text": "Un policier municipal a mis fin à ses jours en se jetant du haut d'une falaise.\n Peu d'informations disponibles sur ce suicide.",
-      "section": "Police Municipale Nice",
+      "section": "Poste de Police",
       "location": "Nice (Alpes Maritimes)",
       "origin": "interieur",
       "gps": {
@@ -3254,6 +3254,35 @@
       ]
     },
     {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "08",
+      "day": "24",
+      "keywords": "Christian",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal de la ville de Limeil Brevannes a succombé d'un malaise cardiaque en tentant d'interpeller un individu.\n Peu d'informations disponibles sur ce décès.",
+      "section": "Poste de Police",
+      "location": "Limeil Brevannes (Val-de-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 48.750117,
+        "lon": 2.489362
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
+          "paywall": false
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
@@ -3271,8 +3300,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  48.082832,
-        "lon":  7.357703
+        "lat": 48.082832,
+        "lon": 7.357703
       },
       "sources": [
         {
@@ -3303,6 +3332,55 @@
         {
           "url": "https://www.dna.fr/faits-divers-justice/2020/08/25/un-jeune-gendarme-se-donne-la-mort-a-la-brigade-de-colmar",
           "titre": "DNA",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "09",
+      "day": "01",
+      "keywords": "Freddy",
+      "house": "police",
+      "peers": [],
+      "text": "Un motard de la CRS 12 a perdu la vie dans un accident routier après une collision avec un camion.\n Père d'une jeune fille, il faisait route vers Toulouse pour prêter du renfort.",
+      "section": "CRS 12",
+      "location": "Saint-Martin-de-Saint-Maixent (Deux-Sèvres)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 46.391069,
+        "lon": -0.196075
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1300851773100437506",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/deux-sevres-un-motard-de-la-police-nationale-meurt-dans-un-accident-en-service-sur-la10/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/858892/article/2020-09-01/un-crs-de-lambersart-meurt-en-mission-dans-les-deux-sevres",
+          "titre": "La voix du Nord",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-motard-des-crs-de-lambersart-meurt-sur-l-a10-pres-de-poitiers-1598984200",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/nouvelle-aquitaine/saint-martin-de-saint-maixent-79400/saint-martin-de-saint-maixent-un-motard-de-la-police-decede-dans-une-collision-sur-l-a10-402554ac-ec66-11ea-aa1c-6491fb5534d0",
+          "titre": "Ouest France",
           "paywall": false
         }
       ]
