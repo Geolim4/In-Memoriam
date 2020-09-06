@@ -1988,7 +1988,7 @@
       "unpublished_reason": "",
       "year": "2020",
       "month": "05",
-      "day": "05",
+      "day": "04",
       "keywords": "Kévin Clément",
       "house": "armee",
       "peers": [],
@@ -3381,6 +3381,138 @@
         {
           "url": "https://www.ouest-france.fr/nouvelle-aquitaine/saint-martin-de-saint-maixent-79400/saint-martin-de-saint-maixent-un-motard-de-la-police-decede-dans-une-collision-sur-l-a10-402554ac-ec66-11ea-aa1c-6491fb5534d0",
           "titre": "Ouest France",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "09",
+      "day": "03",
+      "keywords": "Marcel Ricourt",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier du GAJ de la CSP de Villeneuve-d’Ascq a mis fin à ses jours à son domicile. \nAffecté à ce poste depuis 5 ans, il était marié et père de trois enfants.",
+      "section": "GAJ",
+      "location": "Villeneuve-d’Ascq (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 50.619904,
+        "lon": 3.132970
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNat59/status/1301445256630673415",
+          "titre": "@PoliceNat59 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/nord-un-policier-de-51-ans-affecte-a-villeneuve-dascq-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/859746/article/2020-09-03/un-policier-du-commissariat-de-villeneuve-d-ascq-met-fin-ses-jours-son-domicile",
+          "titre": "La voix du Nord",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-de-50-ans-se-suicide-a-villeneuve-d-ascq-1599126558",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/grand-lille/nord-un-policier-de-50-ans-se-suicide-a-villeneuve-d-ascq_AN-202009030183.html",
+          "titre": "BFM",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "09",
+      "day": "04",
+      "keywords": "Romain",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier est décédé dans un grave accident de la route impliquant une conductrice fortement alcoolisée lorsqu'il se rendait sur une intervention avec un autre policier lui-même gravement blessé.\nIl était père d'une fillette.",
+      "section": "BN Villeneuve-d’Ascq",
+      "location": "Villeneuve-d’Ascq (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 50.643513,
+        "lon": 3.144424
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1302154369043845120",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/villeneuve-dascq-un-policier-meurt-en-service-dans-un-accident-un-second-est-dans-un-etat-grave/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/nord-0/villeneuve-ascq-policier-tue-accident-routier-apres-avoir-ete-percute-conductrice-alcoolisee-1869786.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2854647-20200905-nord-policier-meurt-service-accident-route-villeneuve-ascq",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/860481/article/2020-09-05/cette-nuit-villeneuve-d-ascq-un-policier-est-mort-en-service-dans-un-accident",
+          "titre": "La voix du Nord",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "09",
+      "day": "04",
+      "keywords": "Olivier Paysant",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CSP de Bourges a mis fin à ses jours dans des circonstances encore inexpliquées. \nAffecté à ce poste depuis 5 ans, il était marié et père de trois enfants.",
+      "section": "CSP Bourges",
+      "location": "Bourges (Cher)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 47.087219,
+        "lon": 2.387265
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1302284258149625860",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/cher-un-policier-du-commissariat-de-bourges-sest-suicide/",
+          "titre": "Actu17",
           "paywall": false
         }
       ]
