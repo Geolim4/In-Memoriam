@@ -3516,6 +3516,128 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 2,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "09",
+      "day": "05",
+      "keywords": "Arnaud Volpe",
+      "house": "armee",
+      "peers": [],
+      "text": "Deux militaires du 1er RHP sont décédés à bord de leur VBL d'une attaque par IED lors d'un opération de contrôle dans la région de Tessalit au Mali.",
+      "section": "1er RHP",
+      "location": "Tessalit (Mali)",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "lat":  20.258146,
+        "lon":  0.990530
+      },
+      "sources": [
+        {
+          "url": "https://www.defense.gouv.fr/terre/actu-terre/barkhane-deces-du-bc1-s.t.-et-du-1cl-volpe-du-1er-rhp",
+          "titre": "MINARM - Hommage",
+          "paywall": false
+        },{
+          "url": "https://actu17.fr/deux-militaires-francais-ont-ete-tues-au-mali-lors-dune-operation-annonce-lelysee/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/EtatMajorFR/status/1302338244122640387",
+          "titre": "@EtatMajorFR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/politique/deux-militaires-francais-tues-en-operation-au-mali-annonce-l-elysee-05-09-2020-8379327.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francetvinfo.fr/monde/afrique/mali/guerre-au-mali/deux-soldats-francais-ont-ete-tues-par-un-engin-explosif-au-mali-annonce-l-elysee_4095993.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/monde/2854727-20200905-deux-militaires-francais-tues-operation-mali-annonce-elysee",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/international/l-elysee-annonce-la-mort-de-deux-soldats-francais-au-mali-20200905",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "http://www.opex360.com/2020/09/05/deux-hussards-parachutistes-tues-par-un-engin-explosif-improvise-au-mali/",
+          "titre": "Opex360",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francetvinfo.fr/monde/afrique/mali/guerre-au-mali/deux-soldats-francais-ont-ete-tues-par-un-engin-explosif-au-mali-annonce-l-elysee_4095993.html",
+          "titre": "France Info",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "09",
+      "day": "06",
+      "keywords": "Aurélia",
+      "house": "police",
+      "peers": [],
+      "text": "Une policière de la CSP de Sartrouville a mis fin à ses jours à son domicile de Saint-Germain-en-Laye avec son arme administrative.\n Affectée en Police Secours en brigade jour, elle était aussi bénévole au sein du dispositif Prox Raid Aventure.",
+      "section": "CSP Sartrouville",
+      "location": "Saint-Germain-en-Laye (Yvelines)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat":  48.937539,
+        "lon":  2.160761
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1303036022587039744",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/yvelines-une-jeune-policiere-du-commissariat-de-sartrouville-se-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.sudouest.fr/2020/09/07/une-policiere-de-28-ans-se-suicide-avec-son-arme-de-service-dans-les-yvelines-7816471-10407.php",
+          "titre": "Sud Ouest",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/yvelines-78/yvelines-une-policiere-se-donne-la-mort-a-saint-germain-en-laye-07-09-2020-8379978.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/yvelines-une-policiere-se-suicide-a-son-domicile-20200907",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/sartrouville_78586/yvelines-une-policiere-de-sartrouville-se-suicide-chez-elle-avec-son-arme-de-service_35952736.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
