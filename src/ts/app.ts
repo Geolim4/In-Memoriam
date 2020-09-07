@@ -361,7 +361,7 @@ export class App {
             ${peersText}
             <br />
             <span>
-              <strong>Emplacement</strong>: ${death.location} ${death.gps.accurate ? '' : '<strong style="color: orange;"><abbr data-tippy-content="Indique que l\'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>'}
+              <strong>Emplacement</strong>: ${death.location} ${death.gps.accurate ? '' : '<strong style="color: orangered;"><abbr data-tippy-content="Indique que l\'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>'}
               <a href="http://maps.google.com/?ll=${death.gps.lat},${death.gps.lon}&q=${death.location}" target="_blank">
                <span class="glyphicon  glyphicon-map-marker" aria-hidden="true"></span>
               </a>
@@ -377,7 +377,7 @@ export class App {
         if (death.sources && death.sources.length) {
           let sourcesText = '';
           if (confidentialSource) {
-            sourcesText = '<span aria-hidden="true" class="glyphicon glyphicon-alert" style="color: orange;" ></span>&nbsp;<strong data-tippy-content="La source étant anonyme, ce décès peut ne pas être fiable à 100%.">Source anonyme</strong>';
+            sourcesText = '<span aria-hidden="true" class="glyphicon glyphicon-alert" style="color: orangered;" ></span>&nbsp;<strong data-tippy-content="La source étant anonyme, ce décès peut ne pas être fiable à 100%.">Source anonyme</strong>';
           } else {
             for (const key in death.sources) {
               const source = death.sources[key];
