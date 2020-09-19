@@ -3345,7 +3345,7 @@
       "year": "2020",
       "month": "09",
       "day": "01",
-      "keywords": "Freddy",
+      "keywords": "Freddy Allart",
       "house": "police",
       "peers": [],
       "text": "Un motard de la CRS 12 a perdu la vie dans un accident routier après une collision avec un camion.\n Père d'une jeune fille, il faisait route vers Toulouse pour prêter du renfort.",
@@ -3635,6 +3635,65 @@
         {
           "url": "https://actu.fr/ile-de-france/sartrouville_78586/yvelines-une-policiere-de-sartrouville-se-suicide-chez-elle-avec-son-arme-de-service_35952736.html",
           "titre": "Actu.fr",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "09",
+      "day": "15",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Une gendarme de la BTA de Strasbourg a mis fin à ses jours avec son arme de service.\n Récemment affectée dans cette brigade, elle avait passé 7 ans à la brigade de Sainte-Marie-aux-Mines précédemment.",
+      "section": "BTA Strasbourg",
+      "location": "Strasbourg (Bas-Rhin)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat":  48.580355,
+        "lon":  7.734690
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/strasbourg-une-gendarme-de-31-ans-se-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.rtl.fr/actu/justice-faits-divers/strasbourg-une-gendarme-de-31-ans-se-suicide-dans-son-appartement-de-fonction-7800812100",
+          "titre": "RTL",
+          "paywall": false
+        },
+        {
+          "url": "https://rmc.bfmtv.com/emission/une-gendarme-se-suicide-avec-son-arme-de-service-dans-son-logement-de-fonction-a-strasbourg-1977141.html",
+          "titre": "BFM",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/grand-est/bas-rhin/strasbourg-0/strasbourg-gendarme-31-ans-se-suicide-son-arme-service-1874278.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/strasbourg-une-gendarme-se-suicide-dans-son-logement-de-fonction-a-la-caserne-ganeval-1600266499",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2863411-20200916-strasbourg-gendarme-suicide-arme-service",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/a-la-une/une-gendarme-se-suicide-dans-son-logement-de-fonction-a-strasbourg/",
+          "titre": "L'Essor",
           "paywall": false
         }
       ]
