@@ -3697,6 +3697,65 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "09",
+      "day": "26",
+      "keywords": "Joachim KACZMAREK",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme en stage à la compagnie motocycliste de Fontainebleau est décédé dans un accident de la route.",
+      "section": "BP Roisel",
+      "location": "Fontainebleau (Seine-et-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat":  48.403596,
+        "lon":  2.717168
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/seine-et-marne-un-gendarme-se-tue-dans-un-accident-de-moto-durant-un-stage-de-formation-a-fontainebleau/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/Gendarmerie/status/1309832229753884673",
+          "titre": "@gendarmerie (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.interieur.gouv.fr/Le-ministre/Communiques-du-ministre/Deces-du-gendarme-Joachim-Kaczmarek-du-groupement-de-gendarmerie-de-la-Somme",
+          "titre": "MININT (Hommage)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/somme-un-gendarme-de-la-brigade-de-roisel-se-tue-en-moto-sur-un-exercice-de-formation-1601122834",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.courrier-picard.fr/id128620/article/2020-09-26/peronne-un-gendarme-decede-en-service",
+          "titre": "Courrier Picard",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/fontainebleau_77186/seine-et-marne-un-jeune-gendarme-decede-lors-d-un-exercice-de-pilotage-a-fontainebleau_36384683.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.dna.fr/faits-divers-justice/2020/09/26/seine-et-marne-un-jeune-motard-de-la-gendarmerie-decede-apres-un-accident-lors-d-une-formation",
+          "titre": "DNA",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
