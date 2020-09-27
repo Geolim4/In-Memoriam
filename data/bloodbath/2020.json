@@ -1645,6 +1645,35 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "04",
+      "day": "17",
+      "keywords": "Nicolas Angles",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un sapeur-pompier volontaire du SDIS 34 a mis fins à ses jours.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "SDIS 34",
+      "location": "Agde (Hérault)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 43.309762,
+        "lon": 3.493330
+      },
+      "sources": [
+        {
+          "url": "https://www.facebook.com/SDIS34/posts/2944852858961992",
+          "titre": "@SDIS34 (Facebook)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
       "orphans": 0,
       "unpublished_reason": "",
       "year": "2020",
@@ -3535,15 +3564,16 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
-        "lat":  20.258146,
-        "lon":  0.990530
+        "lat": 20.258146,
+        "lon": 0.990530
       },
       "sources": [
         {
           "url": "https://www.defense.gouv.fr/terre/actu-terre/barkhane-deces-du-bc1-s.t.-et-du-1cl-volpe-du-1er-rhp",
           "titre": "MINARM - Hommage",
           "paywall": false
-        },{
+        },
+        {
           "url": "https://actu17.fr/deux-militaires-francais-ont-ete-tues-au-mali-lors-dune-operation-annonce-lelysee/",
           "titre": "Actu17",
           "paywall": false
@@ -3603,8 +3633,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  48.937539,
-        "lon":  2.160761
+        "lat": 48.937539,
+        "lon": 2.160761
       },
       "sources": [
         {
@@ -3657,8 +3687,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  48.580355,
-        "lon":  7.734690
+        "lat": 48.580355,
+        "lon": 7.734690
       },
       "sources": [
         {
@@ -3716,8 +3746,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
-        "lat":  48.403596,
-        "lon":  2.717168
+        "lat": 48.403596,
+        "lon": 2.717168
       },
       "sources": [
         {
@@ -3753,6 +3783,45 @@
         {
           "url": "https://www.dna.fr/faits-divers-justice/2020/09/26/seine-et-marne-un-jeune-motard-de-la-gendarmerie-decede-apres-un-accident-lors-d-une-formation",
           "titre": "DNA",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "09",
+      "day": "26",
+      "keywords": "Jean-philippe Dewerdt",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un sapeur-pompier du SDIS 62 a mit fins à ses jours avec une arme à feu dans sa voiture dans une ruelle de Noeux-les-Mines.",
+      "section": "SDIS 62",
+      "location": "Fleury-Mérogis (Essonne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 50.478427,
+        "lon": 2.655419
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/pas-de-calais-un-sapeur-pompier-de-27-ans-se-suicide-avec-une-arme-a-feu-a-noeux-les-mines/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/hauts-de-france/noeux-les-mines_62617/a-noeux-les-mines-un-sapeur-pompier-s-est-suicide-dans-sa-voiture-avec-une-arme-a-feu_36382012.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/ActuSDIS62/status/1310185346697756674",
+          "titre": "@ActuSDIS62 (Twitter)",
           "paywall": false
         }
       ]
