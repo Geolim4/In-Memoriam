@@ -243,7 +243,7 @@
       "year": "2020",
       "month": "01",
       "day": "17",
-      "keywords": "Denis Serka",
+      "keywords": "Denis Serka, edis91",
       "house": "pompier",
       "peers": [],
       "text": "Un lieutenant-colonel des sapeurs-pompiers a mis fins à ses jours à l’EDIS de Fleury-Mérogis.\n Père de deux enfants il a servi en tant que pompier dans l'Essonne pendant plus de 20 ans.",
@@ -835,7 +835,7 @@
       "year": "2020",
       "month": "03",
       "day": "08",
-      "keywords": "",
+      "keywords": "José Moutama, sdis972",
       "house": "pompier",
       "peers": [],
       "text": "Un pompier volontaire est décédé des suites d'un malaise après une intervention sur un feu de broussailles dans la commune du Prêcheur. Volontaire depuis plus d'une dizaine d'années il était père de 4 enfants.",
@@ -1061,7 +1061,7 @@
       "year": "2020",
       "month": "03",
       "day": "19",
-      "keywords": "Steeve SCAFFA",
+      "keywords": "Steeve SCAFFA, sdis06",
       "house": "pompier",
       "peers": [],
       "text": "Un pompier volontaire de la Force 06 est décédé dans un accident de la circulation lors d'une mission du SDIS 06.\n Marié et père de trois enfant il était pompier volontaire depuis 2010.",
@@ -1650,7 +1650,7 @@
       "year": "2020",
       "month": "04",
       "day": "17",
-      "keywords": "Nicolas Angles",
+      "keywords": "Nicolas Angles, sdis34",
       "house": "pompier",
       "peers": [],
       "text": "Un sapeur-pompier volontaire du SDIS 34 a mis fins à ses jours.\n Peu d'informations disponibles sur ce suicide.",
@@ -1718,7 +1718,7 @@
       "year": "2020",
       "month": "04",
       "day": "25",
-      "keywords": "Gil Encognère",
+      "keywords": "Gil Encognère, sdis33",
       "house": "pompier",
       "peers": [],
       "text": "Un pompier de Lacanau a succombé à ses blessures suite à un accident corporel survenu le 9 avril lors du reconditionnement d'un véhicule.\n Marié et père de deux enfants, il était pompier à Lacanau depuis 14 ans.",
@@ -3320,7 +3320,7 @@
       "year": "2020",
       "month": "08",
       "day": "25",
-      "keywords": "",
+      "keywords": "Simon PAULOU",
       "house": "gendarmerie",
       "peers": [],
       "text": "Un gendarme adjoint volontaire (GAV) de la BTA de Colmar a mis fin à ses jours avec son arme de service.\n Peu d'informations disponibles sur ce suicide.",
@@ -3796,7 +3796,7 @@
       "year": "2020",
       "month": "09",
       "day": "26",
-      "keywords": "Jean-philippe Dewerdt",
+      "keywords": "Jean-philippe Dewerdt, sdis62",
       "house": "pompier",
       "peers": [],
       "text": "Un sapeur-pompier du SDIS 62 a mit fins à ses jours avec une arme à feu dans sa voiture dans une ruelle de Noeux-les-Mines.",
@@ -3825,6 +3825,145 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "09",
+      "day": "29",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme du Groupement de Gendarmerie Département (GGD) de l'Ain a mis fin à ses jours dans des circonstances inconnues. \n Il était marié et père de deux enfants.",
+      "section": "GGD Ain",
+      "location": "Bourg-en-Bresse (Ain)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 46.212627,
+        "lon": 5.240112
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/ain-un-gendarme-age-de-49-ans-sest-suicide-a-bourg-en-bresse/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/09/30/bourg-en-bresse-un-gendarme-retrouve-mort-a-son-domicile/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/a-la-une/un-major-de-49-ans-se-suicide-dans-lain/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leprogres.fr/faits-divers-justice/2020/09/30/un-sous-officier-de-la-gendarmerie-de-l-ain-met-fin-a-ses-jours",
+          "titre": "Le progrès",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "10",
+      "day": "07",
+      "keywords": "Guillaume Beauvais, sdis19",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un sapeur-pompier du SDIS 19 est décédé dans un accident de la route sur la route d'une intervention.",
+      "section": "SDIS 19",
+      "location": "Lonzac (Corrèze)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat":  45.466453,
+        "lon":  1.743936
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/correze-un-pompier-de-35-ans-decede-suite-a-un-accident-de-la-route-alors-quil-se-rendait-sur-une-intervention/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-pompier-de-correze-decede-des-suites-d-un-accident-de-la-route-en-partant-un-intervention-1602062569",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.pompiers.fr/actualites/avis-de-deces-caporal-guillaume-beauvais-sapeur-pompier-au-cis-le-lonzac-en-correze-19",
+          "titre": "Pompiers.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lamontagne.fr/lonzac-19470/actualites/le-pompier-volontaire-victime-d-un-accident-routier-au-lonzac-correze-en-partant-en-intervention-est-decede_13849193/",
+          "titre": "La Montagne",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "10",
+      "day": "07",
+      "keywords": "Bruno Kohlhuber, tempête Alex, sdis06",
+      "house": "pompier",
+      "peers": [],
+      "text": "Le corps d'un sapeur-pompier du SDIS 06 a été retrouvé dans le lit de la rivière du Var à Carros suite à la tempête Alex.\n Marié, père de trois enfants, chef du service GPEEC et chef de colonne du Pays Niçois, il était sapeur-pompier professionnel depuis 27 ans.",
+      "section": "GPEEC - SDIS 06",
+      "location": "Carros (Alpes-Maritimes)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat":  43.784707,
+        "lon":  7.215882
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/tempete-alex-dans-les-alpes-maritimes-le-corps-sans-vie-dun-des-pompiers-disparus-decouvert/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.nicematin.com/faits-divers/video-le-corps-de-lun-des-deux-pompiers-disparus-lors-de-la-tempete-alex-retrouve-a-carros-584376",
+          "titre": "Nice Matin",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/sdis_06/status/1314219817780629506",
+          "titre": "@sdis_06 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.midilibre.fr/2020/10/08/alpes-maritimes-le-corps-dun-des-deux-pompiers-disparus-a-ete-retrouve-pres-de-nice-9126421.php",
+          "titre": "Midi Libre",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/societe/2880507-20201008-tempete-alex-alpes-maritimes-corps-pompiers-disparus-retrouve-var",
+          "titre": "20 minutes",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
+
+
