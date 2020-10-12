@@ -126,6 +126,7 @@ export class App {
   private bindCustomButtons(map: google.maps.Map): void {
     this.bindLocalizationButton(map);
     this.bindRandomizationButton(map);
+    this.bindRefreshButton(map);
     this.bindHeatmapButton(map);
     this.bindClusteringButton(map);
     this.bindListButton(map);
@@ -604,6 +605,21 @@ export class App {
       map.setCenter(randomMarker.getPosition());
       map.setZoom(13);
       google.maps.event.trigger(randomMarker, 'click');
+    }, buttonOptions);
+  }
+
+  private bindRefreshButton(map: google.maps.Map): void {
+    const buttonOptions = {
+      ctrlChildId: 'refreshImg',
+      ctrlPosition: google.maps.ControlPosition.RIGHT_TOP,
+      defaultCtrlChildBgPos: '0px 0px',
+      defaultCtrlChildBgSize: '100%',
+      imagePath: this._configObject.config['imagePath']['refresh'],
+      title: 'Actualiser',
+    };
+
+    GmapUtils.bindButton(map, () => {
+      this.reloadMarkers(map, false);
     }, buttonOptions);
   }
 

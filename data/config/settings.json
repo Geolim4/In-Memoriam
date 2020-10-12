@@ -28,7 +28,8 @@
         "off": "./assets/images/map/heatmap_off.png"
       },
       "localize": "https://maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png",
-      "bluedot": "./assets/images/map/bluedot.png"
+      "bluedot": "./assets/images/map/bluedot.png",
+      "refresh": "./assets/images/map/refresh.png"
     },
     "maxZoom": 15,
     "searchMinLength": 3
