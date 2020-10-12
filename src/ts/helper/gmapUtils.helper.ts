@@ -5,9 +5,9 @@
  */
 
 export class GmapUtils {
-  public static bindButton(map: google.maps.Map, onclickCallback: VoidFunction, opts: { imagePath: string, ctrlPosition: number, title?: string, ctrlChildId?: string, defaultCtrlChildBgPos?: string, defaultCtrlChildBgSize?: string }): HTMLInputElement {
-    const controlDiv = <HTMLInputElement>document.createElement('div');
-    const firstChild = <HTMLInputElement>document.createElement('button');
+  public static bindButton(map: google.maps.Map, onclickCallback: VoidFunction, opts: { imagePath: string, ctrlPosition: number, title?: string, ctrlChildId?: string, defaultCtrlChildBgPos?: string, defaultCtrlChildBgSize?: string }): HTMLElement {
+    const controlDiv = <HTMLDivElement>document.createElement('div');
+    const firstChild = <HTMLButtonElement>document.createElement('button');
     const secondChild = document.createElement('div');
 
     firstChild.style.backgroundColor = '#FFF';
@@ -15,12 +15,13 @@ export class GmapUtils {
     firstChild.style.borderRadius = '2px';
     firstChild.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
     firstChild.style.cursor = 'pointer';
-    firstChild.style.height = '28px';
+    firstChild.style.height = opts.ctrlPosition === google.maps.ControlPosition.RIGHT_TOP ? '40px' : '28px';
     firstChild.style.marginTop = '10px';
     firstChild.style.marginLeft = '10px';
+    firstChild.style.marginRight = '10px';
     firstChild.style.outline = 'none';
     firstChild.style.padding = '0px';
-    firstChild.style.width = '28px';
+    firstChild.style.width = opts.ctrlPosition === google.maps.ControlPosition.RIGHT_TOP ? '40px' : '28px';
     firstChild.title = opts.title;
     controlDiv.appendChild(firstChild);
 
@@ -30,9 +31,9 @@ export class GmapUtils {
     secondChild.style.backgroundPosition = (opts.defaultCtrlChildBgPos ? opts.defaultCtrlChildBgPos : '0 0');
     secondChild.style.backgroundRepeat = 'no-repeat';
     secondChild.style.backgroundSize = (opts.defaultCtrlChildBgSize ? opts.defaultCtrlChildBgSize : '100%');
-    secondChild.style.height = '18px';
+    secondChild.style.height = opts.ctrlPosition === google.maps.ControlPosition.RIGHT_TOP ? '30px' : '18px';
     secondChild.style.margin = '5px';
-    secondChild.style.width = '18px';
+    secondChild.style.width = opts.ctrlPosition === google.maps.ControlPosition.RIGHT_TOP ? '30px' : '18px';
     firstChild.appendChild(secondChild);
 
     firstChild.addEventListener('click', onclickCallback);
