@@ -3888,8 +3888,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  45.466453,
-        "lon":  1.743936
+        "lat": 45.466453,
+        "lon": 1.743936
       },
       "sources": [
         {
@@ -3932,8 +3932,8 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  43.784707,
-        "lon":  7.215882
+        "lat": 43.784707,
+        "lon": 7.215882
       },
       "sources": [
         {
@@ -3962,8 +3962,46 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "10",
+      "day": "09",
+      "keywords": "Marc",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CSP de Montauban a mis fin à ses jours à son domicile sans faire usage de son arme administrative.\n Il était père de trois enfants.",
+      "section": "CSP Montauban",
+      "location": "Montauban (Tarn-et-Garonne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 44.018767,
+        "lon": 1.360410
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/montauban-un-policier-de-47-ans-decede-de-ses-blessures-apres-setre-pendu-a-son-domicile/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2882295-20201011-montauban-policier-mort-suites-blessures-apres-etre-pendu",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ladepeche.fr/2020/10/10/montauban-un-policier-decede-apres-setre-pendu-chez-lui-9130759.php",
+          "titre": "La Dépêche",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
-
 
