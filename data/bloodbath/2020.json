@@ -4001,7 +4001,50 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "10",
+      "day": "10",
+      "keywords": "",
+      "house": "armee",
+      "peers": [],
+      "text": "Un jeune militaire du 8ème RIPMa a mis fin à ses jours avec son arme de service.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "8 RIPMa (11e BP)",
+      "location": "Castres (Tarn)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 43.606165,
+        "lon":  2.250700
+      },
+      "sources": [
+        {
+          "url": "https://www.ouest-france.fr/region-occitanie/castres-81100/tarn-un-militaire-met-fin-a-ses-jours-durant-son-service-a-castres-7015752",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.rtl.fr/actu/justice-faits-divers/castres-un-soldat-de-21-ans-se-suicide-dans-sa-caserne-7800904011",
+          "titre": "RTL",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/occitanie/tarn/castres/suicide-militaire-du-8eme-rpima-castres-arme-feu-caserne-fayolle-1884048.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ladepeche.fr/2020/10/14/un-jeune-soldat-se-suicide-par-arme-a-feu-dans-la-caserne-9137812.php",
+          "titre": "La dépêche",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
-
