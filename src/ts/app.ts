@@ -93,7 +93,7 @@ export class App {
       const filtersPath = './data/config/filters.json';
       qwest.get(filtersPath).then((_xhr, response: {filters: FormFilters}) => {
         this.filters = response.filters;
-        this.setupSkeleton(formElement);
+        this.setupSkeleton(formElement, this.getFilters(formElement, true));
         this.bindAnchorEvents(map, mapElement, formElement);
         this.bindFilters(map, mapElement, formElement);
         this.bindCustomButtons(map);
@@ -215,17 +215,21 @@ export class App {
     });
 
     selects.forEach((select) => {
-      if (fromAnchor && typeof exposedFilters[select.id] !== 'undefined') {
-        filters[select.id] = exposedFilters[select.id];
-      } else {
-        if (select.selectedOptions) {
-          filters[select.id] = Array.from(select.selectedOptions)
-            .filter((o) => o.selected)
-            .map((o) => o.value)
-            .join(',');
-        } else {
-          filters[select.id] = select.value;
+      if (fromAnchor) {
+        filters[select.id] = exposedFilters[select.id] ? exposedFilters[select.id] : '';
+        if (!select.required || filters[select.id]) {
+          return;
         }
+        // If a required filter is empty in anchor, we must also try HTML fields
+      }
+
+      if (select.selectedOptions) {
+        filters[select.id] = Array.from(select.selectedOptions)
+          .filter((o) => o.selected)
+          .map((o) => o.value)
+          .join(',');
+      } else {
+        filters[select.id] = select.value;
       }
     });
 
@@ -264,6 +268,7 @@ export class App {
   private bindFilters(map: google.maps.Map, mapElement: HTMLInputElement, formElement: HTMLInputElement, fromAnchor?: boolean): void {
 
     const selects = <NodeListOf<HTMLInputElement>>formElement.querySelectorAll('form select, form input');
+    const filters = this.getFilters(formElement, fromAnchor);
 
     Events.addEventHandler(formElement, 'submit', (e) => {
       // this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, fromAnchor));
@@ -271,44 +276,48 @@ export class App {
     });
 
     selects.forEach((selector) => {
-      const filters = this.getFilters(formElement, fromAnchor);
-      selector.value = (typeof filters[selector.name] !== 'undefined' ? filters[selector.name] : ''); // can be : event.currentTarget.value inside the event handler
+      if (!selector.multiple) {
+        selector.value = (typeof filters[selector.name] !== 'undefined' ? filters[selector.name] : ''); // can be : event.currentTarget.value inside the event handler
+      }
 
       if (typeof (this._eventHandlers[selector.id]) === 'function') {
         Events.removeEventHandler(selector, 'change', this._eventHandlers[selector.id]);
       }
 
       this._eventHandlers[selector.id] = () => {
-        const filters = this.getFilters(formElement, fromAnchor);
+        const filters = this.getFilters(formElement, false);
         this.bindMarkers(mapElement.dataset.bloodbathSrc, map, filters);
 
         // this.hashManager(select.id, select.value);
         return false;
       };
 
-      if (fromAnchor) {
-        // @todo HANDLE THIS selector.value = (typeof filters[selector.name] !== 'undefined' ? filters[selector.name] : '');
-      }
-
       Events.addEventHandler(selector, 'change', this._eventHandlers[selector.id]);
     });
 
-    this.drawCustomSelectors(selects);
+    this.drawCustomSelectors(selects, filters);
   }
 
-  private drawCustomSelectors(selectors: NodeListOf<HTMLInputElement>): void {
+  private drawCustomSelectors(selectors: NodeListOf<HTMLInputElement>, filters: Filters): void {
     const _choicesJs: any = choicesJs; // Hack to fix import @todo: Fix the import definitely
+
     selectors.forEach((selector) => {
       if (selector.type !== 'text') {
-        this._customChoicesInstances[selector.id] = new _choicesJs(selector, {
-          duplicateItemsAllowed: false,
-          itemSelectText: '',
-          removeItemButton: selector.multiple,
-          removeItems: true,
-          resetScrollPosition: false,
-          searchEnabled: false,
-          shouldSort: false,
-        });
+        if (!this._customChoicesInstances[selector.id]) {
+          this._customChoicesInstances[selector.id] = new _choicesJs(selector, {
+            duplicateItemsAllowed: false,
+            itemSelectText: '',
+            removeItemButton: selector.multiple,
+            removeItems: true,
+            resetScrollPosition: false,
+            searchEnabled: false,
+            shouldSort: false,
+          });
+        }
+
+        console.log(filters[selector.id].split(','));
+        this._customChoicesInstances[selector.id].removeActiveItems(null);
+        this._customChoicesInstances[selector.id].setChoiceByValue(filters[selector.id].split(','));
       }
     });
   }
@@ -337,6 +346,7 @@ export class App {
       const nationalMarkers = <google.maps.Marker[]>[];
       const modalBloodbathElement = <HTMLInputElement>document.getElementById('modal-bloodbath-list-content');
       const modalBloodbathCounter = <HTMLInputElement>document.getElementById('modal-bloodbath-death-counter');
+      const modalBloodbathYear = <HTMLInputElement>document.getElementById('modal-bloodbath-year');
       let modalBloodbathListContent = '<ul>';
       let filteredResponse = <Bloodbath>response;
 
@@ -456,8 +466,10 @@ export class App {
       }
 
       modalBloodbathListContent += '</ul>';
+      modalBloodbathListContent += '<small><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> La liste affichée ci-dessus est contextualisée en fonction des filtres appliqués.</small>';
       modalBloodbathElement.innerHTML = StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, this.glossary);
-      modalBloodbathCounter.innerHTML = `(${this._markers.length} décès)`;
+      modalBloodbathCounter.innerHTML = `${this._markers.length} décès`;
+      modalBloodbathYear.innerHTML = filters.year;
 
       // We assume that if only have a single result
       // that the infoWindow should be opened by default
@@ -500,20 +512,17 @@ export class App {
 
   }
 
-  private setupSkeleton(formElement: HTMLInputElement): void {
+  private setupSkeleton(formElement: HTMLInputElement, filters: Filters): void {
     const searchInput = document.querySelector('#search');
     const searchMinLength = this._configObject.config['searchMinLength'];
 
     for (const [filterName, filterValuesArray] of Object.entries(this.filters)) {
-      console.log(filterName);
-      console.log(filterValuesArray);
       for (const filterValueObject of filterValuesArray) {
-        console.log(filterValueObject.label);
-        console.log(filterValueObject.value);
         const selector = formElement.querySelector(`select[name="${filterName}"]`);
         const option = document.createElement('option');
         option.value = filterValueObject.value;
         option.text = filterValueObject.label;
+        option.selected = filters[filterName].split(',').includes(filterValueObject.value);
         selector.appendChild(option);
       }
     }
