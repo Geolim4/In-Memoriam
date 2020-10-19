@@ -49,6 +49,7 @@
     "@google/markerclusterer": "^1.0.3",
     "activity-detector": "^3.0.0",
     "bootstrap": "^3.4.1",
+    "choices.js": "^9.0.1",
     "es6-promise": "^4.2.8",
     "jquery": "^3.5.0",
     "load-google-maps-api": "^2.0.1",

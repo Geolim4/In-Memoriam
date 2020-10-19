@@ -4,6 +4,7 @@ import * as qwest from 'qwest';
 import tippyJs from 'tippy.js';
 import micromodal from 'micromodal';
 import activityDetector from 'activity-detector';
+import choicesJs = require('choices.js');
 
 import { Bloodbath, Definition, Filters } from './models';
 import { Config } from './config';
@@ -12,7 +13,7 @@ import { GmapUtils } from './helper/gmapUtils.helper';
 import { Permalink } from './permalink';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
 import { Death } from './models/death.model';
-
+import { FormFilters } from './models/formFilters.model';
 /**
  * @author Georges.L <contact@geolim4.com>
  * @author Jbz797 <jean.benoit.gautier@gmail.com>
@@ -21,6 +22,7 @@ import { Death } from './models/death.model';
 export class App {
 
   private _configObject: Config;
+  private _customChoicesInstances: { [name: string]: any };
   private _currentInfoWindows: google.maps.InfoWindow;
   private _heatMap: google.maps.visualization.HeatmapLayer;
   private _infoWindows: google.maps.InfoWindow[];
@@ -31,8 +33,10 @@ export class App {
   private heatmapEnabled: boolean;
   private clusteringEnabled: boolean;
   private glossary: {};
+  private filters: FormFilters;
 
   constructor() {
+    this._customChoicesInstances = {};
     this._currentInfoWindows = null;
     this._eventHandlers = {};
     this._heatMap = null;
@@ -44,11 +48,7 @@ export class App {
     this.heatmapEnabled = true;
     this.clusteringEnabled = true;
     this.glossary = {};
-  }
-
-  private static getFilterValueLabel(filterName: string, filterValue: string): string {
-    const option = <HTMLInputElement>document.querySelector(`form select[name="${filterName}"] option[value="${filterValue}"]`);
-    return (option ? option.innerText : filterValue).replace(/\(.*\)/, '').trim();
+    this.filters = {};
   }
 
   public boot(): void {
@@ -76,10 +76,8 @@ export class App {
       key: this._configObject.config.googleMaps['key'],
       libraries: this._configObject.config.googleMaps['libraries'],
     }).then(() => {
-
       const formElement = <HTMLInputElement>document.getElementById('form-filters');
       const mapElement = <HTMLInputElement>document.getElementById('map');
-
       const options = {
         center: new google.maps.LatLng(this._configObject.config['defaultLat'], this._configObject.config['defaultLon']),
         mapTypeControl: false,
@@ -88,17 +86,19 @@ export class App {
         streetViewControl: false,
         zoom: this._configObject.config['defaultZoom'],
       };
-
       const map = new google.maps.Map(mapElement, options);
       const activityDetectorMonitoring = activityDetector({
         timeToIdle: 2 * 60 * 1000, // wait 2min of inactivity to consider the user is idle
       });
-
-      this.setupSkeleton();
-      this.bindAnchorEvents(map, mapElement, formElement);
-      this.bindFilters(map, mapElement, formElement);
-      this.bindCustomButtons(map);
-      this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
+      const filtersPath = './data/config/filters.json';
+      qwest.get(filtersPath).then((_xhr, response: {filters: FormFilters}) => {
+        this.filters = response.filters;
+        this.setupSkeleton(formElement);
+        this.bindAnchorEvents(map, mapElement, formElement);
+        this.bindFilters(map, mapElement, formElement);
+        this.bindCustomButtons(map);
+        this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
+      });
 
       let handler;
       activityDetectorMonitoring.on('idle', () => {
@@ -136,7 +136,7 @@ export class App {
     return this._configObject.definitions;
   }
 
-  private filteredResponse(response: Bloodbath, filters: Filters): Bloodbath {
+  private getFilteredResponse(response: Bloodbath, filters: Filters): Bloodbath {
     const filteredResponse = <Bloodbath>response;
 
     for (const [fKey, filter] of Object.entries(filters)) {
@@ -177,11 +177,11 @@ export class App {
               }
             } else {
               if (!filteredResponse.deaths[dKey]['published']
-                || (filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName] !== filter)) {
+                || (!filter.split(',').includes(filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName]))) {
                 if (filteredResponse.deaths[dKey].peers.length) {
                   let continueFlag = false;
                   for (const peer of filteredResponse.deaths[dKey].peers) {
-                    if ((fieldName === 'house' && peer.house === filter)) {
+                    if ((fieldName === 'house' && filter.split(',').includes(peer.house))) {
                       continueFlag = true;
                       break;
                     }
@@ -205,7 +205,7 @@ export class App {
     const anchor = location.hash.substr(1).split('&');
     const exposedFilters = {};
     const filters = {};
-    const selects = <NodeListOf<HTMLInputElement>>form.querySelectorAll('select[data-filterable="true"], input[data-filterable="true"]');
+    const selects = <NodeListOf<HTMLSelectElement>>form.querySelectorAll('select[data-filterable="true"], input[data-filterable="true"]');
 
     anchor.forEach((value) => {
       const filter = value.split('=');
@@ -218,7 +218,14 @@ export class App {
       if (fromAnchor && typeof exposedFilters[select.id] !== 'undefined') {
         filters[select.id] = exposedFilters[select.id];
       } else {
-        filters[select.id] = select.value;
+        if (select.selectedOptions) {
+          filters[select.id] = Array.from(select.selectedOptions)
+            .filter((o) => o.selected)
+            .map((o) => o.value)
+            .join(',');
+        } else {
+          filters[select.id] = select.value;
+        }
       }
     });
 
@@ -263,15 +270,15 @@ export class App {
       e.preventDefault();
     });
 
-    selects.forEach((select) => {
+    selects.forEach((selector) => {
       const filters = this.getFilters(formElement, fromAnchor);
-      select.value = (typeof filters[select.name] !== 'undefined' ? filters[select.name] : ''); // can be : event.currentTarget.value inside the event handler
+      selector.value = (typeof filters[selector.name] !== 'undefined' ? filters[selector.name] : ''); // can be : event.currentTarget.value inside the event handler
 
-      if (typeof (this._eventHandlers[select.id]) === 'function') {
-        Events.removeEventHandler(select, 'change', this._eventHandlers[select.id]);
+      if (typeof (this._eventHandlers[selector.id]) === 'function') {
+        Events.removeEventHandler(selector, 'change', this._eventHandlers[selector.id]);
       }
 
-      this._eventHandlers[select.id] = () => {
+      this._eventHandlers[selector.id] = () => {
         const filters = this.getFilters(formElement, fromAnchor);
         this.bindMarkers(mapElement.dataset.bloodbathSrc, map, filters);
 
@@ -280,12 +287,30 @@ export class App {
       };
 
       if (fromAnchor) {
-        select.value = (typeof filters[select.name] !== 'undefined' ? filters[select.name] : '');
+        // @todo HANDLE THIS selector.value = (typeof filters[selector.name] !== 'undefined' ? filters[selector.name] : '');
       }
 
-      Events.addEventHandler(select, 'change', this._eventHandlers[select.id]);
+      Events.addEventHandler(selector, 'change', this._eventHandlers[selector.id]);
     });
 
+    this.drawCustomSelectors(selects);
+  }
+
+  private drawCustomSelectors(selectors: NodeListOf<HTMLInputElement>): void {
+    const _choicesJs: any = choicesJs; // Hack to fix import @todo: Fix the import definitely
+    selectors.forEach((selector) => {
+      if (selector.type !== 'text') {
+        this._customChoicesInstances[selector.id] = new _choicesJs(selector, {
+          duplicateItemsAllowed: false,
+          itemSelectText: '',
+          removeItemButton: selector.multiple,
+          removeItems: true,
+          resetScrollPosition: false,
+          searchEnabled: false,
+          shouldSort: false,
+        });
+      }
+    });
   }
 
   private clearMarkerCluster(): this {
@@ -315,8 +340,8 @@ export class App {
       let modalBloodbathListContent = '<ul>';
       let filteredResponse = <Bloodbath>response;
 
-      this.alterFiltersLabels(filteredResponse);
-      filteredResponse = this.filteredResponse(filteredResponse, filters);
+      // this.alterFiltersLabels(filteredResponse); // Disabled for now since the choiceJS component hides it
+      filteredResponse = this.getFilteredResponse(filteredResponse, filters);
       this.clearMapObjects();
 
       if (!filteredResponse.deaths || !filteredResponse.deaths.length) {
@@ -331,7 +356,7 @@ export class App {
         let peersCount = 0;
         for (const peer of death.peers) {
           const peerHouseImage = this._imgHousePath.replace('%house%', (peer.count > 1 ? `${peer.house}-m` : peer.house));
-          const peerHouseFormatted =  App.getFilterValueLabel('house', peer.house);
+          const peerHouseFormatted =  this.getFilterValueLabel('house', peer.house);
           peersText += `<h5>
               <img height="16" src="${peerHouseImage}" alt="House: ${peer.house}"  title="House: ${peer.house}" />
               ${(peer.section ? `${StringUtilsHelper.replaceAcronyms(peer.section, this.glossary)}` : '')}
@@ -351,8 +376,8 @@ export class App {
           title: death.text,
         });
 
-        const houseFormatted =  App.getFilterValueLabel('house', death.house);
-        const causeFormatted = App.getFilterValueLabel('cause', death.cause);
+        const houseFormatted =  this.getFilterValueLabel('house', death.house);
+        const causeFormatted = this.getFilterValueLabel('cause', death.cause);
         let infoWindowsContent = `<h4>
               <img height="16" src="${houseImage}" alt="House: ${death.house}"  title="House: ${death.house}" />
               ${(death.section ? `${StringUtilsHelper.replaceAcronyms(death.section, this.glossary)}` : '')}
@@ -475,9 +500,23 @@ export class App {
 
   }
 
-  private setupSkeleton(): void {
+  private setupSkeleton(formElement: HTMLInputElement): void {
     const searchInput = document.querySelector('#search');
     const searchMinLength = this._configObject.config['searchMinLength'];
+
+    for (const [filterName, filterValuesArray] of Object.entries(this.filters)) {
+      console.log(filterName);
+      console.log(filterValuesArray);
+      for (const filterValueObject of filterValuesArray) {
+        console.log(filterValueObject.label);
+        console.log(filterValueObject.value);
+        const selector = formElement.querySelector(`select[name="${filterName}"]`);
+        const option = document.createElement('option');
+        option.value = filterValueObject.value;
+        option.text = filterValueObject.label;
+        selector.appendChild(option);
+      }
+    }
 
     searchInput.setAttribute('minlength', searchMinLength);
     searchInput.setAttribute('placeholder', searchInput.getAttribute('placeholder').replace('%d', searchMinLength));
@@ -619,6 +658,7 @@ export class App {
     };
 
     GmapUtils.bindButton(map, () => {
+      this.loadGlossary();
       this.reloadMarkers(map, false);
     }, buttonOptions);
   }
@@ -718,6 +758,17 @@ export class App {
     }
 
     return definitions;
+  }
+
+  private getFilterValueLabel(filterName: string, filterValue: string): string {
+    // const option = <HTMLInputElement>document.querySelector(`form select[name="${filterName}"] option[value="${filterValue}"]`); // Old mechanism
+    for (const filterValues of this.filters[filterName]) {
+      if (filterValues.value === filterValue) {
+        return filterValues.label.replace(/\(.*\)/, '').trim();
+      }
+    }
+
+    return `["${filterValue}]`;
   }
 
   private getLatestDeath(response: Bloodbath): Death | null {
