@@ -29,6 +29,17 @@
  * @preserve jquery-param (c) 2015 KNOWLEDGECODE | MIT
  */
 
+/*! choices.js v9.0.1 | © 2019 Josh Johnson | https://github.com/jshjohnson/Choices#readme */
+
+/*!
+ * Fuse.js v3.4.5 - Lightweight fuzzy-search (http://fusejs.io)
+ * 
+ * Copyright (c) 2012-2017 Kirollos Risk (http://kiro.me)
+ * All Rights Reserved. Apache Software License 2.0
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
+
 /**!
 * tippy.js v5.1.1
 * (c) 2017-2019 atomiks
