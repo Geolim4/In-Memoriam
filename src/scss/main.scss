@@ -3,6 +3,7 @@
 @import '~tippy.js/dist/backdrop.css';
 @import '~tippy.js/themes/material.css';
 @import '../css/micromodal.css';
+@import '~choices.js/public/assets/styles/choices.min.css';
 
 #fork-me {
   position: absolute;
@@ -109,5 +110,15 @@ abbr[data-title] {
   strong {
     margin-left: 5px;
     vertical-align: middle;
+  }
+}
+
+.choices__list--dropdown .choices__item--selectable {
+  padding-right: 0;
+}
+
+#form-filters {
+  #search {
+    height: 45px;
   }
 }

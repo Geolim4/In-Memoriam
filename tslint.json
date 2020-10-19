@@ -5,6 +5,7 @@
   "rules": {
     "align": [true, "elements", "members", "parameters", "statements"],
     "arrow-return-shorthand": true,
+    "import-name": [true],
     "max-line-length": false,
     "member-access": true,
     "member-ordering": [true, {
@@ -17,7 +18,7 @@
     "no-unnecessary-else": true,
     "no-unnecessary-type-annotation": true,
     "no-unused": true,
-    "no-unused-expression": true,
+    "no-unused-expression": [true, "allow-new"],
     "no-var-before-return": true,
     "object-literal-sort-keys": [true, "shorthand-first"],
     "ordered-imports": {

@@ -57,66 +57,24 @@
                 <label for="year">Année</label>/<label for="month">Mois</label>
                 <div class="row">
                     <div class="col-xs-6">
-                        <select name="year" id="year" class="form-control" data-filterable="true">
-                            <option value="2020" selected>2020</option>
-                            <option value="2019">2019</option>
-                            <option value="2018">2018</option>
-                        </select>
+                        <select name="year" id="year" class="form-control" data-filterable="true" required="required"></select>
                     </div>
                     <div class="col-xs-6">
-                        <select name="month" id="month" class="form-control" data-filterable="true" data-countable="true">
-                            <option value="">---</option>
-                            <option value="01">Janvier</option>
-                            <option value="02">Février</option>
-                            <option value="03">Mars</option>
-                            <option value="04">Avril</option>
-                            <option value="05">Mai</option>
-                            <option value="06">Juin</option>
-                            <option value="07">Juillet</option>
-                            <option value="08">Aout</option>
-                            <option value="09">Septembre</option>
-                            <option value="10">Octobre</option>
-                            <option value="11">Novembre</option>
-                            <option value="12">Décembre</option>
-                        </select>
+                        <select name="month" id="month" class="form-control" data-filterable="true" data-countable="true" multiple></select>
                     </div>
                 </div>
             </fieldset>
             <fieldset class="col-md-2">
                 <label for="house">Corps</label>
-                <select name="house" id="house" class="form-control" data-filterable="true" data-countable="true">
-                    <option value="">---</option>
-                    <option value="police">Police Nationale</option>
-                    <option value="gendarmerie">Gendarmerie Nationale</option>
-                    <option value="pm">Police Municipale</option>
-                    <option value="pompier">Pompiers</option>
-                    <option value="douane">Douanes</option>
-                    <option value="armee">Armée (Air, Terre, Marine)</option>
-                    <option value="admpen">Administration pénitentiaire</option>
-                    <option value="secciv">Sécurité Civile</option>
-                    <option value="misc">Autres personnels civils</option>
-                </select>
+                <select name="house" id="house" class="form-control" data-filterable="true" data-countable="true" multiple></select>
             </fieldset>
             <fieldset class="col-md-2">
                 <label for="cause">Cause</label>
-                <select name="cause" id="cause" class="form-control" data-filterable="true" data-countable="true">
-                    <option value="">---</option>
-                    <option value="suicide">Suicide</option>
-                    <option value="deathOnDuty">Décès en service commandé</option>
-                    <option value="deathViaDuty">Décès lié au service</option>
-                    <option value="accident">Décès accidentel</option>
-                    <option value="murdered">Meutre</option>
-                    <option value="other">Autre</option>
-                </select>
+                <select name="cause" id="cause" class="form-control" data-filterable="true" data-countable="true" multiple></select>
             </fieldset>
             <fieldset class="col-md-2">
                 <label for="origin">Théatre d'action</label>
-                <select name="origin" id="origin" class="form-control" data-filterable="true" data-countable="true">
-                    <option value="">---</option>
-                    <option value="interieur">Territoire national</option>
-                    <option value="domtom">DOM-TOM/Corse</option>
-                    <option value="opex">OPEX</option>
-                </select>
+                <select name="origin" id="origin" class="form-control" data-filterable="true" data-countable="true" multiple></select>
             </fieldset>
         </form>
         <div class="row mtop">
