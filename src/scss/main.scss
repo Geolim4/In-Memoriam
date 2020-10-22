@@ -90,6 +90,12 @@ abbr[data-title] {
   line-height: 18px;
 }
 
+a abbr[title],
+a abbr[data-tippy-content],
+a abbr[data-title] {
+  cursor: pointer;
+}
+
 .modal {
   display: none;
 }
