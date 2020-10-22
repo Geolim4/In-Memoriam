@@ -17,6 +17,7 @@
       "radius": 1
     },
     "imagePath": {
+      "house": "./assets/images/house/%house%.png",
       "random": "./assets/images/map/random.png",
       "list": "./assets/images/map/list.png",
       "clustering": {

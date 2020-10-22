@@ -29,7 +29,6 @@ export class App {
   private _markerCluster: MarkerClusterer;
   private _markers: google.maps.Marker[];
   private readonly _eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
-  private readonly _imgHousePath: string;
   private heatmapEnabled: boolean;
   private clusteringEnabled: boolean;
   private glossary: {};
@@ -40,7 +39,6 @@ export class App {
     this._currentInfoWindows = null;
     this._eventHandlers = {};
     this._heatMap = null;
-    this._imgHousePath = './assets/images/corps/%house%.png';
     this._infoWindows = [];
     this._markerCluster = null;
     this._markers = [];
@@ -87,10 +85,8 @@ export class App {
         zoom: this._configObject.config['defaultZoom'],
       };
       const map = new google.maps.Map(mapElement, options);
-      const activityDetectorMonitoring = activityDetector({
-        timeToIdle: 2 * 60 * 1000, // wait 2min of inactivity to consider the user is idle
-      });
       const filtersPath = './data/config/filters.json';
+
       qwest.get(filtersPath).then((_xhr, response: {filters: FormFilters}) => {
         this.filters = response.filters;
         this.setupSkeleton(formElement, this.getFilters(formElement, true));
@@ -100,19 +96,27 @@ export class App {
         this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
       });
 
-      let handler;
-      activityDetectorMonitoring.on('idle', () => {
-        console.log('User is now idle...');
-        handler = setInterval(() => {
-          this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, false));
-          console.log('Reloading map...');
-        }, 300 * 1000); // Reload every 5min
-      });
+      this.loadActivityDetectorMonitoring(map, mapElement, formElement);
+    });
+  }
 
-      activityDetectorMonitoring.on('active', () => {
-        console.log('User is now active...');
-        clearInterval(handler);
-      });
+  private loadActivityDetectorMonitoring(map: google.maps.Map, mapElement: HTMLInputElement, formElement: HTMLInputElement): void {
+    const activityDetectorMonitoring = activityDetector({
+      timeToIdle: 2 * 60 * 1000, // wait 2min of inactivity to consider the user is idle
+    });
+    let handler;
+
+    activityDetectorMonitoring.on('idle', () => {
+      console.log('User is now idle...');
+      handler = setInterval(() => {
+        this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, false));
+        console.log('Reloading map...');
+      }, 300 * 1000); // Reload every 5min
+    });
+
+    activityDetectorMonitoring.on('active', () => {
+      console.log('User is now active...');
+      clearInterval(handler);
     });
   }
 
@@ -315,7 +319,6 @@ export class App {
           });
         }
 
-        console.log(filters[selector.id].split(','));
         this._customChoicesInstances[selector.id].removeActiveItems(null);
         this._customChoicesInstances[selector.id].setChoiceByValue(filters[selector.id].split(','));
       }
@@ -365,7 +368,7 @@ export class App {
         let peersText = '';
         let peersCount = 0;
         for (const peer of death.peers) {
-          const peerHouseImage = this._imgHousePath.replace('%house%', (peer.count > 1 ? `${peer.house}-m` : peer.house));
+          const peerHouseImage = this._configObject.config['imagePath']['house'].replace('%house%', (peer.count > 1 ? `${peer.house}-m` : peer.house));
           const peerHouseFormatted =  this.getFilterValueLabel('house', peer.house);
           peersText += `<h5>
               <img height="16" src="${peerHouseImage}" alt="House: ${peer.house}"  title="House: ${peer.house}" />
@@ -377,7 +380,7 @@ export class App {
         }
 
         const totalDeathCount = death.count + peersCount;
-        const houseImage = this._imgHousePath.replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
+        const houseImage = this._configObject.config['imagePath']['house'].replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
         const marker = new google.maps.Marker({
           map,
           animation: google.maps.Animation.DROP,
@@ -398,7 +401,7 @@ export class App {
             <br />
             <span>
               <strong>Emplacement</strong>: ${death.location} ${death.gps.accurate ? '' : '<strong style="color: orangered;"><abbr data-tippy-content="Indique que l\'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>'}
-              <a href="http://maps.google.com/?ll=${death.gps.lat},${death.gps.lon}&q=${death.location}" target="_blank">
+              <a href="https://maps.google.com/?ll=${death.gps.lat},${death.gps.lon}&q=${death.location}" target="_blank">
                <span class="glyphicon  glyphicon-map-marker" aria-hidden="true"></span>
               </a>
               <br /><br />
@@ -466,7 +469,10 @@ export class App {
       }
 
       modalBloodbathListContent += '</ul>';
-      modalBloodbathListContent += '<small><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> La liste affichée ci-dessus est contextualisée en fonction des filtres appliqués.</small>';
+      modalBloodbathListContent += '<small>' +
+        '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> ' +
+        'La liste affichée ci-dessus est contextualisée en fonction des filtres appliqués.' +
+        '</small>';
       modalBloodbathElement.innerHTML = StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, this.glossary);
       modalBloodbathCounter.innerHTML = `${this._markers.length} décès`;
       modalBloodbathYear.innerHTML = filters.year;
@@ -532,7 +538,10 @@ export class App {
   }
 
   private clearMapObjects(): void {
-    this.clearMarkers().clearInfoWindows().clearHeatMap().clearMarkerCluster();
+    this.clearMarkers()
+      .clearInfoWindows()
+      .clearHeatMap()
+      .clearMarkerCluster();
   }
 
   private clearMarkers(): App {
