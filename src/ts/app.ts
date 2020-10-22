@@ -14,6 +14,7 @@ import { Permalink } from './permalink';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
 import { Death } from './models/death.model';
 import { FormFilters } from './models/formFilters.model';
+import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.model';
 /**
  * @author Georges.L <contact@geolim4.com>
  * @author Jbz797 <jean.benoit.gautier@gmail.com>
@@ -27,9 +28,8 @@ export class App {
   private _heatMap: google.maps.visualization.HeatmapLayer;
   private _infoWindows: google.maps.InfoWindow[];
   private _markerCluster: MarkerClusterer;
-  private _markers: google.maps.Marker[];
+  private _markers: ExtendedGoogleMapsMarker[];
   private readonly _eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
-  private readonly _imgHousePath: string;
   private heatmapEnabled: boolean;
   private clusteringEnabled: boolean;
   private glossary: {};
@@ -40,7 +40,6 @@ export class App {
     this._currentInfoWindows = null;
     this._eventHandlers = {};
     this._heatMap = null;
-    this._imgHousePath = './assets/images/corps/%house%.png';
     this._infoWindows = [];
     this._markerCluster = null;
     this._markers = [];
@@ -87,10 +86,8 @@ export class App {
         zoom: this._configObject.config['defaultZoom'],
       };
       const map = new google.maps.Map(mapElement, options);
-      const activityDetectorMonitoring = activityDetector({
-        timeToIdle: 2 * 60 * 1000, // wait 2min of inactivity to consider the user is idle
-      });
       const filtersPath = './data/config/filters.json';
+
       qwest.get(filtersPath).then((_xhr, response: {filters: FormFilters}) => {
         this.filters = response.filters;
         this.setupSkeleton(formElement, this.getFilters(formElement, true));
@@ -98,21 +95,30 @@ export class App {
         this.bindFilters(map, mapElement, formElement);
         this.bindCustomButtons(map);
         this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
+        this.bindMarkerLinkEvent(map);
       });
 
-      let handler;
-      activityDetectorMonitoring.on('idle', () => {
-        console.log('User is now idle...');
-        handler = setInterval(() => {
-          this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, false));
-          console.log('Reloading map...');
-        }, 300 * 1000); // Reload every 5min
-      });
+      this.loadActivityDetectorMonitoring(map, mapElement, formElement);
+    });
+  }
 
-      activityDetectorMonitoring.on('active', () => {
-        console.log('User is now active...');
-        clearInterval(handler);
-      });
+  private loadActivityDetectorMonitoring(map: google.maps.Map, mapElement: HTMLInputElement, formElement: HTMLInputElement): void {
+    const activityDetectorMonitoring = activityDetector({
+      timeToIdle: 2 * 60 * 1000, // wait 2min of inactivity to consider the user is idle
+    });
+    let handler;
+
+    activityDetectorMonitoring.on('idle', () => {
+      console.log('User is now idle...');
+      handler = setInterval(() => {
+        this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, false));
+        console.log('Reloading map...');
+      }, 300 * 1000); // Reload every 5min
+    });
+
+    activityDetectorMonitoring.on('active', () => {
+      console.log('User is now active...');
+      clearInterval(handler);
     });
   }
 
@@ -298,6 +304,28 @@ export class App {
     this.drawCustomSelectors(selects, filters);
   }
 
+  private bindMarkerLinkEvent(map: google.maps.Map): void {
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLAnchorElement;
+      const origin = target.closest('a');
+      if (origin) {
+        const deathHash = origin.dataset.deathHash; // decodeURIComponent(escape(atob(origin.dataset.deathHash)));
+        if (deathHash) {
+          for (let i = 0; i < this._markers.length; i++) {
+            if (this._markers[i].linkHash === deathHash) {
+              if (document.getElementById('modal-bloodbath-list').classList.contains('is-open')) {
+                micromodal.close('modal-bloodbath-list');
+              }
+              map.setZoom(14);
+              google.maps.event.trigger(this._markers[i], 'click');
+              map.setCenter(this._markers[i].getPosition());
+            }
+          }
+        }
+      }
+    });
+  }
+
   private drawCustomSelectors(selectors: NodeListOf<HTMLInputElement>, filters: Filters): void {
     const _choicesJs: any = choicesJs; // Hack to fix import @todo: Fix the import definitely
 
@@ -315,7 +343,6 @@ export class App {
           });
         }
 
-        console.log(filters[selector.id].split(','));
         this._customChoicesInstances[selector.id].removeActiveItems(null);
         this._customChoicesInstances[selector.id].setChoiceByValue(filters[selector.id].split(','));
       }
@@ -341,9 +368,9 @@ export class App {
     qwest.get(`${source.replace('%year%', filters.year)}?_=${(new Date()).getTime()}`).then((_xhr, response: Bloodbath) => {
 
       const bounds = new google.maps.LatLngBounds();
-      const domTomMarkers = <google.maps.Marker[]>[];
+      const domTomMarkers = <ExtendedGoogleMapsMarker[]>[];
       const heatMapData = <{ location: google.maps.LatLng, weight: number }[]>[];
-      const nationalMarkers = <google.maps.Marker[]>[];
+      const nationalMarkers = <ExtendedGoogleMapsMarker[]>[];
       const modalBloodbathElement = <HTMLInputElement>document.getElementById('modal-bloodbath-list-content');
       const modalBloodbathCounter = <HTMLInputElement>document.getElementById('modal-bloodbath-death-counter');
       const modalBloodbathYear = <HTMLInputElement>document.getElementById('modal-bloodbath-year');
@@ -365,7 +392,7 @@ export class App {
         let peersText = '';
         let peersCount = 0;
         for (const peer of death.peers) {
-          const peerHouseImage = this._imgHousePath.replace('%house%', (peer.count > 1 ? `${peer.house}-m` : peer.house));
+          const peerHouseImage = this._configObject.config['imagePath']['house'].replace('%house%', (peer.count > 1 ? `${peer.house}-m` : peer.house));
           const peerHouseFormatted =  this.getFilterValueLabel('house', peer.house);
           peersText += `<h5>
               <img height="16" src="${peerHouseImage}" alt="House: ${peer.house}"  title="House: ${peer.house}" />
@@ -377,14 +404,15 @@ export class App {
         }
 
         const totalDeathCount = death.count + peersCount;
-        const houseImage = this._imgHousePath.replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
+        const houseImage = this._configObject.config['imagePath']['house'].replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
         const marker = new google.maps.Marker({
           map,
           animation: google.maps.Animation.DROP,
           icon: new (google.maps as any).MarkerImage(houseImage),
           position: new google.maps.LatLng(death.gps.lat, death.gps.lon),
           title: death.text,
-        });
+        }) as ExtendedGoogleMapsMarker;
+        marker.linkHash = this.getMarkerHash(death);
 
         const houseFormatted =  this.getFilterValueLabel('house', death.house);
         const causeFormatted = this.getFilterValueLabel('cause', death.cause);
@@ -398,7 +426,7 @@ export class App {
             <br />
             <span>
               <strong>Emplacement</strong>: ${death.location} ${death.gps.accurate ? '' : '<strong style="color: orangered;"><abbr data-tippy-content="Indique que l\'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>'}
-              <a href="http://maps.google.com/?ll=${death.gps.lat},${death.gps.lon}&q=${death.location}" target="_blank">
+              <a href="https://maps.google.com/?ll=${death.gps.lat},${death.gps.lon}&q=${death.location}" target="_blank">
                <span class="glyphicon  glyphicon-map-marker" aria-hidden="true"></span>
               </a>
               <br /><br />
@@ -457,16 +485,21 @@ export class App {
           weight: 10 * (totalDeathCount > 1 ?  (totalDeathCount > 5 ? 20 : 5) : 1),
         });
 
+        const deathLabel = `${death.section}, ${death.location} ${totalDeathCount > 1 ? `(<strong style="color: red">${totalDeathCount} décès</strong>)` : ''}`;
+        const deathLink = this.getMarkerLink(death, deathLabel);
         modalBloodbathListContent += `<li>
     <strong>${death.day}/${death.month}/${death.year} [${causeFormatted}] - ${houseFormatted}:</strong>
-    <span>${death.section}, ${death.location} ${totalDeathCount > 1 ? `(<strong style="color: red">${totalDeathCount} décès</strong>)` : ''}</span>
+    <span>${deathLink}</span>
 </li>`;
 
         this._markers.push(marker);
       }
 
       modalBloodbathListContent += '</ul>';
-      modalBloodbathListContent += '<small><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> La liste affichée ci-dessus est contextualisée en fonction des filtres appliqués.</small>';
+      modalBloodbathListContent += '<small>' +
+        '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> ' +
+        'La liste affichée ci-dessus est contextualisée en fonction des filtres appliqués.' +
+        '</small>';
       modalBloodbathElement.innerHTML = StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, this.glossary);
       modalBloodbathCounter.innerHTML = `${this._markers.length} décès`;
       modalBloodbathYear.innerHTML = filters.year;
@@ -532,7 +565,10 @@ export class App {
   }
 
   private clearMapObjects(): void {
-    this.clearMarkers().clearInfoWindows().clearHeatMap().clearMarkerCluster();
+    this.clearMarkers()
+      .clearInfoWindows()
+      .clearHeatMap()
+      .clearMarkerCluster();
   }
 
   private clearMarkers(): App {
@@ -603,7 +639,7 @@ export class App {
           });
           localizationInfoWindow.open(map, localizationMarker);
 
-          let closestMarker = <google.maps.Marker> null;
+          let closestMarker = <ExtendedGoogleMapsMarker> null;
           let closestDistance = <number> null;
 
           for (const marker of this._markers) {
@@ -796,6 +832,14 @@ export class App {
     return latestDeath;
   }
 
+  private getMarkerHash(death: Death): string {
+    return btoa(unescape(encodeURIComponent(`${death.day}|${death.month}|${death.year}|${death.section}|${death.section}`)));
+  }
+
+  private getMarkerLink(death: Death, label: string): string {
+    return `<a href="javascript:;" data-death-hash="${this.getMarkerHash(death)}">${label}</a>`;
+  }
+
   private printDefinitionsText(response: Bloodbath, filters?: Filters): void {
     const definitionTexts = [];
     if (response) {
@@ -824,7 +868,10 @@ export class App {
         definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
       }
       definitionTexts.push('');
-      definitionTexts.push(`<em>Dernier décès indexé: ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${latestDeath.location} - ${StringUtilsHelper.replaceAcronyms(latestDeath.section, this.glossary)}</em>`);
+
+      const latestDeathLabel = ` ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${latestDeath.location} - ${StringUtilsHelper.replaceAcronyms(latestDeath.section, this.glossary)}`;
+      const latestDeathLink = this.getMarkerLink(latestDeath, latestDeathLabel);
+      definitionTexts.push(`<em>Dernier décès indexé:</em> ${latestDeathLink}`);
 
       if (!response.settings.up_to_date) {
         definitionTexts.push(`<div class="alert alert-warning mtop" role="alert">
