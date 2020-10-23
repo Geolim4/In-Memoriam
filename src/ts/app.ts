@@ -29,6 +29,7 @@ export class App {
   private _infoWindows: google.maps.InfoWindow[];
   private _markerCluster: MarkerClusterer;
   private _markers: ExtendedGoogleMapsMarker[];
+  private _markerHashIndex: {};
   private readonly _eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
   private heatmapEnabled: boolean;
   private clusteringEnabled: boolean;
@@ -43,6 +44,7 @@ export class App {
     this._infoWindows = [];
     this._markerCluster = null;
     this._markers = [];
+    this._markerHashIndex = {};
     this._configObject = null;
     this.heatmapEnabled = true;
     this.clusteringEnabled = true;
@@ -310,17 +312,14 @@ export class App {
       const origin = target.closest('a');
       if (origin) {
         const deathHash = origin.dataset.deathHash; // decodeURIComponent(escape(atob(origin.dataset.deathHash)));
-        if (deathHash) {
-          for (let i = 0; i < this._markers.length; i++) {
-            if (this._markers[i].linkHash === deathHash) {
-              if (document.getElementById('modal-bloodbath-list').classList.contains('is-open')) {
-                micromodal.close('modal-bloodbath-list');
-              }
-              map.setZoom(14);
-              google.maps.event.trigger(this._markers[i], 'click');
-              map.setCenter(this._markers[i].getPosition());
-            }
+        if (this._markers[this._markerHashIndex[deathHash]]) {
+          const marker = this._markers[this._markerHashIndex[deathHash]];
+          if (document.getElementById('modal-bloodbath-list').classList.contains('is-open')) {
+            micromodal.close('modal-bloodbath-list');
           }
+          map.setZoom(14);
+          google.maps.event.trigger(marker, 'click');
+          map.setCenter(marker.getPosition());
         }
       }
     });
@@ -493,6 +492,7 @@ export class App {
 </li>`;
 
         this._markers.push(marker);
+        this._markerHashIndex[marker.linkHash] = this._markers.length - 1;
       }
 
       modalBloodbathListContent += '</ul>';
@@ -576,6 +576,7 @@ export class App {
       this._markers[i].setMap(null);
     }
     this._markers = [];
+    this._markerHashIndex = {};
     return this;
   }
 
