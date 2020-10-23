@@ -749,7 +749,7 @@ export class App {
 
   private bindListButton(map: google.maps.Map): void {
     const buttonOptions = {
-      ctrlChildId: 'clusteringImg',
+      ctrlChildId: 'listImg',
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '0px 2px',
       defaultCtrlChildBgSize: '90%',
