@@ -128,7 +128,7 @@
       "keywords": "Laurent",
       "house": "police",
       "peers": [],
-      "text": "Un brigadier-chef de la PAF a mis fin à ses jours avec son arme administrative dans les locaux du CRA de Rennes. Peu d'informations disponibles sur ce suicide.",
+      "text": "Un brigadier-chef de la PAF a mis fin à ses jours avec son arme administrative dans les locaux du CRA de Rennes.\n Peu d'informations disponibles sur ce suicide.",
       "section": "CRA - DZPAF Rennes",
       "location": "Rennes (Ille-et-Vilaine)",
       "origin": "interieur",
@@ -334,7 +334,7 @@
       "keywords": "Benjamin Billoir",
       "house": "gendarmerie",
       "peers": [],
-      "text": "Un gendarme de la BTA de Valenciennes a mis fin à ses jours avec son arme de service. Peu d'informations disponibles sur ce suicide.",
+      "text": "Un gendarme de la BTA de Valenciennes a mis fin à ses jours avec son arme de service.\n Peu d'informations disponibles sur ce suicide.",
       "section": "BTA Valenciennes",
       "location": "Valenciennes (Nord)",
       "origin": "interieur",
@@ -368,7 +368,7 @@
       "keywords": "",
       "house": "armee",
       "peers": [],
-      "text": "Un jeune militaire de l'armée de l'air aurait mis fin à ses jours en se jetant du haut d'un immeuble. Peu d'informations disponibles sur ce suicide.",
+      "text": "Un jeune militaire de l'armée de l'air aurait mis fin à ses jours en se jetant du haut d'un immeuble.\n Peu d'informations disponibles sur ce suicide.",
       "section": "Armée de l'Air",
       "location": "Rouen (Seine-Maritime)",
       "origin": "interieur",
@@ -2158,7 +2158,7 @@
       "keywords": "",
       "house": "police",
       "peers": [],
-      "text": "Un policier du commissariat de Reims se suicide à son domicile avec son arme de service. Peu d'informations disponibles sur ce suicide.",
+      "text": "Un policier du commissariat de Reims se suicide à son domicile avec son arme de service.\n Peu d'informations disponibles sur ce suicide.",
       "section": "CSP Reims",
       "location": "Reims (Marne)",
       "origin": "interieur",
@@ -2447,7 +2447,7 @@
       "keywords": "Alexis",
       "house": "police",
       "peers": [],
-      "text": "Un jeune ADS du commissariat de Rouen à mis fin à ses jours. Peu d'informations disponibles sur ce suicide.",
+      "text": "Un jeune ADS du commissariat de Rouen à mis fin à ses jours.\n Peu d'informations disponibles sur ce suicide.",
       "section": "CSP Rouen",
       "location": "Saint-Saëns (Seine-Maritime)",
       "origin": "interieur",
@@ -4042,6 +4042,35 @@
         {
           "url": "https://www.ladepeche.fr/2020/10/14/un-jeune-soldat-se-suicide-par-arme-a-feu-dans-la-caserne-9137812.php",
           "titre": "La dépêche",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "10",
+      "day": "30",
+      "keywords": "",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal d'une ville de l'Essone a mis fin à ses jours.\n Peu d'informations disponibles sur ce suicide",
+      "section": "(Ville inconnue)",
+      "location": "Essonne",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 48.495661,
+        "lon": 2.307380
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
           "paywall": false
         }
       ]

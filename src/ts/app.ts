@@ -834,7 +834,7 @@ export class App {
   }
 
   private getMarkerHash(death: Death): string {
-    return btoa(unescape(encodeURIComponent(`${death.day}|${death.month}|${death.year}|${death.section}|${death.section}`)));
+    return btoa(unescape(encodeURIComponent(`${death.day}|${death.month}|${death.year}|${death.house}|${death.section}`)));
   }
 
   private getMarkerLink(death: Death, label: string): string {
