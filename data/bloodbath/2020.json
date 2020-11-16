@@ -4021,7 +4021,7 @@
       "gps": {
         "accurate": true,
         "lat": 43.606165,
-        "lon":  2.250700
+        "lon": 2.250700
       },
       "sources": [
         {
@@ -4071,6 +4071,128 @@
         {
           "url": "",
           "titre": "__CONFIDENTIAL__",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathViaDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "11",
+      "day": "04",
+      "keywords": "COVID-19, COVID19",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CSP de Meaux est décédé suite a une dégradation de son état de santé provoqué par une contamination du coronavirus.\n Marié et père de trois enfants, il est décédé à l'hôpital où il avait été admis.",
+      "section": "CSP Meaux",
+      "location": "Meaux (Seine-et-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 48.955484,
+        "lon": 2.889580
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1323697726941499394",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "02",
+      "day": "05",
+      "keywords": "",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal a mis fin à ses jours dans sa voiture le long d'une route départementale.\n Il était marié et père de deux filles.",
+      "section": "Police Municipale de Marck",
+      "location": "Waldam (Pas-de-Calais)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat":  50.980945,
+        "lon": 1.983682
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/pas-de-calais-un-policier-municipal-de-marck-sest-suicide-dans-sa-voiture/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/888478/article/2020-11-04/un-policier-municipal-de-marck-s-est-suicide-dans-sa-voiture-retrouvee-oye-plage",
+          "titre": "La Voix du Nord",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/11/04/hauts-de-france-un-policier-municipal-retrouve-mort-dans-son-vehicule/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "11",
+      "day": "12",
+      "keywords": "Sébastien Botta",
+      "house": "armee",
+      "peers": [],
+      "text": "Un officier militaire de la FMO est décédé dans un crash d'hélicoptère dans le sud-est de l'Egypte dans la région de Sharm-el-Cheikh.\n Marié et père de trois enfants il était issu de la CDAOA.",
+      "section": "FMO (CDAOA)",
+      "location": "Région de Sharm-el-Cheikh, Egypte",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "lat":  27.993691,
+        "lon":  34.333301
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/EtatMajorFR/status/1327013770875576325",
+          "titre": "@EtatMajorFR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/politique/egypte-l-officier-sebastien-botta-est-mort-en-operation-12-11-2020-8408112.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.huffingtonpost.fr/entry/lieutenant-colonel-sebastien-cotta-helicoptere-sinai-egypte_fr_5fae2793c5b6b36333690747",
+          "titre": "Huffpost",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/societe/un-hommage-national-rendu-lundi-et-mardi-a-sebastien-botta-officier-francais-tue-dans-un-crash-en-1605466933",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/monde/egypte/egypte-sept-morts-dont-un-francais-dans-le-crash-d-un-helicoptere-au-sinai-7049162",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.defense.gouv.fr/actualites/articles/deces-du-lieutenant-colonel-botta-en-mission-dans-le-desert-du-sinai",
+          "titre": "MINARM - Hommage",
           "paywall": false
         }
       ]
