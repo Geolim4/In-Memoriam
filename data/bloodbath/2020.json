@@ -4122,7 +4122,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
-        "lat":  50.980945,
+        "lat": 50.980945,
         "lon": 1.983682
       },
       "sources": [
@@ -4161,8 +4161,8 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
-        "lat":  27.993691,
-        "lon":  34.333301
+        "lat": 27.993691,
+        "lon": 34.333301
       },
       "sources": [
         {
@@ -4193,6 +4193,198 @@
         {
           "url": "https://www.defense.gouv.fr/actualites/articles/deces-du-lieutenant-colonel-botta-en-mission-dans-le-desert-du-sinai",
           "titre": "MINARM - Hommage",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "11",
+      "day": "18",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un officier supérieur de gendarmerie a mis fin à ses jours dans son logement de service à Versailles-Satory.\n Il était marié et père de trois enfants.",
+      "section": "GBGM",
+      "location": "Versailles-Satory (Yvelines)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 48.784141639,
+        "lon": 2.11406234
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/yvelines-un-officier-de-gendarmerie-de-satory-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/a-la-une/satory-le-numero-4-du-gbgm-se-donne-la-mort/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/index.php/2020/11/18/deces-tragique-dun-officier-de-gendarmerie-de-satory/",
+          "titre": "La Voix du Gendarme",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "11",
+      "day": "30",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un sous-officier affecté dans une brigade de l'Hérault, a mis fin à ses jours dans le Morbihan.\n Peu d'informations disponibles sur ce suicide",
+      "section": "Brigade inconnue",
+      "location": "Morbihan",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 47.85883557186159,
+        "lon": -2.871822193437122
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/morbihan-un-adjudant-chef-de-la-gendarmerie-retrouve-mort/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/index.php/2020/11/30/morbihan-deces-tragique-dun-adjudant-chef-de-lherault/",
+          "titre": "La Voix du Gendarme",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/societe/la-these-du-suicide-privilegiee-dans-la-mort-dun-sous-officier-heraultais/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2020/11/30/morbihan-un-nouveau-deces-tragique-endeuille-la-gendarmerie/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 2,
+      "published": true,
+      "orphans": 6,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "12",
+      "day": "08",
+      "keywords": "Amaury Lagroy de Croutte, Stéphane Le Meur",
+      "house": "police",
+      "peers": [
+        {
+          "house": "misc",
+          "count": 3,
+          "section": "Secours Aérien Français"
+        }
+      ],
+      "text": "Deux policiers de la CRS Alpes ainsi que trois membres du SAF ont péris dans un crash d'hélicoptère.",
+      "section": "CRS 47 / CRS-Alpes",
+      "location": "Bonvillard (Savoie)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 45.58178112613559,
+        "lon": 6.329869879365839
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/savoie-un-helicoptere-sest-ecrase-avec-six-personnes-a-bord-cinq-morts/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/savoie/crash-helicoptere-savoie-enquete-debute-elucider-causes-accident-1903726.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/crash-d-helicoptere-en-savoie-qui-sont-amaury-et-stephane-les-deux-crs-decedes-dans-l-accident-09-12-2020-8413340.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/actualite-france/savoie-crash-d-un-helicoptere-avec-six-personnes-a-bord-20201208",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2020/12/08/savoie-bonvillard-un-helicoptere-du-saf-se-crashe-avec-six-personnes-a-bord",
+          "titre": "Le Dauphiné",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "12",
+      "day": "08",
+      "keywords": "Vincent",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CDI 77 est décédé des suites de ses blessures après avoir été percuté accidentellement par un autre véhicule de police lors d'une course-poursuite.",
+      "section": "CDI 77",
+      "location": "Bailly-Romainvilliers (Seine-et-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 48.844787169967,
+        "lon": 2.8132505737999205
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNat77/status/1336615456300478467",
+          "titre": "@PoliceNat77 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/seine-et-marne-le-policier-violemment-percute-est-decede-des-suites-de-ses-blessures/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/seine-et-marne-un-policier-gravement-blesse-par-une-voiture-de-la-brigade-anti-criminalite-1607417569",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/seine-et-marne-77/seine-et-marne-apres-la-mort-du-policier-le-chauffard-poursuivi-par-la-bac-incarcere-10-12-2020-8413519.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/ile-de-france/bailly-romainvilliers-77700/policier-mort-en-seine-et-marne-suspecte-d-etre-l-homme-poursuivi-par-la-bac-ce-soir-la-il-est-7082397",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.huffingtonpost.fr/entry/jeune-policier-percute-par-la-bac-lors-dune-course-poursuite-est-mort_fr_5fd0ce3bc5b68ce171843f9e",
+          "titre": "Huffpost",
           "paywall": false
         }
       ]
