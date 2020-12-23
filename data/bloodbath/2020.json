@@ -4344,7 +4344,7 @@
       "year": "2020",
       "month": "12",
       "day": "08",
-      "keywords": "Vincent",
+      "keywords": "Vincent MARTINEZ",
       "house": "police",
       "peers": [],
       "text": "Un policier de la CDI 77 est décédé des suites de ses blessures après avoir été percuté accidentellement par un autre véhicule de police lors d'une course-poursuite.",
@@ -4385,6 +4385,108 @@
         {
           "url": "https://www.huffingtonpost.fr/entry/jeune-policier-percute-par-la-bac-lors-dune-course-poursuite-est-mort_fr_5fd0ce3bc5b68ce171843f9e",
           "titre": "Huffpost",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "12",
+      "day": "23",
+      "keywords": "",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 9e RIMa a mis fin à ses jours après en ayant subtilisé l'arme de service d'une policière de la PAF après avoir été contrôlé en possession d'une importante quantité de drogue.",
+      "section": "9e RIMa",
+      "location": "Orly (Val-de-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 48.761350234969825,
+        "lon":  2.3609287143812527
+      },
+      "sources": [
+        {
+          "url": "https://www.20minutes.fr/paris/2938759-20201223-orly-militaire-suicide-garde-vue-apres-avoir-arrete-4-kilos-cocaine",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/orly-un-militaire-interpelle-avec-4-kg-de-cocaine-se-suicide-avec-larme-dune-policiere/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/arrete-avec-4-kg-de-cocaine-a-orly-un-militaire-se-suicide-en-garde-a-vue-20201223",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.sudouest.fr/2020/12/23/arrete-avec-4-kilos-de-cocaine-a-orly-un-militaire-se-suicide-avec-l-arme-d-une-policiere-8222638-4755.php",
+          "titre": "Sud Ouest",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lepoint.fr/faits-divers/orly-arrete-avec-4-kg-de-cocaine-un-militaire-se-suicide-en-garde-a-vue-23-12-2020-2406941_2627.php",
+          "titre": "Le point",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 3,
+      "published": true,
+      "orphans": 4,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "12",
+      "day": "23",
+      "keywords": "Cyrille Morel, Rémi Dupuis, Arno Mavel",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Trois gendarmes ont été froidement tués avec une arme de guerre par un forcené lors d'une intervention suite à des violences intra-familiales.",
+      "section": "CoB/PSIG Ambert",
+      "location": "Saint-Just (Puy-de-Dôme)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 45.442627516371374,
+        "lon": 3.821073778124537
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/Gendarmerie/status/1341642190146179072",
+          "titre": "@Gendarmerie (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/gendarmes-tues-puy-de-dome-forcene-determine-carnage-20201223",
+          "titre": "Le Figaro",
+          "paywall": false
+        },{
+          "url": "https://actu17.fr/gendarmes-tues-dans-le-puy-de-dome-le-forcene-a-ete-retrouve-mort/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/a-la-une/trois-gendarmes-tues-et-au-moins-un-quatrieme-blesse-dans-le-puy-de-dome/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francetvinfo.fr/faits-divers/gendarmes-tues-dans-le-puy-de-dome/mort-de-trois-gendarmes-dans-le-puy-de-dome-ce-que-l-on-sait-sur-le-tireur_4230713.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/puy-de-dome-trois-gendarmes-tues-un-quatrieme-blesse-par-un-forcene_AD-202012230004.html",
+          "titre": "BFM",
           "paywall": false
         }
       ]
