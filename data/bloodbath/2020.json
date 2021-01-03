@@ -4490,6 +4490,59 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 3,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "12",
+      "day": "28",
+      "keywords": "Tanerii Mauri, Quentin Pauchet, Dorian Issakhanian",
+      "house": "armee",
+      "peers": [],
+      "text": "Trois militaires du 1er RCh sont décédés à bord de leur VBL d'une attaque par IED lors d'un opération de contrôle dans la région de Hombori au Mali.",
+      "section": "1er RCh",
+      "location": "Région de Hombori (Mali)",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "lat": 15.283025663313412,
+        "lon": -1.7011213144080959
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/armeedeterre/status/1343639631242403843",
+          "titre": "@armeedeterre (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.defense.gouv.fr/terre/base/in-memoriam/mali/barkhane-deces-du-bch-tanerii-mauri-du-1-cl-dorian-issakhanian-et-du-1cl-quentin-pauchet-du-1er-regiment-de-chasseurs",
+          "titre": "MINARM - Hommage",
+          "paywall": false
+        },{
+          "url": "https://actu17.fr/mali-trois-militaires-francais-de-la-force-barkhane-tues-en-operation/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lemonde.fr/afrique/article/2020/12/28/trois-soldats-francais-tues-en-operation-au-mali_6064692_3212.html",
+          "titre": "Le Monde",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francetvinfo.fr/monde/afrique/mali/trois-soldats-francais-ont-ete-tues-en-operation-au-mali-annonce-l-elysee_4236563.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/monde/2941011-20201228-mali-trois-soldats-francais-tues-operation-lundi",
+          "titre": "20 minutes",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
