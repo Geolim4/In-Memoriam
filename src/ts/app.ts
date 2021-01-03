@@ -371,8 +371,9 @@ export class App {
       const heatMapData = <{ location: google.maps.LatLng, weight: number }[]>[];
       const nationalMarkers = <ExtendedGoogleMapsMarker[]>[];
       const modalBloodbathElement = <HTMLInputElement>document.getElementById('modal-bloodbath-list-content');
-      const modalBloodbathCounter = <HTMLInputElement>document.getElementById('modal-bloodbath-death-counter');
+      const modalBloodbathCounterElement = <HTMLInputElement>document.getElementById('modal-bloodbath-death-counter');
       const modalBloodbathYear = <HTMLInputElement>document.getElementById('modal-bloodbath-year');
+      let modalBloodbathCounter = 0;
       let modalBloodbathListContent = '<ul>';
       let filteredResponse = <Bloodbath>response;
 
@@ -403,6 +404,7 @@ export class App {
         }
 
         const totalDeathCount = death.count + peersCount;
+        modalBloodbathCounter += totalDeathCount;
         const houseImage = this._configObject.config['imagePath']['house'].replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
         const marker = new google.maps.Marker({
           map,
@@ -501,7 +503,7 @@ export class App {
         'La liste affichée ci-dessus est contextualisée en fonction des filtres appliqués.' +
         '</small>';
       modalBloodbathElement.innerHTML = StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, this.glossary);
-      modalBloodbathCounter.innerHTML = `${this._markers.length} décès`;
+      modalBloodbathCounterElement.innerHTML = `${modalBloodbathCounter} décès`;
       modalBloodbathYear.innerHTML = filters.year;
 
       // We assume that if only have a single result
