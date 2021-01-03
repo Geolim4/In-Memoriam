@@ -1,0 +1,60 @@
+{
+  "settings": {
+    "up_to_date": true
+  },
+  "deaths": [
+    {
+      "cause": "deathOnDuty",
+      "count": 2,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "01",
+      "day": "02",
+      "keywords": "Yvonne Huynh, Loïc Risser",
+      "house": "armee",
+      "peers": [],
+      "text": "Deux militaires du 2eme RH sont décédés à bord de leur VBL d'une attaque par IED lors d'un opération de contrôle dans la région de Ménaka au Mali.",
+      "section": "2eme RH",
+      "location": "Région de Ménaka, Mali",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "lat": 15.852774,
+        "lon": 1.468974
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/CEMAT_FR/status/1345493205152919552",
+          "titre": "@CEMAT_FR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.defense.gouv.fr/terre/base/in-memoriam/mali/barkhane-deces-du-sergent-yvonne-huynh-et-du-brigadier-loic-risser-du-2e-regiment-de-hussards",
+          "titre": "MINARM - Hommage",
+          "paywall": false
+        },{
+          "url": "https://actu17.fr/mali-trois-militaires-francais-de-la-force-barkhane-tues-en-operation/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lemonde.fr/afrique/article/2021/01/02/deux-soldats-francais-tues-lors-d-une-operation-au-mali_6065052_3212.html",
+          "titre": "Le Monde",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francetvinfo.fr/monde/afrique/mali/guerre-au-mali/deux-soldats-francais-ont-ete-tues-au-mali-dans-l-explosion-de-leur-vehicule-annonce-l-elysee_4242293.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/monde/2943687-20210103-mali-deux-soldats-francais-nouveau-tues-lors-operation",
+          "titre": "20 minutes",
+          "paywall": false
+        }
+      ]
+    }
+  ]
+}
