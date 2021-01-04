@@ -55,6 +55,45 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "01",
+      "day": "03",
+      "keywords": "Etienne",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la PAF de Montgenèvre a mis fin à ses jours avec son arme de service dans son logement situé à Puy-Saint-Pierre (Hautes-Alpes).",
+      "section": "DIDPAF 04-05",
+      "location": "Montgenèvre (Hautes-Alpes)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 44.93378570961448,
+        "lon": 6.733964742339562
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/hautes-alpes-un-policier-de-44-ans-se-suicide-avec-son-arme-de-service-a-son-domicile/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat05/status/1346042597144489986",
+          "titre": "@PoliceNat05 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2021/01/04/hautes-alpes-un-fonctionnaire-de-la-police-aux-frontieres-met-fin-a-ses-jours",
+          "titre": "Le Dauphiné",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
