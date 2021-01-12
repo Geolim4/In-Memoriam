@@ -34,7 +34,8 @@
           "url": "https://www.defense.gouv.fr/terre/base/in-memoriam/mali/barkhane-deces-du-sergent-yvonne-huynh-et-du-brigadier-loic-risser-du-2e-regiment-de-hussards",
           "titre": "MINARM - Hommage",
           "paywall": false
-        },{
+        },
+        {
           "url": "https://actu17.fr/mali-trois-militaires-francais-de-la-force-barkhane-tues-en-operation/",
           "titre": "Actu17",
           "paywall": false
@@ -60,7 +61,7 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
-      "orphans": 0,
+      "orphans": 4,
       "unpublished_reason": "",
       "year": "2021",
       "month": "01",
@@ -91,6 +92,143 @@
         {
           "url": "https://www.ledauphine.com/faits-divers-justice/2021/01/04/hautes-alpes-un-fonctionnaire-de-la-police-aux-frontieres-met-fin-a-ses-jours",
           "titre": "Le Dauphiné",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "01",
+      "day": "08",
+      "keywords": "Patrick Auguet",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Le major de Gendarmerie de la BMo de Toulouse a mis fin à ses jours avec son arme de service.\n Marié et père de deux filles il était l'adjoint au peloton motorisé de la BMo.",
+      "section": "BMo (EDSR 31)",
+      "location": "Toulouse (Haute-Garonne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 43.642956262499546,
+        "lon": 1.4691198822913898
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/deux-gendarmes-se-suicident-a-lyon-et-a-toulouse/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2949683-20210111-lyon-toulouse-sein-caserne-deux-gendarmes-suicident",
+          "titre": "20 Minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/articles-abonnes/encore-deux-suicides-dans-la-gendarmerie/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://www.midilibre.fr/2021/01/11/a-toulouse-et-a-lyon-deux-gendarmes-se-sont-suicides-9304534.php",
+          "titre": "Midi Libre",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/suicides-de-deux-gendarmes-a-lyon-et-a-toulouse-20210110",
+          "titre": "Le Figaro",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "01",
+      "day": "08",
+      "keywords": "Marie-Dominique Hoche",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Une gendarme de la caserne Général Guy-Delfosse à Lyon a mis fin à ses jours avec son arme de service.\n Elle était mère d'un enfant et cheffe de la BPDJ de Lyon.",
+      "section": "BPDJ (GGD 69)",
+      "location": "Lyon 2e (Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 45.74717237193968,
+        "lon": 4.8197460842699344
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/deux-gendarmes-se-suicident-a-lyon-et-a-toulouse/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/2949683-20210111-lyon-toulouse-sein-caserne-deux-gendarmes-suicident",
+          "titre": "20 Minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/articles-abonnes/encore-deux-suicides-dans-la-gendarmerie/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://www.midilibre.fr/2021/01/11/a-toulouse-et-a-lyon-deux-gendarmes-se-sont-suicides-9304534.php",
+          "titre": "Midi Libre",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/suicides-de-deux-gendarmes-a-lyon-et-a-toulouse-20210110",
+          "titre": "Le Figaro",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "01",
+      "day": "12",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme adjoint volontaire a perdu la vie dans un accident de la route en se rendant au CNEFG de Saint-Astier.",
+      "section": "CNEFG Saint-Astier",
+      "location": "Saint-Léon-sur-l’Isle (Dordogne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 45.09681606303209,
+        "lon": 0.48014871954405725
+      },
+      "sources": [
+        {
+          "url": "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/dordogne/perigord/accident-mortel-st-leon-isle-24-1914064.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.sudouest.fr/2021/01/12/dordogne-un-gendarme-meurt-dans-un-accident-de-la-route-8278238-1980.php",
+          "titre": "Sud Ouest",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2021/01/12/dordogne-un-gendarme-du-cnefg-de-saint-astier-trouve-la-mort-ce-mardi-matin/",
+          "titre": "Actupenit",
           "paywall": false
         }
       ]
