@@ -232,6 +232,60 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "01",
+      "day": "13",
+      "keywords": "Laurent DELBREIL",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier est décédé dans un grave accident de la circulation en se rendant sur une intervention.\n Marié et père de trois enfants, il était volontaire au CIS Mirecourt.",
+      "section": "SDIS 88",
+      "location": "Vroville (Vosges)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 48.272076603832424,
+        "lon": 6.156976913493413
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PompiersFR/status/1349331420494311427",
+          "titre": "@PompiersFR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/vosges-un-pompier-tue-dans-un-accident-de-la-route-en-allant-sur-une-intervention/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/faits-divers/photo-un-pompier-tue-un-autre-gravement-blesse-dans-les-vosges-retour-sur-l-accident-ce-que-l-on-sait_38699463.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/grand-est/vosges/epinal/mirecourt-pompier-tue-autre-grievement-blesse-accident-camion-cause-du-verglas-1914540.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.vosgesmatin.fr/faits-divers-justice/2021/01/13/pompier-decede-en-intervention-entre-mirecourt-et-dompaire-pluie-d-hommages",
+          "titre": "Vosges Matin",
+          "paywall": false
+        },
+        {
+          "url": "https://www.gendinfo.fr/l-info-en-continu/vosges-un-sapeur-pompier-decede-et-un-second-grievement-blesse-dans-un-accident-de-la-circulation/",
+          "titre": "Gend Info",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
