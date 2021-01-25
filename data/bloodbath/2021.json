@@ -286,6 +286,84 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "01",
+      "day": "24",
+      "keywords": "Jean-Paul ACCOLAS",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier est décédé d'un arrêt cardiaque après son séance de sport pendant son service.\n Il était pompier volontaire depuis plus de 24 ans à la caserne de Givors.",
+      "section": "SDIS 69",
+      "location": "Givors (Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 45.59904316839378,
+        "lon": 4.767798465944594
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/SDMIS69/status/1353362150400602112",
+          "titre": "@SDMIS69 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2021/01/24/givors-un-sapeur-pompier-volontaire-retrouve-mort-a-la-caserne/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leprogres.fr/faits-divers-justice/2021/01/24/un-pompier-volontaire-de-grigny-retrouve-mort-a-la-caserne-de-givors",
+          "titre": "Le progrès",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "01",
+      "day": "25",
+      "keywords": "Franck",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CSP de Calais a mis fin a mis fin à ses jours avec son arme administrative à son domicile. \n Père de deux enfants il était en poste à Calais depuis une dizaine d'années.",
+      "section": "CSP Calais",
+      "location": "Zutkerque (Pas-de-Calais)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 50.8524871734886,
+        "lon": 2.063957540921227
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/pas-de-calais-un-policier-sest-suicide-avec-son-arme-de-service-a-son-domicile/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.nordlittoral.fr/106006/article/2021-01-25/suicide-d-un-policier-de-calaisa-son-domicile-zutkerque",
+          "titre": "Nord Littoral",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/925302/article/2021-01-25/zutkerque-un-policier-de-calais-se-donne-la-mort-chez-lui-avec-son-arme-de",
+          "titre": "La voix du Nord",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
