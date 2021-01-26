@@ -354,6 +354,11 @@
           "paywall": false
         },
         {
+          "url": "https://twitter.com/PoliceNat62/status/1354016385668702208",
+          "titre": "@PoliceNat62 (Twitter)",
+          "paywall": false
+        },
+        {
           "url": "https://www.nordlittoral.fr/106006/article/2021-01-25/suicide-d-un-policier-de-calaisa-son-domicile-zutkerque",
           "titre": "Nord Littoral",
           "paywall": false
@@ -361,6 +366,40 @@
         {
           "url": "https://www.lavoixdunord.fr/925302/article/2021-01-25/zutkerque-un-policier-de-calais-se-donne-la-mort-chez-lui-avec-son-arme-de",
           "titre": "La voix du Nord",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "01",
+      "day": "25",
+      "keywords": "Naili MATAITAUA",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier est décédé d'un arrêt cardiaque après son séance de sport pendant son service.\n Il était marié et père de trois enfants.",
+      "section": "SDIS 987",
+      "location": "Mahina (Polynésie Française)",
+      "origin": "domtom",
+      "gps": {
+        "accurate": false,
+        "lat": -17.507946694307048,
+        "lon": -149.4813504466269
+      },
+      "sources": [
+        {
+          "url": "https://mobile.twitter.com/PompiersFR/status/1353789188622188551",
+          "titre": "@PompiersFR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2021/01/26/mahina-la-communaute-des-sapeurs-pompiers-dans-leffroi-apres-la-mort-subite-en-service-dun-des-leurs/",
+          "titre": "Actupenit",
           "paywall": false
         }
       ]
