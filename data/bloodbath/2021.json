@@ -387,7 +387,7 @@
       "location": "Mahina (Polynésie Française)",
       "origin": "domtom",
       "gps": {
-        "accurate": false,
+        "accurate": true,
         "lat": -17.507946694307048,
         "lon": -149.4813504466269
       },
