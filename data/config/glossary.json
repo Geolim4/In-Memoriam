@@ -46,6 +46,7 @@
     "DCSP": "Direction Centrale de la Sécurité Publique",
     "DETAO": "DÉtachement d’Appui Opérationnel (armée)",
     "DRDDI": "Direction Régionale des Douanes et Droits Indirect",
+    "DDPAF": "Direction Départementale de la Police Aux Frontières",
     "DDSP": "Direction Départementale de la Sécurité Publique",
     "DIDPAF": "Direction Inter-Départementale de la Police Aux Frontières",
     "DGSE": "Direction Générale de la Sécurité Extérieure",
@@ -135,6 +136,7 @@
     "STJN": "Service de Traitement Judiciaire de Nuit",
     "UEL": "Unité d’ÉLoignement (PAF, Police)",
     "VBIED": "Véhicule Piégé (Vehicle Borne Improvised Explosive Devices)",
+    "ULII": "Unité de Lutte contre l’Immigration Irrégulière",
     "UTJDR": "Unité de Traitement Judiciaire des Délits Routiers"
   }
 }
