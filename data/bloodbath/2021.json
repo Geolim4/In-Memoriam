@@ -489,8 +489,8 @@
       "orphans": 2,
       "unpublished_reason": "",
       "year": "2021",
-      "month": "01",
-      "day": "29",
+      "month": "02",
+      "day": "01",
       "keywords": "Mickael",
       "house": "police",
       "peers": [],
@@ -512,6 +512,45 @@
         {
           "url": "https://actu.fr/ile-de-france/maisons-laffitte_78358/yvelines-un-policier-parisien-se-suicide-a-maisons-laffitte_39120140.html",
           "titre": "Actu.fr",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "02",
+      "day": "04",
+      "keywords": "Philippe BRIZE",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de l'école de Gendarmerie de Tulle a mis fin à ses jours avec son arme administrative.\n Il était marié et père de trois enfants.",
+      "section": "École de Gendarmerie de Tulle",
+      "location": "Tulle (Corrèze)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 45.25816320869087,
+        "lon": 1.7677660932485417
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-gendarme-de-54-ans-affecte-a-lecole-de-gendarmerie-de-tulle-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/un-nouveau-suicide-dans-les-rangs-de-la-gendarmerie/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://www.assogendarmesetcitoyens.com/single-post/un-camarade-nous-a-quitt%C3%A9s-11",
+          "titre": "APNM",
           "paywall": false
         }
       ]
