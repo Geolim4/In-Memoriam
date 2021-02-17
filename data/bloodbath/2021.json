@@ -554,6 +554,74 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "02",
+      "day": "09",
+      "keywords": "",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier du l'Ain aurait mit fin à ses jours dans la campagne de Saint-Georges-de-Reneins.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "SDIS 01",
+      "location": "Saint-Georges-de-Reneins (Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 46.06400867956747,
+        "lon":  4.722957910130134
+      },
+      "sources": [
+        {
+          "url": "https://actupenit.com/2021/02/10/saint-georges-de-reneins-un-sapeur-pompier-retrouve-mort/",
+          "titre": "Actupenit",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leprogres.fr/societe/2021/02/09/le-corps-sans-vie-d-un-sapeur-pompier-retrouve-a-saint-georges-de-reneins",
+          "titre": "Le Progrès",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "02",
+      "day": "15",
+      "keywords": "Jordan ",
+      "house": "police",
+      "peers": [],
+      "text": "Un jeune policier du commissariat central de Mulhouse a mis fin à ses jours avec son arme administrative à son domicile.",
+      "section": "CSP Mulhouse",
+      "location": "Mulhouse (Haut-Rhin)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 47.76020796355857,
+        "lon":  7.33280473925639
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/haut-rhin-un-policier-de-28-ans-affecte-a-mulhouse-retrouve-mort-a-son-domicile/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2021/02/15/mulhouse-un-jeune-policier-retrouve-mort-a-son-domicile/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
     }
   ]
 }

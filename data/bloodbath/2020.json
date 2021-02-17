@@ -401,6 +401,40 @@
       ]
     },
     {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2020",
+      "month": "01",
+      "day": "29",
+      "keywords": "Eric Charles, Roco",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de l'EGM 41/4 serait mort en service fin janvier 2020 selon les hommages du 16 février 2021 rendus aux gendarmes tombés en 2020..\n Peu d'informations disponibles sur ce décès.",
+      "section": "EGM 41/4",
+      "location": "Dijon (Côte-d'Or)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 47.345299071319076,
+        "lon":  5.048980598959751
+      },
+      "sources": [
+        {
+          "url": "https://actu.fr/ile-de-france/paris_75056/hommage-aux-gendarmes-tues-en-2020-diffusion-en-ligne-d-un-concert-enregistre-aux-invalides_39539107.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/la-gendarmerie-rend-hommage-a-huit-des-siens-decedes-depuis-janvier-2020/",
+          "titre": "L'Essor",
+          "paywall": false
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
@@ -3729,7 +3763,7 @@
       ]
     },
     {
-      "cause": "accident",
+      "cause": "deathOnDuty",
       "count": 1,
       "published": true,
       "orphans": 0,
