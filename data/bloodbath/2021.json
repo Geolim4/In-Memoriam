@@ -564,7 +564,7 @@
       "year": "2021",
       "month": "02",
       "day": "09",
-      "keywords": "",
+      "keywords": "Cyrille Minard",
       "house": "pompier",
       "peers": [],
       "text": "Un pompier du l'Ain aurait mit fin à ses jours dans la campagne de Saint-Georges-de-Reneins.\n Peu d'informations disponibles sur ce suicide.",
@@ -586,6 +586,11 @@
           "url": "https://www.leprogres.fr/societe/2021/02/09/le-corps-sans-vie-d-un-sapeur-pompier-retrouve-a-saint-georges-de-reneins",
           "titre": "Le Progrès",
           "paywall": false
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2021/02/13/apres-le-suicide-d-un-pompier-a-pont-de-cheruy-deux-syndicats-appellent-a-la-mobilisation",
+          "titre": "Le Dauphiné",
+          "paywall": false
         }
       ]
     },
@@ -598,7 +603,7 @@
       "year": "2021",
       "month": "02",
       "day": "15",
-      "keywords": "Jordan ",
+      "keywords": "Jordan",
       "house": "police",
       "peers": [],
       "text": "Un jeune policier du commissariat central de Mulhouse a mis fin à ses jours avec son arme administrative à son domicile.",
@@ -618,6 +623,133 @@
         },
         {
           "url": "https://actupenit.com/2021/02/15/mulhouse-un-jeune-policier-retrouve-mort-a-son-domicile/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "02",
+      "day": "25",
+      "keywords": "Lucas ROCHEFEUILLE",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire est décédé en service lors d'un entrainement sans plus de détails données par le ministère des armées.",
+      "section": "92e RI",
+      "location": "Dzaoudzi, Mayotte",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "lat": -12.783043139500364,
+        "lon":  45.25703521999959
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/CEMAT_FR/status/1365683578567352326",
+          "titre": "@CEMAT_FR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.defense.gouv.fr/actualites/communaute-defense/deces-du-1re-classe-lucas-rochefeuille",
+          "titre": "MINARM - Hommage",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/mayotte-lucas-rochefeuille-un-soldat-francais-de-22-ans-decede-lors-dun-entrainement-27-02-2021-46XZVJSFRZAF7IJST3ZSNI4BEM.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/societe/mayotte-un-soldat-francais-de-22-ans-decede-lors-d-un-entrainement_39839773.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://la1ere.francetvinfo.fr/reunion/une-enquete-ouverte-apres-la-mort-a-mayotte-du-soldat-reunionnais-lucas-rochefeuille-946498.html",
+          "titre": "France Info",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "02",
+      "day": "25",
+      "keywords": "Eric Genestine",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire est décédé en service des suite d'un malaise cardiaque à bord d'une frégate de défense aérienne.",
+      "section": "Frégate de Défense Aérienne Chevalier Paul",
+      "location": "Mer Méditerranée",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "lat": 42.07582282543867,
+        "lon":  6.208087305626928
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/amiralVandier/status/1365247490388279297",
+          "titre": "@amiralVandier (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.defense.gouv.fr/marine/actu-marine/in-memoriam-maitre-principal-genestine",
+          "titre": "MINARM - Hommage",
+          "paywall": false
+        },
+        {
+          "url": "http://www.opex360.com/2021/02/26/mission-clemenceau-21-deces-en-service-dun-officier-marinier-de-la-fregate-chevalier-paul/",
+          "titre": "Opex360",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "03",
+      "day": "08",
+      "keywords": "Romuald Garin",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal de la ville de Saint-Mandé (Val-de-Marne) a mis fins à ses jours. \n Peu d'informations disponibles sur ce suicide.",
+      "section": "Poste de Police",
+      "location": "Saint-Mandé (Val-de-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 48.84359168260348,
+        "lon":  2.4193875644179608
+      },
+      "sources": [
+        {
+          "url": "https://actu.fr/ile-de-france/saint-mande_94067/val-de-marne-saint-mande-le-chef-de-la-police-municipale-romuald-garin-est-decede_40055833.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "http://www.profession-gendarme.com/st-mande-suicide-dun-policier-municipal/",
+          "titre": "Profession Gendarme",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2021/03/09/val-de-marne-le-chef-de-la-police-municipale-de-saint-mande-decede-brutalement/",
           "titre": "Actupenit",
           "paywall": false
         }
