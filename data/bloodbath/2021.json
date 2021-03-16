@@ -754,6 +754,79 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "03",
+      "day": "10",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un formateur de police de l'ENP de Nîmes à mit fin à ses jours à son domicile.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "ENP Nîmes",
+      "location": "Blauzac (Gard)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 43.8600430000224,
+        "lon": 4.404456893285414
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/gard-un-policier-affecte-a-lecole-de-nimes-retrouve-mort-il-se-serait-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.midilibre.fr/2021/03/12/un-policier-gardois-retrouve-mort-la-piste-du-suicide-privilegiee-9422903.php",
+          "titre": "Midi Libre",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "03",
+      "day": "15",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de la section aérienne d’Occitanie a mit fin à ses jours à son domicile.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "SAG Occitanie",
+      "location": "Mauguio (Hérault)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 43.60566561198955,
+        "lon": 3.9858003451888266
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/herault-un-gendarme-sest-suicide-a-son-domicile-a-mauguio/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.midilibre.fr/2021/03/15/herault-le-corps-sans-vie-dun-gendarme-retrouve-chez-lui-pres-de-montpellier-9429175.php",
+          "titre": "Midi Libre",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-gendarme-s-est-suicide-a-mauguio-1615819292",
+          "titre": "France Bleu",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
