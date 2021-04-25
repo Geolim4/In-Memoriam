@@ -423,7 +423,7 @@
       "gps": {
         "accurate": true,
         "lat": 48.90625327209567,
-        "lon":  2.4317378097313607
+        "lon": 2.4317378097313607
       },
       "sources": [
         {
@@ -462,7 +462,7 @@
       "gps": {
         "accurate": true,
         "lat": -12.799342435147283,
-        "lon":   45.28539090732595
+        "lon": 45.28539090732595
       },
       "sources": [
         {
@@ -501,7 +501,7 @@
       "gps": {
         "accurate": true,
         "lat": 48.867128733464114,
-        "lon":   2.313218836742372
+        "lon": 2.313218836742372
       },
       "sources": [
         {
@@ -574,7 +574,7 @@
       "gps": {
         "accurate": false,
         "lat": 46.06400867956747,
-        "lon":  4.722957910130134
+        "lon": 4.722957910130134
       },
       "sources": [
         {
@@ -613,7 +613,7 @@
       "gps": {
         "accurate": false,
         "lat": 47.76020796355857,
-        "lon":  7.33280473925639
+        "lon": 7.33280473925639
       },
       "sources": [
         {
@@ -647,7 +647,7 @@
       "gps": {
         "accurate": false,
         "lat": -12.783043139500364,
-        "lon":  45.25703521999959
+        "lon": 45.25703521999959
       },
       "sources": [
         {
@@ -696,7 +696,7 @@
       "gps": {
         "accurate": false,
         "lat": 42.07582282543867,
-        "lon":  6.208087305626928
+        "lon": 6.208087305626928
       },
       "sources": [
         {
@@ -735,7 +735,7 @@
       "gps": {
         "accurate": true,
         "lat": 48.84359168260348,
-        "lon":  2.4193875644179608
+        "lon": 2.4193875644179608
       },
       "sources": [
         {
@@ -847,7 +847,7 @@
       "gps": {
         "accurate": false,
         "lat": 50.059664308741056,
-        "lon":  1.6057069985874308
+        "lon": 1.6057069985874308
       },
       "sources": [
         {
@@ -896,7 +896,7 @@
       "gps": {
         "accurate": true,
         "lat": 48.96180239895016,
-        "lon":  2.321038519575377
+        "lon": 2.321038519575377
       },
       "sources": [
         {
@@ -965,6 +965,288 @@
         {
           "url": "https://www.dna.fr/sport/2021/03/23/julie-pomagalski-decede-dans-une-avalanche-en-suisse",
           "titre": "DNA",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "03",
+      "day": "27",
+      "keywords": "",
+      "house": "armee",
+      "peers": [],
+      "text": "Un fusilier marin est décédé lors d'une opération en mer dans la baie de Cherbourg.",
+      "section": "Marine Nationale",
+      "location": "Cherbourg (Manche)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 49.66107831338392,
+        "lon": -1.6161845943835125
+      },
+      "sources": [
+        {
+          "url": "https://actu.fr/normandie/cherbourg-en-cotentin_50129/deces-d-un-fusilier-marin-a-cherbourg-jeff-rotaru-avait-toute-la-vie-devant-lui_40617982.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "http://lignesdedefense.blogs.ouest-france.fr/archive/2021/03/29/in-memoriam-matelot-de-1e-classe-jeff-rotaru-22003.html",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/MarineNationale/status/1376514406490734598",
+          "titre": "@MarineNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2021/03/28/un-marin-retrouve-sans-vie-que-s-est-il-passe-en-rade-de-cherbourg",
+          "titre": "Le Dauphiné",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "03",
+      "day": "28",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier affecté à l’antenne du SDLP de Bastia a mit fin à ses jours.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "SDLP",
+      "location": "Bastia (Corse)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 42.70470549870211,
+        "lon": 9.453879269652319
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/bastia-un-policier-affecte-au-sdlp-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1376097947608317954",
+          "titre": "@PoliceNationale (twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "04",
+      "day": "01",
+      "keywords": "Samuel",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier de la caserne de Tourcoing a mis fin à ses jours.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "SDIS 59",
+      "location": "Tourcoing (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 50.7289662941331,
+        "lon": 3.1857321511743004
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "04",
+      "day": "02",
+      "keywords": "Cédric Coutant",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier de la caserne de Denain a mis fin à ses jours.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "SDIS 59",
+      "location": "Denain (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 50.32406196920127,
+        "lon": 3.3683920390984032
+      },
+      "sources": [
+        {
+          "url": "https://www.lobservateur.fr/valenciennois/2021/04/06/denain-les-pompiers-en-deuil-apres-le-suicide-dun-des-leurs/",
+          "titre": "L'Observateur",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "04",
+      "day": "18",
+      "keywords": "",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal de la ville de Nice a mis fin à ses jours.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Bureau d'Ordre",
+      "location": "Nice (Alpes Maritimes)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 43.71044384874145,
+        "lon": 7.261786487210411
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/_FFOC_/status/1385325498222485504",
+          "titre": "@_FFOC_ (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://www.usppm.fr/index.php/fr/component/content/article/56-le-syndicat/1696-nice",
+          "titre": "USPPM",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "04",
+      "day": "22",
+      "keywords": "",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal de la ville de Roquemaure a mis fin à ses jours.",
+      "section": "Hôtel de ville",
+      "location": "Roquemaure (Gard)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 44.05193408176811,
+        "lon":  4.7786861419474285
+      },
+      "sources": [
+        {
+          "url": "https://france3-regions.francetvinfo.fr/occitanie/gard/nimes/gard-un-policier-retrouve-mort-par-arme-a-feu-dans-le-garage-municipal-de-roquemaure-2059087.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "http://www.usppm.fr/index.php/fr/component/content/article/56-le-syndicat/1697-d%C3%A9c%C3%A9s-d-un-apm-%C3%A0-roquemaure",
+          "titre": "USPPM",
+          "paywall": false
+        },
+        {
+          "url": "https://www.midilibre.fr/2021/04/23/roquemaure-mort-par-arme-a-feu-dun-policier-municipal-une-enquete-ouverte-9505342.php",
+          "titre": "Midi Libre",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "04",
+      "day": "23",
+      "keywords": "Bertrand",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la ville d'Arcachon a mis fin à ses jours à son domicile.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "CSP Arcachon",
+      "location": "Arcachon (Gironde)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 44.65873724784623,
+        "lon": -1.1612787825123774
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/gironde-un-policier-du-commissariat-darcachon-retrouve-mort-a-son-domicile/",
+          "titre": "Actu17",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "murdered",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "04",
+      "day": "23",
+      "keywords": "Stéphanie Monfermé",
+      "house": "police",
+      "peers": [],
+      "text": "Une policière du commissariat de Rambouillet a été tué par un terroriste islamiste.\n Adjointe administrative et mère de deux enfants est décédé de ses blessures sur le trajet vers l'hôpital.",
+      "section": "CSP Rambouillet",
+      "location": "Rambouillet (Yvelines)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "lat": 48.648770746158434,
+        "lon": 1.824353401821805
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/attaque-au-couteau-a-rambouillet-une-policiere-grievement-blessee-lagresseur-neutralise-par-balle/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/attentat-de-rambouillet-stephanie-etait-un-modele-pour-ses-soeurs-25-04-2021-AITEZJQK3ZD6LCGTXZ6AXM625Y.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/normandie/manche/coutances/attentat-a-rambouillet-la-victime-etait-originaire-de-la-manche-sa-soeur-lui-rend-hommage-2060914.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Attaque_du_23_avril_2021_%C3%A0_Rambouillet",
+          "titre": "Wikipédia",
           "paywall": false
         }
       ]
