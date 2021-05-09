@@ -1158,7 +1158,7 @@
       "gps": {
         "accurate": false,
         "lat": 44.05193408176811,
-        "lon":  4.7786861419474285
+        "lon": 4.7786861419474285
       },
       "sources": [
         {
@@ -1247,6 +1247,123 @@
         {
           "url": "https://fr.wikipedia.org/wiki/Attaque_du_23_avril_2021_%C3%A0_Rambouillet",
           "titre": "Wikipédia",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": false,
+      "orphans": 0,
+      "unpublished_reason": "A vérifier",
+      "year": "2021",
+      "month": "05",
+      "day": "01",
+      "keywords": "",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier est décédé dans un accident de la route.",
+      "section": "SDIS 78",
+      "location": "",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 0,
+        "lon": 0
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/pompiers78/status/1388101561801482247?s=19",
+          "titre": "@pompiers78 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/yvelines-un-pompier-qui-devait-encadrer-lhommage-a-stephanie-monferme-meurt-en-se-rendant-a-sa-caserne/",
+          "titre": "Actu17",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "murdered",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "05",
+      "day": "05",
+      "keywords": "Eric Masson",
+      "house": "police",
+      "peers": [],
+      "text": "Une policier du GRI 84 a été tué par balles par un trafiquant de drogue lors d'une opération anti-drogue.\n Il était père de deux fillettes.",
+      "section": "GRI 84",
+      "location": "Avignon (Vaucluse)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 43.945042268117966,
+        "lon": 4.813128353655874
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-policier-grievement-blesse-par-balle-dans-le-centre-ville-davignon/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/avignon-un-policier-tue-par-balles-lors-d-une-operation-antidrogue-20210505",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1390009271555870725",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.nicematin.com/faits-divers/un-policier-tue-par-balles-en-plein-centre-ville-davignon-680710",
+          "titre": "Nice Matin",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2021/05/05/vaucluse-un-policier-grievement-blesse-par-balle-en-plein-centre-ville-d-avignon",
+          "titre": "Le Dauphiné",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "05",
+      "day": "09",
+      "keywords": "Thierry TEMPEZ",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme du PSIG de Compiègne a mis fin à ses jours avec son arme administrative.\n Il était père de deux enfants.",
+      "section": "PSIG Compiègne",
+      "location": "Compiègne (Oise)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "lat": 49.414733542473975,
+        "lon": 2.833503654602562
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/oise-un-gendarme-de-44-ans-du-psig-de-compiegne-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/index.php/2021/05/09/deces-tragique-dun-adjudant-du-psig-de-compiegne/",
+          "titre": "Le Voix du Gendarme",
           "paywall": false
         }
       ]
