@@ -18,6 +18,6 @@ export interface Death {
   section: string;
   origin: string;
   keywords: string;
-  gps: { lat: number, lon: number, accurate: boolean };
+  gps: { lat: number, lon: number, accurate: boolean, radius: number };
   sources: { url: string, titre: string, paywall: boolean }[];
 }

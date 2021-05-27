@@ -22,6 +22,7 @@ import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.mode
  */
 export class App {
 
+  private _circles: google.maps.Circle[];
   private _configObject: Config;
   private _customChoicesInstances: { [name: string]: any };
   private _currentInfoWindows: google.maps.InfoWindow;
@@ -37,6 +38,7 @@ export class App {
   private filters: FormFilters;
 
   constructor() {
+    this._circles = [];
     this._customChoicesInstances = {};
     this._currentInfoWindows = null;
     this._eventHandlers = {};
@@ -410,10 +412,28 @@ export class App {
           map,
           animation: google.maps.Animation.DROP,
           icon: new (google.maps as any).MarkerImage(houseImage),
+          opacity: 1,
           position: new google.maps.LatLng(death.gps.lat, death.gps.lon),
           title: death.text,
         }) as ExtendedGoogleMapsMarker;
+
+        if (!death.gps.accurate) {
+          const circle = new google.maps.Circle({
+            map,
+            center: new google.maps.LatLng(death.gps.lat, death.gps.lon),
+            fillColor: this._configObject.config['circleOptions']['fillColor'],
+            fillOpacity: this._configObject.config['circleOptions']['fillOpacity'],
+            radius: Math.max(100, death.gps.radius), // Radius can't be set at less than 100 meters
+            strokeColor: this._configObject.config['circleOptions']['strokeColor'],
+            strokeOpacity: this._configObject.config['circleOptions']['strokeOpacity'],
+            strokeWeight: this._configObject.config['circleOptions']['strokeWeight'],
+          });
+
+          this._circles.push(circle);
+        }
+
         marker.linkHash = this.getMarkerHash(death);
+        marker.death = death;
 
         const houseFormatted =  this.getFilterValueLabel('house', death.house);
         const causeFormatted = this.getFilterValueLabel('cause', death.cause);
@@ -497,6 +517,20 @@ export class App {
         this._markerHashIndex[marker.linkHash] = this._markers.length - 1;
       }
 
+      google.maps.event.addListener(map, 'zoom_changed', () => {
+        const zoomLevel = map.getZoom();
+        for (const circle of this._circles) {
+          circle.setVisible(zoomLevel > 8);
+          circle.setOptions({
+            fillOpacity: Math.min(30, zoomLevel * 2) / 100,
+            strokeOpacity: Math.min(30, zoomLevel * 2) / 100,
+          });
+        }
+        for (const marker of this._markers) {
+          marker.setOpacity(zoomLevel <= 8 ? 1 : (marker.death.gps.accurate ? 1 : 0.75));
+        }
+      });
+
       modalBloodbathListContent += '</ul>';
       modalBloodbathListContent += '<small>' +
         '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> ' +
@@ -568,6 +602,7 @@ export class App {
 
   private clearMapObjects(): void {
     this.clearMarkers()
+      .clearCircles()
       .clearInfoWindows()
       .clearHeatMap()
       .clearMarkerCluster();
@@ -579,6 +614,14 @@ export class App {
     }
     this._markers = [];
     this._markerHashIndex = {};
+    return this;
+  }
+
+  private clearCircles(): App {
+    for (let i = 0; i < this._circles.length; i++) {
+      this._circles[i].setMap(null);
+    }
+    this._circles = [];
     return this;
   }
 

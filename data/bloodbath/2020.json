@@ -21,6 +21,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.864504,
         "lon": 2.412077
       },
@@ -75,6 +76,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 47.274538,
         "lon": -2.216227
       },
@@ -134,6 +136,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.061764,
         "lon": -1.737779
       },
@@ -188,6 +191,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 45.750490,
         "lon": 4.907776
       },
@@ -252,6 +256,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.639516,
         "lon": 2.374619
       },
@@ -301,6 +306,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 50.597155,
         "lon": 3.078778
       },
@@ -340,6 +346,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 50.363930,
         "lon": 3.525418
       },
@@ -374,6 +381,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 49.449746,
         "lon": 1.093060
       },
@@ -418,6 +426,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 47.345299071319076,
         "lon":  5.048980598959751
       },
@@ -452,6 +461,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 44.266096,
         "lon": 1.750616
       },
@@ -496,6 +506,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 49.931596,
         "lon": 2.276175
       },
@@ -535,6 +546,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.848171,
         "lon": 2.553278
       },
@@ -584,6 +596,7 @@
       "origin": "opex",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 14.713272,
         "lon": -17.482845
       },
@@ -638,6 +651,7 @@
       "origin": "opex",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 12.275095,
         "lon": -1.635452
       },
@@ -697,6 +711,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 49.284277,
         "lon": 1.222375
       },
@@ -731,6 +746,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 47.157763,
         "lon": -1.601265
       },
@@ -760,6 +776,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 43.438115,
         "lon": 6.071830
       },
@@ -819,6 +836,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 43.481622,
         "lon": 5.398251
       },
@@ -878,6 +896,7 @@
       "origin": "domtom",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 14.618595,
         "lon": -61.102521
       },
@@ -922,6 +941,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.782346,
         "lon": 2.262282
       },
@@ -976,6 +996,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 45.922881,
         "lon": 3.069135
       },
@@ -1040,6 +1061,7 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 33.249274,
         "lon": 35.420509
       },
@@ -1104,6 +1126,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 43.761137,
         "lon": 7.074776
       },
@@ -1153,6 +1176,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.808091,
         "lon": 2.432358
       },
@@ -1222,6 +1246,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.837422,
         "lon": 2.637248
       },
@@ -1286,6 +1311,7 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 4.398862,
         "lon": 18.523847
       },
@@ -1340,6 +1366,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 50.610886,
         "lon": 3.034709
       },
@@ -1394,6 +1421,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.201058,
         "lon": 3.292783
       },
@@ -1438,6 +1466,7 @@
       "origin": "domtom",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": -12.799244,
         "lon": 45.285517
       },
@@ -1492,6 +1521,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.823011,
         "lon": 2.409681
       },
@@ -1531,6 +1561,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.814873,
         "lon": 2.255656
       },
@@ -1580,6 +1611,7 @@
       "origin": "domtom",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": -22.205868,
         "lon": 166.472435
       },
@@ -1634,6 +1666,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 43.342442,
         "lon": 0.268007
       },
@@ -1693,6 +1726,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 43.309762,
         "lon": 3.493330
       },
@@ -1722,6 +1756,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 48.812843,
         "lon": 2.235298
       },
@@ -1761,6 +1796,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 44.978759,
         "lon": -1.082876
       },
@@ -1810,6 +1846,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 49.110512,
         "lon": 6.101725
       },
@@ -1875,6 +1912,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 44.367149,
         "lon": -1.259417
       },
@@ -1939,6 +1977,7 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 15.211649,
         "lon": 0.322254
       },
@@ -2002,6 +2041,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 49.492297,
         "lon": 0.120466
       },
@@ -2061,6 +2101,7 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 15.880885,
         "lon": 2.377800
       },
@@ -2120,6 +2161,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.839428,
         "lon": 2.629965
       },
@@ -2159,6 +2201,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 49.003214,
         "lon": 2.518364
       },
@@ -2198,6 +2241,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 49.256218,
         "lon": 4.022128
       },
@@ -2232,6 +2276,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.406451,
         "lon": 6.844591
       },
@@ -2286,6 +2331,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.893571,
         "lon": 2.308409
       },
@@ -2325,6 +2371,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 45.976130,
         "lon": 6.079828
       },
@@ -2374,6 +2421,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 46.992518,
         "lon": 3.156231
       },
@@ -2428,6 +2476,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 49.113362,
         "lon": 6.168450
       },
@@ -2487,6 +2536,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 49.435054,
         "lon": 1.081077
       },
@@ -2526,6 +2576,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 43.297284,
         "lon": 5.380773
       },
@@ -2570,6 +2621,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.798193,
         "lon": 2.451853
       },
@@ -2604,6 +2656,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.688185,
         "lon": 6.194198
       },
@@ -2663,6 +2716,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 44.251744,
         "lon": 0.381642
       },
@@ -2722,6 +2776,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 47.326769,
         "lon": 2.828274
       },
@@ -2766,6 +2821,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 45.212001,
         "lon": 5.792895
       },
@@ -2815,6 +2871,7 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 16.183826,
         "lon": -0.700089
       },
@@ -2874,6 +2931,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 45.677477,
         "lon": -0.935173
       },
@@ -2913,6 +2971,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 48.040943,
         "lon": -1.707110
       },
@@ -2942,6 +3001,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 44.200075,
         "lon": 0.612391
       },
@@ -2981,6 +3041,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.572710,
         "lon": 7.749920
       },
@@ -3035,6 +3096,7 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 12.133639,
         "lon": 15.032179
       },
@@ -3084,6 +3146,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 47.995051,
         "lon": 0.177409
       },
@@ -3143,6 +3206,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 43.710457,
         "lon": 7.261839
       },
@@ -3182,6 +3246,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.968845,
         "lon": -1.065419
       },
@@ -3231,6 +3296,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 49.422347,
         "lon": 6.234450
       },
@@ -3275,6 +3341,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 43.302610,
         "lon": 5.366721
       },
@@ -3334,6 +3401,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 48.750117,
         "lon": 2.489362
       },
@@ -3363,6 +3431,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.082832,
         "lon": 7.357703
       },
@@ -3417,6 +3486,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 46.391069,
         "lon": -0.196075
       },
@@ -3466,6 +3536,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 50.619904,
         "lon": 3.132970
       },
@@ -3515,6 +3586,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 50.643513,
         "lon": 3.144424
       },
@@ -3564,6 +3636,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 47.087219,
         "lon": 2.387265
       },
@@ -3598,6 +3671,7 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 20.258146,
         "lon": 0.990530
       },
@@ -3667,6 +3741,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.937539,
         "lon": 2.160761
       },
@@ -3721,6 +3796,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.580355,
         "lon": 7.734690
       },
@@ -3780,6 +3856,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 48.403596,
         "lon": 2.717168
       },
@@ -3839,6 +3916,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 50.478427,
         "lon": 2.655419
       },
@@ -3878,6 +3956,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 46.212627,
         "lon": 5.240112
       },
@@ -3922,6 +4001,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 45.466453,
         "lon": 1.743936
       },
@@ -3966,6 +4046,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 43.784707,
         "lon": 7.215882
       },
@@ -4015,6 +4096,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 44.018767,
         "lon": 1.360410
       },
@@ -4054,6 +4136,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 43.606165,
         "lon": 2.250700
       },
@@ -4098,6 +4181,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.495661,
         "lon": 2.307380
       },
@@ -4127,6 +4211,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.955484,
         "lon": 2.889580
       },
@@ -4156,6 +4241,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 50.980945,
         "lon": 1.983682
       },
@@ -4195,6 +4281,7 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 27.993691,
         "lon": 34.333301
       },
@@ -4249,6 +4336,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.784141639,
         "lon": 2.11406234
       },
@@ -4288,6 +4376,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 47.85883557186159,
         "lon": -2.871822193437122
       },
@@ -4338,6 +4427,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 45.58178112613559,
         "lon": 6.329869879365839
       },
@@ -4387,6 +4477,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 48.844787169967,
         "lon": 2.8132505737999205
       },
@@ -4441,6 +4532,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 48.761350234969825,
         "lon":  2.3609287143812527
       },
@@ -4490,6 +4582,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 45.442627516371374,
         "lon": 3.821073778124537
       },
@@ -4543,6 +4636,7 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
+        "radius": 1000,
         "lat": 15.283025663313412,
         "lon": -1.7011213144080959
       },

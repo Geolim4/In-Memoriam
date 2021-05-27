@@ -21,6 +21,7 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
+        "radius": 10000,
         "lat": 15.852774,
         "lon": 1.468974
       },
@@ -75,6 +76,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 44.93378570961448,
         "lon": 6.733964742339562
       },
@@ -114,6 +116,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 43.642956262499546,
         "lon": 1.4691198822913898
       },
@@ -163,6 +166,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 45.74717237193968,
         "lon": 4.8197460842699344
       },
@@ -212,6 +216,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 45.09681606303209,
         "lon": 0.48014871954405725
       },
@@ -251,6 +256,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 2000,
         "lat": 48.272076603832424,
         "lon": 6.156976913493413
       },
@@ -305,6 +311,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 2000,
         "lat": 45.59904316839378,
         "lon": 4.767798465944594
       },
@@ -344,6 +351,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 50.8524871734886,
         "lon": 2.063957540921227
       },
@@ -388,6 +396,7 @@
       "origin": "domtom",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": -17.507946694307048,
         "lon": -149.4813504466269
       },
@@ -422,6 +431,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.90625327209567,
         "lon": 2.4317378097313607
       },
@@ -461,6 +471,7 @@
       "origin": "domtom",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": -12.799342435147283,
         "lon": 45.28539090732595
       },
@@ -500,6 +511,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.867128733464114,
         "lon": 2.313218836742372
       },
@@ -534,6 +546,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 45.25816320869087,
         "lon": 1.7677660932485417
       },
@@ -573,6 +586,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 2000,
         "lat": 46.06400867956747,
         "lon": 4.722957910130134
       },
@@ -612,6 +626,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 2000,
         "lat": 47.76020796355857,
         "lon": 7.33280473925639
       },
@@ -646,6 +661,7 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
+        "radius": 2000,
         "lat": -12.783043139500364,
         "lon": 45.25703521999959
       },
@@ -695,6 +711,7 @@
       "origin": "opex",
       "gps": {
         "accurate": false,
+        "radius": 50000,
         "lat": 42.07582282543867,
         "lon": 6.208087305626928
       },
@@ -734,6 +751,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.84359168260348,
         "lon": 2.4193875644179608
       },
@@ -773,6 +791,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 43.8600430000224,
         "lon": 4.404456893285414
       },
@@ -807,6 +826,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 2000,
         "lat": 43.60566561198955,
         "lon": 3.9858003451888266
       },
@@ -846,6 +866,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 2000,
         "lat": 50.059664308741056,
         "lon": 1.6057069985874308
       },
@@ -895,6 +916,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.96180239895016,
         "lon": 2.321038519575377
       },
@@ -924,6 +946,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.17871214287591,
         "lon": 6.447454598633321
       },
@@ -953,6 +976,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 48.17871214287591,
         "lon": 6.447454598633321
       },
@@ -987,6 +1011,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 2000,
         "lat": 49.66107831338392,
         "lon": -1.6161845943835125
       },
@@ -1031,6 +1056,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 42.70470549870211,
         "lon": 9.453879269652319
       },
@@ -1065,6 +1091,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 2000,
         "lat": 50.7289662941331,
         "lon": 3.1857321511743004
       },
@@ -1094,6 +1121,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 2000,
         "lat": 50.32406196920127,
         "lon": 3.3683920390984032
       },
@@ -1123,6 +1151,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 2000,
         "lat": 43.71044384874145,
         "lon": 7.261786487210411
       },
@@ -1157,6 +1186,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 2000,
         "lat": 44.05193408176811,
         "lon": 4.7786861419474285
       },
@@ -1196,6 +1226,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 44.65873724784623,
         "lon": -1.1612787825123774
       },
@@ -1225,6 +1256,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": false,
+        "radius": 2000,
         "lat": 48.648770746158434,
         "lon": 1.824353401821805
       },
@@ -1269,6 +1301,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 0,
         "lon": 0
       },
@@ -1303,6 +1336,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 43.945042268117966,
         "lon": 4.813128353655874
       },
@@ -1352,6 +1386,7 @@
       "origin": "interieur",
       "gps": {
         "accurate": true,
+        "radius": 0,
         "lat": 49.414733542473975,
         "lon": 2.833503654602562
       },
@@ -1364,6 +1399,146 @@
         {
           "url": "https://lavoixdugendarme.fr/index.php/2021/05/09/deces-tragique-dun-adjudant-du-psig-de-compiegne/",
           "titre": "Le Voix du Gendarme",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "05",
+      "day": "16",
+      "keywords": "Cédric",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier Strasbourgeois a mis fins à ses jours avec une arme à feu.\n Affecté à la BST, il était père de plusieurs enfants.",
+      "section": "BST",
+      "location": "Strasbourg (Bas-Rhin)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.57276478984894,
+        "lon": 7.749918023857668
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-policier-affecte-a-strasbourg-sest-suicide-a-son-domicile/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat67/status/1394210459088265216",
+          "titre": "@PoliceNat67 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/grand-est/bas-rhin/strasbourg-0/strasbourg-un-policier-se-suicide-a-son-domicile-2092945.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/societe/3042759-20210516-strasbourg-suicide-policier-domicile-arme-service",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/faits-divers/strasbourg-suicide-d-un-policier-a-son-domicile-avec-son-arme-de-service-fe82d718-b67c-11eb-9d0b-d31a5f1d6514",
+          "titre": "Ouest France",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "05",
+      "day": "17",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier Amienois a mis fins à ses jours avec une arme à feu.\n Il était père de plusieurs enfants.",
+      "section": "SDRT",
+      "location": "Amiens (Somme)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.89215806522141,
+        "lon": 2.298076410915117
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/amiens-un-policier-se-suicide-a-son-domicile-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/somme/amiens/un-policier-du-commissariat-d-amiens-se-suicide-a-son-domicile-2093737.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.courrier-picard.fr/id193269/article/2021-05-17/un-policier-amienois-retrouve-mort-dans-son-appartement",
+          "titre": "Courrier Picard",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "05",
+      "day": "25",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier Rennais a mis fins à ses jours avec une arme à feu.\n Il était père d'une fille.",
+      "section": "CSP Rennes",
+      "location": "Rennes (Ille-et-Vilaine)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 500,
+        "lat": 48.101384434464066,
+        "lon": -1.7045501320981
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/rennes-un-policier-se-suicide-avec-son-arme-de-service-a-son-domicile/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat35/status/1397470036873383943",
+          "titre": "@PoliceNat35 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/rennes-un-policier-de-56-ans-met-fin-a-ses-jours-avec-son-arme-de-service-20210526",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/bretagne/rennes-35000/rennes-un-policier-decede-la-these-du-suicide-privilegie-e51eb4d4-bd72-11eb-9d87-eb28e77a8992",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/rennes/3048427-20210526-rennes-policier-retrouve-mort-domicile-piste-suicide-privilegiee",
+          "titre": "20 minutes",
           "paywall": false
         }
       ]
