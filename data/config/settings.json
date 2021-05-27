@@ -16,6 +16,13 @@
       "opacity": 0.4,
       "radius": 1
     },
+    "circleOptions": {
+      "fillColor": "#9e2a2b",
+      "fillOpacity": 0.25,
+      "strokeColor": "#540b0e",
+      "strokeOpacity": 0.8,
+      "strokeWeight": 2
+    },
     "imagePath": {
       "house": "./assets/images/house/%house%.png",
       "random": "./assets/images/map/random.png",
