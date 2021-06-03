@@ -1542,6 +1542,271 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "05",
+      "day": "26",
+      "keywords": "Stéphane Perret",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier du CRF de Draveil a mis fins à ses jours avec une arme à feu.\n Il était père de deux enfants.",
+      "section": "CRF Draveil (Essonne)",
+      "location": "Saint-Romain-la-Motte (Loire)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 1000,
+        "lat": 46.082251906631974,
+        "lon":  3.9946019290131294
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-policier-affecte-dans-lessonne-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat91/status/1397817906277257217",
+          "titre": "@PoliceNat91 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/essonne-91/stephane-perret-le-policier-le-plus-courageux-de-l-essonne-08-05-2014-3823739.php?xtor=AD-366",
+          "titre": "le Parisien",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "06",
+      "day": "01",
+      "keywords": "",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire est décédé suite à un accident de tir avec un autre militaire lors d'un exercice en montagne.",
+      "section": "3e RPIMa",
+      "location": "Complexe de tir de Villemaury (Aude)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 500,
+        "lat": 43.144691250129114,
+        "lon":  2.3975102681480585
+      },
+      "sources": [
+        {
+          "url": "http://www.opex360.com/2021/06/02/un-militaire-du-3e-rpima-tue-par-balle-lors-dun-entrainement/",
+          "titre": "Opex360",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/region-occitanie/aude/un-militaire-tue-par-un-tir-accidentel-lors-d-un-entrainement-dans-l-aude-12c57582-c3c0-11eb-9638-26dc62ccdfa1",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/carcassonne-un-militaire-tue-accidentellement-lors-dun-entrainement-02-06-2021-4MO2ELWMXBE5RDREZVA3AH6WLA.php",
+          "titre": "le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/3052987-20210602-carcassonne-militaire-20-ans-3e-rpima-meurt-accidentellement-lors-entrainement",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/occitanie/aude/carcassonne/aude-un-militaire-du-3e-rpima-de-carcassonne-trouve-la-mort-lors-d-un-entrainement-au-tir-2117749.html",
+          "titre": "France Info",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "06",
+      "day": "02",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de la caserne Abadie à Pau a mis fin à ses jours avec son arme de service.\n Il était pacsé et père de famille.",
+      "section": "GGD 64",
+      "location": "Pau (Pyrénées-Atlantiques)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat":43.31391602160896,
+        "lon":  -0.369182115586049
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/pau-un-gendarme-retrouve-mort-dans-son-logement-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ladepeche.fr/2021/06/02/pyrenees-atlantiques-un-gendarme-se-suicide-dans-sa-caserne-a-pau-9581617.php",
+          "titre": "La dépêche",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/3052799-20210602-pau-gendarme-retrouve-mort-piste-suicide-privilegiee",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/pau-un-adjudant-retrouve-mort-au-sein-de-la-caserne-de-gendarmerie-1622640850",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/a-la-une/suicide-dun-gendarme-a-pau-2021-05/",
+          "titre": "L'Essor",
+          "paywall": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "06",
+      "day": "02",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policière du commissariat de Cahors a mis fin à ses jours avec son arme de service.\n Elle était mère de trois jeunes enfants.",
+      "section": "CSP Cahors",
+      "location": "Cahors (Lot)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.45187162888395,
+        "lon":  1.438342891153476
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/lot-une-policiere-du-commissariat-de-cahors-sest-suicidee/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ladepeche.fr/2021/06/01/lot-une-policiere-de-cahors-a-mis-fin-a-ses-jours-ce-matin-9579518.php",
+          "titre": "La dépêche",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/lot-une-policiere-de-cahors-se-suicide-a-son-domicile-20210601",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/occitanie/cahors_46042/lot-une-policiere-du-commissariat-de-cahors-se-suicide_42275600.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "06",
+      "day": "03",
+      "keywords": "Patrick",
+      "house": "admpen",
+      "peers": [],
+      "text": "Un surveillant pénitentiaire de la maison centrale de Lannemezan a mit fin à ses jours.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Maison centrale de Lannemezan",
+      "location": "Lannemezan (Hautes-Pyrénées)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.10983796603873,
+        "lon": 0.37513435457317346
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "06",
+      "day": "03",
+      "keywords": "Bastien Ulm",
+      "house": "armee",
+      "peers": [],
+      "text": "Lors d'un entrainement, un militaire du 2e REG est décédé en service dans une coulée de neige dans la pointe de Gargan dans le massif du Beaufortain.\n Il était marié et père de deux enfants.",
+      "section": "2e REG (27e BIM)",
+      "location": "Pointe de Gargan, massif du Beaufortain (Savoie)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 500,
+        "lat": 45.64423599927287,
+        "lon":  6.669968157703316
+      },
+      "sources": [
+        {
+          "url": "https://www.leparisien.fr/faits-divers/savoie-un-legionnaire-se-tue-lors-dun-entrainement-en-montagne-03-06-2021-54WEES7UYZB5VCGXT2K6VBIQ2I.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/armeedeterre/status/1400510585687654400",
+          "titre": "@armeedeterre (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/lot-une-policiere-de-cahors-se-suicide-a-son-domicile-20210601",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/savoie/savoie-deux-legionnaires-emportes-par-une-coulee-de-neige-dans-le-beaufortain-l-un-d-entre-eux-est-decede-2119576.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/politique/defense/un-legionnaire-meurt-lors-d-un-entrainement-en-montagne-en-savoie-b37d5f5a-c49f-11eb-9a3b-3513ab8ec4ec",
+          "titre": "Ouest France",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
