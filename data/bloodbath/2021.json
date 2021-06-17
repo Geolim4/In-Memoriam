@@ -1563,7 +1563,7 @@
         "accurate": false,
         "radius": 1000,
         "lat": 46.082251906631974,
-        "lon":  3.9946019290131294
+        "lon": 3.9946019290131294
       },
       "sources": [
         {
@@ -1603,7 +1603,7 @@
         "accurate": false,
         "radius": 500,
         "lat": 43.144691250129114,
-        "lon":  2.3975102681480585
+        "lon": 2.3975102681480585
       },
       "sources": [
         {
@@ -1652,8 +1652,8 @@
       "gps": {
         "accurate": true,
         "radius": 0,
-        "lat":43.31391602160896,
-        "lon":  -0.369182115586049
+        "lat": 43.31391602160896,
+        "lon": -0.369182115586049
       },
       "sources": [
         {
@@ -1703,7 +1703,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 44.45187162888395,
-        "lon":  1.438342891153476
+        "lon": 1.438342891153476
       },
       "sources": [
         {
@@ -1778,7 +1778,7 @@
         "accurate": false,
         "radius": 500,
         "lat": 45.64423599927287,
-        "lon":  6.669968157703316
+        "lon": 6.669968157703316
       },
       "sources": [
         {
@@ -1804,6 +1804,91 @@
         {
           "url": "https://www.ouest-france.fr/politique/defense/un-legionnaire-meurt-lors-d-un-entrainement-en-montagne-en-savoie-b37d5f5a-c49f-11eb-9a3b-3513ab8ec4ec",
           "titre": "Ouest France",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "06",
+      "day": "05",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de la brigade de recherche de Cosne-Cours-sur-Loire a mit fin à ses jours avec son arme de service.",
+      "section": "BR",
+      "location": "Cosne-Cours-sur-Loire (Nièvre)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.39882623636955,
+        "lon": 2.93666654266765
+      },
+      "sources": [
+        {
+          "url": "https://lessor.org/vie-des-personnels/nouveau-suicide-de-gendarme-a-cosne-cours-sur-loire/",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/nievre-un-gendarme-de-47-ans-sest-suicide-a-cosne-cours-sur-loire/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lejdc.fr/amp/cosne-cours-sur-loire-58200/actualites/un-gendarme-grade-de-47-ans-s-est-suicide-a-cosne-sur-loire-dans-sa-caserne_13963177/",
+          "titre": "Le JDC",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "06",
+      "day": "18",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CRS 47 en déplacement à proximité de Nice a mit fin à ses jours avec son arme de service dans un des véhicules situé sur le parking de leur hôtel.",
+      "section": "CRS 47",
+      "location": "Valbonne (Var)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 1000,
+        "lat": 43.628106379025,
+        "lon": 7.03301138298704
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/nice-un-policier-de-la-crs-47-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1405563431542046723",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/auvergne-rhone-alpes/grenoble_38185/un-crs-de-grenoble-se-suicide-avec-son-arme-dans-un-camion-de-service_42730741.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.nicematin.com/faits-divers/un-crs-de-grenoble-met-fin-a-ses-jours-a-sophia-antipolis-695834",
+          "titre": "Nice Matin",
           "paywall": false
         }
       ]
