@@ -1892,6 +1892,236 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "06",
+      "day": "25",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme mobile de la caserne de Niort a mis fin à ses jours.\n Peu d'informations disponibles sur ce suicide. (Source: SOFT-ONG)",
+      "section": "",
+      "location": "Niort (Deux-Sèvres)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 3000,
+        "lat": 46.32233477912322,
+        "lon": -0.46748181838240527
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "06",
+      "day": "28",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la DRCPN a mit fin à ses jours avec son arme de service. \n Il était père d'un jeune enfant.",
+      "section": "DRCPN",
+      "location": "Paris",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.83186271636056,
+        "lon": 2.3894131119463538
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-policier-affecte-a-paris-sest-suicide-a-son-domicile-2/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1409512577273581569",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "07",
+      "day": "03",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de la BMo de Saint-Lô a mis fin à ses jours sur un parking de la commune de Champrépus.",
+      "section": "BMo Saint-Lô",
+      "location": "Champrépus (Manche)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.83361823038683,
+        "lon":  -1.323507194390876
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/manche-un-gendarme-de-30-ans-se-suicide-avec-son-arme-de-service-a-champrepus/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/normandie/champrepus_50118/manche-un-gendarme-met-fin-a-ses-jours-avec-son-arme-de-service_43194016.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/normandie/manche-un-gendarme-se-suicide-avec-son-arme-de-service-218bd59e-dcce-11eb-8d47-fcdb6547f8ff",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-gendarme-manchois-de-30-ans-s-est-suicide-avec-son-arme-de-service-1625407374",
+          "titre": "France Bleu",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "07",
+      "day": "06",
+      "keywords": "",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier est décédé lors d'un exercice en pleine mer au large de Pornic.",
+      "section": "SDIS 44",
+      "location": "Pornic (Loire-Atlantique)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 250,
+        "lat": 47.11401564865496,
+        "lon":  -2.158165949293384
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/loire-atlantique-un-pompier-decede-lors-dun-entrainement-en-mer-au-large-de-pornic/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/SDIS44/status/1412510600731758599",
+          "titre": "@SDIS44 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/pays-de-la-loire/loire-atlantique/pornic-le-corps-du-pompier-disparu-en-mer-lors-d-un-exercice-a-ete-recupere-a63bff32-de98-11eb-9bd1-ace01374a160",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/pays-de-la-loire/loire-atlantique/pornic-un-sapeur-pompier-porte-disparu-lors-d-un-exercice-en-mer-2170246.html",
+          "titre": "France Info",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "07",
+      "day": "06",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de la BP de Baupame a mis fin à ses jours dans son logement de fonction avec son arme de service.",
+      "section": "BP Baupame",
+      "location": "Champrépus (Manche)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 50.09927363046322,
+        "lon":  2.8454640271001814
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/pas-de-calais-un-gendarme-de-la-brigade-de-baupame-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/1041355/article/2021-07-06/un-gendarme-se-donne-la-mort-la-brigade-de-bapaume-pres-d-arras",
+          "titre": "La Voix du Nord",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "07",
+      "day": "07",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un commissaire de l'antenne DGSI de Rennes a mit fin à ses jours avec son arme de service sur le parking du commissariat de Rennes.",
+      "section": "DGSI Rennes",
+      "location": "Rennes (Morbihan)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.10613978721958,
+        "lon": -1.6848600863402219
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/rennes-un-commissaire-de-police-de-la-dgsi-se-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/bretagne/rennes-35000/rennes-un-policier-retrouve-mort-sur-le-parking-du-commissariat-l-hypothese-du-suicide-privilegiee-0bf14314-df3e-11eb-8946-f8f2f967b95a",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/bretagne/ille-et-vilaine/policier-retrouve-mort-a-rennes-la-piste-du-suicide-privilegiee-2171836.html",
+          "titre": "France Info",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
