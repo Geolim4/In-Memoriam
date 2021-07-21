@@ -1978,7 +1978,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.83361823038683,
-        "lon":  -1.323507194390876
+        "lon": -1.323507194390876
       },
       "sources": [
         {
@@ -2012,7 +2012,7 @@
       "year": "2021",
       "month": "07",
       "day": "06",
-      "keywords": "",
+      "keywords": "Bruno Callard",
       "house": "pompier",
       "peers": [],
       "text": "Un pompier est décédé lors d'un exercice en pleine mer au large de Pornic.",
@@ -2023,7 +2023,7 @@
         "accurate": false,
         "radius": 250,
         "lat": 47.11401564865496,
-        "lon":  -2.158165949293384
+        "lon": -2.158165949293384
       },
       "sources": [
         {
@@ -2068,7 +2068,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 50.09927363046322,
-        "lon":  2.8454640271001814
+        "lon": 2.8454640271001814
       },
       "sources": [
         {
@@ -2092,7 +2092,7 @@
       "year": "2021",
       "month": "07",
       "day": "07",
-      "keywords": "",
+      "keywords": "Emmanuel",
       "house": "police",
       "peers": [],
       "text": "Un commissaire de l'antenne DGSI de Rennes a mit fin à ses jours avec son arme de service sur le parking du commissariat de Rennes.",
@@ -2119,6 +2119,166 @@
         {
           "url": "https://france3-regions.francetvinfo.fr/bretagne/ille-et-vilaine/policier-retrouve-mort-a-rennes-la-piste-du-suicide-privilegiee-2171836.html",
           "titre": "France Info",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": false,
+      "orphans": 0,
+      "unpublished_reason": "circonstances à confirmer",
+      "year": "2021",
+      "month": "07",
+      "day": "15",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Une capitaine de police a été retrouvé décédée dans son appartement (circonstances à confirmer ?).",
+      "section": "Courbevoie (Hauts-de-Seine)",
+      "location": "Verdun (Meuse)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 0,
+        "lon": 0
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/courbevoie-le-corps-sans-vie-dune-policiere-de-43-ans-decouvert-dans-son-appartement/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.valeursactuelles.com/faits-divers/hauts-de-seine-le-corps-dune-policiere-decouvert-dans-son-appartement/",
+          "titre": "VA",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "07",
+      "day": "16",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier du commissariat de Verdun a mis fin à ses jours. \n Mari et père de famille il était proche de la retraite.",
+      "section": "CSP Verdun",
+      "location": "Verdun (Meuse)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.161963555570765,
+        "lon": 5.386253274137738
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/meuse-un-policier-du-commissariat-de-verdun-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1416094258323496963",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/grand-est/verdun_55545/lorraine-suicide-d-un-major-de-police-du-commissariat-de-verdun_43534735.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "07",
+      "day": "17",
+      "keywords": "Ludovic LOGEZ",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 3e RH est décédé des suite d'un arrêt cardique en opérations au Sud-Liban. \n Il était marié et père d'un enfant.",
+      "section": "3e RH (BFA)",
+      "location": "Sud-Liban",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "radius": 25000,
+        "lat": 33.269788526633974,
+        "lon": 35.288275430255396
+      },
+      "sources": [
+        {
+          "url": "https://actu.fr/grand-est/metz_57463/metz-un-militaire-du-3e-regiment-de-hussards-decede-au-liban-l-armee-lui-rend-hommage_43534025.html",
+          "titre": "Actu.fr ",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/CEMAT_FR/status/1416497295760236547",
+          "titre": "@CEMAT_FR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://www.opex360.com/2021/07/18/deces-dun-sous-officier-du-3e-regiment-de-hussards-au-liban/",
+          "titre": "Opex 360",
+          "paywall": false
+        },
+        {
+          "url": "https://www.defense.gouv.fr/actualites/operations/liban-deces-de-l-adjudant-chef-ludovic-logez-du-3e-rh",
+          "titre": "MINARM - Hommage",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "07",
+      "day": "19",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un jeune ADS en formation au CRF de Draveil a mis fin à ses jours avec une arme à feu à son domicile.",
+      "section": "CRF Draveil",
+      "location": "Draveil (Essonne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.68870235684389,
+        "lon": 2.4343897283752995
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/essonne-un-eleve-policier-adjoint-de-19-ans-sest-suicide-a-bretigny-sur-orge/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1417166937755459592",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/bretigny-sur-orge_91103/essonne-un-jeune-homme-de-19-ans-se-suicide-chez-lui-avec-une-arme-a-feu_43549455.html",
+          "titre": "Actu.fr",
           "paywall": false
         }
       ]
