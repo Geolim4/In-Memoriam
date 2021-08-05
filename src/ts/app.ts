@@ -212,7 +212,7 @@ export class App {
   }
 
   private getFilters(form: HTMLInputElement, fromAnchor: boolean): Filters {
-    const anchor = location.hash.substr(1).split('&');
+    const anchor = decodeURIComponent(location.hash).substr(1).split('&');
     const exposedFilters = {};
     const filters = {};
     const selects = <NodeListOf<HTMLSelectElement>>form.querySelectorAll('select[data-filterable="true"], input[data-filterable="true"]');
@@ -582,7 +582,7 @@ export class App {
   }
 
   private setupSkeleton(formElement: HTMLInputElement, filters: Filters): void {
-    const searchInput = document.querySelector('#search');
+    const searchInput = formElement.querySelector('input#search') as HTMLInputElement;
     const searchMinLength = this._configObject.config['searchMinLength'];
 
     for (const [filterName, filterValuesArray] of Object.entries(this.filters)) {
@@ -596,6 +596,7 @@ export class App {
       }
     }
 
+    searchInput.value = filters.search;
     searchInput.setAttribute('minlength', searchMinLength);
     searchInput.setAttribute('placeholder', searchInput.getAttribute('placeholder').replace('%d', searchMinLength));
   }
