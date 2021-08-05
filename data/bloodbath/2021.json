@@ -2282,6 +2282,96 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "07",
+      "day": "31",
+      "keywords": "Noémie",
+      "house": "police",
+      "peers": [],
+      "text": "Une jeune policière du 12e est décédée dans un accident de trottinette en se rendant à son commissariat pour prendre son service.",
+      "section": "CSP Paris 12e",
+      "location": "Paris",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.83553866246621,
+        "lon": 2.3857929574703323
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/paris-la-policiere-grievement-blessee-dans-un-accident-de-la-route-est-decedee/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/prefpolice/status/1421404551660412928",
+          "titre": "@prefpolice (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lepoint.fr/faits-divers/paris-une-policiere-decede-apres-un-accident-de-trottinette-31-07-2021-2437436_2627.php",
+          "titre": "Le Point",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/deces-d-une-policiere-a-paris-apres-un-accident-de-trottinette-electrique-20210731",
+          "titre": "Le Figaro",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "08",
+      "day": "02",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de Carpentras (Vaucluse) a mis fin à ses jours avec son arme de service en lisière de forêt à Divajeu, dans la Drôme. \n Il était marié et père de deux enfants.",
+      "section": "CSP Carpentras",
+      "location": "Divajeu (Drôme)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 2000,
+        "lat": 44.70102290045993,
+        "lon": 5.01559363815542
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-policier-du-commissariat-de-carpentras-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1423320463867011076",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/societe/vaucluse-mort-d-un-policier-de-carpentras-la-these-du-suicide-envisagee_43925871.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/3097023-20210804-vaucluse-policier-retrouve-mort-suicide-fortement-pressenti",
+          "titre": "20 minutes",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
