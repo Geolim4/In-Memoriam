@@ -2052,12 +2052,12 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
-      "orphans": 0,
+      "orphans": 4,
       "unpublished_reason": "",
       "year": "2021",
       "month": "07",
       "day": "06",
-      "keywords": "",
+      "keywords": "Sébastien",
       "house": "gendarmerie",
       "peers": [],
       "text": "Un gendarme de la BP de Baupame a mis fin à ses jours dans son logement de fonction avec son arme de service.",
@@ -2074,6 +2074,11 @@
         {
           "url": "https://actu17.fr/pas-de-calais-un-gendarme-de-la-brigade-de-baupame-sest-suicide/",
           "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/index.php/2021/07/08/deces-tragique-dun-gendarme-de-bapaume-pas-de-calais/",
+          "titre": "La Voix du Gendarme",
           "paywall": false
         },
         {
@@ -2369,6 +2374,96 @@
         {
           "url": "https://www.20minutes.fr/faits_divers/3097023-20210804-vaucluse-policier-retrouve-mort-suicide-fortement-pressenti",
           "titre": "20 minutes",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "08",
+      "day": "26",
+      "keywords": "Théo Fischer",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CRS 51 a mis fin à ses jours avec son arme de service dans sa chambre d'hôtel lors d'un déplacement à Perpignan.",
+      "section": "CRS 51",
+      "location": "Perpignan (Pyrénées-Orientales)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 2500,
+        "lat": 42.69047513881845,
+        "lon": 2.895403767633608
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/perpignan-un-policier-de-24-ans-affecte-a-la-crs-51-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1430915439484305408",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-crs-de-la-compagnie-de-saran-se-suicide-avec-son-arme-de-service-a-perpignan-1629998106",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ladepeche.fr/2021/08/27/perpignan-un-crs-se-suicide-avec-son-arme-au-cours-dun-deplacement-avec-sa-compagnie-9753759.php",
+          "titre": "Le Dépêche",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "08",
+      "day": "29",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme du PMo Sélestat a mis fin à ses jours avec son arme de service dans son logement de service. \n Père d'un enfant il était à un mois de la retraite.",
+      "section": "PMo Sélestat",
+      "location": "Sélestat (Bas-Rhin)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.261836738479516,
+        "lon":  7.4485806176421265
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/bas-rhin-un-gendarme-de-selestat-se-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.dna.fr/faits-divers-justice/2021/08/30/un-gendarme-se-suicide-avec-son-arme-de-service",
+          "titre": "DNA",
+          "paywall": false
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/index.php/2021/08/30/deces-tragique-dun-gendarme-de-selestat/",
+          "titre": "La voix du Gendarme",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/suicide-un-gendarme-retrouve-mort-selestat-bas-rhin",
+          "titre": "L'Essor",
           "paywall": false
         }
       ]
