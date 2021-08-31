@@ -2440,7 +2440,7 @@
       "location": "Sélestat (Bas-Rhin)",
       "origin": "interieur",
       "gps": {
-        "accurate": false,
+        "accurate": true,
         "radius": 0,
         "lat": 48.261836738479516,
         "lon":  7.4485806176421265
