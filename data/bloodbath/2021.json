@@ -2467,6 +2467,141 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "09",
+      "day": "12",
+      "keywords": "Pierre-François Bonnard",
+      "house": "secciv",
+      "peers": [],
+      "text": "Un mécanicien de la sécurité civile est décédé lors d'un crash d'hélicoptère en Isère.\n Il était marié et père d'un petit garçon.",
+      "section": "Dragon 38",
+      "location": "Villard-de-Lans (Isère)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 500,
+        "lat": 45.06204203869025,
+        "lon":  5.559637109111111
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/isere-un-helicoptere-de-la-securite-civile-sest-ecrase-avec-cinq-personnes-a-son-bord/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/SecCivileFrance/status/1437092062072033281",
+          "titre": "@SecCivileFrance (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/accident-mortel-d-helicoptere-dans-le-vercors-deux-rescapes-temoignent-1632073791",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/isere/direct-crash-d-helicoptere-en-isere-suivez-l-hommage-au-mecanicien-decede-a-partir-de-11-heures-2253676.html",
+          "titre": "France Info",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "09",
+      "day": "17",
+      "keywords": "Adam TAHRI",
+      "house": "armee",
+      "peers": [],
+      "text": "Un marin du GPD Atlantique a perdu la vie en mer lors d'un exercice de plongée situé sur le site de Pénnou-Pell, au sud de Brest.",
+      "section": "GPD Atlantique (Marine Nationale)",
+      "location": "Pénnou-Pell (Finistère)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 800,
+        "lat": 48.34939918492516,
+        "lon": -4.499828454292016
+      },
+      "sources": [
+        {
+          "url": "https://www.defense.gouv.fr/fre/marine/actu-marine/in-memoriam-second-maitre-adam-tahri",
+          "titre": "MINARM - Hommage",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/brest-le-corps-du-plongeur-de-la-marine-nationale-a-ete-retrouve-19-09-2021-3NJQMMMURZFB7H3VD3TM6V3CNA.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/MarineNationale/status/1438958555512688648",
+          "titre": "@MarineNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/brest-l-adieu-emouvant-a-adam-tahri-le-plongeur-demineur-decede-en-mer-1632496476",
+          "titre": "France Bleu",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "09",
+      "day": "24",
+      "keywords": "Maxime BLASCO",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 7e BCA est decédé en opération dans la région de Gossi, au sud du Mali, lors d'une opération au sein de la force BARKHANE.\n Il était pacsé et père d’un enfant.",
+      "section": "GCM - 7e BCA",
+      "location": "Région de Gossi (Mali)",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "radius": 10000,
+        "lat": 15.134487062299785,
+        "lon":  -0.7181436072560037
+      },
+      "sources": [
+        {
+          "url": "https://www.defense.gouv.fr/terre/base/in-memoriam/mali/barkhane-deces-du-caporal-chef-maxime-blasco-du-7e-bataillon-de-chasseurs-alpins",
+          "titre": "MINARM - Hommage",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/un-hommage-national-sera-rendu-au-caporal-chef-maxime-blasco-mort-au-mali-26-09-2021-ZECPTXWCORBORND76VP4MHG7TY.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/armeedeterre/status/1441496455613607943",
+          "titre": "@armeedeterre (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/mali-le-caporal-chef-maxime-blasco-a-ete-tue-au-combat/",
+          "titre": "Actu17",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
