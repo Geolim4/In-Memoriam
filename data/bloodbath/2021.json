@@ -2602,6 +2602,131 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "09",
+      "day": "26",
+      "keywords": "Taylor",
+      "house": "police",
+      "peers": [],
+      "text": "Une jeune policière récemment affectée au commissariat de Choisy-le-Roi est décédé après avoir absorbé des médicaments.",
+      "section": "CSP Choisy-le-Roi",
+      "location": "Choisy-le-Roi (Val-de-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.76386266548605,
+        "lon": 2.406404239225098
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/val-de-marne-une-jeune-policiere-affectee-choisy-le-roi-sest-suicidee/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/choisy-le-roi_94022/val-de-marne-une-policiere-de-choisy-le-roi-se-suicide_45201412.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "09",
+      "day": "28",
+      "keywords": "Jennifer BENET",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Une gendarme de 35 ans se tue accidentellement avec son arme de service lors d'une manipulation dans la chambre forte de la caserne.\n Elle était mariée et mère d'un bébé de 10 mois.",
+      "section": "CGD Hyères",
+      "location": "Hyères (Var)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.12644882227159,
+        "lon": 6.105840290324034
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/hyeres-une-gendarme-de-35-ans-se-tue-accidentellement-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/une-gendarme-du-corps-de-soutien-decede-suite-a-une-blessure-par-arme-a-feu-dans-le-var",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/provence-alpes-cote-dazur/hyeres-83400/var-une-gendarme-meurt-en-manipulant-son-arme-de-service-7451995",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/une-gendarme-de-hyeres-se-tue-accidentellement-avec-son-arme-de-service-1633094270",
+          "titre": "France Bleu",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "09",
+      "day": "30",
+      "keywords": "Yaël COLIN",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Une officier de gendarmerie a mis fin à ses jours avec son arme de service.\n Il était marié et père de deux enfants.",
+      "section": "COB Issoudun",
+      "location": "Issoudun (Indre)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.95534218624126,
+        "lon": 1.9938243877728137
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/indre-un-gendarme-de-50-ans-se-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/issoudun-le-commandant-de-la-communaute-de-brigades-de-gendarmerie-d-issoudun-est-decede-1633370713",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lanouvellerepublique.fr/issoudun/issoudun-deces-du-commandant-de-brigade-de-gendarmerie",
+          "titre": "La nouvelle république",
+          "paywall": false
+        },
+        {
+          "url": "https://www.profession-gendarme.com/deces-tragique-du-commandant-de-la-communaute-de-brigades-dissoudun/",
+          "titre": "Profession Gendarme",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
