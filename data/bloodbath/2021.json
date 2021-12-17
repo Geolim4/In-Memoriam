@@ -2977,6 +2977,216 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "11",
+      "day": "10",
+      "keywords": "David Minatchy",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier a mit fin à ses jours avec son arme de service dans la cour du commissariat.\n Il était père de deux enfants.",
+      "section": "Brigade Nuit, CSP Malartic",
+      "location": "Saint-Denis (Réunion)",
+      "origin": "domtom",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": -20.88635403963024,
+        "lon": 55.4523133491925
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/la-reunion-un-policier-de-41-ans-se-suicide-avec-son-arme-de-service-dans-la-cour-du-commissariat/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/region-la-reunion/un-policier-se-suicide-avec-son-arme-de-service-dans-une-brigade-de-la-reunion-adb63ee8-43ca-11ec-bbd9-998ea1ad5f9a",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://la1ere.francetvinfo.fr/reunion/saint-denis/la-police-de-la-reunion-en-deuil-apres-le-suicide-d-un-brigadier-au-commissariat-malartic-1151761.html",
+          "titre": "France Info",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "11",
+      "day": "18",
+      "keywords": "Ouladzislau CHASTAKOU",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire de la légion étrangère décède lors d'un exercice de préparation opérationnelle.",
+      "section": "2e REI",
+      "location": "Bellegarde (gard)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 50,
+        "lat": 43.75797614527455,
+        "lon": 4.505336194066227
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/LegionEtrangere/status/1461419623266631687",
+          "titre": "@LegionEtrangere (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/occitanie/gard/nimes/nimes-la-legion-etrangere-rend-hommage-au-caporal-mort-en-exercice-2341534.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/faits-divers/gard-un-legionnaire-de-24-ans-meurt-noye-au-cours-d-un-entrainement-au-lac-de-bellegarde_46561953.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "http://lignesdedefense.blogs.ouest-france.fr/archive/2021/11/19/un-legionnaire-du-2e-rei-decede-a-l-entrainement-22578.html",
+          "titre": "Ouest France",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "11",
+      "day": "21",
+      "keywords": "Frédéric Ferry",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal de la ville de Saint-Émilion a mit fin à ses jours avec son arme de service sur son lieu de travail.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Police Municipale",
+      "location": "Saint-Émilion (Gironde)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.8943111816809,
+        "lon": -0.15573038018834817
+      },
+      "sources": [
+        {
+          "url": "https://www.facebook.com/villedesaintemilion/posts/451221999895957",
+          "titre": "@villedesaintemilion (Facebook)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.sudouest.fr/faits-divers/saint-emilion-un-policier-municipal-se-donne-la-mort-dans-la-mairie-7051401.php",
+          "titre": "Sud Ouest",
+          "paywall": true
+        },
+        {
+          "url": "https://actupenit.com/2021/11/22/saint-emilion-un-policier-municipal-se-donne-la-mort-sur-son-lieu-de-travail/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "11",
+      "day": "24",
+      "keywords": "Thierry Bourez",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal de la ville de Saint-Émilion a mit fin à ses jours sans faire usage de son arme de service.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Police Municipale Corbehem",
+      "location": "Vitry-en-Artois (Pas-de-Calais)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 50.32715844026719,
+        "lon": 2.980386980676808
+      },
+      "sources": [
+        {
+          "url": "https://www.lobservateur.fr/faits-divers/faits-divers-douaisis/2021/11/26/corbehem-tres-vive-emotion-apres-la-disparition-du-policier-municipal-de-la-commune/",
+          "titre": "L'observateur",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/1104446/article/2021-11-25/vive-emotion-corbehem-apres-la-mort-du-policier-municipal-percute-par-un-train",
+          "titre": "La voix du Nord",
+          "paywall": true
+        },
+        {
+          "url": "https://actupenit.com/2021/11/26/hauts-de-france-vive-emotion-apres-la-mort-dun-policier-municipal-percute-par-un-train/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "other",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "12",
+      "day": "07",
+      "keywords": "Pablo Sauret",
+      "house": "police",
+      "peers": [],
+      "text": "Pablo, un EGPX en formation à l'ENP de Nîmes est décédé des suite d'un arrêt cardiaque après un footing au sein de son école. \nIl était en formation depuis plusieurs mois après avoir été ADS pendant presque 3 ans à Lyon.",
+      "section": "ENP Nîmes",
+      "location": "Nîmes (gard)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 150,
+        "lat": 43.860112601821484,
+        "lon": 4.4046768322570165
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/nimes-un-eleve-gardien-de-la-paix-seffondre-durant-un-footing-et-decede-a-lhopital/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/occitanie/nimes_30189/un-ancien-policier-adjoint-de-lyon-de-21-ans-meurt-d-un-malaise-cardiaque-lors-de-sa-seance-de-sport_47046619.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/gard-30/nimes-un-eleve-de-lecole-nationale-de-police-meurt-lors-dune-seance-de-sport-08-12-2021-QXXKUVTSIFGF5ADOGPRPHDTZ7Q.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/occitanie/gard/nimes/nimes-mort-d-un-jeune-eleve-de-l-ecole-de-police-lors-d-une-seance-de-sport-2369722.html",
+          "titre": "France Info",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
