@@ -3155,7 +3155,7 @@
       "keywords": "Pablo Sauret",
       "house": "police",
       "peers": [],
-      "text": "Pablo, un EGPX en formation à l'ENP de Nîmes est décédé des suite d'un arrêt cardiaque après un footing au sein de son école. \nIl était en formation depuis plusieurs mois après avoir été ADS pendant presque 3 ans à Lyon.",
+      "text": "Pablo, un EGPX en formation à l'ENP de Nîmes est décédé des suites d'un arrêt cardiaque après un footing au sein de son école. \nIl était en formation depuis plusieurs mois après avoir été ADS pendant presque 3 ans à Lyon.",
       "section": "ENP Nîmes",
       "location": "Nîmes (gard)",
       "origin": "interieur",
@@ -3184,6 +3184,116 @@
         {
           "url": "https://france3-regions.francetvinfo.fr/occitanie/gard/nimes/nimes-mort-d-un-jeune-eleve-de-l-ecole-de-police-lors-d-une-seance-de-sport-2369722.html",
           "titre": "France Info",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "12",
+      "day": "20",
+      "keywords": "Éric",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la DIPJ de Rennes à mis fin à ses jours.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "DIPJ Rennes",
+      "location": "Rennes (Ille-et-Vilaine)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 100,
+        "lat": 48.10624050607669,
+        "lon": -1.6864860441174379
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/un-policier-affecte-a-la-police-judiciaire-de-rennes-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.letelegramme.fr/ille-et-vilaine/rennes/suicide-d-un-policier-affecte-a-la-pj-de-rennes-20-12-2021-12893348.php",
+          "titre": "Le Télégramme",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "12",
+      "day": "20",
+      "keywords": "Olivier Crouset",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la PAF de Beauvais à mis fin à ses jours à son domicile à Sarnois.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "PAF Beauvais",
+      "location": "Sarnois (Oise)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 500,
+        "lat": 49.67839539942493,
+        "lon": 1.9174923292439403
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/oise-un-policier-se-retranche-chez-lui-et-se-suicide-malgre-lintervention-du-gign-pour-le-sauver/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/1117209/article/2021-12-21/picardie-un-policier-retranche-chez-lui-met-fin-ses-jours-avec-son-arme-de",
+          "titre": "La Voix du Nord",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/3202883-20211221-oise-policier-blesse-mortellement-chez-arme-service",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.oisehebdo.fr/2021/12/21/olivier-crouset-le-policier-qui-setait-retranche-a-sarnois-est-mort/?fr=operanews",
+          "titre": "Oise Hebdo",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "12",
+      "day": "21",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CRS 60 a mis fin à ses jours par pendaison.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "CRS 60",
+      "location": "Montfavet (Vaucluse)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.92125044093485,
+        "lon": 4.8733437503579085
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
           "paywall": false
         }
       ]
