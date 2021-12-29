@@ -39,7 +39,7 @@
       "bluedot": "./assets/images/map/bluedot.png",
       "refresh": "./assets/images/map/refresh.png"
     },
-    "maxZoom": 15,
+    "maxZoom": 16,
     "searchMinLength": 3
   }
 }

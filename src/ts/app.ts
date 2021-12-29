@@ -319,7 +319,7 @@ export class App {
           if (document.getElementById('modal-bloodbath-list').classList.contains('is-open')) {
             micromodal.close('modal-bloodbath-list');
           }
-          map.setZoom(14);
+          map.setZoom(this._configObject.config['maxZoom']);
           google.maps.event.trigger(marker, 'click');
           map.setCenter(marker.getPosition());
         }
@@ -550,7 +550,7 @@ export class App {
         this._markerCluster = new MarkerClusterer(map, this._markers, {
           gridSize: 60,
           imagePath: './assets/images/clustering/m',
-          maxZoom: 14,
+          maxZoom: this._configObject.config['maxZoom'] - 2,
         });
       }
 
