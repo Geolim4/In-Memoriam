@@ -3297,6 +3297,51 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "12",
+      "day": "27",
+      "keywords": "Yohann OUAKLI",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un jeune élève gendarme a mis fins à ses jours avec son arme de service dans son logement de fonction.",
+      "section": "BTA",
+      "location": "Malesherbois (Loiret)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.2968660658028,
+        "lon": 2.40841403419229
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/loiret-un-eleve-gendarme-de-24-ans-retrouve-mort-il-se-serait-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/loiret-un-jeune-gendarme-retrouve-mort-dans-sa-caserne-la-these-du-suicide-privilegiee-1640679348",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.larep.fr/malesherbois-45330/actualites/un-jeune-gendarme-retrouve-mort-au-malesherbois-l-hypothese-du-suicide-privilegiee_14066678/",
+          "titre": "Larep",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/deces-dun-eleve-gendarme-dans-le-loiret-la-these-du-suicide-privilegiee",
+          "titre": "L'Essor",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
