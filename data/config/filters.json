@@ -2,6 +2,10 @@
   "filters": {
     "year": [
       {
+        "value": "2022",
+        "label": "2022"
+      },
+      {
         "value": "2021",
         "label": "2021"
       },

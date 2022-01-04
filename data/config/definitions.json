@@ -39,8 +39,8 @@
       },
       "other": {
         "none": "",
-        "singular": "<span class=\"label label-danger\">%d</span> autre décès",
-        "plural": "<span class=\"label label-danger\">%d</span> autres décès"
+        "singular": "<span class=\"label label-danger\">%d</span> décès divers",
+        "plural": "<span class=\"label label-danger\">%d</span> décès divers"
       }
     },
     "house": {

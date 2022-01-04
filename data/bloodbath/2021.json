@@ -497,6 +497,36 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "01",
+      "day": "30",
+      "keywords": "Eric",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du Régiment de marche du Tchad a mit fin à ses jours par arme à feu.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Régiment de marche du Tchad",
+      "location": "Meyenheim (Haut-Rhin)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 300,
+        "lat": 47.91681382835416,
+        "lon": 7.40759886288138
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
       "orphans": 2,
       "unpublished_reason": "",
       "year": "2021",
@@ -694,7 +724,7 @@
       ]
     },
     {
-      "cause": "deathOnDuty",
+      "cause": "accident",
       "count": 1,
       "published": true,
       "orphans": 2,
@@ -1002,7 +1032,7 @@
       "year": "2021",
       "month": "03",
       "day": "27",
-      "keywords": "",
+      "keywords": "Jeff Rotaru",
       "house": "armee",
       "peers": [],
       "text": "Un fusilier marin est décédé lors d'une opération en mer dans la baie de Cherbourg.",
@@ -1399,6 +1429,36 @@
         {
           "url": "https://lavoixdugendarme.fr/index.php/2021/05/09/deces-tragique-dun-adjudant-du-psig-de-compiegne/",
           "titre": "Le Voix du Gendarme",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "05",
+      "day": "12",
+      "keywords": "YOHANN",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du SSA a mit fin à ses jours par arme à feu.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Direction SSA",
+      "location": "Bordeaux (Gironde)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.82714234883328,
+        "lon": -0.5753859536126794
+      },
+      "sources": [
+        {
+          "url": "https://www.sudouest.fr/gironde/bordeaux/bordeaux-un-militaire-decede-par-arme-a-feu-2658207.php",
+          "titre": "Sud Ouest",
           "paywall": false
         }
       ]
@@ -1857,7 +1917,7 @@
       "year": "2021",
       "month": "06",
       "day": "18",
-      "keywords": "",
+      "keywords": "Fabrice",
       "house": "police",
       "peers": [],
       "text": "Un policier de la CRS 47 en déplacement à proximité de Nice a mit fin à ses jours avec son arme de service dans un des véhicules situé sur le parking de leur hôtel.",
@@ -1936,7 +1996,7 @@
       "house": "police",
       "peers": [],
       "text": "Un policier de la DRCPN a mit fin à ses jours avec son arme de service. \n Il était père d'un jeune enfant.",
-      "section": "DRCPN",
+      "section": "SCA - DRCPN",
       "location": "Paris",
       "origin": "interieur",
       "gps": {
@@ -2167,8 +2227,8 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
-      "orphans": 1,
-      "unpublished_reason": "",
+      "orphans": 3,
+      "unpublished_reason": "Voir https://www.instagram.com/p/CRZbXNijxyN/",
       "year": "2021",
       "month": "07",
       "day": "16",
@@ -2342,7 +2402,7 @@
       "year": "2021",
       "month": "08",
       "day": "02",
-      "keywords": "",
+      "keywords": "Bernard",
       "house": "police",
       "peers": [],
       "text": "Un policier de Carpentras (Vaucluse) a mis fin à ses jours avec son arme de service en lisière de forêt à Divajeu, dans la Drôme. \n Il était marié et père de deux enfants.",
@@ -2639,6 +2699,46 @@
       ]
     },
     {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "09",
+      "day": "27",
+      "keywords": "Yann MEHEUST",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de la BT de Saint-Laurent-sur-Gore a mis fin à ses jours avec son arme de service.\n Il était marié et père de deux jeunes jumeaux.",
+      "section": "BT Saint-Laurent-sur-Gore",
+      "location": "Saint-Laurent-sur-Gore (Haute-Vienne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.766336418754946,
+        "lon": 0.9470199336658687
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/haute-vienne-un-gendarme-sest-suicide-avec-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/deces-tragique-dun-gendarme-de-la-haute-vienne/",
+          "titre": "La voix du gendarme",
+          "paywall": false
+        },
+        {
+          "url": "https://www.facebook.com/AssociationGendarmesetCitoyens/posts/1892851297563664",
+          "titre": "@AssociationGendarmesetCitoyens (Facebook)",
+          "paywall": false
+        }
+      ]
+    },
+    {
       "cause": "accident",
       "count": 1,
       "published": true,
@@ -2809,6 +2909,51 @@
       ]
     },
     {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "10",
+      "day": "12",
+      "keywords": "Adrien Quélin",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 4e RCh est décédé accidentellement au Mali le 12 octobre dans le cadre de l’opération Barkhane.",
+      "section": "4e RCh",
+      "location": "Tombouctou (Mali)",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "radius": 2000,
+        "lat": 16.76702723342629,
+        "lon": -3.003773835802585
+      },
+      "sources": [
+        {
+          "url": "https://www.defense.gouv.fr/terre/actu-terre/barkhane-deces-du-marechal-des-logis-adrien-quelin",
+          "titre": "MINARM - Hommage",
+          "paywall": false
+        },
+        {
+          "url": "https://www.huffingtonpost.fr/entry/le-soldat-francais-adrien-quelin-tue-accidentellement-au-mali_fr_61668085e4b028316c8f0a4d",
+          "titre": "Huffpost",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/1083688/article/2021-10-13/operation-barkhane-le-militaire-adrien-quelin-29-ans-est-mort-dans-un-accident",
+          "titre": "la Voix du Nord",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/CEMA_FR/status/1448166700772433926",
+          "titre": "@CEMA_FR (Twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
@@ -2851,7 +2996,7 @@
       "house": "police",
       "peers": [],
       "text": "Un policier a mit fin à ses jours avec son arme de service à son domicile. \n Il était père de deux enfants.",
-      "section": "CSP Anglet",
+      "section": "BSU",
       "location": "Anglet (Pyrénées-Atlantiques)",
       "origin": "interieur",
       "gps": {
@@ -2961,7 +3106,7 @@
       "house": "police",
       "peers": [],
       "text": "Un policier a mit fin à ses jours avec son arme de service à son domicile.\n Peu d'informations disponibles sur ce suicide.",
-      "section": "BMR (PAF)",
+      "section": "BMR (PAF 77)",
       "location": "Chessy (Seine-et-Marne)",
       "origin": "interieur",
       "gps": {
@@ -3144,7 +3289,7 @@
       ]
     },
     {
-      "cause": "other",
+      "cause": "accident",
       "count": 1,
       "published": true,
       "orphans": 0,
@@ -3339,6 +3484,131 @@
         {
           "url": "https://lessor.org/vie-des-personnels/deces-dun-eleve-gendarme-dans-le-loiret-la-these-du-suicide-privilegiee",
           "titre": "L'Essor",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "01",
+      "day": "01",
+      "keywords": "Jérémy Amoroso",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 13e BCA décède d'un malaise cardiaque pendant un entraînement sur le sentier de la Chapelle sur île de La Réunion.\n Il était marié et père de trois enfants.",
+      "section": "13e BCA",
+      "location": "Hyères (Var)",
+      "origin": "opex",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": -21.137067633894816,
+        "lon": 55.45365524682377
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/larmee-de-terre-annonce-le-deces-accidentel-dun-militaire-de-37-ans-sur-lile-de-la-reunion/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/CEMAT_FR/status/1477596783643697157",
+          "titre": "@CEMAT_FR (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "http://lignesdedefense.blogs.ouest-france.fr/archive/2022/01/02/un-caporal-chef-du-13e-bca-est-decede-accidentellement-a-la-22686.html",
+          "titre": "Ouest France",
+          "paywall": false
+        },
+        {
+          "url": "https://www.linfo.re/la-reunion/faits-divers/cilaos-deces-du-caporal-chef-jeremy-amoroso-des-suites-d-un-malaise-lors-d-un-exercice",
+          "titre": "Linfo.re",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2021",
+      "month": "12",
+      "day": "31",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la brigade motocycliste de Nantes est décédé d'un malaise cardiaque en service.\n Il était papa d'un jeune enfant.",
+      "section": "CSP Nantes",
+      "location": "Nantes (Loire-Atlantique)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.22760108438644,
+        "lon": -1.5514513374345378
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/nantes-un-policier-decede-dun-malaise-cardiaque-durant-son-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale",
+          "titre": "@PoliceNationale (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-du-commissariat-de-nantes-meurt-d-un-malaise-cardiaque-en-service-1640970304",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.ouest-france.fr/pays-de-la-loire/nantes-44000/nantes-le-commissariat-central-endeuille-apres-le-deces-d-un-policier-ce-vendredi-83458e74-6a5e-11ec-9c8e-ceb3a0be2fbd",
+          "titre": "Ouest France",
+          "paywall": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "Cyril",
+      "year": "2021",
+      "month": "12",
+      "day": "31",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la circonscription de Cagnes-sur-Mer a mit fin à ses jours.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "CSP Cagnes-sur-Mer",
+      "location": "Cagnes-sur-Mer (Alpes Maritimes)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.65589954142051,
+        "lon": 7.150460917513753
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/alpes-maritimes-un-policier-de-37-ans-affecte-a-cagnes-sur-mer-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.nicematin.com/faits-divers/un-policier-met-fin-a-ses-jours-a-cagnes-sur-mer-avec-son-arme-de-service-736777",
+          "titre": "Nice Matin",
           "paywall": false
         }
       ]
