@@ -1,0 +1,37 @@
+{
+  "settings": {
+    "up_to_date": true
+  },
+  "deaths": [
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "01",
+      "day": "03",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier réserviste décède d'un malaise cardiaque pendant une patrouille pédestre en centre ville de Bordeaux.",
+      "section": "CSP Bordeaux",
+      "location": "Bordeaux (Gironde)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.83453036697594,
+        "lon": -0.5890249296178439
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
+          "paywall": false
+        }
+      ]
+    }
+  ]
+}
