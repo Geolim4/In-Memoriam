@@ -36,7 +36,7 @@
     {
       "cause": "accident",
       "count": 1,
-      "published": false,
+      "published": true,
       "orphans": 2,
       "unpublished_reason": "",
       "year": "2022",
