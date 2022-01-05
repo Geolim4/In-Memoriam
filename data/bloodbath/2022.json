@@ -32,6 +32,91 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": false,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "01",
+      "day": "04",
+      "keywords": "Willy Vangrevelinghe",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier du SDIS 02 décède d'un malaise cardiaque pendant pendant sa garde.\n Il était marié et père de deux enfants.",
+      "section": "SDIS 02",
+      "location": "Bordeaux (Gironde)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.626922131269566,
+        "lon": 3.221366866794481
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/SecCivileFrance/status/1478613291513663488",
+          "titre": "@SecCivileFrance (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://www.aisnenouvelle.fr/id266020/article/2022-01-05/le-centre-de-secours-de-chauny-choque-apres-le-deces-dun-pompier-lors-de-sa",
+          "titre": "Aisne Nouvelle",
+          "paywall": false
+        },
+        {
+          "url": "https://premium.courrier-picard.fr/id266034/article/2022-01-05/chauny-un-sapeur-pompier-decede-des-suites-dun-malaise",
+          "titre": "Courrier Picard",
+          "paywall": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "01",
+      "day": "04",
+      "keywords": "Didier",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier réserviste de la circonscription de Besançon a mit fin à ses jours.\n Retraité de la police nationale il était marié et père de deux filles.",
+      "section": "CSP Besançon",
+      "location": "Besançon (Doubs)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.23268481532017,
+        "lon": 6.020094802896871
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/besancon-un-policier-reserviste-de-61-ans-se-suicide-au-commissariat/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/bourgogne-franche-comte/doubs/besancon/ce-que-l-on-sait-sur-la-suicide-d-un-policier-reserviste-au-commissariat-de-besancon-2402032.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/3211263-20220105-besancon-policier-reserviste-suicide-commissariat",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-reserviste-se-suicide-dans-le-commissariat-de-besancon-1641323749",
+          "titre": "France Bleu",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
