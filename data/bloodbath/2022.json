@@ -117,6 +117,36 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "https://www.facebook.com/AssoFFOC/posts/465363148558841",
+      "year": "2022",
+      "month": "01",
+      "day": "07",
+      "keywords": "Yannick",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CRS 43 a mit fin à ses jours à son domicile près de Perpignan.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "CRS 43",
+      "location": "Châlon sur Saône (Saône-et-Loire)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.77834499859815,
+        "lon": 4.860676216368708
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/pyrenees-orientales-un-policier-affecte-a-la-crs-43-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
