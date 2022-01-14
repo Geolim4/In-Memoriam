@@ -3542,7 +3542,7 @@
       "year": "2021",
       "month": "12",
       "day": "31",
-      "keywords": "",
+      "keywords": "Wilfried Faron",
       "house": "police",
       "peers": [],
       "text": "Un policier de la brigade motocycliste de Nantes est décédé d'un malaise cardiaque en service.\n Il était papa d'un jeune enfant.",
@@ -3559,6 +3559,11 @@
         {
           "url": "https://actu17.fr/nantes-un-policier-decede-dun-malaise-cardiaque-durant-son-service/",
           "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=12zG5MAFvgw",
+          "titre": "MININT - Hommage",
           "paywall": false
         },
         {
