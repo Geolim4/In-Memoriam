@@ -182,6 +182,11 @@
           "paywall": false
         },
         {
+          "url": "https://actu17.fr/ardennes-un-gendarme-de-40-ans-de-la-brigade-de-fumay-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
           "url": "https://lavoixdugendarme.fr/deces-tragique-dun-gendarme-des-ardennes/",
           "titre": "La Voix du Gendarme",
           "paywall": false
@@ -232,7 +237,7 @@
       "year": "2022",
       "month": "01",
       "day": "13",
-      "keywords": "Meghan",
+      "keywords": "Meghan Granger",
       "house": "police",
       "peers": [],
       "text": "Un jeune policière de la CSP de Lille a mis fins à ses jours à son domicile avec son arme de service.",
@@ -254,6 +259,41 @@
         {
           "url": "https://twitter.com/PoliceNat59/status/1481930066682597380",
           "titre": "@PoliceNat59 (Twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "01",
+      "day": "15",
+      "keywords": "Pierre-Yves",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la BRIF a mis fins à ses jours à son domicile avec son arme de service à son domicile à Noisiel (Seine-et-Marne).\n Il avait affecté à la BRIF 2 semaines auparavant.",
+      "section": "BRIF - DRPJ",
+      "location": "Paris 17e",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.893549363830516,
+        "lon": 2.308343783042874
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/noisiel-un-policier-de-30-ans-sest-suicide-le-troisieme-en-48-heures/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/prefpolice/status/1482349873554993162",
+          "titre": "@prefpolice (Twitter)",
           "paywall": false
         }
       ]
