@@ -297,6 +297,86 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "01",
+      "day": "18",
+      "keywords": "Julien",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la circonscription de Lille a mis fins à ses jours avec son arme de service.\n Il était père de deux enfants.",
+      "section": "Ciat Madeleine - CSP Lille",
+      "location": "Lille (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 50.651778019069674,
+        "lon": 3.067562951650938
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/deux-policiers-affectes-a-la-madeleine-et-a-strasbourg-se-sont-suicides/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat59/status/1483383777456013313",
+          "titre": "@PoliceNat59 (Twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "01",
+      "day": "18",
+      "keywords": "Renaud",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la circonscription de Strasbourg a mis fins à ses jours à son domicile avec une arme de chasse.\n Il était marié et père de deux jeunes filles.",
+      "section": "BST - CSP Strasbourg",
+      "location": "Strasbourg (Bas-Rhin)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.572698985936675,
+        "lon": 7.749823562330138
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/deux-policiers-affectes-a-la-madeleine-et-a-strasbourg-se-sont-suicides/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat67/status/1483406313916796928",
+          "titre": "@PoliceNat67 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/grand-est/strasbourg_67482/la-tristesse-nous-envahit-un-policier-de-strasbourg-se-suicide-hommage-de-ses-collegues_48013357.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.dna.fr/faits-divers-justice/2022/01/18/un-policier-de-43-ans-se-suicide-a-son-domicile",
+          "titre": "DNA",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
