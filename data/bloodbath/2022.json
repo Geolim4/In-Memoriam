@@ -377,6 +377,46 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "01",
+      "day": "21",
+      "keywords": "Christophe",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CRS 25 a mis fins à ses jours à hauteur d’un passage à niveau sur la commune de Saint-Vincent-de-Paul.",
+      "section": "CRS 25",
+      "location": "Saint-Vincent-de-Paul (Landes)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.78169381540944,
+        "lon": -0.9946545599184867
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/landes-un-crs-de-pau-meurt-ecrase-par-un-train-il-pourrait-sagir-dun-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.sudouest.fr/landes/saint-vincent-de-paul/landes-un-crs-de-pau-decede-ecrase-par-un-train-a-saint-vincent-de-paul-7933507.php",
+          "titre": "Sud Ouest",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-crs-de-pau-meurt-percute-par-un-train-dans-les-landes-1642843276",
+          "titre": "France Bleu",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
