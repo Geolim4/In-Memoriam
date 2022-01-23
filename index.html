@@ -48,35 +48,37 @@
         <div class="row mtop">
             <div data-role="definitionsText" class="col-md-12"></div>
         </div>
-        <form id="form-filters" class="row mtop">
-            <fieldset class="col-md-4">
-                <label for="search">Recherche</label>
-                <input class="form-control" type="text" name="search" id="search" data-filterable="true" placeholder="Saisissez %d caractères minimum pour rechercher un nom, une circonscription, etc." minlength=""/>
-            </fieldset>
-            <fieldset class="col-md-2">
-                <label for="year">Année</label>/<label for="month">Mois</label>
-                <div class="row">
-                    <div class="col-xs-6">
-                        <select name="year" id="year" class="form-control" data-filterable="true" required="required"></select>
+        <div id="form-filters-wrapper">
+            <form id="form-filters" class="row mtop">
+                <fieldset class="col-md-4">
+                    <label for="search">Recherche</label>
+                    <input class="form-control" type="text" name="search" id="search" data-filterable="true" placeholder="Saisissez %d caractères minimum pour rechercher un nom, une circonscription, etc." minlength=""/>
+                </fieldset>
+                <fieldset class="col-md-2">
+                    <label for="year">Année</label>/<label for="month">Mois</label>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <select name="year" id="year" class="form-control" data-filterable="true" required="required"></select>
+                        </div>
+                        <div class="col-xs-6">
+                            <select name="month" id="month" class="form-control" data-filterable="true" data-countable="true" multiple></select>
+                        </div>
                     </div>
-                    <div class="col-xs-6">
-                        <select name="month" id="month" class="form-control" data-filterable="true" data-countable="true" multiple></select>
-                    </div>
-                </div>
-            </fieldset>
-            <fieldset class="col-md-2">
-                <label for="house">Corps</label>
-                <select name="house" id="house" class="form-control" data-filterable="true" data-countable="true" multiple></select>
-            </fieldset>
-            <fieldset class="col-md-2">
-                <label for="cause">Cause</label>
-                <select name="cause" id="cause" class="form-control" data-filterable="true" data-countable="true" multiple></select>
-            </fieldset>
-            <fieldset class="col-md-2">
-                <label for="origin">Théatre d'action</label>
-                <select name="origin" id="origin" class="form-control" data-filterable="true" data-countable="true" multiple></select>
-            </fieldset>
-        </form>
+                </fieldset>
+                <fieldset class="col-md-2">
+                    <label for="house">Corps</label>
+                    <select name="house" id="house" class="form-control" data-filterable="true" data-countable="true" multiple></select>
+                </fieldset>
+                <fieldset class="col-md-2">
+                    <label for="cause">Cause</label>
+                    <select name="cause" id="cause" class="form-control" data-filterable="true" data-countable="true" multiple></select>
+                </fieldset>
+                <fieldset class="col-md-2">
+                    <label for="origin">Théatre d'action</label>
+                    <select name="origin" id="origin" class="form-control" data-filterable="true" data-countable="true" multiple></select>
+                </fieldset>
+            </form>
+        </div>
         <div class="row mtop">
             <div class="col-xs-12 ">
                 <div class="alert alert-info" role="alert">
