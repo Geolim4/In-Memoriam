@@ -312,15 +312,14 @@ export class App {
       'bounds_changed',
       () => {
         const firstChild = map.getDiv().firstChild as Element;
-        if (
-          firstChild.clientHeight === window.innerHeight &&
-          firstChild.clientWidth === window.innerWidth
-        ) {
+        if (firstChild.clientHeight === window.innerHeight && firstChild.clientWidth === window.innerWidth) {
           if (!formElement.classList.contains('fullscreen')) {
             document.fullscreenElement.appendChild(formElement);
+            formElement.classList.add('fullscreen');
           }
         } else {
           formWrapper.appendChild(formElement);
+          formElement.classList.remove('fullscreen');
         }
       },
     );

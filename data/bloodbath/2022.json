@@ -417,6 +417,61 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "01",
+      "day": "22",
+      "keywords": "Alexandre Martin",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 54e RA a été tué par un attaque terroriste au mortier sur le camp français de Gao.",
+      "section": "54e RA",
+      "location": "Geo (Mali)",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "radius": 5000,
+        "lat": 16.245083274773467,
+        "lon": -0.01850100233157794
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/armeedeterre/status/1485191902936932353",
+          "titre": "@armeedeterre (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/un-soldat-francais-tue-au-mali-dans-une-attaque-du-camp-militaire-de-barkhane/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/monde/3221859-20220123-mali-mort-militaire-francais",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francetvinfo.fr/economie/emploi/metiers/armee-et-securite/operation-barkhane-un-soldat-francais-tue-au-mali_4927097.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lemonde.fr/afrique/article/2022/01/23/un-militaire-francais-tue-au-mali_6110626_3212.html",
+          "titre": "Le Monde",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/un-soldat-francais-a-ete-tue-au-mali-dans-une-attaque-du-camp-militaire-de-barkhane-annonce-lelysee-23-01-2022-RVASTWK32NFCPDFR62YC5NUIPE.php",
+          "titre": "Le Parisien",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
