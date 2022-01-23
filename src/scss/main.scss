@@ -14,6 +14,18 @@
 #map {
   width: 100%;
   height: 50em;
+
+  #form-filters {
+    background: #fff;
+    border-radius: 2px;
+    position: fixed;
+    width: calc(100% - 150px);
+    padding: 5px 5px 10px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 10px auto;
+  }
 }
 
 .mtop {
@@ -23,6 +35,14 @@
 /**
  * "Responsive"
  */
+@media (max-height: 800px), (max-width: 1000px) {
+  #map {
+    #form-filters {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 992px) {
   #fork-me {
     display: none;

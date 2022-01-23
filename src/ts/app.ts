@@ -1,4 +1,4 @@
-import * as MarkerClusterer from '@google/markerclusterer';
+import { MarkerClusterer, SuperClusterAlgorithm } from '@googlemaps/markerclusterer';
 import * as loadGoogleMapsApi from 'load-google-maps-api';
 import * as qwest from 'qwest';
 import tippyJs from 'tippy.js';
@@ -279,6 +279,7 @@ export class App {
 
     const selects = <NodeListOf<HTMLInputElement>>formElement.querySelectorAll('form select, form input');
     const filters = this.getFilters(formElement, fromAnchor);
+    const formWrapper = document.querySelector('#form-filters-wrapper');
 
     Events.addEventHandler(formElement, 'submit', (e) => {
       // this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, fromAnchor));
@@ -305,6 +306,23 @@ export class App {
       Events.addEventHandler(selector, 'change', this._eventHandlers[selector.id]);
     });
 
+    google.maps.event.addListener(
+      map,
+      'bounds_changed',
+      () => {
+        const firstChild = map.getDiv().firstChild as Element;
+        if (
+          firstChild.clientHeight === window.innerHeight &&
+          firstChild.clientWidth === window.innerWidth
+        ) {
+          if (!formElement.classList.contains('fullscreen')) {
+            document.fullscreenElement.appendChild(formElement);
+          }
+        } else {
+          formWrapper.appendChild(formElement);
+        }
+      },
+    );
     this.drawCustomSelectors(selects, filters);
   }
 
@@ -328,7 +346,7 @@ export class App {
   }
 
   private drawCustomSelectors(selectors: NodeListOf<HTMLInputElement>, filters: Filters): void {
-    const _choicesJs: any = choicesJs; // Hack to fix import @todo: Fix the import definitely
+    const _choicesJs = choicesJs; // Hack to fix import @todo: Fix the import definitely
 
     selectors.forEach((selector) => {
       if (selector.type !== 'text') {
@@ -503,7 +521,7 @@ export class App {
         }
         heatMapData.push({
           location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
-          weight: 10 * (totalDeathCount > 1 ?  (totalDeathCount > 5 ? 20 : 5) : 1),
+          weight: 15 * (totalDeathCount > 1 ?  (totalDeathCount > 5 ? 20 : 5) : 1),
         });
 
         const deathLabel = `${death.section}, ${death.location} ${totalDeathCount > 1 ? `(<strong style="color: red">${totalDeathCount} décès</strong>)` : ''}`;
@@ -547,10 +565,14 @@ export class App {
       }
 
       if (this.clusteringEnabled) {
-        this._markerCluster = new MarkerClusterer(map, this._markers, {
-          gridSize: 60,
-          imagePath: './assets/images/clustering/m',
-          maxZoom: this._configObject.config['maxZoom'] - 2,
+        this._markerCluster = new MarkerClusterer({
+          map,
+          algorithm: new SuperClusterAlgorithm({
+            maxZoom: this._configObject.config['clusteringOptions']['maxZoom'],
+            minPoints: this._configObject.config['clusteringOptions']['minPoints'],
+            radius: this._configObject.config['clusteringOptions']['radius'],
+          }),
+          markers: this._markers,
         });
       }
 

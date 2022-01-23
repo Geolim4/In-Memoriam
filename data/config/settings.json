@@ -4,6 +4,8 @@
     "defaultLat": 48.1,
     "defaultLon": -4.21,
     "defaultZoom": 12,
+    "maxZoom": 16,
+    "searchMinLength": 3,
     "googleMaps": {
       "key": "AIzaSyBMB4lQqiIf7t6QV8CFFV6IwCqw_7dYREw",
       "libraries": [
@@ -11,10 +13,15 @@
         "geometry"
       ]
     },
+    "clusteringOptions": {
+      "minPoints": 2,
+      "maxZoom": 14,
+      "radius": 100
+    },
     "heatmapOptions": {
       "dissipating": false,
       "opacity": 0.4,
-      "radius": 1
+      "radius": 0.4
     },
     "circleOptions": {
       "fillColor": "#9e2a2b",
@@ -38,8 +45,6 @@
       "localize": "https://maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png",
       "bluedot": "./assets/images/map/bluedot.png",
       "refresh": "./assets/images/map/refresh.png"
-    },
-    "maxZoom": 16,
-    "searchMinLength": 3
+    }
   }
 }

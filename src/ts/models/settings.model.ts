@@ -5,6 +5,11 @@ export interface Settings {
   defaultZoom: number;
   googleMaps: Object;
   heatmapOptions: google.maps.visualization.HeatmapLayerOptions;
+  clusteringOptions: { // See https://www.npmjs.com/package/supercluster
+    minPoints: number,
+    maxZoom: number,
+    radius: number,
+  };
   imagePath: Object;
   maxZoom: number;
 }
