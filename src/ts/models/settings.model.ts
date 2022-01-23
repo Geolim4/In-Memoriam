@@ -11,5 +11,6 @@ export interface Settings {
     radius: number,
   };
   imagePath: Object;
+  mapId: string;
   maxZoom: number;
 }

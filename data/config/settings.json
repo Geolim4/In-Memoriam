@@ -5,6 +5,7 @@
     "defaultLon": -4.21,
     "defaultZoom": 12,
     "maxZoom": 16,
+    "mapId": "42179193e08de91e",
     "searchMinLength": 3,
     "googleMaps": {
       "key": "AIzaSyBMB4lQqiIf7t6QV8CFFV6IwCqw_7dYREw",
