@@ -83,8 +83,9 @@ export class App {
       const mapElement = <HTMLInputElement>document.getElementById('map');
       const options = {
         center: new google.maps.LatLng(this._configObject.config['defaultLat'], this._configObject.config['defaultLon']),
+        mapId: this._configObject.config['mapId'],
         mapTypeControl: false,
-        mapTypeId: google.maps.MapTypeId.HYBRID,
+        // mapTypeId: google.maps.MapTypeId.HYBRID,
         maxZoom: this._configObject.config['maxZoom'],
         streetViewControl: false,
         zoom: this._configObject.config['defaultZoom'],
