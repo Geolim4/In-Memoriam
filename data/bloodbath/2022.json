@@ -430,7 +430,7 @@
       "keywords": "Alexandre Martin",
       "house": "armee",
       "peers": [],
-      "text": "Un militaire du 54e RA a été tué par un attaque terroriste au mortier sur le camp français de Gao.",
+      "text": "Un militaire du 54e RA a été tué par une attaque terroriste au mortier sur le camp français de Gao.",
       "section": "54e RA",
       "location": "Gao (Mali)",
       "origin": "opex",
@@ -469,6 +469,51 @@
         {
           "url": "https://www.leparisien.fr/faits-divers/un-soldat-francais-a-ete-tue-au-mali-dans-une-attaque-du-camp-militaire-de-barkhane-annonce-lelysee-23-01-2022-RVASTWK32NFCPDFR62YC5NUIPE.php",
           "titre": "Le Parisien",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "01",
+      "day": "23",
+      "keywords": "Pierre Ludet",
+      "house": "police",
+      "peers": [],
+      "text": "Un jeune policier de la BST Nord de Marseille a mit fin à ses jours avec son arme de service.\n Major de promo de la 259e promotion de Gardiens de la Paix, il était également un champion de MMA.",
+      "section": "BST 15, Division Nord",
+      "location": "Marseille",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.342558721748176,
+        "lon": 5.371440075778115
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/marseille-un-policier-de-22-ans-sest-suicide-en-utilisant-son-arme-de-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/societe/3222575-20220124-marseille-jeune-policier-division-nord-suicide",
+          "titre": "20 minutes",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/prefpolice13/status/1485584134831497216",
+          "titre": "@prefpolice13 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/provence-alpes-cote-d-azur/bouches-du-rhone/marseille/marseille-un-jeune-policier-de-la-division-nord-s-est-suicide-2432389.html",
+          "titre": "France Info",
           "paywall": false
         }
       ]
