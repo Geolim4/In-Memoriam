@@ -299,6 +299,51 @@
       ]
     },
     {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "01",
+      "day": "15",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme du PSIG de Dardilly décède d'un malaise cardiaque en service.\n Gendarme depuis plus de 30ans, il était marié et père d'une jeune fille.",
+      "section": "PSIG Dardilly",
+      "location": "Dardilly (Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.813524699617545,
+        "lon": 4.75136247592455
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/Gendarmerie_069/status/1486246551987052546",
+          "titre": "@Gendarmerie_069 (Twitter)",
+          "paywall": false
+        },
+        {
+          "url": "https://actu17.fr/rhone-un-gendarme-du-psig-de-dardilly-decede-suite-a-un-malaise-cardiaque-en-service/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/operationnel/a-dardilly-pres-de-lyon-un-gendarme-decede-dune-crise-cardiaque-durant-son-service",
+          "titre": "L'Essor",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leprogres.fr/faits-divers-justice/2022/01/26/un-gendarme-de-dardilly-decede-d-un-malaise-cardiaque",
+          "titre": "Le Progrès",
+          "paywall": false
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
@@ -514,6 +559,51 @@
         {
           "url": "https://france3-regions.francetvinfo.fr/provence-alpes-cote-d-azur/bouches-du-rhone/marseille/marseille-un-jeune-policier-de-la-division-nord-s-est-suicide-2432389.html",
           "titre": "France Info",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "05",
+      "day": "27",
+      "keywords": "Dorian",
+      "house": "police",
+      "peers": [],
+      "text": "Un agent administratif du commissariat de Rennes a mis fins à ses jours en se défenestrant du 7eme étage.",
+      "section": "BDSIT 35",
+      "location": "Rennes (Ille-et-Vilaine)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.10611904585531,
+        "lon": -1.68519643045828
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/rennes-un-agent-administratif-de-la-police-sest-suicide-au-commissariat/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/un-fonctionnaire-de-police-se-suicide-en-se-jetant-du-toit-de-son-commissariat-a-rennes-20220127",
+          "titre": "Le Figaro",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/bretagne/ille-et-vilaine/rennes/rennes-nouveau-drame-au-commissariat-un-technicien-informatique-se-suicide-en-se-jetant-du-toit-2438014.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/3224659-20220127-rennes-informaticien-police-suicide-jetant-toit-commissariat",
+          "titre": "20 minutes",
           "paywall": false
         }
       ]
