@@ -47,7 +47,7 @@
       "peers": [],
       "text": "Un pompier du SDIS 02 décède d'un malaise cardiaque pendant pendant sa garde.\n Il était marié et père de deux enfants.",
       "section": "SDIS 02",
-      "location": "Bordeaux (Gironde)",
+      "location": "Laon (Aisne)",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -635,6 +635,51 @@
           "url": "https://actu17.fr/val-doise-un-policier-de-55-ans-affecte-a-herblay-sest-suicide-a-son-domicile/",
           "titre": "Actu17",
           "paywall": false
+        },
+        {
+          "url": "https://twitter.com/PoliceNat95/status/1487830722580733954",
+          "titre": "@PoliceNat95 (Twitter)",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "01",
+      "day": "30",
+      "keywords": "Mickael Heniart",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la police aux frontières de Roissy a mit fin à ses jours avec son arme de service à son domicile situé à Saint-Martin-Longueau.",
+      "section": "PAF Roissy",
+      "location": "Roissy (Val-d'Oise)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.00688323919221,
+        "lon": 2.5465648496192808
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/oise-un-policier-affecte-a-la-paf-de-roissy-sest-suicide/",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.oisehebdo.fr/2022/01/31/mickael-heniart-50-ans-policier-a-la-paf-se-donne-la-mort-chez-lui-a-saint-martin-longeau/",
+          "titre": "Oise Hebdo",
+          "paywall": false
+        },
+        {
+          "url": "https://www.leparisien.fr/val-d-oise-95/deux-policiers-du-val-doise-se-suicident-avec-leur-arme-de-service-31-01-2022-5UFNEUQWDNBIVFKXPSYRICAFLA.php",
+          "titre": "Le Parisien",
+          "paywall": true
         }
       ]
     }
