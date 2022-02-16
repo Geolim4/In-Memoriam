@@ -749,7 +749,112 @@
         {
           "url": "https://www.leparisien.fr/seine-saint-denis-93/un-policier-de-la-brigade-anticriminalite-sest-suicide-a-son-domicile-a-villepinte-11-02-2022-Y7DQBFRXAZCKJC3LB4OWFFA354.php",
           "titre": "Le Parisien",
-          "paywall": true
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "02",
+      "day": "15",
+      "keywords": "Jean-Marie",
+      "house": "admpen",
+      "peers": [],
+      "text": "Un surveillant-officier de la maison centrale de Poissy a mis fin à ses jours.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Maison Centrale",
+      "location": "Poissy (Yvelines)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.92854475485341,
+        "lon": 2.0383884375947425
+      },
+      "sources": [
+        {
+          "url": "https://allo17.fr/actualites/16/02/2022/en-moins-de-48-heures-3-suicides-dans-ladministration-penitentiaire/",
+          "titre": "Allo17",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2022/02/16/drame-trois-agents-penitentiaires-se-suicide-en-moins-de-48-heures/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 4,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "02",
+      "day": "15",
+      "keywords": "Jean-Marie",
+      "house": "admpen",
+      "peers": [],
+      "text": "Un surveillant-officier du centre pénitentiaire d'Orléans-Saran a mis fin à ses jours.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Centre pénitentiaire",
+      "location": "Orléans-Saran (Loiret)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.96434959414946,
+        "lon": 1.8717850225936645
+      },
+      "sources": [
+        {
+          "url": "https://allo17.fr/actualites/16/02/2022/en-moins-de-48-heures-3-suicides-dans-ladministration-penitentiaire/",
+          "titre": "Allo17",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2022/02/16/drame-trois-agents-penitentiaires-se-suicide-en-moins-de-48-heures/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "02",
+      "day": "15",
+      "keywords": "Michael",
+      "house": "admpen",
+      "peers": [],
+      "text": "Un surveillant de la maison d'arrêt de Chambéry a mis fin à ses jours.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Maison d’Arrêt",
+      "location": "Chambéry (Savoie)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.57496826653933,
+        "lon": 5.905281105256993
+      },
+      "sources": [
+        {
+          "url": "https://allo17.fr/actualites/16/02/2022/en-moins-de-48-heures-3-suicides-dans-ladministration-penitentiaire/",
+          "titre": "Allo17",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2022/02/16/drame-trois-agents-penitentiaires-se-suicide-en-moins-de-48-heures/",
+          "titre": "Actupenit",
+          "paywall": false
         }
       ]
     }
