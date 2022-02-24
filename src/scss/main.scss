@@ -77,6 +77,18 @@
     .glyphicon {
       color: #808080c7;
     }
+
+    a {
+      &[href^="https://twitter.com"] {
+        color: #1d9bf0;
+        font-weight: bold;
+      }
+      &[href^="https://actu17.fr"] {
+        color: #0c0f2a;
+        font-weight: bold;
+      }
+      font-weight: 500;
+    }
   }
 }
 
