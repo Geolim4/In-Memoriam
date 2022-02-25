@@ -3,151 +3,186 @@
     "year": [
       {
         "value": "2022",
-        "label": "2022"
+        "label": "2022",
+        "color": ""
       },
       {
         "value": "2021",
-        "label": "2021"
+        "label": "2021",
+        "color": ""
       },
       {
         "value": "2020",
-        "label": "2020"
+        "label": "2020",
+        "color": ""
       },
       {
         "value": "2019",
-        "label": "2019"
+        "label": "2019",
+        "color": ""
       },
       {
         "value": "2018",
-        "label": "2018"
+        "label": "2018",
+        "color": ""
       }
     ],
     "month": [
       {
         "value": "01",
-        "label": "Janvier"
+        "label": "Janvier",
+        "color": ""
       },
       {
         "value": "02",
-        "label": "Février"
+        "label": "Février",
+        "color": ""
       },
       {
         "value": "03",
-        "label": "Mars"
+        "label": "Mars",
+        "color": ""
       },
       {
         "value": "04",
-        "label": "Avril"
+        "label": "Avril",
+        "color": ""
       },
       {
         "value": "05",
-        "label": "Mai"
+        "label": "Mai",
+        "color": ""
       },
       {
         "value": "06",
-        "label": "Juin"
+        "label": "Juin",
+        "color": ""
       },
       {
         "value": "07",
-        "label": "Juillet"
+        "label": "Juillet",
+        "color": ""
       },
       {
         "value": "08",
-        "label": "Aout"
+        "label": "Aout",
+        "color": ""
       },
       {
         "value": "09",
-        "label": "Septembre"
+        "label": "Septembre",
+        "color": ""
       },
       {
         "value": "10",
-        "label": "Octobre"
+        "label": "Octobre",
+        "color": ""
       },
       {
         "value": "11",
-        "label": "Novembre"
+        "label": "Novembre",
+        "color": ""
       },
       {
         "value": "12",
-        "label": "Décembre"
+        "label": "Décembre",
+        "color": ""
       }
     ],
     "cause": [
       {
         "value": "suicide",
-        "label": "Suicide"
+        "label": "Suicide",
+        "color": "#121217"
       },
       {
         "value": "deathOnDuty",
-        "label": "Décès en service commandé"
+        "label": "Décès en service commandé",
+        "color": "#244327"
       },
       {
         "value": "deathViaDuty",
-        "label": "Décès lié au service"
+        "label": "Décès lié au service",
+        "color": "#79642B"
       },
       {
         "value": "accident",
-        "label": "Accident"
+        "label": "Accident",
+        "color": "#763C5C"
       },
       {
         "value": "murdered",
-        "label": "Meutre"
+        "label": "Meutre",
+        "color": "#3D2022"
       },
       {
         "value": "other",
-        "label": "Autre"
+        "label": "Autre",
+        "color": "#2D225C"
       }
     ],
     "house": [
       {
         "value": "gendarmerie",
-        "label": "Gendarmerie Nationale"
+        "label": "Gendarmerie Nationale",
+        "color": "#54478C"
       },
       {
         "value": "police",
-        "label": "Police Nationale"
+        "label": "Police Nationale",
+        "color": "#2C699A"
       },
       {
         "value": "pm",
-        "label": "Police Municipale"
+        "label": "Police Municipale",
+        "color": "#048BA8"
       },
       {
         "value": "douane",
-        "label": "Douanes"
+        "label": "Douanes",
+        "color": "#F29E4C"
       },
       {
         "value": "pompier",
-        "label": "Pompiers"
+        "label": "Pompiers",
+        "color": "#9d0208"
       },
       {
         "value": "armee",
-        "label": "Armée (Air, Terre, Marine)"
+        "label": "Armée (Air, Terre, Marine)",
+        "color": "#83E377"
       },
       {
         "value": "admpen",
-        "label": "Administration pénitentiaire"
+        "label": "Administration pénitentiaire",
+        "color": "#16DB93"
       },
       {
         "value": "secciv",
-        "label": "Sécurité Civile"
+        "label": "Sécurité Civile",
+        "color": "#fca311"
       },
       {
         "value": "misc",
-        "label": "Autre"
+        "label": "Autre",
+        "color": "#b5179e"
       }
     ],
     "origin": [
       {
         "value": "interieur",
-        "label": "Territoire national"
+        "label": "Territoire national",
+        "color": ""
       },
       {
         "value": "domtom",
-        "label": "DOM-TOM/Corse"
+        "label": "DOM-TOM/Corse",
+        "color": ""
       },
       {
         "value": "opex",
-        "label": "OPEX"
+        "label": "OPEX",
+        "color": ""
       }
     ]
   }

@@ -51,6 +51,7 @@
     "bootstrap": "^3.4.1",
     "choices.js": "^9.0.1",
     "es6-promise": "^4.2.8",
+    "highcharts": "^9.3.3",
     "jquery": "^3.5.0",
     "load-google-maps-api": "^2.0.1",
     "micromodal": "^0.4.2",

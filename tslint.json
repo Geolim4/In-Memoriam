@@ -5,7 +5,7 @@
   "rules": {
     "align": [true, "elements", "members", "parameters", "statements"],
     "arrow-return-shorthand": true,
-    "import-name": [true],
+    "import-name": [false],
     "max-line-length": false,
     "member-access": true,
     "member-ordering": [true, {
