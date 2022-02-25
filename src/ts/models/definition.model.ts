@@ -1,6 +1,7 @@
 export interface Definition {
   [name: string]: {
     '#any'?: string,
+    '#name'?: string,
     '#counter_property'?: string,
     '#counter_strategy'?: string,
     '#label': string,

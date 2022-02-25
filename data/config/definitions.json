@@ -1,6 +1,7 @@
 {
   "definitions": {
     "year": {
+      "#name": "décompte annuel",
       "#label": "<strong>Décompte annuel</strong>: %year%",
       "#counter_property": "count",
       "#counter_strategy": "distinct",
@@ -11,6 +12,7 @@
       }
     },
     "cause": {
+      "#name": "causes",
       "#label": "<strong>Causes</strong>: %cause%",
       "#counter_property": "count",
       "#counter_strategy": "distinct",
@@ -44,6 +46,7 @@
       }
     },
     "house": {
+      "#name": "corps",
       "#label": "<strong>Corps</strong>: %house%",
       "#counter_property": "count",
       "#counter_strategy": "distinct",
@@ -94,6 +97,7 @@
       }
     },
     "origin": {
+      "#name": "théatres d'action",
       "#label": "<strong>Théatre d'action</strong>: %origin%",
       "#counter_property": "count",
       "#counter_strategy": "distinct",
@@ -114,6 +118,7 @@
       }
     },
     "orphans": {
+      "#name": "orphelins",
       "#label": "<strong>Orphelins</strong>: %orphans%",
       "#counter_property": "orphans",
       "#counter_strategy": "sum",

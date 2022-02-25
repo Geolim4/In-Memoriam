@@ -161,3 +161,8 @@ a abbr[data-title] {
     height: 45px;
   }
 }
+
+.modal__container.large {
+  max-width: 1600px;
+  min-width: 90%;
+}

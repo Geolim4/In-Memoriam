@@ -3,7 +3,8 @@
     "lib": ["dom"],
     "moduleResolution": "node",
     "target": "es5",
-    "typeRoots": ["node_modules/@types"]
+    "typeRoots": ["node_modules/@types"],
+    "allowSyntheticDefaultImports": true
   },
   "exclude": ["node_modules"],
   "files": ["./src/ts/main.ts"]

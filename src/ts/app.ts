@@ -4,13 +4,14 @@ import * as qwest from 'qwest';
 import tippyJs from 'tippy.js';
 import micromodal from 'micromodal';
 import activityDetector from 'activity-detector';
-import choicesJs = require('choices.js');
+import Choices = require('choices.js');
 
 import { Bloodbath, Definition, Filters } from './models';
 import { Config } from './config';
 import { Events } from './events';
 import { GmapUtils } from './helper/gmapUtils.helper';
 import { Permalink } from './permalink';
+import { Charts } from './charts';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
 import { Death } from './models/death.model';
 import { FormFilters } from './models/formFilters.model';
@@ -98,7 +99,7 @@ export class App {
         this.setupSkeleton(formElement, this.getFilters(formElement, true));
         this.bindAnchorEvents(map, mapElement, formElement);
         this.bindFilters(map, mapElement, formElement);
-        this.bindCustomButtons(map);
+        this.bindCustomButtons(map, formElement);
         this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, true));
         this.bindMarkerLinkEvent(map);
       });
@@ -134,13 +135,14 @@ export class App {
     });
   }
 
-  private bindCustomButtons(map: google.maps.Map): void {
+  private bindCustomButtons(map: google.maps.Map, formElement: HTMLInputElement): void {
     this.bindLocalizationButton(map);
     this.bindRandomizationButton(map);
     this.bindRefreshButton(map);
     this.bindHeatmapButton(map);
     this.bindClusteringButton(map);
     this.bindListButton(map);
+    this.bindChartButton(map, formElement);
   }
 
   private getConfigDefinitions(): Definition[] {
@@ -346,12 +348,11 @@ export class App {
   }
 
   private drawCustomSelectors(selectors: NodeListOf<HTMLInputElement>, filters: Filters): void {
-    const _choicesJs = choicesJs; // Hack to fix import @todo: Fix the import definitely
-
     selectors.forEach((selector) => {
       if (selector.type !== 'text') {
         if (!this._customChoicesInstances[selector.id]) {
-          this._customChoicesInstances[selector.id] = new _choicesJs(selector, {
+          // @ts-ignore
+          this._customChoicesInstances[selector.id] = new Choices(selector, {
             duplicateItemsAllowed: false,
             itemSelectText: '',
             removeItemButton: selector.multiple,
@@ -828,6 +829,32 @@ export class App {
     GmapUtils.bindButton(map, () => {
       if (this._markers.length) {
         micromodal.show('modal-bloodbath-list');
+      } else {
+        alert('La cartographie est vide, essayez de modifier les filtres :(');
+      }
+    }, buttonOptions);
+  }
+
+  private bindChartButton(map: google.maps.Map, formElement: HTMLInputElement): void {
+    const buttonOptions = {
+      ctrlChildId: 'chartImg',
+      ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
+      defaultCtrlChildBgPos: '0px 2px',
+      defaultCtrlChildBgSize: '90%',
+      imagePath: this._configObject.config['imagePath']['chart'],
+      title: 'Voir les données graphiques',
+    };
+
+    GmapUtils.bindButton(map, () => {
+      if (this._markers.length) {
+        micromodal.show('modal-bloodbath-chart', {
+          onShow: () => {
+            const definitions = this.getConfigDefinitions();
+            const year = this.getFilters(formElement, false)['year'];
+            Charts.buildChartPerCause(this._markers, this.filters, definitions, year);
+            Charts.buildChartPerHouse(this._markers, this.filters, definitions, year);
+          },
+        });
       } else {
         alert('La cartographie est vide, essayez de modifier les filtres :(');
       }
