@@ -932,6 +932,101 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "02",
+      "day": "25",
+      "keywords": "Rainui",
+      "house": "admpen",
+      "peers": [],
+      "text": "Un surveillant du centre pénitentiaire de FAA’A a mis fin à ses jours.\n Il était marié et père de trois enfants.",
+      "section": "Centre Pénitentiaire",
+      "location": "FAA’A (Polynésie Française)",
+      "origin": "domtom",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": -17.556609675399862,
+        "lon": -149.59002599068083
+      },
+      "sources": [
+        {
+          "url": "https://actupenit.com/2022/02/25/polynesie-francaise-un-surveillant-penitentiaire-age-de-37-ans-sest-suicide/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "02",
+      "day": "25",
+      "keywords": "Marc-Alexandre",
+      "house": "armee",
+      "peers": [],
+      "text": "Un légionnaire a mit fin à ses jours.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Légion étrangère",
+      "location": "Aubagne (Bouches-du-Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 100,
+        "lat": 43.291211335931976,
+        "lon": 5.553610390509783
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "02",
+      "day": "26",
+      "keywords": "Damien",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de l'UMIP a mit fin à ses jours avec son arme de service dans son véhicule personnel retrouvé à Noisy-le-Grand (Seine-Saint-Denis).",
+      "section": "UMIP - DOPC",
+      "location": "Paris 13e",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.84135363780757,
+        "lon": 2.3623977801219525
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/noisy-le-grand-porte-disparu-depuis-trois-jours-un-policier-retrouve-mort-dans-sa-voiture.html",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://twitter.com/prefpolice/status/1497583006172786690",
+          "titre": "@prefpolice (Twitter)",
+          "paywall": false
+        }
+      ]
     }
   ]
 }

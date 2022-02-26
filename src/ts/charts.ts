@@ -53,14 +53,14 @@ export class Charts {
       tooltip: {
         backgroundColor: 'rgba(226,226,226,0.98)',
         footerFormat: '</table>',
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        headerFormat: '<div style="font-size:15px; font-weight: bold;margin: 0 0 10px 0">Mois: {point.key}</div><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}:  </td>' +
-          '<td style="padding:0"><b>{point.y} décès</b></td></tr>',
+          '<td style="padding: 2px 10px 2px 20px"><b>{point.y} décès</b></td></tr>',
         shared: true,
         useHTML: true,
       },
       xAxis: {
-        categories: filters.month.map((month) => month.label.substr(0, 3)),
+        categories: filters.month.map((month) => month.label),
         crosshair: true,
       },
       yAxis: {

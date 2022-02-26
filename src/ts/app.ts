@@ -37,6 +37,8 @@ export class App {
   private clusteringEnabled: boolean;
   private glossary: {};
   private filters: FormFilters;
+  private userPosition: Position;
+  private localizationMarker: google.maps.Marker;
 
   constructor() {
     this._circles = [];
@@ -53,6 +55,8 @@ export class App {
     this.clusteringEnabled = true;
     this.glossary = {};
     this.filters = {};
+    this.userPosition = null;
+    this.localizationMarker = null;
   }
 
   public boot(): void {
@@ -676,7 +680,11 @@ export class App {
 
     GmapUtils.bindButton(map, () => {
       const bounds = new google.maps.LatLngBounds();
-      const localizationMarker = new google.maps.Marker({
+
+      if (this.localizationMarker instanceof google.maps.Marker) {
+        this.localizationMarker.setMap(null);
+      }
+      this.localizationMarker = new google.maps.Marker({
         map,
         animation: google.maps.Animation.BOUNCE,
         icon: new (google.maps as any).MarkerImage(this._configObject.config['imagePath']['bluedot']),
@@ -688,58 +696,63 @@ export class App {
         imgX = (+imgX === -18 ? '0' : '-18');
         localizationImgElmt.style.backgroundPosition = `${imgX}px 0px`;
       }, 500);
-      const confirmation = confirm('La demande de localisation ne servira qu\'à positionner la carte autour de vous, aucune donnée ne sera envoyée ni même conservée nulle part.');
-      if (confirmation && navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((position) => {
-          const localizationLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-          localizationMarker.setPosition(localizationLatLng);
-          map.setCenter(localizationLatLng);
-          bounds.extend(localizationLatLng);
-          const localizationInfoWindow = new google.maps.InfoWindow({
-            content: '<div class="info-window-container">Ma position approximative</div>',
-          });
-          localizationInfoWindow.setPosition(localizationLatLng);
 
-          google.maps.event.addListener(localizationMarker, 'click', () => {
-            if (this._currentInfoWindows) {
-              this._currentInfoWindows.close();
-            }
-            localizationInfoWindow.open(map, localizationMarker);
-            this._currentInfoWindows = localizationInfoWindow;
-          });
-          localizationInfoWindow.open(map, localizationMarker);
+      const geolocationCallback = (position: Position) :void => {
+        const localizationLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        this.localizationMarker.setPosition(localizationLatLng);
+        map.setCenter(localizationLatLng);
+        bounds.extend(localizationLatLng);
+        const localizationInfoWindow = new google.maps.InfoWindow({
+          content: '<div class="info-window-container">Ma position approximative</div>',
+        });
+        localizationInfoWindow.setPosition(localizationLatLng);
 
-          let closestMarker = <ExtendedGoogleMapsMarker> null;
-          let closestDistance = <number> null;
+        google.maps.event.addListener(this.localizationMarker, 'click', () => {
+          if (this._currentInfoWindows) {
+            this._currentInfoWindows.close();
+          }
+          localizationInfoWindow.open(map, this.localizationMarker);
+          this._currentInfoWindows = localizationInfoWindow;
+        });
+        localizationInfoWindow.open(map, this.localizationMarker);
 
-          for (const marker of this._markers) {
-            const markerPosition = marker.getPosition();
+        let closestMarker = <ExtendedGoogleMapsMarker> null;
+        let closestDistance = <number> null;
 
-            if (markerPosition && localizationLatLng) {
-              const currentDistance = <number> google.maps.geometry.spherical.computeDistanceBetween(markerPosition, localizationLatLng);
-              if ((closestMarker === null && closestDistance === null) || (closestMarker && closestDistance && currentDistance <= closestDistance)) {
-                closestMarker = marker;
-                closestDistance = currentDistance;
-              }
+        for (const marker of this._markers) {
+          const markerPosition = marker.getPosition();
+
+          if (markerPosition && localizationLatLng) {
+            const currentDistance = <number> google.maps.geometry.spherical.computeDistanceBetween(markerPosition, localizationLatLng);
+            if ((closestMarker === null && closestDistance === null) || (closestMarker && closestDistance && currentDistance <= closestDistance)) {
+              closestMarker = marker;
+              closestDistance = currentDistance;
             }
           }
+        }
 
-          google.maps.event.trigger(closestMarker, 'click');
-          bounds.extend(closestMarker.getPosition());
-          map.fitBounds(bounds);
+        google.maps.event.trigger(closestMarker, 'click');
+        bounds.extend(closestMarker.getPosition());
+        map.fitBounds(bounds);
 
-          (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '-144px 0px';
-          clearInterval(animationInterval);
-        });
-      } else {
+        (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '-144px 0px';
         clearInterval(animationInterval);
-        (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
+
+        this.userPosition = position;
+      };
+
+      if (this.userPosition) {
+        geolocationCallback(this.userPosition);
+      } else {
+        const confirmation = confirm('La demande de localisation ne servira qu\'à positionner la carte autour de vous, aucune donnée ne sera envoyée ni même conservée nulle part.');
+        if (confirmation && navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(geolocationCallback);
+        } else {
+          clearInterval(animationInterval);
+          (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
+        }
       }
     }, buttonOptions);
-
-    google.maps.event.addListener(map, 'dragend', () => {
-      (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
-    });
   }
 
   private bindRandomizationButton(map: google.maps.Map): void {
@@ -902,7 +915,6 @@ export class App {
   }
 
   private getFilterValueLabel(filterName: string, filterValue: string): string {
-    // const option = <HTMLInputElement>document.querySelector(`form select[name="${filterName}"] option[value="${filterValue}"]`); // Old mechanism
     for (const filterValues of this.filters[filterName]) {
       if (filterValues.value === filterValue) {
         return filterValues.label.replace(/\(.*\)/, '').trim();

@@ -1,5 +1,10 @@
 import { App } from './app';
 
 document.addEventListener('DOMContentLoaded', () => {
-  (new App()).boot();
+  try {
+    (new App()).boot();
+  } catch (e) {
+    console.error(e);
+    alert('Une erreur est survenue :(');
+  }
 });
