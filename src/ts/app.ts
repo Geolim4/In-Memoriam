@@ -583,7 +583,7 @@ export class App {
 
       /**
        * National marker prioritization:
-       * We only bounds to DomTom if there
+       * We only bounds to DomTom if there's
        * nothing else on national territory
        */
       const boundsMarkers = (nationalMarkers.length ? nationalMarkers : domTomMarkers);

@@ -98,7 +98,7 @@
       {
         "value": "deathOnDuty",
         "label": "Décès en service commandé",
-        "color": "#244327"
+        "color": "#ba432c"
       },
       {
         "value": "deathViaDuty",
@@ -113,7 +113,7 @@
       {
         "value": "murdered",
         "label": "Meutre",
-        "color": "#3D2022"
+        "color": "#2b8254"
       },
       {
         "value": "other",
