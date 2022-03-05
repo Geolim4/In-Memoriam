@@ -1,5 +1,4 @@
 import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.model';
-import { DateUtilsHelper } from './helper/dateUtils.helper';
 import { FormFilters } from './models/formFilters.model';
 import * as Highcharts from 'highcharts';
 import { Definition } from './models';
@@ -21,12 +20,12 @@ export class Charts {
     const series = [];
 
     for (const criteriaFilter of filters[criteria]) {
-      const data = DateUtilsHelper.getNumericMonthMap();
+      const data = Array(12).fill(0);
       for (const marker of markers) {
         if (marker.death[criteria] === criteriaFilter.value) {
-          data[DateUtilsHelper.getNumericMonthOffset(marker.death.month)] += marker.death.count;
+          data[parseInt(marker.death.month, 0) - 1] += marker.death.count;
           for (const peer of marker.death.peers) {
-            data[DateUtilsHelper.getNumericMonthOffset(marker.death.month)] += peer.count;
+            data[parseInt(marker.death.month, 0) - 1] += peer.count;
           }
         }
       }
