@@ -9,14 +9,16 @@ import { Definition } from './models';
  */
 export class Charts {
   public static buildChartPerCause(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], year: string): void  {
-    this.buildBaseChartPerCriteria(markers, filters, definitions, 'cause', year);
+    this.buildBarChartPerCriteria(markers, filters, definitions, 'cause', year);
+    this.buildPieChartPerCriteria(markers, filters, definitions, 'cause', year);
   }
 
   public static buildChartPerHouse(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], year: string): void {
-    this.buildBaseChartPerCriteria(markers, filters, definitions, 'house', year);
+    this.buildBarChartPerCriteria(markers, filters, definitions, 'house', year);
+    this.buildPieChartPerCriteria(markers, filters, definitions, 'house', year);
   }
 
-  protected static buildBaseChartPerCriteria(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], criteria: string, year: string): void {
+  protected static buildBarChartPerCriteria(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], criteria: string, year: string): void {
     const series = [];
 
     for (const criteriaFilter of filters[criteria]) {
@@ -32,7 +34,7 @@ export class Charts {
       series.push({ data , name: criteriaFilter.label, color: this.getFilterCriteriaColor(criteria, criteriaFilter.value, filters) });
     }
 
-    Highcharts.chart(`chart-container-${criteria}`, {
+    Highcharts.chart(`chart-container-bar-${criteria}`, {
       series,
       chart: {
         type: 'column',
@@ -67,6 +69,52 @@ export class Charts {
         title: {
           text: 'Décès',
         },
+      },
+    });
+  }
+
+  protected static buildPieChartPerCriteria(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], criteria: string, year: string): void {
+    const seriesData = [];
+
+    for (const criteriaFilter of filters[criteria]) {
+      let counter = 0;
+      for (const marker of markers) {
+        if (marker.death[criteria] === criteriaFilter.value) {
+          counter += marker.death.count;
+          for (const peer of marker.death.peers) {
+            counter += peer.count;
+          }
+        }
+      }
+      if (counter) {
+        seriesData.push([counter, criteriaFilter.label, this.getFilterCriteriaColor(criteria, criteriaFilter.value, filters)]);
+      }
+    }
+    Highcharts.chart(`chart-container-pie-${criteria}`, {
+      exporting: {
+        enabled: false,
+      },
+      series: [{
+        allowPointSelect: true,
+        data: seriesData,
+        keys: ['y', 'name', 'color'],
+        name: 'décès',
+        showInLegend: false,
+        type: 'pie',
+      }],
+      subtitle: {
+        text: 'Données contextualisées par les filtres appliqués',
+      },
+      title: {
+        text: `Décès totaux par ${definitions[criteria]['#name']} sur l'année ${year}`,
+      },
+      tooltip: {
+        backgroundColor: 'rgba(226,226,226,0.98)',
+        headerFormat: '',
+        pointFormat: '<div><strong>{point.name}:</strong></div> <div>{point.y} {series.name} <em>({point.percentage:.1f}%)</em></div>',
+      },
+      xAxis: {
+        categories: [],
       },
     });
   }

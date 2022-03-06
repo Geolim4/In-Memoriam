@@ -166,3 +166,13 @@ a abbr[data-title] {
   max-width: 1600px;
   min-width: 90%;
 }
+
+#modal-bloodbath-chart .highcharts-credits {
+  display: none;
+}
+
+body.fullscreen {
+  .hide-fs {
+    display: none !important;
+  }
+}

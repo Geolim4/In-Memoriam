@@ -16,7 +16,10 @@ import { StringUtilsHelper } from './helper/stringUtils.helper';
 import { Death } from './models/death.model';
 import { FormFilters } from './models/formFilters.model';
 import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.model';
+import { Options as GmapsOptions } from './models/Gmaps/options.model';
+
 /**
+ * @description Main app code
  * @author Georges.L <contact@geolim4.com>
  * @author Jbz797 <jean.benoit.gautier@gmail.com>
  * @licence GPL-2.0
@@ -25,7 +28,7 @@ export class App {
 
   private _circles: google.maps.Circle[];
   private _configObject: Config;
-  private _customChoicesInstances: { [name: string]: any };
+  private readonly _customChoicesInstances: { [name: string]: any };
   private _currentInfoWindows: google.maps.InfoWindow;
   private _heatMap: google.maps.visualization.HeatmapLayer;
   private _infoWindows: google.maps.InfoWindow[];
@@ -253,28 +256,6 @@ export class App {
     return filters;
   }
 
-  private alterFiltersLabels(unfilteredResponse: Bloodbath): void {
-    const selects = <NodeListOf<HTMLInputElement>>document.querySelectorAll('form select');
-
-    selects.forEach((select) => {
-      const options = <NodeListOf<HTMLOptionElement>>select.querySelectorAll('option');
-      if (select.dataset.countable === 'true') {
-        options.forEach((option) => {
-          if (option.value !== '') {
-            option.dataset.deathCount = '0';
-            for (const key in unfilteredResponse.deaths) {
-              const death = unfilteredResponse.deaths[key];
-              if (option.value === death[select.name] && death.published) {
-                option.dataset.deathCount = `${+(option.dataset.deathCount) + death.count}`;
-              }
-            }
-            option.innerText = `${option.innerText.replace(/\([\d]+\)/, '')} (${option.dataset.deathCount})`;
-          }
-        });
-      }
-    });
-  }
-
   private bindAnchorEvents(map: google.maps.Map, mapElement: HTMLInputElement, formElement: HTMLInputElement): void {
     window.addEventListener('hashchange', () => {
       this.bindFilters(map, mapElement, formElement, true);
@@ -319,13 +300,13 @@ export class App {
       () => {
         const firstChild = map.getDiv().firstChild as Element;
         if (firstChild.clientHeight === window.innerHeight && firstChild.clientWidth === window.innerWidth) {
-          if (!formElement.classList.contains('fullscreen')) {
+          if (!document.body.classList.contains('fullscreen')) {
             document.fullscreenElement.appendChild(formElement);
-            formElement.classList.add('fullscreen');
+            document.body.classList.add('fullscreen');
           }
         } else {
           formWrapper.appendChild(formElement);
-          formElement.classList.remove('fullscreen');
+          document.body.classList.remove('fullscreen');
         }
       },
     );
@@ -402,7 +383,6 @@ export class App {
       let modalBloodbathListContent = '<ul>';
       let filteredResponse = <Bloodbath>response;
 
-      // this.alterFiltersLabels(filteredResponse); // Disabled for now since the choiceJS component hides it
       filteredResponse = this.getFilteredResponse(filteredResponse, filters);
       this.clearMapObjects();
 
@@ -670,7 +650,7 @@ export class App {
   }
 
   private bindLocalizationButton(map: google.maps.Map): void {
-    const buttonOptions = {
+    const buttonOptions = <GmapsOptions> {
       ctrlChildId: 'localizationImg',
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgSize: '180px 18px',
@@ -758,6 +738,7 @@ export class App {
   private bindRandomizationButton(map: google.maps.Map): void {
     const buttonOptions = {
       ctrlChildId: 'ramdomImg',
+      ctrlClasses: [],
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '-2px -2px',
       defaultCtrlChildBgSize: '120%',
@@ -778,6 +759,7 @@ export class App {
   private bindRefreshButton(map: google.maps.Map): void {
     const buttonOptions = {
       ctrlChildId: 'refreshImg',
+      ctrlClasses: [],
       ctrlPosition: google.maps.ControlPosition.RIGHT_TOP,
       defaultCtrlChildBgPos: '0px 0px',
       defaultCtrlChildBgSize: '100%',
@@ -794,6 +776,7 @@ export class App {
   private bindHeatmapButton(map: google.maps.Map): void {
     const buttonOptions = {
       ctrlChildId: 'heatmapImg',
+      ctrlClasses: [],
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '-2px -2px',
       defaultCtrlChildBgSize: '120%',
@@ -813,6 +796,7 @@ export class App {
   private bindClusteringButton(map: google.maps.Map): void {
     const buttonOptions = {
       ctrlChildId: 'clusteringImg',
+      ctrlClasses: [],
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '-2px -2px',
       defaultCtrlChildBgSize: '120%',
@@ -832,6 +816,7 @@ export class App {
   private bindListButton(map: google.maps.Map): void {
     const buttonOptions = {
       ctrlChildId: 'listImg',
+      ctrlClasses: ['hide-fs'],
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '0px 2px',
       defaultCtrlChildBgSize: '90%',
@@ -851,6 +836,7 @@ export class App {
   private bindChartButton(map: google.maps.Map, formElement: HTMLInputElement): void {
     const buttonOptions = {
       ctrlChildId: 'chartImg',
+      ctrlClasses: ['hide-fs'],
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '0px 2px',
       defaultCtrlChildBgSize: '90%',
