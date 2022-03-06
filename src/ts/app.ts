@@ -17,6 +17,7 @@ import { Death } from './models/death.model';
 import { FormFilters } from './models/formFilters.model';
 import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.model';
 /**
+ * @description Main app code
  * @author Georges.L <contact@geolim4.com>
  * @author Jbz797 <jean.benoit.gautier@gmail.com>
  * @licence GPL-2.0
@@ -25,7 +26,7 @@ export class App {
 
   private _circles: google.maps.Circle[];
   private _configObject: Config;
-  private _customChoicesInstances: { [name: string]: any };
+  private readonly _customChoicesInstances: { [name: string]: any };
   private _currentInfoWindows: google.maps.InfoWindow;
   private _heatMap: google.maps.visualization.HeatmapLayer;
   private _infoWindows: google.maps.InfoWindow[];
@@ -253,28 +254,6 @@ export class App {
     return filters;
   }
 
-  private alterFiltersLabels(unfilteredResponse: Bloodbath): void {
-    const selects = <NodeListOf<HTMLInputElement>>document.querySelectorAll('form select');
-
-    selects.forEach((select) => {
-      const options = <NodeListOf<HTMLOptionElement>>select.querySelectorAll('option');
-      if (select.dataset.countable === 'true') {
-        options.forEach((option) => {
-          if (option.value !== '') {
-            option.dataset.deathCount = '0';
-            for (const key in unfilteredResponse.deaths) {
-              const death = unfilteredResponse.deaths[key];
-              if (option.value === death[select.name] && death.published) {
-                option.dataset.deathCount = `${+(option.dataset.deathCount) + death.count}`;
-              }
-            }
-            option.innerText = `${option.innerText.replace(/\([\d]+\)/, '')} (${option.dataset.deathCount})`;
-          }
-        });
-      }
-    });
-  }
-
   private bindAnchorEvents(map: google.maps.Map, mapElement: HTMLInputElement, formElement: HTMLInputElement): void {
     window.addEventListener('hashchange', () => {
       this.bindFilters(map, mapElement, formElement, true);
@@ -402,7 +381,6 @@ export class App {
       let modalBloodbathListContent = '<ul>';
       let filteredResponse = <Bloodbath>response;
 
-      // this.alterFiltersLabels(filteredResponse); // Disabled for now since the choiceJS component hides it
       filteredResponse = this.getFilteredResponse(filteredResponse, filters);
       this.clearMapObjects();
 
