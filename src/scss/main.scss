@@ -170,3 +170,9 @@ a abbr[data-title] {
 #modal-bloodbath-chart .highcharts-credits {
   display: none;
 }
+
+body.fullscreen {
+  .hide-fs {
+    display: none !important;
+  }
+}

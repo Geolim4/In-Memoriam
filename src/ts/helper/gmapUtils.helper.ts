@@ -1,3 +1,5 @@
+import { Options } from '../models/Gmaps/options.model';
+
 /**
  * @author Georges.L <contact@geolim4.com>
  * @author Jbz797 <jean.benoit.gautier@gmail.com>
@@ -5,10 +7,12 @@
  */
 
 export class GmapUtils {
-  public static bindButton(map: google.maps.Map, onclickCallback: VoidFunction, opts: { imagePath: string, ctrlPosition: number, title?: string, ctrlChildId?: string, defaultCtrlChildBgPos?: string, defaultCtrlChildBgSize?: string }): HTMLElement {
+  public static bindButton(map: google.maps.Map, onclickCallback: VoidFunction, opts: Options): HTMLElement {
     const controlDiv = <HTMLDivElement>document.createElement('div');
     const firstChild = <HTMLButtonElement>document.createElement('button');
     const secondChild = document.createElement('div');
+
+    controlDiv.classList.add(...opts.ctrlClasses);
 
     firstChild.style.backgroundColor = '#FFF';
     firstChild.style.border = 'none';

@@ -16,6 +16,8 @@ import { StringUtilsHelper } from './helper/stringUtils.helper';
 import { Death } from './models/death.model';
 import { FormFilters } from './models/formFilters.model';
 import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.model';
+import { Options as GmapsOptions } from './models/Gmaps/options.model';
+
 /**
  * @description Main app code
  * @author Georges.L <contact@geolim4.com>
@@ -298,13 +300,13 @@ export class App {
       () => {
         const firstChild = map.getDiv().firstChild as Element;
         if (firstChild.clientHeight === window.innerHeight && firstChild.clientWidth === window.innerWidth) {
-          if (!formElement.classList.contains('fullscreen')) {
+          if (!document.body.classList.contains('fullscreen')) {
             document.fullscreenElement.appendChild(formElement);
-            formElement.classList.add('fullscreen');
+            document.body.classList.add('fullscreen');
           }
         } else {
           formWrapper.appendChild(formElement);
-          formElement.classList.remove('fullscreen');
+          document.body.classList.remove('fullscreen');
         }
       },
     );
@@ -648,7 +650,7 @@ export class App {
   }
 
   private bindLocalizationButton(map: google.maps.Map): void {
-    const buttonOptions = {
+    const buttonOptions = <GmapsOptions> {
       ctrlChildId: 'localizationImg',
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgSize: '180px 18px',
@@ -736,6 +738,7 @@ export class App {
   private bindRandomizationButton(map: google.maps.Map): void {
     const buttonOptions = {
       ctrlChildId: 'ramdomImg',
+      ctrlClasses: [],
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '-2px -2px',
       defaultCtrlChildBgSize: '120%',
@@ -756,6 +759,7 @@ export class App {
   private bindRefreshButton(map: google.maps.Map): void {
     const buttonOptions = {
       ctrlChildId: 'refreshImg',
+      ctrlClasses: [],
       ctrlPosition: google.maps.ControlPosition.RIGHT_TOP,
       defaultCtrlChildBgPos: '0px 0px',
       defaultCtrlChildBgSize: '100%',
@@ -772,6 +776,7 @@ export class App {
   private bindHeatmapButton(map: google.maps.Map): void {
     const buttonOptions = {
       ctrlChildId: 'heatmapImg',
+      ctrlClasses: [],
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '-2px -2px',
       defaultCtrlChildBgSize: '120%',
@@ -791,6 +796,7 @@ export class App {
   private bindClusteringButton(map: google.maps.Map): void {
     const buttonOptions = {
       ctrlChildId: 'clusteringImg',
+      ctrlClasses: [],
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '-2px -2px',
       defaultCtrlChildBgSize: '120%',
@@ -810,6 +816,7 @@ export class App {
   private bindListButton(map: google.maps.Map): void {
     const buttonOptions = {
       ctrlChildId: 'listImg',
+      ctrlClasses: ['hide-fs'],
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '0px 2px',
       defaultCtrlChildBgSize: '90%',
@@ -829,6 +836,7 @@ export class App {
   private bindChartButton(map: google.maps.Map, formElement: HTMLInputElement): void {
     const buttonOptions = {
       ctrlChildId: 'chartImg',
+      ctrlClasses: ['hide-fs'],
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '0px 2px',
       defaultCtrlChildBgSize: '90%',
