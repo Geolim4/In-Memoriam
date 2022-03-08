@@ -1067,6 +1067,41 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "03",
+      "day": "07",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de la brigade Signy-le-Petit a mit fin à ses jours à son domicile situé au sein de la brigade.\n Il était père de deux adolescents.",
+      "section": "BP Signy-le-Petit",
+      "location": "Signy-le-Petit (Ardennes)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 30,
+        "lat": 49.89761115862105,
+        "lon": 4.280793171721034
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lardennais.fr/id348753/article/2022-03-07/un-gendarme-de-signy-le-petit-decouvert-mort-son-domicile",
+          "titre": "L'Ardennais",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
