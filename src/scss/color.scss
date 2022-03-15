@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import './variables';
+
+:root {
+  --background-color: #{$medium-grey};
+  --text-color: #{$white};
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  form {
+    .choices[role$="box"] > .choices__inner,
+    .choices[role$="box"] .choices__input,
+    input.form-control,
+    select.form-control,
+    .form-control[disabled],
+    .form-control[readonly] {
+      color: $white;
+      background-color: $dark-grey;
+    }
+    .choices__list--dropdown > .choices__list {
+      color: $dark-grey;
+      font-weight: normal;
+    }
+
+    .choices[data-type*="select-one"] {
+      &:after {
+        border-top-color: $light-grey;
+      }
+      &.is-open:after {
+        border-bottom-color: $light-grey;
+      }
+    }
+  }
+  a {
+    color: #01a2d2;
+    &:focus,
+    &:hover {
+      color: #1d9bf0;
+    }
+  }
+  h1 a,
+  h1 a:hover,
+  h1 a:focus {
+    color: $white;
+  }
+
+  > header,
+  code {
+    background-color: $dark-grey;
+  }
+
+  .text-primary,
+  .text-info {
+    color: $white;
+  }
+
+  .modal__container {
+    background-color: $dark-grey;
+  }
+
+  .modal__title,
+  .modal__content {
+    color: $white;
+  }
+
+  .tippy-tooltip {
+    background-color: $dark-grey;
+  }
+}

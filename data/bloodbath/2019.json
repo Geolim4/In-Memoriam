@@ -2520,15 +2520,15 @@
       "keywords": "Benoit",
       "house": "police",
       "peers": [],
-      "text": "Un Gardien de la Paix du CSP de police du 19ème à Paris se suicide sur son lieu de villégiature près de Nîmes.",
+      "text": "Un Gardien de la Paix du commissariat de police du 19e à Paris se suicide sur son lieu de villégiature près de Nîmes.",
       "section": "CSP Paris 19e",
       "location": "Saint-Gervasy (Gard)",
       "origin": "interieur",
       "gps": {
         "accurate": true,
         "radius": 0,
-        "lat": 43.877545,
-        "lon": 4.469124
+        "lat": 48.88432571358825,
+        "lon": 2.3862426973108155
       },
       "sources": [
         {
