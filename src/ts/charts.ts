@@ -8,17 +8,21 @@ import { Definition } from './models';
  * @licence GPL-2.0
  */
 export class Charts {
-  public static buildChartPerCause(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], year: string): void  {
+  constructor() {
+    this.setupHighchartStyle();
+  }
+
+  public buildChartPerCause(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], year: string): void  {
     this.buildBarChartPerCriteria(markers, filters, definitions, 'cause', year);
     this.buildPieChartPerCriteria(markers, filters, definitions, 'cause', year);
   }
 
-  public static buildChartPerHouse(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], year: string): void {
+  public buildChartPerHouse(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], year: string): void {
     this.buildBarChartPerCriteria(markers, filters, definitions, 'house', year);
     this.buildPieChartPerCriteria(markers, filters, definitions, 'house', year);
   }
 
-  protected static buildBarChartPerCriteria(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], criteria: string, year: string): void {
+  protected buildBarChartPerCriteria(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], criteria: string, year: string): void {
     const series = [];
     const peersList = this.getPeersList(criteria, markers);
 
@@ -43,12 +47,21 @@ export class Charts {
     Highcharts.chart(`chart-container-bar-${criteria}`, {
       series,
       chart: {
+        backgroundColor: 'transparent',
         type: 'column',
       },
       plotOptions: {
         column: {
           borderWidth: 0,
           pointPadding: 0.2,
+        },
+        series: {
+          dataLabels: {
+            enabled: true,
+            formatter: function (): string|number {
+              return (this.y !== 0) ? this.y : '';
+            } as Highcharts.DataLabelsFormatterCallbackFunction,
+          },
         },
       },
       subtitle: {
@@ -79,7 +92,7 @@ export class Charts {
     });
   }
 
-  protected static buildPieChartPerCriteria(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], criteria: string, year: string): void {
+  protected buildPieChartPerCriteria(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], criteria: string, year: string): void {
     const seriesData = [];
     const peersList = this.getPeersList(criteria, markers);
 
@@ -103,6 +116,9 @@ export class Charts {
       }
     }
     Highcharts.chart(`chart-container-pie-${criteria}`, {
+      chart: {
+        backgroundColor: 'transparent',
+      },
       exporting: {
         enabled: false,
       },
@@ -131,7 +147,7 @@ export class Charts {
     });
   }
 
-  protected static getPeersList(criteria: string, markers: ExtendedGoogleMapsMarker[]): { [name: string]: { [name: string]: number } } {
+  protected getPeersList(criteria: string, markers: ExtendedGoogleMapsMarker[]): { [name: string]: { [name: string]: number } } {
     const peersList = <{ [name: string]: { [name: string]: number } }> {}; // @todo make Reusable interface for that object type
 
     for (const marker of markers) {
@@ -166,12 +182,80 @@ export class Charts {
     return peersList;
   }
 
-  protected static getFilterCriteriaColor(criteria: string, value: string, filters: FormFilters): string {
+  protected getFilterCriteriaColor(criteria: string, value: string, filters: FormFilters): string {
     for (const filterVal of filters[criteria]) {
       if (filterVal.value === value) {
         return filterVal.color;
       }
     }
     return '#000000';
+  }
+
+  protected setupHighchartStyle(): void {
+    const theme = <Highcharts.Options> {
+      colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
+      legend: {
+        itemHoverStyle:{
+          color: '#ffffff',
+        },
+        itemStyle: {
+          color: '#ececec',
+          fontFamily: 'Roboto, "Trebuchet MS", Verdana, sans-serif',
+          fontSize: '12px',
+          fontWeight: 'normal',
+        },
+      },
+      plotOptions: {
+        series: {
+          dataLabels: {
+            style: {
+              color: '#ececec',
+              fontFamily: 'Roboto, "Trebuchet MS", Verdana, sans-serif',
+              fontSize: '12px',
+              fontWeight: 'normal',
+            },
+          },
+        },
+      },
+      subtitle: {
+        style: {
+          color: '#ececec',
+          fontFamily: 'Roboto, "Trebuchet MS", Verdana, sans-serif',
+          fontSize: '15px',
+          fontWeight: 'bold',
+          opacity: 0.85,
+        },
+      },
+      title: {
+        style: {
+          color: '#ececec',
+          fontFamily: 'Roboto, "Trebuchet MS", Verdana, sans-serif',
+          fontSize: '20px',
+          fontWeight: 'bold',
+        },
+      },
+      xAxis: {
+        labels: {
+          style: {
+            color: '#ececec',
+            fontFamily: 'Roboto, "Trebuchet MS", Verdana, sans-serif',
+            fontSize: '12px',
+            fontWeight: 'bold',
+          },
+        },
+      },
+      yAxis: {
+        labels: {
+          style: {
+            color: '#ececec',
+            fontFamily: 'Roboto, "Trebuchet MS", Verdana, sans-serif',
+            fontSize: '16px',
+            fontWeight: 'bold',
+          },
+        },
+      },
+    };
+
+    Highcharts.setOptions(theme);
   }
 }

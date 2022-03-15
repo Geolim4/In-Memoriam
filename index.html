@@ -3,6 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xml:lang="fr" lang="fr">
 
 <head>
+    <link rel="dns-prefetch" href="//maps.googleapis.com/">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com/">
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>In Memoriam - Cartographie des décès militaires et civils Françaises</title>
     <link rel="manifest" href="./manifest.json" />
@@ -20,29 +23,32 @@
 <body>
 <div id="fork-me">
     <a href="https://github.com/Geolim4/In-Memoriam" target="_blank">
-        <img width="130" height="130" src="./assets/images/github/forkme_right_white_ffffff.png" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+        <img width="130" height="130" src="./assets/images/github/forkme_right_darkblue_121621.png" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
 </div>
-<div id="main">
-    <div class="need-help">
-        <a href="tel:0805230405">
-            <span class="label label-danger">
-                <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                <span>0805 230 405</span>
-            </span>
-        </a>
-        <strong>Être fort, c'est aussi savoir demander de l'aide ❤️</strong>
-    </div>
+<header>
     <div class="container-fluid">
-        <h1>Cartographie des décès militaires et civils Français</h1>
+        <div class="header-text">
+            <h1><a href="">Cartographie des décès militaires et civils Français</a></h1>
+        </div>
+        <div class="need-help">
+            <div class="red-border">
+                <a href="tel:0805230405"><span class="label label-danger"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;<span>0805 230 405</span></span></a>
+                <strong>Être fort, c'est aussi savoir demander de l'aide ❤️</strong>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="main">
 
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
-                <p class="text text-primary">
-                    Car les années se suivent et se ressemblent tristement, cette cartographie vous permettra de lister
-                    l'ensemble
-                    des décès militaires et civils Français quelqu'en soit la cause.
-                    Afin qu'aucun d'eux ne soit jamais oublié.
-                </p>
+            <div class="col-lg-6">
+                <blockquote class="text text-primary">
+                    <em>Car les années se suivent et se ressemblent tristement, cette cartographie vous permettra de lister
+                    l'ensemble des décès des forces de sécurité intérieures, civiles ou militaires, toutes causes confondues et de façon la plus exhaustive possible.<br />
+                    Afin qu'aucun d'eux ne soit jamais oublié 🕊️
+                    </em>
+                </blockquote>
             </div>
         </div>
         <div class="row mtop">
@@ -81,25 +87,35 @@
         </div>
         <div class="row mtop">
             <div class="col-xs-12 ">
-                <div class="alert alert-info" role="alert">
+                <div id="map" data-bloodbath-src="./data/bloodbath/%year%.json"></div>
+<!--
+                <div class="alert alert-info mtop" role="alert">
                     <p>
                         <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
                         <span>Utilisez votre souris ou vos doigts pour zoomer et cliquez sur un pictogramme afin de voir le détail d'un décès.</span>
                     </p>
                 </div>
-                <div id="map" class="mtop" data-bloodbath-src="./data/bloodbath/%year%.json"></div>
+-->
                 <div class="modal micromodal-slide" id="modal-bloodbath-list" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
                         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-bloodbath-list-title">
                             <header class="modal__header">
-                                <h2 class="modal__title" id="modal-bloodbath-list-title">
-                                    Export de la cartographie pour l'année <span id="modal-bloodbath-year"></span>: <span id="modal-bloodbath-death-counter"></span>
-                                </h2>
+                                <div>
+                                    <h2 class="modal__title" id="modal-bloodbath-list-title">
+                                        Export de la cartographie pour l'année <span id="modal-bloodbath-year"></span>: <span id="modal-bloodbath-death-counter"></span>
+                                    </h2>
+                                    <div class="mtop">
+                                        <small>
+                                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                            La liste affichée ci-dessous est contextualisée en fonction des filtres appliqués.
+                                        </small>
+                                    </div>
+                                </div>
                                 <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
                             </header>
                             <main class="modal__content" id="modal-bloodbath-list-content"></main>
                             <footer class="modal__footer">
-                                <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Close this dialog window">Fermer</button>
+                                <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Fermer la popup">Fermer</button>
                             </footer>
                         </div>
                     </div>
@@ -120,7 +136,7 @@
                                 <div class="col-md-12"><em><a href="https://www.highcharts.com" target="_blank"><small>Highcharts.com</small></a></em></div>
                             </main>
                             <footer class="modal__footer">
-                                <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Close this dialog window">Fermer</button>
+                                <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Fermer la popup">Fermer</button>
                             </footer>
                         </div>
                     </div>
@@ -144,27 +160,36 @@
         </div>
         <footer class="row mtop">
             <div class="col-md-12">
-                <div class="alert alert-warning" role="alert">
+                <div class="shadowed">
                     <h3>
-                        <strong>Disclaimer</strong>
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <strong>Disclaimer</strong>
                     </h3>
                     <p>
-              <span>
-                Ce site n'a pas pour vocation d'être exhaustif mais de regrouper seulement les disparitions
-                tragiques de
-                nos
-                forces de l'ordre, pompiers et militaires sur la base d'informations publiques et sourcées.
-                Les sources sont croisées et vérifiées afin de minimiser le plus possible un risque d'erreur.
-              </span>
+                      <span>
+                        Ce site n'a pas pour vocation d'être exhaustif mais de regrouper seulement les disparitions
+                        tragiques de
+                        nos
+                        forces de l'ordre, pompiers et militaires sur la base d'informations publiques et sourcées.
+                        Les sources sont croisées et vérifiées afin de minimiser le plus possible un risque d'erreur.
+                      </span>
+                    </p>
+                    <p>
+                        Vous avez un commentaire, une erreur à signaler ou une modification à apporter ?
+                    </p>
+                    <p>
+                        <a href="mailto:contact@geolim4.com">Contactez-nous</a> ou
+                        envoyez-nous un "pull request" sur <a href="https://github.com/Geolim4/In-Memoriam/compare" target="_blank">Github</a>.
                     </p>
                 </div>
             </div>
-            <div class="col-md-12">
-                <p></p>
-                <p class="text text-info">Un commentaire, une erreur, une modification à apporter ?
-                    <a href="mailto:contact@geolim4.com">Contactez-nous</a> ou
-                    <a href="https://github.com/Geolim4/In-Memoriam/compare">envoyez-nous un "pull request"</a> :)</p>
+            <div class="col-md-12 mtop">
+                <p>
+                    <span class="pull-right" data-tippy-content="Version actuelle de l'application :)"><code>v<em data-app-settings="appVersion"></em></code></span>
+                </p>
+                <p class="text text-info text-center">
+                    <span><small>Cartographie conçue avec ❤️ par <a href="https://twitter.com/emil_oeg" target="_blank">@emil_oeg</a></small></span>
+                </p>
             </div>
         </footer>
     </div>

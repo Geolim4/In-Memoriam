@@ -42,6 +42,7 @@ export class App {
   private filters: FormFilters;
   private userPosition: Position;
   private localizationMarker: google.maps.Marker;
+  private charts: Charts;
 
   constructor() {
     this._circles = [];
@@ -60,6 +61,7 @@ export class App {
     this.filters = {};
     this.userPosition = null;
     this.localizationMarker = null;
+    this.charts = new Charts();
   }
 
   public boot(): void {
@@ -68,17 +70,6 @@ export class App {
 
     // ... then this asynchronously
     this.loadGlossary();
-    micromodal.init({
-      awaitCloseAnimation: false, // [8]
-      awaitOpenAnimation: false, // [7]
-      closeTrigger: 'data-micromodal-close', // [4]
-      debugMode: true, // [9]
-      disableFocus: false, // [6]
-      disableScroll: true, // [5]
-      onClose: (modal) => console.info(`${modal.id} is hidden`), // [2]
-      onShow: (modal) => console.info(`${modal.id} is shown`), // [1]
-      openTrigger: 'data-micromodal-open', // [3]
-    });
   }
 
   public run(): void {
@@ -290,7 +281,6 @@ export class App {
         // this.hashManager(select.id, select.value);
         return false;
       };
-
       Events.addEventHandler(selector, 'change', this._eventHandlers[selector.id]);
     });
 
@@ -380,7 +370,7 @@ export class App {
       const modalBloodbathCounterElement = <HTMLInputElement>document.getElementById('modal-bloodbath-death-counter');
       const modalBloodbathYear = <HTMLInputElement>document.getElementById('modal-bloodbath-year');
       let modalBloodbathCounter = 0;
-      let modalBloodbathListContent = '<ul>';
+      let modalBloodbathListContent = '<div>';
       let filteredResponse = <Bloodbath>response;
 
       filteredResponse = this.getFilteredResponse(filteredResponse, filters);
@@ -511,10 +501,10 @@ export class App {
 
         const deathLabel = `${death.section}, ${death.location} ${totalDeathCount > 1 ? `(<strong style="color: red">${totalDeathCount} décès</strong>)` : ''}`;
         const deathLink = this.getMarkerLink(death, deathLabel);
-        modalBloodbathListContent += `<li>
+        modalBloodbathListContent += `<p>
     <strong>${death.day}/${death.month}/${death.year} [${causeFormatted}] - ${houseFormatted}:</strong>
     <span>${deathLink}</span>
-</li>`;
+</p>`;
 
         this._markers.push(marker);
         this._markerHashIndex[marker.linkHash] = this._markers.length - 1;
@@ -534,11 +524,7 @@ export class App {
         }
       });
 
-      modalBloodbathListContent += '</ul>';
-      modalBloodbathListContent += '<small>' +
-        '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> ' +
-        'La liste affichée ci-dessus est contextualisée en fonction des filtres appliqués.' +
-        '</small>';
+      modalBloodbathListContent += '</div>';
       modalBloodbathElement.innerHTML = StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, this.glossary);
       modalBloodbathCounterElement.innerHTML = `${modalBloodbathCounter} décès`;
       modalBloodbathYear.innerHTML = filters.year;
@@ -591,6 +577,7 @@ export class App {
   private setupSkeleton(formElement: HTMLInputElement, filters: Filters): void {
     const searchInput = formElement.querySelector('input#search') as HTMLInputElement;
     const searchMinLength = this._configObject.config['searchMinLength'];
+    const appSettingsElements = document.querySelectorAll('[data-app-settings]') as NodeListOf<HTMLElement>;
 
     for (const [filterName, filterValuesArray] of Object.entries(this.filters)) {
       for (const filterValueObject of filterValuesArray) {
@@ -606,6 +593,13 @@ export class App {
     searchInput.value = filters.search;
     searchInput.setAttribute('minlength', searchMinLength);
     searchInput.setAttribute('placeholder', searchInput.getAttribute('placeholder').replace('%d', searchMinLength));
+
+    appSettingsElements.forEach((appSettingsElements) => {
+      /**
+       * @todo Handle deeper config object.
+       */
+      appSettingsElements.innerHTML = this._configObject.config[appSettingsElements.dataset.appSettings];
+    });
   }
 
   private clearMapObjects(): void {
@@ -850,8 +844,9 @@ export class App {
           onShow: () => {
             const definitions = this.getConfigDefinitions();
             const year = this.getFilters(formElement, false)['year'];
-            Charts.buildChartPerCause(this._markers, this.filters, definitions, year);
-            Charts.buildChartPerHouse(this._markers, this.filters, definitions, year);
+
+            this.charts.buildChartPerCause(this._markers, this.filters, definitions, year);
+            this.charts.buildChartPerHouse(this._markers, this.filters, definitions, year);
           },
         });
       } else {
@@ -985,7 +980,7 @@ export class App {
     }
 
     const element = document.querySelector('[data-role="definitionsText"]');
-    element.innerHTML = definitionTexts.join('<br />');
+    element.innerHTML = `<div class="shadowed inline-block">${definitionTexts.join('<br />')}</div>`;
     tippyJs('[data-tippy-content]');
   }
 }
