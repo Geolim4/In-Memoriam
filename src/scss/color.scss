@@ -1,8 +1,15 @@
+@charset "UTF-8";
 @import './variables';
 
+:root {
+  --background-color: #{$medium-grey};
+  --text-color: #{$white};
+}
+
 body {
-  background-color: $medium-grey;
-  color: $white;
+  background-color: var(--background-color);
+  color: var(--text-color);
+
   form {
     .choices[role$="box"] > .choices__inner,
     .choices[role$="box"] .choices__input,
@@ -31,7 +38,17 @@ body {
     background-color: $dark-grey;
   }
 
-  .text-primary {
+  .text-primary,
+  .text-info {
+    color: $white;
+  }
+
+  .modal__container {
+    background-color: $dark-grey;
+  }
+
+  .modal__title,
+  .modal__content {
     color: $white;
   }
 }

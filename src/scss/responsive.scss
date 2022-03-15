@@ -1,0 +1,32 @@
+/**
+ * "Responsive"
+ */
+@media (max-height: 800px), (max-width: 1000px) {
+  #map {
+    #form-filters {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #fork-me {
+    display: none;
+  }
+  #map {
+    height: 30em;
+  }
+  .need-help {
+    strong {
+      font-size: 11px;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .need-help {
+    position: relative;
+    margin: auto;
+    text-align: center;
+  }
+}

@@ -42,6 +42,7 @@ export class App {
   private filters: FormFilters;
   private userPosition: Position;
   private localizationMarker: google.maps.Marker;
+  private charts: Charts;
 
   constructor() {
     this._circles = [];
@@ -60,6 +61,7 @@ export class App {
     this.filters = {};
     this.userPosition = null;
     this.localizationMarker = null;
+    this.charts = new Charts();
   }
 
   public boot(): void {
@@ -523,10 +525,6 @@ export class App {
       });
 
       modalBloodbathListContent += '</div>';
-      modalBloodbathListContent += '<small>' +
-        '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> ' +
-        'La liste affichée ci-dessus est contextualisée en fonction des filtres appliqués.' +
-        '</small>';
       modalBloodbathElement.innerHTML = StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, this.glossary);
       modalBloodbathCounterElement.innerHTML = `${modalBloodbathCounter} décès`;
       modalBloodbathYear.innerHTML = filters.year;
@@ -846,8 +844,9 @@ export class App {
           onShow: () => {
             const definitions = this.getConfigDefinitions();
             const year = this.getFilters(formElement, false)['year'];
-            Charts.buildChartPerCause(this._markers, this.filters, definitions, year);
-            Charts.buildChartPerHouse(this._markers, this.filters, definitions, year);
+
+            this.charts.buildChartPerCause(this._markers, this.filters, definitions, year);
+            this.charts.buildChartPerHouse(this._markers, this.filters, definitions, year);
           },
         });
       } else {
@@ -981,7 +980,7 @@ export class App {
     }
 
     const element = document.querySelector('[data-role="definitionsText"]');
-    element.innerHTML = `<div class="definition-list">${definitionTexts.join('<br />')}</div>`;
+    element.innerHTML = `<div class="shadowed inline-block">${definitionTexts.join('<br />')}</div>`;
     tippyJs('[data-tippy-content]');
   }
 }
