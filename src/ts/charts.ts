@@ -43,6 +43,7 @@ export class Charts {
     Highcharts.chart(`chart-container-bar-${criteria}`, {
       series,
       chart: {
+        backgroundColor: 'transparent',
         type: 'column',
       },
       plotOptions: {
@@ -103,6 +104,9 @@ export class Charts {
       }
     }
     Highcharts.chart(`chart-container-pie-${criteria}`, {
+      chart: {
+        backgroundColor: 'transparent',
+      },
       exporting: {
         enabled: false,
       },

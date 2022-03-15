@@ -68,17 +68,6 @@ export class App {
 
     // ... then this asynchronously
     this.loadGlossary();
-    micromodal.init({
-      awaitCloseAnimation: false, // [8]
-      awaitOpenAnimation: false, // [7]
-      closeTrigger: 'data-micromodal-close', // [4]
-      debugMode: true, // [9]
-      disableFocus: false, // [6]
-      disableScroll: true, // [5]
-      onClose: (modal) => console.info(`${modal.id} is hidden`), // [2]
-      onShow: (modal) => console.info(`${modal.id} is shown`), // [1]
-      openTrigger: 'data-micromodal-open', // [3]
-    });
   }
 
   public run(): void {
@@ -290,7 +279,6 @@ export class App {
         // this.hashManager(select.id, select.value);
         return false;
       };
-
       Events.addEventHandler(selector, 'change', this._eventHandlers[selector.id]);
     });
 
@@ -380,7 +368,7 @@ export class App {
       const modalBloodbathCounterElement = <HTMLInputElement>document.getElementById('modal-bloodbath-death-counter');
       const modalBloodbathYear = <HTMLInputElement>document.getElementById('modal-bloodbath-year');
       let modalBloodbathCounter = 0;
-      let modalBloodbathListContent = '<ul>';
+      let modalBloodbathListContent = '<div>';
       let filteredResponse = <Bloodbath>response;
 
       filteredResponse = this.getFilteredResponse(filteredResponse, filters);
@@ -511,10 +499,10 @@ export class App {
 
         const deathLabel = `${death.section}, ${death.location} ${totalDeathCount > 1 ? `(<strong style="color: red">${totalDeathCount} décès</strong>)` : ''}`;
         const deathLink = this.getMarkerLink(death, deathLabel);
-        modalBloodbathListContent += `<li>
+        modalBloodbathListContent += `<p>
     <strong>${death.day}/${death.month}/${death.year} [${causeFormatted}] - ${houseFormatted}:</strong>
     <span>${deathLink}</span>
-</li>`;
+</p>`;
 
         this._markers.push(marker);
         this._markerHashIndex[marker.linkHash] = this._markers.length - 1;
@@ -534,7 +522,7 @@ export class App {
         }
       });
 
-      modalBloodbathListContent += '</ul>';
+      modalBloodbathListContent += '</div>';
       modalBloodbathListContent += '<small>' +
         '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> ' +
         'La liste affichée ci-dessus est contextualisée en fonction des filtres appliqués.' +
@@ -591,6 +579,7 @@ export class App {
   private setupSkeleton(formElement: HTMLInputElement, filters: Filters): void {
     const searchInput = formElement.querySelector('input#search') as HTMLInputElement;
     const searchMinLength = this._configObject.config['searchMinLength'];
+    const appSettingsElements = document.querySelectorAll('[data-app-settings]') as NodeListOf<HTMLElement>;
 
     for (const [filterName, filterValuesArray] of Object.entries(this.filters)) {
       for (const filterValueObject of filterValuesArray) {
@@ -606,6 +595,13 @@ export class App {
     searchInput.value = filters.search;
     searchInput.setAttribute('minlength', searchMinLength);
     searchInput.setAttribute('placeholder', searchInput.getAttribute('placeholder').replace('%d', searchMinLength));
+
+    appSettingsElements.forEach((appSettingsElements) => {
+      /**
+       * @todo Handle deeper config object.
+       */
+      appSettingsElements.innerHTML = this._configObject.config[appSettingsElements.dataset.appSettings];
+    });
   }
 
   private clearMapObjects(): void {
@@ -985,7 +981,7 @@ export class App {
     }
 
     const element = document.querySelector('[data-role="definitionsText"]');
-    element.innerHTML = definitionTexts.join('<br />');
+    element.innerHTML = `<div class="definition-list">${definitionTexts.join('<br />')}</div>`;
     tippyJs('[data-tippy-content]');
   }
 }

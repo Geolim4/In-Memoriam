@@ -1,0 +1,37 @@
+@import './variables';
+
+body {
+  background-color: $medium-grey;
+  color: $white;
+  form {
+    .choices[role$="box"] > .choices__inner,
+    .choices[role$="box"] .choices__input,
+    input.form-control,
+    select.form-control,
+    .form-control[disabled],
+    .form-control[readonly] {
+      color: $white;
+      background-color: $dark-grey;
+    }
+    .choices__list--dropdown > .choices__list {
+      color: $dark-grey;
+      font-weight: normal;
+    }
+  }
+  a {
+    color: #01a2d2;
+    &:focus,
+    &:hover {
+      color: #1d9bf0;
+    }
+  }
+
+  > header,
+  code {
+    background-color: $dark-grey;
+  }
+
+  .text-primary {
+    color: $white;
+  }
+}
