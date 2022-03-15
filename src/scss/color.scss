@@ -24,6 +24,15 @@ body {
       color: $dark-grey;
       font-weight: normal;
     }
+
+    .choices[data-type*="select-one"] {
+      &:after {
+        border-top-color: $light-grey;
+      }
+      &.is-open:after {
+        border-bottom-color: $light-grey;
+      }
+    }
   }
   a {
     color: #01a2d2;
