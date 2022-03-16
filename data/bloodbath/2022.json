@@ -1161,6 +1161,36 @@
       "unpublished_reason": "",
       "year": "2022",
       "month": "03",
+      "day": "14",
+      "keywords": "Alexandre",
+      "house": "admpen",
+      "peers": [],
+      "text": "Un surveillant de la maison d’arrêt de Sarreguemines a mis fin à ses jours.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Maison d'arrêt",
+      "location": "Sarreguemines (Moselle)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.10612793013045,
+        "lon": 7.057762268605261
+      },
+      "sources": [
+        {
+          "url": "https://actupenit.com/2022/03/14/sarreguemines-drame-dans-la-penitentiaire-un-jeune-surveillant-de-38-ans-sest-suicide/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "03",
       "day": "15",
       "keywords": "Marc",
       "house": "police",
@@ -1190,6 +1220,11 @@
           "url": "https://www.bfmtv.com/lyon/replay-emissions/bonsoir-lyon/saint-exupery-suicide-d-un-policier-de-l-aeroport_VN-202203160581.html",
           "titre": "BFMTV",
           "paywall": false
+        },
+        {
+          "url": "https://www.leprogres.fr/faits-divers-justice/2022/03/17/un-policier-incendie-sa-maison-puis-se-suicide",
+          "titre": "Le Progrès",
+          "paywall": true
         }
       ]
     },
