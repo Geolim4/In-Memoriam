@@ -1152,6 +1152,76 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "03",
+      "day": "15",
+      "keywords": "Marc",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier du SPAFA de l'aéroport de l’aéroport de Lyon Saint-Exupéry (Rhône) a mit fin ses jours après avoir incendié sa maison.",
+      "section": "SPAFA - DZPAF",
+      "location": "Lyon Saint-Exupéry (Rhône)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.719983788302805,
+        "lon": 5.082446784224984
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/isere-un-policier-affecte-a-laeroport-de-lyon-saint-exupery-incendie-sa-maison-et-se-suicide.html",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lyonmag.com/article/121698/suicide-d-un-policier-affecte-a-l-aeroport-de-lyon-saint-exupery",
+          "titre": "Lyon Mag",
+          "paywall": false
+        },
+        {
+          "url": "https://www.bfmtv.com/lyon/replay-emissions/bonsoir-lyon/saint-exupery-suicide-d-un-policier-de-l-aeroport_VN-202203160581.html",
+          "titre": "BFMTV",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "03",
+      "day": "16",
+      "keywords": "Didier",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier du SDLCODF a mit fin ses jours alors qu'il était proche de son départ à la retraite.",
+      "section": "SDLCODF - DCPJ",
+      "location": "Nanterre (Hauts-de-Seine)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.89490146361768,
+        "lon": 2.2246876589591817
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/un-policier-de-la-direction-centrale-de-la-police-judiciaire-sest-suicide.html",
+          "titre": "Actu17",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
