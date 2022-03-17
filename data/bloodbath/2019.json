@@ -4467,7 +4467,13 @@
       "day": "03",
       "keywords": "Michael Harpon, DRPP, Aurélia Trifiro, Brice Le Mescam, Damien Ernest, Anthony Lancelot",
       "house": "police",
-      "peers": [],
+      "peers": [
+        {
+          "house": "misc",
+          "count": 1,
+          "section": "Administration de la PP"
+        }
+      ],
       "text": "Un agent administratif a attaqués des policiers et agents administratifs de la Préfecture de Police. \n Trois policiers de la DRPP ainsi qu'un agent administratif sont décédés des suites de leurs blessures. L'attaquant a été abattu par un policier après plusieurs sommations. Sur les quatres fonctionnaires tués, 3 d'entre eux étaient chacun parent de deux enfants.",
       "section": "Préfecture de Police",
       "location": "Paris",
