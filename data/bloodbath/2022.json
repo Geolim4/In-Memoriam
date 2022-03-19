@@ -1156,16 +1156,16 @@
     {
       "cause": "suicide",
       "count": 1,
-      "published": false,
+      "published": true,
       "orphans": 1,
-      "unpublished_reason": "A vérifier !!! Circonstances non claires.",
+      "unpublished_reason": "",
       "year": "2022",
       "month": "03",
       "day": "12",
       "keywords": "David DAMBRINE",
       "house": "gendarmerie",
       "peers": [],
-      "text": "",
+      "text": "Un gendarme de l'EDSR 62 a mit fin à ses jours avec son arme de service à son domicile.\n Il était marié et père d'une adolescente.",
       "section": "EDSR 62",
       "location": "Arras (Pas-de-Calais)",
       "origin": "interieur",
@@ -1176,6 +1176,11 @@
         "lon": 2.7531374938072855
       },
       "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/pas-de-calais-un-gendarme-darras-se-suicide-a-son-domicile.html",
+          "titre": "Actu17",
+          "paywall": false
+        },
         {
           "url": "https://lessor.org/vie-des-personnels/une-cagnotte-pour-la-fille-dun-gendarme-darras-decede",
           "titre": "L'Essor",

@@ -4,10 +4,12 @@
  * @licence GPL-2.0
  */
 export class Events {
-  public static addEventHandler(elem: HTMLInputElement | any, eventType: string, handler: EventListenerOrEventListenerObject): void {
+  public static addEventHandler(elem: HTMLInputElement, eventType: string, handler: EventListenerOrEventListenerObject, once?: boolean): void {
     if (elem.addEventListener) {
-      elem.addEventListener(eventType, handler, false);
-    } else if (elem.attachEvent) {
+      elem.addEventListener(eventType, handler, once ? { once: true } : false);
+      // @ts-ignore
+    } else if (typeof elem.attachEvent !== 'undefined') {
+      // @ts-ignore
       elem.attachEvent(`on ${eventType}`, handler);
     }
   }
@@ -16,5 +18,12 @@ export class Events {
     if (elem.removeEventListener) {
       elem.removeEventListener(eventType, handler, false);
     }
+  }
+
+  public static hardRemoveEventHandler(elem: HTMLInputElement): HTMLInputElement {
+    const newElem = <HTMLInputElement> elem.cloneNode(true);
+    elem.parentNode.replaceChild(newElem, elem);
+
+    return newElem;
   }
 }

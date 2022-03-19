@@ -2,7 +2,7 @@ import { App } from './app';
 
 document.addEventListener('DOMContentLoaded', () => {
   try {
-    (new App()).boot();
+    new App();
   } catch (e) {
     console.error(e);
     alert('Une erreur est survenue :(');
