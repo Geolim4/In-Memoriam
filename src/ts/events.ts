@@ -7,6 +7,9 @@ export class Events {
   public static addEventHandler(elem: HTMLInputElement, eventType: string, handler: EventListenerOrEventListenerObject, once?: boolean): void {
     if (elem.addEventListener) {
       elem.addEventListener(eventType, handler, once ? { once: true } : false);
+      if (eventType === 'click') {
+        elem.addEventListener('touchstart', handler, once ? { once: true } : false);
+      }
       // @ts-ignore
     } else if (typeof elem.attachEvent !== 'undefined') {
       // @ts-ignore
