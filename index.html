@@ -18,8 +18,8 @@
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://in.memoriam.forces-francaises.fr/" />
     <meta property="og:image" content="https://in.memoriam.forces-francaises.fr/assets/images/pwa/in-memoriam_512.png" />
-    <link rel="stylesheet" href="./assets/css/main.css" crossorigin="anonymous" />
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap">
+    <link rel="stylesheet" href="./assets/css/main.css" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -27,7 +27,7 @@
     <a href="https://github.com/Geolim4/In-Memoriam" target="_blank">
         <img width="130" height="130" src="./assets/images/github/forkme_right_darkblue_121621.png" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
 </div>
-<header>
+<header class="top-menu">
     <div class="container-fluid">
         <div class="header-text">
             <h1><a href="">Cartographie des décès militaires et civils Français</a></h1>
@@ -98,51 +98,6 @@
                     </p>
                 </div>
 -->
-                <div class="modal micromodal-slide" id="modal-bloodbath-list" aria-hidden="true">
-                    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-                        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-bloodbath-list-title">
-                            <header class="modal__header">
-                                <div>
-                                    <h2 class="modal__title" id="modal-bloodbath-list-title">
-                                        Export de la cartographie pour l'année <span id="modal-bloodbath-year"></span>: <span id="modal-bloodbath-death-counter"></span>
-                                    </h2>
-                                    <div class="mtop">
-                                        <small>
-                                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                            La liste affichée ci-dessous est contextualisée en fonction des filtres appliqués.
-                                        </small>
-                                    </div>
-                                </div>
-                                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                            </header>
-                            <main class="modal__content" id="modal-bloodbath-list-content"></main>
-                            <footer class="modal__footer">
-                                <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Fermer la popup">Fermer</button>
-                            </footer>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal micromodal-slide" id="modal-bloodbath-chart" aria-hidden="true">
-                    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-                        <div class="modal__container large" role="dialog" aria-modal="true" aria-labelledby="modal-bloodbath-list-title">
-                            <header class="modal__header">
-                                <h2 class="modal__title" ></h2>
-                                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                            </header>
-                            <main class="modal__content" id="modal-bloodbath-chart-content">
-                                <div id="chart-container-pie-cause" class="col-md-6"></div>
-                                <div id="chart-container-pie-house" class="col-md-6"></div>
-                                <div class="col-md-12"><p><br /></p></div>
-                                <div id="chart-container-bar-cause" class="col-md-12"></div>
-                                <div id="chart-container-bar-house" class="col-md-12"></div>
-                                <div class="col-md-12"><em><a href="https://www.highcharts.com" target="_blank"><small>Highcharts.com</small></a></em></div>
-                            </main>
-                            <footer class="modal__footer">
-                                <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Fermer la popup">Fermer</button>
-                            </footer>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="row mtop">
@@ -186,17 +141,85 @@
                 </div>
             </div>
             <div class="col-md-12 mtop">
-                <p>
-                    <span class="pull-right" data-tippy-content="Version actuelle de l'application :)"><code>v<em data-app-settings="appVersion"></em></code></span>
-                </p>
                 <p class="text text-info text-center">
                     <span><small>Cartographie conçue avec ❤️ par <a href="https://twitter.com/emil_oeg" target="_blank">@emil_oeg</a></small></span>
+                </p>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">
+                    <small data-tippy-content="Version actuelle de l'application :)"><code>v<em data-app-settings="appVersion"></em></code></small>
                 </p>
             </div>
         </footer>
     </div>
 </div>
+
+<!-- Modals -->
+<div id="micromodals">
+    <div class="modal micromodal-slide" id="modal-bloodbath-list" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-bloodbath-list-title">
+                <header class="modal__header">
+                    <div>
+                        <h2 class="modal__title" id="modal-bloodbath-list-title">
+                            Export de la cartographie pour l'année <span id="modal-bloodbath-year"></span>: <span id="modal-bloodbath-death-counter"></span>
+                        </h2>
+                        <div class="mtop">
+                            <small>
+                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                La liste affichée ci-dessous est contextualisée en fonction des filtres appliqués.
+                            </small>
+                        </div>
+                    </div>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                </header>
+                <main class="modal__content" id="modal-bloodbath-list-content"></main>
+                <footer class="modal__footer">
+                    <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Fermer la popup">Fermer</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div class="modal micromodal-slide" id="modal-bloodbath-chart" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container large" role="dialog" aria-modal="true" aria-labelledby="modal-bloodbath-list-title">
+                <header class="modal__header">
+                    <h2 class="modal__title" ></h2>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                </header>
+                <main class="modal__content" id="modal-bloodbath-chart-content">
+                    <div id="chart-container-pie-cause" class="col-md-6"></div>
+                    <div id="chart-container-pie-house" class="col-md-6"></div>
+                    <div class="col-md-12"><p><br /></p></div>
+                    <div id="chart-container-bar-cause" class="col-md-12"></div>
+                    <div id="chart-container-bar-house" class="col-md-12"></div>
+                    <div class="col-md-12"><em><a href="https://www.highcharts.com" target="_blank"><small>Highcharts.com</small></a></em></div>
+                </main>
+                <footer class="modal__footer">
+                    <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Fermer la popup">Fermer</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div class="modal micromodal-slide" id="modal-info" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-bloodbath-list-title">
+                <header class="modal__header">
+                    <div>
+                        <h2 class="modal__title" id="modal-info-title"></h2>
+                    </div>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                </header>
+                <main class="modal__content" id="modal-info-content"></main>
+                <footer class="modal__footer">
+                    <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Fermer la popup" data-micromodal-role="validate">Ok</button>
+                    <button class="modal__btn hidden" data-micromodal-close aria-label="Fermer la popup" data-micromodal-role="cancel">Annuler</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script type="text/javascript" src="./assets/js/bundle.js"></script>
 </body>
-
 </html>
