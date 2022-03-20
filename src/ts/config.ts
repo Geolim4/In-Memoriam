@@ -1,5 +1,3 @@
-import * as qwest from 'qwest';
-
 import { Definition, Settings } from './models';
 
 /**
@@ -21,10 +19,10 @@ export class Config {
   }
 
   public init(onceInitialized: VoidFunction): void {
-    qwest.get(this.configPath).then((_xhr, response: { settings: Settings }) => {
-      this.config = response.settings;
-      qwest.get(this.definitionsPath).then((_xhr, response: { definitions: Definition[] }) => {
-        this.definitions = response.definitions;
+    fetch(this.configPath).then((response) => response.json()).then((responseData: { settings: Settings }) => {
+      this.config = responseData.settings;
+      fetch(this.definitionsPath).then((response) => response.json()).then((responseData: { definitions: Definition[] }) => {
+        this.definitions = responseData.definitions;
         if (onceInitialized) {
           onceInitialized();
         }

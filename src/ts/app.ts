@@ -1,6 +1,5 @@
 import { MarkerClusterer, SuperClusterAlgorithm } from '@googlemaps/markerclusterer';
 import * as loadGoogleMapsApi from 'load-google-maps-api';
-import * as qwest from 'qwest';
 import tippyJs from 'tippy.js';
 import micromodal from 'micromodal';
 import activityDetector from 'activity-detector';
@@ -120,9 +119,11 @@ export class App {
 
   public loadGlossary(): void {
     const glossaryPath = './data/config/glossary.json';
-    qwest.get(glossaryPath).then((_xhr, response: {glossary: {}}) => {
-      this.glossary = response.glossary;
-    });
+    fetch(glossaryPath)
+      .then((response) => response.json())
+      .then((responseData: {glossary: {}}) => {
+        this.glossary = responseData.glossary;
+      });
   }
 
   public getConfigDefinitions(): Definition[] {
@@ -336,8 +337,8 @@ export class App {
       const map = new google.maps.Map(mapElement, options);
       const filtersPath = './data/config/filters.json';
 
-      qwest.get(filtersPath).then((_xhr, response: {filters: FormFilters}) => {
-        this.formFilters = response.filters;
+      fetch(filtersPath).then((response) => response.json()).then((responseData: {filters: FormFilters}) => {
+        this.formFilters = responseData.filters;
         this.setupSkeleton(this.getFilters(true));
         this.bindAnchorEvents(map, mapElement);
         this.bindFilters(map, mapElement);
@@ -444,12 +445,12 @@ export class App {
 
   private bindMarkers(source: string, map: google.maps.Map, filters: Filters): void {
 
-    qwest.get(`${source.replace('%year%', filters.year)}?_=${(new Date()).getTime()}`).then((_xhr, response: Bloodbath) => {
+    fetch(`${source.replace('%year%', filters.year)}?_=${(new Date()).getTime()}`).then((response) => response.json()).then((responseData: Bloodbath) => {
       const bounds = new google.maps.LatLngBounds();
       const domTomMarkers = <ExtendedGoogleMapsMarker[]>[];
       const heatMapData = <{ location: google.maps.LatLng, weight: number }[]>[];
       const nationalMarkers = <ExtendedGoogleMapsMarker[]>[];
-      const filteredResponse = this.getFilteredResponse(<Bloodbath>response, filters);
+      const filteredResponse = this.getFilteredResponse(responseData, filters);
 
       this.clearMapObjects();
       this.setAppAsLoaded();
@@ -633,7 +634,7 @@ export class App {
       }
 
       Permalink.build(filters);
-      this.printDefinitionsText(response, filters);
+      this.printDefinitionsText(responseData, filters);
       map.fitBounds(bounds);
     });
 
