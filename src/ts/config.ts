@@ -1,4 +1,5 @@
 import { Definition, Settings } from './models';
+import { App } from './app';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -8,11 +9,13 @@ export class Config {
 
   public config: Settings;
   public definitions: Definition[];
+  private app: App;
 
   private configPath: string;
   private definitionsPath: string;
 
-  constructor(onceInitialized: VoidFunction) {
+  constructor(app: App, onceInitialized: VoidFunction) {
+    this.app = app;
     this.configPath = './data/config/settings.json';
     this.definitionsPath = './data/config/definitions.json';
     this.init(onceInitialized);
@@ -26,7 +29,11 @@ export class Config {
         if (onceInitialized) {
           onceInitialized();
         }
+      }).catch(() => {
+        this.app.getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des définitions.', null, null, true);
       });
+    }).catch(() => {
+      this.app.getModal().modalInfo('Erreur', 'Impossible de récupérer le modèle de configuration.', null, null, true);
     });
   }
 }

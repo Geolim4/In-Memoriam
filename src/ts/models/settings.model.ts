@@ -1,5 +1,6 @@
 export interface Settings {
   appVersion: string;
+  bloodbathSrc: string;
   contactEmail: string;
   defaultLat: number;
   defaultLon: number;

@@ -73,4 +73,11 @@ body {
   .text-warning {
     color: $orange;
   }
+
+  .modal.modal__error {
+    .modal__title,
+    .modal__content {
+      color: $error;
+    }
+  }
 }

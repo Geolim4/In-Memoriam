@@ -38,8 +38,8 @@ export class App {
   private glossary: { [name: string]: string };
   private formFilters: FormFilters;
   private mapButtons: MapButtons;
-  private modal: Modal;
   private appLoaded: boolean;
+  private readonly modal: Modal;
   private readonly formElement: HTMLInputElement;
   private readonly customChoicesInstances: { [name: string]: any };
   private readonly eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
@@ -123,6 +123,8 @@ export class App {
       .then((response) => response.json())
       .then((responseData: {glossary: {}}) => {
         this.glossary = responseData.glossary;
+      }).catch(() => {
+        this.modal.modalInfo('Erreur', 'Impossible de récupérer le dictionnaire des termes.', null, null, true);
       });
   }
 
@@ -131,9 +133,7 @@ export class App {
   }
 
   public reloadMarkers(map: google.maps.Map, fromAnchor: boolean): void {
-    const mapElement = <HTMLInputElement>document.getElementById('map');
-
-    this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(fromAnchor));
+    this.bindMarkers(this.configObject.config.bloodbathSrc, map, this.getFilters(fromAnchor));
   }
 
   public getFilters(fromAnchor: boolean): Filters {
@@ -312,7 +312,7 @@ export class App {
 
   private boot(): void {
     // Run this synchronously...
-    this.configObject = (new Config(() => this.run()));
+    this.configObject = (new Config(this, () => this.run()));
 
     // ... then this asynchronously
     this.loadGlossary();
@@ -340,15 +340,17 @@ export class App {
       fetch(filtersPath).then((response) => response.json()).then((responseData: {filters: FormFilters}) => {
         this.formFilters = responseData.filters;
         this.setupSkeleton(this.getFilters(true));
-        this.bindAnchorEvents(map, mapElement);
-        this.bindFilters(map, mapElement);
+        this.bindAnchorEvents(map);
+        this.bindFilters(map);
         this.mapButtons.bindCustomButtons(map);
-        this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(true));
+        this.bindMarkers(this.configObject.config.bloodbathSrc, map, this.getFilters(true));
         this.bindMarkerLinkEvent(map);
         this.bindFullscreenFormFilterListener();
+      }).catch(() => {
+        this.modal.modalInfo('Erreur', 'Impossible de récupérer la liste des filtres.', null, null, true);
       });
 
-      this.loadActivityDetectorMonitoring(map, mapElement);
+      this.loadActivityDetectorMonitoring(map);
     });
   }
 
@@ -366,7 +368,7 @@ export class App {
     });
   }
 
-  private loadActivityDetectorMonitoring(map: google.maps.Map, mapElement: HTMLInputElement): void {
+  private loadActivityDetectorMonitoring(map: google.maps.Map): void {
     const activityDetectorMonitoring = activityDetector({
       timeToIdle: 2 * 60 * 1000, // wait 2min of inactivity to consider the user is idle
     });
@@ -375,7 +377,7 @@ export class App {
     activityDetectorMonitoring.on('idle', () => {
       console.log('User is now idle...');
       handler = setInterval(() => {
-        this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(false));
+        this.bindMarkers(this.configObject.config.bloodbathSrc, map, this.getFilters(false));
         console.log('Reloading map...');
       }, 300 * 1000); // Reload every 5min
     });
@@ -386,19 +388,18 @@ export class App {
     });
   }
 
-  private bindAnchorEvents(map: google.maps.Map, mapElement: HTMLInputElement): void {
+  private bindAnchorEvents(map: google.maps.Map): void {
     window.addEventListener('hashchange', () => {
-      this.bindFilters(map, mapElement, true);
-      this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(true));
+      this.bindFilters(map, true);
+      this.bindMarkers(this.configObject.config.bloodbathSrc, map, this.getFilters(true));
     }, false);
   }
 
-  private bindFilters(map: google.maps.Map, mapElement: HTMLInputElement, fromAnchor?: boolean): void {
+  private bindFilters(map: google.maps.Map, fromAnchor?: boolean): void {
     const selects = <NodeListOf<HTMLInputElement>>this.formElement.querySelectorAll('form select, form input');
     const filters = this.getFilters(fromAnchor);
 
     Events.addEventHandler(this.formElement, 'submit', (e) => {
-      // this.bindMarkers(mapElement.dataset.bloodbathSrc, map, this.getFilters(formElement, fromAnchor));
       e.preventDefault();
     });
 
@@ -413,7 +414,7 @@ export class App {
 
       this.eventHandlers[selector.id] = () => {
         const filters = this.getFilters(false);
-        this.bindMarkers(mapElement.dataset.bloodbathSrc, map, filters);
+        this.bindMarkers(this.configObject.config.bloodbathSrc, map, filters);
 
         // this.hashManager(select.id, select.value);
         return false;
@@ -636,6 +637,8 @@ export class App {
       Permalink.build(filters);
       this.printDefinitionsText(responseData, filters);
       map.fitBounds(bounds);
+    }).catch(() => {
+      this.modal.modalInfo('Erreur', 'Impossible de récupérer la liste des décès.', null, null, true);
     });
 
   }
