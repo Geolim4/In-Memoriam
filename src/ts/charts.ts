@@ -2,6 +2,7 @@ import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.mode
 import { FormFilters } from './models/formFilters.model';
 import * as Highcharts from 'highcharts';
 import { Definition } from './models';
+import { PeerList } from './models/peerList.model';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -147,8 +148,8 @@ export class Charts {
     });
   }
 
-  protected getPeersList(criteria: string, markers: ExtendedGoogleMapsMarker[]): { [name: string]: { [name: string]: number } } {
-    const peersList = <{ [name: string]: { [name: string]: number } }> {}; // @todo make Reusable interface for that object type
+  protected getPeersList(criteria: string, markers: ExtendedGoogleMapsMarker[]): PeerList {
+    const peersList = <PeerList> {};
 
     for (const marker of markers) {
       if (marker.death.peers) {

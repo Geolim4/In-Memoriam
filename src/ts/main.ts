@@ -7,4 +7,4 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error(e);
     alert('Une erreur est survenue :(');
   }
-});
+}, { once: true });
