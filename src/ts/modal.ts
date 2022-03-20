@@ -20,7 +20,7 @@ export class Modal {
     });
   }
 
-  public modalInfo(title: string, content: string, confirmCallback?: VoidFunction, cancelCallback?: VoidFunction): void {
+  public modalInfo(title: string, content: string, confirmCallback?: VoidFunction, cancelCallback?: VoidFunction, isError?: boolean): void {
     let hasConfirmed = false;
 
     micromodal.show('modal-info', {
@@ -30,6 +30,11 @@ export class Modal {
         }
       },
       onShow: () => {
+        if (isError) {
+          document.getElementById('modal-info').classList.add('modal__error');
+        } else {
+          document.getElementById('modal-info').classList.remove('modal__error');
+        }
         document.getElementById('modal-info-title').innerHTML = title;
         document.getElementById('modal-info-content').innerHTML = content;
 
