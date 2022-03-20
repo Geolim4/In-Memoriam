@@ -8,7 +8,6 @@ import { Options as GmapsOptions } from './models/Gmaps/options.model';
 import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.model';
 import micromodal from 'micromodal';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
-import { Events } from './events';
 
 export class MapButtons {
   private app: App;
@@ -19,8 +18,6 @@ export class MapButtons {
     this.app = app;
     this.localizationMarker = null;
     this.userPosition = null;
-
-    this.bindFullscreenMicromodalListener();
   }
 
   public bindCustomButtons(map: google.maps.Map): void {
@@ -31,48 +28,6 @@ export class MapButtons {
     this.bindClusteringButton(map);
     this.bindListButton(map);
     this.bindChartButton(map);
-  }
-
-  public bindFullscreenMicromodalListener(): void {
-    document.addEventListener('fullscreenchange', () => {
-      if (document.fullscreenElement) {
-        document.fullscreenElement.appendChild(document.getElementById('micromodals'));
-      } else {
-        document.body.appendChild(document.getElementById('micromodals'));
-      }
-    });
-  }
-
-  public modalInfo(title: string, content: string, confirmCallback?: VoidFunction, cancelCallback?: VoidFunction): void {
-    let hasConfirmed = false;
-
-    micromodal.show('modal-info', {
-      onClose: () => {
-        if (!hasConfirmed && confirmCallback && cancelCallback) {
-          cancelCallback();
-        }
-      },
-      onShow: () => {
-        document.getElementById('modal-info-title').innerHTML = title;
-        document.getElementById('modal-info-content').innerHTML = content;
-
-        if (confirmCallback) {
-          const validateButton = Events.hardRemoveEventHandler(document.querySelector('#modal-info button[data-micromodal-role="validate"]'));
-          Events.addEventHandler(
-            validateButton,
-            'click',
-            () => {
-              hasConfirmed = true;
-              confirmCallback();
-            },
-            true,
-          );
-          document.querySelector('#modal-info button[data-micromodal-role="cancel"]').classList.remove('hidden');
-        } else {
-          document.querySelector('#modal-info button[data-micromodal-role="cancel"]').classList.add('hidden');
-        }
-      },
-    });
   }
 
   private bindLocalizationButton(map: google.maps.Map): void {
@@ -156,7 +111,7 @@ export class MapButtons {
       if (this.userPosition) {
         geolocationCallback(this.userPosition);
       } else {
-        this.modalInfo(
+        this.app.getModal().modalInfo(
           'Information sur la localisation',
           'La demande de localisation ne servira qu\'à positionner la carte autour de vous, aucune donnée ne sera envoyée ni même conservée nulle part.',
           () => {
@@ -299,7 +254,7 @@ export class MapButtons {
           },
         });
       } else {
-        this.modalInfo('Information', 'La cartographie est vide, essayez de modifier les filtres.', () => {
+        this.app.getModal().modalInfo('Information', 'La cartographie est vide, essayez de modifier les filtres.', () => {
           console.log('test');
         });
       }
@@ -329,7 +284,7 @@ export class MapButtons {
           },
         });
       } else {
-        this.modalInfo('Information', 'La cartographie est vide, essayez de modifier les filtres.');
+        this.app.getModal().modalInfo('Information', 'La cartographie est vide, essayez de modifier les filtres.');
       }
     }, buttonOptions);
   }

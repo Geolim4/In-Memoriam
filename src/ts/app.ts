@@ -12,6 +12,7 @@ import { Events } from './events';
 import { Permalink } from './permalink';
 import { Charts } from './charts';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
+import { Modal } from './modal';
 import { Death } from './models/death.model';
 import { FormFilters } from './models/formFilters.model';
 import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.model';
@@ -38,6 +39,7 @@ export class App {
   private glossary: { [name: string]: string };
   private formFilters: FormFilters;
   private mapButtons: MapButtons;
+  private modal: Modal;
   private appLoaded: boolean;
   private readonly formElement: HTMLInputElement;
   private readonly customChoicesInstances: { [name: string]: any };
@@ -61,6 +63,7 @@ export class App {
     this.formFilters = {};
     this.charts = new Charts();
     this.mapButtons = new MapButtons(this);
+    this.modal = new Modal();
     this.appLoaded = false;
     this.formElement = <HTMLInputElement>document.getElementById('form-filters');
 
@@ -93,6 +96,10 @@ export class App {
 
   public getCharts(): Charts {
     return this.charts;
+  }
+
+  public getModal(): Modal {
+    return this.modal;
   }
 
   public isClusteringEnabled(): boolean {
@@ -744,7 +751,7 @@ export class App {
     return this;
   }
 
-  private printDefinitionsText(response: Bloodbath, filters?: Filters): void {
+  private printDefinitionsText(response?: Bloodbath, filters?: Filters): void {
     const definitionTexts = [];
     if (response) {
       const definitions = this.getDefinitions(response);
@@ -778,24 +785,21 @@ export class App {
       definitionTexts.push(`<em>Dernier décès indexé:</em> ${latestDeathLink}`);
 
       if (!response.settings.up_to_date) {
-        definitionTexts.push(`<div class="alert alert-warning mtop" role="alert">
-                      <p>
+        definitionTexts.push(`<div class="mtop">
+                     <span class="text text-warning">
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;
                         <strong>Les r&eacute;sultats de cette ann&eacute;e peuvent &ecirc;tre incomplets car tous les d&eacute;c&egrave;s n'ont pas encore &eacute;t&eacute; ind&eacute;x&eacute;s.</strong>
-                      </p>
+                     </span>
                   </div>`);
       }
     } else {
-      definitionTexts.push(`<div class="alert alert-warning" role="alert">
-                      <p>
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;
-                        <strong>Aucun r&eacute;sultat trouv&eacute;, essayez avec d'autres crit&egrave;res de recherche.</strong>
-                      </p>
-                  </div>`);
+      const messageText = 'Aucun r&eacute;sultat trouv&eacute;, essayez avec d\'autres crit&egrave;res de recherche.';
+      this.modal.modalInfo('Information', messageText);
+      definitionTexts.push(`<span class="text text-warning"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp; <strong>${messageText}</strong></span>`);
     }
 
     const element = document.querySelector('[data-role="definitionsText"]');
-    element.innerHTML = `<div class="shadowed inline-block">${definitionTexts.join('<br />')}</div>`;
+    element.innerHTML = definitionTexts.length ? `<div class="shadowed inline-block">${definitionTexts.join('<br />')}</div>` : '';
     tippyJs('[data-tippy-content]');
   }
 }
