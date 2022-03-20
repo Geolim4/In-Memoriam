@@ -38,6 +38,7 @@ export class App {
   private glossary: { [name: string]: string };
   private formFilters: FormFilters;
   private mapButtons: MapButtons;
+  private appLoaded: boolean;
   private readonly formElement: HTMLInputElement;
   private readonly customChoicesInstances: { [name: string]: any };
   private readonly eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
@@ -60,6 +61,7 @@ export class App {
     this.formFilters = {};
     this.charts = new Charts();
     this.mapButtons = new MapButtons(this);
+    this.appLoaded = false;
     this.formElement = <HTMLInputElement>document.getElementById('form-filters');
 
     this.boot();
@@ -280,7 +282,7 @@ export class App {
                 if (filteredResponse.deaths[dKey].peers.length) {
                   let continueFlag = false;
                   for (const peer of filteredResponse.deaths[dKey].peers) {
-                    if ((fieldName === 'house' && filter.split(',').includes(peer.house))) {
+                    if (peer.hasOwnProperty(fieldName) && peer[fieldName] && filter.split(',').includes(peer[fieldName])) {
                       continueFlag = true;
                       break;
                     }
@@ -315,6 +317,7 @@ export class App {
     }).then(() => {
       const mapElement = <HTMLInputElement>document.getElementById('map');
       const options = {
+        backgroundColor: '#343a40', // See variables.scss
         center: new google.maps.LatLng(this.configObject.config['defaultLat'], this.configObject.config['defaultLon']),
         mapId: this.configObject.config['mapId'],
         mapTypeControl: false,
@@ -435,15 +438,14 @@ export class App {
   private bindMarkers(source: string, map: google.maps.Map, filters: Filters): void {
 
     qwest.get(`${source.replace('%year%', filters.year)}?_=${(new Date()).getTime()}`).then((_xhr, response: Bloodbath) => {
-
       const bounds = new google.maps.LatLngBounds();
       const domTomMarkers = <ExtendedGoogleMapsMarker[]>[];
       const heatMapData = <{ location: google.maps.LatLng, weight: number }[]>[];
       const nationalMarkers = <ExtendedGoogleMapsMarker[]>[];
-      let filteredResponse = <Bloodbath>response;
+      const filteredResponse = this.getFilteredResponse(<Bloodbath>response, filters);
 
-      filteredResponse = this.getFilteredResponse(filteredResponse, filters);
       this.clearMapObjects();
+      this.setAppAsLoaded();
 
       if (!filteredResponse.deaths || !filteredResponse.deaths.length) {
         this.printDefinitionsText(null);
@@ -685,6 +687,20 @@ export class App {
        */
       appSettingsElements.innerHTML = this.configObject.config[appSettingsElements.dataset.appSettings];
     });
+  }
+
+  private setAppAsLoaded() : App {
+    if (!this.appLoaded) {
+      document.querySelector('body').classList.add('loaded');
+
+      document.querySelectorAll('.shimmer-loader').forEach((element) => {
+        element.classList.remove('shimmer-loader');
+      });
+
+      this.appLoaded = true;
+    }
+
+    return this;
   }
 
   private clearMapObjects(): void {

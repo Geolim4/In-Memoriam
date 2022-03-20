@@ -54,9 +54,11 @@
             </div>
         </div>
         <div class="row mtop">
-            <div data-role="definitionsText" class="col-md-12"></div>
+            <div data-role="definitionsText" class="col-md-12">
+                <div class="shadowed inline-block shimmer-loader h150 w50"></div>
+            </div>
         </div>
-        <div id="form-filters-wrapper">
+        <div id="form-filters-wrapper" class="shimmer-loader">
             <form id="form-filters" class="row mtop">
                 <fieldset class="col-md-4">
                     <label for="search">Recherche</label>
@@ -89,7 +91,7 @@
         </div>
         <div class="row mtop">
             <div class="col-xs-12 ">
-                <div id="map" data-bloodbath-src="./data/bloodbath/%year%.json"></div>
+                <div id="map" class="shimmer-loader h500" data-bloodbath-src="./data/bloodbath/%year%.json"></div>
 <!--
                 <div class="alert alert-info mtop" role="alert">
                     <p>

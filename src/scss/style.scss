@@ -1,9 +1,55 @@
 @import './variables';
 @import './color';
+@import './keyframes';
 
 body {
   font-family: Roboto, system-ui;
   font-weight: 300;
+}
+
+body:not(.loaded) {
+  .shimmer-loader {
+    position: relative;
+    &.h50 {
+      height: 50px;
+    }
+    &.h100 {
+      height: 100px;
+    }
+    &.h150 {
+      height: 150px;
+    }
+    &.h300 {
+      height: 300px;
+    }
+    &.h500 {
+      height: 500px;
+    }
+    &.w25 {
+      width: 25%;
+    }
+    &.w50 {
+      width: 50%;
+    }
+    &.w75 {
+      width: 75%;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-name: placeHolderShimmer;
+      animation-timing-function: linear;
+      background: $dark-grey linear-gradient(90deg, $dark-grey 20%, rgba(255, 255, 255, 0.3) 50%, $dark-grey 80%);
+      background-size: 800px 104px;
+    }
+  }
 }
 
 #fork-me {
