@@ -69,6 +69,14 @@ export class App {
     this.boot();
   }
 
+  public bindTooltip(): void {
+    if (this.markers.length) {
+      tippyJs('[data-tippy-content]', {
+        appendTo: document.fullscreenElement ? document.fullscreenElement : document.body,
+      });
+    }
+  }
+
   public getMarkers(): ExtendedGoogleMapsMarker[] {
     return this.markers;
   }
@@ -557,7 +565,7 @@ export class App {
           position: marker.getPosition(),
         });
         google.maps.event.addListener(infoWindow, 'domready', () => {
-          tippyJs('[data-tippy-content]');
+          this.bindTooltip();
         });
         google.maps.event.addListener(marker, 'click', () => {
           if (this.currentInfoWindow) {
@@ -805,5 +813,6 @@ export class App {
     const element = document.querySelector('[data-role="definitionsText"]');
     element.innerHTML = definitionTexts.length ? `<div class="shadowed inline-block">${definitionTexts.join('<br />')}</div>` : '';
     tippyJs('[data-tippy-content]');
+    this.bindTooltip();
   }
 }
