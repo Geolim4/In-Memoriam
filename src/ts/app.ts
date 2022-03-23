@@ -519,9 +519,9 @@ export class App {
         const causeFormatted = this.getFilterValueLabel('cause', death.cause);
         let infoWindowsContent = `<h4>
               <img height="16" src="${houseImage}" alt="House: ${death.house}"  title="House: ${death.house}" />
-              ${(death.section ? `${StringUtilsHelper.replaceAcronyms(death.section, this.glossary)}` : '')}
-              ${(death.count > 1 ? ` - <strong style="color: red;">${death.count} décès</strong>` : '')}
-              ${houseFormatted !== death.section ?  ` - ${StringUtilsHelper.replaceAcronyms(houseFormatted, this.glossary)}` : ''}
+              ${(death.section ? `${StringUtilsHelper.replaceAcronyms(death.section, this.glossary)} - ` : '')}
+              ${(death.count > 1 ? `<strong style="color: red;">${death.count} décès</strong> - ` : '')}
+              ${houseFormatted !== death.section ?  `${StringUtilsHelper.replaceAcronyms(houseFormatted, this.glossary)}` : ''}
             </h4>
             ${peersText}
             <br />
