@@ -69,6 +69,14 @@ export class App {
     this.boot();
   }
 
+  public bindTooltip(): void {
+    if (this.markers.length) {
+      tippyJs('[data-tippy-content]', {
+        appendTo: document.fullscreenElement ? document.fullscreenElement : document.body,
+      });
+    }
+  }
+
   public getMarkers(): ExtendedGoogleMapsMarker[] {
     return this.markers;
   }
@@ -511,9 +519,9 @@ export class App {
         const causeFormatted = this.getFilterValueLabel('cause', death.cause);
         let infoWindowsContent = `<h4>
               <img height="16" src="${houseImage}" alt="House: ${death.house}"  title="House: ${death.house}" />
-              ${(death.section ? `${StringUtilsHelper.replaceAcronyms(death.section, this.glossary)}` : '')}
-              ${(death.count > 1 ? ` - <strong style="color: red;">${death.count} décès</strong>` : '')}
-              ${houseFormatted !== death.section ?  ` - ${StringUtilsHelper.replaceAcronyms(houseFormatted, this.glossary)}` : ''}
+              ${(death.section ? `${StringUtilsHelper.replaceAcronyms(death.section, this.glossary)} - ` : '')}
+              ${(death.count > 1 ? `<strong style="color: red;">${death.count} décès</strong> - ` : '')}
+              ${houseFormatted !== death.section ?  `${StringUtilsHelper.replaceAcronyms(houseFormatted, this.glossary)}` : ''}
             </h4>
             ${peersText}
             <br />
@@ -557,7 +565,7 @@ export class App {
           position: marker.getPosition(),
         });
         google.maps.event.addListener(infoWindow, 'domready', () => {
-          tippyJs('[data-tippy-content]');
+          this.bindTooltip();
         });
         google.maps.event.addListener(marker, 'click', () => {
           if (this.currentInfoWindow) {
@@ -805,5 +813,6 @@ export class App {
     const element = document.querySelector('[data-role="definitionsText"]');
     element.innerHTML = definitionTexts.length ? `<div class="shadowed inline-block">${definitionTexts.join('<br />')}</div>` : '';
     tippyJs('[data-tippy-content]');
+    this.bindTooltip();
   }
 }

@@ -251,6 +251,7 @@ export class MapButtons {
             modalBloodbathElement.innerHTML = StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, this.app.getGlossary());
             modalBloodbathCounterElement.innerHTML = `${modalBloodbathCounter} décès`;
             modalBloodbathYear.innerHTML = filters.year;
+            this.app.bindTooltip();
           },
         });
       } else {

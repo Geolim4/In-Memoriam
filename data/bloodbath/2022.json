@@ -34,6 +34,36 @@
       ]
     },
     {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "01",
+      "day": "03",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme affecté au ministère des armées aurait mit fin à ses jours.\n Très peu d'informations sur ce décès car la source est confidentielle.",
+      "section": "",
+      "location": "Paris 15e",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 150,
+        "lat":48.83501985343441,
+        "lon": 2.277781886106975
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
+          "paywall": false
+        }
+      ]
+    },
+    {
       "cause": "accident",
       "count": 1,
       "published": true,
