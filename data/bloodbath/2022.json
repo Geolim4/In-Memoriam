@@ -1376,7 +1376,7 @@
       "house": "gendarmerie",
       "peers": [],
       "text": "Une officier de gendarmerie du groupement de gendarmerie de l’Hérault s'est immolée par le feu.\n Elle était maman d'un jeune garçon.",
-      "section": "DRH - CSTAG (GGD 34)",
+      "section": "Section RH - CSTAG (GGD 34)",
       "location": "Montpellier (Hérault)",
       "origin": "interieur",
       "gps": {
@@ -1404,6 +1404,51 @@
         {
           "url": "https://www.midilibre.fr/2022/03/17/montpellier-une-femme-entre-la-vie-et-la-mort-apres-setre-immolee-dans-sa-voiture-10176312.php",
           "titre": "Midi Libre",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "03",
+      "day": "24",
+      "keywords": "Sylvain Pagès",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de la BP de Saint-Martin-de-Valgalgues a mit fin à ses jours avec son arme de service.\n Il était père de deux jeunes enfants.",
+      "section": "Brigade de Proximité",
+      "location": "Saint-Martin-de-Valgalgues (Gard)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.157025875909746,
+        "lon": 4.082523432487667
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/gard-un-gendarme-se-suicide-avec-son-arme-de-service-a-saint-martin-de-valgalgues.html",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://actu.fr/occitanie/saint-martin-de-valgalgues_30284/herault-gard-une-cagnotte-pour-aider-la-compagne-et-la-famille-d-un-gendarme-decede_49753792.html",
+          "titre": "Actu.fr",
+          "paywall": false
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-gendarme-se-suicide-avec-son-arme-de-service-a-saint-martin-de-valgalgues-1648395759",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/dans-le-gard-un-gendarme-aurait-mis-fin-a-ses-jours",
+          "titre": "L'Essor",
           "paywall": false
         }
       ]
