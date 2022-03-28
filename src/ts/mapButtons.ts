@@ -238,7 +238,7 @@ export class MapButtons {
               }
 
               const totalDeathCount = death.count + peersCount;
-              const deathLabel = `${death.section}, ${death.location} ${totalDeathCount > 1 ? `(<strong style="color: red">${totalDeathCount} décès</strong>)` : ''}`;
+              const deathLabel = `${death.section ? `${death.section}, ` : ''}${death.location} ${totalDeathCount > 1 ? `(<strong style="color: red">${totalDeathCount} décès</strong>)` : ''}`;
               const deathLink = this.app.getMarkerLink(death, deathLabel);
               modalBloodbathCounter += totalDeathCount;
 
