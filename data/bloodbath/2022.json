@@ -1452,6 +1452,81 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "03",
+      "day": "31",
+      "keywords": "Gael",
+      "house": "admpen",
+      "peers": [],
+      "text": "Un surveillant du centre de détention de Châteaudun a mis fin à ses jours par pendaison.\n Peu d'informations disponibles sur ce suicide.",
+      "section": "Centre de Détention",
+      "location": "Châteaudun (Eure-et-Loir)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.06945916165262,
+        "lon": 1.3587138845703643
+      },
+      "sources": [
+        {
+          "url": "https://actupenit.com/2022/03/31/chateaudun-un-jeune-surveillant-penitentiaire-sest-donne-la-mort/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "03",
+      "day": "31",
+      "keywords": "Éric",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme a mit fin à ses jours avec son arme de service au sein de la brigade de Gien.\n Affecté à l'antenne du renseignement territorial, il était père de trois enfants.",
+      "section": "BTA",
+      "location": "Gien (Loiret)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.691403069259465,
+        "lon": 2.635601575969709
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/loiret-un-gendarme-se-suicide-avec-son-arme-de-service-dans-la-caserne-de-gien.html",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/centre-val-de-loire/loiret/gien/gien-un-gendarme-retrouve-mort-dans-sa-caserne-la-these-du-suicide-privilegiee-2516944.html",
+          "titre": "France Info",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lyonne.fr/gien-45500/actualites/gien-un-gendarme-s-est-suicide-dans-les-locaux-de-la-caserne_14109055/",
+          "titre": "L'Yonne",
+          "paywall": false
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/un-gendarme-se-serait-encore-suicide-ce-serait-le-troisieme-depuis-deux-semaines",
+          "titre": "L'Essor",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
