@@ -35,7 +35,7 @@ body {
     }
   }
   a {
-    color: #01a2d2;
+    color: $blue;
     &:focus,
     &:hover {
       color: #1d9bf0;
@@ -79,6 +79,34 @@ body {
     .modal__title,
     .modal__content {
       color: $error;
+    }
+  }
+  #map {
+    .gm-style {
+      .poi-info-window {
+        div,
+        a {
+          background-color: $medium-grey;
+          color: $blue;
+        }
+        div {
+          color: $white;
+        }
+        color: $white;
+        background-color: $medium-grey;
+      }
+      .gm-style-iw-c {
+        background: transparent;
+      }
+      .gm-style-iw-t {
+        &:after {
+          background: linear-gradient(45deg, $medium-grey 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%) $medium-grey;
+        }
+        &.gm-style-iw-red:after {
+          background: linear-gradient(45deg, #600 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%) #600;
+          box-shadow: inset rgba(255, 0, 0, 0.7) 3px -3px 2px -2px;
+        }
+      }
     }
   }
 }
