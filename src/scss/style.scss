@@ -74,6 +74,9 @@ body:not(.loaded) {
     transform: translateX(-50%);
     margin: 10px auto;
   }
+  .poi-info-window.gm-style {
+    padding: 8px;
+  }
 }
 
 .mtop {

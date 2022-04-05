@@ -564,7 +564,13 @@ export class App {
           content: `<div class="death-container${totalDeathCount > 1 ? ' multiple-deaths' : ''}${confidentialSource ? ' confidential-death' : ''}">${infoWindowsContent}</div>`,
           position: marker.getPosition(),
         });
+
         google.maps.event.addListener(infoWindow, 'domready', () => {
+          const multipleDeathContainer = document.querySelector('.death-container.multiple-deaths');
+
+          if (multipleDeathContainer) {
+            multipleDeathContainer.closest('.gm-style-iw-t').classList.add('gm-style-iw-red');
+          }
           this.bindTooltip();
         });
         google.maps.event.addListener(marker, 'click', () => {
