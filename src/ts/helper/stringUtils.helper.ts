@@ -30,4 +30,8 @@ export class StringUtilsHelper {
       return `<abbr data-tippy-content="${findReplace[s]}">${s}</abbr>`;
     });
   }
+
+  public static ucfirst(string: string): string {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 }

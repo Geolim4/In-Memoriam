@@ -1,7 +1,7 @@
 import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.model';
 import { FormFilters } from './models/formFilters.model';
 import * as Highcharts from 'highcharts';
-import { Definition } from './models';
+import { Definitions } from './models';
 import { PeerList } from './models/peerList.model';
 
 /**
@@ -13,17 +13,17 @@ export class Charts {
     this.setupHighchartStyle();
   }
 
-  public buildChartPerCause(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], year: string): void  {
+  public buildChartPerCause(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definitions, year: string): void  {
     this.buildBarChartPerCriteria(markers, filters, definitions, 'cause', year);
     this.buildPieChartPerCriteria(markers, filters, definitions, 'cause', year);
   }
 
-  public buildChartPerHouse(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], year: string): void {
+  public buildChartPerHouse(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definitions, year: string): void {
     this.buildBarChartPerCriteria(markers, filters, definitions, 'house', year);
     this.buildPieChartPerCriteria(markers, filters, definitions, 'house', year);
   }
 
-  protected buildBarChartPerCriteria(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], criteria: string, year: string): void {
+  protected buildBarChartPerCriteria(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definitions, criteria: string, year: string): void {
     const series = [];
     const peersList = this.getPeersList(criteria, markers);
 
@@ -69,7 +69,7 @@ export class Charts {
         text: 'Données contextualisées par les filtres appliqués',
       },
       title: {
-        text: `Décès mensuels par ${definitions[criteria]['#name']} sur l'année ${year}`,
+        text: `Décès mensuels par ${definitions[criteria]['#name_plural']} sur l'année ${year}`,
       },
       tooltip: {
         backgroundColor: 'rgba(226,226,226,0.98)',
@@ -93,7 +93,7 @@ export class Charts {
     });
   }
 
-  protected buildPieChartPerCriteria(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definition[], criteria: string, year: string): void {
+  protected buildPieChartPerCriteria(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definitions, criteria: string, year: string): void {
     const seriesData = [];
     const peersList = this.getPeersList(criteria, markers);
 
@@ -135,7 +135,7 @@ export class Charts {
         text: 'Données contextualisées par les filtres appliqués',
       },
       title: {
-        text: `Décès totaux par ${definitions[criteria]['#name']} sur l'année ${year}`,
+        text: `Décès totaux par ${definitions[criteria]['#name_plural']} sur l'année ${year}`,
       },
       tooltip: {
         backgroundColor: 'rgba(226,226,226,0.98)',
