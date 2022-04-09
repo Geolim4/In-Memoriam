@@ -5,7 +5,7 @@ import micromodal from 'micromodal';
 import activityDetector from 'activity-detector';
 import Choices = require('choices.js');
 
-import { Bloodbath, Definition, Filters } from './models';
+import { Bloodbath, Definitions, DefinitionsCount, Filters } from './models';
 import { Config } from './config';
 import { Events } from './events';
 import { Permalink } from './permalink';
@@ -93,6 +93,19 @@ export class App {
     return this.formFilters;
   }
 
+  public getFormFiltersKeyed(): { [name: string]: { [name: string]: string } } {
+    const formFiltersKeyed = {};
+
+    for (const [criteria, criteriaValues] of Object.entries(this.formFilters)) {
+      formFiltersKeyed[criteria] = {};
+      for (const criteriaValue of criteriaValues) {
+        formFiltersKeyed[criteria][criteriaValue.value] = criteriaValue.label;
+      }
+    }
+
+    return formFiltersKeyed;
+  }
+
   public getGlossary(): { [name: string]: string } {
     return this.glossary;
   }
@@ -136,7 +149,7 @@ export class App {
       });
   }
 
-  public getConfigDefinitions(): Definition[] {
+  public getConfigDefinitions(): Definitions {
     return this.configObject.definitions;
   }
 
@@ -179,7 +192,7 @@ export class App {
     return filters;
   }
 
-  public getDefinitions(response: Bloodbath): Object {
+  public getDefinitions(response: Bloodbath): DefinitionsCount {
     const definitions = {};
     const configDefinitions = this.getConfigDefinitions();
 
@@ -774,27 +787,28 @@ export class App {
     if (response) {
       const definitions = this.getDefinitions(response);
       const latestDeath = this.getLatestDeath(response);
-
       const configDefinitions = this.getConfigDefinitions();
+
       for (const [fieldKey, field] of Object.entries(definitions)) {
         let definitionText = '';
-        for (const [fieldValue, count] of Object.entries(field)) {
-          const plurality = (count > 0 ? (count > 1 ? 'plural' : 'singular') : 'none');
-
-          if (configDefinitions[fieldKey][fieldValue]) {
-            const text = configDefinitions[fieldKey][fieldValue][plurality];
-            definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace(`%${fieldKey}%`, fieldValue);
-          } else if (configDefinitions[fieldKey]['#any']) {
-            const text = configDefinitions[fieldKey]['#any'][plurality];
-            definitionText += (definitionText ? ', ' : '') + text.replace('%d', count).replace(`%${fieldKey}%`, fieldValue);
-          } else {
-            definitionText += (definitionText ? ', ' : '') + (`[${fieldValue}] (${count})`);
+        if (configDefinitions[fieldKey]['#exposed']) {
+          for (const [fieldValue, count] of Object.entries(field)) {
+            const plurality = (count > 0 ? (count > 1 ? 'plural' : 'singular') : 'none');
+            if (configDefinitions[fieldKey]['#number'][fieldValue]) {
+              const text = configDefinitions[fieldKey]['#number'][fieldValue][plurality];
+              definitionText += (definitionText ? ', ' : '') + text.replace('%d', String(count)).replace(`%${fieldKey}%`, fieldValue);
+            } else if (configDefinitions[fieldKey]['#number']['#any']) {
+              const text = configDefinitions[fieldKey]['#number']['#any'][plurality];
+              definitionText += (definitionText ? ', ' : '') + text.replace('%d', String(count)).replace(`%${fieldKey}%`, fieldValue);
+            } else {
+              definitionText += (definitionText ? ', ' : '') + (`[${fieldValue}] (${count})`);
+            }
+            definitionText = definitionText.replace(/%([a-zA-Z_]+)%/, (arg1, arg2): string => {
+              return (filters && filters[arg2] !== undefined ? filters[arg2] : arg1);
+            });
           }
-          definitionText = definitionText.replace(/%([a-zA-Z_]+)%/, (arg1, arg2): string => {
-            return (filters && filters[arg2] !== undefined ? filters[arg2] : arg1);
-          });
+          definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
         }
-        definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
       }
       definitionTexts.push('');
 

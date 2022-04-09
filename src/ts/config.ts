@@ -1,4 +1,4 @@
-import { Definition, Settings } from './models';
+import { Definitions, Settings } from './models';
 import { App } from './app';
 
 /**
@@ -8,7 +8,7 @@ import { App } from './app';
 export class Config {
 
   public config: Settings;
-  public definitions: Definition[];
+  public definitions: Definitions;
   private app: App;
 
   private configPath: string;
@@ -24,7 +24,7 @@ export class Config {
   public init(onceInitialized: VoidFunction): void {
     fetch(this.configPath).then((response) => response.json()).then((responseData: { settings: Settings }) => {
       this.config = responseData.settings;
-      fetch(this.definitionsPath).then((response) => response.json()).then((responseData: { definitions: Definition[] }) => {
+      fetch(this.definitionsPath).then((response) => response.json()).then((responseData: { definitions: Definitions }) => {
         this.definitions = responseData.definitions;
         if (onceInitialized) {
           onceInitialized();

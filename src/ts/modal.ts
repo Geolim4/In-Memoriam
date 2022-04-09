@@ -20,7 +20,7 @@ export class Modal {
     });
   }
 
-  public modalInfo(title: string, content: string, confirmCallback?: VoidFunction, cancelCallback?: VoidFunction, isError?: boolean): void {
+  public modalInfo(title: string, content: string, confirmCallback?: VoidFunction, cancelCallback?: VoidFunction, isError?: boolean, okLabel?: string): void {
     let hasConfirmed = false;
 
     micromodal.show('modal-info', {
@@ -28,6 +28,7 @@ export class Modal {
         if (!hasConfirmed && confirmCallback && cancelCallback) {
           cancelCallback();
         }
+        Events.hardRemoveEventHandler(document.querySelector('#modal-info button[data-micromodal-role="validate"]'));
       },
       onShow: () => {
         if (isError) {
@@ -37,9 +38,10 @@ export class Modal {
         }
         document.getElementById('modal-info-title').innerHTML = title;
         document.getElementById('modal-info-content').innerHTML = content;
+        document.querySelector('#modal-info [data-micromodal-role="validate"]').innerHTML = okLabel ? okLabel : 'Ok';
 
         if (confirmCallback) {
-          const validateButton = Events.hardRemoveEventHandler(document.querySelector('#modal-info button[data-micromodal-role="validate"]'));
+          const validateButton = <HTMLInputElement> document.querySelector('#modal-info button[data-micromodal-role="validate"]');
           Events.addEventHandler(
             validateButton,
             'click',
