@@ -392,6 +392,7 @@ export class MapButtons {
             build[indexNameBuilder('gps', formFilters)] = `${Number((death.gps.lat).toFixed(8))},${Number((death.gps.lon).toFixed(8))}`;
             build[indexNameBuilder('count', formFilters)] = peer ? peer.count : death.count;
             build[indexNameBuilder('orphans', formFilters)] = peer ? 0 : death.orphans;
+            build[indexNameBuilder('sources', formFilters)] = death.sources.map((s) => s.url ? s.url : s.titre).join('\n');
 
             return build;
           };
