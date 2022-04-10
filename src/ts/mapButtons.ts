@@ -11,6 +11,7 @@ import { StringUtilsHelper } from './helper/stringUtils.helper';
 import { ExportToCsv } from 'export-to-csv';
 import { Death } from './models/death.model';
 import { Events } from './events';
+import { Filters } from './models';
 
 export class MapButtons {
   private app: App;
@@ -342,35 +343,55 @@ export class MapButtons {
           const filenameDate = `${now.getFullYear()}${now.getMonth()}${now.getDay()}${now.getHours()}${now.getMinutes()}${now.getSeconds()}`;
           const definitions = this.app.getConfigDefinitions();
           const formFiltersKeyed = this.app.getFormFiltersKeyed();
+          const formFilters = this.app.getFilters(false);
+
           const options = {
             decimalSeparator: '.',
             fieldSeparator: ',',
-            filename: `Export-${this.app.getFilters(false)['year']}-In-Memoriam-(${filenameDate})`,
+            filename: `In-Memoriam-Export-${this.app.getFilters(false)['year']}_(${filenameDate})`,
             quoteStrings: '"',
             showLabels: true,
             showTitle: false,
             title: null,
-            useBom: true,
+            useBom: false,
             useKeysAsHeaders: true,
             useTextFile: false,
-            // headers: ['Column 1', 'Column 2', etc...] <-- Won't work with useKeysAsHeaders present!
           };
 
           const csvExporter = new ExportToCsv(options);
           const csvData = [];
-          const csvDataBuilder = function (death: Death, peer?: Death['peers'][0]): object {
+          const csvDataBuilder = (death: Death, peer?: Death['peers'][0]): object => {
             const build = {};
+            const indexNameBuilder = (indexName: string, filters: Filters): string => {
+              const formFiltersBuilt = (filters[indexName] ? filters[indexName] as string : '').split(',').map((v) => {
+                return formFiltersKeyed[indexName] ? formFiltersKeyed[indexName][v] : v;
+              }).join(', ');
+              let formFiltersSuffix = formFiltersBuilt ? ` (filtres: ${formFiltersBuilt})` : '';
+              /**
+               *  Due to a bug in the "export-to-csv" package that does not
+               *  escape headers as quoted string, we must do it manually :(
+               *  (The same apply for date build few line below)
+               */
+              if (indexName === 'text') {
+                formFiltersSuffix = formFilters.search ? ` (recherche: ${formFilters.search})` : '';
+              }
+              return `"${StringUtilsHelper.ucfirst(definitions[indexName]['#name'])}${formFiltersSuffix}"`;
+            };
 
-            build['Date'] = `${death.year}-${death.month}-${death.day}`; // ISO 8601
-            build[StringUtilsHelper.ucfirst(definitions['cause']['#name'])] = formFiltersKeyed['cause'][death.cause];
-            build[StringUtilsHelper.ucfirst(definitions['house']['#name'])] = peer ? formFiltersKeyed['house'][peer.house] : formFiltersKeyed['house'][death.house];
-            build[StringUtilsHelper.ucfirst(definitions['section']['#name'])] = peer ? peer.section : death.section;
-            build[StringUtilsHelper.ucfirst(definitions['location']['#name'])] = death.location;
-            build[StringUtilsHelper.ucfirst(definitions['text']['#name'])] = peer ? '' : death.text;
-            build[StringUtilsHelper.ucfirst(definitions['origin']['#name'])] = formFiltersKeyed['origin'][death.origin];
-            build[StringUtilsHelper.ucfirst(definitions['gps']['#name'])] = `${Number((death.gps.lat).toFixed(8))},${Number((death.gps.lon).toFixed(8))}`;
-            build[StringUtilsHelper.ucfirst(definitions['count']['#name'])] = peer ? peer.count : death.count;
-            build[StringUtilsHelper.ucfirst(definitions['orphans']['#name'])] = peer ? 0 : death.orphans;
+            const months = formFilters.month.split(',').map((m) => {
+              return formFiltersKeyed['month'][m];
+            }).join(', ');
+
+            build[`"Date${months ? ` (mois: ${months})` : ''}"`] = `${death.year}-${death.month}-${death.day}`; // ISO 8601
+            build[indexNameBuilder('cause', formFilters)] = formFiltersKeyed['cause'][death.cause];
+            build[indexNameBuilder('house', formFilters)] = peer ? formFiltersKeyed['house'][peer.house] : formFiltersKeyed['house'][death.house];
+            build[indexNameBuilder('section', formFilters)] = peer ? peer.section : death.section;
+            build[indexNameBuilder('location', formFilters)] = death.location;
+            build[indexNameBuilder('text', formFilters)] = peer ? '' : death.text;
+            build[indexNameBuilder('origin', formFilters)] = formFiltersKeyed['origin'][death.origin];
+            build[indexNameBuilder('gps', formFilters)] = `${Number((death.gps.lat).toFixed(8))},${Number((death.gps.lon).toFixed(8))}`;
+            build[indexNameBuilder('count', formFilters)] = peer ? peer.count : death.count;
+            build[indexNameBuilder('orphans', formFilters)] = peer ? 0 : death.orphans;
 
             return build;
           };

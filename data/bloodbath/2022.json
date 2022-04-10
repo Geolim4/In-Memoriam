@@ -1562,6 +1562,41 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "04",
+      "day": "09",
+      "keywords": "",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal a mit fin à ses jours avec son arme de service.\nIl était marié et père d'un enfant.",
+      "section": "Poste de police",
+      "location": "Peille (Alpes-Maritimes)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 500,
+        "lat": 43.802826868906806,
+        "lon": 7.401552296831376
+      },
+      "sources": [
+        {
+          "url": "https://www.nicematin.com/faits-divers/un-policier-municipal-met-fin-a-ses-jours-avec-une-arme-a-feu-dans-les-alpes-maritimes-une-enquete-ouverte-759462",
+          "titre": "Nice Matin",
+          "paywall": true
+        },
+        {
+          "url": "https://usppm.fr/communiques/peille-un-apm-met-fins-a-ses-jurs/",
+          "titre": "USPPM",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
