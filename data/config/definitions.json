@@ -222,6 +222,21 @@
           "plural": ""
         }
       }
+    },
+    "sources": {
+      "#exposed": false,
+      "#name": "sources",
+      "#name_plural": "sources",
+      "#label": "",
+      "#counter_property": "",
+      "#counter_strategy": "",
+      "#number": {
+        "#any": {
+          "none": "",
+          "singular": "",
+          "plural": ""
+        }
+      }
     }
   }
 }
