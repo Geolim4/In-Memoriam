@@ -1,23 +1,26 @@
+import { DeathPeer } from './deathPeer.model';
+
 export interface Death {
   cause: string;
   count: number;
-  published: boolean;
+  day: string;
+  gps: {
+    lat: number,
+    lon: number,
+    accurate: boolean,
+    radius: number,
+  };
+  house: string;
+  keywords: string;
+  location: string;
+  month: string;
+  origin: string;
   orphans: number;
+  peers: DeathPeer[];
+  published: boolean;
+  section: string;
+  sources: { url: string, titre: string, paywall: boolean }[];
+  text: string;
   unpublished_reason?: string;
   year: string;
-  month: string;
-  day: string;
-  house: string;
-  peers: {
-    count: number;
-    house: string;
-    section: string;
-  }[];
-  text: string;
-  location: string;
-  section: string;
-  origin: string;
-  keywords: string;
-  gps: { lat: number, lon: number, accurate: boolean, radius: number };
-  sources: { url: string, titre: string, paywall: boolean }[];
 }

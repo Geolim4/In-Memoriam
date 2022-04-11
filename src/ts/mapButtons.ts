@@ -10,8 +10,9 @@ import micromodal from 'micromodal';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
 import { ExportToCsv } from 'export-to-csv';
 import { Death } from './models/death.model';
-import { Events } from './events';
+import { DeathPeer } from './models/deathPeer.model';
 import { Filters } from './models';
+import { Events } from './events';
 
 export class MapButtons {
   private app: App;
@@ -348,7 +349,7 @@ export class MapButtons {
           const options = {
             decimalSeparator: '.',
             fieldSeparator: ',',
-            filename: `In-Memoriam-Export-${this.app.getFilters(false)['year']}_(${filenameDate})`,
+            filename: `In-Memoriam-Export-${this.app.getFilters(false)['year']}.${filenameDate}`,
             quoteStrings: '"',
             showLabels: true,
             showTitle: false,
@@ -360,7 +361,7 @@ export class MapButtons {
 
           const csvExporter = new ExportToCsv(options);
           const csvData = [];
-          const csvDataBuilder = (death: Death, peer?: Death['peers'][0]): object => {
+          const csvDataBuilder = (death: Death, peer?: DeathPeer): object => {
             const build = {};
             const indexNameBuilder = (indexName: string, filters: Filters): string => {
               const formFiltersBuilt = (filters[indexName] ? filters[indexName] as string : '').split(',').map((v) => {
@@ -370,7 +371,7 @@ export class MapButtons {
               /**
                *  Due to a bug in the "export-to-csv" package that does not
                *  escape headers as quoted string, we must do it manually :(
-               *  (The same apply for date build few line below)
+               *  (The same apply for date build few lines below)
                */
               if (indexName === 'text') {
                 formFiltersSuffix = formFilters.search ? ` (recherche: ${formFilters.search})` : '';
