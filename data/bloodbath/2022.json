@@ -1597,6 +1597,41 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "04",
+      "day": "22",
+      "keywords": "Thierry",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la CRS 33  a mit fin à ses jours avec son arme de service dans sa chambre de casernement.\nIl était actuellement en déplacement à Ajaccio (Corse) au moment des faits.",
+      "section": "CRS 33",
+      "location": "Reims (Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.22349504189233,
+        "lon": 4.018524453329168
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/corse-un-policier-de-la-crs-33-sest-suicide.html",
+          "titre": "Actu17",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lunion.fr/id364173/article/2022-04-23/un-policier-de-la-crs-33-de-reims-met-fin-ses-jours-en-corse",
+          "titre": "L'Union",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
