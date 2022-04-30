@@ -1632,6 +1632,46 @@
           "paywall": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "04",
+      "day": "30",
+      "keywords": "",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal a mit fin à ses jours avec son arme de service.\nIl était marié et père de deux enfants.",
+      "section": "Poste de police",
+      "location": "Monts (Indre-et-Loire)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.27474083802751,
+        "lon": 0.6428701235391459
+      },
+      "sources": [
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-municipal-se-suicide-avec-son-arme-de-service-a-monts-1651339051",
+          "titre": "France Bleu",
+          "paywall": false
+        },
+        {
+          "url": "https://www.lanouvellerepublique.fr/tours/info-nr-a-monts-un-policier-municipal-se-suicide-sur-son-lieu-de-travail",
+          "titre": "Nouvelle République",
+          "paywall": false
+        },
+        {
+          "url": "https://actupenit.com/2022/04/30/drame-a-monts-un-policier-municipal-sest-suicide-avec-son-arme-de-service-ce-samedi-30-avril/",
+          "titre": "Actupenit",
+          "paywall": false
+        }
+      ]
     }
   ]
 }
