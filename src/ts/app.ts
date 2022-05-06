@@ -560,10 +560,11 @@ export class App {
             for (const key in death.sources) {
               const source = death.sources[key];
               const paywall = source.paywall ? '<span aria-hidden="true" class="glyphicon glyphicon-lock" data-tippy-content="Article réservé aux abonnés"></span>' : '';
+              const trustful = !source.trustful ? '<span aria-hidden="true" class="glyphicon glyphicon-warning-sign" data-tippy-content="Prudence, une partie du contenu de cet article peut être inexact"></span>' : '';
               if (!source.url) {
-                sourcesText += (sourcesText ? ', ' : '') + (`<strong>${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</strong> ${paywall} `);
+                sourcesText += (sourcesText ? ', ' : '') + (`<strong>${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</strong> ${paywall} ${trustful}`);
               } else {
-                sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</a> ${paywall}`);
+                sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</a> ${paywall} ${trustful}`);
               }
             }
           }

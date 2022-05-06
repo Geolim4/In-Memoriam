@@ -1,13 +1,14 @@
 import { DeathPeer } from './deathPeer.model';
+import { DeathSource } from './deathSource.model';
 
 export interface Death {
   cause: string;
   count: number;
   day: string;
   gps: {
+    accurate: boolean,
     lat: number,
     lon: number,
-    accurate: boolean,
     radius: number,
   };
   house: string;
@@ -19,7 +20,7 @@ export interface Death {
   peers: DeathPeer[];
   published: boolean;
   section: string;
-  sources: { url: string, titre: string, paywall: boolean }[];
+  sources: DeathSource[];
   text: string;
   unpublished_reason?: string;
   year: string;

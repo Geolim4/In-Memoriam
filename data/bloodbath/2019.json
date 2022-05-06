@@ -29,12 +29,14 @@
         {
           "url": "http://www.profession-gendarme.com/2019-suicide-dun-policier/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://mpc-asso.net/2019/06/21/%f0%9f%9a%94%f0%9f%87%ab%f0%9f%87%b7-condoleances-a-la-famille-et-aux-proches-4/",
           "titre": "Asso MPC",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -64,12 +66,14 @@
         {
           "url": "https://www.lamanchelibre.fr/actualite-641809-un-policier-se-suicide-dans-la-manche",
           "titre": "La Manche Libre",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/manche-un-policier-retrouve-mort-a-son-domicile-a-querqueville/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -99,17 +103,20 @@
         {
           "url": "https://www.assogendarmesetcitoyens.com/post/2019/01/06/d-c3-a9c-c3-a8s-dune-camarade",
           "titre": "APNM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.republicain-lorrain.fr/edition-de-sarrebourg-chateau-salins/2019/01/10/la-garde-republicaine-rend-hommage-a-clemence-luchs",
           "titre": "Républicain Lorrain",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lyc-agricole-verdun.monbureaunumerique.fr/l-etablissement/actualites/deces-de-clemence-luchs-1003.htm",
           "titre": "Lycée Agricole de la Meuse (Hommage)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -139,12 +146,14 @@
         {
           "url": "https://mpc-asso.net/2019/06/21/%f0%9f%9a%94%f0%9f%87%ab%f0%9f%87%b7-condoleances-a-la-famille-et-aux-proches-4/",
           "titre": "Asso MPC",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/reims-un-policier-sest-suicide-avec-son-arme-de-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -174,7 +183,8 @@
         {
           "url": "https://twitter.com/association_mpc/status/1082549261559058433",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -204,27 +214,32 @@
         {
           "url": "https://www.pompiers.fr/actualites/avis-de-deces-1e-classe-bertrand-pime-sapeur-pompier-volontaire-en-nouvelle-caledonie",
           "titre": "Pompiers.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.europe1.fr/faits-divers/paris-une-explosion-dans-une-boulangerie-fait-plusieurs-blesses-3837212",
           "titre": "Europe 1",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.europe1.fr/faits-divers/nouvelle-caledonie-un-pompier-entre-la-vie-et-la-mort-apres-une-intervention-sur-un-incendie-3835121",
           "titre": "Europe 1",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://la1ere.francetvinfo.fr/nouvellecaledonie/pompier-bertrand-pime-recu-honneurs-plusieurs-distinctions-titre-posthume-668993.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.lefigaro.fr/flash-actu/2019/01/10/97001-20190110FILWWW00054-nouvelle-caledonie-emotion-apres-la-mort-d-un-pompier-volontaire.php",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -254,32 +269,38 @@
         {
           "url": "https://actu17.fr/crash-du-mirage-2000d-dans-le-jura-qui-sont-les-2-militaires-tues-en-service-commande/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/bourgogne-franche-comte/mignovillard_39331/crash-mirage-2000-mignovillard-deux-militaires-sont-decedes_20765067.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.lefigaro.fr/actualite-france/2019/01/09/01016-20190109ARTFIG00227-un-mirage-2000-disparait-entre-le-doubs-et-le-jura.php",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francetvinfo.fr/economie/emploi/metiers/video-simon-cartannaz-et-nathanael-josselin-pompiers-morts-au-feu-a-paris-rue-de-trevise-le-12-janvier-2019_3152753.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.rtl.fr/actu/justice-faits-divers/accident-de-mirage-2000-les-deux-membres-d-equipage-sont-morts-7796192671",
           "titre": "RTL",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.defense.gouv.fr/fre/actualites/la-vie-du-ministere/inmemoriam-deces-du-capitaine-baptiste-chirie-et-de-la-lieutenant-audrey-michelon",
           "titre": "MINARM - Hommage",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -309,32 +330,38 @@
         {
           "url": "https://actu17.fr/paris-violente-explosion-rue-trevise-plusieurs-blesses/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lemonde.fr/societe/article/2019/01/14/a-paris-le-mystere-d-une-explosion-au-gaz-devastatrice_5408793_3224.html",
           "titre": "Le Monde",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.europe1.fr/faits-divers/paris-une-explosion-dans-une-boulangerie-fait-plusieurs-blesses-3837212",
           "titre": "Europe 1",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.europe1.fr/faits-divers/paris-une-explosion-dans-une-boulangerie-fait-plusieurs-blesses-3837212",
           "titre": "Europe 1",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francetvinfo.fr/economie/emploi/metiers/video-simon-cartannaz-et-nathanael-josselin-pompiers-morts-au-feu-a-paris-rue-de-trevise-le-12-janvier-2019_3152753.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lexpress.fr/actualite/societe/fait-divers/explosion-mortelle-a-paris-le-reseau-de-gaz-en-question_2057200.html",
           "titre": "L'express",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -364,17 +391,20 @@
         {
           "url": "https://actu17.fr/essonne-un-policier-sest-donne-la-mort-chez-lui-a-brunoy/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/paris/2424539-20190116-essonne-policier-bac-suicide-domicile",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/essonne-un-policier-se-suicide-avec-son-arme-de-service-1612229.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -404,17 +434,20 @@
         {
           "url": "https://actu17.fr/3-policiers-se-sont-donnes-la-mort-en-24-heures/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lechodelalys.fr/9731/article/2019-01-16/saint-omer-vive-emotion-apres-le-deces-brutal-de-stany-specq-referent",
           "titre": "L'écho de la Lys",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/01/16/suicide-deux-policiers-se-donnent-la-mort-ce-mercredi/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -444,22 +477,26 @@
         {
           "url": "https://actu17.fr/3-policiers-se-sont-donnes-la-mort-en-24-heures/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/01/16/suicide-deux-policiers-se-donnent-la-mort-ce-mercredi/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/un-policier-se-suicide-avec-son-arme-de-service-1613442.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/un-policier-de-37-de-la-csg-brf-parisienne-se-suicide/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -489,7 +526,8 @@
         {
           "url": "https://twitter.com/association_mpc/status/1087446551125995520",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -519,22 +557,26 @@
         {
           "url": "https://actu17.fr/charente-maritime-un-surveillant-penitentiaire-se-donne-la-mort/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.lefigaro.fr/flash-actu/2019/01/24/97001-20190124FILWWW00249-charente-maritime-suicide-d-un-surveillant-dans-la-prison-de-bedenac.php",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ouest-france.fr/societe/prison/charente-maritime-un-surveillant-met-fin-ses-jours-la-prison-de-bedenac-6193879",
           "titre": "Ouest France",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2435799-20190125-charente-maritime-surveillant-prison-suicide-lieu-travail",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -564,12 +606,14 @@
         {
           "url": "https://actu17.fr/sarthe-un-policier-affecte-a-la-crs-10-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/le-mans-un-crs-se-suicide-avec-son-arme-de-service-a-son-domicile-1548433293",
           "titre": "France Bleu",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -599,7 +643,8 @@
         {
           "url": "https://mpc-asso.net/2019/06/21/%f0%9f%9a%94%f0%9f%87%ab%f0%9f%87%b7-condoleances-a-la-famille-et-aux-proches-4/",
           "titre": "Asso MPC",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -629,22 +674,26 @@
         {
           "url": "https://actu17.fr/la-reunion-un-sapeur-pompier-professionnel-trouve-la-mort-en-intervention/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.pompiers.fr/actualites/avis-de-deces-sergent-jessy-eve-sapeur-pompier-professionnel-la-reunion",
           "titre": "Pompiers.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.zinfos974.com/Un-hommage-rendu-ce-mercredi-au-pompier-Jessy-Eve-promu-adjudant-a-titre-posthume_a136634.html",
           "titre": "Zinfos974",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.departement974.fr/actualite/ceremonie-dhommage-ladjudant-sapeur-pompier-jessy-ricet-eve-2019",
           "titre": "Département 974,",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -674,27 +723,32 @@
         {
           "url": "https://lessor.org/lactualite-nouvelle-caledonie/une-gendarme-meurt-de-la-dengue-en-nouvelle-caledonie/",
           "titre": "L'Essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.sudouest.fr/2019/02/07/une-gendarme-tuee-par-la-dengue-en-nouvelle-caledonie-5801019-4696.php",
           "titre": "Ouest France",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/02/08/nouvelle-caledonie-une-gendarme-decede-de-la-dengue/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/une-gendarme-de-43-ans-meurt-de-la-dengue-en-nouvelle-caledonie-07-02-2019-8006226.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.facebook.com/ComgendNC/posts/2307502849317299:0",
           "titre": "@ComgendNC (Facebook)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -724,12 +778,14 @@
         {
           "url": "https://twitter.com/association_mpc/status/1096133238152671232",
           "titre": "Asso MPC",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/02/14/douzieme-suicide-dans-la-police-nationale-depuis-le-debut-de-lannee/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -759,17 +815,20 @@
         {
           "url": "https://www.ouest-france.fr/pays-de-la-loire/louverne-53950/pres-de-laval-le-policier-aurait-tue-son-ex-compagne-avec-son-arme-de-service-6229386",
           "titre": "Ouest France",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.francesoir.fr/societe-faits-divers/laval-un-policier-tue-son-ex-compagne-avec-son-arme-et-se-suicide",
           "titre": "France Soir",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/mayenne-un-policier-aurait-tue-sa-compagne-avant-de-se-suicider/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -799,7 +858,8 @@
         {
           "url": "https://twitter.com/association_mpc/status/1098316890554929159",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -829,22 +889,26 @@
         {
           "url": "https://www.ladepeche.fr/2019/03/04/un-policier-se-suicide-au-commissariat-de-limoges,8049537.php",
           "titre": "La depêche",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/limoges-un-policier-s-est-suicide-ce-lundi-matin-a-l-hotel-de-police-de-limoges-1551718980",
           "titre": "France Bleu",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/limoges-un-policier-sest-suicide-avec-son-arme-de-service-au-commissariat/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/haute-vienne/limoges/policier-se-suicide-au-commissariat-limoges-1632626.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -874,7 +938,8 @@
         {
           "url": "https://twitter.com/association_mpc/status/1102717535835865089",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -904,17 +969,20 @@
         {
           "url": "https://actu17.fr/yvelines-un-policier-se-donne-la-mort-avec-son-arme-de-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/ile-de-france/elancourt_78208/yvelines-policier-delancourt-se-suicide-arme-service_21922559.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/yvelines-78/elancourt-un-policier-met-fin-a-ses-jours-avec-son-arme-de-service-06-03-2019-8025951.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -944,17 +1012,20 @@
         {
           "url": "https://www.paris-normandie.fr/actualites/faits-divers/a-saint-saens-le-policier-a-commis-l-irreparable-la-commune-sous-le-choc-CC14702819",
           "titre": "Paris-Normadie",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/normandie/saint-saens_76648/le-policier-jette-produit-sur-visage-femme-se-suicide-seine-maritime_21919654.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/seine-maritime-un-policier-jette-de-lacide-au-visage-de-sa-compagne-et-se-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -984,17 +1055,20 @@
         {
           "url": "https://lessor.org/a-la-une/suicide-dun-gendarme-du-loir-et-cher/",
           "titre": "L'Essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/loir-et-cher-un-gendarme-de-32-ans-sest-suicide/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lanouvellerepublique.fr/loir-et-cher/commune/selles-sur-cher/selles-sur-cher-un-gendarme-se-suicide-avec-son-arme",
           "titre": "La Nouvelle République",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1024,22 +1098,26 @@
         {
           "url": "https://www.20minutes.fr/paris/2470107-20190311-policier-accidentellement-tue-policiere-arme-service-suspendu",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://la1ere.francetvinfo.fr/adjoint-securite-reunionnais-tue-accident-collegue-policiere-paris-688888.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.rtl.fr/actu/justice-faits-divers/paris-un-policier-tue-une-de-ses-collegues-en-manipulant-son-arme-de-service-7797178699",
           "titre": "RTL",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.lefigaro.fr/actualite-france/2019/03/11/01016-20190311ARTFIG00032-une-policiere-tuee-par-un-collegue-a-paris.php",
           "titre": "Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1069,22 +1147,26 @@
         {
           "url": "https://www.20minutes.fr/societe/2472387-20190314-roissy-militaire-sentinelle-suicide-arme",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.opex360.com/2019/03/14/une-militaire-de-loperation-sentinelle-a-mis-fin-a-ses-jours-avec-son-arme-de-service/",
           "titre": "Opex 360",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.rtl.fr/actu/justice-faits-divers/roissy-une-militaire-de-la-force-sentinelle-se-suicide-avec-son-arme-de-service-7797202076",
           "titre": "RTL",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lexpress.fr/actualite/societe/fait-divers/roissy-une-militaire-de-sentinelle-se-suicide-avec-son-arme_2066968.html",
           "titre": "L'express",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1114,17 +1196,20 @@
         {
           "url": "http://www.leparisien.fr/yvelines-78/yvelines-un-policier-se-suicide-avec-son-arme-de-service-16-03-2019-8033049.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.mantes-actu.net/limay-un-policier-sest-suicide-a-son-domicile-avec-son-arme-de-service/",
           "titre": "Mantes Actu",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/un-policier-affecte-a-limay-78-se-suicide/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1154,22 +1239,26 @@
         {
           "url": "https://twitter.com/association_mpc/status/1108090559086936071",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/paris-un-policier-a-mis-fin-a-ses-jours-avec-son-arme-de-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/paris-75/paris-un-jeune-policier-se-suicide-avec-son-arme-de-service-20-03-2019-8035797.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/paris/2478363-20190321-paris-policier-29-ans-suicide-arme-service",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1199,22 +1288,26 @@
         {
           "url": "https://www.europe1.fr/faits-divers/info-europe-1-oise-un-policier-arme-retranche-chez-lui-sest-suicide-3881687",
           "titre": "Europe 1",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2483259-20190328-oise-policier-arme-retranche-chez-gign-place",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/oise-60/un-homme-arme-retranche-chez-lui-a-bailleval-27-03-2019-8041248.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/oise-un-policier-est-retranche-chez-lui-le-gign-sur-place/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1244,12 +1337,14 @@
         {
           "url": "https://actu17.fr/seine-et-marne-un-policier-de-42-ans-sest-donne-la-mort/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/association_mpc/status/1112833715149963265",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1279,17 +1374,20 @@
         {
           "url": "https://actu17.fr/toulouse-un-surveillant-penitentiaire-sest-donne-la-mort/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/04/02/toulouse-un-surveillant-penitentiaire-sest-suicide-ce-matin-a-son-domicile/",
           "titre": "Actu Penit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.centpourcent.com/les-infos-10/le-suicide-d%EF%BF%BD-un-surveillant-du-centre-penitentiaire-de-toulouse-seysses-10343",
           "titre": "100% radio",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1319,22 +1417,26 @@
         {
           "url": "https://www.defense.gouv.fr/sante/actualites/in-memoriam-deces-du-medecin-marc-laycuras",
           "titre": "MINARM - Hommage",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/correze/tulle/medecin-militaire-tue-au-mali-marc-laycuras-inhume-correze-1652610.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/a-la-une/lhommage-au-medecin-principal-marc-laycuras-mort-pour-la-france-au-mali-videos/",
           "titre": "L'Essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.la-croix.com/France/Securite/Marc-Laycuras-jeune-medecin-militaire-mort-Mali-2019-04-03-1201013240",
           "titre": "La Croix",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1364,27 +1466,32 @@
         {
           "url": "https://actu17.fr/un-policier-affecte-a-lyon-sest-suicide-a-son-domicile/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/04/05/lyon-un-policier-se-suicide-par-pendaison-a-son-domicile/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/rhone/lyon/lyon-policier-bac-se-suicide-lui-1650886.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/suicide-dun-policier-a-lyon/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/association_mpc/status/1114160699863896064",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1414,27 +1521,32 @@
         {
           "url": "https://actu17.fr/deux-policiers-municipaux-retrouves-morts-au-poste-de-police-davignon/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/c-est-bien-un-drame-passionnel-qui-a-cause-la-mort-des-deux-policiers-municipaux-a-avignon-1554905671",
           "titre": "France Bleu",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lci.fr/police/avignon-un-policier-municipal-et-une-policiere-retrouves-morts-dans-un-commissariat-ce-que-l-on-sait-2117595.html",
           "titre": "LCI",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/societe/2490267-20190405-drame-deux-policiers-municipaux-retrouves-morts-avignon",
           "titre": "20 Minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francetvinfo.fr/faits-divers/avignon-deux-policiers-municipaux-retrouves-morts-dans-leurs-locaux_3267509.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1464,22 +1576,26 @@
         {
           "url": "https://actu.fr/ile-de-france/conflans-sainte-honorine_78172/yvelines-une-policiere-conflans-sainte-honorine-retrouvee-sans-vie-apres-probable-suicide_22814746.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/une-policiere-des-yvelines-se-suicide-dans-sa-voiture-07-04-2019-8048067.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/paris-ile-de-france/yvelines/corps-policiere-yvelines-retrouvee-vie-apres-probable-suicide-1651640.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/association_mpc/status/1114897579827965953",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1509,32 +1625,38 @@
         {
           "url": "https://actu17.fr/policier-dales-disparu-un-corps-decouvert-durant-la-battue-a-la-calmette/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.midilibre.fr/2019/04/08/gard-le-parquet-de-nimes-confirme-que-christophe-sest-bien-suicide,8118063.php",
           "titre": "Midi Libre",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/societe/suicide-du-policier-dans-le-gard-le-25eme-en-trois-mois_23428689.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/54209/",
           "titre": "Pofession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ladepeche.fr/2019/04/07/un-policier-retrouve-mort-dans-le-gard,8116247.php",
           "titre": "La Depeche",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/association_mpc/status/1114897579827965953",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1564,17 +1686,20 @@
         {
           "url": "https://actu17.fr/essonne-un-gendarme-de-35-ans-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/54401/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/a-la-une/suicide-dun-gendarme-de-lessonne/",
           "titre": "L'Essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1604,12 +1729,14 @@
         {
           "url": "https://twitter.com/association_mpc/status/1117445554336948224",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/faits-divers/paris-un-policier-retrouve-mort-a-son-domicile.html",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1639,27 +1766,32 @@
         {
           "url": "https://secoursinfo.fr/2019/04/16/apres-une-intervention-difficile-un-pompier-professionnel-se-donne-la-mort/",
           "titre": "Secours Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/la-reunion-le-corps-du-pompier-disparu-a-ete-retrouve-par-ses-collegues/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/04/17/la-reunion-suite-a-une-intervention-difficile-un-pompier-professionnel-met-fin-a-ses-jours/",
           "titre": "Actu Penit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.zinfos974.com/Disparu-a-Mafate-le-lieutenant-Daniel-Hoareau-retrouve-mort_a139490.html",
           "titre": "Zinfos974",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.clicanoo.re/Faits-Divers/Article/2019/04/16/Recherche-depuis-dimanche-Le-corps-du-pompier-retrouve-Marla-par",
           "titre": "Clicanoo",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1689,22 +1821,26 @@
         {
           "url": "https://twitter.com/association_mpc/status/1118055338056482816",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/un-policier-affecte-a-metz-a-mis-fin-a-ses-jours/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/grand-est/metz_57463/un-policier-affecte-metz-sest-suicide_23003464.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-de-moselle-s-est-suicide-1555521584",
           "titre": "France Bleu",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1734,17 +1870,20 @@
         {
           "url": "https://www.midilibre.fr/2019/04/17/suicide-dun-policier-municipal-a-beziers-personne-ne-sait-ce-qui-sest-passe,8137271.php",
           "titre": "Midi Libre",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/occitanie/herault/beziers/beziers-policier-municipal-se-suicide-son-arme-son-lieu-travail-1656090.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2497763-20190416-beziers-policier-municipal-retrouve-mort-lieu-travail",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1774,22 +1913,26 @@
         {
           "url": "https://twitter.com/association_mpc/status/1118878047594262528",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/montpellier-une-policiere-se-suicide-avec-son-arme-de-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/occitanie/herault/montpellier/montpellier-suicide-policier-son-arme-service-1656984.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.midilibre.fr/2019/04/19/suicide-dune-policiere-a-montpellier-retour-sur-ce-fleau,8140747.php",
           "titre": "Midi Libre",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1819,22 +1962,26 @@
         {
           "url": "https://twitter.com/association_mpc/status/1118878047594262528",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/un-policier-affecte-a-paris-sest-suicide-a-son-domicile/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francetvinfo.fr/faits-divers/police/paris-un-policier-se-donne-la-mort-dans-les-locaux-de-son-unite-28e-suicide-dans-la-police-en-2019_3404265.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/paris-un-policier-se-suicide-dans-les-locaux-de-son-unite-18-04-2019-8056041.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1864,27 +2011,32 @@
         {
           "url": "https://actu17.fr/la-reunion-un-gendarme-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://la1ere.francetvinfo.fr/reunion/entre-deux/gendarme-se-suicide-son-arme-service-705875.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2509251-20190502-reunion-gendarme-suicide-caserne-arme-service",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/la-reunion-un-gendarme-se-suicide-dans-sa-caserne-01-05-2019-8063751.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lepoint.fr/faits-divers/la-reunion-suicide-d-un-gendarme-dans-sa-caserne-01-05-2019-2310292_2627.php",
           "titre": "Le Point",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1914,27 +2066,32 @@
         {
           "url": "http://www.opex360.com/2019/04/30/un-militaire-du-4e-regiment-de-chasseurs-sest-donne-la-mort-avec-son-arme-de-service/",
           "titre": "Opex360",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/haute-alpes-un-militaire-sest-donne-la-mort-avec-son-arme-de-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ouest-france.fr/provence-alpes-cote-dazur/hautes-alpes/hautes-alpes-un-militaire-met-fin-ses-jours-avec-son-arme-de-service-6330511",
           "titre": "Ouest France",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lci.fr/police/gap-un-militaire-du-4e-regiment-de-chasseurs-se-suicide-avec-son-arme-de-service-2119896.html",
           "titre": "LCI",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.europe1.fr/societe/un-militaire-se-suicide-avec-son-arme-dans-les-hautes-alpes-3896001",
           "titre": "Europe1",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -1964,22 +2121,26 @@
         {
           "url": "https://twitter.com/_FFOC_/status/1123706030259625994",
           "titre": "@_FFOC_ (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/55334/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/saone-et-loire-un-policier-municipal-de-paray-le-monial-a-mis-fin-a-ses-jours/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/05/03/paray-le-monial-un-policier-municipal-se-suicide/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2009,22 +2170,26 @@
         {
           "url": "http://www.leparisien.fr/faits-divers/calvados-un-gendarme-se-suicide-avec-son-arme-de-service-07-05-2019-8067132.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/breves/suicide-dun-gendarme-mobile-du-calvados/",
           "titre": "L'Essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/normandie/aunay-sur-odon_14027/un-gendarme-mobile-se-suicide-arme-service-dans-calvados_23584085.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ouest-france.fr/normandie/un-gendarme-mobile-met-fin-ses-jours-pres-de-vire-6338353",
           "titre": "Ouest France",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2054,27 +2219,32 @@
         {
           "url": "https://www.liberation.fr/planete/2019/05/10/burkina-faso-deux-soldats-francais-tues-quatre-otages-sauves_1726183",
           "titre": "Libération",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lemonde.fr/international/article/2019/05/10/sahel-quatre-otages-dont-les-deux-francais-enleves-au-benin-ont-ete-liberes_5460497_3210.html",
           "titre": "Le monde",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.lefigaro.fr/international/qui-etaient-cedric-de-pierrepont-et-alain-bertoncello-les-deux-militaires-qui-se-sont-sacrifies-pour-sauver-deux-otages-francais-au-sahel-20190510",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/otages-liberes-au-burkina-les-2-militaires-francais-tues-etaient-membres-du-commando-hubert/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.la-croix.com/France/Securite/Militaires-morts-Burkina-Faso-recit-lassaut-commandos-marine-francais-2019-05-10-1201021006",
           "titre": "La Croix",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2104,17 +2274,20 @@
         {
           "url": "https://actu17.fr/maine-et-loire-un-policier-municipal-de-cholet-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/pays-de-la-loire/maine-et-loire/cholet/cholet-policier-municipal-s-est-donne-mort-1666193.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/05/07/cholet-un-policier-municipal-pere-de-trois-enfants-sest-suicide/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2144,17 +2317,20 @@
         {
           "url": "https://actu17.fr/hautes-alpes-un-gendarme-adjoint-volontaire-age-de-20-ans-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/a-la-une/suicide-dun-gendarme-adjoint-dans-les-hautes-alpes/",
           "titre": "L'essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ledauphine.com/isere-sud/2019/05/14/sassenage-un-gendarme-de-briancon-se-suicide-au-domicile-de-ses-parents",
           "titre": "Le Dauphiné",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2184,22 +2360,26 @@
         {
           "url": "https://actu17.fr/jura-un-officier-de-gendarmerie-sest-donne-la-mort/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/bourgogne-franche-comte/jura/lons-le-saunier/lons-saunier-commandant-gendarmerie-se-suicide-son-arme-service-1671077.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/a-la-une/suicide-du-commandant-de-compagnie-de-lons-le-saunier-jura/",
           "titre": "L'essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/le-patron-des-gendarmes-de-lons-le-saunier-se-suicide-avec-son-arme-de-service-1558102900",
           "titre": "France Bleu",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2229,32 +2409,38 @@
         {
           "url": "https://www.lepoint.fr/societe/un-militaire-francais-meurt-des-suites-de-ses-blessures-au-liban-29-05-2019-2315689_23.php",
           "titre": "Le Point",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/politique/mort-d-un-militaire-francais-blesse-en-operation-au-liban-29-05-2019-8082168.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/grand-est/mourmelon-grand-deces-soldat-du-501e-regiment-chars-combat-blesse-operation-1676913.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/grand-est/mourmelon-grand-deces-soldat-du-501e-regiment-chars-combat-blesse-operation-1676913.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.facebook.com/501RCC/photos/a.729108477179756/2231637690260153/?type=3",
           "titre": "Hommage du @501RCC (Facebook)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lunion.fr/id68232/article/2019-05-28/le-vibrant-hommage-au-cotterezien-mort-au-liban",
           "titre": "L'Union",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2284,17 +2470,20 @@
         {
           "url": "https://twitter.com/association_mpc/status/1131309085952008192",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/05/23/lille-un-policier-age-de-46-ans-se-suicide/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/un-policier-du-gaj-de-lille-se-suicide/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2324,22 +2513,26 @@
         {
           "url": "https://twitter.com/association_mpc/status/1132736130951065600",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.lefigaro.fr/flash-actu/info-le-figaro-seine-et-marne-un-policier-se-suicide-avec-son-arme-de-service-20190526",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/seine-et-marne-77/chessy-un-policier-se-suicide-avec-son-arme-de-service-26-05-2019-8080290.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/seine-et-marne-un-policier-de-38-ans-a-mis-fin-a-ses-jours/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2369,7 +2562,8 @@
         {
           "url": "http://www.profession-gendarme.com/suicide-dun-policier-municipal-a-nice/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2399,22 +2593,26 @@
         {
           "url": "https://twitter.com/association_mpc/status/1134941320915628037",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/police-un-commandant-divisionnaire-fonctionnel-se-suicide/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/seine-et-marne-un-officier-de-police-se-suicide-a-son-domicile-1703656.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/seine-et-marne-un-officier-de-la-police-nationale-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2444,17 +2642,20 @@
         {
           "url": "https://actu17.fr/ille-et-vilaine-un-gendarme-de-47-ans-sest-suicide-a-fougeres/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/a-la-une/suicide-dun-gendarme/",
           "titre": "L'essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.assogendarmesetcitoyens.com/post/d%C3%A9c%C3%A8s-d-un-gendarme-2",
           "titre": "L'asso gendarmes et citoyens",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2484,27 +2685,32 @@
         {
           "url": "https://actu17.fr/tempete-miguel-un-bateau-des-sauveteurs-de-la-snsm-a-chavire-aux-sables-dolonne-au-moins-3-morts/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.sudouest.fr/2019/06/08/naufrage-d-un-bateau-de-secours-de-la-snsm-en-vendee-les-rescapes-racontent-6185859-4971.php",
           "titre": "Sud Ouest",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/bretagne/finistere/brest/deces-trois-sauveteurs-snsm-dernier-accident-tragique-avait-eu-lieu-1986-aber-wrac-h-1682380.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/mediaplayer/video/le-president-de-la-snsm-evoque-un-traumatisme-il-n-y-avait-pas-eu-d-accident-grave-depuis-1986-1166868.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2535479-20190607-tempete-miguel-vendee-vedette-snsm-chavire-sept-marins-bord",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2534,12 +2740,14 @@
         {
           "url": "https://twitter.com/association_mpc/status/1139447750356086784",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/un-policier-a-mis-fin-a-ses-jours-avec-son-arme-de-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2569,17 +2777,20 @@
         {
           "url": "http://www.profession-gendarme.com/57169/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.maritima.info/depeches/faits-divers/istres/60347/un-policier-municipal-de-fos-sur-mer-se-suicide-.html",
           "titre": "Maritima",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://policeetrealites.com/2019/06/16/%F0%9F%87%AB%F0%9F%87%B7-suicide-dun-policier-municipal-de-fos-sur-mer/",
           "titre": "Police & Réalités",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2609,22 +2820,26 @@
         {
           "url": "https://actu17.fr/yvelines-un-policier-affecte-a-la-crs-61-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lepoint.fr/societe/le-34e-suicide-dans-la-police-n-est-pas-un-suicide-18-06-2019-2319672_23.php",
           "titre": "Le point",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/suicide-dun-policier-de-34-ans-de-la-crs61-a-velizy/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/faits-divers/paris-yvelines-meurt-se-faisant-tatouage-sur-bras_25110181.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2654,17 +2869,20 @@
         {
           "url": "https://twitter.com/association_mpc/status/1142154410019184646",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/paris-un-policier-sest-donne-la-mort-avec-son-arme-de-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/paris-un-policier-sest-donne-la-mort-avec-son-arme-de-service/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2694,22 +2912,26 @@
         {
           "url": "https://twitter.com/association_mpc/status/1142154410019184646",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/toulouse-un-policier-a-mis-fin-a-ses-jours-a-son-domicile/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lemonde.fr/societe/article/2019/06/21/un-policier-se-suicide-a-toulouse_5479752_3224.html",
           "titre": "Le Monde",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.nouvelobs.com/societe/20190621.OBS14758/suicide-d-un-policier-a-toulouse-le-34e-depuis-janvier.html",
           "titre": "Nouvel Obs",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2739,27 +2961,32 @@
         {
           "url": "https://twitter.com/Gendarmerie/status/1142405389029429250",
           "titre": "@Gendarmerie (Twitter Officiel)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/oise-un-gendarme-de-36-ans-decede-lors-dune-epreuve-sportive/",
           "titre": "Actu7",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/oise-60/oise-la-gendarmerie-nationale-endeuillee-apres-la-mort-d-un-des-siens-22-06-2019-8100474.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lavoixdunord.fr/604264/article/2019-06-25/le-gendarme-decede-lors-d-une-epreuve-sportive-etait-originaire-de-meteren",
           "titre": "La Voix du Nord",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.gendinfo.fr/L-info-en-continu/Deces-en-service-d-un-gendarme-dans-l-Oise",
           "titre": "GendInfo",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2789,22 +3016,26 @@
         {
           "url": "https://france3-regions.francetvinfo.fr/occitanie/gard/nimes/corps-vie-responsables-gendarmerie-du-gard-retrouve-lui-nimes-1690366.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/nimes-un-gendarme-se-donne-la-mort-avec-son-arme-de-service/",
           "titre": "Actu7",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/a-la-une/un-gendarme-du-gard-se-suicide/",
           "titre": "L'Essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/occitanie/nimes_30189/nimes-gendarme-se-suicide-arme-service_25195508.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2834,12 +3065,14 @@
         {
           "url": "https://www.ladepeche.fr/2019/06/27/le-jeune-militaire-se-suicide-au-camp-de-caylus,8281707.php",
           "titre": "La Dépêche",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/tarn-et-garonne-un-militaire-de-19-ans-se-suicide-lors-dun-exercice/",
           "titre": "Actu7",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2869,17 +3102,20 @@
         {
           "url": "https://twitter.com/_FFOC_/status/1144652718310600705",
           "titre": "@_FFOC_ (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/pas-de-calais-un-officier-de-police-retrouve-mort-a-son-domicile-a-burbure/",
           "titre": "Actu7",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lavenirdelartois.fr/19832/article/2019-06-28/burbure-un-policier-retrouve-mort",
           "titre": "L'avenir de l'Artois",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2909,27 +3145,32 @@
         {
           "url": "https://twitter.com/association_mpc/status/1145333295007391744",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/marseille-un-policier-de-50-ans-sest-donne-la-mort-a-son-domicile/",
           "titre": "Actu7",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2553167-20190630-marseille-policier-retrouve-pendu-domicile-36e-suicide-fonctionnaire-police-depuis-debut-annee",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/marseille-un-policier-age-de-50-ans-se-suicide-dans-son-appartement-30-06-2019-8106387.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.laprovence.com/actu/en-direct/5572150/breve.html",
           "titre": "La Provence",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2959,22 +3200,26 @@
         {
           "url": "https://twitter.com/_FFOC_/status/1148329916238368768",
           "titre": "@_FFOC_ (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://policeetrealites.com/2019/07/08/%f0%9f%87%ab%f0%9f%87%b7-suicide-dune-policiere/",
           "titre": "Police et Realites",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/suicide-dune-policiere-a-bordeaux/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.sudouest.fr/2019/07/16/gironde-deux-suicides-dans-la-police-et-la-gendarmerie-6343263-2780.php",
           "titre": "Ouest France",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3004,22 +3249,26 @@
         {
           "url": "https://twitter.com/_FFOC_/status/1148143426401132544",
           "titre": "@_FFOC_ (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/herault-un-sapeur-pompier-de-beziers-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/07/07/beziers-un-sapeur-pompier-du-sdis-34-sest-suicide-ses-collegues-sous-le-choc/",
           "titre": "Actu Penit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/occitanie/beziers_34032/beziers-sapeur-pompier-se-suicide-sdis-34-sous-choc_25718343.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3049,27 +3298,32 @@
         {
           "url": "https://twitter.com/association_mpc/status/1148277987147730945",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/annecy-un-policier-sest-suicide-avec-son-arme-de-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/haute-savoie/annecy/annecy-policier-se-suicide-son-arme-service-devant-commissariat-1696622.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/annecy-un-policier-se-suicide-sur-le-parking-du-commissariat-08-07-2019-8112345.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/societe/2559587-20190708-annecy-policier-suicide-parking-commissariat",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3099,27 +3353,32 @@
         {
           "url": "https://actu17.fr/gironde-un-gendarme-de-castelnau-du-medoc-sest-donne-la-mort/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.assogendarmesetcitoyens.com/post/d%C3%A9c%C3%A8s-d-un-gendarme-3",
           "titre": "Asso Gendarmes et Citoyens",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/breves/un-gendarme-de-la-gironde-se-suicide/",
           "titre": "L'essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/un-gendarme-de-la-gironde-se-suicide/",
           "titre": "Profession gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.sudouest.fr/2019/07/16/gironde-deux-suicides-dans-la-police-et-la-gendarmerie-6343263-2780.php",
           "titre": "Ouest France",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3149,27 +3408,32 @@
         {
           "url": "https://www.20minutes.fr/societe/2563819-20190714-14-juillet-militaire-suicide-ecoles-militaires-saumur-marge-ceremonies",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/un-militaire-se-suicide-aux-ecoles-militaires-de-saumur-en-marge-des-ceremonies-14-juillet-1730562.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/un-sous-officier-se-suicide-aux-ecoles-militaires-de-saumur-le-jour-du-14-juillet-14-07-2019-8116680.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.courrierdelouest.fr/actualite/saumur-un-soldat-de-la-force-sentinelle-se-suicide-en-marge-des-ceremonies-du-14-juillet-14-07-2019-406706",
           "titre": "Courrier de l'Ouest",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/vienne/poitiers/reserviste-du-ricm-se-suicide-marge-du-defile-du-14-juillet-saumur-1699544.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3199,32 +3463,38 @@
         {
           "url": "https://www.defense.gouv.fr/salle-de-presse/communiques/communiques-du-ministere-des-armees/communique-de-l-etat-major-des-armees",
           "titre": "État-major des armées",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2566519-20190718-guyane-trois-militaires-decedent-accidentellement-cours-operation-anti-orpaillage",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/guyane-trois-soldats-meurent-pendant-une-operation-contre-l-orpaillage-18-07-2019-8119278.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/07/18/guyane-3-militaires-decedent-en-operation-contre-lorpaillage/",
           "titre": "Actu Penit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francetvinfo.fr/france/guyane-francaise/guyane-trois-militaires-francais-tues-accidentellement-le-plan-blanc-declenche_3541083.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/guyane-les-3-militaires-sont-morts-dans-un-accident-lors-dune-operation-un-quatrieme-dans-un-etat-grave/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3254,17 +3524,20 @@
         {
           "url": "https://twitter.com/association_mpc/status/1151764484496773120",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/40eme-suicide-dans-la-police-nationale-depuis-le-debut-de-lannee-2019/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.facebook.com/ZoneHDF/posts/2366256266955556",
           "titre": "@ZoneHDF (Facebook)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3294,27 +3567,32 @@
         {
           "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/pas-calais/bethune/bethune-crs-se-suicide-son-arme-service-1702334.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lavenirdelartois.fr/21092/article/2019-07-22/bethune-un-crs-se-suicide-avec-son-arme-feu",
           "titre": "Avenir de l'Artois",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.lefigaro.fr/flash-actu/deux-nouveaux-suicides-de-policiers-dans-le-pas-de-calais-et-le-gard-20190722",
           "titre": "Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/deux-policiers-ont-ete-retrouves-morts/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/lille/2568951-20190722-calais-crs-bethune-suicide-arme-feu",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3344,27 +3622,32 @@
         {
           "url": "https://actu17.fr/deux-policiers-ont-ete-retrouves-morts/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.estrepublicain.fr/faits-divers-justice/2019/07/22/deux-policiers-se-suicident-dans-le-gard-et-le-pas-de-calais",
           "titre": "Est Republicain",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/BNUNSAPoliceCRS/status/1153202388301430784",
           "titre": "@BNUNSAPoliceCRS (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ouest-france.fr/societe/police/deux-nouveaux-policiers-mettent-fin-leurs-jours-dans-le-pas-de-calais-et-le-gard-6454552",
           "titre": "Ouest France",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/deux-policiers-se-suicident-dans-la-nuit-de-dimanche-a-lundi-1735098.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3394,17 +3677,20 @@
         {
           "url": "https://actu17.fr/isere-un-policier-de-49-ans-sest-suicide-le-3eme-en-48-heures/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.lefigaro.fr/flash-actu/un-policier-se-suicide-pres-de-grenoble-20190723",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/BNUNSAPoliceCRS/status/1153587359667146753",
           "titre": "@BNUNSAPoliceCRS (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3434,32 +3720,38 @@
         {
           "url": "https://actu17.fr/cergy-un-policier-sest-suicide-le-4eme-en-72-heures-en-france/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/ile-de-france/cergy_95127/val-doise-policier-se-suicide-commissariat-cergy_26103613.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/val-d-oise-95/cergy-un-policier-se-suicide-a-l-hotel-de-police-24-07-2019-8123088.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/paris-ile-de-france/val-d-oise/cergy-pontoise/cergy-val-oise-suicide-policier-1703404.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/un-commandant-de-police-sest-suicide-ce-mercredi-24-juillet-2019-au-commissariat-de-cergy-val-doise/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/association_mpc/status/1154126620460036097",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3489,32 +3781,38 @@
         {
           "url": "https://actu17.fr/seine-saint-denis-un-policier-affecte-a-aulnay-sous-bois-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/ile-de-france/aulnay-sous-bois_93005/a-aulnay-sous-bois-guillaume-fonctionnaire-police-sest-donne-mort-arme-service_26167505.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/seine-saint-denis-93/seine-saint-denis-un-policier-d-aulnay-se-suicide-avec-son-arme-de-service-28-07-2019-8125071.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/societe/un-policier-affecte-a-aulnay-sous-bois-se-suicide-a-son-domicile-1738720.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.sudouest.fr/2019/07/28/seine-saint-denis-suicide-d-un-policier-a-aulnay-sous-bois-le-5e-en-france-en-une-semaine-6389552-10407.php",
           "titre": "Sud Ouest",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/association_mpc/status/1155440015297646592",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3544,27 +3842,32 @@
         {
           "url": "https://actu17.fr/rennes-un-policier-affecte-a-la-crs-9-sest-suicide-avec-son-arme-de-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ouest-france.fr/bretagne/rennes-35000/pres-de-rennes-un-policier-de-la-crs-9-se-suicide-avec-son-arme-de-service-6465160",
           "titre": "Ouest France",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/rennes-un-policier-se-suicide-avec-son-arme-de-service-1740574.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.europe1.fr/faits-divers/rennes-un-policier-sest-suicide-ce-matin-avec-son-arme-de-service-3912337",
           "titre": "Europe 1",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/association_mpc/status/1155440015297646592",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3594,17 +3897,20 @@
         {
           "url": "https://www.ledauphine.com/isere-nord/2019/08/01/un-motard-se-tue-dans-un-rond-point",
           "titre": "Le Dauphiné",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/isere/charvieu-chavagneux-isere-jeune-motard-perd-vie-sortie-route-1706166.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/association_mpc/status/1157289042431696897",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3634,32 +3940,38 @@
         {
           "url": "https://actu17.fr/nord-un-policier-affecte-a-la-crs-11-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ledauphine.com/france-monde/2019/08/01/nord-un-policier-se-suicide-par-arme-a-feu",
           "titre": "Le Dauphiné",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/rennes-un-policier-se-suicide-avec-son-arme-de-service-1740574.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.estrepublicain.fr/faits-divers-justice/2019/08/01/nord-un-policier-se-suicide-par-arme-a-feu",
           "titre": "Est Républicain",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.leprogres.fr/faits-divers-justice/2019/08/01/nord-un-policier-se-suicide-par-arme-a-feu",
           "titre": "Le progrès",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.lefigaro.fr/un-crs-se-suicide-pres-de-lille-20190801",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3689,32 +4001,38 @@
         {
           "url": "https://actu17.fr/incendies-dans-le-gard-un-avion-bombardier-deau-sest-crashe/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/incendies-dans-le-gard-crash-d-un-bombardier-d-eau-en-intervention-02-08-2019-8127936.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/mediaplayer/video/crash-d-un-bombardier-d-eau-dans-le-gard-le-pilote-de-l-avion-est-mort-1178824.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.midilibre.fr/2019/08/02/gard-un-accident-de-canadair-sur-lincendie-de-generac,8343971.php",
           "titre": "Midi Libre",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2576543-20190802-gard-crash-bombardier-eau-intervenant-incendie-generac",
           "titre": "20 Minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francetvinfo.fr/faits-divers/incendie/direct-incendies-dans-le-gard-un-avion-bombardier-d-eau-s-ecrase-pres-de-generac_3562137.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3744,17 +4062,20 @@
         {
           "url": "https://actu17.fr/un-policier-municipal-dorleans-sest-suicide-par-arme-a-feu/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://policeetrealites.com/2019/08/06/%F0%9F%87%AB%F0%9F%87%B7-suicide-dun-policier-municipal/",
           "titre": "Police & Réalites",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lanouvellerepublique.fr/loir-et-cher/commune/neung-sur-beuvron/un-policier-municipal-d-orleans-met-fin-a-ses-jours-a-neung-sur-beuvron",
           "titre": "La nouvelle République",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3784,17 +4105,20 @@
         {
           "url": "https://actu17.fr/hauts-de-seine-un-policier-se-tue-dans-un-accident-de-moto-en-sortant-de-son-travail/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/08/08/asnieres-sur-seine-un-policier-de-32-ans-se-tue-a-moto-en-repartant-de-son-travail/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/association_mpc",
           "titre": "@association_mpc (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3824,37 +4148,44 @@
         {
           "url": "https://actu17.fr/oise-un-gendarme-du-psig-de-compiegne-tue-dans-un-accident-en-se-rendant-sur-une-intervention/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/a-la-une/un-gendarme-de-loise-decede-dans-un-accident-de-la-circulation/",
           "titre": "L'essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/oise/compiegne/gendarme-compiegne-decede-accident-lors-intervention-1710460.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2583163-20190814-picardie-gendarme-decede-accident-route-lors-intervention",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/oise/compiegne/gendarme-compiegne-decede-accident-lors-intervention-1710460.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.europe1.fr/societe/oise-deces-accidentel-dun-gendarme-3914209",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/oise-60/un-gendarme-de-l-oise-decede-dans-un-accident-de-la-route-14-08-2019-8133384.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3884,42 +4215,50 @@
         {
           "url": "https://actu17.fr/ardeche-un-gendarme-sest-suicide-avec-son-arme-de-service-a-cruas/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.francesoir.fr/societe-faits-divers/ardeche-un-gendarme-se-suicide-avec-son-arme-de-service-cruas",
           "titre": "France Soir",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/breves/suicide-dun-gendarme-de-lardeche/",
           "titre": "L'Essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2583835-20190815-ardeche-gendarme-donne-mort-arme-service",
           "titre": "20 Minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ledauphine.com/ardeche/2019/08/15/cruas-un-gendarme-se-donne-la-mort-avec-son-arme-de-service",
           "titre": "Le Dauphiné",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.estrepublicain.fr/faits-divers-justice/2019/08/15/un-gendarme-se-suicide-avec-son-arme-de-service",
           "titre": "Est Républicain",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.leprogres.fr/faits-divers-justice/2019/08/15/un-gendarme-se-suicide-avec-son-arme-de-service",
           "titre": "Le Progrès",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/suicide-d-un-gendarme-a-cruas-1565863729",
           "titre": "France Bleu",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3949,12 +4288,14 @@
         {
           "url": "https://actu17.fr/paris-un-surveillant-penitentiaire-de-45-ans-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/08/21/paris-la-sante-un-surveillant-sest-suicide-cette-nuit/",
           "titre": "ActuPenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -3984,32 +4325,38 @@
         {
           "url": "https://actu17.fr/seine-saint-denis-une-policiere-sest-suicidee-a-drancy/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/une-policiere-de-la-prefecture-de-police-de-paris-se-suicide-avec-son-arme-de-service-1753777.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/08/22/drancy-une-policiere-de-la-prefecture-de-police-de-paris-se-suicide-avec-son-arme-de-service/",
           "titre": "ActuPenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/paris/2587499-20190822-paris-policiere-26-ans-suicidee-arme-service",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/seine-saint-denis-93/drancy-une-policiere-se-suicide-avec-son-arme-de-service-22-08-2019-8137647.php#xtor=AD-1481423553",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ladepeche.fr/2019/08/23/la-jeune-policiere-qui-sest-suicidee-avec-son-arme-de-service-a-drancy-etait-du-tarn-et-garonne,8373144.php",
           "titre": "La Depêche",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4039,17 +4386,20 @@
         {
           "url": "https://lessor.org/a-la-une/lhommage-au-major-pensec-commandant-de-la-brigade-de-gace-61-mort-en-mission-au-g7/",
           "titre": "L'Essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/normandie/argentan_61006/un-dernier-hommage-major-christophe-pensec-gendarmerie-dargentan_26849073.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ouest-france.fr/normandie/orne-la-gendarmerie-en-deuil-apres-le-deces-du-major-christophe-pensec-6494853",
           "titre": "L'Ouest France",
-          "paywall": true
+          "paywall": true,
+          "trustful": true
         }
       ]
     },
@@ -4079,32 +4429,38 @@
         {
           "url": "https://actu17.fr/seine-et-marne-un-policier-de-31-ans-qui-exercait-dans-le-val-de-marne-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/val-de-marne-un-policier-se-suicide-avec-son-arme-de-service-1759150.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/ile-de-france/aulnoy_77013/val-marne-policier-se-suicide-domicile-seine-marne_26908941.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/09/01/seine-et-marne-nouveau-drame-dans-les-rangs-de-la-police-nationale/",
           "titre": "ActuPenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/un-policier-de-31-ans-se-suicide-avec-son-arme-de-service-01-09-2019-8143269.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/paris-ile-de-france/val-de-marne/policier-du-val-marne-se-suicide-son-arme-service-1716655.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4134,17 +4490,20 @@
         {
           "url": "https://www.corsematin.com/article/ventiseri/ventiseri-suicide-d%E2%80%99un-gendarme",
           "titre": "Corse Matin",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/haute-corse-un-gendarme-se-suicide-avec-son-arme-de-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/09/04/corse-un-jeune-gendarme-de-23-ans-se-suicide-a-laide-de-son-arme-de-service/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4173,17 +4532,20 @@
         {
           "url": "https://la1ere.francetvinfo.fr/reunion/ancien-policier-retrouve-mort-son-domicile-saint-leu-746477.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.zinfos974.com/St-Leu-Un-policier-retrouve-mort-a-son-domicile_a144118.html",
           "titre": "zinfos974",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.ipreunion.com/actualites-reunion/reportage/2019/09/06/il-avait-une-trentaine-d-annees-un-ancien-policier-retrouve-mort-a-son-domicile,107488.html",
           "titre": "Imazpress",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4213,27 +4575,32 @@
         {
           "url": "https://actu.fr/faits-divers/moirax-pompier-centre-departemental-trouve-mort-dans-une-collision_27053755.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ladepeche.fr/2019/09/06/lot-et-garonne-deux-gendarmes-blesses-dans-une-collision-lun-est-heliporte-a-bordeaux,8397271.php",
           "titre": "La depêche",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/09/06/lot-et-garonne-un-pompier-trouve-la-mort-dans-une-collision-avec-un-poids-lourd/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.sudouest.fr/2019/09/06/lot-et-garonne-un-automobiliste-de-42-ans-se-tue-sur-la-route-6530149-3603.php",
           "titre": "Sud Ouest",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/sdis47/status/1169978608254930945",
           "titre": "@sdis47 (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4262,32 +4629,38 @@
         {
           "url": "https://actu17.fr/le-havre-un-policier-de-46-ans-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/PoliceNat76/status/1171468147901128710",
           "titre": "@PoliceNat76 (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ouest-france.fr/normandie/le-havre-76600/le-havre-un-policier-mis-fin-ses-jours-6513984",
           "titre": "Ouest France",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/normandie/havre_76351/suicides-dans-police-motard-havre-met-fin-ses-jours_27136268.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.lefigaro.fr/flash-actu/info-le-figaro-un-policier-du-havre-se-suicide-le-49e-depuis-le-debut-de-l-annee-20190910",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/09/10/le-havre-un-policier-de-la-direction-centrale-de-la-securite-publique-s-est-suicide/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4317,17 +4690,20 @@
         {
           "url": "https://actu17.fr/val-de-marne-un-gendarme-se-suicide-dans-sa-caserne-a-maison-alfort/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/09/15/maison-alfort-nouveau-drame-dans-les-rangs-des-forces-de-lordre/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/ile-de-france/maisons-alfort_94046/val-marne-suicide-dun-gendarme-dans-caserne-maisons-alfort_27257223.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4357,27 +4733,32 @@
         {
           "url": "https://actu17.fr/val-de-marne-un-gendarme-se-suicide-dans-sa-caserne-a-maison-alfort/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.lefigaro.fr/flash-actu/val-d-oise-un-commissaire-retrouve-mort-sa-compagne-policiere-en-garde-a-vue-20190916",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/val-d-oise-un-commissaire-retrouve-mort-sa-compagne-elle-aussi-policiere-en-garde-a-vue-16-09-2019-8152818.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/societe/val-doise-policier-retouve-mort-domicile-piste-suicide-privilegiee_27252653.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2605399-20190916-cergy-pontoise-commissaire-police-retrouve-mort-domicile-femme-garde-vue",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4407,7 +4788,8 @@
         {
           "url": "https://actupenit.com/2019/09/17/borgo-un-surveillant-du-centre-penitentiaire-a-mis-fin-a-ses-jours/",
           "titre": "ActuPenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4437,22 +4819,26 @@
         {
           "url": "https://actu17.fr/hauts-de-france-un-policier-affecte-a-maubeuge-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/louvroil-policier-se-suicide-au-commissariat-son-arme-service-1724935.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lavoixdunord.fr/639801/article/2019-09-19/un-policier-se-suicide-au-commissariat-de-louvroil",
           "titre": "La VDN",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lci.fr/police/nord-fait-divers-un-policier-met-fin-a-ses-jours-au-poste-de-police-de-louvroil-avec-son-arme-de-service-2132643.html",
           "titre": "LCI",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4488,32 +4874,38 @@
         {
           "url": "https://actu17.fr/paris-un-homme-arme-dun-couteau-a-attaque-des-policiers-a-la-prefecture-de-police/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francetvinfo.fr/faits-divers/police/direct-attaque-couteau-homme-arme-paris-policier-prefecture-police-parquet-blesse-cite_3642867.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2619719-20191003-video-attaque-couteau-prefecture-police-motivations-assaillant-restent-floues",
           "titre": "20 Minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/attaque-a-la-prefecture-de-police-de-paris-ce-que-l-on-sait-des-victimes-03-10-2019-8165727.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/paris-un-policier-grievement-blesse-apres-une-agression-au-couteau-a-la-prefecture-de-police-1780003.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.lefigaro.fr/actualite-france/attaque-au-couteau-a-la-prefecture-de-police-de-paris-syndicats-20191003",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4543,32 +4935,38 @@
         {
           "url": "https://actu17.fr/loiret-un-agent-de-la-dgse-tue-par-balle-lors-dun-entrainement/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francetvinfo.fr/economie/emploi/metiers/armee-et-securite/info-franceinfo-un-agent-de-la-dgse-est-mort-au-cours-d-un-entrainement-dans-le-loiret_3654687.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.larep.fr/cercottes-45520/actualites/un-agent-de-la-dgse-tue-au-cours-d-un-entrainement-a-cercottes-dans-le-loiret_13661437/",
           "titre": "La République",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.opex360.com/2019/10/11/un-militaire-de-la-dgse-tue-par-un-tir-accidentel-a-cercottes/",
           "titre": "Opex 360",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lexpress.fr/actualite/societe/fait-divers/un-agent-de-la-dgse-meurt-lors-d-un-entrainement-dans-le-loiret_2102858.html",
           "titre": "L'express",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-militaire-de-la-dgse-tue-dans-un-accident-de-tir-a-cercottes-loiret-1570799902",
           "titre": "France Bleu",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4598,37 +4996,44 @@
         {
           "url": "https://actu17.fr/seine-saint-denis-un-policier-sest-suicide-avec-son-arme-de-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francetvinfo.fr/faits-divers/police/seine-saint-denis-un-policier-de-34-ans-se-suicide-au-tribunal-de-grande-instance-de-bobigny_3651163.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/seine-saint-denis-93/seine-saint-denis-un-policier-se-suicide-au-tribunal-de-bobigny-09-10-2019-8169210.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://rmc.bfmtv.com/emission/un-policier-se-suicide-avec-son-arme-de-service-a-bobigny-1783455.html",
           "titre": "RMC",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.nouvelobs.com/justice/20191009.OBS19527/un-policier-se-suicide-dans-l-enceinte-du-tribunal-de-bobigny.html",
           "titre": "L'OBS",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.europe1.fr/faits-divers/info-europe-1-nouveau-suicide-dun-policier-mercredi-matin-au-tribunal-de-bobigny-3924373",
           "titre": "Europe 1",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-se-suicide-avec-son-arme-de-service-au-tribunal-de-grande-instance-de-bobigny-1570609102",
           "titre": "France Bleu",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4658,37 +5063,44 @@
         {
           "url": "https://actu17.fr/alpes-un-crs-de-haute-montagne-trouve-la-mort-lors-dune-intervention-de-secours/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lefigaro.fr/flash-actu/hautes-alpes-un-secouriste-decede-lors-d-un-secours-en-montagne-20191012",
           "titre": "La Provence",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lefigaro.fr/flash-actu/hautes-alpes-un-secouriste-decede-lors-d-un-secours-en-montagne-20191012",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/PoliceNat38/status/1183082784908296193",
           "titre": "@PoliceNat38 (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ledauphine.com/isere-sud/2019/10/12/un-secouriste-en-montagne-de-la-crs-alpes-de-grenoble-est-decede",
           "titre": "Le Dauphiné",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/grenoble-un-secouriste-de-la-crs-alpes-de-grenoble-est-decedee-lors-d-une-intervention-en-montagne-1570906414",
           "titre": "France Bleu",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://policehommage.blogspot.com/2019/10/nicolas-revello.html",
           "titre": "Memorial",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4718,32 +5130,38 @@
         {
           "url": "https://actu17.fr/rhone-un-gendarme-sest-suicide-avec-son-arme-de-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.laprovence.com/actu/en-direct/5717382/un-gendarme-se-suicide-avec-son-arme-de-service-pres-de-lyon.html",
           "titre": "La Provence",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lefigaro.fr/flash-actu/un-gendarme-mobile-se-suicide-au-qg-regional-pres-de-lyon-20191013",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.leprogres.fr/rhone-69-edition-val-de-saone/2019/10/13/suicide-d-un-gendarme-mobile-au-pole-regional-de-gendarmerie-de-sathonay-camp",
           "titre": "Le progrès",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/lyon/2627091-20191013-lyon-gendarme-mobile-suicide-quartier-general-regional",
           "titre": "20 Minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/un-gendarme-mobile-se-suicide-au-quartier-general-regional-pres-de-lyon-1786721.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4773,22 +5191,26 @@
         {
           "url": "https://actu17.fr/nord-un-policier-affecte-a-valenciennes-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/nord-0/valenciennes/valenciennes-policier-s-est-suicide-son-arme-service-1736305.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lavoixdunord.fr/651553/article/2019-10-14/un-policier-du-valenciennois-se-serait-suicide-son-domicile-dans-le-cambresis",
           "titre": "La voix du Nord",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/PoliceNat59/status/1183731788469940226",
           "titre": "@PoliceNat59 (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4818,7 +5240,8 @@
         {
           "url": "https://twitter.com/_FFOC_/status/1198182029973737472",
           "titre": "@_FFOC_ (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4848,17 +5271,20 @@
         {
           "url": "https://actupenit.com/2019/10/25/un-gendarme-fait-un-malaise-lors-dune-patrouille-et-ne-peut-etre-reanime/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lavoixdugendarme.fr/index.php/2019/10/25/7147/",
           "titre": "La voix du gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://unprg.fr/2019/10/25/deces-dun-camarade/",
           "titre": "UNPRG",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4888,37 +5314,44 @@
         {
           "url": "https://actu17.fr/un-soldat-francais-en-operation-a-ete-tue-au-mali-annonce-lelysee/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.huffingtonpost.fr/entry/un-soldat-francais-tue-en-operation-au-mali_fr_5dbdbc8fe4b0576b62a2c338",
           "titre": "Huff Post",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lefigaro.fr/international/un-soldat-francais-tue-au-mali-20191102",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.francetvinfo.fr/monde/afrique/mali/guerre-au-mali/un-militaire-francais-a-ete-tue-au-mali-par-un-engin-explosif_3685865.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lepoint.fr/societe/un-militaire-francais-tue-au-mali-par-un-engin-explosif-02-11-2019-2344878_23.php",
           "titre": "Le Point",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.defense.gouv.fr/operations/actualites2/mort-en-operation-du-brigadier-ronan-pointeau",
           "titre": "MINARM - Hommage",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/CEMAT_FR/status/1190690913242226689",
           "titre": "@CEMAT_FR (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -4948,37 +5381,44 @@
         {
           "url": "https://actupenit.com/2019/11/04/nantes-nouveau-drame-dans-les-rangs-de-la-police-nationale/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/un-policier-de-38-ans-affecte-a-nantes-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/PoliceNat44/status/1191659928706068480",
           "titre": "@PoliceNat44 (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ouest-france.fr/pays-de-la-loire/nantes-44000/un-policier-nantais-se-donne-la-mort-avec-son-arme-de-service-f8565286-ffa6-11e9-a439-20de9ba1463f",
           "titre": "Ouest France",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/un-policier-se-suicide-avec-son-arme-de-service-a-nantes-05-11-2019-8186817.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/nantes-un-policier-se-suicide-avec-son-arme-de-service-1800279.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.rtl.fr/actu/justice-faits-divers/nantes-un-policier-de-38-ans-a-mis-fin-a-ses-jours-7799398530",
           "titre": "RTL",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5008,27 +5448,32 @@
         {
           "url": "https://actupenit.com/2019/11/04/la-serie-noire-continue-chez-les-forces-de-lordre-avec-le-suicide-dun-gendarme/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/alpes-maritimes-un-gendarme-de-53-ans-sest-donne-la-mort/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/a-la-une/un-gendarme-des-alpes-maritimes-met-fin-a-ses-jours/",
           "titre": "L'Essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lavoixdugendarme.fr/index.php/2019/11/04/in-memoriam-un-gendarme-des-alpes-maritimes-a-decide-de-nous-quitter/",
           "titre": "La voix du gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/suicide-dun-commandant-de-brigade-pere-de-4-enfants/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5058,27 +5503,32 @@
         {
           "url": "https://actupenit.com/2019/11/11/roanne-un-surveillant-penitentiaire-disparu-depuis-10-jours-retrouve-mort/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/loire-disparu-depuis-10-jours-un-surveillant-penitentiaire-a-ete-retrouve-mort/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.leprogres.fr/loire-42-edition-roanne-roannais/2019/11/11/un-surveillant-du-centre-de-detention-de-roanne-retrouve-pendu-dans-un-bois",
           "titre": "Le progrès",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.cnews.fr/france/2019-11-11/un-surveillant-de-la-prison-de-roanne-retrouve-pendu-dans-une-foret-898328",
           "titre": "Cnews",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lefigaro.fr/flash-actu/un-surveillant-de-prison-retrouve-pendu-dans-une-foret-de-la-loire-20191111",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5108,27 +5558,32 @@
         {
           "url": "https://actu17.fr/var-un-gendarme-de-37-ans-retrouve-mort-a-son-domicile/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/a-la-une/un-gendarme-retrouve-mort-a-son-domicile-de-fonction-dans-le-var/",
           "titre": "L'Essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2654055-20191118-var-gendarme-decouvert-mort-domicile-fonction",
           "titre": "20 Minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.varmatin.com/faits-divers/un-gendarme-retrouve-mort-a-son-domicile-432218",
           "titre": "Var Matin",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lavoixdugendarme.fr/index.php/2019/11/18/deces-dun-gendarme-en-haute-marne/",
           "titre": "La voix du gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5158,27 +5613,32 @@
         {
           "url": "https://actu17.fr/haute-marne-un-gendarme-retrouve-sans-vie-dans-son-logement-a-chateauvillain/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/a-la-une/un-gendarme-retrouve-mort-a-son-domicile-de-fonction-dans-le-var/",
           "titre": "L'Essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.assogendarmesetcitoyens.com/post/un-camarade-nous-a-quitt%C3%A9s-5",
           "titre": "APNM G&C",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/11/18/chateauvillain-un-deuxieme-gendarme-decede-tragiquement-ce-week-end/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lavoixdugendarme.fr/index.php/2019/11/18/deces-dun-gendarme-en-haute-marne/",
           "titre": "La voix du gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5208,17 +5668,20 @@
         {
           "url": "https://actu17.fr/doubs-un-militaire-se-donne-la-mort-avec-son-arme-de-service-a-valdahon/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.estrepublicain.fr/edition-de-besancon/2019/11/19/valdahon-un-militaire-se-suicide-avec-son-arme-de-service",
           "titre": "Est Republicain",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/11/20/valdahon-un-militaire-de-la-7e-brigade-blindee-se-suicide-avec-son-arme-de-service/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5248,27 +5711,32 @@
         {
           "url": "https://www.francetvinfo.fr/monde/afrique/mali/qui-sont-les-treize-militaires-morts-dans-un-accident-d-helicopteres-au-mali_3719517.html#xtor=CS3-794",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.defense.gouv.fr/actualites/articles/deces-de-13-militaires-au-mali",
           "titre": "MINARM - Hommage",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/mali-les-13-militaires-francais-tues-avaient-entre-22-et-43-ans/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/international/mali-treize-militaires-francais-tues-dans-l-accident-de-deux-helicopteres-1813238.html",
           "titre": "BFM",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.youtube.com/watch?v=Dje5JsBMVrc",
           "titre": "AFP (Youtube)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5298,22 +5766,26 @@
         {
           "url": "https://actu17.fr/essonne-un-gendarme-sest-suicide-a-evry/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/essonne-un-gendarme-sest-suicide-a-evry/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/11/26/evry-nouveau-drame-dans-les-rangs-de-la-gendarmerie-nationale/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lessor.org/a-la-une/nouveau-suicide-dune-gendarme-a-evry/",
           "titre": "L'Essor",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5343,22 +5815,26 @@
         {
           "url": "https://actu17.fr/gironde-un-policier-affecte-au-bouscat-sest-suicide/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/lebouscat-33-un-gardien-de-la-paix-age-de-43-ans-a-mis-fin-a-ses-jours-cette-nuit/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actupenit.com/2019/11/27/le-bouscat-un-policier-pere-de-deux-enfant-sest-suicide-cette-nuit/",
           "titre": "Actupenit",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/PoliceNat33/status/1199715190981505024",
           "titre": "@PoliceNat33 (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5394,32 +5870,38 @@
         {
           "url": "http://www.leparisien.fr/faits-divers/michel-jean-norbert-qui-etaient-les-trois-secouristes-morts-en-helicoptere-02-12-2019-8208216.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/intemperies-dans-le-sud-est-5-morts-dont-3-secouristes-tues-dans-un-accident-dhelicoptere/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.laprovence.com/actu/en-direct/5787064/crash-dun-helicoptere-de-la-securite-civile-au-rove-emmanuel-macron-et-edouard-philippe-rendent-hommage-a",
           "titre": "La Provence",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.nicematin.com/faits-divers/trois-morts-dans-le-crash-dun-helicoptere-de-la-securite-civile-qui-devait-intervenir-dans-le-var-436222",
           "titre": "Nice Matin",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/SecCivileFrance/status/1201318476431925250",
           "titre": "@SecCivileFrance (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/occitanie/gard/nimes/crash-helicoptere-securite-civile-base-aerienne-nimes-garons-endeuillee-est-choc-1757201.html",
           "titre": "France Info",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5449,12 +5931,14 @@
         {
           "url": "https://policeetrealites.com/2019/12/04/%f0%9f%87%ab%f0%9f%87%b7-couronne-suicide-dun-policier-municipal/",
           "titre": "Police & Réalités",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.profession-gendarme.com/63641/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5484,22 +5968,26 @@
         {
           "url": "https://secoursinfo.fr/2019/12/16/seine-et-marne-un-pompier-perd-la-vie-en-se-rendant-a-sa-garde/",
           "titre": "SecoursInfo",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/ile-de-france/crecy-la-chapelle_77142/seine-marne-crecy-chapelle-mort-dun-sapeur-pompier-se-rendait-caserne_30210836.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/Sdis77/status/1206535045747544064",
           "titre": "@Sdis77 (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/SecCivileFrance/status/1206507083727814657",
           "titre": "@SecCivileFrance (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5529,7 +6017,8 @@
         {
           "url": false,
           "titre": "Source anonyme non vérifiée",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5559,12 +6048,14 @@
         {
           "url": "https://www.varmatin.com/faits-divers/un-policier-se-tue-a-moto-en-rentrant-de-son-service-sur-la-cote-dazur-443120",
           "titre": "Var Matin",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu17.fr/alpes-maritimes-un-policier-de-menton-se-tue-a-moto-en-rentrant-de-son-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5594,37 +6085,44 @@
         {
           "url": "https://actu17.fr/hauts-de-seine-un-policier-se-suicide-avec-son-arme-de-service/",
           "titre": "Actu17",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://twitter.com/prefpolice/status/1211543414862483457",
           "titre": "@prefpolice (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/paris/2684583-20191230-hauts-seine-policier-suicide-sein-etat-major-police",
           "titre": "20 minutes",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lepoint.fr/faits-divers/hauts-de-seine-un-policier-se-suicide-avec-son-arme-de-service-30-12-2019-2355197_2627.php",
           "titre": "Le Point",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.lefigaro.fr/actualite-france/hauts-de-seine-un-policier-se-suicide-et-laisse-trois-lettres-20191230",
           "titre": "Le Figaro",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/hauts-de-seine-92/hauts-de-seine-un-policier-se-suicide-avec-son-arme-de-service-30-12-2019-8226081.php",
           "titre": "Le Parisien",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://actu.fr/ile-de-france/nanterre_92050/nanterre-policier-letat-major-sest-suicide-cette-nuit-son-arme-service_30468137.html",
           "titre": "Actu.fr",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -5654,7 +6152,8 @@
         {
           "url": "http://www.profession-gendarme.com/suicide-dune-policiere-municipale-elle-se-prenommait-claude/",
           "titre": "Profession Gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     }
