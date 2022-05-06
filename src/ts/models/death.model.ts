@@ -1,16 +1,12 @@
 import { DeathPeer } from './deathPeer.model';
 import { DeathSource } from './deathSource.model';
+import { DeathGps } from './deathGps.model';
 
 export interface Death {
   cause: string;
   count: number;
   day: string;
-  gps: {
-    accurate: boolean,
-    lat: number,
-    lon: number,
-    radius: number,
-  };
+  gps: DeathGps;
   house: string;
   keywords: string;
   location: string;
