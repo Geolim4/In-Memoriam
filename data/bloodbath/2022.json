@@ -1884,51 +1884,6 @@
           "trustful": true
         }
       ]
-    },
-    {
-      "cause": "deathOnDuty",
-      "count": 1,
-      "published": true,
-      "orphans": 2,
-      "unpublished_reason": "",
-      "year": "2022",
-      "month": "05",
-      "day": "13",
-      "keywords": "Jean-Jacques Bloy",
-      "house": "gendarmerie",
-      "peers": [],
-      "text": "Un gendarme de la BMo de Saint-Girons est décédé en service d'un accident de la route.\nGendarme depuis plus de 17 ans, il était marié et père de deux enfants.",
-      "section": "BMo",
-      "location": "Saint-Girons (Ariège)",
-      "origin": "interieur",
-      "gps": {
-        "accurate": true,
-        "radius": 0,
-        "lat": 42.97222693367164,
-        "lon": 1.1592005318679726
-      },
-      "sources": [
-        {
-          "url": "https://twitter.com/Gendarmerie/status/1525185783434452992",
-          "titre": "@Gendarmerie (Twitter)",
-          "paywall": false
-        },
-        {
-          "url": "https://www.ladepeche.fr/2022/05/13/ariege-en-patrouille-un-gendarme-de-37-ans-meurt-en-chutant-de-sa-moto-dans-le-village-de-lherm-10293892.php",
-          "titre": "La dépêche",
-          "paywall": false
-        },
-        {
-          "url": "https://www.interieur.gouv.fr/actualites/communiques/deces-du-gendarme-jean-jacques-bloy-du-groupement-de-gendarmerie-de-lariege",
-          "titre": "MININT (Hommage)",
-          "paywall": false
-        },
-        {
-          "url": "https://lavoixdugendarme.fr/deces-en-service-dun-motocycliste-de-lariege/",
-          "titre": "La voix du gendarme",
-          "paywall": false
-        }
-      ]
     }
   ]
 }
