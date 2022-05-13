@@ -1862,22 +1862,26 @@
         {
           "url": "https://twitter.com/Gendarmerie/status/1525185783434452992",
           "titre": "@Gendarmerie (Twitter)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.ladepeche.fr/2022/05/13/ariege-en-patrouille-un-gendarme-de-37-ans-meurt-en-chutant-de-sa-moto-dans-le-village-de-lherm-10293892.php",
           "titre": "La dépêche",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://www.interieur.gouv.fr/actualites/communiques/deces-du-gendarme-jean-jacques-bloy-du-groupement-de-gendarmerie-de-lariege",
           "titre": "MININT (Hommage)",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         },
         {
           "url": "https://lavoixdugendarme.fr/deces-en-service-dun-motocycliste-de-lariege/",
           "titre": "La voix du gendarme",
-          "paywall": false
+          "paywall": false,
+          "trustful": true
         }
       ]
     }
