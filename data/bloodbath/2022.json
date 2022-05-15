@@ -1884,6 +1884,43 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "Source Cagnotte: https://www.leetchi.com/c/a-christophe-rznjxzr8",
+      "year": "2022",
+      "month": "05",
+      "day": "15",
+      "keywords": "Christophe",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la BRI de Toulouse est décédé d'un malaise cardiaque au moment de partir en intervention.\nIl était marié et père de deux enfants.",
+      "section": "BRI 31",
+      "location": "Toulouse (Haute-Garonne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.615608515857346,
+        "lon": 1.433566454617869
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/lignebleuefr/status/1525809174751457281",
+          "titre": "@lignebleuefr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ladepeche.fr/2022/05/15/toulouse-emotion-apres-le-deces-dun-policier-de-la-bri-10296869.php",
+          "titre": "La dépêche",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
