@@ -90,7 +90,7 @@
       "sources": [
         {
           "url": "https://twitter.com/SecCivileFrance/status/1478613291513663488",
-          "titre": "@SecCivileFrance (Twitter)",
+          "titre": "@SecCivileFrance",
           "paywall": false,
           "trustful": true
         },
@@ -268,7 +268,7 @@
         },
         {
           "url": "https://twitter.com/prefpolice/status/1481892465036701699",
-          "titre": "@prefpolice (Twitter)",
+          "titre": "@prefpolice",
           "paywall": false,
           "trustful": true
         }
@@ -305,7 +305,7 @@
         },
         {
           "url": "https://twitter.com/PoliceNat59/status/1481930066682597380",
-          "titre": "@PoliceNat59 (Twitter)",
+          "titre": "@PoliceNat59",
           "paywall": false,
           "trustful": true
         }
@@ -342,7 +342,7 @@
         },
         {
           "url": "https://twitter.com/prefpolice/status/1482349873554993162",
-          "titre": "@prefpolice (Twitter)",
+          "titre": "@prefpolice",
           "paywall": false,
           "trustful": true
         }
@@ -373,7 +373,7 @@
       "sources": [
         {
           "url": "https://twitter.com/Gendarmerie_069/status/1486246551987052546",
-          "titre": "@Gendarmerie_069 (Twitter)",
+          "titre": "@Gendarmerie_069",
           "paywall": false,
           "trustful": true
         },
@@ -428,7 +428,7 @@
         },
         {
           "url": "https://twitter.com/PoliceNat59/status/1483383777456013313",
-          "titre": "@PoliceNat59 (Twitter)",
+          "titre": "@PoliceNat59",
           "paywall": false,
           "trustful": true
         }
@@ -465,7 +465,7 @@
         },
         {
           "url": "https://twitter.com/PoliceNat67/status/1483406313916796928",
-          "titre": "@PoliceNat67 (Twitter)",
+          "titre": "@PoliceNat67",
           "paywall": false,
           "trustful": true
         },
@@ -551,7 +551,7 @@
       "sources": [
         {
           "url": "https://twitter.com/armeedeterre/status/1485191902936932353",
-          "titre": "@armeedeterre (Twitter)",
+          "titre": "@armeedeterre",
           "paywall": false,
           "trustful": true
         },
@@ -624,7 +624,7 @@
         },
         {
           "url": "https://twitter.com/prefpolice13/status/1485584134831497216",
-          "titre": "@prefpolice13 (Twitter)",
+          "titre": "@prefpolice13",
           "paywall": false,
           "trustful": true
         },
@@ -716,7 +716,7 @@
         },
         {
           "url": "https://twitter.com/PoliceNat95/status/1487830722580733954",
-          "titre": "@PoliceNat95 (Twitter)",
+          "titre": "@PoliceNat95",
           "paywall": false,
           "trustful": true
         }
@@ -790,7 +790,7 @@
       "sources": [
         {
           "url": "https://twitter.com/92e_RI/status/1492154855527522314",
-          "titre": "@92e_RI (Twitter)",
+          "titre": "@92e_RI",
           "paywall": false,
           "trustful": true
         }
@@ -827,7 +827,7 @@
         },
         {
           "url": "https://twitter.com/prefpolice/status/1492076394620362773",
-          "titre": "@prefpolice (Twitter)",
+          "titre": "@prefpolice",
           "paywall": false,
           "trustful": true
         },
@@ -981,7 +981,7 @@
         },
         {
           "url": "https://twitter.com/prefpolice/status/1496151733839532045",
-          "titre": "@prefpolice (Twitter)",
+          "titre": "@prefpolice",
           "paywall": false,
           "trustful": true
         }
@@ -1123,7 +1123,7 @@
         },
         {
           "url": "https://twitter.com/prefpolice/status/1497583006172786690",
-          "titre": "@prefpolice (Twitter)",
+          "titre": "@prefpolice",
           "paywall": false,
           "trustful": true
         }
@@ -1160,7 +1160,7 @@
         },
         {
           "url": "https://twitter.com/PoliceNat91/status/1500397947153956864",
-          "titre": "@PoliceNat91 (Twitter)",
+          "titre": "@PoliceNat91",
           "paywall": false,
           "trustful": true
         },
@@ -1246,7 +1246,7 @@
         },
         {
           "url": "https://twitter.com/PoliceNat83/status/1501211841682419716",
-          "titre": "@PoliceNat83 (Twitter)",
+          "titre": "@PoliceNat83",
           "paywall": false,
           "trustful": true
         },
@@ -1449,7 +1449,7 @@
         },
         {
           "url": "https://twitter.com/PoliceNat91/status/1504422244579168258",
-          "titre": "@PoliceNat91 (Twitter)",
+          "titre": "@PoliceNat91",
           "paywall": false,
           "trustful": true
         }
@@ -1664,7 +1664,7 @@
         },
         {
           "url": "https://twitter.com/PoliceNat91/status/1511073738682421256",
-          "titre": "@PoliceNat91 (Twitter)",
+          "titre": "@PoliceNat91",
           "paywall": false,
           "trustful": true
         }
@@ -1861,7 +1861,13 @@
       "sources": [
         {
           "url": "https://twitter.com/Gendarmerie/status/1525185783434452992",
-          "titre": "@Gendarmerie (Twitter)",
+          "titre": "@Gendarmerie",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/ariege-un-gendarme-de-37-ans-meurt-a-moto-dans-un-accident-au-cours-dune-patrouille.html",
+          "titre": "Actu17",
           "paywall": false,
           "trustful": true
         },
@@ -1880,6 +1886,43 @@
         {
           "url": "https://lavoixdugendarme.fr/deces-en-service-dun-motocycliste-de-lariege/",
           "titre": "La voix du gendarme",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "Source Cagnotte: https://www.leetchi.com/c/a-christophe-rznjxzr8",
+      "year": "2022",
+      "month": "05",
+      "day": "15",
+      "keywords": "Christophe",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la BRI de Toulouse est décédé d'un malaise cardiaque au moment de partir en intervention.\nIl était marié et père de deux enfants.",
+      "section": "BRI 31",
+      "location": "Toulouse (Haute-Garonne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.615608515857346,
+        "lon": 1.433566454617869
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/lignebleuefr/status/1525809174751457281",
+          "titre": "@lignebleuefr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ladepeche.fr/2022/05/15/toulouse-emotion-apres-le-deces-dun-policier-de-la-bri-10296869.php",
+          "titre": "La dépêche",
           "paywall": false,
           "trustful": true
         }

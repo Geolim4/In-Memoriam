@@ -130,6 +130,9 @@ header.top-menu {
 
     a {
       &[href^="https://twitter.com"] {
+        &:after {
+          content: " (Twitter)";
+        }
         color: #1d9bf0;
         font-weight: bold;
       }
