@@ -2038,6 +2038,43 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "05",
+      "day": "25",
+      "keywords": "Patrick",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la DIDPAF de Perpignan a mis fin à ses jours avec son arme de service.\nCe FTSI était marié et père de trois enfants.",
+      "section": "DIDPAF",
+      "location": "Perpignan (Pyrénées-Orientales)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 42.69783340876684,
+        "lon": 2.875790146309644
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/lignebleuefr/status/1529724611918761987",
+          "titre": "@lignebleuefr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/pyrenees-orientales-un-policier-de-45-ans-affecte-a-perpignan-sest-suicide.html",
+          "titre": "Actu17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
