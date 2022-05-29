@@ -145,7 +145,13 @@ export class App {
       .then((responseData: {glossary: {}}) => {
         this.glossary = responseData.glossary;
       }).catch(() => {
-        this.modal.modalInfo('Erreur', 'Impossible de récupérer le dictionnaire des termes.', null, null, true);
+        this.modal.modalInfo(
+          'Erreur',
+          'Impossible de récupérer le dictionnaire des termes.',
+          null,
+          null,
+          true,
+        );
       });
   }
 
@@ -259,7 +265,11 @@ export class App {
   }
 
   public getMarkerHash(death: Death): string {
-    return btoa(unescape(encodeURIComponent(`${death.day}|${death.month}|${death.year}|${death.house}|${death.section}`)));
+    return btoa(
+      unescape(
+        encodeURIComponent(`${death.day}|${death.month}|${death.year}|${death.house}|${death.section}`),
+      ),
+    );
   }
 
   public getMarkerLink(death: Death, label: string): string {
@@ -358,7 +368,9 @@ export class App {
       const map = new google.maps.Map(mapElement, options);
       const filtersPath = './data/config/filters.json';
 
-      fetch(filtersPath).then((response) => response.json()).then((responseData: {filters: FormFilters}) => {
+      fetch(filtersPath)
+      .then((response) => response.json())
+      .then((responseData: {filters: FormFilters}) => {
         this.formFilters = responseData.filters;
         this.setupSkeleton(this.getFilters(true));
         this.bindAnchorEvents(map);
@@ -368,7 +380,12 @@ export class App {
         this.bindMarkerLinkEvent(map);
         this.bindFullscreenFormFilterListener();
       }).catch(() => {
-        this.modal.modalInfo('Erreur', 'Impossible de récupérer la liste des filtres.', null, null, true);
+        this.modal.modalInfo('Erreur',
+          'Impossible de récupérer la liste des filtres.',
+          null,
+          null
+          , true,
+        );
       });
 
       this.loadActivityDetectorMonitoring(map);
