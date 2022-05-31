@@ -2075,6 +2075,117 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "05",
+      "day": "30",
+      "keywords": "Diana Lefevre",
+      "house": "police",
+      "peers": [],
+      "text": "Une policière de la PAF de Roissy a mis fin à ses jours avec son arme de service.\nResponsable syndicale locale d'Alliance, elle était mère de deux enfants.",
+      "section": "PAF Roissy",
+      "location": "Roissy (Val-d'Oise)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.008130669518096,
+        "lon": 2.5453042113879465
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/seine-et-marne-diana-l-une-policiere-de-35-ans-a-mis-fin-a-ses-jours.html",
+          "titre": "Actu17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "05",
+      "day": "31",
+      "keywords": "Perrine JEANNETEAU",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Une gendarme de la BP de Montaigu-Vendée à mis fin à ses jours avec son arme de service.",
+      "section": "BP",
+      "location": "Montaigu-Vendée (Vendée)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.98125609219093,
+        "lon": -1.3096563361739324
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/vendee-une-gendarme-de-27-ans-sest-suicidee-a-montaigu-vendee.html",
+          "titre": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/une-gendarme-de-27-ans-se-donne-la-mort-en-vendee-1654002200",
+          "titre": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/une-gendarme-de-27-ans-se-donne-la-mort-en-vendee-1654002200",
+          "titre": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/deux-deces-tragiques-de-gendarmes-en-vendee-et-dans-les-yvelines/",
+          "titre": "La voix du gendarme",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "05",
+      "day": "31",
+      "keywords": "Grégory Josse",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Une gendarme de l'EDSR de Versailles à mis fin à ses jours avec son arme de service.\nIl était marié et père de deux filles.",
+      "section": "EDSR 78",
+      "location": "Versailles (Yvelines)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.798804299645624,
+        "lon": 2.1365115574926112
+      },
+      "sources": [
+        {
+          "url": "https://lavoixdugendarme.fr/deux-deces-tragiques-de-gendarmes-en-vendee-et-dans-les-yvelines/",
+          "titre": "La voix du gendarme",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
