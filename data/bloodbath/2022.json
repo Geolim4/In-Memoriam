@@ -2245,17 +2245,17 @@
     {
       "cause": "suicide",
       "count": 1,
-      "published": false,
-      "orphans": 0,
-      "unpublished_reason": "En attente confirmation",
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
       "year": "2022",
       "month": "05",
       "day": "31",
-      "keywords": "",
+      "keywords": "Stéphane",
       "house": "police",
       "peers": [],
-      "text": "Un policier de la circonscription de Bordeaux à mis fin à ses jours avec son arme de service",
-      "section": "CSP Bordeaux",
+      "text": "Un policier de la circonscription de Bordeaux affecté au CIC nuit à mis fin à ses jours avec son arme de service.\nIl était marié et père de trois enfants.",
+      "section": "CIC - CSP Bordeaux",
       "location": "Bordeaux (Gironde)",
       "origin": "interieur",
       "gps": {
@@ -2266,8 +2266,20 @@
       },
       "sources": [
         {
-          "url": "",
-          "titre": "__CONFIDENTIAL__",
+          "url": "https://actu17.fr/faits-divers/gironde-un-policier-de-51-ans-affecte-a-bordeaux-sest-suicide.html",
+          "titre": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/nouvelle-aquitaine/bordeaux_33063/suicide-d-un-policier-de-bordeaux-la-serie-noire-se-poursuit-deplore-un-syndicat_51372766.html",
+          "titre": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.sudouest.fr/gironde/bordeaux/gironde-un-policier-bordelais-en-arret-maladie-met-fin-a-ses-jours-11144747.php?fbclid=IwAR2bQnRylX8J337tTBNLLCbbENBnTTo1L37GcvnODWlqWtqFQLlf87KfIMI",
+          "titre": "Sud Ouest",
           "paywall": false,
           "trustful": true
         }

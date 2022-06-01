@@ -477,6 +477,10 @@ export class App {
           map.setZoom(this.configObject.config['maxZoom']);
           google.maps.event.trigger(marker, 'click');
           map.setCenter(marker.getPosition());
+
+          if (map.getDiv().getBoundingClientRect().top < 0 || map.getDiv().getBoundingClientRect().bottom > window.innerHeight) {
+            map.getDiv().scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+          }
         }
       }
     });
