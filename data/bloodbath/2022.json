@@ -53,7 +53,7 @@
       "gps": {
         "accurate": false,
         "radius": 150,
-        "lat":48.83501985343441,
+        "lat": 48.83501985343441,
         "lon": 2.277781886106975
       },
       "sources": [
@@ -2153,6 +2153,12 @@
           "titre": "La voix du gendarme",
           "paywall": false,
           "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/dramatique-serie-de-suicides-dans-la-gendarmerie",
+          "titre": "L'Essor",
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2180,8 +2186,88 @@
       },
       "sources": [
         {
+          "url": "https://actu17.fr/faits-divers/yvelines-un-gendarme-de-49-ans-sest-donne-la-mort-a-versailles.html",
+          "titre": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/yvelines-78/versailles-un-gendarme-se-suicide-sur-son-lieu-de-travail-avec-son-arme-de-service-01-06-2022-GDP2JXN6WNDBNEKBI64ON7IF6M.php",
+          "titre": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
           "url": "https://lavoixdugendarme.fr/deux-deces-tragiques-de-gendarmes-en-vendee-et-dans-les-yvelines/",
           "titre": "La voix du gendarme",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/dramatique-serie-de-suicides-dans-la-gendarmerie",
+          "titre": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": false,
+      "orphans": 0,
+      "unpublished_reason": "En attente confirmation",
+      "year": "2022",
+      "month": "05",
+      "day": "31",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "",
+      "section": "Garde Républicaine",
+      "location": "Paris",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.8672267632011,
+        "lon": 2.340794408728979
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": false,
+      "orphans": 0,
+      "unpublished_reason": "En attente confirmation",
+      "year": "2022",
+      "month": "05",
+      "day": "31",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la circonscription de Bordeaux à mis fin à ses jours avec son arme de service",
+      "section": "CSP Bordeaux",
+      "location": "Bordeaux (Gironde)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.834796657231315,
+        "lon": -0.5899368806177484
+      },
+      "sources": [
+        {
+          "url": "",
+          "titre": "__CONFIDENTIAL__",
           "paywall": false,
           "trustful": true
         }
