@@ -2080,6 +2080,37 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "05",
+      "day": "29",
+      "keywords": "",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme affecté à la CSPR a mis fin à ses jours avec son arme de service au sein de l'Elysee.\nIl était marié et père d'un enfant.",
+      "section": "CSPR - Garde Républicaine",
+      "location": "Paris",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 100,
+        "lat": 48.87032656647121,
+        "lon": 2.316160773247051
+      },
+      "sources": [
+        {
+          "url": "https://lessor.org/vie-des-personnels/dramatique-serie-de-suicides-dans-la-gendarmerie",
+          "titre": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
       "orphans": 3,
       "unpublished_reason": "",
       "year": "2022",
@@ -2206,37 +2237,6 @@
         {
           "url": "https://lessor.org/vie-des-personnels/dramatique-serie-de-suicides-dans-la-gendarmerie",
           "titre": "L'Essor",
-          "paywall": false,
-          "trustful": true
-        }
-      ]
-    },
-    {
-      "cause": "suicide",
-      "count": 1,
-      "published": false,
-      "orphans": 0,
-      "unpublished_reason": "En attente confirmation",
-      "year": "2022",
-      "month": "05",
-      "day": "31",
-      "keywords": "",
-      "house": "gendarmerie",
-      "peers": [],
-      "text": "",
-      "section": "Garde Républicaine",
-      "location": "Paris",
-      "origin": "interieur",
-      "gps": {
-        "accurate": true,
-        "radius": 0,
-        "lat": 48.8672267632011,
-        "lon": 2.340794408728979
-      },
-      "sources": [
-        {
-          "url": "",
-          "titre": "__CONFIDENTIAL__",
           "paywall": false,
           "trustful": true
         }
