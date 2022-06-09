@@ -2284,6 +2284,110 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "06",
+      "day": "07",
+      "keywords": "Romain PECULLO",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme de la BP d'Épouville à mis fin à ses jours avec son arme de service.\nIl était marié et père de trois enfants.",
+      "section": "BP Épouville",
+      "location": "Épouville (Seine-Maritime)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.56191131073624,
+        "lon": 0.2216902804476048
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/seine-maritime-un-gendarme-se-suicide-avec-son-arme-de-service-a-epouville.html",
+          "titre": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/normandie/epouville-76133/un-gendarme-se-donne-la-mort-dans-la-brigade-d-epouville-pres-du-havre-bd05cb1c-e752-11ec-a5fe-786c78cdd689",
+          "titre": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/nouveau-suicide-d-un-gendarme-pres-du-havre-en-normandie",
+          "titre": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.paris-normandie.fr/id314117/article/2022-06-08/pres-du-havre-un-gendarme-se-suicide-avec-son-arme-de-service-dans-les-locaux-de",
+          "titre": "Paris-Normandie",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "06",
+      "day": "08",
+      "keywords": "Jean-Pierre Lessort",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier du SDIS 974 est décédé des suites d’un malaise survenu dans l’exercice de ses fonctions quelques jours auparavant.\nPompier depuis plus de 37ans, il était coordinateur des courses du Grand Raid.",
+      "section": "SDIS 974",
+      "location": "Saint-Denis (Réunion)",
+      "origin": "domtom",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": -20.881596777995405,
+        "lon": 55.461530311971885
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/SDIS974/status/1534802231098212357",
+          "titre": "@SDIS974",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://la1ere.francetvinfo.fr/reunion/de-nombreux-hommages-suite-au-deces-de-jean-pierre-lessort-coordinateur-de-courses-du-grand-raid-1292092.html",
+          "titre": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/operationnel/a-dardilly-pres-de-lyon-un-gendarme-decede-dune-crise-cardiaque-durant-son-service",
+          "titre": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.linfo.re/la-reunion/faits-divers/jean-pierre-lessort-coordinateur-du-grand-raid-est-decede-a-la-suite-d-un-coma-c-etait-un-ami-et-un-formidable-collaborateur",
+          "titre": "L'info.re",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "http://www.ipreunion.com/cinor-actualite/reportage/2022/06/09/les-pompiers-endeuilles-l-adjudant-jean-pierre-lessort-nous-a-quitte,153212.html",
+          "titre": "Imazpress",
+          "paywall": false,
+          "trustful": false
+        }
+      ]
     }
   ]
 }

@@ -140,7 +140,7 @@ export class Charts {
       tooltip: {
         backgroundColor: 'rgba(226,226,226,0.98)',
         headerFormat: '',
-        pointFormat: '<div><strong>{point.name}:</strong></div> <div>{point.y} {series.name} <em>({point.percentage:.1f}%)</em></div>',
+        pointFormat: '<div><strong>{point.name}:</strong></div> <div>{point.y} {series.name} <em>(soit {point.percentage:.1f}% de {point.total} {series.name})</em></div>',
       },
       xAxis: {
         categories: [],
