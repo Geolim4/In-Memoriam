@@ -40,7 +40,7 @@ export class App {
   private mapButtons: MapButtons;
   private appLoaded: boolean;
   private readonly modal: Modal;
-  private readonly formElement: HTMLInputElement;
+  private readonly formElement: HTMLFormElement;
   private readonly customChoicesInstances: { [name: string]: any };
   private readonly eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
   private readonly charts: Charts;
@@ -64,7 +64,7 @@ export class App {
     this.mapButtons = new MapButtons(this);
     this.modal = new Modal();
     this.appLoaded = false;
-    this.formElement = <HTMLInputElement>document.getElementById('form-filters');
+    this.formElement = <HTMLFormElement>document.getElementById('form-filters');
 
     this.boot();
   }
@@ -379,7 +379,8 @@ export class App {
         this.bindMarkers(this.configObject.config.bloodbathSrc, map, this.getFilters(true));
         this.bindMarkerLinkEvent(map);
         this.bindFullscreenFormFilterListener();
-      }).catch(() => {
+      }).catch((reason) => {
+        console.error(reason);
         this.modal.modalInfo('Erreur',
           'Impossible de récupérer la liste des filtres.',
           null,
@@ -435,10 +436,24 @@ export class App {
 
   private bindFilters(map: google.maps.Map, fromAnchor?: boolean): void {
     const selects = <NodeListOf<HTMLInputElement>>this.formElement.querySelectorAll('form select, form input');
+    const resetButtons = <NodeListOf<HTMLButtonElement>>this.formElement.querySelectorAll('form button[data-reset-field-target]');
     const filters = this.getFilters(fromAnchor);
 
     Events.addEventHandler(this.formElement, 'submit', (e) => {
+      if (!this.formElement.checkValidity()) {
+        this.formElement.reportValidity();
+      }
       e.preventDefault();
+    });
+
+    resetButtons.forEach((button) => {
+      Events.addEventHandler(button, 'click', () => {
+        const target = <HTMLInputElement|null> document.querySelector(button.dataset.resetFieldTarget);
+        if (target !== null && target.value !== '') {
+          target.value = '';
+          target.dispatchEvent(new Event('change'));
+        }
+      });
     });
 
     selects.forEach((selector) => {
@@ -451,11 +466,12 @@ export class App {
       }
 
       this.eventHandlers[selector.id] = () => {
-        const filters = this.getFilters(false);
-        this.bindMarkers(this.configObject.config.bloodbathSrc, map, filters);
-
-        // this.hashManager(select.id, select.value);
-        return false;
+        if (this.formElement.checkValidity()) {
+          const filters = this.getFilters(false);
+          this.bindMarkers(this.configObject.config.bloodbathSrc, map, filters);
+        } else {
+          this.formElement.dispatchEvent(new Event('submit', { cancelable: true }));
+        }
       };
       Events.addEventHandler(selector, 'change', this.eventHandlers[selector.id]);
     });
@@ -739,6 +755,7 @@ export class App {
 
     searchInput.value = filters.search;
     searchInput.setAttribute('minlength', searchMinLength);
+    searchInput.setAttribute('pattern', `.{${searchMinLength},}`);
     searchInput.setAttribute('placeholder', searchInput.getAttribute('placeholder').replace('%d', searchMinLength));
 
     appSettingsElements.forEach((appSettingsElements) => {

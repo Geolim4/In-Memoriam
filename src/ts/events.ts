@@ -4,7 +4,7 @@
  * @licence GPL-2.0
  */
 export class Events {
-  public static addEventHandler(elem: HTMLInputElement, eventType: string, handler: EventListenerOrEventListenerObject, once?: boolean): void {
+  public static addEventHandler(elem: HTMLElement, eventType: string, handler: EventListenerOrEventListenerObject, once?: boolean): void {
     if (elem.addEventListener) {
       elem.addEventListener(eventType, handler, once ? { once: true } : false);
       if (eventType === 'click') {
@@ -17,14 +17,14 @@ export class Events {
     }
   }
 
-  public static removeEventHandler(elem: HTMLInputElement, eventType: string, handler: EventListenerOrEventListenerObject): void {
+  public static removeEventHandler(elem: HTMLElement, eventType: string, handler: EventListenerOrEventListenerObject): void {
     if (elem.removeEventListener) {
       elem.removeEventListener(eventType, handler, false);
     }
   }
 
-  public static hardRemoveEventHandler(elem: HTMLInputElement): HTMLInputElement {
-    const newElem = <HTMLInputElement> elem.cloneNode(true);
+  public static hardRemoveEventHandler(elem: HTMLElement): HTMLElement {
+    const newElem = <HTMLElement> elem.cloneNode(true);
     elem.parentNode.replaceChild(newElem, elem);
 
     return newElem;
