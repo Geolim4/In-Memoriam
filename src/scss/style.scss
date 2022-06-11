@@ -219,6 +219,21 @@ a abbr[data-title] {
   #search {
     height: 45px;
   }
+
+  button[data-reset-field-target] {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    box-shadow: none;
+    display: none;
+    position: absolute;
+    right: 25px;
+    top: 36px;
+    width: auto;
+  }
+  input:not(:placeholder-shown) + button[data-reset-field-target] {
+    display: block;
+  }
 }
 .modal__container {
   max-width: 1150px;

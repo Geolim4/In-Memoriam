@@ -65,7 +65,17 @@
             <form id="form-filters" class="row mtop">
                 <fieldset class="col-md-4">
                     <label for="search">Recherche</label>
-                    <input class="form-control" type="text" name="search" id="search" data-filterable="true" placeholder="Saisissez %d caractères minimum pour rechercher un nom, une circonscription, etc." minlength=""/>
+                    <input class="form-control"
+                           type="text"
+                           name="search"
+                           id="search"
+                           data-filterable="true"
+                           placeholder="Saisissez %d caractères minimum pour rechercher un nom, une circonscription, etc."
+                           minlength=""
+                           pattern=""/>
+                    <button type="button" data-reset-field-target="#search" data-tippy-content="Réinitialiser le champ de recherche">
+                        <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+                    </button>
                 </fieldset>
                 <fieldset class="col-md-2">
                     <label for="year">Année</label>/<label for="month">Mois</label>
