@@ -1,6 +1,6 @@
 {
   "settings": {
-    "appVersion": "1.6.3",
+    "appVersion": "1.7.0",
     "bloodbathSrc": "./data/bloodbath/%year%.json",
     "contactEmail": "contact@geolim4.com",
     "defaultLat": 48.1,
