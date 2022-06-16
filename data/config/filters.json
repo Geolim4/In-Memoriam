@@ -184,6 +184,23 @@
         "label": "OPEX",
         "color": ""
       }
+    ],
+    "homage": [
+      {
+        "value": "",
+        "label": "--",
+        "color": ""
+      },
+      {
+        "value": "expr:(death.homage !== null)",
+        "label": "Oui",
+        "color": ""
+      },
+      {
+        "value": "expr:(death.homage === null)",
+        "label": "Non",
+        "color": ""
+      }
     ]
   }
 }

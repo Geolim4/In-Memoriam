@@ -16,6 +16,10 @@ export interface Death {
   peers: DeathPeer[];
   published: boolean;
   section: string;
+  homage: {
+    title: string;
+    url: string;
+  };
   sources: DeathSource[];
   text: string;
   unpublished_reason?: string;
