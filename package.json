@@ -58,7 +58,8 @@
     "micromodal": "^0.4.2",
     "popper.js": "^1.15.0",
     "tippy.js": "^5.1.1",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "vm-browserify": "^1.1.2"
   },
   "devDependencies": {
     "@types/googlemaps": "^3.37.4",

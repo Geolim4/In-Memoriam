@@ -237,6 +237,21 @@
           "plural": ""
         }
       }
+    },
+    "homage": {
+      "#exposed": false,
+      "#name": "hommage",
+      "#name_plural": "hommages",
+      "#label": "",
+      "#counter_property": "",
+      "#counter_strategy": "",
+      "#number": {
+        "#any": {
+          "none": "",
+          "singular": "",
+          "plural": ""
+        }
+      }
     }
   }
 }

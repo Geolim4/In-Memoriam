@@ -364,10 +364,13 @@ export class MapButtons {
           const csvDataBuilder = (death: Death, peer?: DeathPeer): object => {
             const build = {};
             const indexNameBuilder = (indexName: string, filters: Filters): string => {
-              const formFiltersBuilt = (filters[indexName] ? filters[indexName] as string : '').split(',').map((v) => {
-                return formFiltersKeyed[indexName] ? formFiltersKeyed[indexName][v] : v;
+              const formFiltersBuilt = (filters[indexName] ? filters[indexName] as string : '').split(',').map((val): string => {
+                if (val !== '') {
+                  return formFiltersKeyed[indexName] ? formFiltersKeyed[indexName][val] : val;
+                }
+                return '';
               }).join(', ');
-              let formFiltersSuffix = formFiltersBuilt ? ` (filtres: ${formFiltersBuilt})` : '';
+              let formFiltersSuffix = formFiltersBuilt ? ` (filtre: ${formFiltersBuilt})` : '';
               /**
                *  Due to a bug in the "export-to-csv" package that does not
                *  escape headers as quoted string, we must do it manually :(
@@ -379,7 +382,7 @@ export class MapButtons {
               return `"${StringUtilsHelper.ucfirst(definitions[indexName]['#name'])}${formFiltersSuffix}"`;
             };
 
-            const months = formFilters.month.split(',').map((m) => {
+            const months = formFilters.month.split(',').map((m): string => {
               return formFiltersKeyed['month'][m];
             }).join(', ');
 
@@ -393,6 +396,7 @@ export class MapButtons {
             build[indexNameBuilder('gps', formFilters)] = `${Number((death.gps.lat).toFixed(8))},${Number((death.gps.lon).toFixed(8))}`;
             build[indexNameBuilder('count', formFilters)] = peer ? peer.count : death.count;
             build[indexNameBuilder('orphans', formFilters)] = peer ? 0 : death.orphans;
+            build[indexNameBuilder('homage', formFilters)] = death.homage ? `${death.homage.title}: ${death.homage.url}` : 'Non communiqué';
             build[indexNameBuilder('sources', formFilters)] = death.sources.map((s) => s.url ? s.url : s.titre).join('\n');
 
             return build;

@@ -25,6 +25,7 @@
         "lat": 46.168667,
         "lon": -1.152359
       },
+      "homage": null,
       "sources": [
         {
           "url": "http://www.profession-gendarme.com/2019-suicide-dun-policier/",
@@ -62,6 +63,7 @@
         "lat": 49.662767,
         "lon": -1.697209
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.lamanchelibre.fr/actualite-641809-un-policier-se-suicide-dans-la-manche",
@@ -99,6 +101,7 @@
         "lat": 48.822908,
         "lon": 6.509771
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.assogendarmesetcitoyens.com/post/2019/01/06/d-c3-a9c-c3-a8s-dune-camarade",
@@ -142,6 +145,7 @@
         "lat": 49.256218,
         "lon": 4.022128
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://mpc-asso.net/2019/06/21/%f0%9f%9a%94%f0%9f%87%ab%f0%9f%87%b7-condoleances-a-la-famille-et-aux-proches-4/",
@@ -179,6 +183,7 @@
         "lat": 46.170629,
         "lon": -1.141469
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1082549261559058433",
@@ -210,6 +215,7 @@
         "lat": -20.549007,
         "lon": 164.272061
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.pompiers.fr/actualites/avis-de-deces-1e-classe-bertrand-pime-sapeur-pompier-volontaire-en-nouvelle-caledonie",
@@ -265,6 +271,7 @@
         "lat": 46.774568,
         "lon": 6.192054
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/crash-du-mirage-2000d-dans-le-jura-qui-sont-les-2-militaires-tues-en-service-commande/",
@@ -297,7 +304,7 @@
           "trustful": true
         },
         {
-          "url": "https://www.defense.gouv.fr/fre/actualites/la-vie-du-ministere/inmemoriam-deces-du-capitaine-baptiste-chirie-et-de-la-lieutenant-audrey-michelon",
+          "url": "https://archives.defense.gouv.fr/fre/actualites/la-vie-du-ministere/inmemoriam-deces-du-capitaine-baptiste-chirie-et-de-la-lieutenant-audrey-michelon",
           "titre": "MINARM - Hommage",
           "paywall": false,
           "trustful": true
@@ -326,6 +333,7 @@
         "lat": 48.874059,
         "lon": 2.345338
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/paris-violente-explosion-rue-trevise-plusieurs-blesses/",
@@ -387,6 +395,7 @@
         "lat": 48.698343,
         "lon": 2.504014
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/essonne-un-policier-sest-donne-la-mort-chez-lui-a-brunoy/",
@@ -430,6 +439,7 @@
         "lat": 50.753773,
         "lon": 2.250268
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/3-policiers-se-sont-donnes-la-mort-en-24-heures/",
@@ -473,6 +483,7 @@
         "lat": 48.893970,
         "lon": 2.364701
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/3-policiers-se-sont-donnes-la-mort-en-24-heures/",
@@ -522,6 +533,7 @@
         "lat": 48.849443,
         "lon": 2.406771
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1087446551125995520",
@@ -553,6 +565,7 @@
         "lat": 45.201326,
         "lon": -0.339256
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/charente-maritime-un-surveillant-penitentiaire-se-donne-la-mort/",
@@ -602,6 +615,7 @@
         "lat": 48.005502,
         "lon": 0.225123
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/sarthe-un-policier-affecte-a-la-crs-10-sest-suicide/",
@@ -639,6 +653,7 @@
         "lat": 48.871773,
         "lon": 2.316401
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://mpc-asso.net/2019/06/21/%f0%9f%9a%94%f0%9f%87%ab%f0%9f%87%b7-condoleances-a-la-famille-et-aux-proches-4/",
@@ -670,6 +685,7 @@
         "lat": -20.984461,
         "lon": 55.651753
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/la-reunion-un-sapeur-pompier-professionnel-trouve-la-mort-en-intervention/",
@@ -719,6 +735,7 @@
         "lat": -22.273289,
         "lon": 166.444771
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://lessor.org/lactualite-nouvelle-caledonie/une-gendarme-meurt-de-la-dengue-en-nouvelle-caledonie/",
@@ -774,6 +791,7 @@
         "lat": 14.605298,
         "lon": -61.068503
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1096133238152671232",
@@ -811,6 +829,7 @@
         "lat": 48.118888,
         "lon": -0.718941
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.ouest-france.fr/pays-de-la-loire/louverne-53950/pres-de-laval-le-policier-aurait-tue-son-ex-compagne-avec-son-arme-de-service-6229386",
@@ -854,6 +873,7 @@
         "lat": 49.406735,
         "lon": 1.044756
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1098316890554929159",
@@ -885,6 +905,7 @@
         "lat": 45.844665,
         "lon": 1.252959
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.ladepeche.fr/2019/03/04/un-policier-se-suicide-au-commissariat-de-limoges,8049537.php",
@@ -934,6 +955,7 @@
         "lat": 51.038376,
         "lon": 2.376220
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1102717535835865089",
@@ -965,6 +987,7 @@
         "lat": 48.782620,
         "lon": 1.754585
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/yvelines-un-policier-se-donne-la-mort-avec-son-arme-de-service/",
@@ -1008,6 +1031,7 @@
         "lat": 49.435054,
         "lon": 1.081077
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.paris-normandie.fr/actualites/faits-divers/a-saint-saens-le-policier-a-commis-l-irreparable-la-commune-sous-le-choc-CC14702819",
@@ -1051,6 +1075,7 @@
         "lat": 47.278040,
         "lon": 1.550218
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://lessor.org/a-la-une/suicide-dun-gendarme-du-loir-et-cher/",
@@ -1094,6 +1119,7 @@
         "lat": 48.893906,
         "lon": 2.308426
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.20minutes.fr/paris/2470107-20190311-policier-accidentellement-tue-policiere-arme-service-suspendu",
@@ -1143,6 +1169,7 @@
         "lat": 49.007683,
         "lon": 2.546527
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.20minutes.fr/societe/2472387-20190314-roissy-militaire-sentinelle-suicide-arme",
@@ -1192,6 +1219,7 @@
         "lat": 48.942885,
         "lon": 1.840041
       },
+      "homage": null,
       "sources": [
         {
           "url": "http://www.leparisien.fr/yvelines-78/yvelines-un-policier-se-suicide-avec-son-arme-de-service-16-03-2019-8033049.php",
@@ -1235,6 +1263,7 @@
         "lat": 48.841943,
         "lon": 2.405364
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1108090559086936071",
@@ -1284,6 +1313,7 @@
         "lat": 49.342834,
         "lon": 2.459641
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.europe1.fr/faits-divers/info-europe-1-oise-un-policier-arme-retranche-chez-lui-sest-suicide-3881687",
@@ -1333,6 +1363,7 @@
         "lat": 48.690206,
         "lon": 2.993409
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/seine-et-marne-un-policier-de-42-ans-sest-donne-la-mort/",
@@ -1370,6 +1401,7 @@
         "lat": 43.489376,
         "lon": 1.324897
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/toulouse-un-surveillant-penitentiaire-sest-donne-la-mort/",
@@ -1413,9 +1445,10 @@
         "lat": 17.949597,
         "lon": -1.781396
       },
+      "homage": null,
       "sources": [
         {
-          "url": "https://www.defense.gouv.fr/sante/actualites/in-memoriam-deces-du-medecin-marc-laycuras",
+          "url": "https://archives.defense.gouv.fr/sante/actualites/in-memoriam-deces-du-medecin-marc-laycuras",
           "titre": "MINARM - Hommage",
           "paywall": false,
           "trustful": true
@@ -1462,6 +1495,7 @@
         "lat": 46.065072,
         "lon": 5.071734
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/un-policier-affecte-a-lyon-sest-suicide-a-son-domicile/",
@@ -1517,6 +1551,7 @@
         "lat": 43.952490,
         "lon": 4.818394
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/deux-policiers-municipaux-retrouves-morts-au-poste-de-police-davignon/",
@@ -1572,6 +1607,7 @@
         "lat": 49.000324,
         "lon": 2.093394
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu.fr/ile-de-france/conflans-sainte-honorine_78172/yvelines-une-policiere-conflans-sainte-honorine-retrouvee-sans-vie-apres-probable-suicide_22814746.html",
@@ -1621,6 +1657,7 @@
         "lat": 43.931985,
         "lon": 4.316080
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/policier-dales-disparu-un-corps-decouvert-durant-la-battue-a-la-calmette/",
@@ -1682,6 +1719,7 @@
         "lat": 48.708536,
         "lon": 2.179273
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/essonne-un-gendarme-de-35-ans-sest-suicide/",
@@ -1725,6 +1763,7 @@
         "lat": 48.826618,
         "lon": 2.370783
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1117445554336948224",
@@ -1762,6 +1801,7 @@
         "lat": -21.101655,
         "lon": 55.434389
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://secoursinfo.fr/2019/04/16/apres-une-intervention-difficile-un-pompier-professionnel-se-donne-la-mort/",
@@ -1817,6 +1857,7 @@
         "lat": 49.099270,
         "lon": 6.209754
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1118055338056482816",
@@ -1866,6 +1907,7 @@
         "lat": 43.342809,
         "lon": 3.214062
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.midilibre.fr/2019/04/17/suicide-dun-policier-municipal-a-beziers-personne-ne-sait-ce-qui-sest-passe,8137271.php",
@@ -1909,6 +1951,7 @@
         "lat": 43.612616,
         "lon": 3.892701
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1118878047594262528",
@@ -1958,6 +2001,7 @@
         "lat": 48.854157,
         "lon": 2.345969
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1118878047594262528",
@@ -2007,6 +2051,7 @@
         "lat": -21.248367,
         "lon": 55.469654
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/la-reunion-un-gendarme-sest-suicide/",
@@ -2062,6 +2107,7 @@
         "lat": 44.533705,
         "lon": 6.050899
       },
+      "homage": null,
       "sources": [
         {
           "url": "http://www.opex360.com/2019/04/30/un-militaire-du-4e-regiment-de-chasseurs-sest-donne-la-mort-avec-son-arme-de-service/",
@@ -2117,6 +2163,7 @@
         "lat": 46.452462,
         "lon": 4.120684
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/_FFOC_/status/1123706030259625994",
@@ -2166,6 +2213,7 @@
         "lat": 49.017022,
         "lon": -0.636107
       },
+      "homage": null,
       "sources": [
         {
           "url": "http://www.leparisien.fr/faits-divers/calvados-un-gendarme-se-suicide-avec-son-arme-de-service-07-05-2019-8067132.php",
@@ -2215,6 +2263,7 @@
         "lat": 13.997536,
         "lon": -1.954055
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.liberation.fr/planete/2019/05/10/burkina-faso-deux-soldats-francais-tues-quatre-otages-sauves_1726183",
@@ -2270,6 +2319,7 @@
         "lat": 47.061753,
         "lon": -0.881144
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/maine-et-loire-un-policier-municipal-de-cholet-sest-suicide/",
@@ -2313,6 +2363,7 @@
         "lat": 45.202764,
         "lon": 5.666735
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/hautes-alpes-un-gendarme-adjoint-volontaire-age-de-20-ans-sest-suicide/",
@@ -2356,6 +2407,7 @@
         "lat": 46.671087,
         "lon": 5.570432
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/jura-un-officier-de-gendarmerie-sest-donne-la-mort/",
@@ -2405,6 +2457,7 @@
         "lat": 49.128843,
         "lon": 4.379439
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.lepoint.fr/societe/un-militaire-francais-meurt-des-suites-de-ses-blessures-au-liban-29-05-2019-2315689_23.php",
@@ -2466,6 +2519,7 @@
         "lat": 50.629522,
         "lon": 3.057458
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1131309085952008192",
@@ -2509,6 +2563,7 @@
         "lat": 48.956342,
         "lon": 2.889526
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1132736130951065600",
@@ -2558,6 +2613,7 @@
         "lat": 43.710525,
         "lon": 7.261837
       },
+      "homage": null,
       "sources": [
         {
           "url": "http://www.profession-gendarme.com/suicide-dun-policier-municipal-a-nice/",
@@ -2589,6 +2645,7 @@
         "lat": 48.862258,
         "lon": 2.785911
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1134941320915628037",
@@ -2638,6 +2695,7 @@
         "lat": 48.350400,
         "lon": -1.183104
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/ille-et-vilaine-un-gendarme-de-47-ans-sest-suicide-a-fougeres/",
@@ -2681,6 +2739,7 @@
         "lat": 46.494841,
         "lon": -1.823473
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/tempete-miguel-un-bateau-des-sauveteurs-de-la-snsm-a-chavire-aux-sables-dolonne-au-moins-3-morts/",
@@ -2736,6 +2795,7 @@
         "lat": 48.88432571358825,
         "lon": 2.3862426973108155
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1139447750356086784",
@@ -2773,6 +2833,7 @@
         "lat": 43.444097,
         "lon": 4.940126
       },
+      "homage": null,
       "sources": [
         {
           "url": "http://www.profession-gendarme.com/57169/",
@@ -2816,6 +2877,7 @@
         "lat": 48.783721,
         "lon": 2.184852
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/yvelines-un-policier-affecte-a-la-crs-61-sest-suicide/",
@@ -2865,6 +2927,7 @@
         "lat": 48.885721,
         "lon": 2.351906
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1142154410019184646",
@@ -2908,6 +2971,7 @@
         "lat": 43.602366,
         "lon": 1.450819
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1142154410019184646",
@@ -2957,6 +3021,7 @@
         "lat": 49.410770,
         "lon": 3.048556
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/Gendarmerie/status/1142405389029429250",
@@ -3012,6 +3077,7 @@
         "lat": 43.825462,
         "lon": 4.362922
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://france3-regions.francetvinfo.fr/occitanie/gard/nimes/corps-vie-responsables-gendarmerie-du-gard-retrouve-lui-nimes-1690366.html",
@@ -3061,6 +3127,7 @@
         "lat": 44.264690,
         "lon": 1.751655
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.ladepeche.fr/2019/06/27/le-jeune-militaire-se-suicide-au-camp-de-caylus,8281707.php",
@@ -3098,6 +3165,7 @@
         "lat": 50.538285,
         "lon": 2.465265
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/_FFOC_/status/1144652718310600705",
@@ -3141,6 +3209,7 @@
         "lat": 43.299959,
         "lon": 5.366154
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1145333295007391744",
@@ -3196,6 +3265,7 @@
         "lat": 44.834753,
         "lon": -0.589092
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/_FFOC_/status/1148329916238368768",
@@ -3245,6 +3315,7 @@
         "lat": 43.643425,
         "lon": 3.738543
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/_FFOC_/status/1148143426401132544",
@@ -3294,6 +3365,7 @@
         "lat": 45.897353,
         "lon": 6.131670
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1148277987147730945",
@@ -3349,6 +3421,7 @@
         "lat": 45.025095,
         "lon": -0.792411
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/gironde-un-gendarme-de-castelnau-du-medoc-sest-donne-la-mort/",
@@ -3404,6 +3477,7 @@
         "lat": 47.262087,
         "lon": -0.086942
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.20minutes.fr/societe/2563819-20190714-14-juillet-militaire-suicide-ecoles-militaires-saumur-marge-ceremonies",
@@ -3459,9 +3533,10 @@
         "lat": 3.843046,
         "lon": -53.910905
       },
+      "homage": null,
       "sources": [
         {
-          "url": "https://www.defense.gouv.fr/salle-de-presse/communiques/communiques-du-ministere-des-armees/communique-de-l-etat-major-des-armees",
+          "url": "https://archives.defense.gouv.fr/salle-de-presse/communiques/communiques-du-ministere-des-armees/communique-de-l-etat-major-des-armees",
           "titre": "État-major des armées",
           "paywall": false,
           "trustful": true
@@ -3520,6 +3595,7 @@
         "lat": 50.376203,
         "lon": 3.085565
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/association_mpc/status/1151764484496773120",
@@ -3563,6 +3639,7 @@
         "lat": 50.518094,
         "lon": 2.640785
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/pas-calais/bethune/bethune-crs-se-suicide-son-arme-service-1702334.html",
@@ -3618,6 +3695,7 @@
         "lat": 43.910943,
         "lon": 4.424375
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/deux-policiers-ont-ete-retrouves-morts/",
@@ -3673,6 +3751,7 @@
         "lat": 45.335312,
         "lon": 5.621302
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/isere-un-policier-de-49-ans-sest-suicide-le-3eme-en-48-heures/",
@@ -3716,6 +3795,7 @@
         "lat": 49.038047,
         "lon": 2.085481
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/cergy-un-policier-sest-suicide-le-4eme-en-72-heures-en-france/",
@@ -3777,6 +3857,7 @@
         "lat": 48.927220,
         "lon": 2.500290
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/seine-saint-denis-un-policier-affecte-a-aulnay-sous-bois-sest-suicide/",
@@ -3838,6 +3919,7 @@
         "lat": 48.093528,
         "lon": -1.694163
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/rennes-un-policier-affecte-a-la-crs-9-sest-suicide-avec-son-arme-de-service/",
@@ -3893,6 +3975,7 @@
         "lat": 45.752849,
         "lon": 5.148249
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.ledauphine.com/isere-nord/2019/08/01/un-motard-se-tue-dans-un-rond-point",
@@ -3936,6 +4019,7 @@
         "lat": 50.645740,
         "lon": 3.027687
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/nord-un-policier-affecte-a-la-crs-11-sest-suicide/",
@@ -3997,6 +4081,7 @@
         "lat": 43.728572,
         "lon": 4.346717
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/incendies-dans-le-gard-un-avion-bombardier-deau-sest-crashe/",
@@ -4058,6 +4143,7 @@
         "lat": 47.535496,
         "lon": 1.805878
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/un-policier-municipal-dorleans-sest-suicide-par-arme-a-feu/",
@@ -4101,6 +4187,7 @@
         "lat": 48.909220,
         "lon": 2.293562
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/hauts-de-seine-un-policier-se-tue-dans-un-accident-de-moto-en-sortant-de-son-travail/",
@@ -4144,6 +4231,7 @@
         "lat": 49.447426,
         "lon": 2.821140
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/oise-un-gendarme-du-psig-de-compiegne-tue-dans-un-accident-en-se-rendant-sur-une-intervention/",
@@ -4211,6 +4299,7 @@
         "lat": 44.662162,
         "lon": 4.774612
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/ardeche-un-gendarme-sest-suicide-avec-son-arme-de-service-a-cruas/",
@@ -4284,6 +4373,7 @@
         "lat": 48.834107,
         "lon": 2.340962
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/paris-un-surveillant-penitentiaire-de-45-ans-sest-suicide/",
@@ -4321,6 +4411,7 @@
         "lat": 48.924410,
         "lon": 2.445095
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/seine-saint-denis-une-policiere-sest-suicidee-a-drancy/",
@@ -4382,6 +4473,7 @@
         "lat":  43.486350,
         "lon": -1.557026
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://lessor.org/a-la-une/lhommage-au-major-pensec-commandant-de-la-brigade-de-gace-61-mort-en-mission-au-g7/",
@@ -4425,6 +4517,7 @@
         "lat": 48.846778,
         "lon": 3.089718
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/seine-et-marne-un-policier-de-31-ans-qui-exercait-dans-le-val-de-marne-sest-suicide/",
@@ -4486,6 +4579,7 @@
         "lat": 41.922992,
         "lon": 9.413479
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.corsematin.com/article/ventiseri/ventiseri-suicide-d%E2%80%99un-gendarme",
@@ -4528,6 +4622,7 @@
         "lat": -21.174773,
         "lon": 55.287824
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://la1ere.francetvinfo.fr/reunion/ancien-policier-retrouve-mort-son-domicile-saint-leu-746477.html",
@@ -4571,6 +4666,7 @@
         "lat": 44.134610,
         "lon": 0.659457
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu.fr/faits-divers/moirax-pompier-centre-departemental-trouve-mort-dans-une-collision_27053755.html",
@@ -4625,6 +4721,7 @@
         "lat": 49.492297,
         "lon": 0.120466
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/le-havre-un-policier-de-46-ans-sest-suicide/",
@@ -4686,6 +4783,7 @@
         "lat": 48.808122,
         "lon": 2.432417
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/val-de-marne-un-gendarme-se-suicide-dans-sa-caserne-a-maison-alfort/",
@@ -4729,6 +4827,7 @@
         "lat": 49.038314,
         "lon": 2.086410
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/val-de-marne-un-gendarme-se-suicide-dans-sa-caserne-a-maison-alfort/",
@@ -4784,6 +4883,7 @@
         "lat": 42.577651,
         "lon": 9.446075
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actupenit.com/2019/09/17/borgo-un-surveillant-du-centre-penitentiaire-a-mis-fin-a-ses-jours/",
@@ -4815,6 +4915,7 @@
         "lat": 50.257780,
         "lon": 3.950672
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/hauts-de-france-un-policier-affecte-a-maubeuge-sest-suicide/",
@@ -4870,6 +4971,7 @@
         "lat": 48.854729,
         "lon": 2.347289
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/paris-un-homme-arme-dun-couteau-a-attaque-des-policiers-a-la-prefecture-de-police/",
@@ -4931,6 +5033,7 @@
         "lat": 47.956313,
         "lon": 1.910223
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/loiret-un-agent-de-la-dgse-tue-par-balle-lors-dun-entrainement/",
@@ -4992,6 +5095,7 @@
         "lat": 48.909373,
         "lon": 2.450061
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/seine-saint-denis-un-policier-sest-suicide-avec-son-arme-de-service/",
@@ -5059,6 +5163,7 @@
         "lat": 45.176424,
         "lon": 5.703974
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/alpes-un-crs-de-haute-montagne-trouve-la-mort-lors-dune-intervention-de-secours/",
@@ -5126,6 +5231,7 @@
         "lat": 45.820840,
         "lon": 4.868264
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/rhone-un-gendarme-sest-suicide-avec-son-arme-de-service/",
@@ -5187,6 +5293,7 @@
         "lat": 50.355159,
         "lon": 3.518339
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/nord-un-policier-affecte-a-valenciennes-sest-suicide/",
@@ -5236,6 +5343,7 @@
         "lat": 48.732939,
         "lon": 2.372164
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://twitter.com/_FFOC_/status/1198182029973737472",
@@ -5267,6 +5375,7 @@
         "lat": 47.370773,
         "lon": -1.187142
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actupenit.com/2019/10/25/un-gendarme-fait-un-malaise-lors-dune-patrouille-et-ne-peut-etre-reanime/",
@@ -5310,6 +5419,7 @@
         "lat": 15.917866,
         "lon": 2.383294
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/un-soldat-francais-en-operation-a-ete-tue-au-mali-annonce-lelysee/",
@@ -5342,7 +5452,7 @@
           "trustful": true
         },
         {
-          "url": "https://www.defense.gouv.fr/operations/actualites2/mort-en-operation-du-brigadier-ronan-pointeau",
+          "url": "https://archives.defense.gouv.fr/operations/actualites2/mort-en-operation-du-brigadier-ronan-pointeau",
           "titre": "MINARM - Hommage",
           "paywall": false,
           "trustful": true
@@ -5377,6 +5487,7 @@
         "lat": 47.227579,
         "lon": -1.551646
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actupenit.com/2019/11/04/nantes-nouveau-drame-dans-les-rangs-de-la-police-nationale/",
@@ -5444,6 +5555,7 @@
         "lat": 43.693304,
         "lon": 6.858785
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actupenit.com/2019/11/04/la-serie-noire-continue-chez-les-forces-de-lordre-avec-le-suicide-dun-gendarme/",
@@ -5499,6 +5611,7 @@
         "lat": 45.926310,
         "lon": 4.045625
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actupenit.com/2019/11/11/roanne-un-surveillant-penitentiaire-disparu-depuis-10-jours-retrouve-mort/",
@@ -5554,6 +5667,7 @@
         "lat": 43.448623,
         "lon": 6.474457
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/var-un-gendarme-de-37-ans-retrouve-mort-a-son-domicile/",
@@ -5609,6 +5723,7 @@
         "lat": 48.027951,
         "lon": 4.912392
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/haute-marne-un-gendarme-retrouve-sans-vie-dans-son-logement-a-chateauvillain/",
@@ -5664,6 +5779,7 @@
         "lat": 47.152224,
         "lon": 6.317709
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/doubs-un-militaire-se-donne-la-mort-avec-son-arme-de-service-a-valdahon/",
@@ -5707,6 +5823,7 @@
         "lat": 15.852774,
         "lon": 1.468974
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.francetvinfo.fr/monde/afrique/mali/qui-sont-les-treize-militaires-morts-dans-un-accident-d-helicopteres-au-mali_3719517.html#xtor=CS3-794",
@@ -5715,7 +5832,7 @@
           "trustful": true
         },
         {
-          "url": "https://www.defense.gouv.fr/actualites/articles/deces-de-13-militaires-au-mali",
+          "url": "https://archives.defense.gouv.fr/actualites/articles/deces-de-13-militaires-au-mali",
           "titre": "MINARM - Hommage",
           "paywall": false,
           "trustful": true
@@ -5762,6 +5879,7 @@
         "lat": 48.617595,
         "lon": 2.443203
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/essonne-un-gendarme-sest-suicide-a-evry/",
@@ -5811,6 +5929,7 @@
         "lat": 44.866753,
         "lon": -0.596418
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/gironde-un-policier-affecte-au-bouscat-sest-suicide/",
@@ -5866,6 +5985,7 @@
         "lat": 43.374255,
         "lon": 5.287941
       },
+      "homage": null,
       "sources": [
         {
           "url": "http://www.leparisien.fr/faits-divers/michel-jean-norbert-qui-etaient-les-trois-secouristes-morts-en-helicoptere-02-12-2019-8208216.php",
@@ -5927,6 +6047,7 @@
         "lat": 45.608453,
         "lon": 0.101473
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://policeetrealites.com/2019/12/04/%f0%9f%87%ab%f0%9f%87%b7-couronne-suicide-dun-policier-municipal/",
@@ -5964,6 +6085,7 @@
         "lat": 48.861568,
         "lon": 2.901092
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://secoursinfo.fr/2019/12/16/seine-et-marne-un-pompier-perd-la-vie-en-se-rendant-a-sa-garde/",
@@ -6013,6 +6135,7 @@
         "lat": 43.860105,
         "lon": 4.404430
       },
+      "homage": null,
       "sources": [
         {
           "url": false,
@@ -6044,6 +6167,7 @@
         "lat": 43.729127,
         "lon": 7.367132
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://www.varmatin.com/faits-divers/un-policier-se-tue-a-moto-en-rentrant-de-son-service-sur-la-cote-dazur-443120",
@@ -6081,6 +6205,7 @@
         "lat": 48.898332,
         "lon": 2.215728
       },
+      "homage": null,
       "sources": [
         {
           "url": "https://actu17.fr/hauts-de-seine-un-policier-se-suicide-avec-son-arme-de-service/",
@@ -6148,6 +6273,7 @@
         "lat": 43.320753,
         "lon": 5.376351
       },
+      "homage": null,
       "sources": [
         {
           "url": "http://www.profession-gendarme.com/suicide-dune-policiere-municipale-elle-se-prenommait-claude/",

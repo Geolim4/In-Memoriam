@@ -16,6 +16,7 @@ import { Death } from './models/death.model';
 import { FormFilters } from './models/formFilters.model';
 import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.model';
 import { MapButtons } from './mapButtons';
+import { Expression } from './expression';
 
 /**
  * @description Main app code
@@ -279,11 +280,10 @@ export class App {
   public getFilteredResponse(response: Bloodbath, filters: Filters): Bloodbath {
     const filteredResponse = <Bloodbath>response;
 
-    for (const [fKey, filter] of Object.entries(filters)) {
-      if (filters.hasOwnProperty(fKey)) {
-        const fieldName = fKey;
-        const safeFilter = <string>StringUtilsHelper.normalizeString(filter);
-        const safeFilterBlocks = <string[]>StringUtilsHelper.normalizeString(filter).split(' ').map((str) => str.trim());
+    for (const [fieldName, fieldValue] of Object.entries(filters)) {
+      if (filters.hasOwnProperty(fieldName)) {
+        const safeFilter = <string>StringUtilsHelper.normalizeString(fieldValue);
+        const safeFilterBlocks = <string[]>StringUtilsHelper.normalizeString(fieldValue).split(' ').map((str) => str.trim());
         const safeFilterSplited = <string[]>[];
 
         for (const block of safeFilterBlocks) {
@@ -292,10 +292,10 @@ export class App {
           }
         }
 
-        if (filter) {
+        if (fieldValue) {
           let dKey = filteredResponse.deaths.length;
           while (dKey--) {
-            if (fieldName === 'search' && filter.length >= this.configObject.config['searchMinLength']) {
+            if (fieldName === 'search' && fieldValue.length >= this.configObject.config['searchMinLength']) {
               if (!StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['text'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['section'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['location'], safeFilter)
@@ -316,12 +316,15 @@ export class App {
                 filteredResponse.deaths.splice(dKey, 1);
               }
             } else {
+              const filterExpression = Expression.getEvaluable(fieldValue);
               if (!filteredResponse.deaths[dKey]['published']
-                || (!filter.split(',').includes(filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName]))) {
+                || (!filterExpression && !fieldValue.split(',').includes(filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName]))
+                || (filterExpression && !Expression.evaluate(filterExpression, { filters, fieldName, fieldValue, death: filteredResponse.deaths[dKey] }))
+              ) {
                 if (filteredResponse.deaths[dKey].peers.length) {
                   let continueFlag = false;
                   for (const peer of filteredResponse.deaths[dKey].peers) {
-                    if (peer.hasOwnProperty(fieldName) && peer[fieldName] && filter.split(',').includes(peer[fieldName])) {
+                    if (peer.hasOwnProperty(fieldName) && peer[fieldName] && fieldValue.split(',').includes(peer[fieldName])) {
                       continueFlag = true;
                       break;
                     }
@@ -567,6 +570,11 @@ export class App {
 
         const houseFormatted =  this.getFilterValueLabel('house', death.house);
         const causeFormatted = this.getFilterValueLabel('cause', death.cause);
+        const homageFormatted = death.homage
+          ? `<a href="${death.homage.url}" target="_blank">${StringUtilsHelper.replaceAcronyms(death.homage.title, this.glossary)}</a>
+            <span class="glyphicon glyphicon-ok-sign" aria-hidden="true" data-tippy-content="Source officielle"></span>`
+          : '<em>Non communiqué</em>';
+
         let infoWindowsContent = `<h4>
               <img height="16" src="${houseImage}" alt="House: ${death.house}"  title="House: ${death.house}" />
               ${(death.section ? `${StringUtilsHelper.replaceAcronyms(death.section, this.glossary)} - ` : '')}
@@ -585,7 +593,9 @@ export class App {
               <br /><br />
               <strong>Cause</strong>: ${causeFormatted}
               <br /><br />
-              <strong>Circonstances</strong>:  ${StringUtilsHelper.replaceAcronyms(death.text.replace(new RegExp('\n', 'g'), '<br />'), this.glossary)}
+              <strong>Hommage</strong>: ${homageFormatted}
+              <br /><br />
+              <strong>Circonstances</strong>: ${StringUtilsHelper.replaceAcronyms(death.text.replace(new RegExp('\n', 'g'), '<br />'), this.glossary)}
             </span>`;
 
         const confidentialSource = death.sources.length === 1 && death.sources[0].titre === '__CONFIDENTIAL__' && !death.sources[0].url;

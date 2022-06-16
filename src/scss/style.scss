@@ -256,3 +256,11 @@ body.fullscreen {
     display: none !important;
   }
 }
+
+/**
+ * Fix blurriness of fonts with Chrome
+ */
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: unset;
+}
