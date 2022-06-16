@@ -2443,6 +2443,44 @@
           "trustful": false
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "https://www.leetchi.com/c/accompagnement-famille-jucan-cosmin",
+      "year": "2022",
+      "month": "06",
+      "day": "13",
+      "keywords": "JUCAN Cosmin",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme du Groupement de Gendarmerie Départementale du Val d'Oise à mis fin à ses jours avec son arme de service.\nIl était marié et père de deux jeunes enfants dont un bébé.",
+      "section": "GGD 95",
+      "location": "Pontoise (Val d'Oise)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.03705070925523,
+        "lon": 2.0864421072761408
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/pontoise-un-gendarme-se-suicide-avec-son-arme-de-service-a-son-domicile.html",
+          "titre": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "",
+          "titre": "Cagnotte",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
