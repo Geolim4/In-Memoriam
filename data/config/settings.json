@@ -1,8 +1,8 @@
 {
   "settings": {
     "appVersion": "1.8.0",
-    "bloodbathSrc": "./data/bloodbath/%year%.json",
     "contactEmail": "contact@geolim4.com",
+    "deathsSrc": "./data/deaths/%year%.json",
     "defaultLat": 48.1,
     "defaultLon": -4.21,
     "defaultZoom": 12,
@@ -50,6 +50,14 @@
       "bluedot": "./assets/images/map/bluedot.png",
       "refresh": "./assets/images/map/refresh.png",
       "download": "./assets/images/map/download.png"
+    }
+  },
+  "hostSettings": {
+    "localhost": {
+      "appVersion": "%appVersion%-dev"
+    },
+    "in.memoriam.forces-francaises.fr": {
+      "deathsSrc": "./assets/json/deaths/%year%.min.json"
     }
   }
 }

@@ -161,7 +161,7 @@ export class App {
   }
 
   public reloadMarkers(map: google.maps.Map, fromAnchor: boolean): void {
-    this.bindMarkers(this.configObject.config.bloodbathSrc, map, this.getFilters(fromAnchor));
+    this.bindMarkers(this.configObject.config.deathsSrc, map, this.getFilters(fromAnchor));
   }
 
   public getFilters(fromAnchor: boolean): Filters {
@@ -379,7 +379,7 @@ export class App {
         this.bindAnchorEvents(map);
         this.bindFilters(map);
         this.mapButtons.bindCustomButtons(map);
-        this.bindMarkers(this.configObject.config.bloodbathSrc, map, this.getFilters(true));
+        this.bindMarkers(this.configObject.config.deathsSrc, map, this.getFilters(true));
         this.bindMarkerLinkEvent(map);
         this.bindFullscreenFormFilterListener();
       }).catch((reason) => {
@@ -419,7 +419,7 @@ export class App {
     activityDetectorMonitoring.on('idle', () => {
       console.log('User is now idle...');
       handler = setInterval(() => {
-        this.bindMarkers(this.configObject.config.bloodbathSrc, map, this.getFilters(false));
+        this.bindMarkers(this.configObject.config.deathsSrc, map, this.getFilters(false));
         console.log('Reloading map...');
       }, 300 * 1000); // Reload every 5min
     });
@@ -433,7 +433,7 @@ export class App {
   private bindAnchorEvents(map: google.maps.Map): void {
     window.addEventListener('hashchange', () => {
       this.bindFilters(map, true);
-      this.bindMarkers(this.configObject.config.bloodbathSrc, map, this.getFilters(true));
+      this.bindMarkers(this.configObject.config.deathsSrc, map, this.getFilters(true));
     }, false);
   }
 
@@ -471,7 +471,7 @@ export class App {
       this.eventHandlers[selector.id] = () => {
         if (this.formElement.checkValidity()) {
           const filters = this.getFilters(false);
-          this.bindMarkers(this.configObject.config.bloodbathSrc, map, filters);
+          this.bindMarkers(this.configObject.config.deathsSrc, map, filters);
         } else {
           this.formElement.dispatchEvent(new Event('submit', { cancelable: true }));
         }

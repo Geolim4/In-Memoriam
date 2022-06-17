@@ -22,8 +22,23 @@ export class Config {
   }
 
   public init(onceInitialized: VoidFunction): void {
-    fetch(this.configPath).then((response) => response.json()).then((responseData: { settings: Settings }) => {
+    const hostname = window.location.hostname;
+
+    fetch(this.configPath).then((response) => response.json()).then((responseData: { settings: Settings, hostSettings: {[name: string]: any} }) => {
       this.config = responseData.settings;
+      /**
+       * Override of settings per environments
+       */
+      if (typeof responseData.hostSettings[hostname] === 'object') {
+        for (const key of Object.keys(responseData.hostSettings[hostname])) {
+          let configData = responseData.hostSettings[hostname][key];
+          if (typeof configData === 'string') {// @todo Maybe loop recursively ?
+            configData = configData.replace(`%${key}%`, this.config[key]);
+          }
+          this.config[key] = configData;
+        }
+      }
+
       fetch(this.definitionsPath).then((response) => response.json()).then((responseData: { definitions: Definitions }) => {
         this.definitions = responseData.definitions;
         if (onceInitialized) {
