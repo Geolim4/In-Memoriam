@@ -24,7 +24,9 @@ export class Config {
   public init(onceInitialized: VoidFunction): void {
     const hostname = window.location.hostname;
 
-    fetch(this.configPath).then((response) => response.json()).then((responseData: { settings: Settings, hostSettings: {[name: string]: any} }) => {
+    fetch(this.configPath)
+    .then((response): any => response.json())
+    .then((responseData: { settings: Settings, hostSettings: {[name: string]: any} }): void => {
       this.config = responseData.settings;
       /**
        * Override of settings per environments
@@ -39,16 +41,22 @@ export class Config {
         }
       }
 
-      fetch(this.definitionsPath).then((response) => response.json()).then((responseData: { definitions: Definitions }) => {
+      fetch(this.definitionsPath)
+      .then((response): any => response.json())
+      .then((responseData: { definitions: Definitions }): void => {
         this.definitions = responseData.definitions;
         if (onceInitialized) {
           onceInitialized();
         }
-      }).catch(() => {
+      }).catch((): void => {
         this.app.getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des définitions.', null, null, true);
       });
-    }).catch(() => {
+    }).catch((): void => {
       this.app.getModal().modalInfo('Erreur', 'Impossible de récupérer le modèle de configuration.', null, null, true);
     });
+  }
+
+  public isDebugEnabled(): boolean {
+    return this.config.appDebug;
   }
 }

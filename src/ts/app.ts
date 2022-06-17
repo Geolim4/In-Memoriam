@@ -26,6 +26,8 @@ import { Expression } from './expression';
  */
 export class App {
 
+  protected static appInstance: App;
+
   private circles: google.maps.Circle[];
   private configObject: Config;
   private currentInfoWindow: google.maps.InfoWindow;
@@ -46,7 +48,7 @@ export class App {
   private readonly eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
   private readonly charts: Charts;
 
-  constructor() {
+  private constructor() {
     this.circles = [];
     this.customChoicesInstances = {};
     this.currentInfoWindow = null;
@@ -67,7 +69,17 @@ export class App {
     this.appLoaded = false;
     this.formElement = <HTMLFormElement>document.getElementById('form-filters');
 
-    this.boot();
+    // Run this synchronously...
+    this.configObject = (new Config(this, (): void => this.run()));
+
+    // ... then this asynchronously
+    this.loadGlossary();
+  }
+
+  public static boot(): void {
+    if (!this.appInstance) {
+      this.appInstance = new App();
+    }
   }
 
   public bindTooltip(): void {
@@ -142,10 +154,13 @@ export class App {
   public loadGlossary(): void {
     const glossaryPath = './data/config/glossary.json';
     fetch(glossaryPath)
-      .then((response) => response.json())
-      .then((responseData: {glossary: {}}) => {
+      .then((response): any => response.json())
+      .then((responseData: {glossary: {}}): void => {
         this.glossary = responseData.glossary;
-      }).catch(() => {
+      }).catch((e): void => {
+        if (this.configObject.isDebugEnabled()) {
+          console.error(`Failed to load the glossary: ${e}`);
+        }
         this.modal.modalInfo(
           'Erreur',
           'Impossible de récupérer le dictionnaire des termes.',
@@ -170,14 +185,14 @@ export class App {
     const filters = {};
     const selects = <NodeListOf<HTMLSelectElement>>this.formElement.querySelectorAll('select[data-filterable="true"], input[data-filterable="true"]');
 
-    anchor.forEach((value) => {
+    anchor.forEach((value): void => {
       const filter = value.split('=');
       if (filter.length === 2) {
         exposedFilters[filter[0]] = filter[1];
       }
     });
 
-    selects.forEach((select) => {
+    selects.forEach((select): void => {
       if (fromAnchor) {
         filters[select.id] = exposedFilters[select.id] ? exposedFilters[select.id] : '';
         if (!select.required || filters[select.id]) {
@@ -283,7 +298,7 @@ export class App {
     for (const [fieldName, fieldValue] of Object.entries(filters)) {
       if (filters.hasOwnProperty(fieldName)) {
         const safeFilter = <string>StringUtilsHelper.normalizeString(fieldValue);
-        const safeFilterBlocks = <string[]>StringUtilsHelper.normalizeString(fieldValue).split(' ').map((str) => str.trim());
+        const safeFilterBlocks = <string[]>StringUtilsHelper.normalizeString(fieldValue).split(' ').map((str): string => str.trim());
         const safeFilterSplited = <string[]>[];
 
         for (const block of safeFilterBlocks) {
@@ -344,19 +359,11 @@ export class App {
     return filteredResponse;
   }
 
-  private boot(): void {
-    // Run this synchronously...
-    this.configObject = (new Config(this, () => this.run()));
-
-    // ... then this asynchronously
-    this.loadGlossary();
-  }
-
   private run(): void {
     loadGoogleMapsApi({
       key: this.configObject.config.googleMaps['key'],
       libraries: this.configObject.config.googleMaps['libraries'],
-    }).then(() => {
+    }).then((): void => {
       const mapElement = <HTMLInputElement>document.getElementById('map');
       const options = {
         backgroundColor: '#343a40', // See variables.scss
@@ -372,8 +379,8 @@ export class App {
       const filtersPath = './data/config/filters.json';
 
       fetch(filtersPath)
-      .then((response) => response.json())
-      .then((responseData: {filters: FormFilters}) => {
+      .then((response): any => response.json())
+      .then((responseData: {filters: FormFilters}): void => {
         this.formFilters = responseData.filters;
         this.setupSkeleton(this.getFilters(true));
         this.bindAnchorEvents(map);
@@ -382,8 +389,10 @@ export class App {
         this.bindMarkers(this.configObject.config.deathsSrc, map, this.getFilters(true));
         this.bindMarkerLinkEvent(map);
         this.bindFullscreenFormFilterListener();
-      }).catch((reason) => {
-        console.error(reason);
+      }).catch((reason): void => {
+        if (this.configObject.isDebugEnabled()) {
+          console.error(reason);
+        }
         this.modal.modalInfo('Erreur',
           'Impossible de récupérer la liste des filtres.',
           null,
@@ -399,7 +408,7 @@ export class App {
   private bindFullscreenFormFilterListener(): void {
     const formWrapper = document.querySelector('#form-filters-wrapper');
 
-    document.addEventListener('fullscreenchange', () => {
+    document.addEventListener('fullscreenchange', (): void => {
       if (document.fullscreenElement) {
         document.fullscreenElement.appendChild(this.formElement);
         document.body.classList.add('fullscreen');
@@ -416,22 +425,28 @@ export class App {
     });
     let handler;
 
-    activityDetectorMonitoring.on('idle', () => {
-      console.log('User is now idle...');
-      handler = setInterval(() => {
+    activityDetectorMonitoring.on('idle', (): void => {
+      if (this.configObject.isDebugEnabled()) {
+        console.log('User is now idle...');
+      }
+      handler = setInterval((): void => {
         this.bindMarkers(this.configObject.config.deathsSrc, map, this.getFilters(false));
-        console.log('Reloading map...');
+        if (this.configObject.isDebugEnabled()) {
+          console.log('Reloading map...');
+        }
       }, 300 * 1000); // Reload every 5min
     });
 
-    activityDetectorMonitoring.on('active', () => {
-      console.log('User is now active...');
+    activityDetectorMonitoring.on('active', (): void => {
+      if (this.configObject.isDebugEnabled()) {
+        console.log('User is now active...');
+      }
       clearInterval(handler);
     });
   }
 
   private bindAnchorEvents(map: google.maps.Map): void {
-    window.addEventListener('hashchange', () => {
+    window.addEventListener('hashchange', (): void => {
       this.bindFilters(map, true);
       this.bindMarkers(this.configObject.config.deathsSrc, map, this.getFilters(true));
     }, false);
@@ -450,7 +465,7 @@ export class App {
     });
 
     resetButtons.forEach((button) => {
-      Events.addEventHandler(button, 'click', () => {
+      Events.addEventHandler(button, 'click', (): void => {
         const target = <HTMLInputElement|null> document.querySelector(button.dataset.resetFieldTarget);
         if (target !== null && target.value !== '') {
           target.value = '';
@@ -468,7 +483,7 @@ export class App {
         Events.removeEventHandler(selector, 'change', this.eventHandlers[selector.id]);
       }
 
-      this.eventHandlers[selector.id] = () => {
+      this.eventHandlers[selector.id] = (): void => {
         if (this.formElement.checkValidity()) {
           const filters = this.getFilters(false);
           this.bindMarkers(this.configObject.config.deathsSrc, map, filters);
@@ -507,7 +522,9 @@ export class App {
 
   private bindMarkers(source: string, map: google.maps.Map, filters: Filters): void {
 
-    fetch(`${source.replace('%year%', filters.year)}?_=${(new Date()).getTime()}`).then((response) => response.json()).then((responseData: Bloodbath) => {
+    fetch(`${source.replace('%year%', filters.year)}?_=${(new Date()).getTime()}`)
+    .then((response) => response.json())
+    .then((responseData: Bloodbath) => {
       const bounds = new google.maps.LatLngBounds();
       const domTomMarkers = <ExtendedGoogleMapsMarker[]>[];
       const heatMapData = <{ location: google.maps.LatLng, weight: number }[]>[];
@@ -626,7 +643,7 @@ export class App {
           position: marker.getPosition(),
         });
 
-        google.maps.event.addListener(infoWindow, 'domready', () => {
+        google.maps.event.addListener(infoWindow, 'domready', (): void => {
           const multipleDeathContainer = document.querySelector('.death-container.multiple-deaths');
 
           if (multipleDeathContainer) {
@@ -634,7 +651,7 @@ export class App {
           }
           this.bindTooltip();
         });
-        google.maps.event.addListener(marker, 'click', () => {
+        google.maps.event.addListener(marker, 'click', (): void => {
           if (this.currentInfoWindow) {
             this.currentInfoWindow.close();
           }
@@ -657,7 +674,7 @@ export class App {
         this.markerHashIndex[marker.linkHash] = this.markers.length - 1;
       }
 
-      google.maps.event.addListener(map, 'zoom_changed', () => {
+      google.maps.event.addListener(map, 'zoom_changed', (): void => {
         const zoomLevel = map.getZoom();
         for (const circle of this.circles) {
           circle.setVisible(zoomLevel > 8);
@@ -712,7 +729,10 @@ export class App {
       Permalink.build(filters);
       this.printDefinitionsText(responseData, filters);
       map.fitBounds(bounds);
-    }).catch(() => {
+    }).catch((e): void => {
+      if (this.configObject.isDebugEnabled()) {
+        console.error(`Failed to load the death list: ${e}`);
+      }
       this.modal.modalInfo('Erreur', 'Impossible de récupérer la liste des décès.', null, null, true);
     });
 
@@ -785,6 +805,16 @@ export class App {
       });
 
       this.appLoaded = true;
+      console.log(`App loaded in ${(window.performance.now()) / 1000}s.`);
+      console.log(`
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+       👋🏻 Hello curious visitor, do you want to contribute to this fabulous project ?
+
+       ➡️ Then open a pull request or an issue at https://github.com/Geolim4/In-Memoriam
+
+       ❤️ Thank you ❤️
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+      `);
     }
 
     return this;
