@@ -18,7 +18,7 @@ fs.readdir(deathPath, (err, files) => {
       const minifiedFilename = file.replace('.json', '.min.json');
       fs.writeFile(assetJsonPath + minifiedFilename, jsonminify(data), 'utf8', (err) => {
         if(!err) {
-          console.log(clc.green(file + ' has been minfied to ' + assetJsonPath + minifiedFilename));
+          console.log(clc.green(file + ' has been minified to ' + assetJsonPath + minifiedFilename));
         } else {
            console.log(clc.red(file + ' failed to minify to ' + assetJsonPath + minifiedFilename));
         }

@@ -1,6 +1,7 @@
 {
   "settings": {
-    "appVersion": "1.9.0",
+    "appDebug": false,
+    "appVersion": "1.9.1",
     "contactEmail": "contact@geolim4.com",
     "deathsSrc": "./data/deaths/%year%.json",
     "defaultLat": 48.1,
@@ -54,6 +55,7 @@
   },
   "hostSettings": {
     "localhost": {
+      "appDebug": true,
       "appVersion": "%appVersion%-dev"
     },
     "in.memoriam.forces-francaises.fr": {

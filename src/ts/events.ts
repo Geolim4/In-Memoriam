@@ -4,7 +4,7 @@
  * @licence GPL-2.0
  */
 export class Events {
-  public static addEventHandler(elem: HTMLElement, eventType: string, handler: EventListenerOrEventListenerObject, once?: boolean): void {
+  public static addEventHandler(elem: EventTarget, eventType: string, handler: EventListenerOrEventListenerObject, once?: boolean): void {
     if (elem.addEventListener) {
       elem.addEventListener(eventType, handler, once ? { once: true } : false);
       if (eventType === 'click') {

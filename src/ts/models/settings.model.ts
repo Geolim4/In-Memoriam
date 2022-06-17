@@ -1,4 +1,5 @@
 export interface Settings {
+  appDebug: boolean;
   appVersion: string;
   deathsSrc: string;
   contactEmail: string;
