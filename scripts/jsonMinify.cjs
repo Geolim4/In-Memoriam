@@ -1,26 +1,32 @@
 const clc = require('cli-color');
 const fs = require('fs');
+const path = require('path');
 const jsonminify = require("jsonminify");
 
-const deathPath = __dirname + '/../data/deaths/';
-const assetJsonPath = __dirname + '/../assets/json/deaths/';
+const deathPath = fs.realpathSync(__dirname + '/../data/deaths/');
+const projectDir =  fs.realpathSync(__dirname + '/../');
+let assetJsonPath = __dirname + '/../assets/json/deaths/';
 
-console.log(clc.green('Minifying JSON files...'));
+console.log(clc.blue('Minifying JSON files...'));
 
 if(!fs.existsSync(assetJsonPath)){
-  console.log(clc.yellow(assetJsonPath + ' dir does not exist, creating...'))
   fs.mkdirSync(assetJsonPath, { recursive: true });
+  assetJsonPath = fs.realpathSync(assetJsonPath);
+  console.log(clc.yellow(assetJsonPath.replace(projectDir, '.') + ' directory was not existing and has been created...'))
+} else {
+  assetJsonPath = fs.realpathSync(assetJsonPath);
 }
 
 fs.readdir(deathPath, (err, files) => {
   files.forEach(file => {
-    fs.readFile(deathPath + file, 'utf8', (err, data) => {
-      const minifiedFilename = file.replace('.json', '.min.json');
-      fs.writeFile(assetJsonPath + minifiedFilename, jsonminify(data), 'utf8', (err) => {
+    const originFile = path.resolve(deathPath, file);
+    fs.readFile(originFile, 'utf8', (err, data) => {
+      const targetFile = path.resolve(assetJsonPath, file.replace('.json', '.min.json'));
+      fs.writeFile(targetFile, jsonminify(data), 'utf8', (err) => {
         if(!err) {
-          console.log(clc.green(file + ' has been minified to ' + assetJsonPath + minifiedFilename));
+          console.log(clc.green(originFile.replace(projectDir, '.') + ' has been minified to ' + targetFile.replace(projectDir, '.')));
         } else {
-           console.log(clc.red(file + ' failed to minify to ' + assetJsonPath + minifiedFilename));
+           console.log(clc.red(originFile.replace(projectDir, '.')  + ' failed to minify to ' + targetFile.replace(projectDir, '.')));
         }
       });
     });
