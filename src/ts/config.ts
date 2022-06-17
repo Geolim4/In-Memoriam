@@ -48,10 +48,15 @@ export class Config {
         if (onceInitialized) {
           onceInitialized();
         }
-      }).catch((): void => {
+      }).catch((e): void => {
+        if (this.isDebugEnabled()) {
+          console.error(`Failed to load the definitions: ${e}`);
+        }
         this.app.getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des définitions.', null, null, true);
       });
-    }).catch((): void => {
+    }).catch((e): void => {
+      // No debug check here since it's stored in configuration
+      console.error(`Failed to load the configuration: ${e}`);
       this.app.getModal().modalInfo('Erreur', 'Impossible de récupérer le modèle de configuration.', null, null, true);
     });
   }

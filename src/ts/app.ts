@@ -82,6 +82,13 @@ export class App {
     }
   }
 
+  public static getInstance(): App {
+    if (!this.appInstance) {
+      this.boot();
+    }
+    return this.appInstance;
+  }
+
   public bindTooltip(): void {
     if (this.markers.length) {
       tippyJs('[data-tippy-content]', {
@@ -635,11 +642,19 @@ export class App {
           infoWindowsContent += `<br /><br /><div class="death-sources">${confidentialSource ? '' : '<strong>Sources: </strong>'}${sourcesText}</div>`;
         }
 
-        const mailtoSubject = `Erreur trouvée - ${death.section} + -  ${death.day}/${death.month}/${death.year}`;
-        infoWindowsContent += `<br /><small class="report-error"><a href="mailto:${this.configObject.config.contactEmail}?subject=${mailtoSubject}">[Une erreur ?]</a></small>`;
+        infoWindowsContent += '<br /><small class="report-error"><a href="javascript:;" class="error-link">[Une erreur ?]</a></small>';
 
+        const infoWindowsDiv = document.createElement('div');
+        infoWindowsDiv.innerHTML = infoWindowsContent;
+        infoWindowsDiv.classList.add('death-container');
+        if (totalDeathCount > 1) {
+          infoWindowsDiv.classList.add('multiple-deaths');
+        }
+        if (confidentialSource) {
+          infoWindowsDiv.classList.add('confidential-death');
+        }
         const infoWindow = new google.maps.InfoWindow({
-          content: `<div class="death-container${totalDeathCount > 1 ? ' multiple-deaths' : ''}${confidentialSource ? ' confidential-death' : ''}">${infoWindowsContent}</div>`,
+          content: infoWindowsDiv,
           position: marker.getPosition(),
         });
 
@@ -657,6 +672,22 @@ export class App {
           }
           infoWindow.open(map, marker);
           this.currentInfoWindow = infoWindow;
+          const infoWindowContent = infoWindow.getContent();
+          if (typeof infoWindowContent === 'object') {
+            Events.addEventHandler(infoWindowContent.querySelector('a.error-link'), 'click', () => {
+              const mailtoSubject = `Erreur trouvée: ${death.section}, ${death.location} le ${death.day}/${death.month}/${death.year}`;
+              this.modal.modalInfo(
+                'Vous avez trouvé une erreur ?',
+                `<p>
+                            Vous pouvez soit me la signaler par <a href="mailto:${this.configObject.config.contactEmail}?subject=${mailtoSubject}" target="_blank">e-mail</a> 📧
+                            ou alors me <a href="https://github.com/Geolim4/In-Memoriam/issues/new?title=${mailtoSubject}" target="_blank">créer un ticket de support</a> 🎫 sur Github.
+                        </p>
+                        <p>
+                            Dans tous les cas merci beaucoup pour votre vigilance. ❤️
+                        </p>`,
+              );
+            });
+          }
         });
 
         this.infoWindows.push(infoWindow);

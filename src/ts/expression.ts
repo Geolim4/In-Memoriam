@@ -1,4 +1,5 @@
 import { ExtendedContentWindows } from './models/extendedContentWindows';
+import { App } from './app';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -17,7 +18,9 @@ export class Expression {
     try {
       return this.sandboxRun(expression, context, 'expression-evaluator-sandbox');
     } catch (e) {
-      console.error(`Sandbox error: ${e}`);
+      if (App.getInstance().getConfigObject().isDebugEnabled()) {
+        console.error(`Sandbox error: ${e}`);
+      }
     }
     return false;
   }
@@ -29,9 +32,11 @@ export class Expression {
      * If the sandbox does not exist, create it
      */
     if (iframe === null) {
+      if (App.getInstance().getConfigObject().isDebugEnabled()) {
+        console.log(`Expression sandbox "${sandboxName}" does not exist and will be created.`);
+      }
       iframe = document.createElement('iframe');
       iframe.id = sandboxName;
-      iframe.sandbox.add('allow-scripts');
       iframe.sandbox.add('allow-same-origin');
 
       if (typeof iframe.style === 'undefined') {
