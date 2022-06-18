@@ -1,5 +1,6 @@
 import { ExtendedContentWindows } from './models/extendedContentWindows';
 import { App } from './app';
+import { EvaluationError } from './errors/evaluationError.model';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -14,15 +15,8 @@ export class Expression {
     return match && match[1] ? match[1] : null;
   }
 
-  public static evaluate(expression: string, context: object): boolean {
-    try {
-      return this.sandboxRun(expression, context, 'expression-evaluator-sandbox');
-    } catch (e) {
-      if (App.getInstance().getConfigObject().isDebugEnabled()) {
-        console.error(`Sandbox error: ${e}`);
-      }
-    }
-    return false;
+  public static evaluate(expression: string, context: object): any {
+    return this.sandboxRun(expression, context, 'expression-evaluator-sandbox');
   }
 
   protected static sandboxRun(expression: string, context: object, sandboxName: string): any {
@@ -32,7 +26,7 @@ export class Expression {
      * If the sandbox does not exist, create it
      */
     if (iframe === null) {
-      if (App.getInstance().getConfigObject().isDebugEnabled()) {
+      if (App.getInstance().getConfigFactory().isDebugEnabled()) {
         console.log(`Expression sandbox "${sandboxName}" does not exist and will be created.`);
       }
       iframe = document.createElement('iframe');
@@ -61,7 +55,12 @@ export class Expression {
       win[key] = context[key];
     });
 
-    const result = wEval.call(win, expression);
+    let result;
+    try {
+      result = wEval.call(win, expression);
+    } catch (e) {
+      throw new EvaluationError(e.message, expression);
+    }
 
     /**
      * Clear the vars once

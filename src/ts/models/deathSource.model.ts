@@ -1,6 +1,6 @@
-export interface DeathSource {
+import { TitleUrl } from './titleUrl.model';
+
+export interface DeathSource extends TitleUrl {
   paywall: boolean;
-  titre: string;
   trustful: boolean;
-  url: string;
 }
