@@ -80,7 +80,7 @@ body:not(.loaded) {
 }
 
 .mtop {
-  margin-top: 1.5em;
+  margin-top: 1.25em;
 }
 
 .inline-block {
@@ -223,7 +223,8 @@ a abbr[data-title] {
   small.advanced-search-enabled {
     color: orange;
     float: left;
-    line-height: 2;
+    line-height: 0.8;
+    margin-top: 6px;
   }
 
   button[data-reset-field-target] {

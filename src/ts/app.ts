@@ -46,6 +46,7 @@ export class App {
   private mapButtons: MapButtons;
   private appLoaded: boolean;
   private searchByExpression: boolean;
+  private forceRefresh: boolean;
   private readonly modal: Modal;
   private readonly formElement: HTMLFormElement;
   private readonly customChoicesInstances: { [name: string]: any };
@@ -72,6 +73,7 @@ export class App {
     this.modal = new Modal();
     this.appLoaded = false;
     this.searchByExpression = false;
+    this.forceRefresh = true;
     this.formElement = <HTMLFormElement>document.getElementById('form-filters');
 
     // Run this synchronously...
@@ -120,6 +122,14 @@ export class App {
 
   public isSearchByExpressionEnabled(): boolean {
     return this.searchByExpression;
+  }
+
+  public isForceRefreshEnabled(): boolean {
+    return this.forceRefresh;
+  }
+
+  public setForceRefresh(refresh: boolean): void {
+    this.forceRefresh = refresh;
   }
 
   public getFormFiltersKeyed(): { [name: string]: { [name: string]: string } } {
@@ -192,7 +202,7 @@ export class App {
   }
 
   public reloadMarkers(map: google.maps.Map, fromAnchor: boolean): void {
-    this.bindMarkers(this.configFactory.config.deathsSrc, map, this.getFilters(fromAnchor));
+    this.bindMarkers(map, this.getFilters(fromAnchor));
   }
 
   public getFilters(fromAnchor: boolean): Filters {
@@ -422,7 +432,7 @@ export class App {
         this.bindAnchorEvents(map);
         this.bindFilters(map);
         this.mapButtons.bindCustomButtons(map);
-        this.bindMarkers(this.configFactory.config.deathsSrc, map, this.getFilters(true));
+        this.bindMarkers(map, this.getFilters(true));
         this.bindMarkerLinkEvent(map);
         this.bindFullscreenFormFilterListener();
         this.printSupportAssociations();
@@ -467,7 +477,7 @@ export class App {
         console.log('User is now idle...');
       }
       handler = setInterval((): void => {
-        this.bindMarkers(this.configFactory.config.deathsSrc, map, this.getFilters(false));
+        this.bindMarkers(map, this.getFilters(false));
         if (this.configFactory.isDebugEnabled()) {
           console.log('Reloading map...');
         }
@@ -485,14 +495,14 @@ export class App {
   private bindAnchorEvents(map: google.maps.Map): void {
     window.addEventListener('hashchange', (): void => {
       this.bindFilters(map, true);
-      this.bindMarkers(this.configFactory.config.deathsSrc, map, this.getFilters(true));
+      this.bindMarkers(map, this.getFilters(true));
     }, false);
   }
 
   private bindFilters(map: google.maps.Map, fromAnchor?: boolean): void {
     const selects = <NodeListOf<HTMLInputElement>>this.formElement.querySelectorAll('form select, form input');
     const resetButtons = <NodeListOf<HTMLButtonElement>>this.formElement.querySelectorAll('form button[data-reset-field-target]');
-    const searchElement = document.getElementById('search');
+    const searchElement = <HTMLInputElement> document.getElementById('search');
     const filters = this.getFilters(fromAnchor);
 
     Events.addEventHandler(this.formElement, 'submit', (e) => {
@@ -523,8 +533,7 @@ export class App {
 
       this.eventHandlers[selector.id] = (): void => {
         if (this.formElement.checkValidity()) {
-          const filters = this.getFilters(false);
-          this.bindMarkers(this.configFactory.config.deathsSrc, map, filters);
+          this.bindMarkers(map, this.getFilters(false));
         } else {
           this.formElement.dispatchEvent(new Event('submit', { cancelable: true }));
         }
@@ -541,6 +550,7 @@ export class App {
           <span>Recherche avancée activée</span>`;
         searchElement.parentElement.appendChild(advSearchLabel);
       } else {
+        searchElement.value = '';
         searchElement.parentElement.querySelector('.advanced-search-enabled').remove();
       }
       this.searchByExpression = !this.searchByExpression;
@@ -573,9 +583,8 @@ export class App {
     });
   }
 
-  private bindMarkers(source: string, map: google.maps.Map, filters: Filters): void {
-
-    fetch(`${source.replace('%year%', filters.year)}?_=${(new Date()).getTime()}`)
+  private bindMarkers(map: google.maps.Map, filters: Filters): void {
+    fetch(this.buildFetchMarkersUrl(filters.year))
     .then((response) => response.json())
     .then((responseData: Bloodbath) => {
       const bounds = new google.maps.LatLngBounds();
@@ -825,6 +834,16 @@ export class App {
       this.modal.modalInfo('Erreur', 'Impossible de récupérer la liste des décès.', null, null, true);
     });
 
+  }
+
+  private buildFetchMarkersUrl(year: string): string {
+    let url = `${this.configFactory.config.deathsSrc.replace('%year%', year)}`;
+    if (this.isForceRefreshEnabled()) {
+      url += `?_=${(new Date()).getTime()}`;
+      this.setForceRefresh(false);
+    }
+
+    return url;
   }
 
   private drawCustomSelectors(selectors: NodeListOf<HTMLInputElement>, filters: Filters): void {

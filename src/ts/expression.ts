@@ -60,15 +60,15 @@ export class Expression {
       result = wEval.call(win, expression);
     } catch (e) {
       throw new EvaluationError(e.message, expression);
+    } finally {
+      /**
+       * Clear the vars once
+       * the sandbox has run
+       */
+      Object.keys(context).forEach((key) => {
+        delete win[key];
+      });
     }
-
-    /**
-     * Clear the vars once
-     * the sandbox has run
-     */
-    Object.keys(context).forEach((key) => {
-      delete win[key];
-    });
 
     return result;
   }

@@ -13,6 +13,7 @@ import { Death } from './models/death.model';
 import { DeathPeer } from './models/deathPeer.model';
 import { Filters } from './models';
 import { Events } from './events';
+import { IntUtilsHelper } from './helper/intUtils.helper';
 
 export class MapButtons {
   private app: App;
@@ -154,7 +155,7 @@ export class MapButtons {
     };
 
     GmapUtils.bindButton(map, () => {
-      const randomIndex = Math.floor(Math.random() * this.app.getMarkers().length);
+      const randomIndex = IntUtilsHelper.getRandomInt(0, this.app.getMarkers().length - 1);
       const randomMarker = this.app.getMarkers()[randomIndex];
 
       map.setCenter(randomMarker.getPosition());
@@ -175,6 +176,7 @@ export class MapButtons {
     };
 
     GmapUtils.bindButton(map, () => {
+      this.app.setForceRefresh(true);
       this.app.loadGlossary();
       this.app.reloadMarkers(map, false);
     }, buttonOptions);
