@@ -28,31 +28,31 @@
       "sources": [
         {
           "url": "https://actu17.fr/2-policiers-se-donnes-mort-1er-janvier-lun-a-dunkerque-lautre-a-quimper/",
-          "titre": "Actu17",
+          "title": "Actu17",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/suicide-de-deux-policiers-a-dunkerque-et-quimper-03-01-2018-7481295.php",
-          "titre": "Le parisien",
+          "title": "Le parisien",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/nord-0/nord-deux-suicides-deux-jours-rangs-police-1394315.html",
-          "titre": "France Info",
+          "title": "France Info",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.lepharedunkerquois.fr/archive/recup/fait-divers/dunkerque-un-policier-de-la-brigade-de-nuit-se-suicide-ia685b0n232530",
-          "titre": "Le phare Dunkerquois",
+          "title": "Le phare Dunkerquois",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://mpc-asso.net/liste-funebre-2018/",
-          "titre": "Asso MPC (Liste Funèbre)",
+          "title": "Asso MPC (Liste Funèbre)",
           "paywall": false,
           "trustful": true
         }
@@ -83,37 +83,37 @@
       "sources": [
         {
           "url": "https://actu17.fr/2-policiers-se-donnes-mort-1er-janvier-lun-a-dunkerque-lautre-a-quimper/",
-          "titre": "Actu17",
+          "title": "Actu17",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.lepharedunkerquois.fr/art/fait-divers/dunkerque-un-policier-de-la-brigade-de-nuit-se-suicide-ia685b0n232530",
-          "titre": "Le phare Dunkerquois",
+          "title": "Le phare Dunkerquois",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/suicide-de-deux-policiers-a-dunkerque-et-quimper-03-01-2018-7481295.php",
-          "titre": "Le parisien",
+          "title": "Le parisien",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/nord-0/nord-deux-suicides-deux-jours-rangs-police-1394315.html",
-          "titre": "France Info",
+          "title": "France Info",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.letelegramme.fr/finistere/quimper-un-policier-se-suicide-avec-son-arme-de-service-03-01-2018-11799904.php",
-          "titre": "Le Télégramme",
+          "title": "Le Télégramme",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://mpc-asso.net/liste-funebre-2018/",
-          "titre": "Asso MPC (Liste Funèbre)",
+          "title": "Asso MPC (Liste Funèbre)",
           "paywall": false,
           "trustful": true
         }
@@ -145,13 +145,13 @@
       "sources": [
         {
           "url": "https://actu17.fr/policier-affecte-a-crs-11-sest-suicide-3eme-a-se-donner-mort-48-heures/",
-          "titre": "Actu17",
+          "title": "Actu17",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/nord-0/nord-deux-suicides-deux-jours-rangs-police-1394315.html",
-          "titre": "France Info",
+          "title": "France Info",
           "paywall": false,
           "trustful": true
         }
@@ -183,19 +183,19 @@
       "sources": [
         {
           "url": "https://www.ouest-france.fr/pays-de-la-loire/nantes-44000/un-policier-nantais-se-suicide-son-domicile-5513380",
-          "titre": "Ouest France",
+          "title": "Ouest France",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://actu17.fr/nantes-policier-sest-donne-mort/",
-          "titre": "Actu17",
+          "title": "Actu17",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/nantes-un-policier-se-suicide-a-son-domicile-20-01-2018-7513092.php",
-          "titre": "Le Parisien",
+          "title": "Le Parisien",
           "paywall": false,
           "trustful": true
         }
@@ -227,25 +227,25 @@
       "sources": [
         {
           "url": "https://actu17.fr/moselle-policier-affecte-saint-avold-sest-suicide/",
-          "titre": "Actu17",
+          "title": "Actu17",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.republicain-lorrain.fr/edition-de-forbach/2018/01/22/un-policier-retrouve-mort-a-puttelange-aux-lacs",
-          "titre": "Républicain Lorrain",
+          "title": "Républicain Lorrain",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/justice/2210255-20180128-moselle-apres-suicide-policier-parents-veulent-porter-plainte-harcelement-moral",
-          "titre": "20 minutes",
+          "title": "20 minutes",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/suicide-d-un-policier-les-parents-vont-porter-plainte-pour-harcelement-moral-1517049364",
-          "titre": "France Bleu",
+          "title": "France Bleu",
           "paywall": false,
           "trustful": true
         }
@@ -277,31 +277,31 @@
       "sources": [
         {
           "url": "https://actu17.fr/marseille-gendarme-se-donne-mort-durant-seance-de-tir/",
-          "titre": "Actu17",
+          "title": "Actu17",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://lessor.org/a-la-une/gendarme-se-suicide-arme-lors-dune-seance-de-tir/",
-          "titre": "L'essor",
+          "title": "L'essor",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.europe1.fr/societe/un-gendarme-se-suicide-avec-son-arme-lors-dune-seance-de-tir-3557291",
-          "titre": "Europe 1",
+          "title": "Europe 1",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/marseille/2209855-20180126-marseille-gendarme-suicide-arme-lors-seance-tir",
-          "titre": "20 minutes",
+          "title": "20 minutes",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.lefigaro.fr/flash-actu/2018/01/26/97001-20180126FILWWW00286-un-gendarme-se-suicide-avec-son-arme.php",
-          "titre": "Le Figaro",
+          "title": "Le Figaro",
           "paywall": false,
           "trustful": true
         }
@@ -333,49 +333,49 @@
       "sources": [
         {
           "url": "http://www.profession-gendarme.com/39350/",
-          "titre": "Profession Gendarme",
+          "title": "Profession Gendarme",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://actu17.fr/marne-une-douaniere-retrouvee-morte-dans-son-service-de-laeroport-de-vatry/",
-          "titre": "Actu17",
+          "title": "Actu17",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.lardennais.fr/art/81677/article/2018-03-21/une-jeune-douaniere-ardennaise-se-suicide-l-aeroport-de-vatry",
-          "titre": "L'Ardennais",
+          "title": "L'Ardennais",
           "paywall": true,
           "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/marne-une-douaniere-retrouvee-morte-a-l-aeroport-de-paris-vatry-21-03-2018-7622004.php",
-          "titre": "Le Parisien",
+          "title": "Le Parisien",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.sudouest.fr/2018/03/21/aeroport-de-paris-vatry-une-douaniere-retrouvee-morte-4300741-7.php",
-          "titre": "Sud Ouest",
+          "title": "Sud Ouest",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/grand-est/marne/chalons-en-champagne/aeroport-paris-vatry/douaniere-decedee-aeroport-vatry-1444519.html",
-          "titre": "France Info",
+          "title": "France Info",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/aeroport-de-paris-vatry-une-douaniere-se-donne-la-mort-avec-son-arme-de-service-1400958.html",
-          "titre": "BFM",
+          "title": "BFM",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.lefigaro.fr/flash-eco/2018/03/21/97002-20180321FILWWW00122-aeroport-paris-vatry-une-douaniere-retrouvee-morte.php",
-          "titre": "Le Figaro",
+          "title": "Le Figaro",
           "paywall": false,
           "trustful": true
         }
@@ -407,13 +407,13 @@
       "sources": [
         {
           "url": "http://www.profession-gendarme.com/suicide-dun-douanier-de-metz/",
-          "titre": "Profession Gendarme",
+          "title": "Profession Gendarme",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.republicain-lorrain.fr/edition-de-metz-ville/2018/08/17/suicide-d-un-douanier",
-          "titre": "Républicain Lorrain",
+          "title": "Républicain Lorrain",
           "paywall": true,
           "trustful": true
         }
@@ -444,37 +444,37 @@
       "sources": [
         {
           "url": "https://actu17.fr/la-presidente-de-lassociation-mobilisation-des-policiers-en-colere-mpc-maggy-biskupski-sest-suicidee/",
-          "titre": "Actu17",
+          "title": "Actu17",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://mpc-asso.net/2019/06/21/%f0%9f%9a%94%f0%9f%87%ab%f0%9f%87%b7-condoleances-a-la-famille-et-aux-proches-4/",
-          "titre": "Asso MPC",
+          "title": "Asso MPC",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/suicide-de-maggy-biskupski-la-policiere-evoquait-des-problemes-avec-son-association-13-11-2018-7941549.php",
-          "titre": "Le Parisien",
+          "title": "Le Parisien",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.lexpress.fr/actualite/societe/suicide-policier-une-marche-en-memoire-de-maggy-biskupski_2050282.html",
-          "titre": "L'Express",
+          "title": "L'Express",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.europe1.fr/societe/une-policiere-se-tue-avec-son-arme-de-service-dans-les-yvelines-3799244",
-          "titre": "Europe 1",
+          "title": "Europe 1",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://fr.wikipedia.org/wiki/Maggy_Biskupski",
-          "titre": "Wikipédia",
+          "title": "Wikipédia",
           "paywall": false,
           "trustful": true
         }
@@ -506,37 +506,37 @@
       "sources": [
         {
           "url": "https://actu17.fr/dordogne-un-gendarme-sest-donne-la-mort-avec-son-arme-de-service/",
-          "titre": "Actu17",
+          "title": "Actu17",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://lessor.org/a-la-une/un-gendarme-de-saint-astier-se-suicide/",
-          "titre": "L'essor",
+          "title": "L'essor",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.lefigaro.fr/flash-actu/2018/12/17/97001-20181217FILWWW00176-dordogne-suicide-d-un-gendarme-dans-sa-caserne.php",
-          "titre": "Le Figaro",
+          "title": "Le Figaro",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "http://www.leparisien.fr/faits-divers/dordogne-suicide-d-un-gendarme-de-23-ans-a-la-caserne-de-saint-astier-18-12-2018-7971342.php",
-          "titre": "Le Parisien",
+          "title": "Le Parisien",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.bfmtv.com/police-justice/dordogne-suicide-d-un-gendarme-a-la-caserne-de-saint-astier-1590551.html",
-          "titre": "BFM",
+          "title": "BFM",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/dordogne-un-gendarme-de-23-ans-se-suicide-avec-son-arme-de-service-a-saint-astier-1545059270",
-          "titre": "France Bleu",
+          "title": "France Bleu",
           "paywall": false,
           "trustful": true
         }
@@ -568,31 +568,31 @@
       "sources": [
         {
           "url": "https://actu17.fr/ain-un-gendarme-adjoint-volontaire-sest-donne-la-mort/",
-          "titre": "Actu17",
+          "title": "Actu17",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://lessor.org/breves/un-gendarme-adjoint-volontaire-de-lain-se-suicide/",
-          "titre": "L'essor",
+          "title": "L'essor",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/ain/bourg-bresse/amberieu-bugey-ain-33e-suicide-gendarmerie-nationale-1594931.html",
-          "titre": "France Info",
+          "title": "France Info",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.20minutes.fr/faits_divers/2399691-20181219-ain-gendarme-volontaire-suicide-amberieu-bugey-33e-france-2018",
-          "titre": "20 minutes",
+          "title": "20 minutes",
           "paywall": false,
           "trustful": true
         },
         {
           "url": "https://www.leprogres.fr/ain-01/2018/12/18/amberieu-un-jeune-gendarme-adjoint-volontaire-se-suicide-en-service",
-          "titre": "Le Progrès",
+          "title": "Le Progrès",
           "paywall": false,
           "trustful": true
         }

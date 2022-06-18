@@ -17,6 +17,9 @@ import { FormFilters } from './models/formFilters.model';
 import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.model';
 import { MapButtons } from './mapButtons';
 import { Expression } from './expression';
+import { TitleUrl } from './models/titleUrl.model';
+import { EvaluationError } from './errors/evaluationError.model';
+import { FilteredResponse } from './models/filteredResponse.model';
 
 /**
  * @description Main app code
@@ -29,7 +32,7 @@ export class App {
   protected static appInstance: App;
 
   private circles: google.maps.Circle[];
-  private configObject: Config;
+  private configFactory: Config;
   private currentInfoWindow: google.maps.InfoWindow;
   private heatMap: google.maps.visualization.HeatmapLayer;
   private infoWindows: google.maps.InfoWindow[];
@@ -42,6 +45,7 @@ export class App {
   private formFilters: FormFilters;
   private mapButtons: MapButtons;
   private appLoaded: boolean;
+  private searchByExpression: boolean;
   private readonly modal: Modal;
   private readonly formElement: HTMLFormElement;
   private readonly customChoicesInstances: { [name: string]: any };
@@ -58,7 +62,7 @@ export class App {
     this.markerCluster = null;
     this.markers = [];
     this.markerHashIndex = {};
-    this.configObject = null;
+    this.configFactory = null;
     this.heatmapEnabled = true;
     this.clusteringEnabled = true;
     this.glossary = {};
@@ -67,10 +71,11 @@ export class App {
     this.mapButtons = new MapButtons(this);
     this.modal = new Modal();
     this.appLoaded = false;
+    this.searchByExpression = false;
     this.formElement = <HTMLFormElement>document.getElementById('form-filters');
 
     // Run this synchronously...
-    this.configObject = (new Config(this, (): void => this.run()));
+    this.configFactory = (new Config(this, (): void => this.run()));
 
     // ... then this asynchronously
     this.loadGlossary();
@@ -113,6 +118,10 @@ export class App {
     return this.formFilters;
   }
 
+  public isSearchByExpressionEnabled(): boolean {
+    return this.searchByExpression;
+  }
+
   public getFormFiltersKeyed(): { [name: string]: { [name: string]: string } } {
     const formFiltersKeyed = {};
 
@@ -130,8 +139,8 @@ export class App {
     return this.glossary;
   }
 
-  public getConfigObject(): Config {
-    return this.configObject;
+  public getConfigFactory(): Config {
+    return this.configFactory;
   }
 
   public getCharts(): Charts {
@@ -165,7 +174,7 @@ export class App {
       .then((responseData: {glossary: {}}): void => {
         this.glossary = responseData.glossary;
       }).catch((e): void => {
-        if (this.configObject.isDebugEnabled()) {
+        if (this.configFactory.isDebugEnabled()) {
           console.error(`Failed to load the glossary: ${e}`);
         }
         this.modal.modalInfo(
@@ -179,11 +188,11 @@ export class App {
   }
 
   public getConfigDefinitions(): Definitions {
-    return this.configObject.definitions;
+    return this.configFactory.definitions;
   }
 
   public reloadMarkers(map: google.maps.Map, fromAnchor: boolean): void {
-    this.bindMarkers(this.configObject.config.deathsSrc, map, this.getFilters(fromAnchor));
+    this.bindMarkers(this.configFactory.config.deathsSrc, map, this.getFilters(fromAnchor));
   }
 
   public getFilters(fromAnchor: boolean): Filters {
@@ -299,33 +308,37 @@ export class App {
     return `<a href="javascript:;" class="marker-link" data-death-hash="${this.getMarkerHash(death)}">${label}</a>`;
   }
 
-  public getFilteredResponse(response: Bloodbath, filters: Filters): Bloodbath {
-    const filteredResponse = <Bloodbath>response;
+  public getFilteredResponse(response: Bloodbath, filters: Filters): FilteredResponse {
+    const filteredResponse = <FilteredResponse> { response, errored: false };
 
-    for (const [fieldName, fieldValue] of Object.entries(filters)) {
-      if (filters.hasOwnProperty(fieldName)) {
-        const safeFilter = <string>StringUtilsHelper.normalizeString(fieldValue);
-        const safeFilterBlocks = <string[]>StringUtilsHelper.normalizeString(fieldValue).split(' ').map((str): string => str.trim());
-        const safeFilterSplited = <string[]>[];
+    try {
+      for (const [fieldName, fieldValue] of Object.entries(filters)) {
+        if (filters.hasOwnProperty(fieldName) && fieldValue) {
+          const safeFilter = <string>StringUtilsHelper.normalizeString(fieldValue);
+          const safeFilterBlocks = <string[]>StringUtilsHelper.normalizeString(fieldValue).split(' ').map((str): string => str.trim());
+          const safeFilterSplited = <string[]>[];
 
-        for (const block of safeFilterBlocks) {
-          if (block.length >= this.configObject.config['searchMinLength']) {
-            safeFilterSplited.push(block);
+          for (const block of safeFilterBlocks) {
+            if (block.length >= this.configFactory.config['searchMinLength']) {
+              safeFilterSplited.push(block);
+            }
           }
-        }
 
-        if (fieldValue) {
-          let dKey = filteredResponse.deaths.length;
+          let dKey = filteredResponse.response.deaths.length;
+          const filterExpression = this.searchByExpression ? Expression.getEvaluable(fieldValue) : '';
           while (dKey--) {
-            if (fieldName === 'search' && fieldValue.length >= this.configObject.config['searchMinLength']) {
-              if (!StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['text'], safeFilter)
-                && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['section'], safeFilter)
-                && !StringUtilsHelper.containsString(filteredResponse.deaths[dKey]['location'], safeFilter)
-                && !StringUtilsHelper.arrayContainsString(filteredResponse.deaths[dKey]['keywords'], safeFilterSplited)
+            const filterExpressionContext = { filters, fieldName, fieldValue, death: filteredResponse.response.deaths[dKey] };
+
+            if (fieldName === 'search' && fieldValue.length >= this.configFactory.config['searchMinLength']) {
+              if (!StringUtilsHelper.containsString(filteredResponse.response.deaths[dKey]['text'], safeFilter)
+                && !StringUtilsHelper.containsString(filteredResponse.response.deaths[dKey]['section'], safeFilter)
+                && !StringUtilsHelper.containsString(filteredResponse.response.deaths[dKey]['location'], safeFilter)
+                && !StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['keywords'], safeFilterSplited)
+                && !(this.searchByExpression && filterExpression && Expression.evaluate(filterExpression, filterExpressionContext))
               ) {
-                if (filteredResponse.deaths[dKey].peers.length) {
+                if (filteredResponse.response.deaths[dKey].peers.length) {
                   let continueFlag = false;
-                  for (const peer of filteredResponse.deaths[dKey].peers) {
+                  for (const peer of filteredResponse.response.deaths[dKey].peers) {
                     if (StringUtilsHelper.containsString(peer.section, safeFilter)) {
                       continueFlag = true;
                       break;
@@ -335,17 +348,16 @@ export class App {
                     continue;
                   }
                 }
-                filteredResponse.deaths.splice(dKey, 1);
+                filteredResponse.response.deaths.splice(dKey, 1);
               }
             } else {
-              const filterExpression = Expression.getEvaluable(fieldValue);
-              if (!filteredResponse.deaths[dKey]['published']
-                || (!filterExpression && !fieldValue.split(',').includes(filteredResponse.deaths[dKey][fieldName] && filteredResponse.deaths[dKey][fieldName]))
-                || (filterExpression && !Expression.evaluate(filterExpression, { filters, fieldName, fieldValue, death: filteredResponse.deaths[dKey] }))
+              if (!filteredResponse.response.deaths[dKey]['published']
+                || (!filterExpression && !fieldValue.split(',').includes(filteredResponse.response.deaths[dKey][fieldName] && filteredResponse.response.deaths[dKey][fieldName]))
+                || (filterExpression && !Expression.evaluate(filterExpression, filterExpressionContext))
               ) {
-                if (filteredResponse.deaths[dKey].peers.length) {
+                if (filteredResponse.response.deaths[dKey].peers.length) {
                   let continueFlag = false;
-                  for (const peer of filteredResponse.deaths[dKey].peers) {
+                  for (const peer of filteredResponse.response.deaths[dKey].peers) {
                     if (peer.hasOwnProperty(fieldName) && peer[fieldName] && fieldValue.split(',').includes(peer[fieldName])) {
                       continueFlag = true;
                       break;
@@ -355,12 +367,29 @@ export class App {
                     continue;
                   }
                 }
-                filteredResponse.deaths.splice(dKey, 1);
+                filteredResponse.response.deaths.splice(dKey, 1);
               }
             }
           }
         }
       }
+    } catch (e) {
+      if (e instanceof EvaluationError && this.isSearchByExpressionEnabled()) {
+        if (App.getInstance().isSearchByExpressionEnabled()) {
+          App.getInstance()
+          .getModal()
+          .modalInfo(
+            "Erreur d'évaluation",
+            `L'expression <code>${e.expression}</code> a retourné l'erreur suivante: <code>${e.message}</code>`,
+            null,
+            null,
+            true,
+          );
+        }
+      }
+
+      filteredResponse.response.deaths = [];
+      filteredResponse.errored = true;
     }
 
     return filteredResponse;
@@ -368,19 +397,19 @@ export class App {
 
   private run(): void {
     loadGoogleMapsApi({
-      key: this.configObject.config.googleMaps['key'],
-      libraries: this.configObject.config.googleMaps['libraries'],
+      key: this.configFactory.config.googleMaps['key'],
+      libraries: this.configFactory.config.googleMaps['libraries'],
     }).then((): void => {
       const mapElement = <HTMLInputElement>document.getElementById('map');
       const options = {
         backgroundColor: '#343a40', // See variables.scss
-        center: new google.maps.LatLng(this.configObject.config['defaultLat'], this.configObject.config['defaultLon']),
-        mapId: this.configObject.config['mapId'],
+        center: new google.maps.LatLng(this.configFactory.config['defaultLat'], this.configFactory.config['defaultLon']),
+        mapId: this.configFactory.config['mapId'],
         mapTypeControl: false,
         // mapTypeId: google.maps.MapTypeId.HYBRID,
-        maxZoom: this.configObject.config['maxZoom'],
+        maxZoom: this.configFactory.config['maxZoom'],
         streetViewControl: false,
-        zoom: this.configObject.config['defaultZoom'],
+        zoom: this.configFactory.config['defaultZoom'],
       };
       const map = new google.maps.Map(mapElement, options);
       const filtersPath = './data/config/filters.json';
@@ -393,11 +422,12 @@ export class App {
         this.bindAnchorEvents(map);
         this.bindFilters(map);
         this.mapButtons.bindCustomButtons(map);
-        this.bindMarkers(this.configObject.config.deathsSrc, map, this.getFilters(true));
+        this.bindMarkers(this.configFactory.config.deathsSrc, map, this.getFilters(true));
         this.bindMarkerLinkEvent(map);
         this.bindFullscreenFormFilterListener();
+        this.printSupportAssociations();
       }).catch((reason): void => {
-        if (this.configObject.isDebugEnabled()) {
+        if (this.configFactory.isDebugEnabled()) {
           console.error(reason);
         }
         this.modal.modalInfo('Erreur',
@@ -433,19 +463,19 @@ export class App {
     let handler;
 
     activityDetectorMonitoring.on('idle', (): void => {
-      if (this.configObject.isDebugEnabled()) {
+      if (this.configFactory.isDebugEnabled()) {
         console.log('User is now idle...');
       }
       handler = setInterval((): void => {
-        this.bindMarkers(this.configObject.config.deathsSrc, map, this.getFilters(false));
-        if (this.configObject.isDebugEnabled()) {
+        this.bindMarkers(this.configFactory.config.deathsSrc, map, this.getFilters(false));
+        if (this.configFactory.isDebugEnabled()) {
           console.log('Reloading map...');
         }
       }, 300 * 1000); // Reload every 5min
     });
 
     activityDetectorMonitoring.on('active', (): void => {
-      if (this.configObject.isDebugEnabled()) {
+      if (this.configFactory.isDebugEnabled()) {
         console.log('User is now active...');
       }
       clearInterval(handler);
@@ -455,13 +485,14 @@ export class App {
   private bindAnchorEvents(map: google.maps.Map): void {
     window.addEventListener('hashchange', (): void => {
       this.bindFilters(map, true);
-      this.bindMarkers(this.configObject.config.deathsSrc, map, this.getFilters(true));
+      this.bindMarkers(this.configFactory.config.deathsSrc, map, this.getFilters(true));
     }, false);
   }
 
   private bindFilters(map: google.maps.Map, fromAnchor?: boolean): void {
     const selects = <NodeListOf<HTMLInputElement>>this.formElement.querySelectorAll('form select, form input');
     const resetButtons = <NodeListOf<HTMLButtonElement>>this.formElement.querySelectorAll('form button[data-reset-field-target]');
+    const searchElement = document.getElementById('search');
     const filters = this.getFilters(fromAnchor);
 
     Events.addEventHandler(this.formElement, 'submit', (e) => {
@@ -493,12 +524,27 @@ export class App {
       this.eventHandlers[selector.id] = (): void => {
         if (this.formElement.checkValidity()) {
           const filters = this.getFilters(false);
-          this.bindMarkers(this.configObject.config.deathsSrc, map, filters);
+          this.bindMarkers(this.configFactory.config.deathsSrc, map, filters);
         } else {
           this.formElement.dispatchEvent(new Event('submit', { cancelable: true }));
         }
       };
       Events.addEventHandler(selector, 'change', this.eventHandlers[selector.id]);
+    });
+
+    Events.addDoubleKeypressHandler('Home', searchElement, () => {
+      if (!this.searchByExpression) {
+        const advSearchLabel = document.createElement('small');
+        advSearchLabel.classList.add('advanced-search-enabled');
+        advSearchLabel.innerHTML = `
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span>Recherche avancée activée</span>`;
+        searchElement.parentElement.appendChild(advSearchLabel);
+      } else {
+        searchElement.parentElement.querySelector('.advanced-search-enabled').remove();
+      }
+      this.searchByExpression = !this.searchByExpression;
+      searchElement.dispatchEvent(new Event('change'));
     });
 
     this.drawCustomSelectors(selects, filters);
@@ -515,7 +561,7 @@ export class App {
           if (document.getElementById('modal-bloodbath-list').classList.contains('is-open')) {
             micromodal.close('modal-bloodbath-list');
           }
-          map.setZoom(this.configObject.config['maxZoom']);
+          map.setZoom(this.configFactory.config['maxZoom']);
           google.maps.event.trigger(marker, 'click');
           map.setCenter(marker.getPosition());
 
@@ -541,18 +587,25 @@ export class App {
       this.clearMapObjects();
       this.setAppAsLoaded();
 
-      if (!filteredResponse.deaths || !filteredResponse.deaths.length) {
+      if (!filteredResponse.response.deaths || !filteredResponse.response.deaths.length) {
+        if (!filteredResponse.errored) {
+          const messageText = 'Aucun r&eacute;sultat trouv&eacute;, essayez avec d\'autres crit&egrave;res de recherche.';
+          this.modal.modalInfo('Information', messageText);
+        } else {
+          const messageText = 'La recherche a rencontr&eacute; une erreur, essayez de corriger votre saisie.';
+          this.modal.modalInfo('Information', messageText, null, null, true);
+        }
         this.printDefinitionsText(null);
         return;
       }
 
-      for (const key in filteredResponse.deaths) {
-        const death = <Death> filteredResponse.deaths[key];
+      for (const key in filteredResponse.response.deaths) {
+        const death = <Death> filteredResponse.response.deaths[key];
 
         let peersText = '';
         let peersCount = 0;
         for (const peer of death.peers) {
-          const peerHouseImage = this.configObject.config['imagePath']['house'].replace('%house%', (peer.count > 1 ? `${peer.house}-m` : peer.house));
+          const peerHouseImage = this.configFactory.config['imagePath']['house'].replace('%house%', (peer.count > 1 ? `${peer.house}-m` : peer.house));
           const peerHouseFormatted =  this.getFilterValueLabel('house', peer.house);
           peersText += `<h5>
               <img height="16" src="${peerHouseImage}" alt="House: ${peer.house}"  title="House: ${peer.house}" />
@@ -564,7 +617,7 @@ export class App {
         }
 
         const totalDeathCount = death.count + peersCount;
-        const houseImage = this.configObject.config['imagePath']['house'].replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
+        const houseImage = this.configFactory.config['imagePath']['house'].replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
         const marker = new google.maps.Marker({
           map,
           animation: google.maps.Animation.DROP,
@@ -578,12 +631,12 @@ export class App {
           const circle = new google.maps.Circle({
             map,
             center: new google.maps.LatLng(death.gps.lat, death.gps.lon),
-            fillColor: this.configObject.config['circleOptions']['fillColor'],
-            fillOpacity: this.configObject.config['circleOptions']['fillOpacity'],
+            fillColor: this.configFactory.config['circleOptions']['fillColor'],
+            fillOpacity: this.configFactory.config['circleOptions']['fillOpacity'],
             radius: Math.max(100, death.gps.radius), // Radius can't be set at less than 100 meters
-            strokeColor: this.configObject.config['circleOptions']['strokeColor'],
-            strokeOpacity: this.configObject.config['circleOptions']['strokeOpacity'],
-            strokeWeight: this.configObject.config['circleOptions']['strokeWeight'],
+            strokeColor: this.configFactory.config['circleOptions']['strokeColor'],
+            strokeOpacity: this.configFactory.config['circleOptions']['strokeOpacity'],
+            strokeWeight: this.configFactory.config['circleOptions']['strokeWeight'],
           });
 
           this.circles.push(circle);
@@ -622,7 +675,7 @@ export class App {
               <strong>Circonstances</strong>: ${StringUtilsHelper.replaceAcronyms(death.text.replace(new RegExp('\n', 'g'), '<br />'), this.glossary)}
             </span>`;
 
-        const confidentialSource = death.sources.length === 1 && death.sources[0].titre === '__CONFIDENTIAL__' && !death.sources[0].url;
+        const confidentialSource = death.sources.length === 1 && death.sources[0].title === '__CONFIDENTIAL__' && !death.sources[0].url;
         if (death.sources && death.sources.length) {
           let sourcesText = '';
           if (confidentialSource) {
@@ -633,9 +686,9 @@ export class App {
               const paywall = source.paywall ? '<span aria-hidden="true" class="glyphicon glyphicon-lock" data-tippy-content="Article réservé aux abonnés"></span>' : '';
               const trustful = !source.trustful ? '<span aria-hidden="true" class="glyphicon glyphicon-warning-sign" data-tippy-content="Prudence, une partie du contenu de cet article peut être inexact"></span>' : '';
               if (!source.url) {
-                sourcesText += (sourcesText ? ', ' : '') + (`<strong>${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</strong> ${paywall} ${trustful}`);
+                sourcesText += (sourcesText ? ', ' : '') + (`<strong>${StringUtilsHelper.replaceAcronyms(source.title, this.glossary)}</strong> ${paywall} ${trustful}`);
               } else {
-                sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${StringUtilsHelper.replaceAcronyms(source.titre, this.glossary)}</a> ${paywall} ${trustful}`);
+                sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${StringUtilsHelper.replaceAcronyms(source.title, this.glossary)}</a> ${paywall} ${trustful}`);
               }
             }
           }
@@ -675,15 +728,19 @@ export class App {
           const infoWindowContent = infoWindow.getContent();
           if (typeof infoWindowContent === 'object') {
             Events.addEventHandler(infoWindowContent.querySelector('a.error-link'), 'click', () => {
-              const mailtoSubject = `Erreur trouvée: ${death.section}, ${death.location} le ${death.day}/${death.month}/${death.year}`;
+              const reference = `${death.section}, ${death.location} le ${death.day}/${death.month}/${death.year}`;
+              const mailtoSubject = `Erreur trouvée: ${reference}`;
               this.modal.modalInfo(
                 'Vous avez trouvé une erreur ?',
                 `<p>
-                            Vous pouvez soit me la signaler par <a href="mailto:${this.configObject.config.contactEmail}?subject=${mailtoSubject}" target="_blank">e-mail</a> 📧
+                            Vous pouvez soit me la signaler par <a href="mailto:${this.configFactory.config.contactEmail}?subject=${mailtoSubject}" target="_blank">e-mail</a> 📧
                             ou alors me <a href="https://github.com/Geolim4/In-Memoriam/issues/new?title=${mailtoSubject}" target="_blank">créer un ticket de support</a> 🎫 sur Github.
                         </p>
                         <p>
                             Dans tous les cas merci beaucoup pour votre vigilance. ❤️
+                        </p>
+                        <p class="mtop">
+                            <small>Référence: <em><code>${reference}</code><em/></small>
                         </p>`,
               );
             });
@@ -729,9 +786,9 @@ export class App {
         this.markerCluster = new MarkerClusterer({
           map,
           algorithm: new SuperClusterAlgorithm({
-            maxZoom: this.configObject.config['clusteringOptions']['maxZoom'],
-            minPoints: this.configObject.config['clusteringOptions']['minPoints'],
-            radius: this.configObject.config['clusteringOptions']['radius'],
+            maxZoom: this.configFactory.config['clusteringOptions']['maxZoom'],
+            minPoints: this.configFactory.config['clusteringOptions']['minPoints'],
+            radius: this.configFactory.config['clusteringOptions']['radius'],
           }),
           markers: this.markers,
         });
@@ -752,7 +809,7 @@ export class App {
       if (heatMapData.length && this.heatmapEnabled) {
         this.heatMap = new google.maps.visualization.HeatmapLayer({
           ...{ data: heatMapData },
-          ... this.configObject.config['heatmapOptions'],
+          ... this.configFactory.config['heatmapOptions'],
         });
         this.heatMap.setMap(map);
       }
@@ -761,7 +818,8 @@ export class App {
       this.printDefinitionsText(responseData, filters);
       map.fitBounds(bounds);
     }).catch((e): void => {
-      if (this.configObject.isDebugEnabled()) {
+      if (this.configFactory.isDebugEnabled()) {
+        console.error(e);
         console.error(`Failed to load the death list: ${e}`);
       }
       this.modal.modalInfo('Erreur', 'Impossible de récupérer la liste des décès.', null, null, true);
@@ -800,7 +858,7 @@ export class App {
 
   private setupSkeleton(filters: Filters): void {
     const searchInput = this.formElement.querySelector('input#search') as HTMLInputElement;
-    const searchMinLength = this.configObject.config['searchMinLength'];
+    const searchMinLength = this.configFactory.config['searchMinLength'];
     const appSettingsElements = document.querySelectorAll('[data-app-settings]') as NodeListOf<HTMLElement>;
 
     for (const [filterName, filterValuesArray] of Object.entries(this.formFilters)) {
@@ -823,7 +881,7 @@ export class App {
       /**
        * @todo Handle deeper config object.
        */
-      appSettingsElements.innerHTML = this.configObject.config[appSettingsElements.dataset.appSettings];
+      appSettingsElements.innerHTML = this.configFactory.config[appSettingsElements.dataset.appSettings];
     });
   }
 
@@ -936,7 +994,6 @@ export class App {
       }
     } else {
       const messageText = 'Aucun r&eacute;sultat trouv&eacute;, essayez avec d\'autres crit&egrave;res de recherche.';
-      this.modal.modalInfo('Information', messageText);
       definitionTexts.push(`<span class="text text-warning"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp; <strong>${messageText}</strong></span>`);
     }
 
@@ -944,5 +1001,21 @@ export class App {
     element.innerHTML = definitionTexts.length ? `<div class="shadowed inline-block">${definitionTexts.join('<br />')}</div>` : '';
     tippyJs('[data-tippy-content]');
     this.bindTooltip();
+  }
+
+  private printSupportAssociations(): void {
+    const wrapper = document.querySelector('.association-list');
+    if (wrapper !== null) {
+      this.getConfigFactory().config.supportAssociations.forEach((titleUrl: TitleUrl) => {
+        const link = document.createElement('a');
+        link.href = titleUrl.url;
+        link.innerText = titleUrl.title;
+        link.target = '_blank';
+        if (wrapper.childNodes.length > 0) {
+          wrapper.append(', ');
+        }
+        wrapper.appendChild(link);
+      });
+    }
   }
 }

@@ -1,7 +1,16 @@
 {
+  "hostSettings": {
+    "localhost": {
+      "appDebug": true,
+      "appVersion": "%appVersion%-dev"
+    },
+    "in.memoriam.forces-francaises.fr": {
+      "deathsSrc": "./assets/json/deaths/%year%.min.json"
+    }
+  },
   "settings": {
     "appDebug": false,
-    "appVersion": "1.9.2",
+    "appVersion": "2.0.0",
     "contactEmail": "contact@geolim4.com",
     "deathsSrc": "./data/deaths/%year%.json",
     "defaultLat": 48.1,
@@ -51,15 +60,24 @@
       "bluedot": "./assets/images/map/bluedot.png",
       "refresh": "./assets/images/map/refresh.png",
       "download": "./assets/images/map/download.png"
-    }
-  },
-  "hostSettings": {
-    "localhost": {
-      "appDebug": true,
-      "appVersion": "%appVersion%-dev"
     },
-    "in.memoriam.forces-francaises.fr": {
-      "deathsSrc": "./assets/json/deaths/%year%.min.json"
-    }
+    "supportAssociations": [
+      {
+        "title": "Femme des Force De l'Ordre en Colère (FFOC)",
+        "url": "https://twitter.com/_FFOC_"
+      },
+      {
+        "title": "Uniformes en danger",
+        "url": "https://twitter.com/UniformesEn"
+      },
+      {
+        "title": "Peps SOS",
+        "url": "https://www.peps-sos.fr/"
+      },
+      {
+        "title": "@36quaidesorfevres",
+        "url": "https://www.instagram.com/36quaidesorfevres/"
+      }
+    ]
   }
 }

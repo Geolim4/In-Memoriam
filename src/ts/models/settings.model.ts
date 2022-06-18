@@ -1,3 +1,5 @@
+import { TitleUrl } from './titleUrl.model';
+
 export interface Settings {
   appDebug: boolean;
   appVersion: string;
@@ -17,4 +19,5 @@ export interface Settings {
   imagePath: Object;
   mapId: string;
   maxZoom: number;
+  supportAssociations: TitleUrl[];
 }

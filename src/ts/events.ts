@@ -29,4 +29,34 @@ export class Events {
 
     return newElem;
   }
+
+  public static addDoubleKeypressHandler(key: string, target: EventTarget, handler: VoidFunction, once?: boolean): void {
+    const doOnce = typeof once === 'undefined' ? false : once;
+    let strokeState = '';
+    let hadDown = false;
+    const timeout = () => {
+      hadDown = false;
+      strokeState = '';
+    };
+    const callback = (e: KeyboardEvent) => {
+      if (e.type === 'keydown') {
+        strokeState += e.key;
+        if (hadDown && strokeState === key.repeat(2)) {
+          handler();
+          if (doOnce) {
+            target.removeEventListener('keydown', callback);
+            target.removeEventListener('keyup', callback);
+          }
+        } else {
+          setTimeout(timeout, 300);
+        }
+      } else {
+        hadDown = true;
+        setTimeout(timeout, 300);
+      }
+    };
+
+    target.addEventListener('keydown', callback);
+    target.addEventListener('keyup', callback);
+  }
 }

@@ -220,6 +220,12 @@ a abbr[data-title] {
     height: 45px;
   }
 
+  small.advanced-search-enabled {
+    color: orange;
+    float: left;
+    line-height: 2;
+  }
+
   button[data-reset-field-target] {
     background: transparent;
     border: none;

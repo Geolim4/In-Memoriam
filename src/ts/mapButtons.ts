@@ -46,7 +46,7 @@ export class MapButtons {
       ctrlChildId: 'localizationImg',
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgSize: '180px 18px',
-      imagePath: this.app.getConfigObject().config['imagePath']['localize'],
+      imagePath: this.app.getConfigFactory().config['imagePath']['localize'],
       title: 'Voir autour de moi',
     };
 
@@ -61,7 +61,7 @@ export class MapButtons {
         this.localizationMarker = new google.maps.Marker({
           map,
           animation: google.maps.Animation.BOUNCE,
-          icon: new (google.maps as any).MarkerImage(this.app.getConfigObject().config['imagePath']['bluedot']),
+          icon: new (google.maps as any).MarkerImage(this.app.getConfigFactory().config['imagePath']['bluedot']),
           position: { lat: 31.4181, lng: 73.0776 },
         });
         let imgX = '0';
@@ -149,7 +149,7 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '-2px -2px',
       defaultCtrlChildBgSize: '120%',
-      imagePath: this.app.getConfigObject().config['imagePath']['random'],
+      imagePath: this.app.getConfigFactory().config['imagePath']['random'],
       title: 'Marqueur aléatoire',
     };
 
@@ -170,7 +170,7 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.RIGHT_TOP,
       defaultCtrlChildBgPos: '0px 0px',
       defaultCtrlChildBgSize: '100%',
-      imagePath: this.app.getConfigObject().config['imagePath']['refresh'],
+      imagePath: this.app.getConfigFactory().config['imagePath']['refresh'],
       title: 'Actualiser',
     };
 
@@ -187,14 +187,14 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '-2px -2px',
       defaultCtrlChildBgSize: '120%',
-      imagePath: this.app.getConfigObject().config['imagePath']['heatmap']['on'],
+      imagePath: this.app.getConfigFactory().config['imagePath']['heatmap']['on'],
       title: 'Thermographie',
     };
 
     GmapUtils.bindButton(map, () => {
       this.app.setHeatmapEnabled(!this.app.isHeatmapEnabled());
       const heatmapImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}`) as HTMLInputElement;
-      const imgUrl = this.app.getConfigObject().config['imagePath']['heatmap'][this.app.isHeatmapEnabled() ? 'on' : 'off'];
+      const imgUrl = this.app.getConfigFactory().config['imagePath']['heatmap'][this.app.isHeatmapEnabled() ? 'on' : 'off'];
       heatmapImgElmt.style.backgroundImage = `url("${imgUrl}")`;
       this.app.reloadMarkers(map, false);
     }, buttonOptions);
@@ -207,14 +207,14 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '-2px -2px',
       defaultCtrlChildBgSize: '120%',
-      imagePath: this.app.getConfigObject().config['imagePath']['clustering']['on'],
+      imagePath: this.app.getConfigFactory().config['imagePath']['clustering']['on'],
       title: 'Clustering',
     };
 
     GmapUtils.bindButton(map, () => {
       this.app.setClusteringEnabled(!this.app.isClusteringEnabled());
       const clusteringImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}`) as HTMLInputElement;
-      const imgUrl = this.app.getConfigObject().config['imagePath']['clustering'][this.app.isClusteringEnabled() ? 'on' : 'off'];
+      const imgUrl = this.app.getConfigFactory().config['imagePath']['clustering'][this.app.isClusteringEnabled() ? 'on' : 'off'];
       clusteringImgElmt.style.backgroundImage = `url("${imgUrl}")`;
       this.app.reloadMarkers(map, false);
     }, buttonOptions);
@@ -227,7 +227,7 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '0px 2px',
       defaultCtrlChildBgSize: '90%',
-      imagePath: this.app.getConfigObject().config['imagePath']['list'],
+      imagePath: this.app.getConfigFactory().config['imagePath']['list'],
       title: 'Exporter la liste',
     };
 
@@ -294,7 +294,7 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '0px 2px',
       defaultCtrlChildBgSize: '90%',
-      imagePath: this.app.getConfigObject().config['imagePath']['chart'],
+      imagePath: this.app.getConfigFactory().config['imagePath']['chart'],
       title: 'Voir les données graphiques',
     };
 
@@ -323,7 +323,7 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.RIGHT_TOP,
       defaultCtrlChildBgPos: '0px 0px',
       defaultCtrlChildBgSize: '100%',
-      imagePath: this.app.getConfigObject().config['imagePath']['download'],
+      imagePath: this.app.getConfigFactory().config['imagePath']['download'],
       title: 'Télécharger',
     };
 
@@ -397,7 +397,7 @@ export class MapButtons {
             build[indexNameBuilder('count', formFilters)] = peer ? peer.count : death.count;
             build[indexNameBuilder('orphans', formFilters)] = peer ? 0 : death.orphans;
             build[indexNameBuilder('homage', formFilters)] = death.homage ? `${death.homage.title}: ${death.homage.url}` : 'Non communiqué';
-            build[indexNameBuilder('sources', formFilters)] = death.sources.map((s) => s.url ? s.url : s.titre).join('\n');
+            build[indexNameBuilder('sources', formFilters)] = death.sources.map((s) => s.url ? s.url : s.title).join('\n');
 
             return build;
           };
