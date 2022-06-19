@@ -1,4 +1,4 @@
-import { Death } from './death.model';
+import { Death } from '../Death/death.model';
 
 export interface ExtendedGoogleMapsMarker extends google.maps.Marker{
   linkHash: string;

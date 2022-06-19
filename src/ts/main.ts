@@ -1,5 +1,5 @@
 import { App } from './app';
-import { Events } from './events';
+import { Events } from './Components/events';
 
 Events.addEventHandler(
   document,

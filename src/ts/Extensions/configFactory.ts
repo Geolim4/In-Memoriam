@@ -1,27 +1,29 @@
-import { Definitions, Settings } from './models';
-import { App } from './app';
+import { Definitions, Settings } from '../models';
+import { App } from '../app';
 
 /**
  * @author Georges.L <contact@geolim4.com>
  * @licence GPL-2.0
  */
-export class Config {
+export class ConfigFactory {
 
   public config: Settings;
   public definitions: Definitions;
-  private app: App;
 
   private configPath: string;
   private definitionsPath: string;
 
-  constructor(app: App, onceInitialized: VoidFunction) {
-    this.app = app;
+  constructor(onceInitialized: VoidFunction) {
     this.configPath = './data/config/settings.json';
     this.definitionsPath = './data/config/definitions.json';
     this.init(onceInitialized);
   }
 
-  public init(onceInitialized: VoidFunction): void {
+  public isDebugEnabled(): boolean {
+    return this.config.appDebug;
+  }
+
+  private init(onceInitialized: VoidFunction): void {
     const hostname = window.location.hostname;
 
     fetch(this.configPath)
@@ -45,23 +47,17 @@ export class Config {
       .then((response): any => response.json())
       .then((responseData: { definitions: Definitions }): void => {
         this.definitions = responseData.definitions;
-        if (onceInitialized) {
-          onceInitialized();
-        }
+        onceInitialized();
       }).catch((e): void => {
         if (this.isDebugEnabled()) {
           console.error(`Failed to load the definitions: ${e}`);
         }
-        this.app.getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des définitions.', null, null, true);
+        App.getInstance().getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des définitions.', null, null, true);
       });
     }).catch((e): void => {
       // No debug check here since it's stored in configuration
       console.error(`Failed to load the configuration: ${e}`);
-      this.app.getModal().modalInfo('Erreur', 'Impossible de récupérer le modèle de configuration.', null, null, true);
+      App.getInstance().getModal().modalInfo('Erreur', 'Impossible de récupérer le modèle de configuration.', null, null, true);
     });
-  }
-
-  public isDebugEnabled(): boolean {
-    return this.config.appDebug;
   }
 }

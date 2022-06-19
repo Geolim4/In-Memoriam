@@ -1,4 +1,4 @@
-import { Filters } from './models';
+import { Filters } from '../models';
 
 /**
  * @author Georges.L <contact@geolim4.com>

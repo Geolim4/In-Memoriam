@@ -1,7 +1,7 @@
 import { DeathPeer } from './deathPeer.model';
 import { DeathSource } from './deathSource.model';
 import { DeathGps } from './deathGps.model';
-import { TitleUrl } from './titleUrl.model';
+import { TitleUrl } from '../titleUrl.model';
 
 export interface Death {
   cause: string;
