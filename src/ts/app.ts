@@ -335,7 +335,7 @@ export class App {
           }
 
           let dKey = filteredResponse.response.deaths.length;
-          const filterExpression = this.searchByExpression ? Expression.getEvaluable(fieldValue) : '';
+          const filterExpression = Expression.getEvaluable(fieldValue);
           while (dKey--) {
             const filterExpressionContext = { filters, fieldName, fieldValue, death: filteredResponse.response.deaths[dKey] };
 
@@ -344,7 +344,7 @@ export class App {
                 && !StringUtilsHelper.containsString(filteredResponse.response.deaths[dKey]['section'], safeFilter)
                 && !StringUtilsHelper.containsString(filteredResponse.response.deaths[dKey]['location'], safeFilter)
                 && !StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['keywords'], safeFilterSplited)
-                && !(this.searchByExpression && filterExpression && Expression.evaluate(filterExpression, filterExpressionContext))
+                && !(this.isSearchByExpressionEnabled() && filterExpression && Expression.evaluate(filterExpression, filterExpressionContext))
               ) {
                 if (filteredResponse.response.deaths[dKey].peers.length) {
                   let continueFlag = false;
