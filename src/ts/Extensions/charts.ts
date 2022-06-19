@@ -1,8 +1,8 @@
-import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.model';
-import { FormFilters } from './models/formFilters.model';
+import { ExtendedGoogleMapsMarker } from '../models/Gmaps/extendedGoogleMapsMarker.model';
+import { FormFilters } from '../models/Filters/formFilters.model';
 import * as Highcharts from 'highcharts';
-import { Definitions } from './models';
-import { PeerList } from './models/peerList.model';
+import { Definitions } from '../models';
+import { DeathPeerList } from '../models/Death/deathPeerList.model';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -148,8 +148,8 @@ export class Charts {
     });
   }
 
-  protected getPeersList(criteria: string, markers: ExtendedGoogleMapsMarker[]): PeerList {
-    const peersList = <PeerList> {};
+  protected getPeersList(criteria: string, markers: ExtendedGoogleMapsMarker[]): DeathPeerList {
+    const peersList = <DeathPeerList> {};
 
     for (const marker of markers) {
       if (marker.death.peers) {

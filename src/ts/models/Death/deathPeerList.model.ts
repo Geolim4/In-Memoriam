@@ -1,3 +1,3 @@
-export interface PeerList {
+export interface DeathPeerList {
   [name: string]: { [name: string]: number };
 }

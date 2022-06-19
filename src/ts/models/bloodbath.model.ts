@@ -1,4 +1,4 @@
-import { Death } from './death.model';
+import { Death } from './Death/death.model';
 
 export interface Bloodbath {
   settings: {

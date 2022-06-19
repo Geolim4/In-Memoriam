@@ -1,6 +1,6 @@
-import { ExtendedContentWindows } from './models/extendedContentWindows';
-import { App } from './app';
-import { EvaluationError } from './errors/evaluationError.model';
+import { ExtendedContentWindows } from '../models/extendedContentWindows';
+import { App } from '../app';
+import { EvaluationError } from '../errors/evaluationError.model';
 
 /**
  * @author Georges.L <contact@geolim4.com>

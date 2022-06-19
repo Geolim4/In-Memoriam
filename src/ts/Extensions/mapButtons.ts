@@ -2,27 +2,26 @@
  * @author Georges.L <contact@geolim4.com>
  * @licence GPL-2.0
  */
-import { App } from './app';
-import { GmapUtils } from './helper/gmapUtils.helper';
-import { Options as GmapsOptions } from './models/Gmaps/options.model';
-import { ExtendedGoogleMapsMarker } from './models/extendedGoogleMapsMarker.model';
+import { App } from '../app';
+import { GmapUtils } from '../helper/gmapUtils.helper';
+import { Options as GmapsOptions } from '../models/Gmaps/options.model';
+import { ExtendedGoogleMapsMarker } from '../models/Gmaps/extendedGoogleMapsMarker.model';
 import micromodal from 'micromodal';
-import { StringUtilsHelper } from './helper/stringUtils.helper';
+import { StringUtilsHelper } from '../helper/stringUtils.helper';
 import { ExportToCsv } from 'export-to-csv';
-import { Death } from './models/death.model';
-import { DeathPeer } from './models/deathPeer.model';
-import { Filters } from './models';
-import { Events } from './events';
-import { IntUtilsHelper } from './helper/intUtils.helper';
+import { Death } from '../models/Death/death.model';
+import { DeathPeer } from '../models/Death/deathPeer.model';
+import { Filters } from '../models';
+import { Events } from '../Components/events';
+import { IntUtilsHelper } from '../helper/intUtils.helper';
+import { AppStatic } from '../appStatic';
 
 export class MapButtons {
-  private app: App;
   private localizationMarker: google.maps.Marker;
   private userPosition: Position;
   private emptyMarkerMessage: string;
 
-  constructor(app: App) {
-    this.app = app;
+  constructor() {
     this.localizationMarker = null;
     this.userPosition = null;
     this.emptyMarkerMessage = 'La cartographie est vide, essayez de modifier les filtres.';
@@ -47,12 +46,12 @@ export class MapButtons {
       ctrlChildId: 'localizationImg',
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgSize: '180px 18px',
-      imagePath: this.app.getConfigFactory().config['imagePath']['localize'],
+      imagePath: App.getInstance().getConfigFactory().config['imagePath']['localize'],
       title: 'Voir autour de moi',
     };
 
     GmapUtils.bindButton(map, () => {
-      const markers = this.app.getMarkers();
+      const markers = App.getInstance().getMarkers();
       if (markers.length) {
         const bounds = new google.maps.LatLngBounds();
 
@@ -62,7 +61,7 @@ export class MapButtons {
         this.localizationMarker = new google.maps.Marker({
           map,
           animation: google.maps.Animation.BOUNCE,
-          icon: new (google.maps as any).MarkerImage(this.app.getConfigFactory().config['imagePath']['bluedot']),
+          icon: new (google.maps as any).MarkerImage(App.getInstance().getConfigFactory().config['imagePath']['bluedot']),
           position: { lat: 31.4181, lng: 73.0776 },
         });
         let imgX = '0';
@@ -83,11 +82,11 @@ export class MapButtons {
           localizationInfoWindow.setPosition(localizationLatLng);
 
           google.maps.event.addListener(this.localizationMarker, 'click', () => {
-            if (this.app.getCurrentInfoWindow()) {
-              this.app.getCurrentInfoWindow().close();
+            if (App.getInstance().getCurrentInfoWindow()) {
+              App.getInstance().getCurrentInfoWindow().close();
             }
             localizationInfoWindow.open(map, this.localizationMarker);
-            this.app.setCurrentInfoWindow(localizationInfoWindow);
+            App.getInstance().setCurrentInfoWindow(localizationInfoWindow);
           });
           localizationInfoWindow.open(map, this.localizationMarker);
 
@@ -125,7 +124,7 @@ export class MapButtons {
         if (this.userPosition) {
           geolocationCallback(this.userPosition);
         } else {
-          this.app.getModal().modalInfo(
+          App.getInstance().getModal().modalInfo(
             'Information sur la localisation',
             'La demande de localisation ne servira qu\'à positionner la carte autour de vous, aucune donnée ne sera envoyée ni même conservée nulle part.',
             () => {
@@ -138,7 +137,7 @@ export class MapButtons {
           );
         }
       } else {
-        this.app.getModal().modalInfo('Information', this.emptyMarkerMessage);
+        App.getInstance().getModal().modalInfo('Information', this.emptyMarkerMessage);
       }
     }, buttonOptions);
   }
@@ -150,13 +149,13 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '-2px -2px',
       defaultCtrlChildBgSize: '120%',
-      imagePath: this.app.getConfigFactory().config['imagePath']['random'],
+      imagePath: App.getInstance().getConfigFactory().config['imagePath']['random'],
       title: 'Marqueur aléatoire',
     };
 
     GmapUtils.bindButton(map, () => {
-      const randomIndex = IntUtilsHelper.getRandomInt(0, this.app.getMarkers().length - 1);
-      const randomMarker = this.app.getMarkers()[randomIndex];
+      const randomIndex = IntUtilsHelper.getRandomInt(0, App.getInstance().getMarkers().length - 1);
+      const randomMarker = App.getInstance().getMarkers()[randomIndex];
 
       map.setCenter(randomMarker.getPosition());
       map.setZoom(13);
@@ -171,14 +170,14 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.RIGHT_TOP,
       defaultCtrlChildBgPos: '0px 0px',
       defaultCtrlChildBgSize: '100%',
-      imagePath: this.app.getConfigFactory().config['imagePath']['refresh'],
+      imagePath: App.getInstance().getConfigFactory().config['imagePath']['refresh'],
       title: 'Actualiser',
     };
 
     GmapUtils.bindButton(map, () => {
-      this.app.setForceRefresh(true);
-      this.app.loadGlossary();
-      this.app.reloadMarkers(map, false);
+      App.getInstance().setForceRefresh(true);
+      App.getInstance().loadGlossary();
+      App.getInstance().reloadMarkers(map, false);
     }, buttonOptions);
   }
 
@@ -189,16 +188,16 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '-2px -2px',
       defaultCtrlChildBgSize: '120%',
-      imagePath: this.app.getConfigFactory().config['imagePath']['heatmap']['on'],
+      imagePath: App.getInstance().getConfigFactory().config['imagePath']['heatmap']['on'],
       title: 'Thermographie',
     };
 
     GmapUtils.bindButton(map, () => {
-      this.app.setHeatmapEnabled(!this.app.isHeatmapEnabled());
+      App.getInstance().setHeatmapEnabled(!App.getInstance().isHeatmapEnabled());
       const heatmapImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}`) as HTMLInputElement;
-      const imgUrl = this.app.getConfigFactory().config['imagePath']['heatmap'][this.app.isHeatmapEnabled() ? 'on' : 'off'];
+      const imgUrl = App.getInstance().getConfigFactory().config['imagePath']['heatmap'][App.getInstance().isHeatmapEnabled() ? 'on' : 'off'];
       heatmapImgElmt.style.backgroundImage = `url("${imgUrl}")`;
-      this.app.reloadMarkers(map, false);
+      App.getInstance().reloadMarkers(map, false);
     }, buttonOptions);
   }
 
@@ -209,16 +208,16 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '-2px -2px',
       defaultCtrlChildBgSize: '120%',
-      imagePath: this.app.getConfigFactory().config['imagePath']['clustering']['on'],
+      imagePath: App.getInstance().getConfigFactory().config['imagePath']['clustering']['on'],
       title: 'Clustering',
     };
 
     GmapUtils.bindButton(map, () => {
-      this.app.setClusteringEnabled(!this.app.isClusteringEnabled());
+      App.getInstance().setClusteringEnabled(!App.getInstance().isClusteringEnabled());
       const clusteringImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}`) as HTMLInputElement;
-      const imgUrl = this.app.getConfigFactory().config['imagePath']['clustering'][this.app.isClusteringEnabled() ? 'on' : 'off'];
+      const imgUrl = App.getInstance().getConfigFactory().config['imagePath']['clustering'][App.getInstance().isClusteringEnabled() ? 'on' : 'off'];
       clusteringImgElmt.style.backgroundImage = `url("${imgUrl}")`;
-      this.app.reloadMarkers(map, false);
+      App.getInstance().reloadMarkers(map, false);
     }, buttonOptions);
   }
 
@@ -229,17 +228,17 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '0px 2px',
       defaultCtrlChildBgSize: '90%',
-      imagePath: this.app.getConfigFactory().config['imagePath']['list'],
+      imagePath: App.getInstance().getConfigFactory().config['imagePath']['list'],
       title: 'Exporter la liste',
     };
 
     GmapUtils.bindButton(map, () => {
-      const markers = this.app.getMarkers();
+      const markers = App.getInstance().getMarkers();
 
       if (markers.length) {
         micromodal.show('modal-bloodbath-list', {
           onShow: () => {
-            const filters = this.app.getFilters(false);
+            const filters = App.getInstance().getFilters(false);
             const downloadButton = Events.hardRemoveEventHandler(document.querySelector('#modal-bloodbath-list button[data-micromodal-role="download-data"]'));
             const modalBloodbathElement = <HTMLInputElement>document.getElementById('modal-bloodbath-list-content');
             const modalBloodbathCounterElement = <HTMLInputElement>document.getElementById('modal-bloodbath-death-counter');
@@ -259,8 +258,8 @@ export class MapButtons {
             for (const key in markers) {
               const death = markers[key].death;
               let peersCount = 0;
-              const houseFormatted =  this.app.getFilterValueLabel('house', death.house);
-              const causeFormatted = this.app.getFilterValueLabel('cause', death.cause);
+              const houseFormatted =  App.getInstance().getFilterValueLabel('house', death.house);
+              const causeFormatted = App.getInstance().getFilterValueLabel('cause', death.cause);
 
               for (const peer of death.peers) {
                 peersCount += peer.count;
@@ -268,7 +267,7 @@ export class MapButtons {
 
               const totalDeathCount = death.count + peersCount;
               const deathLabel = `${death.section ? `${death.section}, ` : ''}${death.location} ${totalDeathCount > 1 ? `(<strong style="color: red">${totalDeathCount} décès</strong>)` : ''}`;
-              const deathLink = this.app.getMarkerLink(death, deathLabel);
+              const deathLink = AppStatic.getMarkerLink(death, deathLabel);
               modalBloodbathCounter += totalDeathCount;
 
               modalBloodbathListContent += `<p>
@@ -277,14 +276,14 @@ export class MapButtons {
 </p>`;
             }
             modalBloodbathListContent += '</div>';
-            modalBloodbathElement.innerHTML = StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, this.app.getGlossary());
+            modalBloodbathElement.innerHTML = StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, App.getInstance().getGlossary());
             modalBloodbathCounterElement.innerHTML = `${modalBloodbathCounter} décès`;
             modalBloodbathYear.innerHTML = filters.year;
-            this.app.bindTooltip();
+            AppStatic.bindTooltip();
           },
         });
       } else {
-        this.app.getModal().modalInfo('Information', this.emptyMarkerMessage);
+        App.getInstance().getModal().modalInfo('Information', this.emptyMarkerMessage);
       }
     }, buttonOptions);
   }
@@ -296,24 +295,24 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
       defaultCtrlChildBgPos: '0px 2px',
       defaultCtrlChildBgSize: '90%',
-      imagePath: this.app.getConfigFactory().config['imagePath']['chart'],
+      imagePath: App.getInstance().getConfigFactory().config['imagePath']['chart'],
       title: 'Voir les données graphiques',
     };
 
     GmapUtils.bindButton(map, () => {
-      const markers = this.app.getMarkers();
+      const markers = App.getInstance().getMarkers();
       if (markers.length) {
         micromodal.show('modal-bloodbath-chart', {
           onShow: () => {
-            const definitions = this.app.getConfigDefinitions();
-            const year = this.app.getFilters(false)['year'];
+            const definitions = App.getInstance().getConfigDefinitions();
+            const year = App.getInstance().getFilters(false)['year'];
 
-            this.app.getCharts().buildChartPerCause(markers, this.app.getFormFilters(), definitions, year);
-            this.app.getCharts().buildChartPerHouse(markers, this.app.getFormFilters(), definitions, year);
+            App.getInstance().getCharts().buildChartPerCause(markers, App.getInstance().getFormFilters(), definitions, year);
+            App.getInstance().getCharts().buildChartPerHouse(markers, App.getInstance().getFormFilters(), definitions, year);
           },
         });
       } else {
-        this.app.getModal().modalInfo('Information', this.emptyMarkerMessage);
+        App.getInstance().getModal().modalInfo('Information', this.emptyMarkerMessage);
       }
     }, buttonOptions);
   }
@@ -325,7 +324,7 @@ export class MapButtons {
       ctrlPosition: google.maps.ControlPosition.RIGHT_TOP,
       defaultCtrlChildBgPos: '0px 0px',
       defaultCtrlChildBgSize: '100%',
-      imagePath: this.app.getConfigFactory().config['imagePath']['download'],
+      imagePath: App.getInstance().getConfigFactory().config['imagePath']['download'],
       title: 'Télécharger',
     };
 
@@ -335,23 +334,23 @@ export class MapButtons {
   }
 
   private promptDataDownloadExport(): void {
-    const markers = this.app.getMarkers();
+    const markers = App.getInstance().getMarkers();
 
     if (markers.length) {
-      this.app.getModal().modalInfo(
+      App.getInstance().getModal().modalInfo(
         'Téléchargement des données',
         'Les données que vous allez télécharger seront contextualisées selon les filtres appliqués. Continuer ?',
         () => {
           const now = new Date();
           const filenameDate = `${now.getFullYear()}${now.getMonth()}${now.getDay()}${now.getHours()}${now.getMinutes()}${now.getSeconds()}`;
-          const definitions = this.app.getConfigDefinitions();
-          const formFiltersKeyed = this.app.getFormFiltersKeyed();
-          const formFilters = this.app.getFilters(false);
+          const definitions = App.getInstance().getConfigDefinitions();
+          const formFiltersKeyed = App.getInstance().getFormFiltersKeyed();
+          const formFilters = App.getInstance().getFilters(false);
 
           const options = {
             decimalSeparator: '.',
             fieldSeparator: ',',
-            filename: `In-Memoriam-Export-${this.app.getFilters(false)['year']}.${filenameDate}`,
+            filename: `In-Memoriam-Export-${App.getInstance().getFilters(false)['year']}.${filenameDate}`,
             quoteStrings: '"',
             showLabels: true,
             showTitle: false,
@@ -418,7 +417,7 @@ export class MapButtons {
         'Télécharger au format CSV',
       );
     } else {
-      this.app.getModal().modalInfo('Information', this.emptyMarkerMessage);
+      App.getInstance().getModal().modalInfo('Information', this.emptyMarkerMessage);
     }
   }
 }

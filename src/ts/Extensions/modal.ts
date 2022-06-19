@@ -1,6 +1,6 @@
-import { Events } from './events';
+import { Events } from '../Components/events';
 import micromodal from 'micromodal';
-import { ModalInfoParameters } from './models/modalInfoParameters.model';
+import { ModalInfoParameters } from '../models/modalInfoParameters.model';
 
 /**
  * @author Georges.L <contact@geolim4.com>
