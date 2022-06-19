@@ -10,7 +10,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "2.0.1",
+    "appVersion": "2.0.2",
     "contactEmail": "contact@geolim4.com",
     "deathsSrc": "./data/deaths/%year%.json",
     "defaultLat": 48.1,
