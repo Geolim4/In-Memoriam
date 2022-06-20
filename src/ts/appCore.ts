@@ -204,7 +204,8 @@ export abstract class AppCore extends AppAbstract {
           this.setCurrentInfoWindow(infoWindow);
           const infoWindowContent = infoWindow.getContent();
           if (typeof infoWindowContent === 'object') {
-            Events.addEventHandler(infoWindowContent.querySelector('a.error-link'), 'click', () => {
+            Events.addEventHandler(infoWindowContent.querySelector('a.error-link'), ['click', 'touchstart'], (e) => {
+              e.preventDefault();
               const reference = `${death.section}, ${death.location} le ${death.day}/${death.month}/${death.year}`;
               const mailtoSubject = `Erreur trouvée: ${reference}`;
               this.getModal().modalInfo(
@@ -535,7 +536,9 @@ export abstract class AppCore extends AppAbstract {
     });
 
     resetButtons.forEach((button) => {
-      Events.addEventHandler(button, 'click', (): void => {
+      Events.addEventHandler(button, ['click', 'touchstart'], (e): void => {
+        e.preventDefault();
+        e.stopImmediatePropagation(); // Avoid "change" event to be triggered
         const target = <HTMLInputElement | null>document.querySelector(button.dataset.resetFieldTarget);
         if (target !== null && target.value !== '') {
           target.value = '';
@@ -546,7 +549,7 @@ export abstract class AppCore extends AppAbstract {
 
     selects.forEach((selector) => {
       if (!selector.multiple) {
-        selector.value = (typeof filters[selector.name] !== 'undefined' ? filters[selector.name] : ''); // can be : event.currentTarget.value inside the event handler
+        selector.value = (typeof filters[selector.name] !== 'undefined' ? filters[selector.name] : '');
       }
 
       if (typeof (this.eventHandlers[selector.id]) === 'function') {
@@ -554,11 +557,13 @@ export abstract class AppCore extends AppAbstract {
       }
 
       this.eventHandlers[selector.id] = (): void => {
-        if (this.formElement.checkValidity()) {
-          this.bindMarkers(map, this.getFilters(false));
-        } else {
-          this.formElement.dispatchEvent(new Event('submit', { cancelable: true }));
-        }
+        setTimeout(() => {
+          if (this.formElement.checkValidity()) {
+            this.bindMarkers(map, this.getFilters(false));
+          } else {
+            this.formElement.dispatchEvent(new Event('submit', { cancelable: true }));
+          }
+        }, document.activeElement.id === selector.id ? 0 : 150); // Allow to capture reset button clicks
       };
       Events.addEventHandler(selector, 'change', this.eventHandlers[selector.id]);
     });
