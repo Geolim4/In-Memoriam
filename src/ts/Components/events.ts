@@ -4,17 +4,18 @@
  * @licence GPL-2.0
  */
 export class Events {
-  public static addEventHandler(elem: EventTarget, eventType: string, handler: EventListenerOrEventListenerObject, once?: boolean): void {
-    if (elem.addEventListener) {
-      elem.addEventListener(eventType, handler, once ? { once: true } : false);
-      if (eventType === 'click') {
-        elem.addEventListener('touchstart', handler, once ? { once: true } : false);
+  public static addEventHandler(elem: EventTarget, eventType: string|string[], handler: EventListenerOrEventListenerObject, once?: boolean): void {
+    const eventTypeAry = typeof eventType === 'string' ? [eventType] : eventType;
+
+    eventTypeAry.forEach((eventType: string) => {
+      if (elem.addEventListener) {
+        elem.addEventListener(eventType, handler, once ? { once: true } : false);
+        // @ts-ignore
+      } else if (typeof elem.attachEvent !== 'undefined') {
+        // @ts-ignore
+        elem.attachEvent(`on ${eventType}`, wrappedHandler);
       }
-      // @ts-ignore
-    } else if (typeof elem.attachEvent !== 'undefined') {
-      // @ts-ignore
-      elem.attachEvent(`on ${eventType}`, handler);
-    }
+    });
   }
 
   public static removeEventHandler(elem: HTMLElement, eventType: string, handler: EventListenerOrEventListenerObject): void {

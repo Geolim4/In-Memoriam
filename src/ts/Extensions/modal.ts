@@ -59,8 +59,9 @@ export class Modal {
             const validateButton = <HTMLInputElement> document.querySelector('#modal-info button[data-micromodal-role="validate"]');
             Events.addEventHandler(
               validateButton,
-              'click',
-              () => {
+              ['click', 'touchstart'],
+              (e) => {
+                e.preventDefault();
                 hasConfirmed = true;
                 confirmCallback();
               },

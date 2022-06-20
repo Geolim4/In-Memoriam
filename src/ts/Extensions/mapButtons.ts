@@ -248,8 +248,9 @@ export class MapButtons {
 
             Events.addEventHandler(
               downloadButton,
-              'click',
-              () => {
+              ['click', 'touchstart'],
+              (e) => {
+                e.preventDefault();
                 this.promptDataDownloadExport();
               },
               true,
