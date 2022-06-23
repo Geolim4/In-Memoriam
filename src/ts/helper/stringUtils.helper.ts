@@ -3,6 +3,7 @@
  * @author Jbz797 <jean.benoit.gautier@gmail.com>
  * @licence GPL-2.0
  */
+
 export class StringUtilsHelper {
   public static normalizeString(string: string): string {
     return string.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
@@ -31,7 +32,28 @@ export class StringUtilsHelper {
     });
   }
 
-  public static ucfirst(string: string): string {
+  public static ucFirst(string: string): string {
     return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  public static setCaretPosition(elementOrId: string|HTMLInputElement, caretPosStart: number, caretPosEnd?: number): void {
+    const elem = typeof elementOrId === 'string' ? <HTMLInputElement> document.getElementById(elementOrId) : elementOrId;
+
+    if (elem !== null) {
+      // @ts-ignore (IE Compatibility)
+      if (elem.createTextRange) {
+        // @ts-ignore (IE Compatibility)
+        const range = elem.createTextRange();
+        range.move('character', caretPosStart);
+        range.select();
+      } else {
+        if (elem.selectionStart) {
+          elem.focus();
+          elem.setSelectionRange(caretPosStart, caretPosEnd !== null ? caretPosEnd : caretPosStart);
+        } else {
+          elem.focus();
+        }
+      }
+    }
   }
 }

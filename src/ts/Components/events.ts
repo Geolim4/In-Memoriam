@@ -43,6 +43,7 @@ export class Events {
       if (e.type === 'keydown') {
         strokeState += e.key;
         if (hadDown && strokeState === key.repeat(2)) {
+          e.preventDefault();
           handler();
           if (doOnce) {
             target.removeEventListener('keydown', callback);

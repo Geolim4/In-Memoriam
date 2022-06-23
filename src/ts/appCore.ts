@@ -548,6 +548,7 @@ export abstract class AppCore extends AppAbstract {
     });
 
     selects.forEach((selector) => {
+      const hasResetButton = selector.nextElementSibling && selector.nextElementSibling.hasAttribute('data-reset-field-target');
       if (!selector.multiple) {
         selector.value = (typeof filters[selector.name] !== 'undefined' ? filters[selector.name] : '');
       }
@@ -563,7 +564,7 @@ export abstract class AppCore extends AppAbstract {
           } else {
             this.formElement.dispatchEvent(new Event('submit', { cancelable: true }));
           }
-        }, document.activeElement.id === selector.id ? 0 : 150); // Allow to capture reset button clicks
+        }, (document.activeElement.id === selector.id || !hasResetButton) ? 0 : 150); // Allow to capture reset button clicks
       };
       Events.addEventHandler(selector, 'change', this.eventHandlers[selector.id]);
     });
@@ -576,6 +577,8 @@ export abstract class AppCore extends AppAbstract {
           <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
           <span>Recherche avancée activée</span>`;
         searchElement.parentElement.appendChild(advSearchLabel);
+        searchElement.value = 'expr:(death !== null)';
+        StringUtilsHelper.setCaretPosition(searchElement, 16, 20);
         this.setSearchByExpression(true);
       } else {
         searchElement.value = '';
