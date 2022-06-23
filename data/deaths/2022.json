@@ -244,6 +244,50 @@
       ]
     },
     {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "01",
+      "day": "12",
+      "keywords": "Christophe Ettori",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un sapeur-pompier professionnel de Rizzanese est décédé des suites d’un accident de la route en rentrant chez lui après son service.\nIl était marié et papa de deux jeunes enfants.",
+      "section": "SDIS 2A",
+      "location": "Rizzanese (Corse du Sud)",
+      "origin": "domtom",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 41.63883010195976,
+        "lon": 8.960543614394952
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://twitter.com/SIS_2A/status/1481315051797626880",
+          "title": "@SIS_2A",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.corsematin.com/articles/grande-emotion-a-olmeto-apres-la-disparition-de-christophe-ettori-122959",
+          "title": "Corse Matin",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/corse/corse-du-sud/sartene/un-trentenaire-decede-dans-un-accident-de-la-route-entre-sartene-et-propriano-2414137.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
@@ -2477,6 +2521,76 @@
         {
           "url": "",
           "title": "Cagnotte",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "06",
+      "day": "23",
+      "keywords": "Thomas Rocher",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un sapeur-pompier professionnel de La Couronne est décédé des suites d’un accident de la route au retour d'une intervention.\nIl était papa d'un jeune enfant.",
+      "section": "SDIS 16",
+      "location": "La Couronne (Charente)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.61296788920488,
+        "lon": 0.0988094562153378
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://twitter.com/SDIS16/status/1539899425060945925",
+          "title": "@SDIS16",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.charentelibre.fr/societe/justice/le-tatre-un-pompier-charentais-decede-en-rentrant-d-intervention-11393879.php",
+          "title": "Charente Libre",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "06",
+      "day": "23",
+      "keywords": "David",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la circonscription de Haguenau affecté en voie publique à mis fin à ses jours avec son arme de service à sa prise service le matin.\nIl était marié et père de trois enfants.",
+      "section": "CSP Haguenau",
+      "location": "Haguenau (Bas-Rhin)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.815271928897474,
+        "lon": 7.792594709173171
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.dna.fr/faits-divers-justice/2022/06/23/haguenau-un-policier-de-45-ans-met-fin-a-ses-jours-au-commissariat",
+          "title": "DNS",
           "paywall": false,
           "trustful": true
         }
