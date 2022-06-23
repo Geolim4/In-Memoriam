@@ -26,7 +26,6 @@ export class Modal {
   }
 
   public modalInfo(title: string, content: string, confirmCallback?: VoidFunction, cancelCallback?: VoidFunction, isError?: boolean, okLabel?: string): void {
-    console.log(this.modelOpened);
     if (!this.modelOpened) {
       this.modelOpened = true;
       let hasConfirmed = false;
@@ -82,8 +81,6 @@ export class Modal {
         okLabel,
         title,
       });
-
-      console.log(this.modelStack);
     }
   }
 }

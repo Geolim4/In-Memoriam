@@ -381,7 +381,7 @@ export class MapButtons {
               if (indexName === 'text') {
                 formFiltersSuffix = formFilters.search ? ` (recherche: ${formFilters.search})` : '';
               }
-              return `"${StringUtilsHelper.ucfirst(definitions[indexName]['#name'])}${formFiltersSuffix}"`;
+              return `"${StringUtilsHelper.ucFirst(definitions[indexName]['#name'])}${formFiltersSuffix}"`;
             };
 
             const months = formFilters.month.split(',').map((m): string => {
