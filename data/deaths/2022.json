@@ -2244,7 +2244,7 @@
       "keywords": "Perrine JEANNETEAU",
       "house": "gendarmerie",
       "peers": [],
-      "text": "Une gendarme de la BP de Montaigu-Vendée à mis fin à ses jours avec son arme de service.",
+      "text": "Une gendarme de la BP de Montaigu-Vendée a mis fin à ses jours avec son arme de service.",
       "section": "BP",
       "location": "Montaigu-Vendée (Vendée)",
       "origin": "interieur",
@@ -2300,7 +2300,7 @@
       "keywords": "Grégory Josse",
       "house": "gendarmerie",
       "peers": [],
-      "text": "Une gendarme de l'EDSR de Versailles à mis fin à ses jours avec son arme de service.\nIl était marié et père de deux filles.",
+      "text": "Une gendarme de l'EDSR de Versailles a mis fin à ses jours avec son arme de service.\nIl était marié et père de deux filles.",
       "section": "EDSR 78",
       "location": "Versailles (Yvelines)",
       "origin": "interieur",
@@ -2350,7 +2350,7 @@
       "keywords": "Stéphane",
       "house": "police",
       "peers": [],
-      "text": "Un policier de la circonscription de Bordeaux affecté au CIC nuit à mis fin à ses jours avec son arme de service.\nIl était marié et père de trois enfants.",
+      "text": "Un policier de la circonscription de Bordeaux affecté au CIC nuit a mis fin à ses jours avec son arme de service.\nIl était marié et père de trois enfants.",
       "section": "CIC - CSP Bordeaux",
       "location": "Bordeaux (Gironde)",
       "origin": "interieur",
@@ -2394,7 +2394,7 @@
       "keywords": "Romain PECULLO",
       "house": "gendarmerie",
       "peers": [],
-      "text": "Un gendarme de la BP d'Épouville à mis fin à ses jours avec son arme de service.\nIl était marié et père de trois enfants.",
+      "text": "Un gendarme de la BP d'Épouville a mis fin à ses jours avec son arme de service.\nIl était marié et père de trois enfants.",
       "section": "BP Épouville",
       "location": "Épouville (Seine-Maritime)",
       "origin": "interieur",
@@ -2500,7 +2500,7 @@
       "keywords": "JUCAN Cosmin",
       "house": "gendarmerie",
       "peers": [],
-      "text": "Un gendarme du Groupement de Gendarmerie Départementale du Val d'Oise à mis fin à ses jours avec son arme de service.\nIl était marié et père de deux jeunes enfants dont un bébé.",
+      "text": "Un gendarme du Groupement de Gendarmerie Départementale du Val d'Oise a mis fin à ses jours avec son arme de service.\nIl était marié et père de deux jeunes enfants dont un bébé.",
       "section": "GGD 95",
       "location": "Pontoise (Val d'Oise)",
       "origin": "interieur",
@@ -2521,6 +2521,88 @@
         {
           "url": "",
           "title": "Cagnotte",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 6,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "06",
+      "day": "16",
+      "keywords": "Jean-François Jacquemard",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme réserviste du Doubs décède d'un malaise cardiaque dans sa caserne au retour d'une mission.\nMilitaire hautement décoré, il était marié, père de six enfants et sept fois grand-père.",
+      "section": "CRT 25/4",
+      "location": "Besançon (Doubs)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.23107858978028,
+        "lon": 6.027579723457498
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://twitter.com/Gendarmerie_091/status/1540308132798267392",
+          "title": "@Gendarmerie_091",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/lemouvant-hommage-a-jean-francois-jacquemard-gendarme-reserviste-du-doubs-decede-en-service/",
+          "title": "La voix du gendarme",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "06",
+      "day": "19",
+      "keywords": "Mickael DESBOIS",
+      "house": "gendarmerie",
+      "peers": [],
+      "text": "Un gendarme mobile de l'EGM 32/3 décède d'une embolie pulmonaire lors d'un détachement en Guyane.\nIl était marié et père de trois enfants.",
+      "section": "EGM 32/3",
+      "location": "Luçon (Doubs)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.457843544909785,
+        "lon": -1.1644146678142115
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://twitter.com/Gendarmerie_091/status/1540308132798267392",
+          "title": "@Gendarmerie_091",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/deces-en-service-dun-gendarme-mobile-en-guyane/",
+          "title": "La voix du gendarme",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actuforcesdelordre.fr/2022/06/24/guyane-un-gendarme-mobile-de-lucon-decede-tragiquement/",
+          "title": "ActuFDO",
           "paywall": false,
           "trustful": true
         }
@@ -2561,6 +2643,12 @@
           "title": "Charente Libre",
           "paywall": false,
           "trustful": true
+        },
+        {
+          "url": "https://actu.fr/nouvelle-aquitaine/la-couronne_16113/charente-un-pompier-est-decede-en-retour-d-intervention_51996136.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
         }
       ]
     },
@@ -2568,7 +2656,7 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
-      "orphans": 0,
+      "orphans": 3,
       "unpublished_reason": "",
       "year": "2022",
       "month": "06",
@@ -2576,7 +2664,7 @@
       "keywords": "David",
       "house": "police",
       "peers": [],
-      "text": "Un policier de la circonscription de Haguenau affecté en voie publique à mis fin à ses jours avec son arme de service à sa prise service le matin.\nIl était marié et père de trois enfants.",
+      "text": "Un policier de la circonscription de Haguenau affecté en voie publique a mis fin à ses jours avec son arme de service à sa prise service le matin.\nIl était marié et père de trois enfants.",
       "section": "CSP Haguenau",
       "location": "Haguenau (Bas-Rhin)",
       "origin": "interieur",
@@ -2589,8 +2677,82 @@
       "homage": null,
       "sources": [
         {
+          "url": "https://actu17.fr/faits-divers/bas-rhin-un-policier-sest-suicide-au-commissariat-de-haguenau.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
           "url": "https://www.dna.fr/faits-divers-justice/2022/06/23/haguenau-un-policier-de-45-ans-met-fin-a-ses-jours-au-commissariat",
-          "title": "DNS",
+          "title": "DNA",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/bas-rhin-suicide-d-un-policier-au-commissariat-de-haguenau-20220623",
+          "title": "Figaro",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/3314471-20220623-bas-rhin-policier-suicide-arme-commissariat-haguenau",
+          "title": "20 minutes",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/grand-est/bas-rhin/haguenau/bas-rhin-suicide-d-un-policier-au-commissariat-de-haguenau-c-etait-un-collegue-tres-apprecie-exemplaire-dans-son-travail-2569268.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "06",
+      "day": "24",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la BAC du 13e arrondissement de Paris a mis fin à ses jours avec son arme de service à sa prise service le matin.\nIl était marié et père d'un jeune enfant.",
+      "section": "BAC jour (DSPAP)",
+      "location": "Paris 13e",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.833051558131615,
+        "lon": 2.3562546208183037
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/paris-un-policier-de-la-bac-age-de-28-ans-sest-suicide.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.europe1.fr/societe/info-europe-1-paris-un-policier-de-la-bac-se-suicide-avant-sa-convocation-a-ligpn-4119609",
+          "title": "Europe1",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/un-policier-se-suicide-a-paris-peu-avant-sa-convocation-a-l-igpn-20220624",
+          "title": "Figaro",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/police/un-policier-se-suicide-a-paris-peu-avant-sa-convocation-a-l-igpn-cafd1372-f3e3-11ec-96c2-5c611dc93293",
+          "title": "Ouest France",
           "paywall": false,
           "trustful": true
         }
