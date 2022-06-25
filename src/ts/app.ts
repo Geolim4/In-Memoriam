@@ -1,5 +1,6 @@
 import {  Filters } from './models';
 import { AppCore } from './appCore';
+import { Permalink } from './Components/permalink';
 
 /**
  * @description Main app code
@@ -97,6 +98,8 @@ export class App extends AppCore {
         filters[select.id] = select.value;
       }
     });
+
+    Permalink.build(filters);
 
     return filters;
   }

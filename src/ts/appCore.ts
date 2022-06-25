@@ -10,9 +10,8 @@ import { Expression } from './Components/expression';
 import { EvaluationError } from './errors/evaluationError.model';
 import { Events } from './Components/events';
 import { ExtendedGoogleMapsMarker } from './models/Gmaps/extendedGoogleMapsMarker.model';
-import { Death } from './models/Death/death.model';
+import { Death, DeathOrigin } from './models/Death/death.model';
 import { AppStatic } from './appStatic';
-import { Permalink } from './Components/permalink';
 import { TitleUrl } from './models/titleUrl.model';
 import micromodal from 'micromodal';
 import activityDetector from 'activity-detector';
@@ -53,9 +52,10 @@ export abstract class AppCore extends AppAbstract {
   public abstract getFormFiltersKeyed(): { [name: string]: { [name: string]: string } };
 
   protected bindMarkers(map: google.maps.Map, filters: Filters): void {
+    const stopwatchStart = window.performance.now();
     fetch(this.buildFetchMarkersUrl(filters.year)).then((response) => response.json()).then((responseData: Bloodbath) => {
       const bounds = new google.maps.LatLngBounds();
-      const domTomMarkers = <ExtendedGoogleMapsMarker[]>[];
+      const domTomOrOpexMarkers = <ExtendedGoogleMapsMarker[]>[];
       const heatMapData = <{ location: google.maps.LatLng, weight: number }[]>[];
       const nationalMarkers = <ExtendedGoogleMapsMarker[]>[];
       const filteredResponse = this.getFilteredResponse(responseData, filters);
@@ -226,10 +226,10 @@ export abstract class AppCore extends AppAbstract {
         });
 
         this.infoWindows.push(infoWindow);
-        if (death.origin === 'interieur') {
+        if (death.origin === DeathOrigin.Interieur) {
           nationalMarkers.push(marker);
         } else {
-          domTomMarkers.push(marker);
+          domTomOrOpexMarkers.push(marker);
         }
         heatMapData.push({
           location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
@@ -239,20 +239,6 @@ export abstract class AppCore extends AppAbstract {
         this.markers.push(marker);
         this.markerHashIndex[marker.linkHash] = this.markers.length - 1;
       }
-
-      google.maps.event.addListener(map, 'zoom_changed', (): void => {
-        const zoomLevel = map.getZoom();
-        for (const circle of this.circles) {
-          circle.setVisible(zoomLevel > 8);
-          circle.setOptions({
-            fillOpacity: Math.min(30, zoomLevel * 2) / 100,
-            strokeOpacity: Math.min(30, zoomLevel * 2) / 100,
-          });
-        }
-        for (const marker of this.markers) {
-          marker.setOpacity(zoomLevel <= 8 ? 1 : (marker.death.gps.accurate ? 1 : 0.75));
-        }
-      });
 
       // We assume that if only have a single result
       // that the infoWindow should be opened by default
@@ -274,15 +260,16 @@ export abstract class AppCore extends AppAbstract {
 
       /**
        * National marker prioritization:
-       * We only bounds to DomTom if there's
+       * We only bounds to DomTom/Opex if there's
        * nothing else on national territory
        */
-      const boundsMarkers = (nationalMarkers.length ? nationalMarkers : domTomMarkers);
+      const boundsMarkers = (nationalMarkers.length ? nationalMarkers : domTomOrOpexMarkers);
       for (const key in boundsMarkers) {
         if (boundsMarkers.hasOwnProperty(key)) {
           bounds.extend(boundsMarkers[key].getPosition());
         }
       }
+      map.fitBounds(bounds);
 
       if (heatMapData.length && this.isHeatmapEnabled()) {
         this.heatMap = new google.maps.visualization.HeatmapLayer({
@@ -291,10 +278,10 @@ export abstract class AppCore extends AppAbstract {
         });
         this.heatMap.setMap(map);
       }
-
-      Permalink.build(filters);
       this.printDefinitionsText(responseData, filters);
-      map.fitBounds(bounds);
+      if (this.getConfigFactory().isDebugEnabled()) {
+        console.log(`${this.markers.length} marker${this.markers.length === 1 ? '' : 's'} loaded in ${(window.performance.now() - stopwatchStart) / 1000}s`);
+      }
     }).catch((e): void => {
       if (this.getConfigFactory().isDebugEnabled()) {
         console.error(e);
@@ -332,6 +319,7 @@ export abstract class AppCore extends AppAbstract {
         this.getMapButtons().bindCustomButtons(map);
         this.bindMarkers(map, this.getFilters(true));
         this.bindMarkerLinkEvent(map);
+        this.bindMapEvents(map);
         this.bindFullscreenFormFilterListener();
         this.printSupportAssociations();
       }).catch((reason): void => {
@@ -399,10 +387,17 @@ export abstract class AppCore extends AppAbstract {
           const safeFilter = <string>StringUtilsHelper.normalizeString(fieldValue);
           const safeFilterBlocks = <string[]>StringUtilsHelper.normalizeString(fieldValue).split(' ').map((str): string => str.trim());
           const safeFilterSplited = <string[]>[];
+          const negatedFilterSplited = <string[]>[];
 
-          for (const block of safeFilterBlocks) {
+          for (let block of safeFilterBlocks) {
+            const negated = block.charAt(0) === '!';
+            block = (negated ? block.substring(1) : block);
             if (block.length >= this.getConfigFactory().config['searchMinLength']) {
-              safeFilterSplited.push(block);
+              if (!negated) {
+                safeFilterSplited.push(block);
+              } else {
+                negatedFilterSplited.push(block);
+              }
             }
           }
 
@@ -412,11 +407,24 @@ export abstract class AppCore extends AppAbstract {
             const filterExpressionContext = { filters, fieldName, fieldValue, death: filteredResponse.response.deaths[dKey] };
 
             if (fieldName === 'search' && fieldValue.length >= this.getConfigFactory().config['searchMinLength']) {
-              if (!StringUtilsHelper.containsString(filteredResponse.response.deaths[dKey]['text'], safeFilter)
-                && !StringUtilsHelper.containsString(filteredResponse.response.deaths[dKey]['section'], safeFilter)
-                && !StringUtilsHelper.containsString(filteredResponse.response.deaths[dKey]['location'], safeFilter)
-                && !StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['keywords'], safeFilterSplited)
-                && !(this.isSearchByExpressionEnabled() && filterExpression && Expression.evaluate(filterExpression, filterExpressionContext))
+              if (
+                (
+                  !StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['text'], safeFilterSplited, 'all')
+                  && !StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['keywords'], safeFilterSplited, 'one')
+                  && !StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['section'], safeFilterSplited, 'one')
+                  && !StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['location'], safeFilterSplited, 'one')
+                  && !(this.isSearchByExpressionEnabled() && filterExpression && Expression.evaluate(filterExpression, filterExpressionContext))
+                )
+                ||
+                (
+                  negatedFilterSplited.length
+                  && (
+                    StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['text'], negatedFilterSplited, 'all')
+                    || StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['keywords'], negatedFilterSplited, 'one')
+                    || StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['section'], negatedFilterSplited, 'one')
+                    || StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['location'], negatedFilterSplited, 'one')
+                  )
+                )
               ) {
                 if (filteredResponse.response.deaths[dKey].peers.length) {
                   let continueFlag = false;
@@ -610,6 +618,22 @@ export abstract class AppCore extends AppAbstract {
             map.getDiv().scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
           }
         }
+      }
+    });
+  }
+
+  private bindMapEvents(map: google.maps.Map): void {
+    google.maps.event.addListener(map, 'zoom_changed', (): void => {
+      const zoomLevel = map.getZoom();
+      for (const circle of this.circles) {
+        circle.setVisible(zoomLevel > 8);
+        circle.setOptions({
+          fillOpacity: Math.min(30, zoomLevel * 2) / 100,
+          strokeOpacity: Math.min(30, zoomLevel * 2) / 100,
+        });
+      }
+      for (const marker of this.markers) {
+        marker.setOpacity(zoomLevel <= 8 ? 1 : (marker.death.gps.accurate ? 1 : 0.75));
       }
     });
   }

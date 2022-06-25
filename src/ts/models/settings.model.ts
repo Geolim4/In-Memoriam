@@ -4,6 +4,7 @@ export interface Settings {
   appDebug: boolean;
   appVersion: string;
   deathsSrc: string;
+  debugCookieName: string;
   contactEmail: string;
   defaultLat: number;
   defaultLon: number;

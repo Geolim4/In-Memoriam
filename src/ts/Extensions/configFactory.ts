@@ -20,7 +20,7 @@ export class ConfigFactory {
   }
 
   public isDebugEnabled(): boolean {
-    return this.config.appDebug;
+    return this.config.appDebug || document.cookie.includes(`${this.config.debugCookieName}=1`);
   }
 
   private init(onceInitialized: VoidFunction): void {
