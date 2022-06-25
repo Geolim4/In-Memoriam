@@ -3,6 +3,12 @@ import { DeathSource } from './deathSource.model';
 import { DeathGps } from './deathGps.model';
 import { TitleUrl } from '../titleUrl.model';
 
+export enum DeathOrigin{
+  DomTom = 'domtom',
+  Interieur = 'interieur',
+  Opex = 'opex',
+}
+
 export interface Death {
   cause: string;
   count: number;
@@ -12,7 +18,7 @@ export interface Death {
   keywords: string;
   location: string;
   month: string;
-  origin: string;
+  origin: DeathOrigin;
   orphans: number;
   peers: DeathPeer[];
   published: boolean;

@@ -13,12 +13,23 @@ export class StringUtilsHelper {
     return StringUtilsHelper.normalizeString(haystack).includes(needle);
   }
 
-  public static arrayContainsString(needle: string, haystack: string[]): boolean {
-    for (const str of haystack) {
-      if (StringUtilsHelper.containsString(needle, str)) {
-        return true;
+  public static arrayContainsString(haystack: string, needle: string[], strategy: 'one'|'all'): boolean {
+    if (strategy === 'one') {
+      const votes :boolean[] = [];
+      for (const str of needle) {
+        votes.push(StringUtilsHelper.containsString(haystack, str));
       }
+      return votes.filter((v) => v).length > 0;
     }
+
+    if (strategy === 'all') {
+      const votes :boolean[] = [];
+      for (const str of needle) {
+        votes.push(StringUtilsHelper.containsString(haystack, str));
+      }
+      return votes.filter((v) => v).length === needle.length;
+    }
+
     return false;
   }
 
