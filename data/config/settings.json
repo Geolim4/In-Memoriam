@@ -10,7 +10,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "2.1.2",
+    "appVersion": "2.2.0",
     "contactEmail": "contact@geolim4.com",
     "debugCookieName": "_JS_DEBUG_ENABLED_",
     "deathsSrc": "./data/deaths/%year%.json",
