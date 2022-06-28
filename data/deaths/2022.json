@@ -2595,6 +2595,12 @@
           "trustful": true
         },
         {
+          "url": "https://actu.fr/pays-de-la-loire/lucon_85128/vendee-deces-dun-gendarme-mobile-vendeen-en-service-en-guyane_52034375.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
           "url": "https://lavoixdugendarme.fr/deces-en-service-dun-gendarme-mobile-en-guyane/",
           "title": "La voix du gendarme",
           "paywall": false,
@@ -2753,6 +2759,44 @@
         {
           "url": "https://www.ouest-france.fr/societe/police/un-policier-se-suicide-a-paris-peu-avant-sa-convocation-a-l-igpn-cafd1372-f3e3-11ec-96c2-5c611dc93293",
           "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "06",
+      "day": "24",
+      "keywords": "",
+      "house": "police",
+      "peers": [],
+      "text": "Un policier de la circonscription des Sables-d'Olonne a mis fin à ses jours avec son arme de service.\nAffecté dans un service de nuit, il était père de deux enfants.",
+      "section": "CSP Sables-d'Olonne",
+      "location": "Sables-d'Olonne (Vendée)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.4977788245386,
+        "lon": -1.7769613727374443
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/sables-dolonne-un-policier-sest-donne-la-mort-avec-son-arme-de-service.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "",
+          "title": "UPNI",
           "paywall": false,
           "trustful": true
         }
