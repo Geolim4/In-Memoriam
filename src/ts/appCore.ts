@@ -265,9 +265,7 @@ export abstract class AppCore extends AppAbstract {
        */
       const boundsMarkers = (nationalMarkers.length ? nationalMarkers : domTomOrOpexMarkers);
       for (const key in boundsMarkers) {
-        if (boundsMarkers.hasOwnProperty(key)) {
-          bounds.extend(boundsMarkers[key].getPosition());
-        }
+        bounds.extend(boundsMarkers[key].getPosition());
       }
       map.fitBounds(bounds);
 
@@ -343,17 +341,17 @@ export abstract class AppCore extends AppAbstract {
     const configDefinitions = this.getConfigDefinitions();
 
     for (const fKey in configDefinitions) {
-      for (const dKey in response.deaths) {
-        if (response.deaths.hasOwnProperty(dKey)) {
+      const configDefinition = configDefinitions[fKey];
+      definitions[fKey] = definitions[fKey] || {};
+
+      if (configDefinition['#exposed']) {
+        for (const dKey in response.deaths) {
           const death = response.deaths[dKey];
           const peers = response.deaths[dKey].peers;
-          const counterProperty = <string>(configDefinitions[fKey]['#counter_property'] ? configDefinitions[fKey]['#counter_property'] : 'death');
-          const counterStrategy = <string>(configDefinitions[fKey]['#counter_strategy'] ? configDefinitions[fKey]['#counter_strategy'] : 'distinct');
+          const counterProperty = <string>(configDefinition['#counter_property'] ? configDefinition['#counter_property'] : 'death');
+          const counterStrategy = <string>(configDefinition['#counter_strategy'] ? configDefinition['#counter_strategy'] : 'distinct');
           const counterIndex = (counterStrategy === 'distinct' ? death[fKey] : 0);
 
-          if (!definitions[fKey]) {
-            definitions[fKey] = {};
-          }
           if (!definitions[fKey][counterIndex]) {
             definitions[fKey][counterIndex] = 0;
           }
@@ -404,31 +402,35 @@ export abstract class AppCore extends AppAbstract {
           let dKey = filteredResponse.response.deaths.length;
           const filterExpression = Expression.getEvaluable(fieldValue);
           while (dKey--) {
-            const filterExpressionContext = { filters, fieldName, fieldValue, death: filteredResponse.response.deaths[dKey] };
+            const death = filteredResponse.response.deaths[dKey];
+            const filterExpressionContext = { death, filters, fieldName, fieldValue };
 
             if (fieldName === 'search' && fieldValue.length >= this.getConfigFactory().config['searchMinLength']) {
               if (
                 (
-                  !StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['text'], safeFilterSplited, 'all')
-                  && !StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['keywords'], safeFilterSplited, 'one')
-                  && !StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['section'], safeFilterSplited, 'one')
-                  && !StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['location'], safeFilterSplited, 'one')
-                  && !(this.isSearchByExpressionEnabled() && filterExpression && Expression.evaluate(filterExpression, filterExpressionContext))
+                  safeFilterSplited.length
+                  && (
+                    !StringUtilsHelper.arrayContainsString(death.text, safeFilterSplited, 'all')
+                    && !StringUtilsHelper.arrayContainsString(death.keywords, safeFilterSplited, 'one')
+                    && !StringUtilsHelper.arrayContainsString(death.section, safeFilterSplited, 'one')
+                    && !StringUtilsHelper.arrayContainsString(death.location, safeFilterSplited, 'one')
+                    && !(this.isSearchByExpressionEnabled() && filterExpression && Expression.evaluate(filterExpression, filterExpressionContext))
+                  )
                 )
                 ||
                 (
                   negatedFilterSplited.length
                   && (
-                    StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['text'], negatedFilterSplited, 'all')
-                    || StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['keywords'], negatedFilterSplited, 'one')
-                    || StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['section'], negatedFilterSplited, 'one')
-                    || StringUtilsHelper.arrayContainsString(filteredResponse.response.deaths[dKey]['location'], negatedFilterSplited, 'one')
+                    StringUtilsHelper.arrayContainsString(death.text, negatedFilterSplited, 'all')
+                    || StringUtilsHelper.arrayContainsString(death.keywords, negatedFilterSplited, 'one')
+                    || StringUtilsHelper.arrayContainsString(death.section, negatedFilterSplited, 'one')
+                    || StringUtilsHelper.arrayContainsString(death.location, negatedFilterSplited, 'one')
                   )
                 )
               ) {
-                if (filteredResponse.response.deaths[dKey].peers.length) {
+                if (death.peers.length) {
                   let continueFlag = false;
-                  for (const peer of filteredResponse.response.deaths[dKey].peers) {
+                  for (const peer of death.peers) {
                     if (StringUtilsHelper.containsString(peer.section, safeFilter)) {
                       continueFlag = true;
                       break;
@@ -441,13 +443,13 @@ export abstract class AppCore extends AppAbstract {
                 filteredResponse.response.deaths.splice(dKey, 1);
               }
             } else {
-              if (!filteredResponse.response.deaths[dKey]['published']
-                || (!filterExpression && !fieldValue.split(',').includes(filteredResponse.response.deaths[dKey][fieldName] && filteredResponse.response.deaths[dKey][fieldName]))
+              if (!death.published
+                || (!filterExpression && !fieldValue.split(',').includes(death[fieldName] && death[fieldName]))
                 || (filterExpression && !Expression.evaluate(filterExpression, filterExpressionContext))
               ) {
-                if (filteredResponse.response.deaths[dKey].peers.length) {
+                if (death.peers.length) {
                   let continueFlag = false;
-                  for (const peer of filteredResponse.response.deaths[dKey].peers) {
+                  for (const peer of death.peers) {
                     if (peer.hasOwnProperty(fieldName) && peer[fieldName] && fieldValue.split(',').includes(peer[fieldName])) {
                       continueFlag = true;
                       break;
@@ -743,7 +745,7 @@ export abstract class AppCore extends AppAbstract {
       for (const [fieldKey, field] of Object.entries(definitions)) {
         let definitionText = '';
         if (configDefinitions[fieldKey]['#exposed']) {
-          for (const [fieldValue, count] of Object.entries(field)) {
+          for (const [fieldValue, count] of Object.entries(field).sort((a, b) => b[1] - a[1])) {// Filter values left-to-right from greater to lower
             const plurality = (count > 0 ? (count > 1 ? 'plural' : 'singular') : 'none');
             if (configDefinitions[fieldKey]['#number'][fieldValue]) {
               const text = configDefinitions[fieldKey]['#number'][fieldValue][plurality];

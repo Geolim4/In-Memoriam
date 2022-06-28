@@ -61,12 +61,12 @@
       "#counter_property": "count",
       "#counter_strategy": "distinct",
       "#number": {
-        "gendarmerie": {
+        "gd": {
           "none": "<span class=\"label label-success\">%d</span> gendarme",
           "singular": "<span class=\"label label-danger\">%d</span> gendarme",
           "plural": "<span class=\"label label-danger\">%d</span> gendarmes"
         },
-        "police": {
+        "pn": {
           "none": "<span class=\"label label-success\">%d</span> policier",
           "singular": "<span class=\"label label-danger\">%d</span> policier",
           "plural": "<span class=\"label label-danger\">%d</span> policiers"
