@@ -123,12 +123,12 @@
     ],
     "house": [
       {
-        "value": "gendarmerie",
+        "value": "gd",
         "label": "Gendarmerie Nationale",
         "color": "#54478C"
       },
       {
-        "value": "police",
+        "value": "pn",
         "label": "Police Nationale",
         "color": "#2C699A"
       },

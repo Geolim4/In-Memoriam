@@ -23,7 +23,6 @@ export abstract class AppAbstract {
   private readonly charts: Charts;
   private readonly mapButtons: MapButtons;
   private searchByExpression: boolean;
-  private forceRefresh: boolean;
 
   protected constructor() {
     this.markers = [];
@@ -37,7 +36,6 @@ export abstract class AppAbstract {
     this.charts = new Charts();
     this.mapButtons = new MapButtons();
     this.searchByExpression = false;
-    this.forceRefresh = true;
   }
 
   public isAppLoaded(): boolean {
@@ -104,14 +102,6 @@ export abstract class AppAbstract {
     this.searchByExpression = searchByExpression;
   }
 
-  public isForceRefreshEnabled(): boolean {
-    return this.forceRefresh;
-  }
-
-  public setForceRefresh(refresh: boolean): void {
-    this.forceRefresh = refresh;
-  }
-
   public getMarkers(): ExtendedGoogleMapsMarker[] {
     return this.markers;
   }
@@ -133,13 +123,7 @@ export abstract class AppAbstract {
   }
 
   protected buildFetchMarkersUrl(year: string): string {
-    let url = `${this.getConfigFactory().config.deathsSrc.replace('%year%', year)}`;
-    if (this.isForceRefreshEnabled()) {
-      url += `?_=${(new Date()).getTime()}`;
-      this.setForceRefresh(false);
-    }
-
-    return url;
+    return `${this.getConfigFactory().config.deathsSrc.replace('%year%', year)}?_=${(new Date()).getTime()}`;
   }
 
   protected flapAppAsLoaded() : void {

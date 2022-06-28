@@ -175,7 +175,6 @@ export class MapButtons {
     };
 
     GmapUtils.bindButton(map, () => {
-      App.getInstance().setForceRefresh(true);
       App.getInstance().loadGlossary();
       App.getInstance().reloadMarkers(map, false);
     }, buttonOptions);
