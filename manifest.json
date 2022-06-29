@@ -4,10 +4,22 @@
   "name": "In Memoriam",
   "icons": [
     {
+      "src": "./assets/images/pwa/in-memoriam_192_maskable.png",
+      "type": "image/png",
+      "sizes": "288x288",
+      "purpose": "maskable"
+    },
+    {
       "src": "./assets/images/pwa/in-memoriam_192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any"
+    },
+    {
+      "src": "./assets/images/pwa/in-memoriam_512_maskable.png",
+      "type": "image/png",
+      "sizes": "768x768",
+      "purpose": "maskable"
     },
     {
       "src": "./assets/images/pwa/in-memoriam_512.png",
