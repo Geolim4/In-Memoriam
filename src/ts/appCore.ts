@@ -12,10 +12,10 @@ import { Events } from './Components/events';
 import { ExtendedGoogleMapsMarker } from './models/Gmaps/extendedGoogleMapsMarker.model';
 import { Death, DeathOrigin } from './models/Death/death.model';
 import { AppStatic } from './appStatic';
-import { TitleUrl } from './models/titleUrl.model';
 import micromodal from 'micromodal';
 import activityDetector from 'activity-detector';
 import Choices = require('choices.js');
+import { HoverTitleUrl } from './models/hoverTitleUrl.model';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -792,11 +792,15 @@ export abstract class AppCore extends AppAbstract {
   private printSupportAssociations(): void {
     const wrapper = document.querySelector('.association-list');
     if (wrapper !== null) {
-      this.getConfigFactory().config.supportAssociations.forEach((titleUrl: TitleUrl) => {
+      this.getConfigFactory().config.supportAssociations.forEach((hoverTitleUrl: HoverTitleUrl) => {
         const link = document.createElement('a');
-        link.href = titleUrl.url;
-        link.innerText = titleUrl.title;
+        link.href = hoverTitleUrl.url;
+        link.innerText = hoverTitleUrl.title;
+        if (hoverTitleUrl.hover) {
+          link.dataset.tippyContent = hoverTitleUrl.hover;
+        }
         link.target = '_blank';
+        // data-tippy-content
         if (wrapper.childNodes.length > 0) {
           wrapper.append(', ');
         }

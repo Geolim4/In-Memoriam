@@ -1,4 +1,4 @@
-import { TitleUrl } from './titleUrl.model';
+import { HoverTitleUrl } from './hoverTitleUrl.model';
 
 export interface Settings {
   appDebug: boolean;
@@ -20,5 +20,5 @@ export interface Settings {
   imagePath: Object;
   mapId: string;
   maxZoom: number;
-  supportAssociations: TitleUrl[];
+  supportAssociations: HoverTitleUrl[];
 }

@@ -10,7 +10,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "2.3.1",
+    "appVersion": "2.3.2",
     "contactEmail": "contact@geolim4.com",
     "debugCookieName": "_JS_DEBUG_ENABLED_",
     "deathsSrc": "./data/deaths/%year%.json",
@@ -64,18 +64,22 @@
     },
     "supportAssociations": [
       {
-        "title": "Femme des Force De l'Ordre en Colère (FFOC)",
+        "hover": "Femme des Force De l'Ordre en Colère (Twitter)",
+        "title": "FFOC",
         "url": "https://twitter.com/_FFOC_"
       },
       {
+        "hover": "Compte de soutien des FDOs (Twitter)",
         "title": "Uniformes en danger",
         "url": "https://twitter.com/UniformesEn"
       },
       {
+        "hover": "Association d'aide aux policiers en détresse",
         "title": "Peps SOS",
         "url": "https://www.peps-sos.fr/"
       },
       {
+        "hover": "Compte de promotion/soutien des FDOs (Instagram)",
         "title": "@36quaidesorfevres",
         "url": "https://www.instagram.com/36quaidesorfevres/"
       }

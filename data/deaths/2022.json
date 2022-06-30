@@ -2801,6 +2801,100 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "murdered",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "06",
+      "day": "28",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Une policière a été tué par son compagnon ex-policier à la retraire avant de se retourner son arme de chasse contre lui.",
+      "section": "CSP Le Mans",
+      "location": "Le Mans (Sarthe)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.97688773922439,
+        "lon": 0.21116596876450403
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.ouest-france.fr/pays-de-la-loire/le-mans-72000/le-mans-homicide-et-suicide-la-femme-etait-policiere-son-mari-policier-retraite-2afa87d4-f7b1-11ec-9081-e9c3cdc26fd6",
+          "title": "Ouest France",
+          "paywall": true,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/le-mans-un-couple-de-sexagenaires-retrouve-mort-a-son-domicile-29-06-2022-A23S665IAVDPDPVEAUHZ6RM7CM.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/pays-de-la-loire/sarthe/le-mans/un-couple-de-sexagenaires-decouverts-morts-au-mans-une-enquete-est-ouverte-pour-homicide-volontaire-avec-suicide-de-l-auteur-2572760.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "murdered",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "06",
+      "day": "30",
+      "keywords": "",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 16e BCP a été tué volontairement par un autre militaire tôt le matin.\nSelon le parquet « Les circonstances et le mobile restent à préciser ».",
+      "section": "16e BCP (2e BB)",
+      "location": "Bitche (Moselle)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 100,
+        "lat": 49.05768480788417,
+        "lon": 7.457225214770538
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.republicain-lorrain.fr/faits-divers-justice/2022/06/30/meurtre-au-16e-bataillon-de-chasseurs-a-pied-de-bitche-un-militaire-en-garde-a-vue",
+          "title": "Républicain Lorrain",
+          "paywall": true,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/faits-divers/deces-d-un-militaire-en-moselle-ouverture-d-une-enquete-pour-homicide-volontaire-aee07ea6-f896-11ec-9ba9-7c7737bde7fe",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/meurtre-dans-un-bataillon-de-moselle-un-militaire-en-garde-a-vue-30-06-2022-7XZ36LX53RDTFK5NBR5FHRQRVA.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/moselle-une-enquete-pour-homicide-volontaire-ouverte-apres-la-mort-d-un-militaire_AD-202206300695.html",
+          "title": "BFMTV",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
