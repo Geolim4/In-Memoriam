@@ -3,8 +3,8 @@ const path = require('path');
 
 module.exports = {
   performance: {
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000
+    maxEntrypointSize: 612000,
+    maxAssetSize: 612000
   },
   entry: path.resolve(__dirname, '../src/ts/main.ts'),
   mode: "production",
