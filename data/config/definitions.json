@@ -41,6 +41,11 @@
           "singular": "<span class=\"label label-danger\">%d</span> mort accidentelle",
           "plural": "<span class=\"label label-danger\">%d</span> morts accidentelles"
         },
+        "malaise": {
+          "none": "<span class=\"label label-success\">%d</span> malaise cardiaque",
+          "singular": "<span class=\"label label-danger\">%d</span> malaise cardiaque",
+          "plural": "<span class=\"label label-danger\">%d</span> malaises cardiaques"
+        },
         "murdered": {
           "none": "<span class=\"label label-success\">%d</span> meurtre",
           "singular": "<span class=\"label label-danger\">%d</span> meurtre",

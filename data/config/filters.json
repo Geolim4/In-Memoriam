@@ -111,6 +111,11 @@
         "color": "#763C5C"
       },
       {
+        "value": "malaise",
+        "label": "Malaise cardiaque",
+        "color": "#763C5C"
+      },
+      {
         "value": "murdered",
         "label": "Meutre",
         "color": "#2b8254"

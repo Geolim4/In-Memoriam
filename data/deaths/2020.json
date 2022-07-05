@@ -646,7 +646,7 @@
       ]
     },
     {
-      "cause": "other",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 0,
@@ -982,7 +982,7 @@
       ]
     },
     {
-      "cause": "deathOnDuty",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 4,
@@ -3770,7 +3770,7 @@
       ]
     },
     {
-      "cause": "deathOnDuty",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 0,
