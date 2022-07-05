@@ -794,7 +794,7 @@
       ]
     },
     {
-      "cause": "accident",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 2,
@@ -3601,7 +3601,7 @@
       ]
     },
     {
-      "cause": "accident",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 0,
@@ -3821,7 +3821,7 @@
       ]
     },
     {
-      "cause": "accident",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 3,
@@ -3871,7 +3871,7 @@
       ]
     },
     {
-      "cause": "accident",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 1,

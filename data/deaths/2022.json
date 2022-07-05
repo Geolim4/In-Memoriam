@@ -4,7 +4,7 @@
   },
   "deaths": [
     {
-      "cause": "accident",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 0,
@@ -68,7 +68,7 @@
       ]
     },
     {
-      "cause": "accident",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 2,
@@ -402,7 +402,7 @@
       ]
     },
     {
-      "cause": "deathOnDuty",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 1,
@@ -828,7 +828,7 @@
       ]
     },
     {
-      "cause": "accident",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 0,
@@ -1979,7 +1979,7 @@
       ]
     },
     {
-      "cause": "deathOnDuty",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 2,
@@ -2433,7 +2433,7 @@
       ]
     },
     {
-      "cause": "deathOnDuty",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 0,
@@ -2527,7 +2527,7 @@
       ]
     },
     {
-      "cause": "accident",
+      "cause": "malaise",
       "count": 1,
       "published": true,
       "orphans": 6,
@@ -2891,6 +2891,147 @@
         {
           "url": "https://www.bfmtv.com/police-justice/moselle-une-enquete-pour-homicide-volontaire-ouverte-apres-la-mort-d-un-militaire_AD-202206300695.html",
           "title": "BFMTV",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "07",
+      "day": "01",
+      "keywords": "Jérôme Favier",
+      "house": "gd",
+      "peers": [],
+      "text": "Un officier du GIGN, chef de la section 3, est décédé dans lors d'un stage de vol en paramoteur (ULM).\nSelon le parquet « les circonstances de l'accident restent à préciser ».\nIl était marié et père de trois jeune enfants dont un bébé.",
+      "section": "Section 3 - GIGN",
+      "location": "Goussainville (Eure-et-Loir)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 500,
+        "lat": 49.019349538084334,
+        "lon": 2.4657975074847864
+      },
+      "homage": {
+        "url": "https://www.facebook.com/GroupeInterventionGendarmerieNationale/posts/pfbid0oUptYNmWQ22JDhV1RXNqKCTHJk9QGbHy7gJZuDze97TsfEkijYKcApt6cMLXQMGtl",
+        "title": "GIGN (Facebook)"
+      },
+      "sources": [
+        {
+          "url": "https://lessor.org/vie-des-personnels/les-reactions-suite-au-deces-accidentel-de-jerome-favier",
+          "title": "L'Essor",
+          "paywall": true,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/eure-et-loir-deces-du-capitaine-jerome-favier-affecte-au-gign-durant-un-stage-de-paramoteur.html",
+          "title": "Actu17",
+          "paywall": true,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/faits-divers/un-militaire-fils-d-un-ancien-directeur-du-gign-decede-lors-d-un-exercice-de-paramoteur-bd59cc96-fa06-11ec-a7ca-214c8c56deac",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/un-capitaine-du-gign-fils-d-un-ancien-commandant-de-l-unite-d-elite-trouve-la-mort-dans-un-accident-d-ulm-20220702",
+          "title": "Le Figaro",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/une-cagnotte-de-la-fondation-maison-de-la-gendarmerie-pour-la-famille-de-jerome-favier/",
+          "title": "La Voix du Gendarme",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "07",
+      "day": "01",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier de la CRS 6 en déplacement à Montauban est décédé dans un accident de la route à vélo avant de prendre son service.",
+      "section": "CRS 6",
+      "location": "Montauban (Tarn-et-Garonne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 250,
+        "lat": 43.981083658299646,
+        "lon": 1.3666244557795435
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/montauban-un-policier-a-velo-meurt-dans-une-collision-avec-une-fourgonnette.html",
+          "title": "Actu17",
+          "paywall": true,
+          "trustful": true
+        },
+        {
+          "url": "https://www.nicematin.com/faits-divers/un-crs-de-saint-laurent-du-var-trouve-la-mort-a-montauban-778611",
+          "title": "Nice Matin",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ladepeche.fr/2022/07/01/info-la-depeche-montauban-un-policier-circulant-a-velo-decede-dans-une-collision-avec-un-fourgon-10409364.php",
+          "title": "La dépêche",
+          "paywall": true,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "malaise",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "07",
+      "day": "05",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier du commissariat de Tourcoing est décédé en service d'un malaise cardiaque.\nIl était marié et père de trois enfants.",
+      "section": "CSP Tourcoing",
+      "location": "Tourcoing (Nord)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 50.72727952206345,
+        "lon": 3.1491785669906394
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.lavoixdunord.fr/1202060/article/2022-07-05/tourcoing-un-policier-decede-suite-un-malaise-survenu-au-commissariat",
+          "title": "La Voix Du Nord",
+          "paywall": true,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/PoliceNat59/status/1544220410794868736",
+          "title": "@PoliceNat59",
           "paywall": false,
           "trustful": true
         }
