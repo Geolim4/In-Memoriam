@@ -98,79 +98,79 @@
       {
         "value": "deathOnDuty",
         "label": "Décès en service commandé",
-        "color": "#ba432c"
+        "color": "#763c3e"
       },
       {
         "value": "deathViaDuty",
         "label": "Décès lié au service",
-        "color": "#79642B"
+        "color": "#6d3c76"
       },
       {
         "value": "accident",
         "label": "Accident",
-        "color": "#763C5C"
+        "color": "#76693c"
       },
       {
         "value": "malaise",
         "label": "Malaise cardiaque",
-        "color": "#763C5C"
+        "color": "#3c6a76"
       },
       {
         "value": "murdered",
-        "label": "Meutre",
+        "label": "Meurtre",
         "color": "#2b8254"
       },
       {
         "value": "other",
         "label": "Autre",
-        "color": "#2D225C"
+        "color": "#bcbdbb"
       }
     ],
     "house": [
       {
         "value": "gd",
         "label": "Gendarmerie Nationale",
-        "color": "#54478C"
+        "color": "#3c2791"
       },
       {
         "value": "pn",
         "label": "Police Nationale",
-        "color": "#2C699A"
+        "color": "#276c91"
       },
       {
         "value": "pm",
         "label": "Police Municipale",
-        "color": "#048BA8"
+        "color": "#279175"
       },
       {
         "value": "douane",
         "label": "Douanes",
-        "color": "#F29E4C"
+        "color": "#914527"
       },
       {
         "value": "pompier",
         "label": "Pompiers",
-        "color": "#9d0208"
+        "color": "#912733"
       },
       {
         "value": "armee",
         "label": "Armée (Air, Terre, Marine)",
-        "color": "#83E377"
+        "color": "#559127"
       },
       {
         "value": "admpen",
         "label": "Administration pénitentiaire",
-        "color": "#16DB93"
+        "color": "#912777"
       },
       {
         "value": "secciv",
         "label": "Sécurité Civile",
-        "color": "#fca311"
+        "color": "#916127"
       },
       {
         "value": "misc",
         "label": "Autre",
-        "color": "#b5179e"
+        "color": "#bcbdbb"
       }
     ],
     "origin": [
