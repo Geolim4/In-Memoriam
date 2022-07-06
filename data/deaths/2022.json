@@ -3036,6 +3036,38 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "07",
+      "day": "07",
+      "keywords": "David Béreau",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme de la BTA des Achards a mis fin à ses jours avec son arme de service.\nIl était marié père de deux enfants.",
+      "section": "BTA",
+      "location": "Achards (Vendée)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.611299089470904,
+        "lon": -1.6619373603168401
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://lavoixdugendarme.fr/deces-tragique-dun-gendarme-de-vendee/",
+          "title": "La Voix du Gendarme",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
