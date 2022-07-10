@@ -20,12 +20,14 @@
     "maxZoom": 16,
     "mapId": "42179193e08de91e",
     "searchMinLength": 3,
-    "googleMaps": {
-      "key": "AIzaSyBMB4lQqiIf7t6QV8CFFV6IwCqw_7dYREw",
+    "googleMapsOptions": {
+      "apiKey": "AIzaSyBMB4lQqiIf7t6QV8CFFV6IwCqw_7dYREw",
+      "id": "gmap-script-api",
       "libraries": [
         "visualization",
         "geometry"
-      ]
+      ],
+      "region": "FR"
     },
     "clusteringOptions": {
       "minPoints": 2,

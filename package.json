@@ -47,6 +47,7 @@
     }
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.14.3",
     "@googlemaps/markerclusterer": "^1.0.21",
     "activity-detector": "^3.0.0",
     "array-unique": "^0.3.2",
@@ -59,7 +60,6 @@
     "highcharts": "^9.3.3",
     "jquery": "^3.5.0",
     "jsonminify": "^0.4.2",
-    "load-google-maps-api": "^2.0.1",
     "micromodal": "^0.4.2",
     "popper.js": "^1.15.0",
     "tippy.js": "^5.1.1",
