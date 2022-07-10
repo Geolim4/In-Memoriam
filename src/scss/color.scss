@@ -109,4 +109,14 @@ body {
       }
     }
   }
+
+  .autocomplete {
+    & > div.selected,
+    & > div:hover:not(.group) {
+      background: $blue;
+    }
+
+    background: $dark-grey;
+    color: var(--text-color);
+  }
 }

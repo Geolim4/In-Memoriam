@@ -16,6 +16,8 @@ import micromodal from 'micromodal';
 import activityDetector from 'activity-detector';
 import Choices = require('choices.js');
 import { HoverTitleUrl } from './models/hoverTitleUrl.model';
+import autocomplete = require('autocompleter');
+import unique = require('array-unique');
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -225,6 +227,11 @@ export abstract class AppCore extends AppAbstract {
           }
         });
 
+        google.maps.event.addListener(marker, 'dblclick', (): void => {
+          map.setCenter(marker.getPosition());
+          map.setZoom(this.getConfigFactory().config['clusteringOptions']['maxZoom']);
+        });
+
         this.infoWindows.push(infoWindow);
         if (death.origin === DeathOrigin.Interieur) {
           nationalMarkers.push(marker);
@@ -237,6 +244,7 @@ export abstract class AppCore extends AppAbstract {
         });
 
         this.markers.push(marker);
+        this.pushSuggestionFromDeath(death);
         this.markerHashIndex[marker.linkHash] = this.markers.length - 1;
       }
 
@@ -378,8 +386,11 @@ export abstract class AppCore extends AppAbstract {
 
   private getFilteredResponse(response: Bloodbath, filters: Filters): FilteredResponse {
     const filteredResponse = <FilteredResponse>{ response, errored: false };
+    const deathsRemovedBySearch = <Death[]>[];
+    const deathsRemovedByFilters = <Death[]>[];
 
     try {
+      this.setSuggestions([]);
       for (const [fieldName, fieldValue] of Object.entries(filters)) {
         if (filters.hasOwnProperty(fieldName) && fieldValue) {
           const safeFilter = <string>StringUtilsHelper.normalizeString(fieldValue);
@@ -387,17 +398,21 @@ export abstract class AppCore extends AppAbstract {
           const safeFilterSplited = <string[]>[];
           const negatedFilterSplited = <string[]>[];
 
-          for (let block of safeFilterBlocks) {
-            const negated = block.charAt(0) === '!';
-            block = (negated ? block.substring(1) : block);
-            if (block.length >= this.getConfigFactory().config['searchMinLength']) {
+          unique(safeFilterBlocks).forEach((safeBlock, i) => {
+            const negated = safeBlock.charAt(0) === '!';
+            const block = (negated ? safeBlock.substring(1) : safeBlock);
+
+            if (block.length >= this.getConfigFactory().config['searchMinLength']
+              // Handle special identifiers like Paris XXe, CRS xx, EGM XX/X, etc.
+              || (block.match(/^(((\d{1,2})e?)|((([IVX]+)|(\d{1,2}))\/(\d{1,2})))$/) && i === 1)
+            ) {
               if (!negated) {
                 safeFilterSplited.push(block);
               } else {
                 negatedFilterSplited.push(block);
               }
             }
-          }
+          });
 
           let dKey = filteredResponse.response.deaths.length;
           const filterExpression = Expression.getEvaluable(fieldValue);
@@ -412,8 +427,8 @@ export abstract class AppCore extends AppAbstract {
                   && (
                     !StringUtilsHelper.arrayContainsString(death.text, safeFilterSplited, 'all')
                     && !StringUtilsHelper.arrayContainsString(death.keywords, safeFilterSplited, 'one')
-                    && !StringUtilsHelper.arrayContainsString(death.section, safeFilterSplited, 'one')
-                    && !StringUtilsHelper.arrayContainsString(death.location, safeFilterSplited, 'one')
+                    && !StringUtilsHelper.arrayContainsString(death.section, safeFilterSplited, 'all')
+                    && !StringUtilsHelper.arrayContainsString(death.location, safeFilterSplited, 'all')
                     && !(this.isSearchByExpressionEnabled() && filterExpression && Expression.evaluate(filterExpression, filterExpressionContext))
                   )
                 )
@@ -423,8 +438,8 @@ export abstract class AppCore extends AppAbstract {
                   && (
                     StringUtilsHelper.arrayContainsString(death.text, negatedFilterSplited, 'all')
                     || StringUtilsHelper.arrayContainsString(death.keywords, negatedFilterSplited, 'one')
-                    || StringUtilsHelper.arrayContainsString(death.section, negatedFilterSplited, 'one')
-                    || StringUtilsHelper.arrayContainsString(death.location, negatedFilterSplited, 'one')
+                    || StringUtilsHelper.arrayContainsString(death.section, negatedFilterSplited, 'all')
+                    || StringUtilsHelper.arrayContainsString(death.location, negatedFilterSplited, 'all')
                   )
                 )
               ) {
@@ -440,6 +455,13 @@ export abstract class AppCore extends AppAbstract {
                     continue;
                   }
                 }
+                /**
+                 * Death removed from "search" input should
+                 * keep appearing in suggestions as they will
+                 * necessarily appear on the next search result
+                 */
+                this.pushSuggestionFromDeath(death);
+                deathsRemovedBySearch.push(death);
                 filteredResponse.response.deaths.splice(dKey, 1);
               }
             } else {
@@ -459,12 +481,16 @@ export abstract class AppCore extends AppAbstract {
                     continue;
                   }
                 }
+                deathsRemovedByFilters.push(death);
                 filteredResponse.response.deaths.splice(dKey, 1);
               }
             }
           }
         }
       }
+      deathsRemovedBySearch.filter((death) => (!deathsRemovedByFilters.includes(death))).forEach((death) => (
+        this.pushSuggestionFromDeath(death)
+      ));
     } catch (e) {
       if (e instanceof EvaluationError && this.isSearchByExpressionEnabled()) {
         if (this.isSearchByExpressionEnabled()) {
@@ -537,6 +563,7 @@ export abstract class AppCore extends AppAbstract {
     const resetButtons = <NodeListOf<HTMLButtonElement>>this.formElement.querySelectorAll('form button[data-reset-field-target]');
     const searchElement = <HTMLInputElement>document.getElementById('search');
     const filters = this.getFilters(fromAnchor);
+    let ignoreNextChange = false; // Firefox ugly hack with autocomplete (change triggered twice)
 
     Events.addEventHandler(this.formElement, 'submit', (e) => {
       if (!this.formElement.checkValidity()) {
@@ -567,7 +594,11 @@ export abstract class AppCore extends AppAbstract {
         Events.removeEventHandler(selector, 'change', this.eventHandlers[selector.id]);
       }
 
-      this.eventHandlers[selector.id] = (): void => {
+      this.eventHandlers[selector.id] = (e): void => {
+        if (ignoreNextChange && e.isTrusted) {
+          ignoreNextChange = false;
+          return;
+        }
         setTimeout(() => {
           if (this.formElement.checkValidity()) {
             this.bindMarkers(map, this.getFilters(false));
@@ -596,6 +627,28 @@ export abstract class AppCore extends AppAbstract {
         this.setSearchByExpression(false);
       }
       searchElement.dispatchEvent(new Event('change'));
+    });
+
+    // @ts-ignore
+    autocomplete({
+      emptyMsg: null,
+      fetch: (text, update) => {
+        update(
+          unique(this.getSuggestions())
+          .filter((suggestion) => {
+            return StringUtilsHelper.containsString(suggestion, text, true);
+          })
+          .sort()
+          .map((s) => ({ label: s, value: s })),
+        );
+      },
+      input: searchElement,
+      minLength: this.getConfigFactory().config['searchMinLength'],
+      onSelect: (item) => {
+        searchElement.value = item.label;
+        searchElement.dispatchEvent(new Event('change'));
+        ignoreNextChange = true;
+      },
     });
 
     this.drawCustomSelectors(selects, filters);
