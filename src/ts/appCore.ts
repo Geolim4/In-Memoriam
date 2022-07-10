@@ -1,7 +1,7 @@
 import { AppAbstract } from './appAbstract';
 import { ConfigFactory } from './Extensions/configFactory';
 import { MarkerClusterer, SuperClusterAlgorithm } from '@googlemaps/markerclusterer';
-import * as loadGoogleMapsApi from 'load-google-maps-api';
+import { Loader } from '@googlemaps/js-api-loader';
 import { FormFilters } from './models/Filters/formFilters.model';
 import { Bloodbath, DefinitionsCount, Filters } from './models';
 import { FilteredResponse } from './models/filteredResponse.model';
@@ -14,10 +14,10 @@ import { Death, DeathOrigin } from './models/Death/death.model';
 import { AppStatic } from './appStatic';
 import micromodal from 'micromodal';
 import activityDetector from 'activity-detector';
-import Choices = require('choices.js');
 import { HoverTitleUrl } from './models/hoverTitleUrl.model';
-import autocomplete = require('autocompleter');
 import unique = require('array-unique');
+const Choices = require('choices.js');
+const autocomplete = require('autocompleter');
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -299,10 +299,9 @@ export abstract class AppCore extends AppAbstract {
   }
 
   private run(): void {
-    loadGoogleMapsApi({
-      key: this.getConfigFactory().config.googleMaps['key'],
-      libraries: this.getConfigFactory().config.googleMaps['libraries'],
-    }).then((): void => {
+    (new Loader(this.getConfigFactory().config.googleMapsOptions))
+    .load()
+    .then((google) => {
       const mapElement = <HTMLInputElement>document.getElementById('map');
       const options = {
         backgroundColor: '#343A40', // See variables.scss
@@ -402,7 +401,7 @@ export abstract class AppCore extends AppAbstract {
             const negated = safeBlock.charAt(0) === '!';
             const block = (negated ? safeBlock.substring(1) : safeBlock);
 
-            if (block.length >= this.getConfigFactory().config['searchMinLength']
+            if (block.length >= this.getConfigFactory().getSearchMinLength()
               // Handle special identifiers like Paris XXe, CRS xx, EGM XX/X, etc.
               || (block.match(/^(((\d{1,2})e?)|((([IVX]+)|(\d{1,2}))\/(\d{1,2})))$/) && i === 1)
             ) {
@@ -420,7 +419,7 @@ export abstract class AppCore extends AppAbstract {
             const death = filteredResponse.response.deaths[dKey];
             const filterExpressionContext = { death, filters, fieldName, fieldValue };
 
-            if (fieldName === 'search' && fieldValue.length >= this.getConfigFactory().config['searchMinLength']) {
+            if (fieldName === 'search' && fieldValue.length >= this.getConfigFactory().getSearchMinLength()) {
               if (
                 (
                   safeFilterSplited.length
@@ -629,26 +628,28 @@ export abstract class AppCore extends AppAbstract {
       searchElement.dispatchEvent(new Event('change'));
     });
 
-    // @ts-ignore
     autocomplete({
       emptyMsg: null,
       fetch: (text, update) => {
-        update(
-          unique(this.getSuggestions())
-          .filter((suggestion) => {
-            return StringUtilsHelper.containsString(suggestion, text, true);
-          })
-          .sort()
-          .map((s) => ({ label: s, value: s })),
-        );
+        if (text.length >= this.getConfigFactory().getSearchMinLength()) {
+          update(
+            unique(this.getSuggestions())
+            .filter((suggestion) => {
+              return StringUtilsHelper.containsString(suggestion, text, true);
+            })
+            .sort()
+            .map((s) => ({ label: s, value: s })),
+          );
+        }
       },
       input: searchElement,
-      minLength: this.getConfigFactory().config['searchMinLength'],
+      // minLength: this.getConfigFactory().getSearchMinLength(), // Overridden by "showOnFocus" configuration
       onSelect: (item) => {
         searchElement.value = item.label;
         searchElement.dispatchEvent(new Event('change'));
         ignoreNextChange = true;
       },
+      showOnFocus: true,
     });
 
     this.drawCustomSelectors(selects, filters);
@@ -697,7 +698,6 @@ export abstract class AppCore extends AppAbstract {
     selectors.forEach((selector) => {
       if (selector.type !== 'text') {
         if (!this.customChoicesInstances[selector.id]) {
-          // @ts-ignore
           this.customChoicesInstances[selector.id] = new Choices(selector, {
             duplicateItemsAllowed: false,
             itemSelectText: '',
@@ -717,7 +717,7 @@ export abstract class AppCore extends AppAbstract {
 
   private setupSkeleton(filters: Filters): void {
     const searchInput = this.formElement.querySelector('input#search') as HTMLInputElement;
-    const searchMinLength = this.getConfigFactory().config['searchMinLength'];
+    const searchMinLength = String(this.getConfigFactory().getSearchMinLength());
     const appSettingsElements = document.querySelectorAll('[data-app-settings]') as NodeListOf<HTMLElement>;
 
     for (const [filterName, filterValuesArray] of Object.entries(this.getFormFilters())) {

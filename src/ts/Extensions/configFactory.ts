@@ -23,6 +23,10 @@ export class ConfigFactory {
     return this.config.appDebug || document.cookie.includes(`${this.config.debugCookieName}=1`);
   }
 
+  public getSearchMinLength(): number {
+    return this.config.searchMinLength;
+  }
+
   private init(onceInitialized: VoidFunction): void {
     const hostname = window.location.hostname;
 

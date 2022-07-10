@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "esModuleInterop": false,
     "lib": ["dom"],
     "moduleResolution": "node",
     "target": "es5",

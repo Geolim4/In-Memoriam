@@ -1680,7 +1680,7 @@
       "house": "gd",
       "peers": [],
       "text": "Un gendarme a mis fin à ses jours avec son arme de service au sein de la brigade de Gien.\nAffecté à l'antenne du renseignement territorial, il était père de trois enfants.",
-      "section": "BTA",
+      "section": "BTA Gien",
       "location": "Gien (Loiret)",
       "origin": "interieur",
       "gps": {
@@ -2814,7 +2814,7 @@
       "keywords": "",
       "house": "pn",
       "peers": [],
-      "text": "Une policière a été tué par son compagnon ex-policier à la retraire avant de se retourner son arme de chasse contre lui.",
+      "text": "Une policière a été tué par son compagnon ex-policier à la retraite avant de se retourner son arme de chasse contre lui.",
       "section": "CSP Le Mans",
       "location": "Le Mans (Sarthe)",
       "origin": "interieur",
@@ -3050,7 +3050,7 @@
       "house": "gd",
       "peers": [],
       "text": "Un gendarme de la BTA des Achards a mis fin à ses jours avec son arme de service.\nIl était marié père de deux enfants.",
-      "section": "BTA",
+      "section": "BTA Achards",
       "location": "Achards (Vendée)",
       "origin": "interieur",
       "gps": {
