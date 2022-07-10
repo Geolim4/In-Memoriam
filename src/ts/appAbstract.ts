@@ -5,6 +5,7 @@ import { Definitions } from './models';
 import { MapButtons } from './Extensions/mapButtons';
 import { ExtendedGoogleMapsMarker } from './models/Gmaps/extendedGoogleMapsMarker.model';
 import { FormFilters } from './models/Filters/formFilters.model';
+import { Death } from './models/Death/death.model';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -12,6 +13,7 @@ import { FormFilters } from './models/Filters/formFilters.model';
  */
 export abstract class AppAbstract {
   protected markers: ExtendedGoogleMapsMarker[];
+  protected suggestions: string[];
   private currentInfoWindow: google.maps.InfoWindow;
   private formFilters: FormFilters;
   private appLoaded: boolean;
@@ -26,6 +28,7 @@ export abstract class AppAbstract {
 
   protected constructor() {
     this.markers = [];
+    this.suggestions = [];
     this.currentInfoWindow = null;
     this.formFilters = {};
     this.appLoaded = false;
@@ -104,6 +107,24 @@ export abstract class AppAbstract {
 
   public getMarkers(): ExtendedGoogleMapsMarker[] {
     return this.markers;
+  }
+
+  public getSuggestions(): string[] {
+    return this.suggestions;
+  }
+
+  public setSuggestions(suggestions: string[]): void {
+    this.suggestions = suggestions;
+  }
+
+  public pushSuggestion(suggestion: string): void {
+    this.suggestions.push(suggestion);
+  }
+
+  public pushSuggestionFromDeath(death: Death): void {
+    this.suggestions.push(death.location);
+    this.suggestions.push(death.section);
+    death.peers.forEach((peer) => this.suggestions.push(peer.section));
   }
 
   public getCurrentInfoWindow(): google.maps.InfoWindow {

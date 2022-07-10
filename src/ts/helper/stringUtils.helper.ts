@@ -9,8 +9,8 @@ export class StringUtilsHelper {
     return string.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
   }
 
-  public static containsString(haystack: string, needle: string): boolean {
-    return StringUtilsHelper.normalizeString(haystack).includes(needle);
+  public static containsString(haystack: string, needle: string, normalizeNeedle?: boolean): boolean {
+    return StringUtilsHelper.normalizeString(haystack).includes(normalizeNeedle ? this.normalizeString(needle) : needle);
   }
 
   public static arrayContainsString(haystack: string, needle: string[], strategy: 'one'|'all'): boolean {

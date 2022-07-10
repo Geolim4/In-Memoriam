@@ -5,6 +5,10 @@
 body {
   font-family: Roboto, system-ui;
   font-weight: 300;
+
+  .autocomplete {
+    font-family: Roboto, system-ui;
+  }
 }
 
 body:not(.loaded) {
