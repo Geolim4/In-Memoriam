@@ -23,6 +23,13 @@
  * SOFTWARE.
  */
 
+/*!
+ * array-unique <https://github.com/jonschlinkert/array-unique>
+ *
+ * Copyright (c) 2014-2015, Jon Schlinkert.
+ * Licensed under the MIT License.
+ */
+
 /*! choices.js v9.1.0 | © 2021 Josh Johnson | https://github.com/jshjohnson/Choices#readme */
 
 /*!
@@ -32,13 +39,6 @@
  * All Rights Reserved. Apache Software License 2.0
  * 
  * http://www.apache.org/licenses/LICENSE-2.0
- */
-
-/*!
- * array-unique <https://github.com/jonschlinkert/array-unique>
- *
- * Copyright (c) 2014-2015, Jon Schlinkert.
- * Licensed under the MIT License.
  */
 
 /*! *****************************************************************************
