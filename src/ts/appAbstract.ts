@@ -6,6 +6,7 @@ import { MapButtons } from './Extensions/mapButtons';
 import { ExtendedGoogleMapsMarker } from './models/Gmaps/extendedGoogleMapsMarker.model';
 import { FormFilters } from './models/Filters/formFilters.model';
 import { Death } from './models/Death/death.model';
+import { Renderer } from './Extensions/renderer';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -14,6 +15,7 @@ import { Death } from './models/Death/death.model';
 export abstract class AppAbstract {
   protected markers: ExtendedGoogleMapsMarker[];
   protected suggestions: string[];
+  protected renderer: Renderer;
   private currentInfoWindow: google.maps.InfoWindow;
   private formFilters: FormFilters;
   private appLoaded: boolean;
@@ -141,6 +143,10 @@ export abstract class AppAbstract {
 
   public setFormFilters(formFilters: FormFilters): void {
     this.formFilters = formFilters;
+  }
+
+  public getRenderer(): Renderer {
+    return this.renderer;
   }
 
   protected buildFetchMarkersUrl(year: string): string {

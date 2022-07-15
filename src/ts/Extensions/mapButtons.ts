@@ -6,13 +6,11 @@ import { App } from '../app';
 import { GmapUtils } from '../helper/gmapUtils.helper';
 import { Options as GmapsOptions } from '../models/Gmaps/options.model';
 import { ExtendedGoogleMapsMarker } from '../models/Gmaps/extendedGoogleMapsMarker.model';
-import micromodal from 'micromodal';
 import { StringUtilsHelper } from '../helper/stringUtils.helper';
 import { ExportToCsv } from 'export-to-csv';
 import { Death } from '../models/Death/death.model';
 import { DeathPeer } from '../models/Death/deathPeer.model';
 import { Filters } from '../models';
-import { Events } from '../Components/events';
 import { IntUtilsHelper } from '../helper/intUtils.helper';
 import { AppStatic } from '../appStatic';
 
@@ -127,12 +125,14 @@ export class MapButtons {
           App.getInstance().getModal().modalInfo(
             'Information sur la localisation',
             'La demande de localisation ne servira qu\'à positionner la carte autour de vous, aucune donnée ne sera envoyée ni même conservée nulle part.',
-            () => {
-              navigator.geolocation.getCurrentPosition(geolocationCallback);
-            },
-            () => {
-              clearInterval(animationInterval);
-              (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
+            {
+              cancelCallback: () => {
+                clearInterval(animationInterval);
+                (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
+              },
+              confirmCallback: () => {
+                navigator.geolocation.getCurrentPosition(geolocationCallback);
+              },
             },
           );
         }
@@ -235,52 +235,46 @@ export class MapButtons {
       const markers = App.getInstance().getMarkers();
 
       if (markers.length) {
-        micromodal.show('modal-bloodbath-list', {
-          onShow: () => {
-            const filters = App.getInstance().getFilters(false);
-            const downloadButton = Events.hardRemoveEventHandler(document.querySelector('#modal-bloodbath-list button[data-micromodal-role="download-data"]'));
-            const modalBloodbathElement = <HTMLInputElement>document.getElementById('modal-bloodbath-list-content');
-            const modalBloodbathCounterElement = <HTMLInputElement>document.getElementById('modal-bloodbath-death-counter');
-            const modalBloodbathYear = <HTMLInputElement>document.getElementById('modal-bloodbath-year');
-            let modalBloodbathListContent = '<div>';
-            let modalBloodbathCounter = 0;
+        const filters = App.getInstance().getFilters(false);
+        let modalBloodbathListContent = '<div>';
+        let modalBloodbathCounter = 0;
 
-            Events.addEventHandler(
-              downloadButton,
-              ['click', 'touchstart'],
-              (e) => {
-                e.preventDefault();
-                this.promptDataDownloadExport();
-              },
-              true,
-            );
+        for (const key in markers) {
+          const death = markers[key].death;
+          let peersCount = 0;
+          const houseFormatted =  App.getInstance().getFilterValueLabel('house', death.house);
+          const causeFormatted = App.getInstance().getFilterValueLabel('cause', death.cause);
 
-            for (const key in markers) {
-              const death = markers[key].death;
-              let peersCount = 0;
-              const houseFormatted =  App.getInstance().getFilterValueLabel('house', death.house);
-              const causeFormatted = App.getInstance().getFilterValueLabel('cause', death.cause);
+          for (const peer of death.peers) {
+            peersCount += peer.count;
+          }
 
-              for (const peer of death.peers) {
-                peersCount += peer.count;
-              }
+          const totalDeathCount = death.count + peersCount;
+          const deathLabel = `${death.section ? `${death.section}, ` : ''}${death.location} ${totalDeathCount > 1 ? `(<strong style="color: red">${totalDeathCount} décès</strong>)` : ''}`;
+          const deathLink = AppStatic.getMarkerLink(death, deathLabel);
+          modalBloodbathCounter += totalDeathCount;
 
-              const totalDeathCount = death.count + peersCount;
-              const deathLabel = `${death.section ? `${death.section}, ` : ''}${death.location} ${totalDeathCount > 1 ? `(<strong style="color: red">${totalDeathCount} décès</strong>)` : ''}`;
-              const deathLink = AppStatic.getMarkerLink(death, deathLabel);
-              modalBloodbathCounter += totalDeathCount;
-
-              modalBloodbathListContent += `<p>
+          modalBloodbathListContent += `<p>
     <strong>${death.day}/${death.month}/${death.year} [${causeFormatted}] - ${houseFormatted}:</strong>
     <span>${deathLink}</span>
 </p>`;
-            }
-            modalBloodbathListContent += '</div>';
-            modalBloodbathElement.innerHTML = StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, App.getInstance().getGlossary());
-            modalBloodbathCounterElement.innerHTML = `${modalBloodbathCounter} décès`;
-            modalBloodbathYear.innerHTML = filters.year;
-            AppStatic.bindTooltip();
-          },
+        }
+        modalBloodbathListContent += '</div>';
+        App.getInstance()
+        .getRenderer()
+        .render('bloodbath-list', {
+          LIST_CONTENT: StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, App.getInstance().getGlossary()),
+        })
+        .then((htmlContent) => {
+          App.getInstance().getModal().modalInfo(
+            "Liste des décès pour l'année %year%: %count% décès".replace('%year%', filters.year).replace('%count%', String(modalBloodbathCounter)),
+            htmlContent,
+            {
+              cancelLabel: 'Fermer',
+              confirmCallback: () => (this.promptDataDownloadExport()),
+              okLabel: 'Télécharger les données',
+            },
+          );
         });
       } else {
         App.getInstance().getModal().modalInfo('Information', this.emptyMarkerMessage);
@@ -302,14 +296,25 @@ export class MapButtons {
     GmapUtils.bindButton(map, () => {
       const markers = App.getInstance().getMarkers();
       if (markers.length) {
-        micromodal.show('modal-bloodbath-chart', {
-          onShow: () => {
-            const definitions = App.getInstance().getConfigDefinitions();
-            const year = App.getInstance().getFilters(false)['year'];
+        App.getInstance()
+        .getRenderer()
+        .render('bloodbath-chart', {})
+        .then((htmlContent) => {
+          App.getInstance().getModal().modalInfo(
+            '',
+            htmlContent,
+            {
+              isLarge: true,
+              okLabel: 'Fermer',
+              onceShown: () => {
+                const definitions = App.getInstance().getConfigDefinitions();
+                const year = App.getInstance().getFilters(false)['year'];
 
-            App.getInstance().getCharts().buildChartPerCause(markers, App.getInstance().getFormFilters(), definitions, year);
-            App.getInstance().getCharts().buildChartPerHouse(markers, App.getInstance().getFormFilters(), definitions, year);
-          },
+                App.getInstance().getCharts().buildChartPerCause(markers, App.getInstance().getFormFilters(), definitions, year);
+                App.getInstance().getCharts().buildChartPerHouse(markers, App.getInstance().getFormFilters(), definitions, year);
+              },
+            },
+          );
         });
       } else {
         App.getInstance().getModal().modalInfo('Information', this.emptyMarkerMessage);
@@ -340,81 +345,81 @@ export class MapButtons {
       App.getInstance().getModal().modalInfo(
         'Téléchargement des données',
         'Les données que vous allez télécharger seront contextualisées selon les filtres appliqués. Continuer ?',
-        () => {
-          const now = new Date();
-          const filenameDate = `${now.getFullYear()}${now.getMonth()}${now.getDay()}${now.getHours()}${now.getMinutes()}${now.getSeconds()}`;
-          const definitions = App.getInstance().getConfigDefinitions();
-          const formFiltersKeyed = App.getInstance().getFormFiltersKeyed();
-          const formFilters = App.getInstance().getFilters(false);
+        {
+          confirmCallback: () => {
+            const now = new Date();
+            const filenameDate = `${now.getFullYear()}${now.getMonth()}${now.getDay()}${now.getHours()}${now.getMinutes()}${now.getSeconds()}`;
+            const definitions = App.getInstance().getConfigDefinitions();
+            const formFiltersKeyed = App.getInstance().getFormFiltersKeyed();
+            const formFilters = App.getInstance().getFilters(false);
 
-          const options = {
-            decimalSeparator: '.',
-            fieldSeparator: ',',
-            filename: `In-Memoriam-Export-${App.getInstance().getFilters(false)['year']}.${filenameDate}`,
-            quoteStrings: '"',
-            showLabels: true,
-            showTitle: false,
-            title: null,
-            useBom: false,
-            useKeysAsHeaders: true,
-            useTextFile: false,
-          };
-
-          const csvExporter = new ExportToCsv(options);
-          const csvData = [];
-          const csvDataBuilder = (death: Death, peer?: DeathPeer): object => {
-            const build = {};
-            const indexNameBuilder = (indexName: string, filters: Filters): string => {
-              const formFiltersBuilt = (filters[indexName] ? filters[indexName] as string : '').split(',').map((val): string => {
-                if (val !== '') {
-                  return formFiltersKeyed[indexName] ? formFiltersKeyed[indexName][val] : val;
-                }
-                return '';
-              }).join(', ');
-              let formFiltersSuffix = formFiltersBuilt ? ` (filtre: ${formFiltersBuilt})` : '';
-              /**
-               *  Due to a bug in the "export-to-csv" package that does not
-               *  escape headers as quoted string, we must do it manually :(
-               *  (The same apply for date build few lines below)
-               */
-              if (indexName === 'text') {
-                formFiltersSuffix = formFilters.search ? ` (recherche: ${formFilters.search})` : '';
-              }
-              return `"${StringUtilsHelper.ucFirst(definitions[indexName]['#name'])}${formFiltersSuffix}"`;
+            const options = {
+              decimalSeparator: '.',
+              fieldSeparator: ',',
+              filename: `In-Memoriam-Export-${App.getInstance().getFilters(false)['year']}.${filenameDate}`,
+              quoteStrings: '"',
+              showLabels: true,
+              showTitle: false,
+              title: null,
+              useBom: false,
+              useKeysAsHeaders: true,
+              useTextFile: false,
             };
 
-            const months = formFilters.month.split(',').map((m): string => {
-              return formFiltersKeyed['month'][m];
-            }).join(', ');
+            const csvExporter = new ExportToCsv(options);
+            const csvData = [];
+            const csvDataBuilder = (death: Death, peer?: DeathPeer): object => {
+              const build = {};
+              const indexNameBuilder = (indexName: string, filters: Filters): string => {
+                const formFiltersBuilt = (filters[indexName] ? filters[indexName] as string : '').split(',').map((val): string => {
+                  if (val !== '') {
+                    return formFiltersKeyed[indexName] ? formFiltersKeyed[indexName][val] : val;
+                  }
+                  return '';
+                }).join(', ');
+                let formFiltersSuffix = formFiltersBuilt ? ` (filtre: ${formFiltersBuilt})` : '';
+                /**
+                 *  Due to a bug in the "export-to-csv" package that does not
+                 *  escape headers as quoted string, we must do it manually :(
+                 *  (The same apply for date build few lines below)
+                 */
+                if (indexName === 'text') {
+                  formFiltersSuffix = formFilters.search ? ` (recherche: ${formFilters.search})` : '';
+                }
+                return `"${StringUtilsHelper.ucFirst(definitions[indexName]['#name'])}${formFiltersSuffix}"`;
+              };
 
-            build[`"Date${months ? ` (mois: ${months})` : ''}"`] = `${death.year}-${death.month}-${death.day}`; // ISO 8601
-            build[indexNameBuilder('cause', formFilters)] = formFiltersKeyed['cause'][death.cause];
-            build[indexNameBuilder('house', formFilters)] = peer ? formFiltersKeyed['house'][peer.house] : formFiltersKeyed['house'][death.house];
-            build[indexNameBuilder('section', formFilters)] = peer ? peer.section : death.section;
-            build[indexNameBuilder('location', formFilters)] = death.location;
-            build[indexNameBuilder('text', formFilters)] = peer ? '' : death.text;
-            build[indexNameBuilder('origin', formFilters)] = formFiltersKeyed['origin'][death.origin];
-            build[indexNameBuilder('gps', formFilters)] = `${Number((death.gps.lat).toFixed(8))},${Number((death.gps.lon).toFixed(8))}`;
-            build[indexNameBuilder('count', formFilters)] = peer ? peer.count : death.count;
-            build[indexNameBuilder('orphans', formFilters)] = peer ? 0 : death.orphans;
-            build[indexNameBuilder('homage', formFilters)] = death.homage ? `${death.homage.title}: ${death.homage.url}` : 'Non communiqué';
-            build[indexNameBuilder('sources', formFilters)] = death.sources.map((s) => s.url ? s.url : s.title).join('\n');
+              const months = formFilters.month.split(',').map((m): string => {
+                return formFiltersKeyed['month'][m];
+              }).join(', ');
 
-            return build;
-          };
+              build[`"Date${months ? ` (mois: ${months})` : ''}"`] = `${death.year}-${death.month}-${death.day}`; // ISO 8601
+              build[indexNameBuilder('cause', formFilters)] = formFiltersKeyed['cause'][death.cause];
+              build[indexNameBuilder('house', formFilters)] = peer ? formFiltersKeyed['house'][peer.house] : formFiltersKeyed['house'][death.house];
+              build[indexNameBuilder('section', formFilters)] = peer ? peer.section : death.section;
+              build[indexNameBuilder('location', formFilters)] = death.location;
+              build[indexNameBuilder('text', formFilters)] = peer ? '' : death.text;
+              build[indexNameBuilder('origin', formFilters)] = formFiltersKeyed['origin'][death.origin];
+              build[indexNameBuilder('gps', formFilters)] = `${Number((death.gps.lat).toFixed(8))},${Number((death.gps.lon).toFixed(8))}`;
+              build[indexNameBuilder('count', formFilters)] = peer ? peer.count : death.count;
+              build[indexNameBuilder('orphans', formFilters)] = peer ? 0 : death.orphans;
+              build[indexNameBuilder('homage', formFilters)] = death.homage ? `${death.homage.title}: ${death.homage.url}` : 'Non communiqué';
+              build[indexNameBuilder('sources', formFilters)] = death.sources.map((s) => s.url ? s.url : s.title).join('\n');
 
-          for (const marker of markers) {
-            csvData.push(csvDataBuilder(marker.death));
-            for (const peer of marker.death.peers) {
-              csvData.push(csvDataBuilder(marker.death, peer));
+              return build;
+            };
+
+            for (const marker of markers) {
+              csvData.push(csvDataBuilder(marker.death));
+              for (const peer of marker.death.peers) {
+                csvData.push(csvDataBuilder(marker.death, peer));
+              }
             }
-          }
 
-          csvExporter.generateCsv(csvData);
+            csvExporter.generateCsv(csvData);
+          },
+          okLabel: 'Télécharger au format CSV',
         },
-        null,
-        false,
-        'Télécharger au format CSV',
       );
     } else {
       App.getInstance().getModal().modalInfo('Information', this.emptyMarkerMessage);

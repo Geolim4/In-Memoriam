@@ -85,6 +85,7 @@
         "title": "@36quaidesorfevres",
         "url": "https://www.instagram.com/36quaidesorfevres/"
       }
-    ]
+    ],
+    "templateDir": "./assets/templates/%tpl%.tpl.html"
   }
 }

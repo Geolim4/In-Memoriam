@@ -1,8 +1,7 @@
+import { ModalOptions } from './Modal/modalOptions.model';
+
 export interface ModalInfoParameters {
   title: string;
   content: string;
-  confirmCallback?: VoidFunction;
-  cancelCallback?: VoidFunction;
-  isError?: boolean;
-  okLabel?: string;
+  options?: ModalOptions;
 }

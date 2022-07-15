@@ -56,9 +56,7 @@ export class App extends AppCore {
       this.getModal().modalInfo(
         'Erreur',
         'Impossible de récupérer le dictionnaire des termes.',
-        null,
-        null,
-        true,
+        { isError: true },
       );
     });
   }

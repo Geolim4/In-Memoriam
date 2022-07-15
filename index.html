@@ -22,8 +22,8 @@
     <meta property="og:url" content="https://in.memoriam.forces-francaises.fr/" />
     <meta property="og:image" content="https://in.memoriam.forces-francaises.fr/assets/images/pwa/in-memoriam_512.png" />
     <meta name="theme-color" content="#343a40"/>
-    <link rel="apple-touch-icon" href="https://in.memoriam.forces-francaises.fr/assets/images/pwa/in-memoriam_192.png">
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap">
+    <link rel="apple-touch-icon" href="https://in.memoriam.forces-francaises.fr/assets/images/pwa/in-memoriam_192.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/main.css" crossorigin="anonymous" />
 </head>
 
@@ -170,55 +170,9 @@
 
 <!-- Modals -->
 <div id="micromodals">
-    <div class="modal micromodal-slide" id="modal-bloodbath-list" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-bloodbath-list-title">
-                <header class="modal__header">
-                    <div>
-                        <h2 class="modal__title" id="modal-bloodbath-list-title">
-                            Liste des décès pour l'année <span id="modal-bloodbath-year"></span>: <span id="modal-bloodbath-death-counter"></span>
-                        </h2>
-                        <div class="mtop">
-                            <small>
-                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                La liste affichée ci-dessous est contextualisée en fonction des filtres appliqués.
-                            </small>
-                        </div>
-                    </div>
-                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                </header>
-                <main class="modal__content" id="modal-bloodbath-list-content"></main>
-                <footer class="modal__footer">
-                    <button class="modal__btn" data-micromodal-close aria-label="Télécharger les données" data-micromodal-role="download-data">Télécharger les données</button>
-                    <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Fermer la popup">Fermer</button>
-                </footer>
-            </div>
-        </div>
-    </div>
-    <div class="modal micromodal-slide" id="modal-bloodbath-chart" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container large" role="dialog" aria-modal="true" aria-labelledby="modal-bloodbath-list-title">
-                <header class="modal__header">
-                    <h2 class="modal__title" ></h2>
-                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                </header>
-                <main class="modal__content" id="modal-bloodbath-chart-content">
-                    <div id="chart-container-pie-cause" class="col-md-6"></div>
-                    <div id="chart-container-pie-house" class="col-md-6"></div>
-                    <div class="col-md-12"><p><br /></p></div>
-                    <div id="chart-container-bar-cause" class="col-md-12"></div>
-                    <div id="chart-container-bar-house" class="col-md-12"></div>
-                    <div class="col-md-12"><em><a href="https://www.highcharts.com" target="_blank"><small>Highcharts.com</small></a></em></div>
-                </main>
-                <footer class="modal__footer">
-                    <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Fermer la popup">Fermer</button>
-                </footer>
-            </div>
-        </div>
-    </div>
     <div class="modal micromodal-slide" id="modal-info" aria-hidden="true">
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-bloodbath-list-title">
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-info-title">
                 <header class="modal__header">
                     <div>
                         <h2 class="modal__title" id="modal-info-title"></h2>

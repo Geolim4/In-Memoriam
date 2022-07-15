@@ -3144,6 +3144,11 @@ jsonminify@^0.4.2:
   resolved "https://registry.yarnpkg.com/jsonminify/-/jsonminify-0.4.2.tgz#fe6fb09391227e856f8c7c0761ff11b497b61fe8"
   integrity sha512-mEtP5ECD0293D+s45JhDutqF5mFCkWY8ClrPFxjSFR2KUoantofky7noSzyKnAnD9Gd8pXHZSUd5bgzLDUBbfA==
 
+just-template@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/just-template/-/just-template-2.0.2.tgz#e6106cc0111633a06e41aaf4102a13dc44b87438"
+  integrity sha512-lrTePaaT5758R0L+n4c6UWnS4RElK6+cp70KQ6s1XTLIUnfkVURtvvCzXo96an5dnX0ixNjzKX2Iad2NCS04nw==
+
 kdbush@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/kdbush/-/kdbush-3.0.0.tgz#f8484794d47004cc2d85ed3a79353dbe0abc2bf0"

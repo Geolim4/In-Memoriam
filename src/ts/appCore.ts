@@ -12,10 +12,10 @@ import { Events } from './Components/events';
 import { ExtendedGoogleMapsMarker } from './models/Gmaps/extendedGoogleMapsMarker.model';
 import { Death, DeathOrigin } from './models/Death/death.model';
 import { AppStatic } from './appStatic';
-import micromodal from 'micromodal';
 import activityDetector from 'activity-detector';
 import { HoverTitleUrl } from './models/hoverTitleUrl.model';
 import unique = require('array-unique');
+import { Renderer } from './Extensions/renderer';
 const Choices = require('choices.js');
 const autocomplete = require('autocompleter');
 
@@ -71,7 +71,7 @@ export abstract class AppCore extends AppAbstract {
           this.getModal().modalInfo('Information', messageText);
         } else {
           const messageText = 'La recherche a rencontr&eacute; une erreur, essayez de corriger votre saisie.';
-          this.getModal().modalInfo('Information', messageText, null, null, true);
+          this.getModal().modalInfo('Information', messageText, { isError: true });
         }
         this.printDefinitionsText(null);
         return;
@@ -293,54 +293,55 @@ export abstract class AppCore extends AppAbstract {
         console.error(e);
         console.error(`Failed to load the death list: ${e}`);
       }
-      this.getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des décès.', null, null, true);
+      this.getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des décès.', { isError: true });
     });
 
   }
 
   private run(): void {
+    this.renderer = new Renderer(this.getConfigFactory().config.templateDir);
     (new Loader(this.getConfigFactory().config.googleMapsOptions))
     .load()
-    .then((google) => {
-      const mapElement = <HTMLInputElement>document.getElementById('map');
-      const options = {
-        backgroundColor: '#343A40', // See variables.scss
-        center: new google.maps.LatLng(this.getConfigFactory().config['defaultLat'], this.getConfigFactory().config['defaultLon']),
-        mapId: this.getConfigFactory().config['mapId'],
-        mapTypeControl: false,
-        // mapTypeId: google.maps.MapTypeId.HYBRID,
-        maxZoom: this.getConfigFactory().config['maxZoom'],
-        streetViewControl: false,
-        zoom: this.getConfigFactory().config['defaultZoom'],
-      };
-      const map = new google.maps.Map(mapElement, options);
-      const filtersPath = './data/config/filters.json';
+    .then(() => this.loadGoogleMap());
+  }
 
-      fetch(filtersPath).then((response): any => response.json()).then((responseData: { filters: FormFilters }): void => {
-        this.setFormFilters(responseData.filters);
-        this.setupSkeleton(this.getFilters(true));
-        this.bindAnchorEvents(map);
-        this.bindFilters(map);
-        this.getMapButtons().bindCustomButtons(map);
-        this.bindMarkers(map, this.getFilters(true));
-        this.bindMarkerLinkEvent(map);
-        this.bindMapEvents(map);
-        this.bindFullscreenFormFilterListener();
-        this.printSupportAssociations();
-      }).catch((reason): void => {
-        if (this.getConfigFactory().isDebugEnabled()) {
-          console.error(reason);
-        }
-        this.getModal().modalInfo('Erreur',
-          'Impossible de récupérer la liste des filtres.',
-          null,
-          null
-          , true,
-        );
-      });
+  private loadGoogleMap(): void {
+    const mapElement = <HTMLInputElement>document.getElementById('map');
+    const options = {
+      backgroundColor: '#343A40', // See variables.scss
+      center: new google.maps.LatLng(this.getConfigFactory().config['defaultLat'], this.getConfigFactory().config['defaultLon']),
+      mapId: this.getConfigFactory().config['mapId'],
+      mapTypeControl: false,
+      // mapTypeId: google.maps.MapTypeId.HYBRID,
+      maxZoom: this.getConfigFactory().config['maxZoom'],
+      streetViewControl: false,
+      zoom: this.getConfigFactory().config['defaultZoom'],
+    };
+    const map = new google.maps.Map(mapElement, options);
+    const filtersPath = './data/config/filters.json';
 
-      this.loadActivityDetectorMonitoring(map);
+    fetch(filtersPath).then((response): any => response.json()).then((responseData: { filters: FormFilters }): void => {
+      this.setFormFilters(responseData.filters);
+      this.setupSkeleton(this.getFilters(true));
+      this.bindAnchorEvents(map);
+      this.bindFilters(map);
+      this.getMapButtons().bindCustomButtons(map);
+      this.bindMarkers(map, this.getFilters(true));
+      this.bindMarkerLinkEvent(map);
+      this.bindMapEvents(map);
+      this.bindFullscreenFormFilterListener();
+      this.printSupportAssociations();
+    }).catch((reason): void => {
+      if (this.getConfigFactory().isDebugEnabled()) {
+        console.error(reason);
+      }
+      this.getModal().modalInfo('Erreur',
+        'Impossible de récupérer la liste des filtres.',
+        { isError: true },
+      );
     });
+
+    this.loadActivityDetectorMonitoring(map);
   }
 
   private getDefinitions(response: Bloodbath): DefinitionsCount {
@@ -496,9 +497,7 @@ export abstract class AppCore extends AppAbstract {
           this.getModal().modalInfo(
             "Erreur d'évaluation",
             `L'expression <code>${e.expression}</code> a retourné l'erreur suivante: <code>${e.message}</code>`,
-            null,
-            null,
-            true,
+            { isError: true },
           );
         }
       }
@@ -663,9 +662,7 @@ export abstract class AppCore extends AppAbstract {
         const deathHash = origin.dataset.deathHash; // decodeURIComponent(escape(atob(origin.dataset.deathHash)));
         if (this.markers[this.markerHashIndex[deathHash]]) {
           const marker = this.markers[this.markerHashIndex[deathHash]];
-          if (document.getElementById('modal-bloodbath-list').classList.contains('is-open')) {
-            micromodal.close('modal-bloodbath-list');
-          }
+          this.getModal().closeModalInfo();
           map.setZoom(this.getConfigFactory().config['maxZoom']);
           google.maps.event.trigger(marker, 'click');
           map.setCenter(marker.getPosition());
