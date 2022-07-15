@@ -12,7 +12,6 @@ import { Death } from '../models/Death/death.model';
 import { DeathPeer } from '../models/Death/deathPeer.model';
 import { Filters } from '../models';
 import { IntUtilsHelper } from '../helper/intUtils.helper';
-import { AppStatic } from '../appStatic';
 
 export class MapButtons {
   private localizationMarker: google.maps.Marker;
@@ -236,34 +235,12 @@ export class MapButtons {
 
       if (markers.length) {
         const filters = App.getInstance().getFilters(false);
-        let modalBloodbathListContent = '<div>';
-        let modalBloodbathCounter = 0;
+        const modalBloodbathCounter = markers.map((m) => (m.death.count + m.death.peers.map((p) => (p.count)).reduce((partSum, a) => partSum + a, 0))).reduce((partSum, a) => partSum + a, 0);
 
-        for (const key in markers) {
-          const death = markers[key].death;
-          let peersCount = 0;
-          const houseFormatted =  App.getInstance().getFilterValueLabel('house', death.house);
-          const causeFormatted = App.getInstance().getFilterValueLabel('cause', death.cause);
-
-          for (const peer of death.peers) {
-            peersCount += peer.count;
-          }
-
-          const totalDeathCount = death.count + peersCount;
-          const deathLabel = `${death.section ? `${death.section}, ` : ''}${death.location} ${totalDeathCount > 1 ? `(<strong style="color: red">${totalDeathCount} décès</strong>)` : ''}`;
-          const deathLink = AppStatic.getMarkerLink(death, deathLabel);
-          modalBloodbathCounter += totalDeathCount;
-
-          modalBloodbathListContent += `<p>
-    <strong>${death.day}/${death.month}/${death.year} [${causeFormatted}] - ${houseFormatted}:</strong>
-    <span>${deathLink}</span>
-</p>`;
-        }
-        modalBloodbathListContent += '</div>';
         App.getInstance()
         .getRenderer()
         .render('bloodbath-list', {
-          LIST_CONTENT: StringUtilsHelper.replaceAcronyms(modalBloodbathListContent, App.getInstance().getGlossary()),
+          markers,
         })
         .then((htmlContent) => {
           App.getInstance().getModal().modalInfo(

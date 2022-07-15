@@ -86,6 +86,6 @@
         "url": "https://www.instagram.com/36quaidesorfevres/"
       }
     ],
-    "templateDir": "./assets/templates/%tpl%.tpl.html"
+    "templateDir": "./assets/templates/%tpl%.html.twig"
   }
 }

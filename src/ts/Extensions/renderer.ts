@@ -1,10 +1,14 @@
-import template from 'just-template';
+import { AppStatic } from '../appStatic';
+
+const Twig = require('twig').twig;
 
 /**
  * @author Georges.L <contact@geolim4.com>
  * @licence GPL-2.0
  */
 import { App } from '../app';
+import { StringUtilsHelper } from '../helper/stringUtils.helper';
+import { Death } from '../models/Death/death.model';
 
 export class Renderer {
   private templateDir: string;
@@ -40,6 +44,14 @@ export class Renderer {
   }
 
   private doRender(templateContent: string, variables: object): string {
-    return template(templateContent, variables as {[key: string]: string });
+    return Twig({ data: templateContent })
+    .render({
+      ...variables,
+      ...{
+        acronymise: (str: string) => StringUtilsHelper.replaceAcronyms(str, App.getInstance().getGlossary()),
+        app: App.getInstance(),
+        marker_link: (death: Death, label: string) => AppStatic.getMarkerLink(death, label),
+      },
+    });
   }
 }
