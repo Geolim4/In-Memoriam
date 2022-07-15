@@ -47,10 +47,10 @@ self.addEventListener('activate', function(event) {
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
-        cacheNames.map(function(cacheName) {
-          if ([CACHE_ASSETS].indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
+        cacheNames.filter(function(cacheName) {
+          return CACHE_ASSETS !== cacheName;
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
         })
       );
     })
