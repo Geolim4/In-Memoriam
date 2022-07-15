@@ -56,12 +56,12 @@ export class ConfigFactory {
         if (this.isDebugEnabled()) {
           console.error(`Failed to load the definitions: ${e}`);
         }
-        App.getInstance().getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des définitions.', null, null, true);
+        App.getInstance().getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des définitions.', { isError: true });
       });
     }).catch((e): void => {
       // No debug check here since it's stored in configuration
       console.error(`Failed to load the configuration: ${e}`);
-      App.getInstance().getModal().modalInfo('Erreur', 'Impossible de récupérer le modèle de configuration.', null, null, true);
+      App.getInstance().getModal().modalInfo('Erreur', 'Impossible de récupérer le modèle de configuration.', { isError: true });
     });
   }
 }

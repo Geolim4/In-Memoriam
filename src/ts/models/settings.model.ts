@@ -23,4 +23,5 @@ export interface Settings {
   maxZoom: number;
   supportAssociations: HoverTitleUrl[];
   searchMinLength: number;
+  templateDir: string;
 }

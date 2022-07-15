@@ -10,7 +10,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "2.4.1",
+    "appVersion": "2.5.0",
     "contactEmail": "contact@geolim4.com",
     "debugCookieName": "_JS_DEBUG_ENABLED_",
     "deathsSrc": "./data/deaths/%year%.json",
@@ -85,6 +85,7 @@
         "title": "@36quaidesorfevres",
         "url": "https://www.instagram.com/36quaidesorfevres/"
       }
-    ]
+    ],
+    "templateDir": "./assets/templates/%tpl%.tpl.html"
   }
 }

@@ -60,6 +60,7 @@
     "highcharts": "^9.3.3",
     "jquery": "^3.5.0",
     "jsonminify": "^0.4.2",
+    "just-template": "^2.0.2",
     "micromodal": "^0.4.2",
     "popper.js": "^1.15.0",
     "tippy.js": "^5.1.1",
