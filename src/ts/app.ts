@@ -47,7 +47,7 @@ export class App extends AppCore {
     const glossaryPath = './data/config/glossary.json';
     fetch(glossaryPath)
     .then((response): any => response.json())
-    .then((responseData: {glossary: {}}): void => {
+    .then((responseData: {glossary: { [name: string]: string }}): void => {
       this.setGlossary(responseData.glossary);
     }).catch((e): void => {
       if (this.getConfigFactory().isDebugEnabled()) {
