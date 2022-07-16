@@ -15,7 +15,6 @@ import { Renderer } from './Extensions/renderer';
 export abstract class AppAbstract {
   protected markers: ExtendedGoogleMapsMarker[];
   protected suggestions: string[];
-  protected renderer: Renderer;
   private currentInfoWindow: google.maps.InfoWindow;
   private formFilters: FormFilters;
   private appLoaded: boolean;
@@ -23,6 +22,7 @@ export abstract class AppAbstract {
   private clusteringEnabled: boolean;
   private configFactory: ConfigFactory;
   private glossary: { [name: string]: string };
+  private renderer: Renderer;
   private readonly modal: Modal;
   private readonly charts: Charts;
   private readonly mapButtons: MapButtons;
@@ -149,8 +149,17 @@ export abstract class AppAbstract {
     return this.renderer;
   }
 
-  protected buildFetchMarkersUrl(year: string): string {
-    return `${this.getConfigFactory().config.deathsSrc.replace('%year%', year)}?_=${(new Date()).getTime()}`;
+  public setRenderer(renderer: Renderer): void {
+    this.renderer = renderer;
+  }
+
+  public getTotalDeathCount(death: Death): number {
+    let count = 0;
+    for (const peer of death.peers) {
+      count += peer.count;
+    }
+
+    return death.count + count;
   }
 
   protected flapAppAsLoaded() : void {

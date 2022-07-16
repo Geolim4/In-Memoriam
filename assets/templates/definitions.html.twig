@@ -1,0 +1,7 @@
+{% if definitions|length %}
+    <div class="shadowed inline-block">
+        {% for definition in definitions %}
+            {{ definition }}<br />
+        {% endfor %}
+    </div>
+{% endif %}

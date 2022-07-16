@@ -21,7 +21,7 @@ export class Renderer {
 
   public async render(tplName: string, variables: object): Promise<string|null> {
     if (typeof this.templates[tplName] === 'undefined') {
-      return fetch(this.templateDir.replace('%tpl%', tplName))
+      return fetch(this.templateDir.replace('%tpl%', tplName), { cache: 'force-cache' })
       .then((response): any => response.text())
       .then((responseData: string): string => {
         this.templates[tplName] = responseData;
@@ -43,6 +43,20 @@ export class Renderer {
           .then(() => (this.doRender(this.templates[tplName], variables)));
   }
 
+  public async renderAsDom(tplName: string, variables: object): Promise<Element> {
+    return this.render(tplName, variables).then((htmlContent) => {
+      const div = document.createElement('div');
+      div.innerHTML = htmlContent;
+      return div.firstChild as Element;
+    });
+  }
+
+  public async renderTo(tplName: string, variables: object, element: Element): Promise<void> {
+    return this.render(tplName, variables).then((htmlContent) => {
+      element.innerHTML = htmlContent;
+    });
+  }
+
   private doRender(templateContent: string, variables: object): string {
     return Twig({ data: templateContent })
     .render({
@@ -50,6 +64,7 @@ export class Renderer {
       ...{
         acronymise: (str: string) => StringUtilsHelper.replaceAcronyms(str, App.getInstance().getGlossary()),
         app: App.getInstance(),
+        config: App.getInstance().getConfigFactory().config,
         marker_link: (death: Death, label: string) => AppStatic.getMarkerLink(death, label),
       },
     });

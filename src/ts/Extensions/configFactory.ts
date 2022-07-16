@@ -30,7 +30,7 @@ export class ConfigFactory {
   private init(onceInitialized: VoidFunction): void {
     const hostname = window.location.hostname;
 
-    fetch(this.configPath)
+    fetch(this.configPath, { cache: 'no-cache' })
     .then((response): any => response.json())
     .then((responseData: { settings: Settings, hostSettings: {[name: string]: any} }): void => {
       this.config = responseData.settings;
@@ -47,7 +47,7 @@ export class ConfigFactory {
         }
       }
 
-      fetch(this.definitionsPath)
+      fetch(this.definitionsPath, { cache: 'force-cache' })
       .then((response): any => response.json())
       .then((responseData: { definitions: Definitions }): void => {
         this.definitions = responseData.definitions;

@@ -3,8 +3,8 @@ const path = require('path');
 
 module.exports = {
   performance: {
-    maxEntrypointSize: 612000,
-    maxAssetSize: 612000
+    maxEntrypointSize: 1048576,
+    maxAssetSize: 1048576
   },
   entry: path.resolve(__dirname, '../src/ts/main.ts'),
   mode: "production",
@@ -15,7 +15,7 @@ module.exports = {
     }],
   },
   output: {
-    filename: "bundle.js",
+    filename: "app.js",
     path: path.resolve(__dirname, '../assets/js')
   },
   resolve: {
