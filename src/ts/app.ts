@@ -45,7 +45,7 @@ export class App extends AppCore {
 
   public loadGlossary(): void {
     const glossaryPath = './data/config/glossary.json';
-    fetch(glossaryPath)
+    fetch(glossaryPath, { cache: 'force-cache' })
     .then((response): any => response.json())
     .then((responseData: {glossary: { [name: string]: string }}): void => {
       this.setGlossary(responseData.glossary);

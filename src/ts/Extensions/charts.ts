@@ -165,7 +165,7 @@ export class Charts {
 
             /**
              * If the criteria does not exist in peer (e.g: "cause" criteria)
-             * the check in the parent object if it exists
+             * then check in the parent object if it exists
              */
           } else if (typeof marker.death[criteria] !== 'undefined') {
             if (typeof peersList[marker.death[criteria]] === 'undefined') {

@@ -8,7 +8,6 @@ Events.addEventHandler(
     try {
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js').then(() => {
-          console.log('Registered the service worker, app will works offline.');
         }).catch(() => {
           console.warn('Failed to register the service worker, app will not work offline.');
         }).finally(() => {

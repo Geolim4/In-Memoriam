@@ -1,0 +1,3 @@
+{% for association in associations %}
+    <a href="{{ association.url }}" target="_blank" data-tippy-content="{{ association.hover }}">{{ association.title }}</a>{% if not loop.last %}, {% endif %}
+{% endfor %}

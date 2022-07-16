@@ -1,7 +1,7 @@
 {% if definitions|length %}
     <div class="shadowed inline-block">
         {% for definition in definitions %}
-            {{ definition }}<br />
+            {{ definition }}{% if not loop.last %}<br />{% endif %}
         {% endfor %}
     </div>
 {% endif %}

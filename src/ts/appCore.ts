@@ -13,9 +13,9 @@ import { ExtendedGoogleMapsMarker } from './models/Gmaps/extendedGoogleMapsMarke
 import { Death, DeathOrigin } from './models/Death/death.model';
 import { AppStatic } from './appStatic';
 import activityDetector from 'activity-detector';
-import { HoverTitleUrl } from './models/hoverTitleUrl.model';
 import unique = require('array-unique');
 import { Renderer } from './Extensions/renderer';
+import { ModalContentTemplate } from './Extensions/modalContentTemplate';
 const Choices = require('choices.js');
 const autocomplete = require('autocompleter');
 
@@ -134,19 +134,9 @@ export abstract class AppCore extends AppAbstract {
               Events.addEventHandler(infoWindowContent.querySelector('a.error-link'), ['click', 'touchstart'], (e) => {
                 e.preventDefault();
                 const reference = `${death.section}, ${death.location} le ${death.day}/${death.month}/${death.year}`;
-                const mailtoSubject = `Erreur trouvée: ${reference}`;
                 this.getModal().modalInfo(
                   'Vous avez trouvé une erreur ?',
-                  `<p>
-                            Vous pouvez soit me la signaler par <a href="mailto:${this.getConfigFactory().config.contactEmail}?subject=${mailtoSubject}" target="_blank">e-mail</a> 📧
-                            ou alors me <a href="https://github.com/Geolim4/In-Memoriam/issues/new?title=${mailtoSubject}" target="_blank">créer un ticket de support</a> 🎫 sur Github.
-                        </p>
-                        <p>
-                            Dans tous les cas merci beaucoup pour votre vigilance. ❤️
-                        </p>
-                        <p class="mtop">
-                            <small>Référence: <em><code>${reference}</code><em/></small>
-                        </p>`,
+                  new ModalContentTemplate('infowindow-error', { reference }),
                 );
               });
             }
@@ -767,27 +757,17 @@ export abstract class AppCore extends AppAbstract {
         /**
          * Definition printing is considered as last step of app load.
          */
-        this.flapAppAsLoaded();
+        this.flagAppAsLoaded();
       });
   }
 
   private printSupportAssociations(): void {
-    const wrapper = document.querySelector('.association-list');
-    if (wrapper !== null) {
-      this.getConfigFactory().config.supportAssociations.forEach((hoverTitleUrl: HoverTitleUrl) => {
-        const link = document.createElement('a');
-        link.href = hoverTitleUrl.url;
-        link.innerText = hoverTitleUrl.title;
-        if (hoverTitleUrl.hover) {
-          link.dataset.tippyContent = hoverTitleUrl.hover;
-        }
-        link.target = '_blank';
-        // data-tippy-content
-        if (wrapper.childNodes.length > 0) {
-          wrapper.append(', ');
-        }
-        wrapper.appendChild(link);
-      });
-    }
+    this.getRenderer().renderTo(
+      'associations',
+      { associations: this.getConfigFactory().config.supportAssociations },
+      document.querySelector('.association-list'))
+    .then(() => {
+      AppStatic.bindTooltip();
+    });
   }
 }

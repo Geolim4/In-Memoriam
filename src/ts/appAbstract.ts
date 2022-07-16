@@ -37,6 +37,7 @@ export abstract class AppAbstract {
     this.heatmapEnabled = true;
     this.clusteringEnabled = true;
     this.configFactory = null;
+    this.glossary = {};
     this.modal = new Modal();
     this.charts = new Charts();
     this.mapButtons = new MapButtons();
@@ -162,7 +163,7 @@ export abstract class AppAbstract {
     return death.count + count;
   }
 
-  protected flapAppAsLoaded() : void {
+  protected flagAppAsLoaded() : void {
     if (!this.isAppLoaded()) {
       document.querySelector('body').classList.add('loaded');
 
@@ -171,7 +172,7 @@ export abstract class AppAbstract {
       });
 
       this.setAppLoaded(true);
-      console.log(`App loaded in ${(window.performance.now()) / 1000}s.`);
+      console.log(`App loaded in ${((window.performance.now()) / 1000).toFixed(3)}s.`);
       console.log(`
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
        👋🏻 Hello curious visitor, do you want to contribute to this fabulous project ?
