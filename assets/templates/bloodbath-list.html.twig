@@ -7,9 +7,7 @@
 
 <div id="modal-bloodbath-list-content" class="mtop">
     {% for marker in markers %}
-        {% set peersCount = 0 %}
-        {% for peer in marker.death.peers %}{% set peersCount = peersCount + peer.count %}{% endfor %}
-        {% set totalDeath = marker.death.count + peersCount %}
+        {% set totalDeath = app.getTotalDeathCount(marker.death) %}
         {% set deathLabel = (marker.death.section ? acronymise(marker.death.section) ~ ', ' : '') ~ marker.death.location %}
         {% set deathLabel = deathLabel ~ (totalDeath > 1 ? ' (<strong style="color: red">' ~ totalDeath ~ ' décès</strong>)': '') %}
         <p>

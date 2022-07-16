@@ -1,0 +1,63 @@
+<div class="death-container{% if app.getTotalDeathCount(death) >= 2 %} multiple-deaths{% endif %}">
+    <h4>
+        <img src="{{ config.imagePath.house|replace({"%house%": death.count >= 2 ? death.house ~ '-m' : death.house}) }}"
+             alt="House: {{ death.house }}"
+             title="House: {{ death.house }}"
+             height="16" />
+        {% if death.section %}{{ acronymise(death.section) }} - {% endif %}
+        {% if death.count > 1 %}<strong style="color: red;">{{ death.count }} décès</strong> - {% endif %}
+        {{ app.getFilterValueLabel('house', death.house) }}
+    </h4>
+    {% for peer in death.peers %}
+        <h5>
+            <img src="{{ config.imagePath.house|replace({"%house%": peer.count >= 2 ? peer.house ~ '-m' : peer.house}) }}"
+                 alt="House: {{ peer.house }}"
+                 title="House: {{ peer.house }}"
+                 height="16" />
+            {% if peer.section %}{{ acronymise(peer.section) }} - {% endif %}
+            {% if peer.count > 1 %}<strong style="color: red;">{{ peer.count }} décès</strong> - {% endif %}
+            {{ app.getFilterValueLabel('house', peer.house) }}
+        </h5>
+    {% endfor %}
+    <br>
+    <span>
+   <strong>Emplacement</strong>: {{ death.location }}
+    {% if not death.gps.accurate %}
+        <strong style="color: orangered;"><abbr data-tippy-content="Indique que l\'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>
+    {% endif %}
+   <a href="https://maps.google.com/?ll={{ death.gps.lat }},{{ death.gps.lon }}&amp;q={{ death.location }}" target="_blank" tabindex="0">
+    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+   </a>
+   <br><br>
+   <strong>Date</strong>: {{ death.day }}/{{ death.month }}/{{ death.year }}
+   <br><br>
+   <strong>Cause</strong>: {{ app.getFilterValueLabel('cause', death.cause) }}
+   <br><br>
+   <strong>Hommage</strong>:
+        {% if death.homage %}
+            <a href="{{ death.homage.url }}" target="_blank">{{ acronymise(death.homage.title) }}</a>
+            <span class="glyphicon glyphicon-ok-sign" aria-hidden="true" data-tippy-content="Source officielle"></span>
+        {% else %}
+            <em>Non communiqué</em>
+        {% endif %}
+   <br><br>
+   <strong>Circonstances</strong>: {{ acronymise(death.text|nl2br) }}
+   </span><br><br>
+    <div class="death-sources">
+        {% if death.sources|length == 1 and death.sources[0].title == '__CONFIDENTIAL__' %}
+            <span aria-hidden="true" class="glyphicon glyphicon-alert" style="color: orangered;" ></span>&nbsp;
+            <strong data-tippy-content="La source étant anonyme, ce décès peut ne pas être fiable à 100%.">Source anonyme</strong>
+        {% else %}
+            <strong>Sources: </strong>:
+            {% for source in death.sources %}
+                <a href="{{ source.url }}" target="_blank">
+                    {{ source.title }}
+                </a>{% if source.paywall %}<span aria-hidden="true" class="glyphicon glyphicon-lock" data-tippy-content="Article réservé aux abonnés"></span>{% endif %}{% if not source.trustful %}<span aria-hidden="true" class="glyphicon glyphicon-warning-sign" data-tippy-content="Prudence, une partie du contenu de cet article peut être inexact"></span>{% endif %}{% if not loop.last %}, {% endif %}
+            {% else %}
+                <strong><span aria-hidden="true" class="glyphicon glyphicon-alert" style="color: orangered;" ></span> Aucune source renseignée</strong>
+            {% endfor %}
+        {% endif %}
+
+    </div>
+    <br><small class="report-error"><a href="javascript:;" class="error-link">[Une erreur ?]</a></small>
+</div>

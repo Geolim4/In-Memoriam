@@ -55,7 +55,9 @@ export abstract class AppCore extends AppAbstract {
 
   protected bindMarkers(map: google.maps.Map, filters: Filters): void {
     const stopwatchStart = window.performance.now();
-    fetch(this.buildFetchMarkersUrl(filters.year)).then((response) => response.json()).then((responseData: Bloodbath) => {
+    fetch(this.getConfigFactory().config.deathsSrc.replace('%year%', filters.year), { cache: 'no-store' })
+    .then((response) => response.json())
+    .then((responseData: Bloodbath) => {
       const bounds = new google.maps.LatLngBounds();
       const domTomOrOpexMarkers = <ExtendedGoogleMapsMarker[]>[];
       const heatMapData = <{ location: google.maps.LatLng, weight: number }[]>[];
@@ -63,7 +65,6 @@ export abstract class AppCore extends AppAbstract {
       const filteredResponse = this.getFilteredResponse(responseData, filters);
 
       this.clearMapObjects();
-      this.flapAppAsLoaded();
 
       if (!filteredResponse.response.deaths || !filteredResponse.response.deaths.length) {
         if (!filteredResponse.errored) {
@@ -79,22 +80,7 @@ export abstract class AppCore extends AppAbstract {
 
       for (const key in filteredResponse.response.deaths) {
         const death = <Death>filteredResponse.response.deaths[key];
-
-        let peersText = '';
-        let peersCount = 0;
-        for (const peer of death.peers) {
-          const peerHouseImage = this.getConfigFactory().config['imagePath']['house'].replace('%house%', (peer.count > 1 ? `${peer.house}-m` : peer.house));
-          const peerHouseFormatted = this.getFilterValueLabel('house', peer.house);
-          peersText += `<h5>
-              <img height="16" src="${peerHouseImage}" alt="House: ${peer.house}"  title="House: ${peer.house}" />
-              ${(peer.section ? `${StringUtilsHelper.replaceAcronyms(peer.section, this.getGlossary())}` : '')}
-              ${(` - <strong${peer.count > 1 ? ' style="color: red;"' : ''}>${peer.count} décès</strong>`)}
-              ${peerHouseFormatted !== peer.section ? ` - ${StringUtilsHelper.replaceAcronyms(peerHouseFormatted, this.getGlossary())}` : ''}
-            </h5>`;
-          peersCount += peer.count;
-        }
-
-        const totalDeathCount = death.count + peersCount;
+        const totalDeathCount = this.getTotalDeathCount(death);
         const houseImage = this.getConfigFactory().config['imagePath']['house'].replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
         const marker = new google.maps.Marker({
           map,
@@ -123,70 +109,8 @@ export abstract class AppCore extends AppAbstract {
         marker.linkHash = AppStatic.getMarkerHash(death);
         marker.death = death;
 
-        const houseFormatted = this.getFilterValueLabel('house', death.house);
-        const causeFormatted = this.getFilterValueLabel('cause', death.cause);
-        const homageFormatted = death.homage
-          ? `<a href="${death.homage.url}" target="_blank">${StringUtilsHelper.replaceAcronyms(death.homage.title, this.getGlossary())}</a>
-            <span class="glyphicon glyphicon-ok-sign" aria-hidden="true" data-tippy-content="Source officielle"></span>`
-          : '<em>Non communiqué</em>';
-
-        let infoWindowsContent = `<h4>
-              <img height="16" src="${houseImage}" alt="House: ${death.house}"  title="House: ${death.house}" />
-              ${(death.section ? `${StringUtilsHelper.replaceAcronyms(death.section, this.getGlossary())} - ` : '')}
-              ${(death.count > 1 ? `<strong style="color: red;">${death.count} décès</strong> - ` : '')}
-              ${houseFormatted !== death.section ? `${StringUtilsHelper.replaceAcronyms(houseFormatted, this.getGlossary())}` : ''}
-            </h4>
-            ${peersText}
-            <br />
-            <span>
-              <strong>Emplacement</strong>: ${death.location} ${death.gps.accurate ? '' : '<strong style="color: orangered;"><abbr data-tippy-content="Indique que l\'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>'}
-              <a href="https://maps.google.com/?ll=${death.gps.lat},${death.gps.lon}&q=${death.location}" target="_blank">
-               <span class="glyphicon  glyphicon-map-marker" aria-hidden="true"></span>
-              </a>
-              <br /><br />
-              <strong>Date</strong>: ${death.day}/${death.month}/${death.year}
-              <br /><br />
-              <strong>Cause</strong>: ${causeFormatted}
-              <br /><br />
-              <strong>Hommage</strong>: ${homageFormatted}
-              <br /><br />
-              <strong>Circonstances</strong>: ${StringUtilsHelper.replaceAcronyms(death.text.replace(new RegExp('\n', 'g'), '<br />'), this.getGlossary())}
-            </span>`;
-
-        const confidentialSource = death.sources.length === 1 && death.sources[0].title === '__CONFIDENTIAL__' && !death.sources[0].url;
-        if (death.sources && death.sources.length) {
-          let sourcesText = '';
-          if (confidentialSource) {
-            sourcesText = '<span aria-hidden="true" class="glyphicon glyphicon-alert" style="color: orangered;" ></span>&nbsp;<strong data-tippy-content="La source étant anonyme, ce décès peut ne pas être fiable à 100%.">Source anonyme</strong>';
-          } else {
-            for (const key in death.sources) {
-              const source = death.sources[key];
-              const paywall = source.paywall ? '<span aria-hidden="true" class="glyphicon glyphicon-lock" data-tippy-content="Article réservé aux abonnés"></span>' : '';
-              const trustful = !source.trustful ? '<span aria-hidden="true" class="glyphicon glyphicon-warning-sign" data-tippy-content="Prudence, une partie du contenu de cet article peut être inexact"></span>' : '';
-              if (!source.url) {
-                sourcesText += (sourcesText ? ', ' : '') + (`<strong>${StringUtilsHelper.replaceAcronyms(source.title, this.getGlossary())}</strong> ${paywall} ${trustful}`);
-              } else {
-                sourcesText += (sourcesText ? ', ' : '') + (`<a href="${source.url}" target="_blank">${StringUtilsHelper.replaceAcronyms(source.title,
-                  this.getGlossary())}</a> ${paywall} ${trustful}`);
-              }
-            }
-          }
-          infoWindowsContent += `<br /><br /><div class="death-sources">${confidentialSource ? '' : '<strong>Sources: </strong>'}${sourcesText}</div>`;
-        }
-
-        infoWindowsContent += '<br /><small class="report-error"><a href="javascript:;" class="error-link">[Une erreur ?]</a></small>';
-
-        const infoWindowsDiv = document.createElement('div');
-        infoWindowsDiv.innerHTML = infoWindowsContent;
-        infoWindowsDiv.classList.add('death-container');
-        if (totalDeathCount > 1) {
-          infoWindowsDiv.classList.add('multiple-deaths');
-        }
-        if (confidentialSource) {
-          infoWindowsDiv.classList.add('confidential-death');
-        }
         const infoWindow = new google.maps.InfoWindow({
-          content: infoWindowsDiv,
+          content: '',
           position: marker.getPosition(),
         });
 
@@ -202,17 +126,18 @@ export abstract class AppCore extends AppAbstract {
           if (this.getCurrentInfoWindow()) {
             this.getCurrentInfoWindow().close();
           }
-          infoWindow.open(map, marker);
-          this.setCurrentInfoWindow(infoWindow);
-          const infoWindowContent = infoWindow.getContent();
-          if (typeof infoWindowContent === 'object') {
-            Events.addEventHandler(infoWindowContent.querySelector('a.error-link'), ['click', 'touchstart'], (e) => {
-              e.preventDefault();
-              const reference = `${death.section}, ${death.location} le ${death.day}/${death.month}/${death.year}`;
-              const mailtoSubject = `Erreur trouvée: ${reference}`;
-              this.getModal().modalInfo(
-                'Vous avez trouvé une erreur ?',
-                `<p>
+          this.getRenderer().renderAsDom('infowindow-death', { death }).then((infoWindowContent) => {
+            infoWindow.setContent(infoWindowContent);
+            infoWindow.open(map, marker);
+            this.setCurrentInfoWindow(infoWindow);
+            if (typeof infoWindowContent === 'object') {
+              Events.addEventHandler(infoWindowContent.querySelector('a.error-link'), ['click', 'touchstart'], (e) => {
+                e.preventDefault();
+                const reference = `${death.section}, ${death.location} le ${death.day}/${death.month}/${death.year}`;
+                const mailtoSubject = `Erreur trouvée: ${reference}`;
+                this.getModal().modalInfo(
+                  'Vous avez trouvé une erreur ?',
+                  `<p>
                             Vous pouvez soit me la signaler par <a href="mailto:${this.getConfigFactory().config.contactEmail}?subject=${mailtoSubject}" target="_blank">e-mail</a> 📧
                             ou alors me <a href="https://github.com/Geolim4/In-Memoriam/issues/new?title=${mailtoSubject}" target="_blank">créer un ticket de support</a> 🎫 sur Github.
                         </p>
@@ -222,9 +147,10 @@ export abstract class AppCore extends AppAbstract {
                         <p class="mtop">
                             <small>Référence: <em><code>${reference}</code><em/></small>
                         </p>`,
-              );
-            });
-          }
+                );
+              });
+            }
+          });
         });
 
         google.maps.event.addListener(marker, 'dblclick', (): void => {
@@ -284,10 +210,10 @@ export abstract class AppCore extends AppAbstract {
         });
         this.heatMap.setMap(map);
       }
-      this.printDefinitionsText(responseData, filters);
       if (this.getConfigFactory().isDebugEnabled()) {
         console.log(`${this.markers.length} marker${this.markers.length === 1 ? '' : 's'} loaded in ${(window.performance.now() - stopwatchStart) / 1000}s`);
       }
+      this.printDefinitionsText(responseData, filters);
     }).catch((e): void => {
       if (this.getConfigFactory().isDebugEnabled()) {
         console.error(e);
@@ -295,11 +221,10 @@ export abstract class AppCore extends AppAbstract {
       }
       this.getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des décès.', { isError: true });
     });
-
   }
 
   private run(): void {
-    this.renderer = new Renderer(this.getConfigFactory().config.templateDir);
+    this.setRenderer(new Renderer(this.getConfigFactory().config.templateDir));
     (new Loader(this.getConfigFactory().config.googleMapsOptions))
     .load()
     .then(() => this.loadGoogleMap());
@@ -320,7 +245,9 @@ export abstract class AppCore extends AppAbstract {
     const map = new google.maps.Map(mapElement, options);
     const filtersPath = './data/config/filters.json';
 
-    fetch(filtersPath).then((response): any => response.json()).then((responseData: { filters: FormFilters }): void => {
+    fetch(filtersPath, { cache: 'force-cache' })
+    .then((response): any => response.json())
+    .then((responseData: { filters: FormFilters }): void => {
       this.setFormFilters(responseData.filters);
       this.setupSkeleton(this.getFilters(true));
       this.bindAnchorEvents(map);
@@ -834,9 +761,14 @@ export abstract class AppCore extends AppAbstract {
         `<span class="text text-warning"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp; <strong>${messageText}</strong></span>`);
     }
 
-    const element = document.querySelector('[data-role="definitionsText"]');
-    element.innerHTML = definitionTexts.length ? `<div class="shadowed inline-block">${definitionTexts.join('<br />')}</div>` : '';
-    AppStatic.bindTooltip();
+    this.getRenderer().renderTo('definitions', { definitions: definitionTexts }, document.querySelector('[data-role="definitionsText"]'))
+      .then(() => {
+        AppStatic.bindTooltip();
+        /**
+         * Definition printing is considered as last step of app load.
+         */
+        this.flapAppAsLoaded();
+      });
   }
 
   private printSupportAssociations(): void {
