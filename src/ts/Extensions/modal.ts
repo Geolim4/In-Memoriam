@@ -3,6 +3,8 @@ import micromodal from 'micromodal';
 import { ModalInfoParameters } from '../models/modalInfoParameters.model';
 import { ModalOptions } from '../models/Modal/modalOptions.model';
 import { AppStatic } from '../appStatic';
+import { ModalContentTemplate } from './modalContentTemplate';
+import { App } from '../app';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -17,7 +19,7 @@ export class Modal {
     this.bindFullscreenMicromodalListener();
   }
 
-  public modalInfo(title: string, content: string, options?: ModalOptions): void {
+  public modalInfo(title: string, content: string|ModalContentTemplate, options?: ModalOptions): void {
     const confirmCallback = (typeof options === 'object' && options.confirmCallback) || null;
     const cancelCallback =  (typeof options === 'object' && options.cancelCallback) || null;
     const isError =  (typeof options === 'object' && options.isError) || false;
@@ -26,6 +28,12 @@ export class Modal {
     const okLabel =  (typeof options === 'object' && options.okLabel) || 'Ok';
     const cancelLabel =  (typeof options === 'object' && options.cancelLabel) || 'Annuler';
 
+    if (content instanceof ModalContentTemplate) {
+      App.getInstance().getRenderer().render(content.getContentTemplate(), content.getVariables()).then((htmlContent) => {
+        this.modalInfo(title, htmlContent, options);
+      });
+      return;
+    }
     if (!this.modelOpened) {
       this.modelOpened = true;
       let hasConfirmed = false;

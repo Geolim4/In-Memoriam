@@ -14,6 +14,7 @@ export class ConfigFactory {
   private definitionsPath: string;
 
   constructor(onceInitialized: VoidFunction) {
+    this.config = { appDebug: true } as Settings;
     this.configPath = './data/config/settings.json';
     this.definitionsPath = './data/config/definitions.json';
     this.init(onceInitialized);

@@ -50,9 +50,7 @@
         {% else %}
             <strong>Sources: </strong>:
             {% for source in death.sources %}
-                <a href="{{ source.url }}" target="_blank">
-                    {{ source.title }}
-                </a>{% if source.paywall %}<span aria-hidden="true" class="glyphicon glyphicon-lock" data-tippy-content="Article réservé aux abonnés"></span>{% endif %}{% if not source.trustful %}<span aria-hidden="true" class="glyphicon glyphicon-warning-sign" data-tippy-content="Prudence, une partie du contenu de cet article peut être inexact"></span>{% endif %}{% if not loop.last %}, {% endif %}
+                <a href="{{ source.url }}" target="_blank">{{ source.title }}</a>{% if source.paywall %} <span aria-hidden="true" class="glyphicon glyphicon-lock" data-tippy-content="Article réservé aux abonnés"></span>{% endif %}{% if not source.trustful %} <span aria-hidden="true" class="glyphicon glyphicon-warning-sign" data-tippy-content="Prudence, une partie du contenu de cet article peut être inexact"></span>{% endif %}{% if not loop.last %}, {% endif %}
             {% else %}
                 <strong><span aria-hidden="true" class="glyphicon glyphicon-alert" style="color: orangered;" ></span> Aucune source renseignée</strong>
             {% endfor %}

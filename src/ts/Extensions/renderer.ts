@@ -19,6 +19,20 @@ export class Renderer {
     this.templates = [];
   }
 
+  public async renderAsDom(tplName: string, variables: object): Promise<Element> {
+    return this.render(tplName, variables).then((htmlContent) => {
+      const div = document.createElement('div');
+      div.innerHTML = htmlContent;
+      return div.firstChild as Element;
+    });
+  }
+
+  public async renderTo(tplName: string, variables: object, element: Element): Promise<void> {
+    return this.render(tplName, variables).then((htmlContent) => {
+      element.innerHTML = htmlContent;
+    });
+  }
+
   public async render(tplName: string, variables: object): Promise<string|null> {
     if (typeof this.templates[tplName] === 'undefined') {
       return fetch(this.templateDir.replace('%tpl%', tplName), { cache: 'force-cache' })
@@ -40,21 +54,7 @@ export class Renderer {
     }
 
     return (new Promise((resolve) => (resolve())))
-          .then(() => (this.doRender(this.templates[tplName], variables)));
-  }
-
-  public async renderAsDom(tplName: string, variables: object): Promise<Element> {
-    return this.render(tplName, variables).then((htmlContent) => {
-      const div = document.createElement('div');
-      div.innerHTML = htmlContent;
-      return div.firstChild as Element;
-    });
-  }
-
-  public async renderTo(tplName: string, variables: object, element: Element): Promise<void> {
-    return this.render(tplName, variables).then((htmlContent) => {
-      element.innerHTML = htmlContent;
-    });
+    .then(() => (this.doRender(this.templates[tplName], variables)));
   }
 
   private doRender(templateContent: string, variables: object): string {
