@@ -24,6 +24,15 @@
  */
 
 /*!
+ * TextObfuscator v1.1.0 ES6 [NodeJS or Browser]
+ * https://github.com/aalfiann/text-obfuscator
+ *
+ * Copyright 2021 M ABD AZIZ ALFIAN
+ * Released under the MIT license
+ * https://github.com/aalfiann/text-obfuscator/blob/master/LICENSE
+ */
+
+/*!
  * array-unique <https://github.com/jonschlinkert/array-unique>
  *
  * Copyright (c) 2014-2015, Jon Schlinkert.
