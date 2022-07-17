@@ -22,7 +22,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 51.038295,
-        "lon": 2.376198
+        "lng": 2.376198
       },
       "homage": null,
       "sources": [
@@ -77,7 +77,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 47.994612,
-        "lon": -4.099695
+        "lng": -4.099695
       },
       "homage": null,
       "sources": [
@@ -139,7 +139,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 50.645740,
-        "lon": 3.027687
+        "lng": 3.027687
       },
       "homage": null,
       "sources": [
@@ -177,7 +177,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 47.227579,
-        "lon": -1.551646
+        "lng": -1.551646
       },
       "homage": null,
       "sources": [
@@ -221,7 +221,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.051811,
-        "lon": 6.943230
+        "lng": 6.943230
       },
       "homage": null,
       "sources": [
@@ -271,7 +271,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.283780,
-        "lon": 5.397460
+        "lng": 5.397460
       },
       "homage": null,
       "sources": [
@@ -327,7 +327,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.780702,
-        "lon": 4.191550
+        "lng": 4.191550
       },
       "homage": null,
       "sources": [
@@ -401,7 +401,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.112410,
-        "lon": 6.177239
+        "lng": 6.177239
       },
       "homage": null,
       "sources": [
@@ -438,7 +438,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.945384,
-        "lon": 2.032418
+        "lng": 2.032418
       },
       "homage": null,
       "sources": [
@@ -500,7 +500,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.142386,
-        "lon": 0.524803
+        "lng": 0.524803
       },
       "homage": null,
       "sources": [
@@ -562,7 +562,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.960641,
-        "lon": 5.337742
+        "lng": 5.337742
       },
       "homage": null,
       "sources": [

@@ -23,7 +23,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 46.168667,
-        "lon": -1.152359
+        "lng": -1.152359
       },
       "homage": null,
       "sources": [
@@ -61,7 +61,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.662767,
-        "lon": -1.697209
+        "lng": -1.697209
       },
       "homage": null,
       "sources": [
@@ -99,7 +99,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.822908,
-        "lon": 6.509771
+        "lng": 6.509771
       },
       "homage": null,
       "sources": [
@@ -143,7 +143,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.256218,
-        "lon": 4.022128
+        "lng": 4.022128
       },
       "homage": null,
       "sources": [
@@ -181,7 +181,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 46.170629,
-        "lon": -1.141469
+        "lng": -1.141469
       },
       "homage": null,
       "sources": [
@@ -213,7 +213,7 @@
         "accurate": true,
         "radius": 0,
         "lat": -20.549007,
-        "lon": 164.272061
+        "lng": 164.272061
       },
       "homage": null,
       "sources": [
@@ -269,7 +269,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 46.774568,
-        "lon": 6.192054
+        "lng": 6.192054
       },
       "homage": null,
       "sources": [
@@ -331,7 +331,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.874059,
-        "lon": 2.345338
+        "lng": 2.345338
       },
       "homage": null,
       "sources": [
@@ -393,7 +393,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.698343,
-        "lon": 2.504014
+        "lng": 2.504014
       },
       "homage": null,
       "sources": [
@@ -437,7 +437,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 50.753773,
-        "lon": 2.250268
+        "lng": 2.250268
       },
       "homage": null,
       "sources": [
@@ -481,7 +481,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.893970,
-        "lon": 2.364701
+        "lng": 2.364701
       },
       "homage": null,
       "sources": [
@@ -531,7 +531,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.849443,
-        "lon": 2.406771
+        "lng": 2.406771
       },
       "homage": null,
       "sources": [
@@ -563,7 +563,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.201326,
-        "lon": -0.339256
+        "lng": -0.339256
       },
       "homage": null,
       "sources": [
@@ -613,7 +613,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.005502,
-        "lon": 0.225123
+        "lng": 0.225123
       },
       "homage": null,
       "sources": [
@@ -651,7 +651,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.871773,
-        "lon": 2.316401
+        "lng": 2.316401
       },
       "homage": null,
       "sources": [
@@ -683,7 +683,7 @@
         "accurate": true,
         "radius": 0,
         "lat": -20.984461,
-        "lon": 55.651753
+        "lng": 55.651753
       },
       "homage": null,
       "sources": [
@@ -733,7 +733,7 @@
         "accurate": true,
         "radius": 0,
         "lat": -22.273289,
-        "lon": 166.444771
+        "lng": 166.444771
       },
       "homage": null,
       "sources": [
@@ -789,7 +789,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 14.605298,
-        "lon": -61.068503
+        "lng": -61.068503
       },
       "homage": null,
       "sources": [
@@ -827,7 +827,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.118888,
-        "lon": -0.718941
+        "lng": -0.718941
       },
       "homage": null,
       "sources": [
@@ -871,7 +871,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.406735,
-        "lon": 1.044756
+        "lng": 1.044756
       },
       "homage": null,
       "sources": [
@@ -903,7 +903,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.844665,
-        "lon": 1.252959
+        "lng": 1.252959
       },
       "homage": null,
       "sources": [
@@ -953,7 +953,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 51.038376,
-        "lon": 2.376220
+        "lng": 2.376220
       },
       "homage": null,
       "sources": [
@@ -985,7 +985,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.782620,
-        "lon": 1.754585
+        "lng": 1.754585
       },
       "homage": null,
       "sources": [
@@ -1029,7 +1029,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.435054,
-        "lon": 1.081077
+        "lng": 1.081077
       },
       "homage": null,
       "sources": [
@@ -1073,7 +1073,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 47.278040,
-        "lon": 1.550218
+        "lng": 1.550218
       },
       "homage": null,
       "sources": [
@@ -1117,7 +1117,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.893906,
-        "lon": 2.308426
+        "lng": 2.308426
       },
       "homage": null,
       "sources": [
@@ -1167,7 +1167,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.007683,
-        "lon": 2.546527
+        "lng": 2.546527
       },
       "homage": null,
       "sources": [
@@ -1217,7 +1217,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.942885,
-        "lon": 1.840041
+        "lng": 1.840041
       },
       "homage": null,
       "sources": [
@@ -1261,7 +1261,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.841943,
-        "lon": 2.405364
+        "lng": 2.405364
       },
       "homage": null,
       "sources": [
@@ -1311,7 +1311,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.342834,
-        "lon": 2.459641
+        "lng": 2.459641
       },
       "homage": null,
       "sources": [
@@ -1361,7 +1361,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.690206,
-        "lon": 2.993409
+        "lng": 2.993409
       },
       "homage": null,
       "sources": [
@@ -1399,7 +1399,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.489376,
-        "lon": 1.324897
+        "lng": 1.324897
       },
       "homage": null,
       "sources": [
@@ -1443,7 +1443,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 17.949597,
-        "lon": -1.781396
+        "lng": -1.781396
       },
       "homage": null,
       "sources": [
@@ -1493,7 +1493,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 46.065072,
-        "lon": 5.071734
+        "lng": 5.071734
       },
       "homage": null,
       "sources": [
@@ -1549,7 +1549,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.952490,
-        "lon": 4.818394
+        "lng": 4.818394
       },
       "homage": null,
       "sources": [
@@ -1605,7 +1605,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.000324,
-        "lon": 2.093394
+        "lng": 2.093394
       },
       "homage": null,
       "sources": [
@@ -1655,7 +1655,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.931985,
-        "lon": 4.316080
+        "lng": 4.316080
       },
       "homage": null,
       "sources": [
@@ -1717,7 +1717,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.708536,
-        "lon": 2.179273
+        "lng": 2.179273
       },
       "homage": null,
       "sources": [
@@ -1761,7 +1761,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.826618,
-        "lon": 2.370783
+        "lng": 2.370783
       },
       "homage": null,
       "sources": [
@@ -1799,7 +1799,7 @@
         "accurate": true,
         "radius": 0,
         "lat": -21.101655,
-        "lon": 55.434389
+        "lng": 55.434389
       },
       "homage": null,
       "sources": [
@@ -1855,7 +1855,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.099270,
-        "lon": 6.209754
+        "lng": 6.209754
       },
       "homage": null,
       "sources": [
@@ -1905,7 +1905,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.342809,
-        "lon": 3.214062
+        "lng": 3.214062
       },
       "homage": null,
       "sources": [
@@ -1949,7 +1949,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.612616,
-        "lon": 3.892701
+        "lng": 3.892701
       },
       "homage": null,
       "sources": [
@@ -1999,7 +1999,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.854157,
-        "lon": 2.345969
+        "lng": 2.345969
       },
       "homage": null,
       "sources": [
@@ -2049,7 +2049,7 @@
         "accurate": true,
         "radius": 0,
         "lat": -21.248367,
-        "lon": 55.469654
+        "lng": 55.469654
       },
       "homage": null,
       "sources": [
@@ -2105,7 +2105,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 44.533705,
-        "lon": 6.050899
+        "lng": 6.050899
       },
       "homage": null,
       "sources": [
@@ -2161,7 +2161,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 46.452462,
-        "lon": 4.120684
+        "lng": 4.120684
       },
       "homage": null,
       "sources": [
@@ -2211,7 +2211,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.017022,
-        "lon": -0.636107
+        "lng": -0.636107
       },
       "homage": null,
       "sources": [
@@ -2261,7 +2261,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 13.997536,
-        "lon": -1.954055
+        "lng": -1.954055
       },
       "homage": null,
       "sources": [
@@ -2317,7 +2317,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 47.061753,
-        "lon": -0.881144
+        "lng": -0.881144
       },
       "homage": null,
       "sources": [
@@ -2361,7 +2361,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.202764,
-        "lon": 5.666735
+        "lng": 5.666735
       },
       "homage": null,
       "sources": [
@@ -2405,7 +2405,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 46.671087,
-        "lon": 5.570432
+        "lng": 5.570432
       },
       "homage": null,
       "sources": [
@@ -2455,7 +2455,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.128843,
-        "lon": 4.379439
+        "lng": 4.379439
       },
       "homage": null,
       "sources": [
@@ -2517,7 +2517,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 50.629522,
-        "lon": 3.057458
+        "lng": 3.057458
       },
       "homage": null,
       "sources": [
@@ -2561,7 +2561,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.956342,
-        "lon": 2.889526
+        "lng": 2.889526
       },
       "homage": null,
       "sources": [
@@ -2611,7 +2611,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.710525,
-        "lon": 7.261837
+        "lng": 7.261837
       },
       "homage": null,
       "sources": [
@@ -2643,7 +2643,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.862258,
-        "lon": 2.785911
+        "lng": 2.785911
       },
       "homage": null,
       "sources": [
@@ -2693,7 +2693,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.350400,
-        "lon": -1.183104
+        "lng": -1.183104
       },
       "homage": null,
       "sources": [
@@ -2737,7 +2737,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 46.494841,
-        "lon": -1.823473
+        "lng": -1.823473
       },
       "homage": null,
       "sources": [
@@ -2793,7 +2793,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.88432571358825,
-        "lon": 2.3862426973108155
+        "lng": 2.3862426973108155
       },
       "homage": null,
       "sources": [
@@ -2831,7 +2831,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.444097,
-        "lon": 4.940126
+        "lng": 4.940126
       },
       "homage": null,
       "sources": [
@@ -2875,7 +2875,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.783721,
-        "lon": 2.184852
+        "lng": 2.184852
       },
       "homage": null,
       "sources": [
@@ -2925,7 +2925,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.885721,
-        "lon": 2.351906
+        "lng": 2.351906
       },
       "homage": null,
       "sources": [
@@ -2969,7 +2969,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.602366,
-        "lon": 1.450819
+        "lng": 1.450819
       },
       "homage": null,
       "sources": [
@@ -3019,7 +3019,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.410770,
-        "lon": 3.048556
+        "lng": 3.048556
       },
       "homage": null,
       "sources": [
@@ -3075,7 +3075,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.825462,
-        "lon": 4.362922
+        "lng": 4.362922
       },
       "homage": null,
       "sources": [
@@ -3125,7 +3125,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 44.264690,
-        "lon": 1.751655
+        "lng": 1.751655
       },
       "homage": null,
       "sources": [
@@ -3163,7 +3163,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 50.538285,
-        "lon": 2.465265
+        "lng": 2.465265
       },
       "homage": null,
       "sources": [
@@ -3207,7 +3207,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.299959,
-        "lon": 5.366154
+        "lng": 5.366154
       },
       "homage": null,
       "sources": [
@@ -3263,7 +3263,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 44.834753,
-        "lon": -0.589092
+        "lng": -0.589092
       },
       "homage": null,
       "sources": [
@@ -3313,7 +3313,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.643425,
-        "lon": 3.738543
+        "lng": 3.738543
       },
       "homage": null,
       "sources": [
@@ -3363,7 +3363,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.897353,
-        "lon": 6.131670
+        "lng": 6.131670
       },
       "homage": null,
       "sources": [
@@ -3419,7 +3419,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.025095,
-        "lon": -0.792411
+        "lng": -0.792411
       },
       "homage": null,
       "sources": [
@@ -3475,7 +3475,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 47.262087,
-        "lon": -0.086942
+        "lng": -0.086942
       },
       "homage": null,
       "sources": [
@@ -3531,7 +3531,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 3.843046,
-        "lon": -53.910905
+        "lng": -53.910905
       },
       "homage": null,
       "sources": [
@@ -3593,7 +3593,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 50.376203,
-        "lon": 3.085565
+        "lng": 3.085565
       },
       "homage": null,
       "sources": [
@@ -3637,7 +3637,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 50.518094,
-        "lon": 2.640785
+        "lng": 2.640785
       },
       "homage": null,
       "sources": [
@@ -3693,7 +3693,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.910943,
-        "lon": 4.424375
+        "lng": 4.424375
       },
       "homage": null,
       "sources": [
@@ -3749,7 +3749,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.335312,
-        "lon": 5.621302
+        "lng": 5.621302
       },
       "homage": null,
       "sources": [
@@ -3793,7 +3793,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.038047,
-        "lon": 2.085481
+        "lng": 2.085481
       },
       "homage": null,
       "sources": [
@@ -3855,7 +3855,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.927220,
-        "lon": 2.500290
+        "lng": 2.500290
       },
       "homage": null,
       "sources": [
@@ -3917,7 +3917,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.093528,
-        "lon": -1.694163
+        "lng": -1.694163
       },
       "homage": null,
       "sources": [
@@ -3973,7 +3973,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.752849,
-        "lon": 5.148249
+        "lng": 5.148249
       },
       "homage": null,
       "sources": [
@@ -4017,7 +4017,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 50.645740,
-        "lon": 3.027687
+        "lng": 3.027687
       },
       "homage": null,
       "sources": [
@@ -4079,7 +4079,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.728572,
-        "lon": 4.346717
+        "lng": 4.346717
       },
       "homage": null,
       "sources": [
@@ -4141,7 +4141,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 47.535496,
-        "lon": 1.805878
+        "lng": 1.805878
       },
       "homage": null,
       "sources": [
@@ -4185,7 +4185,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.909220,
-        "lon": 2.293562
+        "lng": 2.293562
       },
       "homage": null,
       "sources": [
@@ -4229,7 +4229,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.447426,
-        "lon": 2.821140
+        "lng": 2.821140
       },
       "homage": null,
       "sources": [
@@ -4297,7 +4297,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 44.662162,
-        "lon": 4.774612
+        "lng": 4.774612
       },
       "homage": null,
       "sources": [
@@ -4371,7 +4371,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.834107,
-        "lon": 2.340962
+        "lng": 2.340962
       },
       "homage": null,
       "sources": [
@@ -4409,7 +4409,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.924410,
-        "lon": 2.445095
+        "lng": 2.445095
       },
       "homage": null,
       "sources": [
@@ -4471,7 +4471,7 @@
         "accurate": true,
         "radius": 0,
         "lat":  43.486350,
-        "lon": -1.557026
+        "lng": -1.557026
       },
       "homage": null,
       "sources": [
@@ -4515,7 +4515,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.846778,
-        "lon": 3.089718
+        "lng": 3.089718
       },
       "homage": null,
       "sources": [
@@ -4577,7 +4577,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 41.922992,
-        "lon": 9.413479
+        "lng": 9.413479
       },
       "homage": null,
       "sources": [
@@ -4620,7 +4620,7 @@
         "accurate": true,
         "radius": 0,
         "lat": -21.174773,
-        "lon": 55.287824
+        "lng": 55.287824
       },
       "homage": null,
       "sources": [
@@ -4664,7 +4664,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 44.134610,
-        "lon": 0.659457
+        "lng": 0.659457
       },
       "homage": null,
       "sources": [
@@ -4719,7 +4719,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.492297,
-        "lon": 0.120466
+        "lng": 0.120466
       },
       "homage": null,
       "sources": [
@@ -4781,7 +4781,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.808122,
-        "lon": 2.432417
+        "lng": 2.432417
       },
       "homage": null,
       "sources": [
@@ -4825,7 +4825,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.038314,
-        "lon": 2.086410
+        "lng": 2.086410
       },
       "homage": null,
       "sources": [
@@ -4881,7 +4881,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 42.577651,
-        "lon": 9.446075
+        "lng": 9.446075
       },
       "homage": null,
       "sources": [
@@ -4913,7 +4913,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 50.257780,
-        "lon": 3.950672
+        "lng": 3.950672
       },
       "homage": null,
       "sources": [
@@ -4969,7 +4969,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.854729,
-        "lon": 2.347289
+        "lng": 2.347289
       },
       "homage": null,
       "sources": [
@@ -5031,7 +5031,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 47.956313,
-        "lon": 1.910223
+        "lng": 1.910223
       },
       "homage": null,
       "sources": [
@@ -5093,7 +5093,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.909373,
-        "lon": 2.450061
+        "lng": 2.450061
       },
       "homage": null,
       "sources": [
@@ -5161,7 +5161,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.176424,
-        "lon": 5.703974
+        "lng": 5.703974
       },
       "homage": null,
       "sources": [
@@ -5229,7 +5229,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.820840,
-        "lon": 4.868264
+        "lng": 4.868264
       },
       "homage": null,
       "sources": [
@@ -5291,7 +5291,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 50.355159,
-        "lon": 3.518339
+        "lng": 3.518339
       },
       "homage": null,
       "sources": [
@@ -5341,7 +5341,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.732939,
-        "lon": 2.372164
+        "lng": 2.372164
       },
       "homage": null,
       "sources": [
@@ -5373,7 +5373,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 47.370773,
-        "lon": -1.187142
+        "lng": -1.187142
       },
       "homage": null,
       "sources": [
@@ -5417,7 +5417,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 15.917866,
-        "lon": 2.383294
+        "lng": 2.383294
       },
       "homage": null,
       "sources": [
@@ -5485,7 +5485,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 47.227579,
-        "lon": -1.551646
+        "lng": -1.551646
       },
       "homage": null,
       "sources": [
@@ -5553,7 +5553,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.693304,
-        "lon": 6.858785
+        "lng": 6.858785
       },
       "homage": null,
       "sources": [
@@ -5609,7 +5609,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.926310,
-        "lon": 4.045625
+        "lng": 4.045625
       },
       "homage": null,
       "sources": [
@@ -5665,7 +5665,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.448623,
-        "lon": 6.474457
+        "lng": 6.474457
       },
       "homage": null,
       "sources": [
@@ -5721,7 +5721,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.027951,
-        "lon": 4.912392
+        "lng": 4.912392
       },
       "homage": null,
       "sources": [
@@ -5777,7 +5777,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 47.152224,
-        "lon": 6.317709
+        "lng": 6.317709
       },
       "homage": null,
       "sources": [
@@ -5821,7 +5821,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 15.852774,
-        "lon": 1.468974
+        "lng": 1.468974
       },
       "homage": null,
       "sources": [
@@ -5877,7 +5877,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.617595,
-        "lon": 2.443203
+        "lng": 2.443203
       },
       "homage": null,
       "sources": [
@@ -5927,7 +5927,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 44.866753,
-        "lon": -0.596418
+        "lng": -0.596418
       },
       "homage": null,
       "sources": [
@@ -5983,7 +5983,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.374255,
-        "lon": 5.287941
+        "lng": 5.287941
       },
       "homage": null,
       "sources": [
@@ -6045,7 +6045,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.608453,
-        "lon": 0.101473
+        "lng": 0.101473
       },
       "homage": null,
       "sources": [
@@ -6083,7 +6083,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.861568,
-        "lon": 2.901092
+        "lng": 2.901092
       },
       "homage": null,
       "sources": [
@@ -6133,7 +6133,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.860105,
-        "lon": 4.404430
+        "lng": 4.404430
       },
       "homage": null,
       "sources": [
@@ -6165,7 +6165,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.729127,
-        "lon": 7.367132
+        "lng": 7.367132
       },
       "homage": null,
       "sources": [
@@ -6203,7 +6203,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.898332,
-        "lon": 2.215728
+        "lng": 2.215728
       },
       "homage": null,
       "sources": [
@@ -6271,7 +6271,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.320753,
-        "lon": 5.376351
+        "lng": 5.376351
       },
       "homage": null,
       "sources": [

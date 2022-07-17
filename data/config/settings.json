@@ -11,17 +11,24 @@
   "settings": {
     "appDebug": false,
     "appVersion": "2.6.1",
+    "circleOptions": {
+      "fillColor": "#9e2a2b",
+      "fillOpacity": 0.25,
+      "strokeColor": "#540b0e",
+      "strokeOpacity": 0.8,
+      "strokeWeight": 2
+    },
+    "clusteringOptions": {
+      "minPoints": 2,
+      "maxZoom": 14,
+      "radius": 100
+    },
     "contactEmail": "contact@geolim4.com",
     "debugCookieName": "_JS_DEBUG_ENABLED_",
     "deathsSrc": "./data/deaths/%year%.json",
-    "defaultLat": 48.1,
-    "defaultLon": -4.21,
-    "defaultZoom": 12,
-    "maxZoom": 16,
-    "mapId": "42179193e08de91e",
     "searchMinLength": 3,
-    "googleMapsOptions": {
-      "apiKey": "AIzaSyBMB4lQqiIf7t6QV8CFFV6IwCqw_7dYREw",
+    "googleMapsLoaderOptions": {
+      "apiKey": "V3cXdfN2RZUkNGRlY2SXdDZjd0NlFWOE1CNGxRcWlJQUl6YVN5Qk",
       "id": "gmap-script-api",
       "libraries": [
         "visualization",
@@ -29,22 +36,26 @@
       ],
       "region": "FR"
     },
-    "clusteringOptions": {
-      "minPoints": 2,
-      "maxZoom": 14,
-      "radius": 100
+    "googleMapsOptions": {
+      "backgroundColor": "#343A40",
+      "clickableIcons": false,
+      "center": {
+        "lat": 48.1,
+        "lng": -4.21
+      },
+      "defaultZoom": 12,
+      "mapId": "42179193e08de91e",
+      "mapTypeControl": false,
+      "maxZoom": 16,
+      "minZoom": 4,
+      "streetViewControl": false,
+      "zoom": 12,
+      "zoomControl": true
     },
     "heatmapOptions": {
       "dissipating": false,
       "opacity": 0.4,
       "radius": 0.4
-    },
-    "circleOptions": {
-      "fillColor": "#9e2a2b",
-      "fillOpacity": 0.25,
-      "strokeColor": "#540b0e",
-      "strokeOpacity": 0.8,
-      "strokeWeight": 2
     },
     "imagePath": {
       "chart": "./assets/images/map/chart.png",

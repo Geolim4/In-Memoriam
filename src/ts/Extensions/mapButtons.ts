@@ -377,7 +377,7 @@ export class MapButtons {
               build[indexNameBuilder('location', formFilters)] = death.location;
               build[indexNameBuilder('text', formFilters)] = peer ? '' : death.text;
               build[indexNameBuilder('origin', formFilters)] = formFiltersKeyed['origin'][death.origin];
-              build[indexNameBuilder('gps', formFilters)] = `${Number((death.gps.lat).toFixed(8))},${Number((death.gps.lon).toFixed(8))}`;
+              build[indexNameBuilder('gps', formFilters)] = `${Number((death.gps.lat).toFixed(8))},${Number((death.gps.lng).toFixed(8))}`;
               build[indexNameBuilder('count', formFilters)] = peer ? peer.count : death.count;
               build[indexNameBuilder('orphans', formFilters)] = peer ? 0 : death.orphans;
               build[indexNameBuilder('homage', formFilters)] = death.homage ? `${death.homage.title}: ${death.homage.url}` : 'Non communiqué';

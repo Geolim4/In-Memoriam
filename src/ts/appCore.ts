@@ -87,14 +87,14 @@ export abstract class AppCore extends AppAbstract {
           animation: google.maps.Animation.DROP,
           icon: new (google.maps as any).MarkerImage(houseImage),
           opacity: 1,
-          position: new google.maps.LatLng(death.gps.lat, death.gps.lon),
+          position: new google.maps.LatLng(death.gps.lat, death.gps.lng),
           title: death.text,
         }) as ExtendedGoogleMapsMarker;
 
         if (!death.gps.accurate) {
           const circle = new google.maps.Circle({
             map,
-            center: new google.maps.LatLng(death.gps.lat, death.gps.lon),
+            center: new google.maps.LatLng(death.gps.lat, death.gps.lng),
             fillColor: this.getConfigFactory().config['circleOptions']['fillColor'],
             fillOpacity: this.getConfigFactory().config['circleOptions']['fillOpacity'],
             radius: Math.max(100, death.gps.radius), // Radius can't be set at less than 100 meters
@@ -155,7 +155,7 @@ export abstract class AppCore extends AppAbstract {
           domTomOrOpexMarkers.push(marker);
         }
         heatMapData.push({
-          location: new google.maps.LatLng(death.gps.lat, death.gps.lon),
+          location: new google.maps.LatLng(death.gps.lat, death.gps.lng),
           weight: 15 * (totalDeathCount > 1 ? (totalDeathCount > 5 ? 20 : 5) : 1),
         });
 
@@ -215,24 +215,14 @@ export abstract class AppCore extends AppAbstract {
 
   private run(): void {
     this.setRenderer(new Renderer(this.getConfigFactory().config.templateDir));
-    (new Loader(this.getConfigFactory().config.googleMapsOptions))
+    (new Loader(this.getConfigFactory().config.googleMapsLoaderOptions))
     .load()
     .then(() => this.loadGoogleMap());
   }
 
   private loadGoogleMap(): void {
     const mapElement = <HTMLInputElement>document.getElementById('map');
-    const options = {
-      backgroundColor: '#343A40', // See variables.scss
-      center: new google.maps.LatLng(this.getConfigFactory().config['defaultLat'], this.getConfigFactory().config['defaultLon']),
-      mapId: this.getConfigFactory().config['mapId'],
-      mapTypeControl: false,
-      // mapTypeId: google.maps.MapTypeId.HYBRID,
-      maxZoom: this.getConfigFactory().config['maxZoom'],
-      streetViewControl: false,
-      zoom: this.getConfigFactory().config['defaultZoom'],
-    };
-    const map = new google.maps.Map(mapElement, options);
+    const map = new google.maps.Map(mapElement, this.getConfigFactory().config.googleMapsOptions);
     const filtersPath = './data/config/filters.json';
 
     fetch(filtersPath, { cache: 'force-cache' })
