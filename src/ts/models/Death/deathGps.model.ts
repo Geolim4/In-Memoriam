@@ -1,6 +1,6 @@
 export interface DeathGps {
   accurate: boolean;
   lat: number;
-  lon: number;
+  lng: number;
   radius: number;
 }

@@ -1,5 +1,6 @@
 import { HoverTitleUrl } from './hoverTitleUrl.model';
 import { LoaderOptions } from '@googlemaps/js-api-loader';
+import MapOptions = google.maps.MapOptions;
 
 export interface Settings {
   appDebug: boolean;
@@ -7,10 +8,8 @@ export interface Settings {
   deathsSrc: string;
   debugCookieName: string;
   contactEmail: string;
-  defaultLat: number;
-  defaultLon: number;
-  defaultZoom: number;
-  googleMapsOptions: LoaderOptions;
+  googleMapsLoaderOptions: LoaderOptions;
+  googleMapsOptions: MapOptions;
   heatmapOptions: google.maps.visualization.HeatmapLayerOptions;
   circleOptions: google.maps.CircleOptions;
   clusteringOptions: { // See https://www.npmjs.com/package/supercluster
@@ -19,8 +18,6 @@ export interface Settings {
     radius: number,
   };
   imagePath: Object;
-  mapId: string;
-  maxZoom: number;
   supportAssociations: HoverTitleUrl[];
   searchMinLength: number;
   templateDir: string;

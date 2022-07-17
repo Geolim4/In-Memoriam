@@ -23,7 +23,7 @@
         "accurate": false,
         "radius": 10000,
         "lat": 15.852774,
-        "lon": 1.468974
+        "lng": 1.468974
       },
       "homage": {
         "title": "Ministère des Armées (archives)",
@@ -82,7 +82,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 44.93378570961448,
-        "lon": 6.733964742339562
+        "lng": 6.733964742339562
       },
       "homage": null,
       "sources": [
@@ -126,7 +126,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.642956262499546,
-        "lon": 1.4691198822913898
+        "lng": 1.4691198822913898
       },
       "homage": null,
       "sources": [
@@ -182,7 +182,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.74717237193968,
-        "lon": 4.8197460842699344
+        "lng": 4.8197460842699344
       },
       "homage": null,
       "sources": [
@@ -238,7 +238,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.09681606303209,
-        "lon": 0.48014871954405725
+        "lng": 0.48014871954405725
       },
       "homage": null,
       "sources": [
@@ -282,7 +282,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 48.272076603832424,
-        "lon": 6.156976913493413
+        "lng": 6.156976913493413
       },
       "homage": null,
       "sources": [
@@ -344,7 +344,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 45.59904316839378,
-        "lon": 4.767798465944594
+        "lng": 4.767798465944594
       },
       "homage": null,
       "sources": [
@@ -388,7 +388,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 50.8524871734886,
-        "lon": 2.063957540921227
+        "lng": 2.063957540921227
       },
       "homage": null,
       "sources": [
@@ -438,7 +438,7 @@
         "accurate": true,
         "radius": 0,
         "lat": -17.507946694307048,
-        "lon": -149.4813504466269
+        "lng": -149.4813504466269
       },
       "homage": null,
       "sources": [
@@ -476,7 +476,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.90625327209567,
-        "lon": 2.4317378097313607
+        "lng": 2.4317378097313607
       },
       "homage": null,
       "sources": [
@@ -520,7 +520,7 @@
         "accurate": true,
         "radius": 0,
         "lat": -12.799342435147283,
-        "lon": 45.28539090732595
+        "lng": 45.28539090732595
       },
       "homage": null,
       "sources": [
@@ -564,7 +564,7 @@
         "accurate": false,
         "radius": 300,
         "lat": 47.91681382835416,
-        "lon": 7.40759886288138
+        "lng": 7.40759886288138
       },
       "homage": null,
       "sources": [
@@ -596,7 +596,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.867128733464114,
-        "lon": 2.313218836742372
+        "lng": 2.313218836742372
       },
       "homage": null,
       "sources": [
@@ -634,7 +634,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.25816320869087,
-        "lon": 1.7677660932485417
+        "lng": 1.7677660932485417
       },
       "homage": null,
       "sources": [
@@ -678,7 +678,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 46.06400867956747,
-        "lon": 4.722957910130134
+        "lng": 4.722957910130134
       },
       "homage": null,
       "sources": [
@@ -722,7 +722,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 47.76020796355857,
-        "lon": 7.33280473925639
+        "lng": 7.33280473925639
       },
       "homage": null,
       "sources": [
@@ -760,7 +760,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": -12.783043139500364,
-        "lon": 45.25703521999959
+        "lng": 45.25703521999959
       },
       "homage": {
         "title": "Ministère des Armées (archives)",
@@ -813,7 +813,7 @@
         "accurate": false,
         "radius": 50000,
         "lat": 42.07582282543867,
-        "lon": 6.208087305626928
+        "lng": 6.208087305626928
       },
       "homage": {
         "title": "Ministère des Armées (archives)",
@@ -854,7 +854,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.84359168260348,
-        "lon": 2.4193875644179608
+        "lng": 2.4193875644179608
       },
       "homage": null,
       "sources": [
@@ -898,7 +898,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.8600430000224,
-        "lon": 4.404456893285414
+        "lng": 4.404456893285414
       },
       "homage": null,
       "sources": [
@@ -936,7 +936,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 43.60566561198955,
-        "lon": 3.9858003451888266
+        "lng": 3.9858003451888266
       },
       "homage": null,
       "sources": [
@@ -980,7 +980,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 50.059664308741056,
-        "lon": 1.6057069985874308
+        "lng": 1.6057069985874308
       },
       "homage": null,
       "sources": [
@@ -1036,7 +1036,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.96180239895016,
-        "lon": 2.321038519575377
+        "lng": 2.321038519575377
       },
       "homage": null,
       "sources": [
@@ -1068,7 +1068,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.17871214287591,
-        "lon": 6.447454598633321
+        "lng": 6.447454598633321
       },
       "homage": null,
       "sources": [
@@ -1100,7 +1100,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.17871214287591,
-        "lon": 6.447454598633321
+        "lng": 6.447454598633321
       },
       "homage": null,
       "sources": [
@@ -1138,7 +1138,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 49.66107831338392,
-        "lon": -1.6161845943835125
+        "lng": -1.6161845943835125
       },
       "homage": null,
       "sources": [
@@ -1188,7 +1188,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 42.70470549870211,
-        "lon": 9.453879269652319
+        "lng": 9.453879269652319
       },
       "homage": null,
       "sources": [
@@ -1226,7 +1226,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 50.7289662941331,
-        "lon": 3.1857321511743004
+        "lng": 3.1857321511743004
       },
       "homage": null,
       "sources": [
@@ -1258,7 +1258,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 50.32406196920127,
-        "lon": 3.3683920390984032
+        "lng": 3.3683920390984032
       },
       "homage": null,
       "sources": [
@@ -1290,7 +1290,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 43.71044384874145,
-        "lon": 7.261786487210411
+        "lng": 7.261786487210411
       },
       "homage": null,
       "sources": [
@@ -1328,7 +1328,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 44.05193408176811,
-        "lon": 4.7786861419474285
+        "lng": 4.7786861419474285
       },
       "homage": null,
       "sources": [
@@ -1372,7 +1372,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 44.65873724784623,
-        "lon": -1.1612787825123774
+        "lng": -1.1612787825123774
       },
       "homage": null,
       "sources": [
@@ -1404,7 +1404,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 48.648770746158434,
-        "lon": 1.824353401821805
+        "lng": 1.824353401821805
       },
       "homage": null,
       "sources": [
@@ -1454,7 +1454,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 0,
-        "lon": 0
+        "lng": 0
       },
       "homage": null,
       "sources": [
@@ -1492,7 +1492,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.945042268117966,
-        "lon": 4.813128353655874
+        "lng": 4.813128353655874
       },
       "homage": null,
       "sources": [
@@ -1548,7 +1548,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.414733542473975,
-        "lon": 2.833503654602562
+        "lng": 2.833503654602562
       },
       "homage": null,
       "sources": [
@@ -1586,7 +1586,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 44.82714234883328,
-        "lon": -0.5753859536126794
+        "lng": -0.5753859536126794
       },
       "homage": null,
       "sources": [
@@ -1618,7 +1618,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.57276478984894,
-        "lon": 7.749918023857668
+        "lng": 7.749918023857668
       },
       "homage": null,
       "sources": [
@@ -1674,7 +1674,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.89215806522141,
-        "lon": 2.298076410915117
+        "lng": 2.298076410915117
       },
       "homage": null,
       "sources": [
@@ -1718,7 +1718,7 @@
         "accurate": false,
         "radius": 500,
         "lat": 48.101384434464066,
-        "lon": -1.7045501320981
+        "lng": -1.7045501320981
       },
       "homage": null,
       "sources": [
@@ -1774,7 +1774,7 @@
         "accurate": false,
         "radius": 1000,
         "lat": 46.082251906631974,
-        "lon": 3.9946019290131294
+        "lng": 3.9946019290131294
       },
       "homage": null,
       "sources": [
@@ -1818,7 +1818,7 @@
         "accurate": false,
         "radius": 500,
         "lat": 43.144691250129114,
-        "lon": 2.3975102681480585
+        "lng": 2.3975102681480585
       },
       "homage": null,
       "sources": [
@@ -1874,7 +1874,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.31391602160896,
-        "lon": -0.369182115586049
+        "lng": -0.369182115586049
       },
       "homage": null,
       "sources": [
@@ -1930,7 +1930,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 44.45187162888395,
-        "lon": 1.438342891153476
+        "lng": 1.438342891153476
       },
       "homage": null,
       "sources": [
@@ -1980,7 +1980,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.10983796603873,
-        "lon": 0.37513435457317346
+        "lng": 0.37513435457317346
       },
       "homage": null,
       "sources": [
@@ -2012,7 +2012,7 @@
         "accurate": false,
         "radius": 500,
         "lat": 45.64423599927287,
-        "lon": 6.669968157703316
+        "lng": 6.669968157703316
       },
       "homage": null,
       "sources": [
@@ -2068,7 +2068,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 47.39882623636955,
-        "lon": 2.93666654266765
+        "lng": 2.93666654266765
       },
       "homage": null,
       "sources": [
@@ -2112,7 +2112,7 @@
         "accurate": false,
         "radius": 1000,
         "lat": 43.628106379025,
-        "lon": 7.03301138298704
+        "lng": 7.03301138298704
       },
       "homage": null,
       "sources": [
@@ -2162,7 +2162,7 @@
         "accurate": false,
         "radius": 3000,
         "lat": 46.32233477912322,
-        "lon": -0.46748181838240527
+        "lng": -0.46748181838240527
       },
       "homage": null,
       "sources": [
@@ -2194,7 +2194,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.83186271636056,
-        "lon": 2.3894131119463538
+        "lng": 2.3894131119463538
       },
       "homage": null,
       "sources": [
@@ -2232,7 +2232,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.83361823038683,
-        "lon": -1.323507194390876
+        "lng": -1.323507194390876
       },
       "homage": null,
       "sources": [
@@ -2282,7 +2282,7 @@
         "accurate": false,
         "radius": 250,
         "lat": 47.11401564865496,
-        "lon": -2.158165949293384
+        "lng": -2.158165949293384
       },
       "homage": null,
       "sources": [
@@ -2332,7 +2332,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 50.09927363046322,
-        "lon": 2.8454640271001814
+        "lng": 2.8454640271001814
       },
       "homage": null,
       "sources": [
@@ -2376,7 +2376,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.10613978721958,
-        "lon": -1.6848600863402219
+        "lng": -1.6848600863402219
       },
       "homage": null,
       "sources": [
@@ -2420,7 +2420,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 0,
-        "lon": 0
+        "lng": 0
       },
       "homage": null,
       "sources": [
@@ -2458,7 +2458,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.161963555570765,
-        "lon": 5.386253274137738
+        "lng": 5.386253274137738
       },
       "homage": null,
       "sources": [
@@ -2502,7 +2502,7 @@
         "accurate": false,
         "radius": 25000,
         "lat": 33.269788526633974,
-        "lon": 35.288275430255396
+        "lng": 35.288275430255396
       },
       "homage": {
         "title": "Ministère des Armées (archives)",
@@ -2549,7 +2549,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.68870235684389,
-        "lon": 2.4343897283752995
+        "lng": 2.4343897283752995
       },
       "homage": null,
       "sources": [
@@ -2593,7 +2593,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.83553866246621,
-        "lon": 2.3857929574703323
+        "lng": 2.3857929574703323
       },
       "homage": null,
       "sources": [
@@ -2643,7 +2643,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 44.70102290045993,
-        "lon": 5.01559363815542
+        "lng": 5.01559363815542
       },
       "homage": null,
       "sources": [
@@ -2693,7 +2693,7 @@
         "accurate": false,
         "radius": 2500,
         "lat": 42.69047513881845,
-        "lon": 2.895403767633608
+        "lng": 2.895403767633608
       },
       "homage": null,
       "sources": [
@@ -2743,7 +2743,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.261836738479516,
-        "lon": 7.4485806176421265
+        "lng": 7.4485806176421265
       },
       "homage": null,
       "sources": [
@@ -2793,7 +2793,7 @@
         "accurate": false,
         "radius": 500,
         "lat": 45.06204203869025,
-        "lon": 5.559637109111111
+        "lng": 5.559637109111111
       },
       "homage": null,
       "sources": [
@@ -2843,7 +2843,7 @@
         "accurate": false,
         "radius": 800,
         "lat": 48.34939918492516,
-        "lon": -4.499828454292016
+        "lng": -4.499828454292016
       },
       "homage": {
         "title": "Ministère des Armées (archives)",
@@ -2890,7 +2890,7 @@
         "accurate": false,
         "radius": 10000,
         "lat": 15.134487062299785,
-        "lon": -0.7181436072560037
+        "lng": -0.7181436072560037
       },
       "homage": {
         "title": "Ministère des Armées (archives)",
@@ -2937,7 +2937,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.76386266548605,
-        "lon": 2.406404239225098
+        "lng": 2.406404239225098
       },
       "homage": null,
       "sources": [
@@ -2975,7 +2975,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 45.766336418754946,
-        "lon": 0.9470199336658687
+        "lng": 0.9470199336658687
       },
       "homage": null,
       "sources": [
@@ -3019,7 +3019,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.12644882227159,
-        "lon": 6.105840290324034
+        "lng": 6.105840290324034
       },
       "homage": null,
       "sources": [
@@ -3069,7 +3069,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 46.95534218624126,
-        "lon": 1.9938243877728137
+        "lng": 1.9938243877728137
       },
       "homage": null,
       "sources": [
@@ -3119,7 +3119,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.903750679294504,
-        "lon": 2.0432421160242793
+        "lng": 2.0432421160242793
       },
       "homage": null,
       "sources": [
@@ -3157,7 +3157,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 49.48639974802423,
-        "lon": 0.5726574704043904
+        "lng": 0.5726574704043904
       },
       "homage": null,
       "sources": [
@@ -3207,7 +3207,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 16.76702723342629,
-        "lon": -3.003773835802585
+        "lng": -3.003773835802585
       },
       "homage": {
         "title": "Ministère des Armées (archives)",
@@ -3254,7 +3254,7 @@
         "accurate": false,
         "radius": 0,
         "lat": 47.61847258294672,
-        "lon": 3.8097672869652977
+        "lng": 3.8097672869652977
       },
       "homage": null,
       "sources": [
@@ -3286,7 +3286,7 @@
         "accurate": false,
         "radius": 0,
         "lat": 43.48231101276155,
-        "lon": -1.5155781323998099
+        "lng": -1.5155781323998099
       },
       "homage": null,
       "sources": [
@@ -3324,7 +3324,7 @@
         "accurate": false,
         "radius": 0,
         "lat": 49.255929594892216,
-        "lon": 4.02128849206038
+        "lng": 4.02128849206038
       },
       "homage": null,
       "sources": [
@@ -3362,7 +3362,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 47.75364736306925,
-        "lon": 7.354886067372077
+        "lng": 7.354886067372077
       },
       "homage": null,
       "sources": [
@@ -3406,7 +3406,7 @@
         "accurate": false,
         "radius": 2000,
         "lat": 48.86102312958365,
-        "lon": 2.7859132938760904
+        "lng": 2.7859132938760904
       },
       "homage": null,
       "sources": [
@@ -3438,7 +3438,7 @@
         "accurate": true,
         "radius": 0,
         "lat": -20.88635403963024,
-        "lon": 55.4523133491925
+        "lng": 55.4523133491925
       },
       "homage": null,
       "sources": [
@@ -3482,7 +3482,7 @@
         "accurate": false,
         "radius": 50,
         "lat": 43.75797614527455,
-        "lon": 4.505336194066227
+        "lng": 4.505336194066227
       },
       "homage": null,
       "sources": [
@@ -3532,7 +3532,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 44.8943111816809,
-        "lon": -0.15573038018834817
+        "lng": -0.15573038018834817
       },
       "homage": null,
       "sources": [
@@ -3576,7 +3576,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 50.32715844026719,
-        "lon": 2.980386980676808
+        "lng": 2.980386980676808
       },
       "homage": null,
       "sources": [
@@ -3620,7 +3620,7 @@
         "accurate": false,
         "radius": 150,
         "lat": 43.860052648937774,
-        "lon": 4.406170822800962
+        "lng": 4.406170822800962
       },
       "homage": null,
       "sources": [
@@ -3670,7 +3670,7 @@
         "accurate": false,
         "radius": 100,
         "lat": 48.10624050607669,
-        "lon": -1.6864860441174379
+        "lng": -1.6864860441174379
       },
       "homage": null,
       "sources": [
@@ -3708,7 +3708,7 @@
         "accurate": false,
         "radius": 500,
         "lat": 49.67839539942493,
-        "lon": 1.9174923292439403
+        "lng": 1.9174923292439403
       },
       "homage": null,
       "sources": [
@@ -3758,7 +3758,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.92125044093485,
-        "lon": 4.8733437503579085
+        "lng": 4.8733437503579085
       },
       "homage": null,
       "sources": [
@@ -3790,7 +3790,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 48.2968660658028,
-        "lon": 2.40841403419229
+        "lng": 2.40841403419229
       },
       "homage": null,
       "sources": [
@@ -3840,7 +3840,7 @@
         "accurate": true,
         "radius": 0,
         "lat": -21.137067633894816,
-        "lon": 55.45365524682377
+        "lng": 55.45365524682377
       },
       "homage": null,
       "sources": [
@@ -3890,7 +3890,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 47.22760108438644,
-        "lon": -1.5514513374345378
+        "lng": -1.5514513374345378
       },
       "homage": {
         "title": "Ministère de l'Intérieur",
@@ -3943,7 +3943,7 @@
         "accurate": true,
         "radius": 0,
         "lat": 43.65589954142051,
-        "lon": 7.150460917513753
+        "lng": 7.150460917513753
       },
       "homage": null,
       "sources": [

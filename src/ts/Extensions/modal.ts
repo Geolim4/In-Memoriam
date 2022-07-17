@@ -29,7 +29,10 @@ export class Modal {
     const cancelLabel =  (typeof options === 'object' && options.cancelLabel) || 'Annuler';
 
     if (content instanceof ModalContentTemplate) {
-      App.getInstance().getRenderer().render(content.getContentTemplate(), content.getVariables()).then((htmlContent) => {
+      App.getInstance()
+      .getRenderer()
+      .render(content.getContentTemplate(), content.getVariables())
+      .then((htmlContent: string) => {
         this.modalInfo(title, htmlContent, options);
       });
       return;
