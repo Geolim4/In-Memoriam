@@ -81,7 +81,7 @@ export abstract class AppCore extends AppAbstract {
       for (const key in filteredResponse.response.deaths) {
         const death = <Death>filteredResponse.response.deaths[key];
         const totalDeathCount = this.getTotalDeathCount(death);
-        const houseImage = this.getConfigFactory().config['imagePath']['house'].replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
+        const houseImage = this.getConfigFactory().config.imagePath.house.replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
         const marker = new google.maps.Marker({
           map,
           animation: google.maps.Animation.DROP,
@@ -95,12 +95,12 @@ export abstract class AppCore extends AppAbstract {
           const circle = new google.maps.Circle({
             map,
             center: new google.maps.LatLng(death.gps.lat, death.gps.lng),
-            fillColor: this.getConfigFactory().config['circleOptions']['fillColor'],
-            fillOpacity: this.getConfigFactory().config['circleOptions']['fillOpacity'],
+            fillColor: this.getConfigFactory().config.circleOptions.fillColor,
+            fillOpacity: this.getConfigFactory().config.circleOptions.fillOpacity,
             radius: Math.max(100, death.gps.radius), // Radius can't be set at less than 100 meters
-            strokeColor: this.getConfigFactory().config['circleOptions']['strokeColor'],
-            strokeOpacity: this.getConfigFactory().config['circleOptions']['strokeOpacity'],
-            strokeWeight: this.getConfigFactory().config['circleOptions']['strokeWeight'],
+            strokeColor: this.getConfigFactory().config.circleOptions.strokeColor,
+            strokeOpacity: this.getConfigFactory().config.circleOptions.strokeOpacity,
+            strokeWeight: this.getConfigFactory().config.circleOptions.strokeWeight,
           });
 
           this.circles.push(circle);
@@ -145,7 +145,7 @@ export abstract class AppCore extends AppAbstract {
 
         google.maps.event.addListener(marker, 'dblclick', (): void => {
           map.setCenter(marker.getPosition());
-          map.setZoom(this.getConfigFactory().config['clusteringOptions']['maxZoom']);
+          map.setZoom(this.getConfigFactory().config.clusteringOptions.maxZoom);
         });
 
         this.infoWindows.push(infoWindow);
@@ -174,9 +174,9 @@ export abstract class AppCore extends AppAbstract {
         this.markerCluster = new MarkerClusterer({
           map,
           algorithm: new SuperClusterAlgorithm({
-            maxZoom: this.getConfigFactory().config['clusteringOptions']['maxZoom'],
-            minPoints: this.getConfigFactory().config['clusteringOptions']['minPoints'],
-            radius: this.getConfigFactory().config['clusteringOptions']['radius'],
+            maxZoom: this.getConfigFactory().config.clusteringOptions.maxZoom,
+            minPoints: this.getConfigFactory().config.clusteringOptions.minPoints,
+            radius: this.getConfigFactory().config.clusteringOptions.radius,
           }),
           markers: this.markers,
         });
@@ -196,7 +196,7 @@ export abstract class AppCore extends AppAbstract {
       if (heatMapData.length && this.isHeatmapEnabled()) {
         this.heatMap = new google.maps.visualization.HeatmapLayer({
           ...{ data: heatMapData },
-          ...this.getConfigFactory().config['heatmapOptions'],
+          ...this.getConfigFactory().config.heatmapOptions,
         });
         this.heatMap.setMap(map);
       }
@@ -570,7 +570,7 @@ export abstract class AppCore extends AppAbstract {
         if (this.markers[this.markerHashIndex[deathHash]]) {
           const marker = this.markers[this.markerHashIndex[deathHash]];
           this.getModal().closeModalInfo();
-          map.setZoom(this.getConfigFactory().config['maxZoom']);
+          map.setZoom(this.getConfigFactory().config.googleMapsOptions.maxZoom);
           google.maps.event.trigger(marker, 'click');
           map.setCenter(marker.getPosition());
 
