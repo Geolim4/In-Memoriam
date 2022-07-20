@@ -23,7 +23,7 @@
     <span>
    <strong>Emplacement</strong>: {{ death.location }}
     {% if not death.gps.accurate %}
-        <strong style="color: orangered;"><abbr data-tippy-content="Indique que l\'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>
+        <strong style="color: orangered;"><abbr data-tippy-content="Indique que l'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>
     {% endif %}
    <a href="https://maps.google.com/?ll={{ death.gps.lat }},{{ death.gps.lon }}&amp;q={{ death.location }}" target="_blank" tabindex="0">
     <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>

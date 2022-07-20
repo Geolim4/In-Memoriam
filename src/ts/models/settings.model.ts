@@ -17,7 +17,24 @@ export interface Settings {
     maxZoom: number,
     radius: number,
   };
-  imagePath: Object;
+  imagePath: {
+    bluedot: string,
+    chart: string,
+    clustering: {
+      on: string,
+      off: string,
+    },
+    download: string,
+    heatmap: {
+      on: string,
+      off: string,
+    },
+    list: string,
+    localize: string,
+    house: string,
+    random: string,
+    refresh: string,
+  };
   supportAssociations: HoverTitleUrl[];
   searchMinLength: number;
   templateDir: string;

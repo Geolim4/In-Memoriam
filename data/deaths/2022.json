@@ -3068,6 +3068,44 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "07",
+      "day": "14",
+      "keywords": "",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire de la Marine Nationale stationné au Fort de Bicêtre a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
+      "section": "Marine Nationale - Fort de Bicêtre",
+      "location": "Kremlin-Bicêtre (Val-de-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 300,
+        "lat": 48.804924836884155,
+        "lng": 2.354360747858659
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu.fr/ile-de-france/le-kremlin-bicetre_94043/val-de-marne-mort-d-un-jeune-militaire-le-14-juillet-par-arme-a-feu_52477501.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.instagram.com/p/CgEUqs-jhOz/",
+          "title": "@36quaidesorfevres",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
