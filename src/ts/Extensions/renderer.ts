@@ -12,11 +12,11 @@ import { Death } from '../models/Death/death.model';
 
 export class Renderer {
   private templateDir: string;
-  private templates: string[];
+  private templates: { [name: string]: string };
 
   constructor(templateDir: string) {
     this.templateDir = templateDir;
-    this.templates = [];
+    this.templates = {};
   }
 
   public async renderAsDom(tplName: string, variables: object): Promise<Element> {
@@ -27,14 +27,20 @@ export class Renderer {
     });
   }
 
-  public async renderTo(tplName: string, variables: object, element: Element): Promise<void> {
-    return this.render(tplName, variables).then((htmlContent) => {
-      element.innerHTML = htmlContent;
+  public async renderTo(tplName: string, variables: object, element: Element|string): Promise<void> {
+    return this.render(tplName, variables).then((htmlContent: string) => {
+      let targetElement = element;
+      if (typeof targetElement === 'string') {
+        targetElement = document.querySelector(targetElement);
+      }
+
+      targetElement.innerHTML = htmlContent;
     });
   }
 
   public async render(tplName: string, variables: object): Promise<string|null> {
     if (typeof this.templates[tplName] === 'undefined') {
+      App.getInstance().showLoaderWall();
       return fetch(this.templateDir.replace('%tpl%', tplName), { cache: 'force-cache' })
       .then((response): any => response.text())
       .then((responseData: string): string => {
@@ -50,11 +56,17 @@ export class Renderer {
           { isError: true },
         );
         return null;
+      }).finally(() => {
+        App.getInstance().hideLoaderWall();
       });
     }
 
     return (new Promise((resolve) => (resolve())))
     .then(() => (this.doRender(this.templates[tplName], variables)));
+  }
+
+  public purgeTemplateCache(): void {
+    this.templates = {};
   }
 
   private doRender(templateContent: string, variables: object): string {

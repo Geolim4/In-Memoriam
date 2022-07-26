@@ -403,7 +403,7 @@ export abstract class AppCore extends AppAbstract {
         if (this.isSearchByExpressionEnabled()) {
           this.getModal().modalInfo(
             "Erreur d'évaluation",
-            `L'expression <code>${e.expression}</code> a retourné l'erreur suivante: <code>${e.message}</code>`,
+            `L'expression <code>${StringUtilsHelper.htmlEncode(e.expression)}</code> a retourné l'erreur suivante: <code>${e.message}</code>`,
             { isError: true },
           );
         }
