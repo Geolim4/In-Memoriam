@@ -57,6 +57,9 @@ body:not(.loaded) {
       background-size: 800px 104px;
     }
   }
+  .loader.is-active {
+    display: none;
+  }
 }
 
 #fork-me {
@@ -297,4 +300,8 @@ body.fullscreen {
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: unset;
+}
+
+.loader.is-active {
+  background-color: rgba(0, 0, 0, 0.5);
 }

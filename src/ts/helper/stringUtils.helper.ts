@@ -67,4 +67,10 @@ export class StringUtilsHelper {
       }
     }
   }
+
+  public static htmlEncode(str: string): string {
+    return str.replace(/./gm, (s) => {
+      return (s.match(/[a-z0-9\s]+/i)) ? s : `&#${s.charCodeAt(0)};`;
+    });
+  }
 }

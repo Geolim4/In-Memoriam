@@ -163,6 +163,21 @@ export abstract class AppAbstract {
     return death.count + count;
   }
 
+  public showLoaderWall(): void  {
+    const div = document.createElement('div');
+    div.id = 'loader-wall';
+    div.classList.add('loader', 'loader-default', 'is-active');
+
+    document.querySelector('body').appendChild(div);
+  }
+
+  public hideLoaderWall(): void  {
+    const div = document.getElementById('loader-wall');
+    if (div) {
+      div.remove();
+    }
+  }
+
   protected flagAppAsLoaded() : void {
     if (!this.isAppLoaded()) {
       document.querySelector('body').classList.add('loaded');
