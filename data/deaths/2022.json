@@ -3106,6 +3106,62 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "malaise",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "07",
+      "day": "25",
+      "keywords": "Martial Morin",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier du CIS de Tain l’Hermitage (SDIS 26) est décédé des suites d’un malaise survenu dans l’exercice de ses fonctions quelques jours auparavant.\nPompier volontaire depuis plus de 24ans, il était marié et père de deux enfants.",
+      "section": "SDIS 26",
+      "location": "Tain l’Hermitage (Drôme)",
+      "origin": "domtom",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.07167512163798,
+        "lng": 4.848464744819922
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://twitter.com/sdis26/status/1552245477357264896",
+          "title": "@sdis26",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2022/07/27/deces-de-l-adjudant-chef-martial-morin-en-mission-avec-les-pompiers-dromois-a-tarascon",
+          "title": "Le Dauphine",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.midilibre.fr/2022/07/27/mort-de-martial-morin-un-pompier-de-la-drome-des-suites-dun-malaise-en-mission-lors-de-lincendie-de-tarascon-10459050.php",
+          "title": "Midi Libre",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/provence-alpes-cote-d-azur/bouches-du-rhone/tarascon/feu-de-la-montagnette-un-sapeur-pompier-volontaire-de-la-drome-est-mort-en-service-2588072.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/drome-un-pompier-volontaire-de-tain-l-hermitage-meurt-lors-d-une-operation-dans-les-bouches-du-rhone-1658911660",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
