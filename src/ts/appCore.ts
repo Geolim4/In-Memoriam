@@ -55,6 +55,7 @@ export abstract class AppCore extends AppAbstract {
 
   protected bindMarkers(map: google.maps.Map, filters: Filters): void {
     const stopwatchStart = window.performance.now();
+    this.showLoaderWall(map.getDiv());
     fetch(this.getConfigFactory().config.deathsSrc.replace('%year%', filters.year), { cache: 'no-store' })
     .then((response) => response.json())
     .then((responseData: Bloodbath) => {
@@ -210,6 +211,8 @@ export abstract class AppCore extends AppAbstract {
         console.error(`Failed to load the death list: ${e}`);
       }
       this.getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des décès.', { isError: true });
+    }).finally(() => {
+      this.hideLoaderWall(map.getDiv());
     });
   }
 
@@ -310,8 +313,8 @@ export abstract class AppCore extends AppAbstract {
             const block = (negated ? safeBlock.substring(1) : safeBlock);
 
             if (block.length >= this.getConfigFactory().getSearchMinLength()
-              // Handle special identifiers like Paris XXe, CRS xx, EGM XX/X, etc.
-              || (block.match(/^(((\d{1,2})e?)|((([IVX]+)|(\d{1,2}))\/(\d{1,2})))$/) && i === 1)
+              // Handle special identifiers like Paris XXe, CRS xx, EGM XX/X, Dom/Tom code (9xx), Corse identifiers XA/B, etc.
+              || (block.match(/^(((9?\d{1,2})[abe]?)|((([IVX]+)|(\d{1,2}))\/(\d{1,2})))$/) && i === 1)
             ) {
               if (!negated) {
                 safeFilterSplited.push(block);

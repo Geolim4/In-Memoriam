@@ -325,6 +325,7 @@ export class MapButtons {
         'Les données que vous allez télécharger seront contextualisées selon les filtres appliqués. Continuer ?',
         {
           confirmCallback: () => {
+            App.getInstance().showLoaderWall();
             const now = new Date();
             const filenameDate = `${now.getFullYear()}${now.getMonth()}${now.getDay()}${now.getHours()}${now.getMinutes()}${now.getSeconds()}`;
             const definitions = App.getInstance().getConfigDefinitions();
@@ -395,6 +396,7 @@ export class MapButtons {
             }
 
             csvExporter.generateCsv(csvData);
+            App.getInstance().hideLoaderWall();
           },
           okLabel: 'Télécharger au format CSV',
         },

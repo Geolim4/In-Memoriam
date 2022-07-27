@@ -305,3 +305,14 @@ body.fullscreen {
 .loader.is-active {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.loader.is-active.inside {
+  &:after {
+    position: absolute;
+  }
+  position: absolute;
+}
+
+.loader-container {
+  position: relative;
+}

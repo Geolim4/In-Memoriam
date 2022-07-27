@@ -163,18 +163,32 @@ export abstract class AppAbstract {
     return death.count + count;
   }
 
-  public showLoaderWall(): void  {
+  public showLoaderWall(target?: Element): void  {
     const div = document.createElement('div');
-    div.id = 'loader-wall';
-    div.classList.add('loader', 'loader-default', 'is-active');
-
-    document.querySelector('body').appendChild(div);
+    div.classList.add('loader-wall', 'loader', 'loader-default', 'is-active');
+    if (document.fullscreenElement === null) {
+      if (target instanceof Element) {
+        div.classList.add('inside');
+        target.parentElement.classList.add('loader-container');
+        target.appendChild(div);
+      } else {
+        document.querySelector('body').appendChild(div);
+      }
+    } else {
+      document.fullscreenElement.appendChild(div);
+    }
   }
 
-  public hideLoaderWall(): void  {
-    const div = document.getElementById('loader-wall');
-    if (div) {
-      div.remove();
+  public hideLoaderWall(target?: Element): void  {
+    if (document.fullscreenElement === null) {
+      if (target instanceof Element) {
+        target.parentElement.classList.remove('loader-container');
+        target.querySelectorAll('.loader.loader-wall').forEach((e) => (e.remove()));
+      } else {
+        document.querySelectorAll('.loader.loader-wall').forEach((e) => (e.remove()));
+      }
+    } else {
+      document.fullscreenElement.querySelectorAll('.loader.loader-wall').forEach((e) => (e.remove()));
     }
   }
 
