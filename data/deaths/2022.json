@@ -3129,7 +3129,10 @@
         "lat": 45.07167512163798,
         "lng": 4.848464744819922
       },
-      "homage": null,
+      "homage": {
+        "title": "Ministère de l'Intérieur",
+        "url": "https://www.interieur.gouv.fr/actualites/actu-du-ministere/eloge-funebre-prononce-par-caroline-cayeux-ministre-deleguee-chargee"
+      },
       "sources": [
         {
           "url": "https://twitter.com/sdis26/status/1552245477357264896",
