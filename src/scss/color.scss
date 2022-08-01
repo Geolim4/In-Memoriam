@@ -20,9 +20,12 @@ body {
       color: $white;
       background-color: $dark-grey;
     }
-    .choices__list--dropdown > .choices__list {
-      color: $dark-grey;
-      font-weight: normal;
+    .choices__list--dropdown {
+      > .choices__list {
+        color: $dark-grey;
+        font-weight: normal;
+      }
+      z-index: 10;
     }
 
     .choices[data-type*="select-one"] {
