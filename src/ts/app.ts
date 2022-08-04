@@ -14,7 +14,6 @@ export class App extends AppCore {
 
   private constructor() {
     super();
-    this.loadGlossary();
   }
 
   public static boot(): void {
@@ -44,8 +43,7 @@ export class App extends AppCore {
   }
 
   public loadGlossary(): void {
-    const glossaryPath = './data/config/glossary.json';
-    fetch(glossaryPath, { cache: 'force-cache' })
+    fetch(this.getConfigFactory().config.glossarySrc, { cache: 'force-cache' })
     .then((response): any => response.json())
     .then((responseData: {glossary: { [name: string]: string }}): void => {
       this.setGlossary(responseData.glossary);
@@ -102,6 +100,9 @@ export class App extends AppCore {
     return filters;
   }
 
+  /**
+   * Only used in Twig templates
+   */
   public getFilterValueLabel(filterName: string, filterValue: string): string {
     for (const filterValues of this.getFormFilters()[filterName]) {
       if (filterValues.value === filterValue) {

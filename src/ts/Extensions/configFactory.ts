@@ -10,15 +10,12 @@ export class ConfigFactory {
 
   public config: Settings;
   public definitions: Definitions;
-
   private configPath: string;
-  private definitionsPath: string;
 
   constructor(onceInitialized: VoidFunction) {
     this.config = { appDebug: true } as Settings;
     this.definitions = {};
     this.configPath = './data/config/settings.json';
-    this.definitionsPath = './data/config/definitions.json';
     this.init(onceInitialized);
   }
 
@@ -51,7 +48,7 @@ export class ConfigFactory {
         }
       }
 
-      fetch(this.definitionsPath, { cache: 'force-cache' })
+      fetch(this.config.definitionsSrc, { cache: 'force-cache' })
       .then((response): any => response.json())
       .then((responseData: { definitions: Definitions }): void => {
         this.definitions = responseData.definitions;

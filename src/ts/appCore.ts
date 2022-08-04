@@ -47,8 +47,8 @@ export abstract class AppCore extends AppAbstract {
     this.setConfigFactory(new ConfigFactory((): void => this.run()));
   }
 
+  public abstract getFilterValueLabel(filterName: string, filterValue: string): string; // Only used in Twig templates
   public abstract getFilters(fromAnchor: boolean): Filters;
-  public abstract getFilterValueLabel(filterName: string, filterValue: string): string;
   public abstract loadGlossary(): void;
   public abstract reloadMarkers(map: google.maps.Map, fromAnchor: boolean): void;
   public abstract getFormFiltersKeyed(): { [name: string]: { [name: string]: string } };
@@ -119,7 +119,13 @@ export abstract class AppCore extends AppAbstract {
           const multipleDeathContainer = document.querySelector('.death-container.multiple-deaths');
 
           if (multipleDeathContainer) {
-            multipleDeathContainer.closest('.gm-style-iw-t').classList.add('gm-style-iw-red');
+            try {
+              multipleDeathContainer.closest('.gm-style-iw-t').querySelector('.gm-style-iw-tc').classList.add('gm-style-iw-red');
+            } catch {
+              if (this.getConfigFactory().isDebugEnabled()) {
+                console.error('Google Maps Infowindow DOM structure has changed !');
+              }
+            }
           }
           AppStatic.bindTooltip();
         });
@@ -226,11 +232,11 @@ export abstract class AppCore extends AppAbstract {
   private loadGoogleMap(): void {
     const mapElement = <HTMLInputElement>document.getElementById('map');
     const map = new google.maps.Map(mapElement, this.getConfigFactory().config.googleMapsOptions);
-    const filtersPath = './data/config/filters.json';
 
-    fetch(filtersPath, { cache: 'force-cache' })
+    fetch(this.getConfigFactory().config.filtersSrc, { cache: 'force-cache' })
     .then((response): any => response.json())
     .then((responseData: { filters: FormFilters }): void => {
+      this.loadGlossary();
       this.setFormFilters(responseData.filters);
       this.setupSkeleton(this.getFilters(true));
       this.bindAnchorEvents(map);

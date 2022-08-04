@@ -10,7 +10,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "2.7.2",
+    "appVersion": "2.7.3",
     "circleOptions": {
       "fillColor": "#9e2a2b",
       "fillOpacity": 0.25,
@@ -26,6 +26,9 @@
     "contactEmail": "contact@geolim4.com",
     "debugCookieName": "_JS_DEBUG_ENABLED_",
     "deathsSrc": "./data/deaths/%year%.json",
+    "definitionsSrc": "./data/config/definitions.json",
+    "filtersSrc": "./data/config/filters.json",
+    "glossarySrc": "./data/config/glossary.json",
     "searchMinLength": 3,
     "googleMapsLoaderOptions": {
       "apiKey": "V3cXdfN2RZUkNGRlY2SXdDZjd0NlFWOE1CNGxRcWlJQUl6YVN5Qk",
