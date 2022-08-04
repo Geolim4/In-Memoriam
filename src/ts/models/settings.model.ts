@@ -7,7 +7,10 @@ export interface Settings {
   appVersion: string;
   deathsSrc: string;
   debugCookieName: string;
+  definitionsSrc: string;
   contactEmail: string;
+  filtersSrc: string;
+  glossarySrc: string;
   googleMapsLoaderOptions: LoaderOptions;
   googleMapsOptions: MapOptions;
   heatmapOptions: google.maps.visualization.HeatmapLayerOptions;
