@@ -3122,7 +3122,7 @@
       "text": "Un pompier du CIS de Tain l’Hermitage (SDIS 26) est décédé des suites d’un malaise survenu dans l’exercice de ses fonctions quelques jours auparavant.\nPompier volontaire depuis plus de 24ans, il était marié et père de deux enfants.",
       "section": "SDIS 26",
       "location": "Tain l’Hermitage (Drôme)",
-      "origin": "domtom",
+      "origin": "interieur",
       "gps": {
         "accurate": true,
         "radius": 0,
@@ -3161,6 +3161,144 @@
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/drome-un-pompier-volontaire-de-tain-l-hermitage-meurt-lors-d-une-operation-dans-les-bouches-du-rhone-1658911660",
           "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "malaise",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "08",
+      "day": "05",
+      "keywords": "Laurent",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier décède d'un arrêt cardiaque pendant son service au commissariat.\nIl était marié et père de trois enfants.",
+      "section": "CSP La Rochelle",
+      "location": "La Rochelle (Charente-Maritime)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.1688762203868,
+        "lng": -1.1465647570771398
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNat_17/status/1555503599588884482",
+          "title": "@PoliceNat_17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "08",
+      "day": "05",
+      "keywords": "idf",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier chef de poste de nuit du commissariat de Savigny-le-Temple a mis fin à ses jours avec son arme de service.",
+      "section": "CSP Savigny-le-Temple",
+      "location": "Savigny-le-Temple (Seine-et-Marne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.59598751838966,
+        "lng": 2.582390233807728
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNat77/status/1555525096667844610",
+          "title": "@PoliceNat77",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/seine-et-marne-un-policier-se-suicide-au-commissariat-de-savigny-le-temple.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/seine-et-marne-77/savigny-le-temple-un-gardien-de-la-paix-de-37-ans-met-fin-a-ses-jours-au-poste-de-police-05-08-2022-TSTR72HVAVACLM4W6RZDIQFHYI.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/savigny-le-temple_77445/seine-et-marne-un-gardien-de-la-paix-se-suicide-au-commissariat_52954415.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.cnews.fr/france/2022-08-05/seine-et-marne-un-policier-se-suicide-au-commissariat-de-savigny-le-temple-1251071",
+          "title": "Cnews",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "malaise",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "08",
+      "day": "05",
+      "keywords": "Pascal Allaire",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier décède d'un arrêt cardiaque pendant une intervention sur un feu de véhicules.\nChef du Centre de secours de Saint Lyphard, il était marié et père de famille.",
+      "section": "SDIS 44",
+      "location": "Saint Lyphard (Loire-Atlantique)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.397295255746485,
+        "lng": -2.3102105840290927
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.ouest-france.fr/pays-de-la-loire/saint-lyphard-44410/loire-atlantique-un-pompier-decede-au-cours-d-une-intervention-1ae552e4-1501-11ed-8a78-078da6dc529c",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/SDIS44/status/1555644838900547584",
+          "title": "@SDIS44",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/nantes/3334571-20220806-loire-atlantique-deces-pompier-lors-intervention-incendie-champ",
+          "title": "20 minutes",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francetvinfo.fr/faits-divers/loire-atlantique-un-pompier-meurt-lors-d-une-intervention_5296351.html",
+          "title": "France Info",
           "paywall": false,
           "trustful": true
         }
