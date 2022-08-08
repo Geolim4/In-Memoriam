@@ -174,7 +174,7 @@ export abstract class AppCore extends AppAbstract {
       // We assume that if only have a single result
       // that the infoWindow should be opened by default
       if (this.markers.length === 1 && this.infoWindows.length === 1) {
-        this.infoWindows[0].open(map, this.markers[0]);
+        google.maps.event.trigger(this.markers[0], 'click');
       }
 
       if (this.isClusteringEnabled()) {
