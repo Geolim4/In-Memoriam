@@ -70,9 +70,10 @@ export class App extends AppCore {
     const selects = <NodeListOf<HTMLSelectElement>>this.formElement.querySelectorAll('select[data-filterable="true"], input[data-filterable="true"]');
 
     anchor.forEach((value): void => {
-      const filter = value.split('=');
+      const filter = value.split(/=(.*)/s).filter(Boolean);
+
       if (filter.length === 2) {
-        exposedFilters[filter[0]] = filter[1];
+        exposedFilters[filter[0]] = decodeURI(filter[1]);
       }
     });
 
@@ -95,7 +96,7 @@ export class App extends AppCore {
       }
     });
 
-    Permalink.build(filters);
+    Permalink.build(filters, true);
 
     return filters;
   }
