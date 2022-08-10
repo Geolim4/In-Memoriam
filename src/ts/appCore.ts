@@ -467,13 +467,14 @@ export abstract class AppCore extends AppAbstract {
 
   private bindAnchorEvents(map: google.maps.Map): void {
     window.addEventListener('hashchange', (): void => {
-      this.bindFilters(map, true);
-      this.bindMarkers(map, this.getFilters(true));
+      const filters = this.getFilters(true);
+      this.drawCustomSelectors(this.formElement.querySelectorAll('form select'), filters);
+      this.bindMarkers(map, filters);
     }, false);
   }
 
   private bindFilters(map: google.maps.Map, fromAnchor?: boolean): void {
-    const selects = <NodeListOf<HTMLInputElement>>this.formElement.querySelectorAll('form select, form input');
+    const selectsAndFields = <NodeListOf<HTMLInputElement>>this.formElement.querySelectorAll('form select, form input');
     const resetButtons = <NodeListOf<HTMLButtonElement>>this.formElement.querySelectorAll('form button[data-reset-field-target]');
     const searchElement = <HTMLInputElement>document.getElementById('search');
     const filters = this.getFilters(fromAnchor);
@@ -498,7 +499,7 @@ export abstract class AppCore extends AppAbstract {
       });
     });
 
-    selects.forEach((selector) => {
+    selectsAndFields.forEach((selector) => {
       const hasResetButton = selector.nextElementSibling && selector.nextElementSibling.hasAttribute('data-reset-field-target');
       if (!selector.multiple) {
         selector.value = (typeof filters[selector.name] !== 'undefined' ? filters[selector.name] : '');
@@ -567,7 +568,7 @@ export abstract class AppCore extends AppAbstract {
       showOnFocus: true,
     });
 
-    this.drawCustomSelectors(selects, filters);
+    this.drawCustomSelectors(selectsAndFields, filters);
   }
 
   private bindMarkerLinkEvent(map: google.maps.Map): void {

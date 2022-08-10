@@ -13,24 +13,26 @@ export class StringUtilsHelper {
     return StringUtilsHelper.normalizeString(haystack).includes(normalizeNeedle ? this.normalizeString(needle) : needle);
   }
 
-  public static arrayContainsString(haystack: string, needle: string[], strategy: 'one'|'all'): boolean {
-    if (strategy === 'one') {
-      const votes :boolean[] = [];
-      for (const str of needle) {
+  public static arrayContainsString(haystack: string, needle: string[], containsStrategy: 'one'|'all', equalInsteadOfContains?: boolean): boolean {
+
+    const votes :boolean[] = [];
+    for (const str of needle) {
+      if (equalInsteadOfContains) {
+        votes.push(haystack === str);
+      } else {
         votes.push(StringUtilsHelper.containsString(haystack, str));
       }
-      return votes.filter((v) => v).length > 0;
     }
 
-    if (strategy === 'all') {
-      const votes :boolean[] = [];
-      for (const str of needle) {
-        votes.push(StringUtilsHelper.containsString(haystack, str));
-      }
-      return votes.filter((v) => v).length === needle.length;
+    switch (containsStrategy)
+    {
+      case 'one':
+        return votes.filter((v) => v).length > 0;
+      case 'all':
+        return votes.filter((v) => v).length === needle.length;
+      default:
+        return  false;
     }
-
-    return false;
   }
 
   public static replaceAcronyms(str: string, findReplace: {}): string {

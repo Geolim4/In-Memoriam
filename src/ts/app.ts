@@ -1,6 +1,7 @@
 import {  Filters } from './models';
 import { AppCore } from './appCore';
 import { Permalink } from './Components/permalink';
+import { StringUtilsHelper } from './helper/stringUtils.helper';
 
 /**
  * @description Main app code
@@ -65,9 +66,10 @@ export class App extends AppCore {
 
   public getFilters(fromAnchor: boolean): Filters {
     const anchor = decodeURIComponent(location.hash).substr(1).split('&');
-    const exposedFilters = {};
+    const exposedFilters = {} as {[name: string]: string};
     const filters = {};
     const selects = <NodeListOf<HTMLSelectElement>>this.formElement.querySelectorAll('select[data-filterable="true"], input[data-filterable="true"]');
+    const formFilters = this.getFormFilters();
 
     anchor.forEach((value): void => {
       const filter = value.split(/=(.*)/s).filter(Boolean);
@@ -79,7 +81,23 @@ export class App extends AppCore {
 
     selects.forEach((select): void => {
       if (fromAnchor) {
-        filters[select.id] = exposedFilters[select.id] ? exposedFilters[select.id] : '';
+        filters[select.id] = '';
+
+        if (exposedFilters[select.id]) {
+          exposedFilters[select.id].split(',').forEach((val) => {
+            if (StringUtilsHelper.arrayContainsString(val, formFilters[select.id].map((v) => v.value), 'one', true)) {
+              filters[select.id] += (filters[select.id] ? `,${val}` : val);
+            } else {
+              this.getModal().modalInfo(
+                'Valeur de filtre inconnue',
+                `La valeur <code>${val}</code> du filtre <code>${StringUtilsHelper.ucFirst(this.getConfigDefinitions()[select.id]['#name'])}</code> n'est pas autorisée.
+                      <br />Retour aux valeurs autorisées.`,
+                { isError: true },
+              );
+            }
+          });
+        }
+
         if (!select.required || filters[select.id]) {
           return;
         }
