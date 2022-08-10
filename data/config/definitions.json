@@ -2,8 +2,8 @@
   "definitions": {
     "year": {
       "#exposed": true,
-      "#name": "décompte annuel",
-      "#name_plural": "décomptes annuel",
+      "#name": "année",
+      "#name_plural": "années",
       "#label": "<strong>Décompte annuel</strong>: %year%",
       "#counter_property": "count",
       "#counter_strategy": "distinct",

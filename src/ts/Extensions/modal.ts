@@ -21,12 +21,12 @@ export class Modal {
 
   public modalInfo(title: string, content: string|ModalContentTemplate, options?: ModalOptions): void {
     const confirmCallback = (typeof options === 'object' && options.confirmCallback) || null;
-    const cancelCallback =  (typeof options === 'object' && options.cancelCallback) || null;
-    const isError =  (typeof options === 'object' && options.isError) || false;
-    const isLarge =  (typeof options === 'object' && options.isLarge) || false;
-    const onceShown =  (typeof options === 'object' && options.onceShown) || false;
-    const okLabel =  (typeof options === 'object' && options.okLabel) || 'Ok';
-    const cancelLabel =  (typeof options === 'object' && options.cancelLabel) || 'Annuler';
+    const cancelCallback = (typeof options === 'object' && options.cancelCallback) || null;
+    const isError = (typeof options === 'object' && options.isError) || false;
+    const isLarge = (typeof options === 'object' && options.isLarge) || false;
+    const onceShown = (typeof options === 'object' && options.onceShown) || false;
+    const okLabel = (typeof options === 'object' && options.okLabel) || 'Ok';
+    const cancelLabel = (typeof options === 'object' && options.cancelLabel) || 'Annuler';
 
     if (content instanceof ModalContentTemplate) {
       App.getInstance()
