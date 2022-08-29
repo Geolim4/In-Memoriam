@@ -3167,6 +3167,38 @@
       ]
     },
     {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "07",
+      "day": "30",
+      "keywords": "",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 3e RAMa a mis fin à ses jours.\nTrès peu d'informations sur ce décès car la source est confidentielle.",
+      "section": "3e RAMa (6e BLB)",
+      "location": "Montceau-les-Mines (Saône-et-Loire)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.64529546064778,
+        "lng": 6.472994923556186
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "",
+          "title": "__CONFIDENTIAL__",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
       "cause": "malaise",
       "count": 1,
       "published": true,
@@ -3299,6 +3331,88 @@
         {
           "url": "https://www.francetvinfo.fr/faits-divers/loire-atlantique-un-pompier-meurt-lors-d-une-intervention_5296351.html",
           "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "08",
+      "day": "20",
+      "keywords": "Fabrice",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier de la circonscription de Poitiers a mis fin à ses jours avec son arme de service.\nPère de famille, il était sur le point d'être muté à Gap.",
+      "section": "CSP Poitiers",
+      "location": "Poitiers (Vienne)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.5818006748248,
+        "lng": 0.3378886314938826
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/poitiers-un-policier-se-suicide-avec-son-arme-de-service.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/faits-divers/faits-divers-un-policier-de-poitiers-se-suicide-chez-lui-avec-son-arme-de-service-737c0ad4-21f3-11ed-99b0-b0233d5ce3c2",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "08",
+      "day": "23",
+      "keywords": "Keyrian",
+      "house": "armee",
+      "peers": [],
+      "text": "Un jeune militaire a mis fin à ses jours retranché dans un hôtel de Montceau-les-Mines.\nPeu d'informations disponibles sur ce suicide.",
+      "section": "Régiment inconnu",
+      "location": "Montceau-les-Mines (Saône-et-Loire)",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.68503379883481,
+        "lng":  4.359007078537328
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/saone-et-loire-un-forcene-retranche-dans-un-hotel-a-montceau-les-mines-1661262155",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.bienpublic.com/faits-divers-justice/2022/08/26/suicide-d-un-jeune-militaire-dans-un-hotel-a-montceau-les-mines-sa-famille-lui-rend-hommage",
+          "title": "Bien Public",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lejsl.com/faits-divers-justice/2022/08/25/suicide-d-un-jeune-militaire-il-etait-fait-pour-porter-secours",
+          "title": "Le JSL",
           "paywall": false,
           "trustful": true
         }
