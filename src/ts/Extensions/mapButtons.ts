@@ -290,6 +290,7 @@ export class MapButtons {
 
                 App.getInstance().getCharts().buildChartPerCause(markers, App.getInstance().getFormFilters(), definitions, year);
                 App.getInstance().getCharts().buildChartPerHouse(markers, App.getInstance().getFormFilters(), definitions, year);
+                App.getInstance().getCharts().buildChartPerCounty(markers, App.getInstance().getFormFilters(), definitions, year);
               },
             },
           );

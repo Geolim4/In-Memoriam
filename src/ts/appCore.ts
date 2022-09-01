@@ -29,7 +29,7 @@ export abstract class AppCore extends AppAbstract {
   protected infoWindows: google.maps.InfoWindow[];
   protected markerCluster: MarkerClusterer;
   protected markerHashIndex: {};
-  protected cachedFormFiltersKeyed: { [name: string]: { [name: string]: string } };
+  protected cachedCountyCodes: {};
   protected readonly formElement: HTMLFormElement;
   protected readonly customChoicesInstances: { [name: string]: any };
   protected readonly eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
@@ -43,7 +43,7 @@ export abstract class AppCore extends AppAbstract {
     this.infoWindows = [];
     this.markerCluster = null;
     this.markerHashIndex = {};
-    this.cachedFormFiltersKeyed = null;
+    this.cachedCountyCodes = null;
     this.formElement = <HTMLFormElement>document.getElementById('form-filters');
 
     this.setConfigFactory(new ConfigFactory((): void => this.run()));
@@ -614,7 +614,6 @@ export abstract class AppCore extends AppAbstract {
     selectors.forEach((selector) => {
       if (selector.type !== 'text') {
         if (!this.customChoicesInstances[selector.id]) {
-          console.log(selector.dataset);
           this.customChoicesInstances[selector.id] = new Choices(selector, {
             duplicateItemsAllowed: false,
             itemSelectText: '',
