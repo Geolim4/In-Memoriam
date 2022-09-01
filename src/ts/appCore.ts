@@ -29,6 +29,7 @@ export abstract class AppCore extends AppAbstract {
   protected infoWindows: google.maps.InfoWindow[];
   protected markerCluster: MarkerClusterer;
   protected markerHashIndex: {};
+  protected cachedFormFiltersKeyed: { [name: string]: { [name: string]: string } };
   protected readonly formElement: HTMLFormElement;
   protected readonly customChoicesInstances: { [name: string]: any };
   protected readonly eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
@@ -42,6 +43,7 @@ export abstract class AppCore extends AppAbstract {
     this.infoWindows = [];
     this.markerCluster = null;
     this.markerHashIndex = {};
+    this.cachedFormFiltersKeyed = null;
     this.formElement = <HTMLFormElement>document.getElementById('form-filters');
 
     this.setConfigFactory(new ConfigFactory((): void => this.run()));
@@ -612,6 +614,7 @@ export abstract class AppCore extends AppAbstract {
     selectors.forEach((selector) => {
       if (selector.type !== 'text') {
         if (!this.customChoicesInstances[selector.id]) {
+          console.log(selector.dataset);
           this.customChoicesInstances[selector.id] = new Choices(selector, {
             duplicateItemsAllowed: false,
             itemSelectText: '',
@@ -619,7 +622,8 @@ export abstract class AppCore extends AppAbstract {
             removeItems: true,
             resetScrollPosition: false,
             searchEnabled: false,
-            shouldSort: false,
+            shouldSort: selector.dataset.autosort === 'true',
+            shouldSortItems: selector.dataset.autosort === 'true',
           });
         }
 
@@ -635,13 +639,25 @@ export abstract class AppCore extends AppAbstract {
     const appSettingsElements = document.querySelectorAll('[data-app-settings]') as NodeListOf<HTMLElement>;
 
     for (const [filterName, filterValuesArray] of Object.entries(this.getFormFilters())) {
+      const optGroups = {} as { [name: string] : HTMLOptGroupElement };
       for (const filterValueObject of filterValuesArray) {
         const selector = this.formElement.querySelector(`select[name="${filterName}"]`);
-        const option = document.createElement('option');
-        option.value = filterValueObject.value;
-        option.text = filterValueObject.label;
-        option.selected = filters[filterName].split(',').includes(filterValueObject.value);
-        selector.appendChild(option);
+        if (selector !== null) {
+          const option = document.createElement('option');
+          option.value = filterValueObject.value;
+          option.text = filterValueObject.label;
+          option.selected = filters[filterName].split(',').includes(filterValueObject.value);
+          if (filterValueObject.group !== null && filterValueObject.group.trim() !== '') {
+            if (typeof optGroups[filterValueObject.group] === 'undefined') {
+              optGroups[filterValueObject.group] = document.createElement('optgroup');
+              optGroups[filterValueObject.group].label = filterValueObject.group;
+              selector.appendChild(optGroups[filterValueObject.group]);
+            }
+            optGroups[filterValueObject.group].appendChild(option);
+          } else {
+            selector.appendChild(option);
+          }
+        }
       }
     }
 

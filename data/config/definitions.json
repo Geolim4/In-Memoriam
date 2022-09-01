@@ -138,6 +138,21 @@
         }
       }
     },
+    "county": {
+      "#exposed": true,
+      "#name": "département/pays",
+      "#name_plural": "départements/pays",
+      "#label": "",
+      "#counter_property": "",
+      "#counter_strategy": "",
+      "#number": {
+        "#any": {
+          "none": "",
+          "singular": "",
+          "plural": ""
+        }
+      }
+    },
     "orphans": {
       "#exposed": true,
       "#name": "orphelins",

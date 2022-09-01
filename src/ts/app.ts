@@ -30,17 +30,28 @@ export class App extends AppCore {
     return this.appInstance;
   }
 
-  public getFormFiltersKeyed(): { [name: string]: { [name: string]: string } } {
-    const formFiltersKeyed = {};
+  public getCountyByCode(countyCode: string, wrappedCounty: boolean = false, excludedCountyCodes: string[] = ['75']): string {
+    if (!excludedCountyCodes.includes(countyCode)) {
+      return `${wrappedCounty ? ' (' : ''}${this.getFormFiltersKeyed().county[countyCode]}${wrappedCounty ? ')' : ''}`;
+    }
+    return '';
+  }
 
-    for (const [criteria, criteriaValues] of Object.entries(this.getFormFilters())) {
-      formFiltersKeyed[criteria] = {};
-      for (const criteriaValue of criteriaValues) {
-        formFiltersKeyed[criteria][criteriaValue.value] = criteriaValue.label;
+  public getFormFiltersKeyed(): { [name: string]: { [name: string]: string } } {
+    if (this.cachedFormFiltersKeyed === null) {
+      const formFiltersKeyed = {};
+
+      for (const [criteria, criteriaValues] of Object.entries(this.getFormFilters())) {
+        formFiltersKeyed[criteria] = {};
+        for (const criteriaValue of criteriaValues) {
+          formFiltersKeyed[criteria][criteriaValue.value] = criteriaValue.label;
+        }
       }
+
+      this.cachedFormFiltersKeyed = formFiltersKeyed;
     }
 
-    return formFiltersKeyed;
+    return this.cachedFormFiltersKeyed;
   }
 
   public loadGlossary(): void {
