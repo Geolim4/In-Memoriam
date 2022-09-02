@@ -4,207 +4,2318 @@
       {
         "value": "2022",
         "label": "2022",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "2021",
         "label": "2021",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "2020",
         "label": "2020",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "2019",
         "label": "2019",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "2018",
         "label": "2018",
-        "color": ""
+        "color": "",
+        "group": null
       }
     ],
     "month": [
       {
         "value": "01",
         "label": "Janvier",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "02",
         "label": "Février",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "03",
         "label": "Mars",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "04",
         "label": "Avril",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "05",
         "label": "Mai",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "06",
         "label": "Juin",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "07",
         "label": "Juillet",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "08",
         "label": "Aout",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "09",
         "label": "Septembre",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "10",
         "label": "Octobre",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "11",
         "label": "Novembre",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "12",
         "label": "Décembre",
-        "color": ""
+        "color": "",
+        "group": null
       }
     ],
     "cause": [
       {
         "value": "suicide",
         "label": "Suicide",
-        "color": "#121217"
+        "color": "#121217",
+        "group": null
       },
       {
         "value": "deathOnDuty",
         "label": "Décès en service commandé",
-        "color": "#763c3e"
+        "color": "#763c3e",
+        "group": null
       },
       {
         "value": "deathViaDuty",
         "label": "Décès lié au service",
-        "color": "#6d3c76"
+        "color": "#6d3c76",
+        "group": null
       },
       {
         "value": "accident",
         "label": "Accident",
-        "color": "#76693c"
+        "color": "#76693c",
+        "group": null
       },
       {
         "value": "malaise",
         "label": "Malaise cardiaque",
-        "color": "#3c6a76"
+        "color": "#3c6a76",
+        "group": null
       },
       {
         "value": "murdered",
         "label": "Meurtre",
-        "color": "#2b8254"
+        "color": "#2b8254",
+        "group": null
       },
       {
         "value": "other",
         "label": "Autre",
-        "color": "#bcbdbb"
+        "color": "#bcbdbb",
+        "group": null
       }
     ],
     "house": [
       {
         "value": "gd",
         "label": "Gendarmerie Nationale",
-        "color": "#3c2791"
+        "color": "#3c2791",
+        "group": null
       },
       {
         "value": "pn",
         "label": "Police Nationale",
-        "color": "#276c91"
+        "color": "#276c91",
+        "group": null
       },
       {
         "value": "pm",
         "label": "Police Municipale",
-        "color": "#279175"
+        "color": "#279175",
+        "group": null
       },
       {
         "value": "douane",
         "label": "Douanes",
-        "color": "#914527"
+        "color": "#914527",
+        "group": null
       },
       {
         "value": "pompier",
         "label": "Pompiers",
-        "color": "#912733"
+        "color": "#912733",
+        "group": null
       },
       {
         "value": "armee",
         "label": "Armée (Air, Terre, Marine)",
-        "color": "#559127"
+        "color": "#559127",
+        "group": null
       },
       {
         "value": "admpen",
         "label": "Administration pénitentiaire",
-        "color": "#912777"
+        "color": "#912777",
+        "group": null
       },
       {
         "value": "secciv",
         "label": "Sécurité Civile",
-        "color": "#916127"
+        "color": "#916127",
+        "group": null
       },
       {
         "value": "misc",
         "label": "Autre",
-        "color": "#bcbdbb"
+        "color": "#bcbdbb",
+        "group": null
       }
     ],
     "origin": [
       {
         "value": "interieur",
         "label": "Métropole",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "domtom",
         "label": "DOM-TOM/Corse",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "opex",
         "label": "OPEX",
-        "color": ""
+        "color": "",
+        "group": null
+      }
+    ],
+    "county": [
+      {
+        "value": "01",
+        "label": "01 - Ain",
+        "color": "",
+        "group": "Auvergne-Rhône-Alpes"
+      },
+      {
+        "value": "02",
+        "label": "02 - Aisne",
+        "color": "",
+        "group": "Hauts-de-France"
+      },
+      {
+        "value": "03",
+        "label": "03 - Allier",
+        "color": "",
+        "group": "Auvergne-Rhône-Alpes"
+      },
+      {
+        "value": "04",
+        "label": "04 - Alpes de Haute-Provence",
+        "color": "",
+        "group": "Provence-Alpes-Côte d'Azur"
+      },
+      {
+        "value": "05",
+        "label": "05 - Hautes-Alpes",
+        "color": "",
+        "group": "Provence-Alpes-Côte d'Azur"
+      },
+      {
+        "value": "06",
+        "label": "06 - Alpes-Maritimes",
+        "color": "",
+        "group": "Provence-Alpes-Côte d'Azur"
+      },
+      {
+        "value": "07",
+        "label": "07 - Ardêche",
+        "color": "",
+        "group": "Auvergne-Rhône-Alpes"
+      },
+      {
+        "value": "08",
+        "label": "08 - Ardennes",
+        "color": "",
+        "group": "Grand Est"
+      },
+      {
+        "value": "09",
+        "label": "09 - Ariège",
+        "color": "",
+        "group": "Midi-Pyrénées"
+      },
+      {
+        "value": "10",
+        "label": "10 - Aube",
+        "color": "",
+        "group": "Grand Est"
+      },
+      {
+        "value": "11",
+        "label": "11 - Aude",
+        "color": "",
+        "group": "Languedoc-Roussillon"
+      },
+      {
+        "value": "12",
+        "label": "12 - Aveyron",
+        "color": "",
+        "group": "Midi-Pyrénées"
+      },
+      {
+        "value": "13",
+        "label": "13 - Bouches-du-Rhône",
+        "color": "",
+        "group": "Provence-Alpes-Côte d'Azur"
+      },
+      {
+        "value": "14",
+        "label": "14 - Calvados",
+        "color": "",
+        "group": "Normandie"
+      },
+      {
+        "value": "15",
+        "label": "15 - Cantal",
+        "color": "",
+        "group": "Auvergne-Rhône-Alpes"
+      },
+      {
+        "value": "16",
+        "label": "16 - Charente",
+        "color": "",
+        "group": "Nouvelle-Aquitaine"
+      },
+      {
+        "value": "17",
+        "label": "17 - Charente-Maritime",
+        "color": "",
+        "group": "Nouvelle-Aquitaine"
+      },
+      {
+        "value": "18",
+        "label": "18 - Cher",
+        "color": "",
+        "group": "Centre-Val de Loire"
+      },
+      {
+        "value": "19",
+        "label": "19 - Corrèze",
+        "color": "",
+        "group": "Nouvelle-Aquitaine"
+      },
+      {
+        "value": "2A",
+        "label": "2A - Corse-du-Sud",
+        "color": "",
+        "group": "Corse"
+      },
+      {
+        "value": "2B",
+        "label": "2B - Haute-Corse",
+        "color": "",
+        "group": "Corse"
+      },
+      {
+        "value": "21",
+        "label": "21 - Côte-d'Or",
+        "color": "",
+        "group": "Bourgogne"
+      },
+      {
+        "value": "22",
+        "label": "22 - Côtes d'Armor",
+        "color": "",
+        "group": "Bretagne"
+      },
+      {
+        "value": "23",
+        "label": "23 - Creuse",
+        "color": "",
+        "group": "Nouvelle-Aquitaine"
+      },
+      {
+        "value": "24",
+        "label": "24 - Dordogne",
+        "color": "",
+        "group": "Nouvelle-Aquitaine"
+      },
+      {
+        "value": "25",
+        "label": "25 - Doubs",
+        "color": "",
+        "group": "Bourgogne-Franche-Comté"
+      },
+      {
+        "value": "26",
+        "label": "26 - Drôme",
+        "color": "",
+        "group": "Auvergne-Rhône-Alpes"
+      },
+      {
+        "value": "27",
+        "label": "27 - Eure",
+        "color": "",
+        "group": "Normandie"
+      },
+      {
+        "value": "28",
+        "label": "28 - Eure-et-Loir",
+        "color": "",
+        "group": "Centre-Val de Loire"
+      },
+      {
+        "value": "29",
+        "label": "29 - Finistère",
+        "color": "",
+        "group": "Bretagne"
+      },
+      {
+        "value": "30",
+        "label": "30 - Gard",
+        "color": "",
+        "group": "Languedoc-Roussillon"
+      },
+      {
+        "value": "31",
+        "label": "31 - Haute-Garonne",
+        "color": "",
+        "group": "Midi-Pyrénées"
+      },
+      {
+        "value": "32",
+        "label": "32 - Gers",
+        "color": "",
+        "group": "Midi-Pyrénées"
+      },
+      {
+        "value": "33",
+        "label": "33 - Gironde",
+        "color": "",
+        "group": "Nouvelle-Aquitaine"
+      },
+      {
+        "value": "34",
+        "label": "34 - Hérault",
+        "color": "",
+        "group": "Languedoc-Roussillon"
+      },
+      {
+        "value": "35",
+        "label": "35 - Île-et-Vilaine",
+        "color": "",
+        "group": "Bretagne"
+      },
+      {
+        "value": "36",
+        "label": "36 - Indre",
+        "color": "",
+        "group": "Centre-Val de Loire"
+      },
+      {
+        "value": "37",
+        "label": "37 - Indre-et-Loire",
+        "color": "",
+        "group": "Centre-Val de Loire"
+      },
+      {
+        "value": "38",
+        "label": "38 - Isère",
+        "color": "",
+        "group": "Auvergne-Rhône-Alpes"
+      },
+      {
+        "value": "39",
+        "label": "39 - Jura",
+        "color": "",
+        "group": "Bourgogne-Franche-Comté"
+      },
+      {
+        "value": "40",
+        "label": "40 - Landes",
+        "color": "",
+        "group": "Nouvelle-Aquitaine"
+      },
+      {
+        "value": "41",
+        "label": "41 - Loir-et-Cher",
+        "color": "",
+        "group": "Centre-Val de Loire"
+      },
+      {
+        "value": "42",
+        "label": "42 - Loire",
+        "color": "",
+        "group": "Auvergne-Rhône-Alpes"
+      },
+      {
+        "value": "43",
+        "label": "43 - Haute-Loire",
+        "color": "",
+        "group": "Auvergne-Rhône-Alpes"
+      },
+      {
+        "value": "44",
+        "label": "44 - Loire-Atlantique",
+        "color": "",
+        "group": "Pays de la Loire"
+      },
+      {
+        "value": "45",
+        "label": "45 - Loiret",
+        "color": "",
+        "group": "Centre-Val de Loire"
+      },
+      {
+        "value": "46",
+        "label": "46 - Lot",
+        "color": "",
+        "group": "Midi-Pyrénées"
+      },
+      {
+        "value": "47",
+        "label": "47 - Lot-et-Garonne",
+        "color": "",
+        "group": "Nouvelle-Aquitaine"
+      },
+      {
+        "value": "48",
+        "label": "48 - Ain",
+        "color": "",
+        "group": "Languedoc-Roussillon"
+      },
+      {
+        "value": "49",
+        "label": "49 - Maine-et-Loire",
+        "color": "",
+        "group": "Pays de la Loire"
+      },
+      {
+        "value": "50",
+        "label": "50 - Manche",
+        "color": "",
+        "group": "Normandie"
+      },
+      {
+        "value": "51",
+        "label": "51 - Marne",
+        "color": "",
+        "group": "Grand Est"
+      },
+      {
+        "value": "52",
+        "label": "52 - Haute-Marne",
+        "color": "",
+        "group": "Grand Est"
+      },
+      {
+        "value": "53",
+        "label": "53 - Mayenne",
+        "color": "",
+        "group": "Pays de la Loire"
+      },
+      {
+        "value": "54",
+        "label": "54 - Meurthe-et-Moselle",
+        "color": "",
+        "group": "Grand Est"
+      },
+      {
+        "value": "55",
+        "label": "55 - Meuse",
+        "color": "",
+        "group": "Grand Est"
+      },
+      {
+        "value": "56",
+        "label": "56 - Morbihan",
+        "color": "",
+        "group": "Bretagne"
+      },
+      {
+        "value": "57",
+        "label": "57 - Moselle",
+        "color": "",
+        "group": "Grand Est"
+      },
+      {
+        "value": "58",
+        "label": "58 - Nièvre",
+        "color": "",
+        "group": "Bourgogne"
+      },
+      {
+        "value": "59",
+        "label": "59 - Nord",
+        "color": "",
+        "group": "Hauts-de-France"
+      },
+      {
+        "value": "60",
+        "label": "60 - Oise",
+        "color": "",
+        "group": "Hauts-de-France"
+      },
+      {
+        "value": "61",
+        "label": "61 - Orne",
+        "color": "",
+        "group": "Normandie"
+      },
+      {
+        "value": "62",
+        "label": "62 - Pas-de-Calais",
+        "color": "",
+        "group": "Hauts-de-France"
+      },
+      {
+        "value": "63",
+        "label": "63 - Puy-de-Dôme",
+        "color": "",
+        "group": "Auvergne-Rhône-Alpes"
+      },
+      {
+        "value": "64",
+        "label": "64 - Pyrénées-Atlantiques",
+        "color": "",
+        "group": "Nouvelle-Aquitaine"
+      },
+      {
+        "value": "65",
+        "label": "65 - Hautes-Pyrénées",
+        "color": "",
+        "group": "Midi-Pyrénées"
+      },
+      {
+        "value": "66",
+        "label": "66 - Pyrénées-Orientales",
+        "color": "",
+        "group": "Languedoc-Roussillon"
+      },
+      {
+        "value": "67",
+        "label": "67 - Bas-Rhin",
+        "color": "",
+        "group": "Grand Est"
+      },
+      {
+        "value": "68",
+        "label": "68 - Haut-Rhin",
+        "color": "",
+        "group": "Grand Est"
+      },
+      {
+        "value": "69",
+        "label": "69 - Rhône",
+        "color": "",
+        "group": "Auvergne-Rhône-Alpes"
+      },
+      {
+        "value": "70",
+        "label": "70 - Haute-Saône",
+        "color": "",
+        "group": "Bourgogne-Franche-Comté"
+      },
+      {
+        "value": "71",
+        "label": "71 - Saône-et-Loire",
+        "color": "",
+        "group": "Bourgogne"
+      },
+      {
+        "value": "72",
+        "label": "72 - Sarthe",
+        "color": "",
+        "group": "Pays de la Loire"
+      },
+      {
+        "value": "73",
+        "label": "73 - Savoie",
+        "color": "",
+        "group": "Auvergne-Rhône-Alpes"
+      },
+      {
+        "value": "74",
+        "label": "74 - Haute-Savoie",
+        "color": "",
+        "group": "Auvergne-Rhône-Alpes"
+      },
+      {
+        "value": "75",
+        "label": "75 - Paris",
+        "color": "",
+        "group": "Île-de-France"
+      },
+      {
+        "value": "76",
+        "label": "76 - Seine-Maritime",
+        "color": "",
+        "group": "Normandie"
+      },
+      {
+        "value": "77",
+        "label": "77 - Seine-et-Marne",
+        "color": "",
+        "group": "Île-de-France"
+      },
+      {
+        "value": "78",
+        "label": "78 - Yvelines",
+        "color": "",
+        "group": "Île-de-France"
+      },
+      {
+        "value": "79",
+        "label": "79 - Deux-Sèvres",
+        "color": "",
+        "group": "Nouvelle-Aquitaine"
+      },
+      {
+        "value": "80",
+        "label": "80 - Somme",
+        "color": "",
+        "group": "Hauts-de-France"
+      },
+      {
+        "value": "81",
+        "label": "81 - Tarn",
+        "color": "",
+        "group": "Midi-Pyrénées"
+      },
+      {
+        "value": "82",
+        "label": "82 - Tarn-et-Garonne",
+        "color": "",
+        "group": "Midi-Pyrénées"
+      },
+      {
+        "value": "83",
+        "label": "83 - Var",
+        "color": "",
+        "group": "Provence-Alpes-Côte d'Azur"
+      },
+      {
+        "value": "84",
+        "label": "84 - Vaucluse",
+        "color": "",
+        "group": "Provence-Alpes-Côte d'Azur"
+      },
+      {
+        "value": "85",
+        "label": "85 - Vendée",
+        "color": "",
+        "group": "Pays de la Loire"
+      },
+      {
+        "value": "86",
+        "label": "86 - Vienne",
+        "color": "",
+        "group": "Nouvelle-Aquitaine"
+      },
+      {
+        "value": "87",
+        "label": "87 - Haute-Vienne",
+        "color": "",
+        "group": "Nouvelle-Aquitaine"
+      },
+      {
+        "value": "88",
+        "label": "88 - Vosges",
+        "color": "",
+        "group": "Grand Est"
+      },
+      {
+        "value": "89",
+        "label": "89 - Yonne",
+        "color": "",
+        "group": "Bourgogne-Franche-Comté"
+      },
+      {
+        "value": "90",
+        "label": "90 - Territoire-de-Belfort",
+        "color": "",
+        "group": "Bourgogne-Franche-Comté"
+      },
+      {
+        "value": "91",
+        "label": "91 - Essonne",
+        "color": "",
+        "group": "Île-de-France"
+      },
+      {
+        "value": "92",
+        "label": "92 - Hauts-de-Seine",
+        "color": "",
+        "group": "Île-de-France"
+      },
+      {
+        "value": "93",
+        "label": "93 - Seine-Saint-Denis",
+        "color": "",
+        "group": "Île-de-France"
+      },
+      {
+        "value": "94",
+        "label": "94 - Val-de-Marne",
+        "color": "",
+        "group": "Île-de-France"
+      },
+      {
+        "value": "95",
+        "label": "95 - Val-d'Oise",
+        "color": "",
+        "group": "Île-de-France"
+      },
+      {
+        "value": "971",
+        "label": "971 - Guadeloupe",
+        "color": "",
+        "group": "DOM-TOM"
+      },
+      {
+        "value": "972",
+        "label": "972 - Martinique",
+        "color": "",
+        "group": "DOM-TOM"
+      },
+      {
+        "value": "973",
+        "label": "973 - Guyane",
+        "color": "",
+        "group": "DOM-TOM"
+      },
+      {
+        "value": "974",
+        "label": "974 - Réunion",
+        "color": "",
+        "group": "DOM-TOM"
+      },
+      {
+        "value": "975",
+        "label": "975 - Saint-Pierre-et-Miquelon",
+        "color": "",
+        "group": "DOM-TOM"
+      },
+      {
+        "value": "976",
+        "label": "976 - Mayotte",
+        "color": "",
+        "group": "DOM-TOM"
+      },
+      {
+        "value": "977",
+        "label": "977 - Saint-Barthélemy",
+        "color": "",
+        "group": "DOM-TOM"
+      },
+      {
+        "value": "978",
+        "label": "978 - Saint-Martin",
+        "color": "",
+        "group": "DOM-TOM"
+      },
+      {
+        "value": "986",
+        "label": "986 - Wallis-et-Futuna",
+        "color": "",
+        "group": "DOM-TOM"
+      },
+      {
+        "value": "987",
+        "label": "987 - Polynésie française",
+        "color": "",
+        "group": "DOM-TOM"
+      },
+      {
+        "value": "988",
+        "label": "988 - Nouvelle-Calédonie",
+        "color": "",
+        "group": "DOM-TOM"
+      },
+      {
+        "value": "AF",
+        "label": "Afghanistan",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "ZA",
+        "label": "Afrique du Sud",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AL",
+        "label": "Albanie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "DZ",
+        "label": "Algérie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "DE",
+        "label": "Allemagne",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AD",
+        "label": "Andorre",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AO",
+        "label": "Angola",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AI",
+        "label": "Anguilla",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AQ",
+        "label": "Antarctique",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AG",
+        "label": "Antigua-et-Barbuda",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AN",
+        "label": "Antilles Néerlandaises",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SA",
+        "label": "Arabie Saoudite",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AR",
+        "label": "Argentine",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AM",
+        "label": "Arménie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AW",
+        "label": "Aruba",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AU",
+        "label": "Australie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AT",
+        "label": "Autriche",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AZ",
+        "label": "Azerbaïdjan",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BS",
+        "label": "Bahamas",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BH",
+        "label": "Bahreïn",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BD",
+        "label": "Bangladesh",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BB",
+        "label": "Barbade",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BY",
+        "label": "Bélarus",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BE",
+        "label": "Belgique",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BZ",
+        "label": "Belize",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BJ",
+        "label": "Bénin",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BM",
+        "label": "Bermudes",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BT",
+        "label": "Bhoutan",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BO",
+        "label": "Bolivie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BA",
+        "label": "Bosnie-Herzégovine",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BW",
+        "label": "Botswana",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BR",
+        "label": "Brésil",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BN",
+        "label": "Brunéi Darussalam",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BG",
+        "label": "Bulgarie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BF",
+        "label": "Burkina Faso",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BI",
+        "label": "Burundi",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "KH",
+        "label": "Cambodge",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CM",
+        "label": "Cameroun",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CA",
+        "label": "Canada",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CV",
+        "label": "Cap-vert",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CL",
+        "label": "Chili",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CN",
+        "label": "Chine",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CY",
+        "label": "Chypre",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CO",
+        "label": "Colombie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "KM",
+        "label": "Comores",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CR",
+        "label": "Costa Rica",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CI",
+        "label": "Côte d'Ivoire",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "HR",
+        "label": "Croatie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CU",
+        "label": "Cuba",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "DK",
+        "label": "Danemark",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "DJ",
+        "label": "Djibouti",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "DM",
+        "label": "Dominique",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "EG",
+        "label": "Égypte",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SV",
+        "label": "El Salvador",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "EA",
+        "label": "Eaux Internationales",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AE",
+        "label": "Émirats Arabes Unis",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "EC",
+        "label": "Équateur",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "ER",
+        "label": "Érythrée",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "ES",
+        "label": "Espagne",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "EE",
+        "label": "Estonie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "FM",
+        "label": "États Fédérés de Micronésie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "US",
+        "label": "États-Unis",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "ET",
+        "label": "Éthiopie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "RU",
+        "label": "Fédération de Russie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "FJ",
+        "label": "Fidji",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "FI",
+        "label": "Finlande",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GA",
+        "label": "Gabon",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GM",
+        "label": "Gambie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GE",
+        "label": "Géorgie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GS",
+        "label": "Géorgie du Sud et les Îles Sandwich du Sud",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GH",
+        "label": "Ghana",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GI",
+        "label": "Gibraltar",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GR",
+        "label": "Grèce",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GD",
+        "label": "Grenade",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GL",
+        "label": "Groenland",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GP",
+        "label": "Guadeloupe",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GU",
+        "label": "Guam",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GT",
+        "label": "Guatemala",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GN",
+        "label": "Guinée",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GQ",
+        "label": "Guinée Équatoriale",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GW",
+        "label": "Guinée-Bissau",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GY",
+        "label": "Guyana",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "HT",
+        "label": "Haïti",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "HN",
+        "label": "Honduras",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "HK",
+        "label": "Hong-Kong",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "HU",
+        "label": "Hongrie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "BV",
+        "label": "Île Bouvet",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CX",
+        "label": "Île Christmas",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "IM",
+        "label": "Île de Man",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "NF",
+        "label": "Île Norfolk",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "FK",
+        "label": "Îles (malvinas) Falkland",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AX",
+        "label": "Îles Åland",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "KY",
+        "label": "Îles Caïmanes",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CC",
+        "label": "Îles Cocos (Keeling)",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CK",
+        "label": "Îles Cook",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "FO",
+        "label": "Îles Féroé",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "HM",
+        "label": "Îles Heard et Mcdonald",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MP",
+        "label": "Îles Mariannes du Nord",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MH",
+        "label": "Îles Marshall",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "UM",
+        "label": "Îles Mineures Éloignées des États-Unis",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SB",
+        "label": "Îles Salomon",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TC",
+        "label": "Îles Turks et Caïques",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "VG",
+        "label": "Îles Vierges Britanniques",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "VI",
+        "label": "Îles Vierges des États-Unis",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "IN",
+        "label": "Inde",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "ID",
+        "label": "Indonésie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "IQ",
+        "label": "Iraq",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "IE",
+        "label": "Irlande",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "IS",
+        "label": "Islande",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "IL",
+        "label": "Israël",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "IT",
+        "label": "Italie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "LY",
+        "label": "Jamahiriya Arabe Libyenne",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "JM",
+        "label": "Jamaïque",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "JP",
+        "label": "Japon",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "JO",
+        "label": "Jordanie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "KZ",
+        "label": "Kazakhstan",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "KE",
+        "label": "Kenya",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "KG",
+        "label": "Kirghizistan",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "KI",
+        "label": "Kiribati",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "KW",
+        "label": "Koweït",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MK",
+        "label": "L'ex-République Yougoslave de Macédoine",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "LS",
+        "label": "Lesotho",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "LV",
+        "label": "Lettonie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "LB",
+        "label": "Liban",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "LR",
+        "label": "Libéria",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "LI",
+        "label": "Liechtenstein",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "LT",
+        "label": "Lituanie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "LU",
+        "label": "Luxembourg",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MO",
+        "label": "Macao",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MG",
+        "label": "Madagascar",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MY",
+        "label": "Malaisie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MW",
+        "label": "Malawi",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MV",
+        "label": "Maldives",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "ML",
+        "label": "Mali",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MT",
+        "label": "Malte",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MA",
+        "label": "Maroc",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MU",
+        "label": "Maurice",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MR",
+        "label": "Mauritanie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MX",
+        "label": "Mexique",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MC",
+        "label": "Monaco",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MN",
+        "label": "Mongolie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MS",
+        "label": "Montserrat",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MZ",
+        "label": "Mozambique",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MM",
+        "label": "Myanmar",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "NA",
+        "label": "Namibie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "NR",
+        "label": "Nauru",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "NP",
+        "label": "Népal",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "NI",
+        "label": "Nicaragua",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "NE",
+        "label": "Niger",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "NG",
+        "label": "Nigéria",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "NU",
+        "label": "Niué",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "NO",
+        "label": "Norvège",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "NC",
+        "label": "Nouvelle-Calédonie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "NZ",
+        "label": "Nouvelle-Zélande",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "OM",
+        "label": "Oman",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "UG",
+        "label": "Ouganda",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "UZ",
+        "label": "Ouzbékistan",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PK",
+        "label": "Pakistan",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PW",
+        "label": "Palaos",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PA",
+        "label": "Panama",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PG",
+        "label": "Papouasie-Nouvelle-Guinée",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PY",
+        "label": "Paraguay",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "NL",
+        "label": "Pays-Bas",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PE",
+        "label": "Pérou",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PH",
+        "label": "Philippines",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PN",
+        "label": "Pitcairn",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PL",
+        "label": "Pologne",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PF",
+        "label": "Polynésie Française",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PR",
+        "label": "Porto Rico",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PT",
+        "label": "Portugal",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "QA",
+        "label": "Qatar",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SY",
+        "label": "République Arabe Syrienne",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CF",
+        "label": "République Centrafricaine",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "KR",
+        "label": "République de Corée",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "MD",
+        "label": "République de Moldova",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CD",
+        "label": "République Démocratique du Congo",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "LA",
+        "label": "République Démocratique Populaire Lao",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "DO",
+        "label": "République Dominicaine",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CG",
+        "label": "République du Congo",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "IR",
+        "label": "République Islamique d'Iran",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "KP",
+        "label": "République Populaire Démocratique de Corée",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CZ",
+        "label": "République Tchèque",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TZ",
+        "label": "République-Unie de Tanzanie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "RE",
+        "label": "Réunion",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "RO",
+        "label": "Roumanie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "GB",
+        "label": "Royaume-Uni",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "RW",
+        "label": "Rwanda",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "EH",
+        "label": "Sahara Occidental",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "KN",
+        "label": "Saint-Kitts-et-Nevis",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SM",
+        "label": "Saint-Marin",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PM",
+        "label": "Saint-Pierre-et-Miquelon",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "VA",
+        "label": "Saint-Siège (état de la Cité du Vatican)",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "VC",
+        "label": "Saint-Vincent-et-les Grenadines",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SH",
+        "label": "Sainte-Hélène",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "LC",
+        "label": "Sainte-Lucie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "WS",
+        "label": "Samoa",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "AS",
+        "label": "Samoa Américaines",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "ST",
+        "label": "Sao Tomé-et-Principe",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SN",
+        "label": "Sénégal",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CS",
+        "label": "Serbie-et-Monténégro",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SC",
+        "label": "Seychelles",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SL",
+        "label": "Sierra Leone",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SG",
+        "label": "Singapour",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SK",
+        "label": "Slovaquie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SI",
+        "label": "Slovénie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SO",
+        "label": "Somalie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SD",
+        "label": "Soudan",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "LK",
+        "label": "Sri Lanka",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SE",
+        "label": "Suède",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "CH",
+        "label": "Suisse",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SR",
+        "label": "Suriname",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SJ",
+        "label": "Svalbard etÎle Jan Mayen",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "SZ",
+        "label": "Swaziland",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TJ",
+        "label": "Tadjikistan",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TW",
+        "label": "Taïwan",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TD",
+        "label": "Tchad",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TF",
+        "label": "Terres Australes Françaises",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "IO",
+        "label": "Territoire Britannique de l'Océan Indien",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "PS",
+        "label": "Territoire Palestinien Occupé",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TH",
+        "label": "Thaïlande",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TL",
+        "label": "Timor-Leste",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TG",
+        "label": "Togo",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TK",
+        "label": "Tokelau",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TO",
+        "label": "Tonga",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TT",
+        "label": "Trinité-et-Tobago",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TN",
+        "label": "Tunisie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TM",
+        "label": "Turkménistan",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TR",
+        "label": "Turquie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "TV",
+        "label": "Tuvalu",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "UA",
+        "label": "Ukraine",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "UY",
+        "label": "Uruguay",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "VU",
+        "label": "Vanuatu",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "VE",
+        "label": "Venezuela",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "VN",
+        "label": "Viet Nam",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "WF",
+        "label": "Wallis et Futuna",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "YE",
+        "label": "Yémen",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "ZM",
+        "label": "Zambie",
+        "color": "",
+        "group": "Territoire étranger"
+      },
+      {
+        "value": "ZW",
+        "label": "Zimbabwe",
+        "color": "",
+        "group": "Territoire étranger"
       }
     ],
     "homage": [
       {
         "value": "",
         "label": "--",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "expr:(death.homage !== null)",
         "label": "Oui",
-        "color": ""
+        "color": "",
+        "group": null
       },
       {
         "value": "expr:(death.homage === null)",
         "label": "Non",
-        "color": ""
+        "color": "",
+        "group": null
       }
     ]
   }

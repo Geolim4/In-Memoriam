@@ -19,6 +19,7 @@ export interface Death {
   location: string;
   month: string;
   origin: DeathOrigin;
+  county: string;
   orphans: number;
   peers: DeathPeer[];
   published: boolean;

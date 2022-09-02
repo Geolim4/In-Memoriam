@@ -30,13 +30,23 @@ export class App extends AppCore {
     return this.appInstance;
   }
 
-  public getFormFiltersKeyed(): { [name: string]: { [name: string]: string } } {
+  public getCountyByCode(countyCode: string, wrappedCounty: boolean = false, excludedCountyCodes: string[] = ['75']): string {
+    if (countyCode && !excludedCountyCodes.includes(countyCode)) {
+      if (this.cachedCountyCodes === null) {
+        this.cachedCountyCodes = this.getFormFiltersKeyed().county;
+      }
+      return `${wrappedCounty ? ' (' : ''}${this.cachedCountyCodes[countyCode]}${wrappedCounty ? ')' : ''}`;
+    }
+    return '';
+  }
+
+  public getFormFiltersKeyed(indexKey: string = 'value', labelKey: string = 'label'): { [name: string]: { [name: string]: string } } {
     const formFiltersKeyed = {};
 
     for (const [criteria, criteriaValues] of Object.entries(this.getFormFilters())) {
       formFiltersKeyed[criteria] = {};
       for (const criteriaValue of criteriaValues) {
-        formFiltersKeyed[criteria][criteriaValue.value] = criteriaValue.label;
+        formFiltersKeyed[criteria][criteriaValue[indexKey]] = criteriaValue[labelKey];
       }
     }
 

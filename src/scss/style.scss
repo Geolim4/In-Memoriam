@@ -245,6 +245,10 @@ a abbr[data-title] {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border: 1px solid $less-white;
   border-radius: 4px;
+  .choices__heading {
+    font-size: 14px;
+    color: $black;
+  }
   .choices__inner {
     border: none;
   }

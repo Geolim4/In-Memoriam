@@ -29,6 +29,7 @@ export abstract class AppCore extends AppAbstract {
   protected infoWindows: google.maps.InfoWindow[];
   protected markerCluster: MarkerClusterer;
   protected markerHashIndex: {};
+  protected cachedCountyCodes: {};
   protected readonly formElement: HTMLFormElement;
   protected readonly customChoicesInstances: { [name: string]: any };
   protected readonly eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
@@ -42,6 +43,7 @@ export abstract class AppCore extends AppAbstract {
     this.infoWindows = [];
     this.markerCluster = null;
     this.markerHashIndex = {};
+    this.cachedCountyCodes = null;
     this.formElement = <HTMLFormElement>document.getElementById('form-filters');
 
     this.setConfigFactory(new ConfigFactory((): void => this.run()));
@@ -52,6 +54,7 @@ export abstract class AppCore extends AppAbstract {
   public abstract loadGlossary(): void;
   public abstract reloadMarkers(map: google.maps.Map, fromAnchor: boolean): void;
   public abstract getFormFiltersKeyed(): { [name: string]: { [name: string]: string } };
+  public abstract getCountyByCode(countyCode: string, wrappedCounty: boolean, excludedCountyCodes: string[]): string;
 
   protected bindMarkers(map: google.maps.Map, filters: Filters): void {
     const stopwatchStart = window.performance.now();
@@ -140,7 +143,7 @@ export abstract class AppCore extends AppAbstract {
             if (typeof infoWindowContent === 'object') {
               Events.addEventHandler(infoWindowContent.querySelector('a.error-link'), ['click', 'touchstart'], (e) => {
                 e.preventDefault();
-                const reference = `${death.section}, ${death.location} le ${death.day}/${death.month}/${death.year}`;
+                const reference = `${death.section}, ${death.location} ${this.getCountyByCode(death.county, true, [])} le ${death.day}/${death.month}/${death.year}`;
                 this.getModal().modalInfo(
                   'Vous avez trouvé une erreur ?',
                   new ModalContentTemplate('infowindow-error', { reference }),
@@ -619,7 +622,8 @@ export abstract class AppCore extends AppAbstract {
             removeItems: true,
             resetScrollPosition: false,
             searchEnabled: false,
-            shouldSort: false,
+            shouldSort: selector.dataset.autosort === 'true',
+            shouldSortItems: selector.dataset.autosort === 'true',
           });
         }
 
@@ -635,13 +639,25 @@ export abstract class AppCore extends AppAbstract {
     const appSettingsElements = document.querySelectorAll('[data-app-settings]') as NodeListOf<HTMLElement>;
 
     for (const [filterName, filterValuesArray] of Object.entries(this.getFormFilters())) {
+      const optGroups = {} as { [name: string] : HTMLOptGroupElement };
       for (const filterValueObject of filterValuesArray) {
         const selector = this.formElement.querySelector(`select[name="${filterName}"]`);
-        const option = document.createElement('option');
-        option.value = filterValueObject.value;
-        option.text = filterValueObject.label;
-        option.selected = filters[filterName].split(',').includes(filterValueObject.value);
-        selector.appendChild(option);
+        if (selector !== null) {
+          const option = document.createElement('option');
+          option.value = filterValueObject.value;
+          option.text = filterValueObject.label;
+          option.selected = filters[filterName].split(',').includes(filterValueObject.value);
+          if (filterValueObject.group !== null && filterValueObject.group.trim() !== '') {
+            if (typeof optGroups[filterValueObject.group] === 'undefined') {
+              optGroups[filterValueObject.group] = document.createElement('optgroup');
+              optGroups[filterValueObject.group].label = filterValueObject.group;
+              selector.appendChild(optGroups[filterValueObject.group]);
+            }
+            optGroups[filterValueObject.group].appendChild(option);
+          } else {
+            selector.appendChild(option);
+          }
+        }
       }
     }
 

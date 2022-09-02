@@ -17,7 +17,8 @@
       "peers": [],
       "text": "Un policier réserviste décède d'un malaise cardiaque pendant une patrouille pédestre en centre ville de Bordeaux.",
       "section": "CSP Bordeaux",
-      "location": "Bordeaux (Gironde)",
+      "location": "Bordeaux",
+      "county": "33",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -50,6 +51,7 @@
       "text": "Un gendarme affecté au ministère des armées aurait mit fin à ses jours.\nTrès peu d'informations sur ce décès car la source est confidentielle.",
       "section": "",
       "location": "Paris 15e",
+      "county": "75",
       "origin": "interieur",
       "gps": {
         "accurate": false,
@@ -81,7 +83,8 @@
       "peers": [],
       "text": "Un pompier du SDIS 02 décède d'un malaise cardiaque pendant pendant sa garde.\nIl était marié et père de deux enfants.",
       "section": "SDIS 02",
-      "location": "Laon (Aisne)",
+      "location": "Laon",
+      "county": "02",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -125,7 +128,8 @@
       "peers": [],
       "text": "Un policier réserviste de la circonscription de Besançon a mis fin à ses jours.\nRetraité de la police nationale il était marié et père de deux filles.",
       "section": "CSP Besançon",
-      "location": "Besançon (Doubs)",
+      "location": "Besançon",
+      "county": "25",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -175,7 +179,8 @@
       "peers": [],
       "text": "Un policier de la CRS 43 a mis fin à ses jours à son domicile près de Perpignan.\nIl était père de deux petites filles.",
       "section": "CRS 43",
-      "location": "Châlon sur Saône (Saône-et-Loire)",
+      "location": "Châlon sur Saône",
+      "county": "71",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -207,7 +212,8 @@
       "peers": [],
       "text": "Un gendarme de la brigade de Fumay a mis fin à ses jours avec son arme de service.\nIl était marié et père de plusieurs enfants.",
       "section": "BP Fumay",
-      "location": "Fumay (Ardennes)",
+      "location": "Fumay",
+      "county": "08",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -257,7 +263,8 @@
       "peers": [],
       "text": "Un sapeur-pompier professionnel de Rizzanese est décédé des suites d’un accident de la route en rentrant chez lui après son service.\nIl était marié et papa de deux jeunes enfants.",
       "section": "SDIS 2A",
-      "location": "Rizzanese (Corse du Sud)",
+      "location": "Rizzanese",
+      "county": "2A",
       "origin": "domtom",
       "gps": {
         "accurate": true,
@@ -302,6 +309,7 @@
       "text": "Un jeune policier de la Compagnie de Garde de l'Élysée a mis fins à ses jours à son domicile du Kremlin-Bicêtre avec son arme de service.",
       "section": "CGE - DOPC",
       "location": "Paris 8e",
+      "county": "75",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -339,7 +347,8 @@
       "peers": [],
       "text": "Un jeune policière de la CSP de Lille a mis fins à ses jours à son domicile avec son arme de service.",
       "section": "CSP Lille",
-      "location": "Lille (Nord)",
+      "location": "Lille",
+      "county": "59",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -378,6 +387,7 @@
       "text": "Un policier de la BRIF a mis fins à ses jours à son domicile avec son arme de service à son domicile à Noisiel (Seine-et-Marne).\nIl avait affecté à la BRIF 2 semaines auparavant.",
       "section": "BRIF - DRPJ",
       "location": "Paris 17e",
+      "county": "75",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -415,7 +425,8 @@
       "peers": [],
       "text": "Un gendarme du PSIG de Dardilly décède d'un malaise cardiaque en service.\nGendarme depuis plus de 30ans, il était marié et père d'une jeune fille.",
       "section": "PSIG Dardilly",
-      "location": "Dardilly (Rhône)",
+      "location": "Dardilly",
+      "county": "69",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -465,7 +476,8 @@
       "peers": [],
       "text": "Un policier de la circonscription de Lille (Ciat Madeleine) a mis fins à ses jours avec son arme de service.\nIl était père de deux enfants.",
       "section": "CSP Lille",
-      "location": "Lille (Nord)",
+      "location": "Lille",
+      "county": "59",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -503,7 +515,8 @@
       "peers": [],
       "text": "Un policier de la circonscription de Strasbourg a mis fins à ses jours à son domicile avec une arme de chasse.\nIl était marié et père de deux jeunes filles.",
       "section": "BST - CSP Strasbourg",
-      "location": "Strasbourg (Bas-Rhin)",
+      "location": "Strasbourg",
+      "county": "67",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -553,7 +566,8 @@
       "peers": [],
       "text": "Un policier de la CRS 25 a mis fins à ses jours à hauteur d’un passage à niveau sur la commune de Saint-Vincent-de-Paul.",
       "section": "CRS 25",
-      "location": "Saint-Vincent-de-Paul (Landes)",
+      "location": "Saint-Vincent-de-Paul",
+      "county": "40",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -597,7 +611,8 @@
       "peers": [],
       "text": "Un militaire du 54e RA a été tué par une attaque terroriste au mortier sur le camp français de Gao.",
       "section": "54e RA",
-      "location": "Gao (Mali)",
+      "location": "Gao",
+      "county": "ML",
       "origin": "opex",
       "gps": {
         "accurate": false,
@@ -660,6 +675,7 @@
       "text": "Un jeune policier de la BST Nord de Marseille a mis fin à ses jours avec son arme de service.\nMajor de promo de la 259e promotion de Gardiens de la Paix, il était également un champion de MMA.",
       "section": "BST 15, Division Nord",
       "location": "Marseille",
+      "county": "13",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -709,7 +725,8 @@
       "peers": [],
       "text": "Un agent administratif du commissariat de Rennes a mis fins à ses jours en se défenestrant du 7eme étage.",
       "section": "BDSIT 35",
-      "location": "Rennes (Ille-et-Vilaine)",
+      "location": "Rennes",
+      "county": "35",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -759,7 +776,8 @@
       "peers": [],
       "text": "Un policier du commissariat d'Herblay a mis fin à ses jours avec son arme de service à son domicile situé à Ermont.\nIl était marié et père de famille.",
       "section": "CSP Herblay",
-      "location": "Herblay (Val-d'Oise)",
+      "location": "Herblay",
+      "county": "95",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -797,7 +815,8 @@
       "peers": [],
       "text": "Un policier de la police aux frontières de Roissy a mis fin à ses jours avec son arme de service à son domicile situé à Saint-Martin-Longueau.",
       "section": "PAF Roissy",
-      "location": "Roissy (Val-d'Oise)",
+      "location": "Roissy",
+      "county": "95",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -841,7 +860,8 @@
       "peers": [],
       "text": "Un militaire du 92e RI est décédé d'un malaise cardiaque pendant une séance de sport.",
       "section": "92e RI",
-      "location": "Clermont-Ferrand (Puy-de-Dôme)",
+      "location": "Clermont-Ferrand",
+      "county": "63",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -873,7 +893,8 @@
       "peers": [],
       "text": "Un policier de la BAC de Villepinte a mis fin à ses jours avec son arme de service à son domicile situé en Seine-et-Marne.\nIl était papa d'une petite fille.",
       "section": "BAC - CSP Villepinte",
-      "location": "Villepinte (Seine-Saint-Denis)",
+      "location": "Villepinte",
+      "county": "93",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -917,7 +938,8 @@
       "peers": [],
       "text": "Un surveillant-officier de la maison centrale de Poissy a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Maison Centrale",
-      "location": "Poissy (Yvelines)",
+      "location": "Poissy",
+      "county": "78",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -955,7 +977,8 @@
       "peers": [],
       "text": "Un surveillant-officier du centre pénitentiaire d'Orléans-Saran a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Centre pénitentiaire",
-      "location": "Orléans-Saran (Loiret)",
+      "location": "Orléans-Saran",
+      "county": "45",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -993,7 +1016,8 @@
       "peers": [],
       "text": "Un surveillant de la maison d'arrêt de Chambéry a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Maison d’Arrêt",
-      "location": "Chambéry (Savoie)",
+      "location": "Chambéry",
+      "county": "73",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1032,6 +1056,7 @@
       "text": "Une policière de l'unité de garde de l'UMJ de Paris a mis fin à ses jours avec son arme de service.",
       "section": "Unité de garde UMJ (DSPAP)",
       "location": "Paris 4e",
+      "county": "75",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1069,7 +1094,8 @@
       "peers": [],
       "text": "Un policier du CRA de Oissel-Rouen a mis fin à ses jours avec une arme de chasse au domicile de ses parents au Grand-Quevilly.",
       "section": "CRA Oissel",
-      "location": "Oissel (Seine-Maritime)",
+      "location": "Oissel",
+      "county": "76",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1113,7 +1139,8 @@
       "peers": [],
       "text": "Un surveillant du centre pénitentiaire de FAA’A a mis fin à ses jours.\nIl était marié et père de trois enfants.",
       "section": "Centre Pénitentiaire",
-      "location": "FAA’A (Polynésie Française)",
+      "location": "FAA’A",
+      "county": "987",
       "origin": "domtom",
       "gps": {
         "accurate": true,
@@ -1145,7 +1172,8 @@
       "peers": [],
       "text": "Un légionnaire a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Légion étrangère",
-      "location": "Puyloubier (Bouches-du-Rhône)",
+      "location": "Puyloubier",
+      "county": "13",
       "origin": "interieur",
       "gps": {
         "accurate": false,
@@ -1178,6 +1206,7 @@
       "text": "Un policier de l'UMIP a mis fin à ses jours avec son arme de service dans son véhicule personnel retrouvé à Noisy-le-Grand (Seine-Saint-Denis).",
       "section": "UMIP - DOPC",
       "location": "Paris 13e",
+      "county": "75",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1215,7 +1244,8 @@
       "peers": [],
       "text": "Un policier du CRA de Palaiseau a mis fin à ses jours en sautant du viaduc de Millau (Aveyron).",
       "section": "CRA",
-      "location": "Palaiseau (Essonne)",
+      "location": "Palaiseau",
+      "county": "91",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1259,7 +1289,8 @@
       "peers": [],
       "text": "Un gendarme de la brigade Signy-le-Petit a mis fin à ses jours à son domicile situé au sein de la brigade.\nIl était père de deux adolescents.",
       "section": "BP Signy-le-Petit",
-      "location": "Signy-le-Petit (Ardennes)",
+      "location": "Signy-le-Petit",
+      "county": "08",
       "origin": "interieur",
       "gps": {
         "accurate": false,
@@ -1303,7 +1334,8 @@
       "peers": [],
       "text": "Un policier de la circonscription de Draguignan a mis fin à ses jours à son domicile.\nIl était marié et père de trois enfants.",
       "section": "BSU - CSP Draguignan",
-      "location": "Draguignan (Var)",
+      "location": "Draguignan",
+      "county": "83",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1353,7 +1385,8 @@
       "peers": [],
       "text": "Un gendarme de l'EDSR 62 a mis fin à ses jours avec son arme de service à son domicile.\nIl était marié et père d'une adolescente.",
       "section": "EDSR 62",
-      "location": "Arras (Pas-de-Calais)",
+      "location": "Arras",
+      "county": "62",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1397,7 +1430,8 @@
       "peers": [],
       "text": "Un surveillant de la maison d’arrêt de Sarreguemines a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Maison d'arrêt",
-      "location": "Sarreguemines (Moselle)",
+      "location": "Sarreguemines",
+      "county": "54",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1429,7 +1463,8 @@
       "peers": [],
       "text": "Un policier du SPAFA de l'aéroport de l’aéroport de Lyon Saint-Exupéry (Rhône) a mis fin ses jours après avoir incendié sa maison.",
       "section": "SPAFA - DZPAF",
-      "location": "Lyon Saint-Exupéry (Rhône)",
+      "location": "Lyon Saint-Exupéry",
+      "county": "69",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1480,6 +1515,7 @@
       "text": "Un policier du SDLCODF a mis fin ses jours alors qu'il était proche de son départ à la retraite.",
       "section": "SDLCODF - DCPJ",
       "location": "Nanterre (Hauts-de-Seine)",
+      "county": "92",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1511,7 +1547,8 @@
       "peers": [],
       "text": "Une policière du service d'ordre public d'Evry a mis fin à ses jours avec son arme de service.\nElle était mère de deux adolescents.",
       "section": "Service d'Ordre Public",
-      "location": "Evry (Essonne)",
+      "location": "Evry",
+      "county": "91",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1549,7 +1586,8 @@
       "peers": [],
       "text": "Une officier de gendarmerie du groupement de gendarmerie de l’Hérault s'est immolée par le feu.\nElle était maman d'un jeune garçon.",
       "section": "Section RH - CSTAG (GGD 34)",
-      "location": "Montpellier (Hérault)",
+      "location": "Montpellier",
+      "county": "34",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1599,7 +1637,8 @@
       "peers": [],
       "text": "Un gendarme de la BP de Saint-Martin-de-Valgalgues a mis fin à ses jours avec son arme de service.\nIl était père de deux jeunes enfants.",
       "section": "Brigade de Proximité",
-      "location": "Saint-Martin-de-Valgalgues (Gard)",
+      "location": "Saint-Martin-de-Valgalgues",
+      "county": "30",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1649,7 +1688,8 @@
       "peers": [],
       "text": "Un surveillant du centre de détention de Châteaudun a mis fin à ses jours par pendaison.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Centre de Détention",
-      "location": "Châteaudun (Eure-et-Loir)",
+      "location": "Châteaudun",
+      "county": "28",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1681,7 +1721,8 @@
       "peers": [],
       "text": "Un gendarme a mis fin à ses jours avec son arme de service au sein de la brigade de Gien.\nAffecté à l'antenne du renseignement territorial, il était père de trois enfants.",
       "section": "BTA Gien",
-      "location": "Gien (Loiret)",
+      "location": "Gien",
+      "county": "45",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1731,7 +1772,8 @@
       "peers": [],
       "text": "Un policier de la DDSP de l’Essonne a été retrouvé pendu à son domicile.\nIl était père de deux enfants.",
       "section": "DDSP 91",
-      "location": "Evry (Essonne)",
+      "location": "Evry",
+      "county": "91",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1769,7 +1811,8 @@
       "peers": [],
       "text": "Un policier municipal a mis fin à ses jours avec son arme de service.\nIl était marié et père d'un enfant.",
       "section": "Poste de police",
-      "location": "Peille (Alpes-Maritimes)",
+      "location": "Peille",
+      "county": "06",
       "origin": "interieur",
       "gps": {
         "accurate": false,
@@ -1805,9 +1848,10 @@
       "keywords": "Thierry",
       "house": "pn",
       "peers": [],
-      "text": "Un policier de la CRS 33  a mis fin à ses jours avec son arme de service dans sa chambre de casernement.\nIl était actuellement en déplacement à Ajaccio (Corse) au moment des faits.",
+      "text": "Un policier de la CRS 33 a mis fin à ses jours avec son arme de service dans sa chambre de casernement.\nIl était actuellement en déplacement à Ajaccio (Corse) au moment des faits.",
       "section": "CRS 33",
-      "location": "Reims (Marne)",
+      "location": "Reims",
+      "county": "51",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1845,7 +1889,8 @@
       "peers": [],
       "text": "Un policier municipal a mis fin à ses jours avec son arme de service.\nIl était marié et père de deux enfants.",
       "section": "Poste de police",
-      "location": "Monts (Indre-et-Loire)",
+      "location": "Monts",
+      "county": "37",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1889,7 +1934,8 @@
       "peers": [],
       "text": "Un gendarme a mis fin à ses jours avec son arme administrative.\nAffecté à la BP de Limoux, il était père de trois enfants.",
       "section": "BP Limoux",
-      "location": "Limoux (Aude)",
+      "location": "Limoux",
+      "county": "11",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1939,7 +1985,8 @@
       "peers": [],
       "text": "Un gendarme de la BMo de Saint-Girons est décédé en service d'un accident de la route.\nGendarme depuis plus de 17 ans, il était marié et père de deux enfants.",
       "section": "BMo",
-      "location": "Saint-Girons (Ariège)",
+      "location": "Saint-Girons",
+      "county": "09",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -1992,7 +2039,8 @@
       "peers": [],
       "text": "Un policier de la BRI de Toulouse est décédé d'un malaise cardiaque au moment de partir en intervention.\nIl était marié et père de deux enfants.",
       "section": "BRI 31",
-      "location": "Toulouse (Haute-Garonne)",
+      "location": "Toulouse",
+      "county": "31",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2030,7 +2078,8 @@
       "peers": [],
       "text": "Un policier du CRA de Vincennes a mis fin à ses jours par pendaison.\nPeu d'informations disponibles sur ce suicide.",
       "section": "CRA",
-      "location": "Vincennes (Val-de-Marne)",
+      "location": "Vincennes",
+      "county": "94",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2074,7 +2123,8 @@
       "peers": [],
       "text": "Un policier du commissariat de Hazebrouck a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "CSP Hazebrouck",
-      "location": "Hazebrouck (Nord)",
+      "location": "Hazebrouck",
+      "county": "59",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2106,7 +2156,8 @@
       "peers": [],
       "text": "Un policier de la BAC de Livry-Gargan a mis fin à ses jours avec son arme de service.\nIl était marié et père de trois petites filles.",
       "section": "BAC",
-      "location": "Livry-Gargan (Seine-Saint-Denis)",
+      "location": "Livry-Gargan",
+      "county": "93",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2144,7 +2195,8 @@
       "peers": [],
       "text": "Un policier de la DIDPAF de Perpignan a mis fin à ses jours avec son arme de service.\nCe FTSI était marié et père de trois enfants.",
       "section": "DIDPAF",
-      "location": "Perpignan (Pyrénées-Orientales)",
+      "location": "Perpignan",
+      "county": "66",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2183,6 +2235,7 @@
       "text": "Un gendarme affecté à la CSPR a mis fin à ses jours avec son arme de service au sein de l'Elysee.\nIl était marié et père d'un enfant.",
       "section": "CSPR - Garde Républicaine",
       "location": "Paris",
+      "county": "75",
       "origin": "interieur",
       "gps": {
         "accurate": false,
@@ -2214,7 +2267,8 @@
       "peers": [],
       "text": "Une policière de la PAF de Roissy a mis fin à ses jours avec son arme de service.\nResponsable syndicale locale d'Alliance, elle était mère de deux enfants.",
       "section": "PAF Roissy",
-      "location": "Roissy (Val-d'Oise)",
+      "location": "Roissy",
+      "county": "95",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2246,7 +2300,8 @@
       "peers": [],
       "text": "Une gendarme de la BP de Montaigu-Vendée a mis fin à ses jours avec son arme de service.",
       "section": "BP",
-      "location": "Montaigu-Vendée (Vendée)",
+      "location": "Montaigu-Vendée",
+      "county": "85",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2302,7 +2357,8 @@
       "peers": [],
       "text": "Une gendarme de l'EDSR de Versailles a mis fin à ses jours avec son arme de service.\nIl était marié et père de deux filles.",
       "section": "EDSR 78",
-      "location": "Versailles (Yvelines)",
+      "location": "Versailles",
+      "county": "78",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2352,7 +2408,8 @@
       "peers": [],
       "text": "Un policier du CIC de la circonscription de Bordeaux affecté au CIC nuit a mis fin à ses jours avec son arme de service.\nIl était marié et père de trois enfants.",
       "section": "CSP Bordeaux",
-      "location": "Bordeaux (Gironde)",
+      "location": "Bordeaux",
+      "county": "33",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2396,7 +2453,8 @@
       "peers": [],
       "text": "Un gendarme de la BP d'Épouville a mis fin à ses jours avec son arme de service.\nIl était marié et père de trois enfants.",
       "section": "BP Épouville",
-      "location": "Épouville (Seine-Maritime)",
+      "location": "Épouville",
+      "county": "76",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2446,7 +2504,8 @@
       "peers": [],
       "text": "Un pompier du SDIS 974 est décédé des suites d’un malaise survenu dans l’exercice de ses fonctions quelques jours auparavant.\nPompier depuis plus de 37ans, il était coordinateur des courses du Grand Raid.",
       "section": "SDIS 974",
-      "location": "Saint-Denis (Réunion)",
+      "location": "Saint-Denis",
+      "county": "974",
       "origin": "domtom",
       "gps": {
         "accurate": true,
@@ -2502,7 +2561,8 @@
       "peers": [],
       "text": "Un gendarme du Groupement de Gendarmerie Départementale du Val d'Oise a mis fin à ses jours avec son arme de service.\nIl était marié et père de deux jeunes enfants dont un bébé.",
       "section": "GGD 95",
-      "location": "Pontoise (Val d'Oise)",
+      "location": "Pontoise",
+      "county": "95",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2540,7 +2600,8 @@
       "peers": [],
       "text": "Un gendarme réserviste du Doubs décède d'un malaise cardiaque dans sa caserne au retour d'une mission.\nMilitaire hautement décoré, il était marié, père de six enfants et sept fois grand-père.",
       "section": "CRT 25/4",
-      "location": "Besançon (Doubs)",
+      "location": "Besançon",
+      "county": "25",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2578,7 +2639,8 @@
       "peers": [],
       "text": "Un gendarme mobile de l'EGM 32/3 décède d'une embolie pulmonaire lors d'un détachement en Guyane.\nIl était marié et père de trois enfants.",
       "section": "EGM 32/3",
-      "location": "Luçon (Doubs)",
+      "location": "Luçon",
+      "county": "25",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2628,7 +2690,8 @@
       "peers": [],
       "text": "Un sapeur-pompier professionnel de La Couronne est décédé des suites d’un accident de la route au retour d'une intervention.\nIl était papa d'un jeune enfant.",
       "section": "SDIS 16",
-      "location": "La Couronne (Charente)",
+      "location": "La Couronne",
+      "county": "16",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2672,7 +2735,8 @@
       "peers": [],
       "text": "Un policier de la circonscription de Haguenau affecté en voie publique a mis fin à ses jours avec son arme de service à sa prise service le matin.\nIl était marié et père de trois enfants.",
       "section": "CSP Haguenau",
-      "location": "Haguenau (Bas-Rhin)",
+      "location": "Haguenau",
+      "county": "67",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2729,6 +2793,7 @@
       "text": "Un policier de la BAC du 13e arrondissement de Paris a mis fin à ses jours avec son arme de service à sa prise service le matin.\nIl était marié et père d'un jeune enfant.",
       "section": "BAC jour (DSPAP)",
       "location": "Paris 13e",
+      "county": "75",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2778,7 +2843,8 @@
       "peers": [],
       "text": "Un policier de la circonscription des Sables-d'Olonne a mis fin à ses jours avec son arme de service.\nAffecté dans un service de nuit, il était père de deux enfants.",
       "section": "CSP Sables-d'Olonne",
-      "location": "Sables-d'Olonne (Vendée)",
+      "location": "Sables-d'Olonne",
+      "county": "85",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2816,7 +2882,8 @@
       "peers": [],
       "text": "Une policière a été tué par son compagnon ex-policier à la retraite avant de se retourner son arme de chasse contre lui.",
       "section": "CSP Le Mans",
-      "location": "Le Mans (Sarthe)",
+      "location": "Le Mans",
+      "county": "72",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -2860,7 +2927,8 @@
       "peers": [],
       "text": "Un militaire du 16e BCP a été tué volontairement par un autre militaire tôt le matin.\nSelon le parquet « Les circonstances et le mobile restent à préciser ».",
       "section": "16e BCP (2e BB)",
-      "location": "Bitche (Moselle)",
+      "location": "Bitche",
+      "county": "57",
       "origin": "interieur",
       "gps": {
         "accurate": false,
@@ -2910,7 +2978,8 @@
       "peers": [],
       "text": "Un officier du GIGN, chef de la section 3, est décédé dans lors d'un stage de vol en paramoteur (ULM).\nSelon le parquet « les circonstances de l'accident restent à préciser ».\nIl était marié et père de trois jeune enfants dont un bébé.",
       "section": "Section 3 - GIGN",
-      "location": "Goussainville (Eure-et-Loir)",
+      "location": "Goussainville",
+      "county": "28",
       "origin": "interieur",
       "gps": {
         "accurate": false,
@@ -2969,7 +3038,8 @@
       "peers": [],
       "text": "Un policier de la CRS 6 en déplacement à Montauban est décédé dans un accident de la route à vélo avant de prendre son service.",
       "section": "CRS 6",
-      "location": "Montauban (Tarn-et-Garonne)",
+      "location": "Montauban",
+      "county": "82",
       "origin": "interieur",
       "gps": {
         "accurate": false,
@@ -3013,7 +3083,8 @@
       "peers": [],
       "text": "Un policier du commissariat de Tourcoing est décédé en service d'un malaise cardiaque.\nIl était marié et père de trois enfants.",
       "section": "CSP Tourcoing",
-      "location": "Tourcoing (Nord)",
+      "location": "Tourcoing",
+      "county": "59",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -3051,7 +3122,8 @@
       "peers": [],
       "text": "Un gendarme de la BTA des Achards a mis fin à ses jours avec son arme de service.\nIl était marié père de deux enfants.",
       "section": "BTA Achards",
-      "location": "Achards (Vendée)",
+      "location": "Achards",
+      "county": "85",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -3083,7 +3155,8 @@
       "peers": [],
       "text": "Un militaire de la Marine Nationale stationné au Fort de Bicêtre a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Marine Nationale - Fort de Bicêtre",
-      "location": "Kremlin-Bicêtre (Val-de-Marne)",
+      "location": "Kremlin-Bicêtre",
+      "county": "94",
       "origin": "interieur",
       "gps": {
         "accurate": false,
@@ -3121,7 +3194,8 @@
       "peers": [],
       "text": "Un pompier du CIS de Tain l’Hermitage (SDIS 26) est décédé des suites d’un malaise survenu dans l’exercice de ses fonctions quelques jours auparavant.\nPompier volontaire depuis plus de 24ans, il était marié et père de deux enfants.",
       "section": "SDIS 26",
-      "location": "Tain l’Hermitage (Drôme)",
+      "location": "Tain l’Hermitage",
+      "county": "26",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -3180,7 +3254,8 @@
       "peers": [],
       "text": "Un militaire du 3e RAMa a mis fin à ses jours.\nTrès peu d'informations sur ce décès car la source est confidentielle.",
       "section": "3e RAMa (6e BLB)",
-      "location": "Montceau-les-Mines (Saône-et-Loire)",
+      "location": "Montceau-les-Mines",
+      "county": "71",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -3212,7 +3287,8 @@
       "peers": [],
       "text": "Un policier décède d'un arrêt cardiaque pendant son service au commissariat.\nIl était marié et père de trois enfants.",
       "section": "CSP La Rochelle",
-      "location": "La Rochelle (Charente-Maritime)",
+      "location": "La Rochelle",
+      "county": "17",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -3244,7 +3320,8 @@
       "peers": [],
       "text": "Un policier chef de poste de nuit du commissariat de Savigny-le-Temple a mis fin à ses jours avec son arme de service.",
       "section": "CSP Savigny-le-Temple",
-      "location": "Savigny-le-Temple (Seine-et-Marne)",
+      "location": "Savigny-le-Temple",
+      "county": "77",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -3300,7 +3377,8 @@
       "peers": [],
       "text": "Un pompier décède d'un arrêt cardiaque pendant une intervention sur un feu de véhicules.\nChef du Centre de secours de Saint Lyphard, il était marié et père de famille.",
       "section": "SDIS 44",
-      "location": "Saint Lyphard (Loire-Atlantique)",
+      "location": "Saint Lyphard",
+      "county": "44",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -3350,7 +3428,8 @@
       "peers": [],
       "text": "Un policier de la circonscription de Poitiers a mis fin à ses jours avec son arme de service.\nPère de famille, il était sur le point d'être muté à Gap.",
       "section": "CSP Poitiers",
-      "location": "Poitiers (Vienne)",
+      "location": "Poitiers",
+      "county": "86",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -3388,7 +3467,8 @@
       "peers": [],
       "text": "Un jeune militaire a mis fin à ses jours retranché dans un hôtel de Montceau-les-Mines.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Régiment inconnu",
-      "location": "Montceau-les-Mines (Saône-et-Loire)",
+      "location": "Montceau-les-Mines",
+      "county": "71",
       "origin": "interieur",
       "gps": {
         "accurate": true,
@@ -3413,6 +3493,63 @@
         {
           "url": "https://www.lejsl.com/faits-divers-justice/2022/08/25/suicide-d-un-jeune-militaire-il-etait-fait-pour-porter-secours",
           "title": "Le JSL",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "08",
+      "day": "31",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un jeune policier du commissariat d'Argenteuil a mis fin à ses jours à son domicile avec son arme administrative.",
+      "section": "CSP Argenteuil",
+      "location": "Argenteuil",
+      "county": "95",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.94518494202661,
+        "lng": 2.2555791429832697
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNat95/status/1564960951727702022",
+          "title": "@PoliceNat95",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/val-doise-un-policier-du-commissariat-dargenteuil-sest-suicide.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/val-d-oise-95/val-doise-un-policier-du-commissariat-dargenteuil-retrouve-mort-a-son-domicile-31-08-2022-57GFWC6ARJHUNIYEPNNFEHJJD4.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/argenteuil_95018/val-d-oise-un-policier-du-commissariat-d-argenteuil-se-suicide-a-son-domicile_53481491.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.cnews.fr/faits-divers/2022-08-31/val-doise-un-policier-de-29-ans-se-suicide-avec-son-arme-de-service-son",
+          "title": "Cnews",
           "paywall": false,
           "trustful": true
         }

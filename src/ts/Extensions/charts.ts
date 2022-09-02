@@ -3,6 +3,8 @@ import { FormFilters } from '../models/Filters/formFilters.model';
 import * as Highcharts from 'highcharts';
 import { Definitions } from '../models';
 import { DeathPeerList } from '../models/Death/deathPeerList.model';
+import { App } from '../app';
+import unique = require('array-unique');
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -21,6 +23,84 @@ export class Charts {
   public buildChartPerHouse(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definitions, year: string): void {
     this.buildBarChartPerCriteria(markers, filters, definitions, 'house', year);
     this.buildPieChartPerCriteria(markers, filters, definitions, 'house', year);
+  }
+
+  public buildChartPerCounty(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definitions, year: string): void {
+    this.buildBarChartPerCounty(markers, filters, definitions, 'house', year);
+    this.buildBarChartPerCounty(markers, filters, definitions, 'cause', year);
+  }
+
+  protected buildBarChartPerCounty(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definitions, criteria: string, year: string): void {
+    const series = [];
+    const peersList = this.getPeersList(criteria, markers, 'county');
+    const counties = App.getInstance().getFormFiltersKeyed('value', 'group').county;
+    const countyGroups = unique(Object.values(counties));
+
+    for (const criteriaFilter of filters[criteria]) {
+      const data = Array(countyGroups.length).fill(0);
+
+      for (const marker of markers) {
+        if (marker.death[criteria] === criteriaFilter.value) {
+          data[countyGroups.indexOf(counties[marker.death.county])] += marker.death.count;
+        }
+      }
+      /**
+       * Join the peers, if applicable
+       */
+      if (peersList[criteriaFilter.value]) {
+        for (const peerCounty in peersList[criteriaFilter.value]) {
+          data[countyGroups.indexOf(counties[peerCounty])] += peersList[criteriaFilter.value][peerCounty];
+        }
+      }
+      series.push({ data , name: criteriaFilter.label, color: this.getFilterCriteriaColor(criteria, criteriaFilter.value, filters) });
+    }
+
+    Highcharts.chart(`chart-container-bar-county-${criteria}`, {
+      series,
+      chart: {
+        backgroundColor: 'transparent',
+        type: 'column',
+      },
+      plotOptions: {
+        column: {
+          borderWidth: 0,
+          pointPadding: 0.2,
+        },
+        series: {
+          dataLabels: {
+            enabled: true,
+            formatter: function (): string|number {
+              return (this.y !== 0) ? this.y : '';
+            } as Highcharts.DataLabelsFormatterCallbackFunction,
+          },
+        },
+      },
+      subtitle: {
+        text: 'Données contextualisées par les filtres appliqués',
+      },
+      title: {
+        text: `Décès geographiques par ${definitions[criteria]['#name_plural']} sur l'année ${year}`,
+      },
+      tooltip: {
+        backgroundColor: 'rgba(226,226,226,0.98)',
+        footerFormat: '</table>',
+        headerFormat: '<div style="font-size:15px; font-weight: bold;margin: 0 0 10px 0">Mois: {point.key}</div><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}:  </td>' +
+            '<td style="padding: 2px 10px 2px 20px"><b>{point.y} décès</b></td></tr>',
+        shared: true,
+        useHTML: true,
+      },
+      xAxis: {
+        categories: countyGroups,
+        crosshair: true,
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: 'Décès',
+        },
+      },
+    });
   }
 
   protected buildBarChartPerCriteria(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definitions, criteria: string, year: string): void {
@@ -45,7 +125,7 @@ export class Charts {
       series.push({ data , name: criteriaFilter.label, color: this.getFilterCriteriaColor(criteria, criteriaFilter.value, filters) });
     }
 
-    Highcharts.chart(`chart-container-bar-${criteria}`, {
+    Highcharts.chart(`chart-container-bar-criteria-${criteria}`, {
       series,
       chart: {
         backgroundColor: 'transparent',
@@ -116,7 +196,7 @@ export class Charts {
         seriesData.push([counter, criteriaFilter.label, this.getFilterCriteriaColor(criteria, criteriaFilter.value, filters)]);
       }
     }
-    Highcharts.chart(`chart-container-pie-${criteria}`, {
+    Highcharts.chart(`chart-container-pie-criteria-${criteria}`, {
       chart: {
         backgroundColor: 'transparent',
       },
@@ -148,7 +228,7 @@ export class Charts {
     });
   }
 
-  protected getPeersList(criteria: string, markers: ExtendedGoogleMapsMarker[]): DeathPeerList {
+  protected getPeersList(criteria: string, markers: ExtendedGoogleMapsMarker[], indexKey: string = 'month'): DeathPeerList {
     const peersList = <DeathPeerList> {};
 
     for (const marker of markers) {
@@ -158,10 +238,10 @@ export class Charts {
             if (typeof peersList[peer[criteria]] === 'undefined') {
               peersList[peer[criteria]] = {};
             }
-            if (typeof peersList[peer[criteria]][marker.death.month] === 'undefined') {
-              peersList[peer[criteria]][marker.death.month] = 0;
+            if (typeof peersList[peer[criteria]][marker.death[indexKey]] === 'undefined') {
+              peersList[peer[criteria]][marker.death[indexKey]] = 0;
             }
-            peersList[peer[criteria]][marker.death.month] += peer.count;
+            peersList[peer[criteria]][marker.death[indexKey]] += peer.count;
 
             /**
              * If the criteria does not exist in peer (e.g: "cause" criteria)
@@ -171,10 +251,10 @@ export class Charts {
             if (typeof peersList[marker.death[criteria]] === 'undefined') {
               peersList[marker.death[criteria]] = {};
             }
-            if (typeof peersList[marker.death[criteria]][marker.death.month] === 'undefined') {
-              peersList[marker.death[criteria]][marker.death.month] = 0;
+            if (typeof peersList[marker.death[criteria]][marker.death[indexKey]] === 'undefined') {
+              peersList[marker.death[criteria]][marker.death[indexKey]] = 0;
             }
-            peersList[marker.death[criteria]][marker.death.month] += peer.count;
+            peersList[marker.death[criteria]][marker.death[indexKey]] += peer.count;
           }
         }
       }

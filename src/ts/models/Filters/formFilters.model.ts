@@ -10,6 +10,7 @@ export interface FormFilters {
       value: string;
       label: string;
       color: string;
+      group: string|null;
     }
   ];
 }
