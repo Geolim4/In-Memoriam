@@ -3554,6 +3554,108 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "08",
+      "day": "31",
+      "keywords": "",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier du CIS de Nancy-Tomblaine a mis fin à ses jours en sautant de la grande échelle.\nIl était père d'une jeune enfant.",
+      "section": "CIS Nancy-Tomblaine - SDIS 54",
+      "location": "Tomblaine",
+      "county": "54",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.69417189535258,
+        "lng": 6.212040924560418
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://twitter.com/SDIS54/status/1565085723287511040",
+          "title": "@SDIS54",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/un-pompier-de-36-ans-se-suicide-en-sautant-de-la-grande-echelle-pres-de-nancy.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/grand-est/tomblaine-54510/un-sapeur-pompier-se-suicide-en-meurthe-et-moselle-7908805",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/grand-est/tomblaine_54526/lorraine-un-pompier-trouve-la-mort-dans-sa-caserne-ce-que-l-on-sait_53506600.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.cnews.fr/faits-divers/2022-09-01/lorraine-un-pompier-se-suicide-en-sautant-de-la-grande-echelle-1260473",
+          "title": "Cnews",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "09",
+      "day": "01",
+      "keywords": "",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme de la brigade de Taninges-Samoëns a mis fin à ses jours avec son arme de service.\nIl était marié et père de deux jeunes enfants.",
+      "section": "CoB Taninges-Samoëns",
+      "location": "La Tour",
+      "county": "74",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.105189861247204,
+        "lng": 6.590652674886339
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/haute-savoie-un-gendarme-se-suicide-avec-son-arme-de-service-a-la-tour.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2022/09/01/un-gendarme-se-suicide-avec-son-arme",
+          "title": "Le Dauphiné",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/haute-savoie-un-gendarme-se-suicide-avec-son-arme-de-service-1662056908",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
