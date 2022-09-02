@@ -1362,12 +1362,6 @@
         "group": "Territoire étranger"
       },
       {
-        "value": "GF",
-        "label": "Guyane Française",
-        "color": "",
-        "group": "Territoire étranger"
-      },
-      {
         "value": "HT",
         "label": "Haïti",
         "color": "",
@@ -1692,12 +1686,6 @@
         "group": "Territoire étranger"
       },
       {
-        "value": "MQ",
-        "label": "Martinique",
-        "color": "",
-        "group": "Territoire étranger"
-      },
-      {
         "value": "MU",
         "label": "Maurice",
         "color": "",
@@ -1706,12 +1694,6 @@
       {
         "value": "MR",
         "label": "Mauritanie",
-        "color": "",
-        "group": "Territoire étranger"
-      },
-      {
-        "value": "YT",
-        "label": "Mayotte",
         "color": "",
         "group": "Territoire étranger"
       },

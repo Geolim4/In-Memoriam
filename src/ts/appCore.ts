@@ -54,6 +54,7 @@ export abstract class AppCore extends AppAbstract {
   public abstract loadGlossary(): void;
   public abstract reloadMarkers(map: google.maps.Map, fromAnchor: boolean): void;
   public abstract getFormFiltersKeyed(): { [name: string]: { [name: string]: string } };
+  public abstract getCountyByCode(countyCode: string, wrappedCounty: boolean, excludedCountyCodes: string[]): string;
 
   protected bindMarkers(map: google.maps.Map, filters: Filters): void {
     const stopwatchStart = window.performance.now();
@@ -142,7 +143,7 @@ export abstract class AppCore extends AppAbstract {
             if (typeof infoWindowContent === 'object') {
               Events.addEventHandler(infoWindowContent.querySelector('a.error-link'), ['click', 'touchstart'], (e) => {
                 e.preventDefault();
-                const reference = `${death.section}, ${death.location} le ${death.day}/${death.month}/${death.year}`;
+                const reference = `${death.section}, ${death.location} ${this.getCountyByCode(death.county, true, [])} le ${death.day}/${death.month}/${death.year}`;
                 this.getModal().modalInfo(
                   'Vous avez trouvé une erreur ?',
                   new ModalContentTemplate('infowindow-error', { reference }),
