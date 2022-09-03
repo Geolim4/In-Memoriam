@@ -78,7 +78,7 @@ export class App extends AppCore {
     const anchor = decodeURIComponent(location.hash).substr(1).split('&');
     const exposedFilters = {} as {[name: string]: string};
     const filters = {};
-    const selects = <NodeListOf<HTMLSelectElement>>this.formElement.querySelectorAll('select[data-filterable="true"], input[data-filterable="true"]');
+    const fields = <NodeListOf<HTMLSelectElement>>this.formElement.querySelectorAll('select[data-filterable="true"], input[data-filterable="true"]');
     const formFilters = this.getFormFilters();
 
     anchor.forEach((value): void => {
@@ -89,18 +89,18 @@ export class App extends AppCore {
       }
     });
 
-    selects.forEach((select): void => {
+    fields.forEach((field): void => {
       if (fromAnchor) {
-        filters[select.id] = '';
+        filters[field.id] = '';
 
-        if (exposedFilters[select.id]) {
-          exposedFilters[select.id].split(',').forEach((val) => {
-            if (StringUtilsHelper.arrayContainsString(val, formFilters[select.id].map((v) => v.value), 'one', true)) {
-              filters[select.id] += (filters[select.id] ? `,${val}` : val);
+        if (exposedFilters[field.id]) {
+          exposedFilters[field.id].split(',').forEach((val) => {
+            if ((field.tagName === 'SELECT' && StringUtilsHelper.arrayContainsString(val, formFilters[field.id].map((v) => v.value), 'one', true)) || field.tagName === 'INPUT') {
+              filters[field.id] += (filters[field.id] ? `,${val}` : val);
             } else {
               this.getModal().modalInfo(
                 'Valeur de filtre inconnue',
-                `La valeur <code>${val}</code> du filtre <code>${StringUtilsHelper.ucFirst(this.getConfigDefinitions()[select.id]['#name'])}</code> n'est pas autorisée.
+                `La valeur <code>${val}</code> du filtre <code>${StringUtilsHelper.ucFirst(this.getConfigDefinitions()[field.id]['#name'])}</code> n'est pas autorisée.
                       <br />Retour aux valeurs autorisées.`,
                 { isError: true },
               );
@@ -108,19 +108,19 @@ export class App extends AppCore {
           });
         }
 
-        if (!select.required || filters[select.id]) {
+        if (!field.required || filters[field.id]) {
           return;
         }
         // If a required filter is empty in anchor, we must also try HTML fields
       }
 
-      if (select.selectedOptions) {
-        filters[select.id] = Array.from(select.selectedOptions)
+      if (field.selectedOptions) {
+        filters[field.id] = Array.from(field.selectedOptions)
         .filter((o) => o.selected)
         .map((o) => o.value)
         .join(',');
       } else {
-        filters[select.id] = select.value;
+        filters[field.id] = field.value;
       }
     });
 
