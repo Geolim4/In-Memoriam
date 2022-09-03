@@ -1,4 +1,4 @@
-/** SW auto-generated on 2022-09-03T22:41:55.114Z **/
+/** SW auto-generated on 2022-09-03T22:43:41.005Z **/
 const CACHE_KEY = 'pwa_assets-2.8.2';
 const assets = [
   'assets/images/github/forkme_right_darkblue_121621.png',
