@@ -1,5 +1,5 @@
-/** SW auto-generated on 2022-09-03T22:41:55.114Z **/
-const CACHE_KEY = 'pwa_assets-2.8.2';
+/** SW auto-generated on 2022-09-03T23:35:08.776Z **/
+const CACHE_KEY = 'pwa_assets-2.8.3';
 const assets = [
   'assets/images/github/forkme_right_darkblue_121621.png',
   'assets/images/github/forkme_right_white_ffffff.png',
