@@ -3654,6 +3654,12 @@
           "title": "France Bleu",
           "paywall": false,
           "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/suicide-d-un-sous-officier-de-gendarmerie-en-haute-savoie-2022",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
         }
       ]
     }

@@ -34,7 +34,7 @@ export class Charts {
     const series = [];
     const peersList = this.getPeersList(criteria, markers, 'county');
     const counties = App.getInstance().getFormFiltersKeyed('value', 'group').county;
-    const countyGroups = unique(Object.values(counties));
+    const countyGroups = unique(Object.values(counties)).sort(Intl.Collator().compare);
 
     for (const criteriaFilter of filters[criteria]) {
       const data = Array(countyGroups.length).fill(0);

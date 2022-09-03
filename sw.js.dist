@@ -1,0 +1,58 @@
+/** SW auto-generated on %APP_BUILD_DATE% **/
+const CACHE_KEY = 'pwa_assets-%APP_VERSION%';
+const assets = [
+%APP_ASSETS%
+];
+
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(CACHE_KEY)
+    .then(function(cache) {
+      return cache.addAll(assets);
+    })
+  );
+});
+
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          return CACHE_KEY !== cacheName;
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  const requestUrl = new URL(
+    event.request.url
+  );
+
+  if (requestUrl.pathname.includes("assets/images") && requestUrl.hostname === self.location.hostname) {
+    const promiseResponse = caches.open(CACHE_KEY)
+    .then(function(cache) {
+      return cache.match(event.request)
+      .then(function(response) {
+        if (response) {
+          return response;
+        } else {
+          return fetch(event.request)
+          .then(function(response) {
+            cache.put(
+              event.request,
+              response.clone()
+            );
+
+            return response;
+          });
+        }
+      });
+
+    });
+    event.respondWith(promiseResponse);
+  }
+});
