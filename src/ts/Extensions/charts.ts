@@ -59,10 +59,11 @@ export class Charts {
       series,
       chart: {
         backgroundColor: 'transparent',
-        type: 'column',
+        height: 60 * countyGroups.length,
+        type: 'bar',
       },
       plotOptions: {
-        column: {
+        bar: {
           borderWidth: 0,
           pointPadding: 0.2,
         },
@@ -79,12 +80,12 @@ export class Charts {
         text: 'Données contextualisées par les filtres appliqués',
       },
       title: {
-        text: `Décès geographiques par ${definitions[criteria]['#name_plural']} sur l'année ${year}`,
+        text: `Décès géographiques par ${definitions[criteria]['#name_plural']} sur l'année ${year}`,
       },
       tooltip: {
         backgroundColor: 'rgba(226,226,226,0.98)',
         footerFormat: '</table>',
-        headerFormat: '<div style="font-size:15px; font-weight: bold;margin: 0 0 10px 0">Mois: {point.key}</div><table>',
+        headerFormat: '<div style="font-size:15px; font-weight: bold;margin: 0 0 10px 0">Région: {point.key}</div><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}:  </td>' +
             '<td style="padding: 2px 10px 2px 20px"><b>{point.y} décès</b></td></tr>',
         shared: true,
@@ -96,6 +97,7 @@ export class Charts {
       },
       yAxis: {
         min: 0,
+        tickInterval: 2,
         title: {
           text: 'Décès',
         },

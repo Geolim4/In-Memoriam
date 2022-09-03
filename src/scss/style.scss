@@ -291,13 +291,6 @@ a abbr[data-title] {
     display: block;
   }
 }
-.modal__container {
-  max-width: 1150px;
-  &.large {
-    max-width: 1600px;
-    min-width: 90%;
-  }
-}
 
 .modal__footer {
   margin-bottom: 0;
