@@ -7,6 +7,7 @@ import { ExtendedGoogleMapsMarker } from './models/Gmaps/extendedGoogleMapsMarke
 import { FormFilters } from './models/Filters/formFilters.model';
 import { Death } from './models/Death/death.model';
 import { Renderer } from './Extensions/renderer';
+import { Promise } from 'es6-promise';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -161,6 +162,19 @@ export abstract class AppAbstract {
     }
 
     return death.count + count;
+  }
+
+  public runActionWithNeededLoaderWall(cbck: VoidFunction, target?: Element): void {
+    (new Promise((resolve, reject) => {
+      try {
+        this.showLoaderWall(target);
+        resolve(true);
+      } catch (e) {
+        reject(false);
+      }
+    }))
+    .then(() => cbck())
+    .finally(() => (this.hideLoaderWall(target)));
   }
 
   public showLoaderWall(target?: Element): void  {

@@ -287,10 +287,11 @@ export class MapButtons {
               onceShown: () => {
                 const definitions = App.getInstance().getConfigDefinitions();
                 const year = App.getInstance().getFilters(false)['year'];
-
-                App.getInstance().getCharts().buildChartPerCause(markers, App.getInstance().getFormFilters(), definitions, year);
-                App.getInstance().getCharts().buildChartPerHouse(markers, App.getInstance().getFormFilters(), definitions, year);
-                App.getInstance().getCharts().buildChartPerCounty(markers, App.getInstance().getFormFilters(), definitions, year);
+                App.getInstance().runActionWithNeededLoaderWall(() => {
+                  App.getInstance().getCharts().buildChartPerCause(markers, App.getInstance().getFormFilters(), definitions, year);
+                  App.getInstance().getCharts().buildChartPerHouse(markers, App.getInstance().getFormFilters(), definitions, year);
+                  App.getInstance().getCharts().buildChartPerCounty(markers, App.getInstance().getFormFilters(), definitions, year);
+                });
               },
             },
           );
