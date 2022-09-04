@@ -12,7 +12,7 @@
     "update-sw": "node scripts/updateSW.cjs",
     "build-css": "stylelint \"src/**/*.scss\" && yarn webpack --config './webpack/cssConfig.js'",
     "build-js": "yarn lint && yarn webpack --config './webpack/jsConfig.js' && yarn update-sw",
-    "build": "yarn build-css && yarn build-js && yarn minify-json && yarn update-sw",
+    "build": "yarn build-css && yarn build-js && yarn minify-json",
     "lint": "tslint --project ./tsconfig.json",
     "lint-fix": "tslint --project ./tsconfig.json --fix",
     "watch": "npm-watch"
