@@ -3,3 +3,4 @@ assets/css
 assets/js
 assets/json
 node_modules/
+sw.js
