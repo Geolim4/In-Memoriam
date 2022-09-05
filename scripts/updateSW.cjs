@@ -15,7 +15,7 @@ fs.readFile(path.resolve(projectDir + '/data/config/', 'settings.json'), 'utf8',
     let swDistStrTarget = swDistStr.replace('%APP_VERSION%', appVersion).replace('%APP_BUILD_DATE%', (new Date()).toISOString());
     let assetsStr = '';
 
-    glob('**/*.{png,twig}', {cwd : assetsDir}, function (er, files) {
+    glob('**/*.{json,png,twig,css,js,eot,svg,ttf,woff,woff2}', {cwd : assetsDir}, function (er, files) {
       files.forEach(file => {
         assetsStr += "  'assets/" + file + "',\n";
       });
