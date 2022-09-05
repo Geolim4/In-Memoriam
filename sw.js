@@ -1,6 +1,12 @@
-/** SW auto-generated on 2022-09-03T23:37:05.117Z **/
-const CACHE_KEY = 'pwa_assets-2.8.3';
+/** SW auto-generated on 2022-09-05T23:40:26.221Z **/
+const CACHE_KEY = 'pwa_assets-2.8.4';
 const assets = [
+  'assets/css/fonts/glyphicons-halflings-regular.eot',
+  'assets/css/fonts/glyphicons-halflings-regular.svg',
+  'assets/css/fonts/glyphicons-halflings-regular.ttf',
+  'assets/css/fonts/glyphicons-halflings-regular.woff',
+  'assets/css/fonts/glyphicons-halflings-regular.woff2',
+  'assets/css/main.css',
   'assets/images/github/forkme_right_darkblue_121621.png',
   'assets/images/github/forkme_right_white_ffffff.png',
   'assets/images/house/admpen-m.png',
@@ -35,6 +41,13 @@ const assets = [
   'assets/images/pwa/in-memoriam_192.png',
   'assets/images/pwa/in-memoriam_512_maskable.png',
   'assets/images/pwa/in-memoriam_512.png',
+  'assets/js/app.js',
+  'assets/json/deaths/2018.min.json',
+  'assets/json/deaths/2019.min.json',
+  'assets/json/deaths/2020.min.json',
+  'assets/json/deaths/2021.min.json',
+  'assets/json/deaths/2022.min.json',
+  'assets/json/deaths/2023.min.json',
   'assets/templates/associations.html.twig',
   'assets/templates/bloodbath-chart.html.twig',
   'assets/templates/bloodbath-list.html.twig',
