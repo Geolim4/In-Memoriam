@@ -3662,6 +3662,63 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "09",
+      "day": "05",
+      "keywords": "",
+      "house": "gd",
+      "peers": [],
+      "text": "Un jeune gendarme de la brigade de Saint-Martin-d’Auxigny a mis fin à ses jours avec son arme administrative à sa prise de service.\nIl a laissé une longue lettre d'explications derrière lui.",
+      "section": "Brigade de Proximité",
+      "location": "Saint-Martin-d’Auxigny",
+      "county": "18",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.20637379111379,
+        "lng": 2.4045812048668407
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/saint-martin-dauxigny-un-gendarme-de-21-ans-se-suicide-avec-son-arme-de-service.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/centre-val-de-loire/cher/bourges/un-gendarme-se-suicide-avec-son-arme-de-service-a-la-brigade-de-saint-martin-d-auxigny-2606728.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-gendarme-de-21-ans-se-suicide-au-sein-de-la-brigade-de-saint-martin-d-auxigny-1662367617",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/cher-un-gendarme-de-21-ans-se-suicide-avec-son-arme-de-service-deux-jours-apres-sa-prise-de-fonction-05-09-2022-QOYVVUWM75EQFHUNMGZDKXG2A4.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/centre-val-de-loire/saint-martin-d-auxigny-18110/cher-un-gendarme-de-21-ans-se-tue-dans-les-locaux-de-sa-brigade-7914365",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
