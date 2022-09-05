@@ -1,4 +1,4 @@
-/** SW auto-generated on 2022-09-05T23:40:26.221Z **/
+/** SW auto-generated on 2022-09-05T23:46:09.942Z **/
 const CACHE_KEY = 'pwa_assets-2.8.4';
 const assets = [
   'assets/css/fonts/glyphicons-halflings-regular.eot',
@@ -85,7 +85,7 @@ self.addEventListener('fetch', function(event) {
     event.request.url
   );
 
-  if (requestUrl.pathname.includes("assets/images") && requestUrl.hostname === self.location.hostname) {
+  if (requestUrl.pathname.includes("assets/") && requestUrl.hostname === self.location.hostname) {
     const promiseResponse = caches.open(CACHE_KEY)
     .then(function(cache) {
       return cache.match(event.request)
