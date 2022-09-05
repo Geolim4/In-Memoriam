@@ -32,7 +32,7 @@ self.addEventListener('fetch', function(event) {
     event.request.url
   );
 
-  if (requestUrl.pathname.includes("assets/images") && requestUrl.hostname === self.location.hostname) {
+  if (requestUrl.pathname.includes("assets/") && requestUrl.hostname === self.location.hostname) {
     const promiseResponse = caches.open(CACHE_KEY)
     .then(function(cache) {
       return cache.match(event.request)
