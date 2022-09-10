@@ -4,6 +4,7 @@ export interface Options {
   ctrlClasses: string[];
   defaultCtrlChildBgPos?: string;
   defaultCtrlChildBgSize?: string;
-  imagePath: string;
+  imagePath?: string;
   title?: string;
+  text?: string;
 }
