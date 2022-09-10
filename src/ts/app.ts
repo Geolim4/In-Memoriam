@@ -141,4 +141,8 @@ export class App extends AppCore {
 
     return `["${filterValue}]`;
   }
+
+  public isOnSmallScreen(): boolean {
+    return window.matchMedia('only screen and (max-width: 992px)').matches;
+  }
 }

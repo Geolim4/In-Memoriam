@@ -33,6 +33,9 @@ export class MapButtons {
     this.bindListButton(map);
     this.bindChartButton(map);
 
+    // Middle side buttons
+    this.bindFilterButtonOnSmallScreens(map);
+
     // Right side buttons
     this.bindRefreshButton(map);
     this.bindDownloadButton(map);
@@ -300,6 +303,40 @@ export class MapButtons {
         App.getInstance().getModal().modalInfo('Information', this.emptyMarkerMessage);
       }
     }, buttonOptions);
+  }
+
+  private bindFilterButtonOnSmallScreens(map: google.maps.Map): void {
+    const buttonId = 'filtersBtn';
+    const hideFiltersText = 'Cacher les filtres';
+    const showFiltersText = 'Afficher les filtres';
+    const buttonOptions = {
+      ctrlChildId: buttonId,
+      ctrlClasses: [],
+      ctrlPosition: google.maps.ControlPosition.TOP_CENTER,
+      text: hideFiltersText,
+      title: '',
+    };
+
+    if (App.getInstance().isOnSmallScreen()) {
+      document.getElementById('form-filters').classList.add('hidden');
+      buttonOptions.text = showFiltersText;
+      GmapUtils.bindButton(map, () => {
+        const smallScreen = App.getInstance().isOnSmallScreen();
+        if (document.getElementById('form-filters').classList.contains('hidden')) {
+          document.getElementById('form-filters').classList.remove('hidden');
+          document.getElementById(buttonId).innerText = hideFiltersText;
+          if (smallScreen) {
+            document.getElementById('form-filters').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+          }
+        } else {
+          document.getElementById('form-filters').classList.add('hidden');
+          document.getElementById(buttonId).innerText = showFiltersText;
+          if (smallScreen) {
+            document.getElementById('form-filters-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+          }
+        }
+      }, buttonOptions);
+    }
   }
 
   private bindDownloadButton(map: google.maps.Map): void {
