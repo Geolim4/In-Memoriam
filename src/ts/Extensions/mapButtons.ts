@@ -24,7 +24,8 @@ export class MapButtons {
     this.emptyMarkerMessage = 'La cartographie est vide, essayez de modifier les filtres.';
   }
 
-  public bindCustomButtons(map: google.maps.Map): void {
+  public bindCustomButtons(): void {
+    const map = App.getInstance().getMap();
     // Left side buttons
     this.bindLocalizationButton(map);
     this.bindRandomizationButton(map);
@@ -178,7 +179,7 @@ export class MapButtons {
 
     GmapUtils.bindButton(map, () => {
       App.getInstance().loadGlossary();
-      App.getInstance().reloadMarkers(map, false);
+      App.getInstance().reloadMarkers(false);
       App.getInstance().getRenderer().purgeTemplateCache();
     }, buttonOptions);
   }
@@ -199,7 +200,7 @@ export class MapButtons {
       const heatmapImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}`) as HTMLInputElement;
       const imgUrl = App.getInstance().getConfigFactory().config['imagePath']['heatmap'][App.getInstance().isHeatmapEnabled() ? 'on' : 'off'];
       heatmapImgElmt.style.backgroundImage = `url("${imgUrl}")`;
-      App.getInstance().reloadMarkers(map, false);
+      App.getInstance().reloadMarkers(false);
     }, buttonOptions);
   }
 
@@ -219,7 +220,7 @@ export class MapButtons {
       const clusteringImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}`) as HTMLInputElement;
       const imgUrl = App.getInstance().getConfigFactory().config['imagePath']['clustering'][App.getInstance().isClusteringEnabled() ? 'on' : 'off'];
       clusteringImgElmt.style.backgroundImage = `url("${imgUrl}")`;
-      App.getInstance().reloadMarkers(map, false);
+      App.getInstance().reloadMarkers(false);
     }, buttonOptions);
   }
 
@@ -311,32 +312,33 @@ export class MapButtons {
     const showFiltersText = 'Afficher les filtres';
     const buttonOptions = {
       ctrlChildId: buttonId,
-      ctrlClasses: [],
+      ctrlClasses: ['mss'],
       ctrlPosition: google.maps.ControlPosition.TOP_CENTER,
       text: hideFiltersText,
       title: '',
     };
 
     if (App.getInstance().isOnSmallScreen()) {
-      document.getElementById('form-filters').classList.add('hidden');
+      document.getElementById('form-filters').classList.add('user-hidden');
       buttonOptions.text = showFiltersText;
-      GmapUtils.bindButton(map, () => {
-        const smallScreen = App.getInstance().isOnSmallScreen();
-        if (document.getElementById('form-filters').classList.contains('hidden')) {
-          document.getElementById('form-filters').classList.remove('hidden');
-          document.getElementById(buttonId).innerText = hideFiltersText;
-          if (smallScreen) {
-            document.getElementById('form-filters').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-          }
-        } else {
-          document.getElementById('form-filters').classList.add('hidden');
-          document.getElementById(buttonId).innerText = showFiltersText;
-          if (smallScreen) {
-            document.getElementById('form-filters-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-          }
-        }
-      }, buttonOptions);
     }
+
+    GmapUtils.bindButton(map, () => {
+      const smallScreen = App.getInstance().isOnSmallScreen();
+      if (document.getElementById('form-filters').classList.contains('user-hidden')) {
+        document.getElementById('form-filters').classList.remove('user-hidden');
+        document.getElementById(buttonId).innerText = hideFiltersText;
+        if (smallScreen) {
+          document.getElementById('form-filters').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+        }
+      } else {
+        document.getElementById('form-filters').classList.add('user-hidden');
+        document.getElementById(buttonId).innerText = showFiltersText;
+        if (smallScreen) {
+          document.getElementById('form-filters-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+        }
+      }
+    }, buttonOptions);
   }
 
   private bindDownloadButton(map: google.maps.Map): void {

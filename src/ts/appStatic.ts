@@ -22,7 +22,7 @@ export class AppStatic {
   }
 
   public static getMarkerLink(death: Death, label: string): string {
-    return `<a href="javascript:;" class="marker-link" data-death-hash="${this.getMarkerHash(death)}">${label}</a>`;
+    return `<a href="javascript:;" class="marker-link" data-controller="map-marker" data-death-hash="${this.getMarkerHash(death)}">${label}</a>`;
   }
 
   public static getLatestDeath(response: Bloodbath): Death | null {
