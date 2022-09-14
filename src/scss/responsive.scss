@@ -10,6 +10,12 @@
 }
 
 @media (max-width: 992px) {
+  .mss {
+    display: block;
+  }
+  #form-filters.user-hidden {
+    display: none;
+  }
   #fork-me {
     display: none;
   }
@@ -51,7 +57,10 @@
   }
 }
 
-@media (min-width: 993px) {
+@media (min-width: 992px) {
+  .mss {
+    display: none;
+  }
   .modal__container {
     max-width: 1150px;
     &.large {

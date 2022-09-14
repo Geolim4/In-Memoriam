@@ -14,7 +14,9 @@ import { Promise } from 'es6-promise';
  * @licence GPL-2.0
  */
 export abstract class AppAbstract {
+  protected map: google.maps.Map;
   protected markers: ExtendedGoogleMapsMarker[];
+  protected markerHashIndex: {};
   protected suggestions: string[];
   private currentInfoWindow: google.maps.InfoWindow;
   private formFilters: FormFilters;
@@ -30,7 +32,9 @@ export abstract class AppAbstract {
   private searchByExpression: boolean;
 
   protected constructor() {
+    this.map = null;
     this.markers = [];
+    this.markerHashIndex = {};
     this.suggestions = [];
     this.currentInfoWindow = null;
     this.formFilters = {};
@@ -43,6 +47,10 @@ export abstract class AppAbstract {
     this.charts = new Charts();
     this.mapButtons = new MapButtons();
     this.searchByExpression = false;
+  }
+
+  public getMap(): google.maps.Map {
+    return this.map;
   }
 
   public isAppLoaded(): boolean {
@@ -111,6 +119,10 @@ export abstract class AppAbstract {
 
   public getMarkers(): ExtendedGoogleMapsMarker[] {
     return this.markers;
+  }
+
+  public getMarkerHashIndex(): {} {
+    return this.markerHashIndex;
   }
 
   public getSuggestions(): string[] {

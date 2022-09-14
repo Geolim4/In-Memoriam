@@ -70,8 +70,8 @@ export class App extends AppCore {
     });
   }
 
-  public reloadMarkers(map: google.maps.Map, fromAnchor: boolean): void {
-    this.bindMarkers(map, this.getFilters(fromAnchor));
+  public reloadMarkers(fromAnchor: boolean): void {
+    this.bindMarkers(this.getFilters(fromAnchor));
   }
 
   public getFilters(fromAnchor: boolean): Filters {

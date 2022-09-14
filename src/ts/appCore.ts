@@ -15,7 +15,7 @@ import { AppStatic } from './appStatic';
 import activityDetector from 'activity-detector';
 import unique = require('array-unique');
 import { Renderer } from './Extensions/renderer';
-import { ModalContentTemplate } from './Extensions/modalContentTemplate';
+import { Links } from './Extensions/links';
 const Choices = require('choices.js');
 const autocomplete = require('autocompleter');
 
@@ -28,7 +28,6 @@ export abstract class AppCore extends AppAbstract {
   protected heatMap: google.maps.visualization.HeatmapLayer;
   protected infoWindows: google.maps.InfoWindow[];
   protected markerCluster: MarkerClusterer;
-  protected markerHashIndex: {};
   protected cachedCountyCodes: {};
   protected readonly formElement: HTMLFormElement;
   protected readonly customChoicesInstances: { [name: string]: any };
@@ -42,7 +41,6 @@ export abstract class AppCore extends AppAbstract {
     this.heatMap = null;
     this.infoWindows = [];
     this.markerCluster = null;
-    this.markerHashIndex = {};
     this.cachedCountyCodes = null;
     this.formElement = <HTMLFormElement>document.getElementById('form-filters');
 
@@ -52,13 +50,13 @@ export abstract class AppCore extends AppAbstract {
   public abstract getFilterValueLabel(filterName: string, filterValue: string): string; // Only used in Twig templates
   public abstract getFilters(fromAnchor: boolean): Filters;
   public abstract loadGlossary(): void;
-  public abstract reloadMarkers(map: google.maps.Map, fromAnchor: boolean): void;
+  public abstract reloadMarkers(fromAnchor: boolean): void;
   public abstract getFormFiltersKeyed(): { [name: string]: { [name: string]: string } };
   public abstract getCountyByCode(countyCode: string, wrappedCounty: boolean, excludedCountyCodes: string[]): string;
 
-  protected bindMarkers(map: google.maps.Map, filters: Filters): void {
+  protected bindMarkers(filters: Filters): void {
     const stopwatchStart = window.performance.now();
-    this.showLoaderWall(map.getDiv());
+    this.showLoaderWall(this.map.getDiv());
     fetch(this.getConfigFactory().config.deathsSrc.replace('%year%', filters.year), { cache: 'no-store' })
     .then((response) => response.json())
     .then((responseData: Bloodbath) => {
@@ -87,9 +85,9 @@ export abstract class AppCore extends AppAbstract {
         const totalDeathCount = this.getTotalDeathCount(death);
         const houseImage = this.getConfigFactory().config.imagePath.house.replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
         const marker = new google.maps.Marker({
-          map,
           animation: google.maps.Animation.DROP,
           icon: new (google.maps as any).MarkerImage(houseImage),
+          map: this.map,
           opacity: 1,
           position: new google.maps.LatLng(death.gps.lat, death.gps.lng),
           title: death.text,
@@ -97,10 +95,10 @@ export abstract class AppCore extends AppAbstract {
 
         if (!death.gps.accurate) {
           const circle = new google.maps.Circle({
-            map,
             center: new google.maps.LatLng(death.gps.lat, death.gps.lng),
             fillColor: this.getConfigFactory().config.circleOptions.fillColor,
             fillOpacity: this.getConfigFactory().config.circleOptions.fillOpacity,
+            map: this.map,
             radius: Math.max(100, death.gps.radius), // Radius can't be set at less than 100 meters
             strokeColor: this.getConfigFactory().config.circleOptions.strokeColor,
             strokeOpacity: this.getConfigFactory().config.circleOptions.strokeOpacity,
@@ -136,26 +134,18 @@ export abstract class AppCore extends AppAbstract {
           if (this.getCurrentInfoWindow()) {
             this.getCurrentInfoWindow().close();
           }
-          this.getRenderer().renderAsDom('infowindow-death', { death }).then((infoWindowContent) => {
+
+          const reference = `${death.section}, ${death.location} ${this.getCountyByCode(death.county, true, [])} le ${death.day}/${death.month}/${death.year}`;
+          this.getRenderer().renderAsDom('infowindow-death', { death, reference }).then((infoWindowContent) => {
             infoWindow.setContent(infoWindowContent);
-            infoWindow.open(map, marker);
+            infoWindow.open(this.map, marker);
             this.setCurrentInfoWindow(infoWindow);
-            if (typeof infoWindowContent === 'object') {
-              Events.addEventHandler(infoWindowContent.querySelector('a.error-link'), ['click', 'touchstart'], (e) => {
-                e.preventDefault();
-                const reference = `${death.section}, ${death.location} ${this.getCountyByCode(death.county, true, [])} le ${death.day}/${death.month}/${death.year}`;
-                this.getModal().modalInfo(
-                  'Vous avez trouvé une erreur ?',
-                  new ModalContentTemplate('infowindow-error', { reference }),
-                );
-              });
-            }
           });
         });
 
         google.maps.event.addListener(marker, 'dblclick', (): void => {
-          map.setCenter(marker.getPosition());
-          map.setZoom(this.getConfigFactory().config.clusteringOptions.maxZoom);
+          this.map.setCenter(marker.getPosition());
+          this.map.setZoom(this.getConfigFactory().config.clusteringOptions.maxZoom);
         });
 
         this.infoWindows.push(infoWindow);
@@ -182,12 +172,12 @@ export abstract class AppCore extends AppAbstract {
 
       if (this.isClusteringEnabled()) {
         this.markerCluster = new MarkerClusterer({
-          map,
           algorithm: new SuperClusterAlgorithm({
             maxZoom: this.getConfigFactory().config.clusteringOptions.maxZoom,
             minPoints: this.getConfigFactory().config.clusteringOptions.minPoints,
             radius: this.getConfigFactory().config.clusteringOptions.radius,
           }),
+          map: this.map,
           markers: this.markers,
         });
       }
@@ -201,14 +191,14 @@ export abstract class AppCore extends AppAbstract {
       for (const key in boundsMarkers) {
         bounds.extend(boundsMarkers[key].getPosition());
       }
-      map.fitBounds(bounds);
+      this.map.fitBounds(bounds);
 
       if (heatMapData.length && this.isHeatmapEnabled()) {
         this.heatMap = new google.maps.visualization.HeatmapLayer({
           ...{ data: heatMapData },
           ...this.getConfigFactory().config.heatmapOptions,
         });
-        this.heatMap.setMap(map);
+        this.heatMap.setMap(this.map);
       }
       if (this.getConfigFactory().isDebugEnabled()) {
         console.log(`${this.markers.length} marker${this.markers.length === 1 ? '' : 's'} loaded in ${(window.performance.now() - stopwatchStart) / 1000}s`);
@@ -221,7 +211,7 @@ export abstract class AppCore extends AppAbstract {
       }
       this.getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des décès.', { isError: true });
     }).finally(() => {
-      this.hideLoaderWall(map.getDiv());
+      this.hideLoaderWall(this.map.getDiv());
     });
   }
 
@@ -234,7 +224,7 @@ export abstract class AppCore extends AppAbstract {
 
   private loadGoogleMap(): void {
     const mapElement = <HTMLInputElement>document.getElementById('map');
-    const map = new google.maps.Map(mapElement, this.getConfigFactory().config.googleMapsOptions);
+    this.map = new google.maps.Map(mapElement, this.getConfigFactory().config.googleMapsOptions);
 
     fetch(this.getConfigFactory().config.filtersSrc, { cache: 'force-cache' })
     .then((response): any => response.json())
@@ -242,12 +232,12 @@ export abstract class AppCore extends AppAbstract {
       this.loadGlossary();
       this.setFormFilters(responseData.filters);
       this.setupSkeleton(this.getFilters(true));
-      this.bindAnchorEvents(map);
-      this.bindFilters(map);
-      this.getMapButtons().bindCustomButtons(map);
-      this.bindMarkers(map, this.getFilters(true));
-      this.bindMarkerLinkEvent(map);
-      this.bindMapEvents(map);
+      this.bindAnchorEvents();
+      this.bindFilters();
+      this.getMapButtons().bindCustomButtons();
+      this.bindMarkers(this.getFilters(true));
+      this.bindInternalLinksEvent();
+      this.bindMapEvents();
       this.bindFullscreenFormFilterListener();
       this.printSupportAssociations();
     }).catch((reason): void => {
@@ -260,7 +250,7 @@ export abstract class AppCore extends AppAbstract {
       );
     });
 
-    this.loadActivityDetectorMonitoring(map);
+    this.loadActivityDetectorMonitoring();
   }
 
   private getDefinitions(response: Bloodbath): DefinitionsCount {
@@ -442,7 +432,7 @@ export abstract class AppCore extends AppAbstract {
     });
   }
 
-  private loadActivityDetectorMonitoring(map: google.maps.Map): void {
+  private loadActivityDetectorMonitoring(): void {
     const activityDetectorMonitoring = activityDetector({
       timeToIdle: 2 * 60 * 1000, // wait 2min of inactivity to consider the user is idle
     });
@@ -453,7 +443,7 @@ export abstract class AppCore extends AppAbstract {
         console.log('User is now idle...');
       }
       handler = setInterval((): void => {
-        this.bindMarkers(map, this.getFilters(false));
+        this.bindMarkers(this.getFilters(false));
         if (this.getConfigFactory().isDebugEnabled()) {
           console.log('Reloading map...');
         }
@@ -468,15 +458,15 @@ export abstract class AppCore extends AppAbstract {
     });
   }
 
-  private bindAnchorEvents(map: google.maps.Map): void {
+  private bindAnchorEvents(): void {
     window.addEventListener('hashchange', (): void => {
       const filters = this.getFilters(true);
       this.drawCustomSelectors(this.formElement.querySelectorAll('form select'), filters);
-      this.bindMarkers(map, filters);
+      this.bindMarkers(filters);
     }, false);
   }
 
-  private bindFilters(map: google.maps.Map, fromAnchor?: boolean): void {
+  private bindFilters(fromAnchor?: boolean): void {
     const selectsAndFields = <NodeListOf<HTMLInputElement>>this.formElement.querySelectorAll('form select, form input');
     const resetButtons = <NodeListOf<HTMLButtonElement>>this.formElement.querySelectorAll('form button[data-reset-field-target]');
     const searchElement = <HTMLInputElement>document.getElementById('search');
@@ -519,7 +509,8 @@ export abstract class AppCore extends AppAbstract {
         }
         setTimeout(() => {
           if (this.formElement.checkValidity()) {
-            this.bindMarkers(map, this.getFilters(false));
+            this.bindMarkers(this.getFilters(false));
+            document.dispatchEvent(new CustomEvent('filter-changed'));
           } else {
             this.formElement.dispatchEvent(new Event('submit', { cancelable: true }));
           }
@@ -574,30 +565,19 @@ export abstract class AppCore extends AppAbstract {
     this.drawCustomSelectors(selectsAndFields, filters);
   }
 
-  private bindMarkerLinkEvent(map: google.maps.Map): void {
+  private bindInternalLinksEvent(): void {
     document.addEventListener('click', (e) => {
       const target = e.target as HTMLAnchorElement;
-      const origin = target.closest('a');
-      if (origin) {
-        const deathHash = origin.dataset.deathHash; // decodeURIComponent(escape(atob(origin.dataset.deathHash)));
-        if (this.markers[this.markerHashIndex[deathHash]]) {
-          const marker = this.markers[this.markerHashIndex[deathHash]];
-          this.getModal().closeModalInfo();
-          map.setZoom(this.getConfigFactory().config.googleMapsOptions.maxZoom);
-          google.maps.event.trigger(marker, 'click');
-          map.setCenter(marker.getPosition());
-
-          if (map.getDiv().getBoundingClientRect().top < 0 || map.getDiv().getBoundingClientRect().bottom > window.innerHeight) {
-            map.getDiv().scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
-          }
-        }
+      const link = target.closest('a[data-controller]') as HTMLAnchorElement;
+      if (link) {
+        Links.handleHtmlAnchorElement(link);
       }
     });
   }
 
-  private bindMapEvents(map: google.maps.Map): void {
-    google.maps.event.addListener(map, 'zoom_changed', (): void => {
-      const zoomLevel = map.getZoom();
+  private bindMapEvents(): void {
+    google.maps.event.addListener(this.map, 'zoom_changed', (): void => {
+      const zoomLevel = this.map.getZoom();
       for (const circle of this.circles) {
         circle.setVisible(zoomLevel > 8);
         circle.setOptions({
