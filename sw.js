@@ -1,5 +1,5 @@
-/** SW auto-generated on 2022-09-14T23:58:25.033Z **/
-const CACHE_KEY = 'pwa_assets-2.8.6';
+/** SW auto-generated on 2022-09-17T00:57:34.413Z **/
+const CACHE_KEY = 'pwa_assets-2.9.0';
 const assets = [
   'assets/css/fonts/glyphicons-halflings-regular.eot',
   'assets/css/fonts/glyphicons-halflings-regular.svg',
@@ -48,11 +48,13 @@ const assets = [
   'assets/json/deaths/2021.min.json',
   'assets/json/deaths/2022.min.json',
   'assets/json/deaths/2023.min.json',
+  'assets/templates/advanced-search-link.html.twig',
   'assets/templates/associations.html.twig',
   'assets/templates/bloodbath-chart.html.twig',
   'assets/templates/bloodbath-list.html.twig',
   'assets/templates/definitions.html.twig',
   'assets/templates/infowindow-death.html.twig',
+  'assets/templates/modals/content-advanced-search.html.twig',
   'assets/templates/modals/content-infowindow-error.html.twig',
   'assets/templates/modals/modal-info.html.twig',
 ];
