@@ -1,5 +1,6 @@
 import { App } from '../app';
 import { ModalContentTemplate } from './modalContentTemplate';
+import { ModalOptions } from '../models/Modal/modalOptions.model';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -11,8 +12,11 @@ export class Links {
       case 'map-marker':
         this.handleMapMarkerLink(link);
         break;
-      case 'report-error':
-        this.handleReportErrorLink(link);
+      case 'simple-modal':
+        this.handleSimpleModalLink(link);
+        break;
+      case 'advanced-modal':
+        this.handleAdvancedModalLink(link);
         break;
       default:
         App.getInstance().getModal().modalInfo('Erreur', `Contrôleur "${link.dataset.controller}" inconnu.`, { isError: true });
@@ -41,10 +45,37 @@ export class Links {
     }
   }
 
-  protected static handleReportErrorLink(link: HTMLAnchorElement): void {
+  protected static handleSimpleModalLink(link: HTMLAnchorElement): void {
+    let modalOptions: ModalOptions;
+    try {
+      modalOptions = JSON.parse(decodeURIComponent(link.dataset.modalOptions));
+    } catch {
+      modalOptions = {};
+    }
     App.getInstance().getModal().modalInfo(
-      'Vous avez trouvé une erreur ?',
-      new ModalContentTemplate('infowindow-error', { reference: link.dataset.reference }),
+      link.dataset.modalTitle,
+      link.dataset.modalContent,
+      modalOptions,
+    );
+  }
+
+  protected static handleAdvancedModalLink(link: HTMLAnchorElement): void {
+    let tplVars: {};
+    let modalOptions: ModalOptions;
+    try {
+      tplVars = JSON.parse(decodeURIComponent(link.dataset.modalContentVars));
+    } catch {
+      tplVars = {};
+    }
+    try {
+      modalOptions = JSON.parse(decodeURIComponent(link.dataset.modalOptions));
+    } catch {
+      modalOptions = {};
+    }
+    App.getInstance().getModal().modalInfo(
+      link.dataset.modalTitle,
+      new ModalContentTemplate(link.dataset.modalContentTemplate, tplVars),
+      modalOptions,
     );
   }
 }

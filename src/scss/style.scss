@@ -270,9 +270,14 @@ a abbr[data-title] {
   }
 
   small.advanced-search-enabled {
-    color: orange;
+    span {
+      color: orange;
+      line-height: 0.8;
+    }
+    a span {
+      border-bottom: 1px dotted orange;
+    }
     float: left;
-    line-height: 0.8;
     margin-top: 6px;
   }
 

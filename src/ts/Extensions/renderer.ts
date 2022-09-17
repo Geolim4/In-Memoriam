@@ -27,14 +27,20 @@ export class Renderer {
     });
   }
 
-  public async renderTo(tplName: string, variables: object, element: Element|string): Promise<void> {
+  public async renderTo(tplName: string, variables: object, element: Element|string, strategy: 'innerHTML'|'appendChild'|'prependChild' = 'innerHTML'): Promise<void> {
     return this.render(tplName, variables).then((htmlContent: string) => {
       let targetElement = element;
       if (typeof targetElement === 'string') {
         targetElement = document.querySelector(targetElement);
       }
 
-      targetElement.innerHTML = htmlContent;
+      if (strategy === 'innerHTML') {
+        targetElement.innerHTML = htmlContent;
+      } else if (strategy === 'appendChild') {
+        targetElement.insertAdjacentHTML('beforeend', htmlContent);
+      } else {
+        targetElement.insertAdjacentHTML('afterbegin', htmlContent);
+      }
     });
   }
 
