@@ -58,5 +58,10 @@
         {% endif %}
 
     </div>
-    <br><small class="report-error"><a href="javascript:;" class="error-link" data-controller="report-error" data-reference="{{ reference }}">[Une erreur ?]</a></small>
+    <br><small class="report-error"><a href="javascript:;"
+                                       class="error-link"
+                                       data-controller="advanced-modal"
+                                       data-modal-title="Vous avez trouvé une erreur ?"
+                                       data-modal-content-template="infowindow-error"
+                                       data-modal-content-vars='{{ {reference: reference}|json_encode|url_encode }}'>[Une erreur ?]</a></small>
 </div>

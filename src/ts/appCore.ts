@@ -521,15 +521,11 @@ export abstract class AppCore extends AppAbstract {
 
     Events.addDoubleKeypressHandler('Home', searchElement, () => {
       if (!this.isSearchByExpressionEnabled()) {
-        const advSearchLabel = document.createElement('small');
-        advSearchLabel.classList.add('advanced-search-enabled');
-        advSearchLabel.innerHTML = `
-          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-          <span>Recherche avancée activée</span>`;
-        searchElement.parentElement.appendChild(advSearchLabel);
-        searchElement.value = 'expr:(death !== null)';
-        StringUtilsHelper.setCaretPosition(searchElement, 16, 20);
-        this.setSearchByExpression(true);
+        this.getRenderer().renderTo('advanced-search-link', {}, searchElement.parentElement, 'appendChild').then(() => {
+          searchElement.value = 'expr:(death !== null)';
+          StringUtilsHelper.setCaretPosition(searchElement, 16, 20);
+          this.setSearchByExpression(true);
+        });
       } else {
         searchElement.value = '';
         searchElement.parentElement.querySelector('.advanced-search-enabled').remove();
