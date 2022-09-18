@@ -9,9 +9,9 @@
             </header>
             <main class="modal__content" id="modal-info-content">{{ content }}</main>
             <footer class="modal__footer">
-                <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Fermer la popup" data-micromodal-role="validate">{{ okLabel }}</button>
-                {% if isConfirm %}
-                    <button class="modal__btn" data-micromodal-close aria-label="Fermer la popup" data-micromodal-role="cancel">{{ cancelLabel }}</button>
+                <button class="modal__btn{% if confirmButtonColor %} modal__btn-{{confirmButtonColor  }}{% endif %}" data-micromodal-close aria-label="Fermer la popup" data-micromodal-role="validate">{{ okLabel }}</button>
+                {% if hasConfirm or hasCancel %}
+                    <button class="modal__btn{% if cancelButtonColor %} modal__btn-{{cancelButtonColor  }}{% endif %}" data-micromodal-close aria-label="Fermer la popup" data-micromodal-role="cancel">{{ cancelLabel }}</button>
                 {% endif %}
             </footer>
         </div>

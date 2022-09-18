@@ -521,15 +521,9 @@ export abstract class AppCore extends AppAbstract {
 
     Events.addDoubleKeypressHandler('Home', searchElement, () => {
       if (!this.isSearchByExpressionEnabled()) {
-        this.getRenderer().renderTo('advanced-search-link', {}, searchElement.parentElement, 'appendChild').then(() => {
-          searchElement.value = 'expr:(death !== null)';
-          StringUtilsHelper.setCaretPosition(searchElement, 16, 20);
-          this.setSearchByExpression(true);
-        });
+        this.enableAdvancedSearch();
       } else {
-        searchElement.value = '';
-        searchElement.parentElement.querySelector('.advanced-search-enabled').remove();
-        this.setSearchByExpression(false);
+        this.disableAdvancedSearch();
       }
       searchElement.dispatchEvent(new Event('change'));
     });

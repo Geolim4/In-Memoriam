@@ -274,7 +274,7 @@ a abbr[data-title] {
       color: orange;
       line-height: 0.8;
     }
-    a span {
+    a span:not(.glyphicon) {
       border-bottom: 1px dotted orange;
     }
     float: left;

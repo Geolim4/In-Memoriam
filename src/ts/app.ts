@@ -2,6 +2,7 @@ import {  Filters } from './models';
 import { AppCore } from './appCore';
 import { Permalink } from './Components/permalink';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
+import { MethodCallNotAllowedError } from './errors/methodCallNotAllowedError.model';
 
 /**
  * @description Main app code
@@ -144,5 +145,17 @@ export class App extends AppCore {
 
   public isOnSmallScreen(): boolean {
     return window.matchMedia('only screen and (max-width: 992px)').matches;
+  }
+
+  public exposedProxyCall(methodName: string, ...args: any): any {
+    if (['disableAdvancedSearch'].includes(methodName)) {
+      return this[methodName](...args);
+    }
+    this.getModal().modalInfo(
+      'Erreur',
+      `Method "${methodName}" not allowed for public call.`,
+      { isError: true },
+    );
+    throw new MethodCallNotAllowedError(`Method "${methodName}" not allowed for public call.`);
   }
 }
