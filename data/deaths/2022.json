@@ -3719,6 +3719,45 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "09",
+      "day": "17",
+      "keywords": "Géraldine",
+      "house": "pn",
+      "peers": [],
+      "text": "Une policière de l'UPS nuit a mis fin à ses jours avec son arme administrative à son domicile.\nElle était mère de famille.",
+      "section": "UPS nuit",
+      "location": "Blois",
+      "county": "41",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.589825432115134,
+        "lng": 1.3412938930137908
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/une-policiere-du-commissariat-de-blois-sest-suicidee-a-son-domicile.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lanouvelletribune.info/2022/09/france-une-policiere-se-suicide-a-son-domicile/",
+          "title": "La Nouvelle Tribune",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
