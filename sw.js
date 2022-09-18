@@ -1,5 +1,5 @@
-/** SW auto-generated on 2022-09-17T00:57:34.413Z **/
-const CACHE_KEY = 'pwa_assets-2.9.0';
+/** SW auto-generated on 2022-09-18T18:35:58.020Z **/
+const CACHE_KEY = 'pwa_assets-2.9.1';
 const assets = [
   'assets/css/fonts/glyphicons-halflings-regular.eot',
   'assets/css/fonts/glyphicons-halflings-regular.svg',
