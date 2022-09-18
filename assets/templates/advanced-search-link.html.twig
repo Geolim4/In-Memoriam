@@ -4,8 +4,14 @@
        data-modal-title="Aide à la recherche avancée"
        data-modal-content-template="advanced-search"
        data-modal-content-vars=""
-       data-modal-options='{{ {isLarge: true}|json_encode|url_encode }}'>
+       data-modal-options='{{ {isLarge: true, cancelLabel: "Désactiver la recherche avancée", cancelCallback: "disableAdvancedSearch", requiresExplicitCancel: true, cancelButtonColor: 'warning'}|json_encode|url_encode }}'>
         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
         <span>Recherche avancée activée</span>
+    </a>
+    <a href="javascript:;"
+       data-controller="proxy-call"
+       data-proxy-method="disableAdvancedSearch"
+       data-tippy-content="Désactiver la recherche avancée">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true" style="color: #720000"></span>
     </a>
 </small>

@@ -8,6 +8,7 @@ import { FormFilters } from './models/Filters/formFilters.model';
 import { Death } from './models/Death/death.model';
 import { Renderer } from './Extensions/renderer';
 import { Promise } from 'es6-promise';
+import { StringUtilsHelper } from './helper/stringUtils.helper';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -216,6 +217,22 @@ export abstract class AppAbstract {
     } else {
       document.fullscreenElement.querySelectorAll('.loader.loader-wall').forEach((e) => (e.remove()));
     }
+  }
+
+  public disableAdvancedSearch(): void {
+    const searchElement = <HTMLInputElement>document.getElementById('search');
+    searchElement.value = '';
+    searchElement.parentElement.querySelector('.advanced-search-enabled').remove();
+    this.setSearchByExpression(false);
+  }
+
+  protected enableAdvancedSearch(): void {
+    const searchElement = <HTMLInputElement>document.getElementById('search');
+    this.getRenderer().renderTo('advanced-search-link', {}, searchElement.parentElement, 'appendChild').then(() => {
+      searchElement.value = 'expr:(death !== null)';
+      StringUtilsHelper.setCaretPosition(searchElement, 16, 20);
+      this.setSearchByExpression(true);
+    });
   }
 
   protected flagAppAsLoaded() : void {

@@ -18,6 +18,9 @@ export class Links {
       case 'advanced-modal':
         this.handleAdvancedModalLink(link);
         break;
+      case 'proxy-call':
+        this.handleProxyCallLink(link);
+        break;
       default:
         App.getInstance().getModal().modalInfo('Erreur', `Contrôleur "${link.dataset.controller}" inconnu.`, { isError: true });
     }
@@ -46,36 +49,61 @@ export class Links {
   }
 
   protected static handleSimpleModalLink(link: HTMLAnchorElement): void {
-    let modalOptions: ModalOptions;
+    let modalOptions = {};
     try {
       modalOptions = JSON.parse(decodeURIComponent(link.dataset.modalOptions));
-    } catch {
-      modalOptions = {};
-    }
+    } catch {}
+
     App.getInstance().getModal().modalInfo(
       link.dataset.modalTitle,
       link.dataset.modalContent,
-      modalOptions,
+      this.normalizeModalOptions(modalOptions),
     );
   }
 
   protected static handleAdvancedModalLink(link: HTMLAnchorElement): void {
-    let tplVars: {};
-    let modalOptions: ModalOptions;
+    let tplVars = {};
+    let modalOptions = {};
     try {
       tplVars = JSON.parse(decodeURIComponent(link.dataset.modalContentVars));
-    } catch {
-      tplVars = {};
-    }
+    } catch {}
     try {
       modalOptions = JSON.parse(decodeURIComponent(link.dataset.modalOptions));
-    } catch {
-      modalOptions = {};
-    }
+    } catch {}
     App.getInstance().getModal().modalInfo(
       link.dataset.modalTitle,
       new ModalContentTemplate(link.dataset.modalContentTemplate, tplVars),
-      modalOptions,
+      this.normalizeModalOptions(modalOptions),
     );
+  }
+
+  protected static normalizeModalOptions(modalOptions: {}): ModalOptions {
+    const normalizedModalOptions = { ...modalOptions }; // Shallow clone to remove circular reference of stringified method call
+
+    if (typeof modalOptions['cancelCallback'] === 'string') {
+      normalizedModalOptions['cancelCallback'] = () => {
+        return App.getInstance().exposedProxyCall(modalOptions['cancelCallback']);
+      };
+    }
+
+    if (typeof modalOptions['confirmCallback'] === 'string') {
+      normalizedModalOptions['confirmCallback'] = () => {
+        return App.getInstance().exposedProxyCall(modalOptions['confirmCallback']);
+      };
+    }
+
+    return normalizedModalOptions;
+  }
+
+  protected static handleProxyCallLink(link: HTMLAnchorElement): void {
+    const proxyMethod = link.dataset.proxyMethod;
+    let proxyMethodArgs: [string?] = [];
+    try {
+      proxyMethodArgs = JSON.parse(decodeURIComponent(link.dataset.proxyMethodArgs));
+    } catch {}
+
+    if (proxyMethod) {
+      App.getInstance().exposedProxyCall(proxyMethod, ...proxyMethodArgs);
+    }
   }
 }

@@ -22,6 +22,9 @@ export class Modal {
   public modalInfo(title: string, content: string|ModalContentTemplate, options?: ModalOptions): void {
     const confirmCallback = (typeof options === 'object' && options.confirmCallback) || null;
     const cancelCallback = (typeof options === 'object' && options.cancelCallback) || null;
+    const confirmButtonColor = (typeof options === 'object' && options.confirmButtonColor) || 'primary';
+    const cancelButtonColor = (typeof options === 'object' && options.cancelButtonColor) || '';
+    const requiresExplicitCancel = (typeof options === 'object' && options.requiresExplicitCancel) || false;
     const isError = (typeof options === 'object' && options.isError) || false;
     const isLarge = (typeof options === 'object' && options.isLarge) || false;
     const onceShown = (typeof options === 'object' && options.onceShown) || false;
@@ -41,15 +44,16 @@ export class Modal {
     if (!this.modelOpened) {
       this.modelOpened = true;
       let hasConfirmed = false;
+      let hasExplicitelyCanceled = false;
 
       App.getInstance()
       .getRenderer()
-      .renderTo('modals/modal-info', { title, content, isError, isLarge, okLabel, cancelLabel, isConfirm: !!confirmCallback }, '#micromodals')
+      .renderTo('modals/modal-info', { title, content, isError, isLarge, okLabel, cancelLabel, confirmButtonColor, cancelButtonColor, hasConfirm: !!confirmCallback, hasCancel: !!cancelCallback }, '#micromodals')
       .then(() => {
         if (document.getElementById('modal-info')) {
           micromodal.show('modal-info', {
             onClose: () => {
-              if (!hasConfirmed && confirmCallback && cancelCallback) {
+              if (!hasConfirmed && cancelCallback && (!requiresExplicitCancel || (requiresExplicitCancel && hasExplicitelyCanceled))) {
                 cancelCallback();
               }
               Events.hardRemoveEventHandler(document.querySelector('#modal-info button[data-micromodal-role="validate"]'));
@@ -63,15 +67,29 @@ export class Modal {
               }
             },
             onShow: () => {
-              if (confirmCallback) {
-                const validateButton = <HTMLInputElement> document.querySelector('#modal-info button[data-micromodal-role="validate"]');
+              const validateButton = <HTMLInputElement> document.querySelector('#modal-info button[data-micromodal-role="validate"]');
+              const cancelButton = <HTMLInputElement> document.querySelector('#modal-info button[data-micromodal-role="cancel"]');
+              if (validateButton) {
                 Events.addEventHandler(
                   validateButton,
                   ['click', 'touchstart'],
                   (e) => {
                     e.preventDefault();
                     hasConfirmed = true;
-                    confirmCallback();
+                    if (confirmCallback) {
+                      confirmCallback();
+                    }
+                  },
+                  true,
+                );
+              }
+              if (cancelButton) {
+                Events.addEventHandler(
+                  cancelButton,
+                  ['click', 'touchstart'],
+                  (e) => {
+                    e.preventDefault();
+                    hasExplicitelyCanceled = true;
                   },
                   true,
                 );
