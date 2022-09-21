@@ -1,5 +1,5 @@
-/** SW auto-generated on 2022-09-18T18:35:58.020Z **/
-const CACHE_KEY = 'pwa_assets-2.9.1';
+/** SW auto-generated on 2022-09-21T23:45:06.871Z **/
+const CACHE_KEY = 'im-3.0.0+20220921T234506';
 const assets = [
   'assets/css/fonts/glyphicons-halflings-regular.eot',
   'assets/css/fonts/glyphicons-halflings-regular.svg',
@@ -37,6 +37,7 @@ const assets = [
   'assets/images/map/list.png',
   'assets/images/map/random.png',
   'assets/images/map/refresh.png',
+  'assets/images/map/timelapse.png',
   'assets/images/pwa/in-memoriam_192_maskable.png',
   'assets/images/pwa/in-memoriam_192.png',
   'assets/images/pwa/in-memoriam_512_maskable.png',
