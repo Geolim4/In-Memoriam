@@ -1,5 +1,5 @@
 /** SW auto-generated on %APP_BUILD_DATE% **/
-const CACHE_KEY = 'pwa_assets-%APP_VERSION%';
+const CACHE_KEY = 'im-%APP_VERSION%';
 const assets = [
 %APP_ASSETS%
 ];

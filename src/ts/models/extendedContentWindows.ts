@@ -1,4 +1,4 @@
 export interface ExtendedContentWindows extends Window {
-  eval: () => any;
-  execScript: () => any;
+    eval: () => any;
+    execScript: () => any;
 }

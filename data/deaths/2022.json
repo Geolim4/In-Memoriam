@@ -3758,6 +3758,63 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "09",
+      "day": "20",
+      "keywords": "Karim",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier de la brigade nuit d'Angoulême nuit a mis fin à ses jours avec son arme administrative à son domicile.\nIl était père de trois enfants.",
+      "section": "Brigade Nuit",
+      "location": "Angoulême",
+      "county": "16",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.649683022605224,
+        "lng": 0.1640536839630139
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/charente-un-policier-du-commissariat-dangouleme-sest-suicide.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/alliancepolice/status/1572466301150580737",
+          "title": "@alliancepolice",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/angouleme-un-policier-du-commissariat-se-suicide-1663751862",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.charentelibre.fr/faits-divers/commissariat-d-angouleme-un-policier-se-suicide-avec-son-arme-de-service-12346944.php",
+          "title": "Charente Libre",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/societe/4001889-20220921-angouleme-suicide-policier-condamne-faux-violences-interdit-exercer",
+          "title": "20 minutes",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }

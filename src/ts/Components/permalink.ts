@@ -6,23 +6,21 @@ import { Filters } from '../models';
  * @licence GPL-2.0
  */
 export class Permalink {
-  public static build(filters: Filters, replaceHistoryState?: boolean, selector?: string): void {
-    const permalinkElement = <HTMLInputElement>document.querySelector(selector ? selector : '[data-role="permalink"]');
-    const url = window.location.href.split('#')[0];
-    let anchor = '';
+    public static build(filters: Filters, replaceHistoryState?: boolean, selector?: string): void {
+        const permalinkElement = <HTMLInputElement>document.querySelector(selector || '[data-role="permalink"]');
+        const url = window.location.href.split('#')[0];
+        let anchor = '';
 
-    for (const key in filters) {
-      if (filters.hasOwnProperty(key)) {
-        const filterValue = encodeURI(filters[key]);
-        if (filterValue) {
-          anchor += `${anchor ? '&' : '#'}${key}=${filterValue}`;
+        for (const key in filters) {
+            const filterValue = encodeURI(filters[key]);
+            if (filterValue) {
+                anchor += `${anchor ? '&' : '#'}${key}=${filterValue}`;
+            }
         }
-      }
-    }
 
-    permalinkElement.value = url + anchor;
-    if (replaceHistoryState) {
-      window.history.replaceState(null, null, url + anchor);
+        permalinkElement.value = url + anchor;
+        if (replaceHistoryState) {
+            window.history.replaceState(null, null, url + anchor);
+        }
     }
-  }
 }

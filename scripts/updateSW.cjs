@@ -6,13 +6,14 @@ const glob = require("glob")
 
 console.log(clc.blue('Rebuilding service worker...'));
 fs.readFile(path.resolve(projectDir + '/data/config/', 'settings.json'), 'utf8', (err, settingsStr) => {
+  const now = new Date();
   const settings = JSON.parse(settingsStr);
-  const appVersion = settings.settings.appVersion;
+  const appVersion = settings.settings.appVersion + '+' + now.toISOString().slice(0,19).replace(/[-:]/g,'');
 
   fs.readFile(path.resolve(projectDir, 'sw.js.dist'), 'utf8', (err, swDistStr) => {
     const swFile = path.resolve(projectDir, 'sw.js');
     const assetsDir = path.resolve(projectDir, 'assets');
-    let swDistStrTarget = swDistStr.replace('%APP_VERSION%', appVersion).replace('%APP_BUILD_DATE%', (new Date()).toISOString());
+    let swDistStrTarget = swDistStr.replace('%APP_VERSION%', appVersion).replace('%APP_BUILD_DATE%', now.toISOString());
     let assetsStr = '';
 
     glob('**/*.{json,png,twig,css,js,eot,svg,ttf,woff,woff2}', {cwd : assetsDir}, function (er, files) {

@@ -1,5 +1,5 @@
 export interface DefinitionsCount {
-  [name: string]: {
-    [name: string]: number,
-  };
+    [name: string]: {
+        [name: string]: number;
+    };
 }

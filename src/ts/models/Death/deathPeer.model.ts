@@ -1,5 +1,5 @@
 export interface DeathPeer {
-  count: number;
-  house: string;
-  section: string;
+    count: number;
+    house: string;
+    section: string;
 }
