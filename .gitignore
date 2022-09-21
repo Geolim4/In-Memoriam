@@ -4,3 +4,4 @@ assets/js
 assets/json
 node_modules/
 sw.js
+/yarn-error.log

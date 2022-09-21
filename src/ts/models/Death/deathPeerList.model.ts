@@ -1,3 +1,3 @@
 export interface DeathPeerList {
-  [name: string]: { [name: string]: number };
+    [name: string]: { [name: string]: number };
 }

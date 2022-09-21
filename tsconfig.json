@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "esModuleInterop": false,
-    "lib": ["dom"],
+    "lib": ["DOM", "es2020"],
     "moduleResolution": "node",
-    "target": "es5",
+    "target": "es2020",
     "typeRoots": ["node_modules/@types"],
     "allowSyntheticDefaultImports": true
   },

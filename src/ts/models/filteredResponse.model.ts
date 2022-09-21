@@ -1,6 +1,6 @@
 import { Bloodbath } from './bloodbath.model';
 
 export interface FilteredResponse {
-  response: Bloodbath;
-  errored: boolean;
+    response: Bloodbath;
+    errored: boolean;
 }

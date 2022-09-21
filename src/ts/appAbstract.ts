@@ -1,3 +1,4 @@
+import { Promise } from 'es6-promise';
 import { ConfigFactory } from './Extensions/configFactory';
 import { Modal } from './Extensions/modal';
 import { Charts } from './Extensions/charts';
@@ -7,7 +8,6 @@ import { ExtendedGoogleMapsMarker } from './models/Gmaps/extendedGoogleMapsMarke
 import { FormFilters } from './models/Filters/formFilters.model';
 import { Death } from './models/Death/death.model';
 import { Renderer } from './Extensions/renderer';
-import { Promise } from 'es6-promise';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
 
 /**
@@ -15,237 +15,252 @@ import { StringUtilsHelper } from './helper/stringUtils.helper';
  * @licence GPL-2.0
  */
 export abstract class AppAbstract {
-  protected map: google.maps.Map;
-  protected markers: ExtendedGoogleMapsMarker[];
-  protected markerHashIndex: {};
-  protected suggestions: string[];
-  private currentInfoWindow: google.maps.InfoWindow;
-  private formFilters: FormFilters;
-  private appLoaded: boolean;
-  private heatmapEnabled: boolean;
-  private clusteringEnabled: boolean;
-  private configFactory: ConfigFactory;
-  private glossary: { [name: string]: string };
-  private renderer: Renderer;
-  private readonly modal: Modal;
-  private readonly charts: Charts;
-  private readonly mapButtons: MapButtons;
-  private searchByExpression: boolean;
+    protected map: google.maps.Map;
 
-  protected constructor() {
-    this.map = null;
-    this.markers = [];
-    this.markerHashIndex = {};
-    this.suggestions = [];
-    this.currentInfoWindow = null;
-    this.formFilters = {};
-    this.appLoaded = false;
-    this.heatmapEnabled = true;
-    this.clusteringEnabled = true;
-    this.configFactory = null;
-    this.glossary = {};
-    this.modal = new Modal();
-    this.charts = new Charts();
-    this.mapButtons = new MapButtons();
-    this.searchByExpression = false;
-  }
+    protected markers: ExtendedGoogleMapsMarker[];
 
-  public getMap(): google.maps.Map {
-    return this.map;
-  }
+    protected markerHashIndex: {};
 
-  public isAppLoaded(): boolean {
-    return this.appLoaded;
-  }
+    protected suggestions: string[];
 
-  public setAppLoaded(appLoaded: boolean): void {
-    this.appLoaded = appLoaded;
-  }
+    private currentInfoWindow: google.maps.InfoWindow;
 
-  public isClusteringEnabled(): boolean {
-    return this.clusteringEnabled;
-  }
+    private formFilters: FormFilters;
 
-  public setClusteringEnabled(clusteringEnabled: boolean): void {
-    this.clusteringEnabled = clusteringEnabled;
-  }
+    private appLoaded: boolean;
 
-  public isHeatmapEnabled(): boolean {
-    return this.heatmapEnabled;
-  }
+    private heatmapEnabled: boolean;
 
-  public setHeatmapEnabled(heatmapEnabled: boolean): void {
-    this.heatmapEnabled = heatmapEnabled;
-  }
+    private clusteringEnabled: boolean;
 
-  public getConfigFactory(): ConfigFactory {
-    return this.configFactory;
-  }
+    private configFactory: ConfigFactory;
 
-  public setConfigFactory(configFactory: ConfigFactory): void {
-    this.configFactory = configFactory;
-  }
+    private glossary: { [name: string]: string };
 
-  public getConfigDefinitions(): Definitions {
-    return this.getConfigFactory().definitions;
-  }
+    private renderer: Renderer;
 
-  public getGlossary(): { [name: string]: string } {
-    return this.glossary;
-  }
+    private readonly modal: Modal;
 
-  public setGlossary(glossary: { [name: string]: string }): void {
-    this.glossary = glossary;
-  }
+    private readonly charts: Charts;
 
-  public getModal(): Modal {
-    return this.modal;
-  }
+    private readonly mapButtons: MapButtons;
 
-  public getCharts(): Charts {
-    return this.charts;
-  }
+    private searchByExpression: boolean;
 
-  public getMapButtons(): MapButtons {
-    return this.mapButtons;
-  }
-
-  public isSearchByExpressionEnabled(): boolean {
-    return this.searchByExpression;
-  }
-
-  public setSearchByExpression(searchByExpression: boolean): void {
-    this.searchByExpression = searchByExpression;
-  }
-
-  public getMarkers(): ExtendedGoogleMapsMarker[] {
-    return this.markers;
-  }
-
-  public getMarkerHashIndex(): {} {
-    return this.markerHashIndex;
-  }
-
-  public getSuggestions(): string[] {
-    return this.suggestions;
-  }
-
-  public setSuggestions(suggestions: string[]): void {
-    this.suggestions = suggestions;
-  }
-
-  public pushSuggestion(suggestion: string): void {
-    this.suggestions.push(suggestion);
-  }
-
-  public pushSuggestionFromDeath(death: Death): void {
-    this.suggestions.push(death.location);
-    this.suggestions.push(death.section);
-    death.peers.forEach((peer) => this.suggestions.push(peer.section));
-  }
-
-  public getCurrentInfoWindow(): google.maps.InfoWindow {
-    return this.currentInfoWindow;
-  }
-
-  public setCurrentInfoWindow(infoWindow: google.maps.InfoWindow): void {
-    this.currentInfoWindow = infoWindow;
-  }
-
-  public getFormFilters(): FormFilters {
-    return this.formFilters;
-  }
-
-  public setFormFilters(formFilters: FormFilters): void {
-    this.formFilters = formFilters;
-  }
-
-  public getRenderer(): Renderer {
-    return this.renderer;
-  }
-
-  public setRenderer(renderer: Renderer): void {
-    this.renderer = renderer;
-  }
-
-  public getTotalDeathCount(death: Death): number {
-    let count = 0;
-    for (const peer of death.peers) {
-      count += peer.count;
+    protected constructor() {
+        this.map = null;
+        this.markers = [];
+        this.markerHashIndex = {};
+        this.suggestions = [];
+        this.currentInfoWindow = null;
+        this.formFilters = {};
+        this.appLoaded = false;
+        this.heatmapEnabled = true;
+        this.clusteringEnabled = true;
+        this.configFactory = null;
+        this.glossary = {};
+        this.modal = new Modal();
+        this.charts = new Charts();
+        this.mapButtons = new MapButtons();
+        this.searchByExpression = false;
     }
 
-    return death.count + count;
-  }
-
-  public runActionWithNeededLoaderWall(cbck: VoidFunction, target?: Element): void {
-    (new Promise((resolve, reject) => {
-      try {
-        this.showLoaderWall(target);
-        resolve(true);
-      } catch (e) {
-        reject(false);
-      }
-    }))
-    .then(() => cbck())
-    .finally(() => (this.hideLoaderWall(target)));
-  }
-
-  public showLoaderWall(target?: Element): void  {
-    const div = document.createElement('div');
-    div.classList.add('loader-wall', 'loader', 'loader-default', 'is-active');
-    if (document.fullscreenElement === null) {
-      if (target instanceof Element) {
-        div.classList.add('inside');
-        target.parentElement.classList.add('loader-container');
-        target.appendChild(div);
-      } else {
-        document.querySelector('body').appendChild(div);
-      }
-    } else {
-      document.fullscreenElement.appendChild(div);
+    public getMap(): google.maps.Map {
+        return this.map;
     }
-  }
 
-  public hideLoaderWall(target?: Element): void  {
-    if (document.fullscreenElement === null) {
-      if (target instanceof Element) {
-        target.parentElement.classList.remove('loader-container');
-        target.querySelectorAll('.loader.loader-wall').forEach((e) => (e.remove()));
-      } else {
-        document.querySelectorAll('.loader.loader-wall').forEach((e) => (e.remove()));
-      }
-    } else {
-      document.fullscreenElement.querySelectorAll('.loader.loader-wall').forEach((e) => (e.remove()));
+    public isAppLoaded(): boolean {
+        return this.appLoaded;
     }
-  }
 
-  public disableAdvancedSearch(): void {
-    const searchElement = <HTMLInputElement>document.getElementById('search');
-    searchElement.value = '';
-    searchElement.parentElement.querySelector('.advanced-search-enabled').remove();
-    this.setSearchByExpression(false);
-  }
+    public setAppLoaded(appLoaded: boolean): void {
+        this.appLoaded = appLoaded;
+    }
 
-  protected enableAdvancedSearch(): void {
-    const searchElement = <HTMLInputElement>document.getElementById('search');
-    this.getRenderer().renderTo('advanced-search-link', {}, searchElement.parentElement, 'appendChild').then(() => {
-      searchElement.value = 'expr:(death !== null)';
-      StringUtilsHelper.setCaretPosition(searchElement, 16, 20);
-      this.setSearchByExpression(true);
-    });
-  }
+    public isClusteringEnabled(): boolean {
+        return this.clusteringEnabled;
+    }
 
-  protected flagAppAsLoaded() : void {
-    if (!this.isAppLoaded()) {
-      document.querySelector('body').classList.add('loaded');
+    public setClusteringEnabled(clusteringEnabled: boolean): void {
+        this.clusteringEnabled = clusteringEnabled;
+    }
 
-      document.querySelectorAll('.shimmer-loader').forEach((element) => {
-        element.classList.remove('shimmer-loader');
-      });
+    public isHeatmapEnabled(): boolean {
+        return this.heatmapEnabled;
+    }
 
-      this.setAppLoaded(true);
-      console.log(`App loaded in ${((window.performance.now()) / 1000).toFixed(3)}s.`);
-      console.log(`
+    public setHeatmapEnabled(heatmapEnabled: boolean): void {
+        this.heatmapEnabled = heatmapEnabled;
+    }
+
+    public getConfigFactory(): ConfigFactory {
+        return this.configFactory;
+    }
+
+    public setConfigFactory(configFactory: ConfigFactory): void {
+        this.configFactory = configFactory;
+    }
+
+    public getConfigDefinitions(): Definitions {
+        return this.getConfigFactory().definitions;
+    }
+
+    public getGlossary(): { [name: string]: string } {
+        return this.glossary;
+    }
+
+    public setGlossary(glossary: { [name: string]: string }): void {
+        this.glossary = glossary;
+    }
+
+    public getModal(): Modal {
+        return this.modal;
+    }
+
+    public getCharts(): Charts {
+        return this.charts;
+    }
+
+    public getMapButtons(): MapButtons {
+        return this.mapButtons;
+    }
+
+    public isSearchByExpressionEnabled(): boolean {
+        return this.searchByExpression;
+    }
+
+    public setSearchByExpression(searchByExpression: boolean): void {
+        this.searchByExpression = searchByExpression;
+    }
+
+    public getMarkers(): ExtendedGoogleMapsMarker[] {
+        return this.markers;
+    }
+
+    public getMarkerHashIndex(): {} {
+        return this.markerHashIndex;
+    }
+
+    public getSuggestions(): string[] {
+        return this.suggestions;
+    }
+
+    public setSuggestions(suggestions: string[]): void {
+        this.suggestions = suggestions;
+    }
+
+    public pushSuggestion(suggestion: string): void {
+        this.suggestions.push(suggestion);
+    }
+
+    public pushSuggestionFromDeath(death: Death): void {
+        this.suggestions.push(death.location);
+        this.suggestions.push(death.section);
+        death.peers.forEach((peer): number => this.suggestions.push(peer.section));
+    }
+
+    public getCurrentInfoWindow(): google.maps.InfoWindow {
+        return this.currentInfoWindow;
+    }
+
+    public setCurrentInfoWindow(infoWindow: google.maps.InfoWindow): void {
+        this.currentInfoWindow = infoWindow;
+    }
+
+    public getFormFilters(): FormFilters {
+        return this.formFilters;
+    }
+
+    public setFormFilters(formFilters: FormFilters): void {
+        this.formFilters = formFilters;
+    }
+
+    public getRenderer(): Renderer {
+        return this.renderer;
+    }
+
+    public setRenderer(renderer: Renderer): void {
+        this.renderer = renderer;
+    }
+
+    public getTotalDeathCount(death: Death): number {
+        let count = 0;
+        for (const peer of death.peers) {
+            count += peer.count;
+        }
+
+        return death.count + count;
+    }
+
+    public runActionWithNeededLoaderWall(cbck: VoidFunction, target?: Element): void {
+        (new Promise((resolve, reject): void => {
+            try {
+                this.showLoaderWall(target);
+                resolve(true);
+            } catch (e) {
+                reject(new Error());
+            }
+        }))
+            .then((): void => cbck())
+            .finally((): void => (this.hideLoaderWall(target)));
+    }
+
+    public showLoaderWall(target?: Element): void {
+        const div = document.createElement('div');
+        div.classList.add('loader-wall', 'loader', 'loader-default', 'is-active');
+        if (document.fullscreenElement === null) {
+            if (target instanceof Element) {
+                div.classList.add('inside');
+                target.parentElement.classList.add('loader-container');
+                target.appendChild(div);
+            } else {
+                document.querySelector('body').appendChild(div);
+            }
+        } else {
+            document.fullscreenElement.appendChild(div);
+        }
+    }
+
+    public hideLoaderWall(target?: Element): void {
+        if (document.fullscreenElement === null) {
+            if (target instanceof Element) {
+                target.parentElement.classList.remove('loader-container');
+                target.querySelectorAll('.loader.loader-wall').forEach((e): void => (e.remove()));
+            } else {
+                document.querySelectorAll('.loader.loader-wall').forEach((e): void => (e.remove()));
+            }
+        } else {
+            document.fullscreenElement.querySelectorAll('.loader.loader-wall').forEach((e): void => (e.remove()));
+        }
+    }
+
+    public disableAdvancedSearch(): void {
+        const searchElement = <HTMLInputElement>document.getElementById('search');
+        searchElement.value = '';
+        searchElement.parentElement.querySelector('.advanced-search-enabled').remove();
+        this.setSearchByExpression(false);
+    }
+
+    protected enableAdvancedSearch(): void {
+        const searchElement = <HTMLInputElement>document.getElementById('search');
+        this.getRenderer().renderTo('advanced-search-link', {}, searchElement.parentElement, 'appendChild').then((): void => {
+            searchElement.value = 'expr:(death !== null)';
+            StringUtilsHelper.setCaretPosition(searchElement, 16, 20);
+            this.setSearchByExpression(true);
+        });
+    }
+
+    protected flagAppAsLoaded() : void {
+        if (!this.isAppLoaded()) {
+            document.querySelector('body').classList.add('loaded');
+
+            document.querySelectorAll('.shimmer-loader').forEach((element): void => {
+                element.classList.remove('shimmer-loader');
+            });
+
+            this.setAppLoaded(true);
+            console.log(`App loaded in ${((window.performance.now()) / 1000).toFixed(3)}s.`);
+            console.log(`
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
        👋🏻 Hello curious visitor, do you want to contribute to this fabulous project ?
 
@@ -254,6 +269,6 @@ export abstract class AppAbstract {
        ❤️ Thank you ❤️
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
       `);
+        }
     }
-  }
 }

@@ -1,4 +1,4 @@
 export interface TitleUrl {
-  title: string;
-  url: string;
+    title: string;
+    url: string;
 }
