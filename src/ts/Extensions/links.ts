@@ -64,12 +64,14 @@ export class Links {
     protected static handleAdvancedModalLink(link: HTMLAnchorElement): void {
         let tplVars = {};
         let modalOptions = {};
+
         try {
             tplVars = JSON.parse(decodeURIComponent(link.dataset.modalContentVars));
         } catch {}
         try {
             modalOptions = JSON.parse(decodeURIComponent(link.dataset.modalOptions));
         } catch {}
+
         App.getInstance().getModal().modalInfo(
             link.dataset.modalTitle,
             new ModalContentTemplate(link.dataset.modalContentTemplate, tplVars),
@@ -88,6 +90,11 @@ export class Links {
             normalizedModalOptions.confirmCallback = ():any => App.getInstance().exposedProxyCall(modalOptions.confirmCallback);
         }
 
+        /**
+         * Modal from links should
+         * always close the current one
+         */
+        normalizedModalOptions.noStacking = true;
         return normalizedModalOptions;
     }
 

@@ -4,7 +4,6 @@ import { ModalInfoParameters } from '../models/modalInfoParameters.model';
 import { ModalOptions } from '../models/Modal/modalOptions.model';
 import { AppStatic } from '../appStatic';
 import { App } from '../app';
-import { StringUtilsHelper } from '../helper/stringUtils.helper';
 import { ModalContentTemplate } from './modalContentTemplate';
 
 /**
@@ -29,6 +28,8 @@ export class Modal {
         const cancelButtonColor = (typeof options === 'object' && options.cancelButtonColor) || '';
         const requiresExplicitCancel = (typeof options === 'object' && options.requiresExplicitCancel) || false;
         const nl2brContent = (typeof options === 'object' && options.nl2brContent) || false;
+        const noStacking = (typeof options === 'object' && options.noStacking) || false;
+        const escapeContent = (typeof options === 'object' && options.escapeContent) || false;
         const isError = (typeof options === 'object' && options.isError) || false;
         const isLarge = (typeof options === 'object' && options.isLarge) || false;
         const onceShown = (typeof options === 'object' && options.onceShown) || false;
@@ -45,6 +46,10 @@ export class Modal {
             return;
         }
 
+        if (noStacking && this.modelOpened) {
+            this.closeModalInfo();
+        }
+
         if (!this.modelOpened) {
             this.modelOpened = true;
             let hasConfirmed = false;
@@ -58,11 +63,13 @@ export class Modal {
                         cancelButtonColor,
                         cancelLabel,
                         confirmButtonColor,
-                        content: nl2brContent ? StringUtilsHelper.replaceAll(content, '\n', '<br />') : content,
+                        content,
+                        escapeContent,
                         hasCancel: !!cancelCallback,
                         hasConfirm: !!confirmCallback,
                         isError,
                         isLarge,
+                        nl2brContent,
                         okLabel,
                         title,
                     },

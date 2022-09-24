@@ -10,7 +10,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "3.0.0",
+    "appVersion": "3.1.0",
     "circleOptions": {
       "fillColor": "#9e2a2b",
       "fillOpacity": 0.25,
