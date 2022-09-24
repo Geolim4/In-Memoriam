@@ -46,7 +46,6 @@
     </div>
 </header>
 <div id="main">
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
@@ -120,58 +119,93 @@
             </div>
         </div>
         <div class="row mtop">
-            <form class="col-md-4" id="form-permalink">
-                <div class="shimmer-loader">
-                    <label for="permalink">Permalien</label>
-                    <input id="permalink" class="form-control" type="text" title="Permalien" value="" data-role="permalink" onclick="select()" size="30" readonly>
-                </div>
-            </form>
             <div class="col-md-8">
-                <div class="shimmer-loader h50">
-                    <strong> Association de soutien des forces armées et intérieures</strong>
-                    <p></p>
-                    <p class="association-list"></p>
-                </div>
-            </div>
-        </div>
-        <footer class="row mtop">
-            <div class="col-md-12">
                 <div class="shadowed">
                     <h3>
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                         <strong>Disclaimer</strong>
                     </h3>
                     <p>
-                      <span>
-                        Ce site n'a pas pour vocation d'être exhaustif mais de regrouper seulement les disparitions
-                        tragiques de
-                        nos
-                        forces de l'ordre, pompiers et militaires sur la base d'informations publiques et sourcées.
-                        Les sources sont croisées et vérifiées afin de minimiser le plus possible un risque d'erreur.
-                      </span>
+                          <span>
+                            Ce site n'a pas pour vocation d'être exhaustif mais de regrouper seulement les disparitions
+                            tragiques de
+                            nos
+                            forces de l'ordre, pompiers et militaires sur la base d'informations publiques et sourcées.
+                            Les sources sont croisées et vérifiées afin de minimiser le plus possible un risque d'erreur.
+                          </span>
                     </p>
                     <p>
                         Vous avez un commentaire, une erreur à signaler ou une modification à apporter ?
                     </p>
                     <p>
-                        <a href="javascript:window.location.href=atob('bWFpbHRvOmNvbnRhY3RAZ2VvbGltNC5jb20')">Contactez-nous</a> ou
-                        envoyez-nous un "pull request" sur <a href="https://github.com/Geolim4/In-Memoriam/compare" target="_blank">Github</a>.
+                        <a href="javascript:;"
+                           data-controller="advanced-modal"
+                           data-modal-title="Nous Contacter"
+                           data-modal-content-template="pages/contact-us"
+                           data-modal-options='{}'
+                           data-modal-content-vars='{}'>Contactez-nous</a> ou
+                            envoyez-nous un "pull request" sur <a href="https://github.com/Geolim4/In-Memoriam/compare" target="_blank">Github</a>.
                     </p>
                 </div>
             </div>
-            <div class="col-md-12 mtop">
-                <p class="text text-info text-center">
-                    <span><small>Cartographie conçue avec ❤️ par <a href="https://twitter.com/geo_bzh44" target="_blank">@geo_bzh44</a></small></span>
-                </p>
+            <div class="col-md-4 mtop">
+                <div class="shimmer-loader h150">
+                    <div class="shadowed">
+                        <div>
+                            <strong>Association de soutien des forces armées et intérieures</strong>
+                            <p></p>
+                            <p class="association-list"></p>
+                        </div>
+                        <form id="form-permalink" class="mtop">
+                            <label for="permalink">Permalien</label>
+                            <input id="permalink" class="form-control" type="text" title="Permalien" value="" data-role="permalink" onclick="select()" size="30" readonly>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-12">
-                <p class="text-center">
-                    <small data-tippy-content="Version actuelle de l'application :)"><code>v<em data-app-settings="appVersion"></em></code></small>
-                </p>
-            </div>
-        </footer>
+        </div>
     </div>
 </div>
+
+<footer class="mtop">
+    <div class="container-fluid">
+        <div class="col-md-4 mtop">
+            <p class="text-center">
+                <strong>
+                    <a href="javascript:;"
+                       data-controller="advanced-modal"
+                       data-modal-title="Politique de confidentialité"
+                       data-modal-content-template="pages/confidentiality"
+                       data-modal-options='{}'
+                       data-modal-content-vars='{}'>Politique de confidentialité</a>
+                </strong>
+            </p>
+        </div>
+        <div class="col-md-4 mtop">
+            <p class="text text-info text-center">
+                <span><small>Cartographie conçue avec ❤️ par <a href="https://twitter.com/geo_bzh44" target="_blank">@geo_bzh44</a></small></span>
+            </p>
+            <p class="text-center">
+                <small data-tippy-content="Version actuelle de l'application :)">
+                    <em>In-Memoriam</em>
+                    <code>v<em data-app-settings="appVersion"></em></code>
+                </small>
+            </p>
+        </div>
+        <div class="col-md-4 mtop">
+            <p class="text-center">
+                <strong>
+                    <a href="javascript:;"
+                       data-controller="advanced-modal"
+                       data-modal-title="Mentions Légales"
+                       data-modal-content-template="pages/legal-notice"
+                       data-modal-options='{}'
+                       data-modal-content-vars='{}'>Mentions Légales</a>
+                </strong>
+            </p>
+        </div>
+    </div>
+</footer>
 
 <!-- Modals -->
 <div id="micromodals">

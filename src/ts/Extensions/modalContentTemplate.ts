@@ -8,7 +8,7 @@ export class ModalContentTemplate {
     private variables : object;
 
     public constructor(contentTemplate: string, variables: object) {
-        this.contentTemplate = `modals/content-${contentTemplate}`;
+        this.contentTemplate = `modals/${contentTemplate}`;
         this.variables = variables;
     }
 
