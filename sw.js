@@ -1,5 +1,5 @@
-/** SW auto-generated on 2022-09-21T23:45:06.871Z **/
-const CACHE_KEY = 'im-3.0.0+20220921T234506';
+/** SW auto-generated on 2022-09-24T00:48:35.978Z **/
+const CACHE_KEY = 'im-3.1.0+20220924T004835';
 const assets = [
   'assets/css/fonts/glyphicons-halflings-regular.eot',
   'assets/css/fonts/glyphicons-halflings-regular.svg',
@@ -55,9 +55,13 @@ const assets = [
   'assets/templates/bloodbath-list.html.twig',
   'assets/templates/definitions.html.twig',
   'assets/templates/infowindow-death.html.twig',
-  'assets/templates/modals/content-advanced-search.html.twig',
-  'assets/templates/modals/content-infowindow-error.html.twig',
+  'assets/templates/modals/content/advanced-search.html.twig',
+  'assets/templates/modals/content/infowindow-error.html.twig',
   'assets/templates/modals/modal-info.html.twig',
+  'assets/templates/modals/pages/confidentiality.html.twig',
+  'assets/templates/modals/pages/contact-us.html.twig',
+  'assets/templates/modals/pages/legal-notice.html.twig',
+  'assets/templates/modals/pages/licence-gpl-2.0.html.twig',
 ];
 
 self.addEventListener('install', function(event) {
