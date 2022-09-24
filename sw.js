@@ -1,5 +1,5 @@
-/** SW auto-generated on 2022-09-24T00:48:35.978Z **/
-const CACHE_KEY = 'im-3.1.0+20220924T004835';
+/** SW auto-generated on 2022-09-24T17:47:40.630Z **/
+const CACHE_KEY = 'im-3.2.0+20220924T174740';
 const assets = [
   'assets/css/fonts/glyphicons-halflings-regular.eot',
   'assets/css/fonts/glyphicons-halflings-regular.svg',
@@ -56,6 +56,7 @@ const assets = [
   'assets/templates/definitions.html.twig',
   'assets/templates/infowindow-death.html.twig',
   'assets/templates/modals/content/advanced-search.html.twig',
+  'assets/templates/modals/content/cookie-consent-declined.html.twig',
   'assets/templates/modals/content/infowindow-error.html.twig',
   'assets/templates/modals/modal-info.html.twig',
   'assets/templates/modals/pages/confidentiality.html.twig',
