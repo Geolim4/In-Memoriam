@@ -147,6 +147,10 @@ export class Modal {
         }
     }
 
+    public isModalOpened(): boolean {
+        return this.modelOpened;
+    }
+
     protected bindFullscreenMicromodalListener(): void {
         document.addEventListener('fullscreenchange', (): void => {
             if (document.fullscreenElement) {

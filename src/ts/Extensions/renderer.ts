@@ -2,7 +2,6 @@ import { AppStatic } from '../appStatic';
 import { App } from '../app';
 import { StringUtilsHelper } from '../helper/stringUtils.helper';
 import { Death } from '../models/Death/death.model';
-
 const Twig = require('twig').twig;
 
 /**
@@ -69,7 +68,7 @@ export class Renderer {
                 });
         }
 
-        return (new Promise((resolve): void => (resolve())))
+        return (new Promise((resolve): void => resolve()))
             .then((): string => (this.doRender(this.templates[tplName], variables)));
     }
 

@@ -6,7 +6,7 @@ Events.addEventHandler(
     'DOMContentLoaded',
     (): void => {
         try {
-            if ('serviceWorker' in navigator) {
+            if ('serviceWorker' in navigator && document.location.hostname !== 'localhost') {
                 navigator.serviceWorker.register('sw.js').then((): void => {
                 }).catch((): void => {
                     console.warn('Failed to register the service worker, app will not work offline.');
