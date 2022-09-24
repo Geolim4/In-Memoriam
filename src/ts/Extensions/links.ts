@@ -7,22 +7,31 @@ import { ModalContentTemplate } from './modalContentTemplate';
  * @licence GPL-2.0
  */
 export class Links {
-    public static handleHtmlAnchorElement(link: HTMLAnchorElement): void {
-        switch (link.dataset.controller) {
-        case 'map-marker':
-            this.handleMapMarkerLink(link);
-            break;
-        case 'simple-modal':
-            this.handleSimpleModalLink(link);
-            break;
-        case 'advanced-modal':
-            this.handleAdvancedModalLink(link);
-            break;
-        case 'proxy-call':
-            this.handleProxyCallLink(link);
-            break;
-        default:
-            App.getInstance().getModal().modalInfo('Erreur', `Contrôleur "${link.dataset.controller}" inconnu.`, { isError: true });
+    public static handleHtmlAnchorElement(link: HTMLAnchorElement, e: Event): void {
+        if (link.dataset.controller) {
+            switch (link.dataset.controller) {
+                case 'map-marker':
+                    this.handleMapMarkerLink(link);
+                    break;
+                case 'simple-modal':
+                    this.handleSimpleModalLink(link);
+                    break;
+                case 'advanced-modal':
+                    this.handleAdvancedModalLink(link);
+                    break;
+                case 'proxy-call':
+                    this.handleProxyCallLink(link);
+                    break;
+                default:
+                    App.getInstance().getModal().modalInfo('Erreur', `Contrôleur "${link.dataset.controller}" inconnu.`, { isError: true });
+            }
+        } else if (link.href.includes('#fwd2:')) {
+            const forwardLink = document.querySelector(`a#${link.href.split('#fwd2:')[1]}`);
+            if (forwardLink) {
+                console.log(forwardLink);
+                e.preventDefault();
+                forwardLink.dispatchEvent(new Event('click', { bubbles: true, cancelable: true }));
+            }
         }
     }
 

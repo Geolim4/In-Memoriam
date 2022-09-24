@@ -60,6 +60,10 @@ body:not(.loaded) {
   .loader.is-active {
     display: none;
   }
+
+  .hide-until-loaded {
+    display: none;
+  }
 }
 
 #fork-me {

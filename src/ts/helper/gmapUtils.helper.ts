@@ -55,12 +55,12 @@ export class GmapUtils {
     protected static getWidthHeight(child: 'first'|'second', controlPosition: google.maps.ControlPosition, hasText: boolean) :string {
         if (!hasText) {
             switch (controlPosition) {
-            case google.maps.ControlPosition.LEFT_TOP:
-                return child === 'first' ? '28px' : '18px';
-            case google.maps.ControlPosition.RIGHT_TOP:
-                return child === 'first' ? '40px' : '30px';
-            default:
-                return child === 'first' ? '40px' : '28px';
+                case google.maps.ControlPosition.LEFT_TOP:
+                    return child === 'first' ? '28px' : '18px';
+                case google.maps.ControlPosition.RIGHT_TOP:
+                    return child === 'first' ? '40px' : '30px';
+                default:
+                    return child === 'first' ? '40px' : '28px';
             }
         }
 

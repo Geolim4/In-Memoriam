@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xml:lang="fr" lang="fr">
 
 <head>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net/">
     <link rel="dns-prefetch" href="//maps.googleapis.com/">
     <link rel="dns-prefetch" href="//fonts.gstatic.com/">
     <link rel="dns-prefetch" href="//fonts.googleapis.com/">
@@ -173,6 +174,7 @@
             <p class="text-center">
                 <strong>
                     <a href="javascript:;"
+                       id="confidentiality-link"
                        data-controller="advanced-modal"
                        data-modal-title="Politique de confidentialité"
                        data-modal-content-template="pages/confidentiality"
@@ -185,7 +187,7 @@
             <p class="text text-info text-center">
                 <span><small>Cartographie conçue avec ❤️ par <a href="https://twitter.com/geo_bzh44" target="_blank">@geo_bzh44</a></small></span>
             </p>
-            <p class="text-center">
+            <p class="text-center hide-until-loaded">
                 <small data-tippy-content="Version actuelle de l'application :)">
                     <em>In-Memoriam</em>
                     <code>v<em data-app-settings="appVersion"></em></code>
@@ -196,6 +198,7 @@
             <p class="text-center">
                 <strong>
                     <a href="javascript:;"
+                       id="legal-notice-link"
                        data-controller="advanced-modal"
                        data-modal-title="Mentions Légales"
                        data-modal-content-template="pages/legal-notice"
@@ -228,6 +231,7 @@
     </div>
 </div>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=fr&theme=altblack&thirdparty=1&always=1&noGeoIp=1&showNoConsent=1&hideDetailsBtn=1&showPolicyLink=1&privacyPage=%23fwd2%3Aconfidentiality-link"></script>
 <script type="text/javascript" src="./assets/js/app.js"></script>
 </body>
 </html>

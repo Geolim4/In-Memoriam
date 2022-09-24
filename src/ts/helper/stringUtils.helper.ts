@@ -24,12 +24,12 @@ export class StringUtilsHelper {
         }
 
         switch (containsStrategy) {
-        case 'one':
-            return votes.filter((v): boolean => v).length > 0;
-        case 'all':
-            return votes.filter((v): boolean => v).length === needle.length;
-        default:
-            return false;
+            case 'one':
+                return votes.filter((v): boolean => v).length > 0;
+            case 'all':
+                return votes.filter((v): boolean => v).length === needle.length;
+            default:
+                return false;
         }
     }
 

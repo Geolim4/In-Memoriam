@@ -1,6 +1,7 @@
 import { MarkerClusterer, SuperClusterAlgorithm } from '@googlemaps/markerclusterer';
 import { Loader } from '@googlemaps/js-api-loader';
 import activityDetector from 'activity-detector';
+import Cookies from 'js-cookie';
 import { AppAbstract } from './appAbstract';
 import { ConfigFactory } from './Extensions/configFactory';
 import { FormFilters } from './models/Filters/formFilters.model';
@@ -15,6 +16,7 @@ import { Death, DeathOrigin } from './models/Death/death.model';
 import { AppStatic } from './appStatic';
 import { Renderer } from './Extensions/renderer';
 import { Links } from './Extensions/links';
+import { ModalContentTemplate } from './Extensions/modalContentTemplate';
 
 const unique = require('array-unique');
 const Choices = require('choices.js');
@@ -219,12 +221,61 @@ export abstract class AppCore extends AppAbstract {
 
     private run(): void {
         this.setRenderer(new Renderer(this.getConfigFactory().config.templateDir));
-        (new Loader(this.getConfigFactory().config.googleMapsLoaderOptions))
-            .load()
-            .then((): void => this.loadGoogleMap());
+        this.bindInternalLinksEvent();
+        this.runGDPRComplianceScript();
     }
 
-    private loadGoogleMap(): void {
+    private runGDPRComplianceScript(): void {
+        setTimeout((): void => {
+            const cookieDenyBtn = document.querySelector('a#cookie-bar-button-no');
+            if (cookieDenyBtn) {
+                Events.addEventHandler(cookieDenyBtn, ['click', 'touchstart'], (): void => {
+                    if (Cookies.get('cookiebar') === 'CookieDisallowed') {
+                        location.reload();
+                    }
+                });
+            }
+        }, 500);
+
+        if (!Cookies.get('cookiebar') || Cookies.get('cookiebar') === 'CookieAllowed') {
+            this.runGoogleMapsLoader();
+        } else if (Cookies.get('cookiebar') === 'CookieDisallowed') {
+            this.getModal().modalInfo(
+                'Dépôt de cookies refusé',
+                new ModalContentTemplate('content/cookie-consent-declined', {}),
+                {
+                    cancelButtonColor: 'danger',
+                    cancelCallback: (): void => {
+                        /**
+                         * We want to avoid to let the user alone
+                         * on a page full of shimmer loaders once
+                         * every modal open are finally closed
+                         */
+                        setInterval((): void => {
+                            if (!this.getModal().isModalOpened()) {
+                                location.reload();
+                            }
+                        }, 1000);
+                    },
+                    cancelLabel: 'Conserver mon refus',
+                    confirmCallback: (): void => {
+                        Cookies.set('cookiebar', 'CookieAllowed');
+                        this.runGoogleMapsLoader();
+                    },
+                    isError: true,
+                    okLabel: 'Donner mon consentement',
+                },
+            );
+        }
+    }
+
+    private runGoogleMapsLoader(): void {
+        (new Loader(this.getConfigFactory().config.googleMapsLoaderOptions))
+            .load()
+            .then((): void => this.loadAppComponents());
+    }
+
+    private loadAppComponents(): void {
         const mapElement = <HTMLInputElement>document.getElementById('map');
         this.map = new google.maps.Map(mapElement, this.getConfigFactory().config.googleMapsOptions);
 
@@ -238,7 +289,6 @@ export abstract class AppCore extends AppAbstract {
                 this.bindFilters();
                 this.getMapButtons().bindCustomButtons();
                 this.bindMarkers(this.getFilters(true));
-                this.bindInternalLinksEvent();
                 this.bindMapEvents();
                 this.bindFullscreenFormFilterListener();
                 this.printSupportAssociations();
@@ -315,8 +365,8 @@ export abstract class AppCore extends AppAbstract {
                         const block = (negated ? safeBlock.substring(1) : safeBlock);
 
                         if (block.length >= this.getConfigFactory().getSearchMinLength() ||
-              // Handle special identifiers like Paris XXe, CRS xx, EGM XX/X, Dom/Tom code (9xx), Corse identifiers XA/B, etc.
-              (block.match(/^(((9?\d{1,2})[abe]?)|((([IVX]+)|(\d{1,2}))\/(\d{1,2})))$/) && i === 1)
+                          // Handle special identifiers like Paris XXe, CRS xx, EGM XX/X, Dom/Tom code (9xx), Corse identifiers XA/B, etc.
+                          (block.match(/^(((9?\d{1,2})[abe]?)|((([IVX]+)|(\d{1,2}))\/(\d{1,2})))$/) && i === 1)
                         ) {
                             if (!negated) {
                                 safeFilterSplited.push(block);
@@ -558,9 +608,9 @@ export abstract class AppCore extends AppAbstract {
     private bindInternalLinksEvent(): void {
         document.addEventListener('click', (e): void => {
             const target = e.target as HTMLAnchorElement;
-            const link = target.closest('a[data-controller]') as HTMLAnchorElement;
+            const link = target.closest('a[data-controller], a[href*="#fwd2:"]') as HTMLAnchorElement;
             if (link) {
-                Links.handleHtmlAnchorElement(link);
+                Links.handleHtmlAnchorElement(link, e);
             }
         });
     }

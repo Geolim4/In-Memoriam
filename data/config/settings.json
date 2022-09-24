@@ -10,7 +10,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "3.1.0",
+    "appVersion": "3.2.0",
     "circleOptions": {
       "fillColor": "#9e2a2b",
       "fillOpacity": 0.25,
@@ -98,6 +98,11 @@
         "hover": "Compte de promotion/soutien des FDOs (Instagram)",
         "title": "@36quaidesorfevres",
         "url": "https://www.instagram.com/36quaidesorfevres/"
+      },
+      {
+        "hover": "Mémoire de Nos Frères",
+        "title": "Projet Mémorial",
+        "url": "https://projet-memorial.fr/"
       }
     ],
     "templateDir": "./assets/templates/%tpl%.html.twig"
