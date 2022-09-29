@@ -3815,6 +3815,163 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "09",
+      "day": "24",
+      "keywords": "Anthony LESUFFLEUR",
+      "house": "armee",
+      "peers": [
+        {
+          "house": "pompier",
+          "count": 0,
+          "section": "",
+          "visible": false
+        }
+      ],
+      "text": "Un marin-pompier de la caserne St-Pierre à Marseille est décédé dans un accident de la route alors qu'il se rendait à son unité.\nTrès peu d'informations sur ce décès.",
+      "section": "BMPM",
+      "location": "Marseille",
+      "county": "13",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.2921705719058,
+        "lng": 5.402316966706277
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://twitter.com/SIS_2A/status/1481315051797626880",
+          "title": "@SIS_2A",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.corsematin.com/articles/grande-emotion-a-olmeto-apres-la-disparition-de-christophe-ettori-122959",
+          "title": "Corse Matin",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/corse/corse-du-sud/sartene/un-trentenaire-decede-dans-un-accident-de-la-route-entre-sartene-et-propriano-2414137.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "09",
+      "day": "25",
+      "keywords": "",
+      "house": "secciv",
+      "peers": [],
+      "text": "Un sapeur-sauveteur de l’UIISC 7 est décédé dans un accident de la route alors qu'il se rendait à son unité.\nTrès peu d'informations sur ce décès.",
+      "section": "UIISC 7",
+      "location": "Brignoles",
+      "county": "83",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.41715245798713,
+        "lng": 6.01676720825246
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://twitter.com/Uiisc7/status/1574392357939662848",
+          "title": "@Uiisc7",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.facebook.com/uiisc7/posts/pfbid0YhggWmdhY1jjUa2FotdmV3ru6HcWSRLxezcu4CNCHkFbNsFywDUKeKYQfBjv7x5nl",
+          "title": "@uiisc7 (FB)",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "09",
+      "day": "28",
+      "keywords": "Nicolas Fallot",
+      "house": "armee",
+      "peers": [],
+      "text": "Un gendarme du GLCF de l'EDSR 55 est décédé dans un grave accident de voiture en service avec trois autres camarades dont un qui a été grièvement blessé.\nIls étaient en chemin pour recevoir leur habilitation OPJ.",
+      "section": "GLCF - EDSR 55",
+      "location": "Ligny-en-Barrois",
+      "county": "55",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "radius": 800,
+        "lat": 48.69345914897004,
+        "lng": 5.351505976056997
+      },
+      "homage": {
+        "title": "Ministère de l'Intérieur",
+        "url": "https://www.interieur.gouv.fr/actualites/communiques/communique-de-gerald-darmanin-suite-au-deces-en-service-dun-gendarme"
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/Gendarmerie/status/1575427027955552257",
+          "title": "@Gendarmerie",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/meuse-un-gendarme-tue-dans-un-accident-de-la-route-un-second-grievement-blesse.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/4002886-20220929-meuse-gendarme-tue-autre-grievement-blesse-choc-poids-lourd",
+          "title": "20 minutes",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/grand-est/meuse/meuse-un-gendarme-trouve-la-mort-dans-un-accident-sur-la-nationale-4-2624420.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/faits-divers/lorraine-qui-est-nicolas-le-gendarme-de-35-ans-tue-dans-un-accident-et-honore-par-gerald-darmanin_54140575.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/operationnel/dramatique-accident-dans-la-meuse-un-gendarme-decede-et-un-autre-grievement-blesse",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }

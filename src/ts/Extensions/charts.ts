@@ -87,8 +87,8 @@ export class Charts {
                 backgroundColor: 'rgba(226,226,226,0.98)',
                 footerFormat: '</table>',
                 headerFormat: '<div style="font-size:15px; font-weight: bold;margin: 0 0 10px 0">Région: {point.key}</div><table>',
-                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}:  </td>' +
-            '<td style="padding: 2px 10px 2px 20px"><b>{point.y} décès</b></td></tr>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}:  </td>'
+            + '<td style="padding: 2px 10px 2px 20px"><b>{point.y} décès</b></td></tr>',
                 shared: true,
                 useHTML: true,
             },
@@ -158,8 +158,8 @@ export class Charts {
                 backgroundColor: 'rgba(226,226,226,0.98)',
                 footerFormat: '</table>',
                 headerFormat: '<div style="font-size:15px; font-weight: bold;margin: 0 0 10px 0">Mois: {point.key}</div><table>',
-                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}:  </td>' +
-          '<td style="padding: 2px 10px 2px 20px"><b>{point.y} décès</b></td></tr>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}:  </td>'
+          + '<td style="padding: 2px 10px 2px 20px"><b>{point.y} décès</b></td></tr>',
                 shared: true,
                 useHTML: true,
             },

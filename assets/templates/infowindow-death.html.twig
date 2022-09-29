@@ -9,15 +9,17 @@
         {{ app.getFilterValueLabel('house', death.house) }}
     </h4>
     {% for peer in death.peers %}
-        <h5>
-            <img src="{{ config.imagePath.house|replace({"%house%": peer.count >= 2 ? peer.house ~ '-m' : peer.house}) }}"
-                 alt="House: {{ peer.house }}"
-                 title="House: {{ peer.house }}"
-                 height="16" />
-            {% if peer.section %}{{ acronymise(peer.section) }} - {% endif %}
-            {% if peer.count > 1 %}<strong style="color: red;">{{ peer.count }} décès</strong> - {% endif %}
-            {{ app.getFilterValueLabel('house', peer.house) }}
-        </h5>
+        {% if peer.count > 0 %}
+            <h5>
+                <img src="{{ config.imagePath.house|replace({"%house%": peer.count >= 2 ? peer.house ~ '-m' : peer.house}) }}"
+                     alt="House: {{ peer.house }}"
+                     title="House: {{ peer.house }}"
+                     height="16" />
+                {% if peer.section %}{{ acronymise(peer.section) }} - {% endif %}
+                {% if peer.count > 1 %}<strong style="color: red;">{{ peer.count }} décès</strong> - {% endif %}
+                {{ app.getFilterValueLabel('house', peer.house) }}
+            </h5>
+        {% endif %}
     {% endfor %}
     <br>
     <span>
