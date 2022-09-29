@@ -433,7 +433,9 @@ export class MapButtons {
                         for (const marker of markers) {
                             csvData.push(csvDataBuilder(marker.death));
                             for (const peer of marker.death.peers) {
-                                csvData.push(csvDataBuilder(marker.death, peer));
+                                if (peer.count > 0) {
+                                    csvData.push(csvDataBuilder(marker.death, peer));
+                                }
                             }
                         }
 

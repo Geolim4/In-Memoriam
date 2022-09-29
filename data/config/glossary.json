@@ -24,6 +24,7 @@
     "BIMa": "Bataillon d'Infanterie de Marine",
     "BJN": "Brigade Judiciaire de Nuit",
     "BMo": "Brigade Motorisée",
+    "BMPM": "Bataillon de Marins-Pompiers de Marseille (armée)",
     "BMR": "Brigade Mobile de Recherches (Police)",
     "BPDJ": "Brigade de Prévention de la Délinquance Juvénile ",
     "BSPP": "Brigade de Sapeurs-Pompiers de Paris",
@@ -104,6 +105,7 @@
     "GGM": "Groupement de Gendarmerie Mobile",
     "GIC": "Groupement Interministériel de Contrôle ou Groupe d'Investigation Cynophile",
     "GIGN": "Groupe d'Intervention de la Gendarmerie Nationale",
+    "GLCF": "Groupes Locaux de Contrôle des Flux",
     "GPD": "Groupements de Plongeurs Démineurs (Marine Nationale)",
     "GPEEC": "Gestion Prévisionnelle des Emplois, des Effectifs et des Compétences",
     "GR": "Garde Républicaine",
@@ -117,6 +119,7 @@
     "MPC": "Mobilisation des Policiers en Colère",
     "OIA": "Organisme InterArmées  (domaine militaire)",
     "OPEX": "OPération EXtérieure (domaine militaire)",
+    "OPJ": "Officier de Police Judiciaire",
     "PAF": "Police Aux Frontières",
     "PJ": "Police Judiciaire",
     "PMo": "Peloton Motorisé (Gendarmerie)",
@@ -166,6 +169,7 @@
     "UMJ": "Unité Médico-Judiciaire",
     "UPS": "Unité Police-Secours",
     "VBIED": "Véhicule Piégé (Vehicle Borne Improvised Explosive Devices)",
+    "UIISC": "Unité d'Instruction et d'Intervention de la Sécurité Civile",
     "ULII": "Unité de Lutte contre l’Immigration Irrégulière",
     "UTJDR": "Unité de Traitement Judiciaire des Délits Routiers"
   }

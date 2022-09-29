@@ -364,9 +364,9 @@ export abstract class AppCore extends AppAbstract {
                         const negated = safeBlock.charAt(0) === '!';
                         const block = (negated ? safeBlock.substring(1) : safeBlock);
 
-                        if (block.length >= this.getConfigFactory().getSearchMinLength() ||
+                        if (block.length >= this.getConfigFactory().getSearchMinLength()
                           // Handle special identifiers like Paris XXe, CRS xx, EGM XX/X, Dom/Tom code (9xx), Corse identifiers XA/B, etc.
-                          (block.match(/^(((9?\d{1,2})[abe]?)|((([IVX]+)|(\d{1,2}))\/(\d{1,2})))$/) && i === 1)
+                          || (block.match(/^(((9?\d{1,2})[abe]?)|((([IVX]+)|(\d{1,2}))\/(\d{1,2})))$/) && i === 1)
                         ) {
                             if (!negated) {
                                 safeFilterSplited.push(block);
@@ -387,24 +387,24 @@ export abstract class AppCore extends AppAbstract {
                         if (fieldName === 'search' && fieldValue.length >= this.getConfigFactory().getSearchMinLength()) {
                             if (
                                 (
-                                    safeFilterSplited.length &&
-                  (
-                      !StringUtilsHelper.arrayContainsString(death.text, safeFilterSplited, 'all') &&
-                    !StringUtilsHelper.arrayContainsString(death.keywords, safeFilterSplited, 'one') &&
-                    !StringUtilsHelper.arrayContainsString(death.section, safeFilterSplited, 'all') &&
-                    !StringUtilsHelper.arrayContainsString(death.location, safeFilterSplited, 'all') &&
-                    !(this.isSearchByExpressionEnabled() && filterExpression && Expression.evaluate(filterExpression, filterExpressionContext))
-                  )
-                                ) ||
-                (
-                    negatedFilterSplited.length &&
-                  (
-                      StringUtilsHelper.arrayContainsString(death.text, negatedFilterSplited, 'all') ||
-                    StringUtilsHelper.arrayContainsString(death.keywords, negatedFilterSplited, 'one') ||
-                    StringUtilsHelper.arrayContainsString(death.section, negatedFilterSplited, 'all') ||
-                    StringUtilsHelper.arrayContainsString(death.location, negatedFilterSplited, 'all')
-                  )
-                )
+                                    safeFilterSplited.length
+                                    && (
+                                        !StringUtilsHelper.arrayContainsString(death.text, safeFilterSplited, 'all')
+                                        && !StringUtilsHelper.arrayContainsString(death.keywords, safeFilterSplited, 'one')
+                                        && !StringUtilsHelper.arrayContainsString(death.section, safeFilterSplited, 'all')
+                                        && !StringUtilsHelper.arrayContainsString(death.location, safeFilterSplited, 'all')
+                                        && !(this.isSearchByExpressionEnabled() && filterExpression && Expression.evaluate(filterExpression, filterExpressionContext))
+                                    )
+                                )
+                                || (
+                                    negatedFilterSplited.length
+                                    && (
+                                        StringUtilsHelper.arrayContainsString(death.text, negatedFilterSplited, 'all')
+                                        || StringUtilsHelper.arrayContainsString(death.keywords, negatedFilterSplited, 'one')
+                                        || StringUtilsHelper.arrayContainsString(death.section, negatedFilterSplited, 'all')
+                                        || StringUtilsHelper.arrayContainsString(death.location, negatedFilterSplited, 'all')
+                                    )
+                                )
                             ) {
                                 if (death.peers.length) {
                                     let continueFlag = false;
@@ -419,17 +419,17 @@ export abstract class AppCore extends AppAbstract {
                                     }
                                 }
                                 /**
-                                * Death removed from "search" input should
-                                * keep appearing in suggestions as they will
-                                * necessarily appear on the next search result
-                                */
+                                 * Death removed from "search" input should
+                                 * keep appearing in suggestions as they will
+                                 * necessarily appear on the next search result
+                                 */
                                 this.pushSuggestionFromDeath(death);
                                 deathsRemovedBySearch.push(death);
                                 filteredResponse.response.deaths.splice(dKey, 1);
                             }
-                        } else if (!death.published ||
-                            (!filterExpression && !fieldValue.split(',').includes(death[fieldName] && death[fieldName])) ||
-                            (filterExpression && !Expression.evaluate(filterExpression, filterExpressionContext))
+                        } else if (!death.published
+                            || (!filterExpression && !fieldValue.split(',').includes(death[fieldName] && death[fieldName]))
+                            || (filterExpression && !Expression.evaluate(filterExpression, filterExpressionContext))
                         ) {
                             if (death.peers.length) {
                                 let continueFlag = false;

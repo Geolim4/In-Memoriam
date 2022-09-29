@@ -166,6 +166,7 @@ module.exports = {
             "error",
             "never"
         ],
+        "operator-linebreak": ["error", "before"],
         "prefer-const": "error",
         "prefer-template": "error",
         "quote-props": [
