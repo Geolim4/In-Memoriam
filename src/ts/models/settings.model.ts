@@ -37,6 +37,7 @@ export interface Settings {
         random: string;
         refresh: string;
     };
+    passFiltersToQuery: boolean;
     supportAssociations: HoverTitleUrl[];
     searchMinLength: number;
     templateDir: string;

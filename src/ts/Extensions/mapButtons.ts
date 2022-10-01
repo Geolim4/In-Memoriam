@@ -159,12 +159,17 @@ export class MapButtons {
         };
 
         GmapUtils.bindButton(map, (): void => {
-            const randomIndex = IntUtilsHelper.getRandomInt(0, App.getInstance().getMarkers().length - 1);
-            const randomMarker = App.getInstance().getMarkers()[randomIndex];
+            const markers = App.getInstance().getMarkers();
+            if (markers.length) {
+                const randomIndex = IntUtilsHelper.getRandomInt(0, markers.length - 1);
+                const randomMarker = markers[randomIndex];
 
-            map.setCenter(randomMarker.getPosition());
-            map.setZoom(13);
-            google.maps.event.trigger(randomMarker, 'click');
+                map.setCenter(randomMarker.getPosition());
+                map.setZoom(13);
+                google.maps.event.trigger(randomMarker, 'click');
+            } else {
+                App.getInstance().getModal().modalInfo('Information', this.emptyMarkerMessage);
+            }
         }, buttonOptions);
     }
 

@@ -68,6 +68,7 @@
     "micromodal": "^0.4.2",
     "popper.js": "^1.15.0",
     "pure-css-loader": "^3.3.3",
+    "qs": "^6.11.0",
     "text-obfuscator": "^1.1.0",
     "tippy.js": "^5.1.1",
     "twig": "^1.15.4",
