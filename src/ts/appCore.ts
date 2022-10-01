@@ -21,6 +21,7 @@ import { ModalContentTemplate } from './Extensions/modalContentTemplate';
 const unique = require('array-unique');
 const Choices = require('choices.js');
 const autocomplete = require('autocompleter');
+const qs = require('qs');
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -57,10 +58,24 @@ export abstract class AppCore extends AppAbstract {
         this.setConfigFactory(new ConfigFactory((): void => this.run()));
     }
 
+    protected buildMarkersQuery(filters: Filters): string {
+        let url = this.getConfigFactory().config.deathsSrc.replace('%year%', filters.year);
+
+        if (this.getConfigFactory().config.passFiltersToQuery) {
+            /**
+             * @todo We may want to transform evaluable expression from filter values
+             */
+            const query = qs.stringify(filters, { filter: (prefix, value): any => (value || undefined) });
+            url = `${url}${query ? `?${query}` : ''}`;
+        }
+
+        return url;
+    }
+
     protected bindMarkers(filters: Filters): void {
         const stopwatchStart = window.performance.now();
         this.showLoaderWall(this.map.getDiv());
-        fetch(this.getConfigFactory().config.deathsSrc.replace('%year%', filters.year), { cache: 'no-store' })
+        fetch(this.buildMarkersQuery(filters), { cache: 'no-store' })
             .then((response):any => response.json())
             .then((responseData: Bloodbath): void => {
                 const bounds = new google.maps.LatLngBounds();
@@ -767,7 +782,7 @@ export abstract class AppCore extends AppAbstract {
             }
             definitionTexts.push('');
 
-            const latestDeathLabel = ` ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${latestDeath.location} - ${StringUtilsHelper.replaceAcronyms(
+            const latestDeathLabel = ` ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${this.getFilterValueLabel('house', latestDeath.house)} - ${latestDeath.location} - ${StringUtilsHelper.replaceAcronyms(
                 latestDeath.section,
                 this.getGlossary(),
             )}`;

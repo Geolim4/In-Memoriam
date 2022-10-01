@@ -3,6 +3,7 @@ import { AppCore } from './appCore';
 import { Permalink } from './Components/permalink';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
 import { MethodCallNotAllowedError } from './errors/methodCallNotAllowedError.model';
+import { AppStatic } from './appStatic';
 
 /**
  * @description Main app code
@@ -53,7 +54,7 @@ export class App extends AppCore {
     public loadGlossary(): void {
         fetch(this.getConfigFactory().config.glossarySrc, { cache: 'force-cache' })
             .then((response): any => response.json())
-            .then((responseData: {glossary: { [name: string]: string }}): void => {
+            .then((responseData: { glossary: { [name: string]: string } }): void => {
                 this.setGlossary(responseData.glossary);
             }).catch((e): void => {
                 if (this.getConfigFactory().isDebugEnabled()) {
@@ -64,6 +65,8 @@ export class App extends AppCore {
                     'Impossible de récupérer le dictionnaire des termes.',
                     { isError: true },
                 );
+            }).finally((): void => {
+                AppStatic.bindTooltip();
             });
     }
 

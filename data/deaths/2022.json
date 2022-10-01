@@ -3917,13 +3917,13 @@
       "month": "09",
       "day": "28",
       "keywords": "Nicolas Fallot",
-      "house": "armee",
+      "house": "gd",
       "peers": [],
       "text": "Un gendarme du GLCF de l'EDSR 55 est décédé dans un grave accident de voiture en service avec trois autres camarades dont un qui a été grièvement blessé.\nIls étaient en chemin pour recevoir leur habilitation OPJ.",
       "section": "GLCF - EDSR 55",
       "location": "Ligny-en-Barrois",
       "county": "55",
-      "origin": "opex",
+      "origin": "interieur",
       "gps": {
         "accurate": false,
         "radius": 800,
@@ -3968,6 +3968,102 @@
         {
           "url": "https://lessor.org/operationnel/dramatique-accident-dans-la-meuse-un-gendarme-decede-et-un-autre-grievement-blesse",
           "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "09",
+      "day": "29",
+      "keywords": "Vincent BURGUET",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme de la section de recherche d'Amiens a mis fin à ses jours avec son arme de service.\nIl était marié et père de trois enfants.",
+      "section": "SR Amiens",
+      "location": "Amiens",
+      "county": "80",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.88831330806059,
+        "lng": 2.2721562897725054
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/amiens-un-gendarme-se-suicide-avec-son-arme-de-service-dans-son-bureau.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/amiens-un-gendarme-de-la-section-de-recherches-se-suicide-avec-son-arme-de-service-1664487679",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/suicide-d-un-gendarme-de-la-section-de-recherches-d-amiens",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/hauts-de-france/amiens-80000/un-gendarme-se-suicide-dans-les-locaux-de-la-gendarmerie-d-amiens-67099d7c-40af-11ed-89be-3116781a5058",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "09",
+      "day": "29",
+      "keywords": "idf",
+      "house": "pn",
+      "peers": [],
+      "text": "Un jeune policier de l'Unité de Garde du Dépôt du tribunal de Paris a mis fin à ses jours avec son arme de service.\nDe nombreux collègues et unités spécialisées sur place ont essayé de le raisonner, en vain.",
+      "section": "CGD",
+      "location": "Paris 16e",
+      "county": "75",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.8954628775946,
+        "lng": 2.3094513218814816
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/paris-un-jeune-policier-se-retranche-dans-un-appartement-et-se-suicide-avec-son-arme-de-service.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.cnews.fr/france/2022-09-30/paris-retranche-chez-son-ex-conjointe-un-policier-se-suicide-1272356",
+          "title": "Cnews",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/paris_75056/paris-un-policier-se-suicide-avec-son-arme-de-service-apres-s-etre-retranche-dans-un-appartement_54180964.html",
+          "title": "Actu.fr",
           "paywall": false,
           "trustful": true
         }

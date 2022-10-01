@@ -34,9 +34,12 @@ export class StringUtilsHelper {
     }
 
     public static replaceAcronyms(str: string, findReplace: {}): string {
-        const replaced = Object.keys(findReplace).map((i): string => i.replace(/[.?*+^$[\]\\(){}|-]/g, '\\$&')).join('|');
+        const replaced = Object.keys(findReplace).map((i): string => i.replace(/[.?*+^$[\]\\(){}|-]/g, '\\$&')).join('|').trim();
 
-        return str.replace(new RegExp(`(${replaced})\\b`, 'g'), (s): string => `<abbr data-tippy-content="${findReplace[s]}">${s}</abbr>`);
+        if (replaced) {
+            return str.replace(new RegExp(`(${replaced})\\b`, 'g'), (s): string => `<abbr data-tippy-content="${findReplace[s]}">${s}</abbr>`);
+        }
+        return str;
     }
 
     public static ucFirst(string: string): string {
