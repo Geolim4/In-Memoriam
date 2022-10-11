@@ -1,5 +1,5 @@
-/** SW auto-generated on 2022-10-01T01:47:15.714Z **/
-const CACHE_KEY = 'im-3.2.2+20221001T014715';
+/** SW auto-generated on 2022-10-11T01:04:43.107Z **/
+const CACHE_KEY = 'im-3.3.0+20221011T010443';
 const assets = [
   'assets/css/fonts/glyphicons-halflings-regular.eot',
   'assets/css/fonts/glyphicons-halflings-regular.svg',
@@ -38,6 +38,7 @@ const assets = [
   'assets/images/map/random.png',
   'assets/images/map/refresh.png',
   'assets/images/map/timelapse.png',
+  'assets/images/map/user_config.png',
   'assets/images/pwa/in-memoriam_192_maskable.png',
   'assets/images/pwa/in-memoriam_192.png',
   'assets/images/pwa/in-memoriam_512_maskable.png',
@@ -58,6 +59,7 @@ const assets = [
   'assets/templates/modals/content/advanced-search.html.twig',
   'assets/templates/modals/content/cookie-consent-declined.html.twig',
   'assets/templates/modals/content/infowindow-error.html.twig',
+  'assets/templates/modals/form/user-config.html.twig',
   'assets/templates/modals/modal-info.html.twig',
   'assets/templates/modals/pages/confidentiality.html.twig',
   'assets/templates/modals/pages/contact-us.html.twig',
