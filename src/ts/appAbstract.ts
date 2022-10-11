@@ -9,6 +9,7 @@ import { FormFilters } from './models/Filters/formFilters.model';
 import { Death } from './models/Death/death.model';
 import { Renderer } from './Extensions/renderer';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
+import { Permalink } from './Components/permalink';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -35,6 +36,8 @@ export abstract class AppAbstract {
 
     private configFactory: ConfigFactory;
 
+    private permalink: Permalink;
+
     private glossary: { [name: string]: string };
 
     private renderer: Renderer;
@@ -55,18 +58,23 @@ export abstract class AppAbstract {
         this.currentInfoWindow = null;
         this.formFilters = {};
         this.appLoaded = false;
-        this.heatmapEnabled = true;
+        this.heatmapEnabled = false;
         this.clusteringEnabled = true;
         this.configFactory = null;
         this.glossary = {};
         this.modal = new Modal();
         this.charts = new Charts();
         this.mapButtons = new MapButtons();
+        this.permalink = new Permalink();
         this.searchByExpression = false;
     }
 
     public getMap(): google.maps.Map {
         return this.map;
+    }
+
+    public getPermalink(): Permalink {
+        return this.permalink;
     }
 
     public isAppLoaded(): boolean {

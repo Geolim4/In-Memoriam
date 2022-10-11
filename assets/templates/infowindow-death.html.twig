@@ -1,52 +1,63 @@
+{% set houseName = app.getFilterValueLabel('house', death.house) %}
 <div class="death-container{% if app.getTotalDeathCount(death) >= 2 %} multiple-deaths{% endif %}">
     <h4>
         <img src="{{ config.imagePath.house|replace({"%house%": death.count >= 2 ? death.house ~ '-m' : death.house}) }}"
-             alt="House: {{ death.house }}"
-             title="House: {{ death.house }}"
-             height="16" />
+             alt="Corps: {{ houseName }}"
+             title="Corps: {{ houseName }}"
+             height="24" />
         {% if death.section %}{{ acronymise(death.section) }} - {% endif %}
         {% if death.count > 1 %}<strong style="color: red;">{{ death.count }} décès</strong> - {% endif %}
-        {{ app.getFilterValueLabel('house', death.house) }}
+        {{ houseName }}
     </h4>
     {% for peer in death.peers %}
+        {% set peerHouseName = app.getFilterValueLabel('house', peer.house) %}
         {% if peer.count > 0 %}
             <h5>
                 <img src="{{ config.imagePath.house|replace({"%house%": peer.count >= 2 ? peer.house ~ '-m' : peer.house}) }}"
-                     alt="House: {{ peer.house }}"
-                     title="House: {{ peer.house }}"
-                     height="16" />
+                     alt="Corps: {{ peerHouseName }}"
+                     title="Corps: {{ peerHouseName }}"
+                     height="20" />
                 {% if peer.section %}{{ acronymise(peer.section) }} - {% endif %}
                 {% if peer.count > 1 %}<strong style="color: red;">{{ peer.count }} décès</strong> - {% endif %}
-                {{ app.getFilterValueLabel('house', peer.house) }}
+                {{ peerHouseName }}
+                {% if peer.count == 0 %}<em>(affiliation statutaire)</em>{% endif %}
             </h5>
+        {% else %}
+            <p>
+                <img src="{{ config.imagePath.house|replace({"%house%": peer.house}) }}"
+                     alt="House: {{ peerHouseName }}"
+                     title="House: {{ peerHouseName }}"
+                     height="20" />
+                {% if peer.section %}{{ acronymise(peer.section) }} - {% endif %}
+                {{ peerHouseName }}
+                <em>(affiliation statutaire)</em>
+            </p>
         {% endif %}
     {% endfor %}
-    <br>
-    <span>
-
-   <strong>Emplacement</strong>: {{ death.location ~ app.getCountyByCode(death.county, true) }}
-    {% if not death.gps.accurate %}
-        <strong style="color: orangered;"><abbr data-tippy-content="Indique que l'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>
-    {% endif %}
-   <a href="https://maps.google.com/?ll={{ death.gps.lat }},{{ death.gps.lng }}&amp;q={{ death.location }}, {{ app.getCountyByCode(death.county) }}" target="_blank" tabindex="0">
-    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-   </a>
-   <br><br>
-   <strong>Date</strong>: {{ death.day }}/{{ death.month }}/{{ death.year }}
-   <br><br>
-   <strong>Cause</strong>: {{ app.getFilterValueLabel('cause', death.cause) }}
-   <br><br>
-   <strong>Hommage</strong>:
-        {% if death.homage %}
-            <a href="{{ death.homage.url }}" target="_blank">{{ acronymise(death.homage.title) }}</a>
-            <span class="glyphicon glyphicon-ok-sign" aria-hidden="true" data-tippy-content="Source officielle"></span>
-        {% else %}
-            <em>Non communiqué</em>
+    <div class="mtop">
+       <strong>Emplacement</strong>: {{ death.location ~ app.getCountyByCode(death.county, true) }}
+        {% if not death.gps.accurate %}
+            <strong style="color: orangered;"><abbr data-tippy-content="Indique que l'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>
         {% endif %}
-   <br><br>
-   <strong>Circonstances</strong>: {{ acronymise(death.text|nl2br) }}
-   </span><br><br>
-    <div class="death-sources">
+       <a href="https://maps.google.com/?ll={{ death.gps.lat }},{{ death.gps.lng }}&amp;q={{ death.location }}, {{ app.getCountyByCode(death.county) }}" target="_blank" tabindex="0">
+        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+       </a>
+       <br><br>
+       <strong>Date</strong>: {{ death.day }}/{{ death.month }}/{{ death.year }}
+       <br><br>
+       <strong>Cause</strong>: {{ app.getFilterValueLabel('cause', death.cause) }}
+       <br><br>
+       <strong>Hommage</strong>:
+            {% if death.homage %}
+                <a href="{{ death.homage.url }}" target="_blank">{{ acronymise(death.homage.title) }}</a>
+                <span class="glyphicon glyphicon-ok-sign" aria-hidden="true" data-tippy-content="Source officielle"></span>
+            {% else %}
+                <em>Non communiqué</em>
+            {% endif %}
+       <br><br>
+       <strong>Circonstances</strong>: {{ acronymise(death.text|nl2br) }}
+   </div>
+    <div class="death-sources mtop">
         {% if death.sources|length == 1 and death.sources[0].title == '__CONFIDENTIAL__' %}
             <span aria-hidden="true" class="glyphicon glyphicon-alert" style="color: orangered;" ></span>&nbsp;
             <strong data-tippy-content="La source étant anonyme, ce décès peut ne pas être fiable à 100%.">Source anonyme</strong>
@@ -58,12 +69,13 @@
                 <strong><span aria-hidden="true" class="glyphicon glyphicon-alert" style="color: orangered;" ></span> Aucune source renseignée</strong>
             {% endfor %}
         {% endif %}
-
     </div>
-    <br><small class="report-error"><a href="javascript:;"
+    <div class="mtop">
+        <small class="report-error"><a href="javascript:;"
                                        class="error-link"
                                        data-controller="advanced-modal"
                                        data-modal-title="Vous avez trouvé une erreur ?"
                                        data-modal-content-template="content/infowindow-error"
                                        data-modal-content-vars='{{ {reference: reference}|json_encode|url_encode }}'>[Une erreur ?]</a></small>
+    </div>
 </div>

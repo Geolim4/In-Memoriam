@@ -1,0 +1,24 @@
+<div class="mtop">
+    <form id="form-user-config">
+        <div class="row mtop">
+            <fieldset class="col-xs-9">
+                <label for="browserHistoryReplaceState">URL du navigateur dynamique:</label>
+            </fieldset>
+            <div class="col-xs-3">
+                <input type="checkbox" name="browserHistoryReplaceState" id="browserHistoryReplaceState" class="form-control" {% if userConfig.browserHistoryReplaceState == 'on' %} checked{% endif %}/>
+            </div>
+        </div>
+        <div class="row mtop">
+            <fieldset class="col-md-4">
+                <label for="themeColor"><abbr data-tippy-content="Cette option sera très bientôt disponible :)">Thème:</abbr></label>
+            </fieldset>
+            <div class="col-md-8">
+                <select name="themeColor" id="themeColor" class="form-control" disabled>
+                    <option value="auto"{% if userConfig.themeColor == 'auto' %} selected{% endif %}>Automatique</option>
+                    <option value="dark"{% if userConfig.themeColor == 'dark' %} selected{% endif %}>Sombre</option>
+                    <option value="light"{% if userConfig.themeColor == 'light' %} selected{% endif %}>Clair</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</div>

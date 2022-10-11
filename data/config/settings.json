@@ -12,6 +12,10 @@
   "settings": {
     "appDebug": false,
     "appVersion": "3.2.2",
+    "defaultUserConfig": {
+      "browserHistoryReplaceState": "",
+      "themeColor": "auto"
+    },
     "circleOptions": {
       "fillColor": "#9e2a2b",
       "fillOpacity": 0.25,
@@ -77,7 +81,8 @@
       "localize": "https://maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png",
       "bluedot": "./assets/images/map/bluedot.png",
       "refresh": "./assets/images/map/refresh.png",
-      "download": "./assets/images/map/download.png"
+      "download": "./assets/images/map/download.png",
+      "userConfig": "./assets/images/map/user_config.png"
     },
     "supportAssociations": [
       {

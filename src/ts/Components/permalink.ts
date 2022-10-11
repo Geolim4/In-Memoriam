@@ -1,4 +1,6 @@
 import { Filters } from '../models';
+import { App } from '../app';
+import { Events } from './events';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -6,7 +8,13 @@ import { Filters } from '../models';
  * @licence GPL-2.0
  */
 export class Permalink {
-    public static build(filters: Filters, replaceHistoryState?: boolean, selector?: string): void {
+    public constructor() {
+        Events.addEventHandler(document, 'user-config-changed', (): void => {
+            App.getInstance().getFilters(false);
+        });
+    }
+
+    public build(filters: Filters, selector?: string): void {
         const permalinkElement = <HTMLInputElement>document.querySelector(selector || '[data-role="permalink"]');
         const url = window.location.href.split('#')[0];
         let anchor = '';
@@ -19,8 +27,10 @@ export class Permalink {
         }
 
         permalinkElement.value = url + anchor;
-        if (replaceHistoryState) {
+        if (App.getInstance().getConfigFactory().userConfig.browserHistoryReplaceState === 'on') {
             window.history.replaceState(null, null, url + anchor);
+        } else if (window.location.hash) {
+            window.history.replaceState(null, null, url);
         }
     }
 }

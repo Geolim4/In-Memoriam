@@ -77,15 +77,28 @@ export class Renderer {
     }
 
     private doRender(templateContent: string, variables: object): string {
-        return Twig({ data: templateContent })
-            .render({
-                ...variables,
-                ...{
-                    acronymise: (str: string): {} => StringUtilsHelper.replaceAcronyms(str, App.getInstance().getGlossary()),
-                    app: App.getInstance(),
-                    config: App.getInstance().getConfigFactory().config,
-                    marker_link: (death: Death, label: string): string => AppStatic.getMarkerLink(death, label),
-                },
-            });
+        try {
+            return Twig({ data: templateContent })
+                .render({
+                    ...variables,
+                    ...{
+                        acronymise: (str: string): {} => StringUtilsHelper.replaceAcronyms(str, App.getInstance().getGlossary()),
+                        app: App.getInstance(),
+                        config: App.getInstance().getConfigFactory().config,
+                        marker_link: (death: Death, label: string): string => AppStatic.getMarkerLink(death, label),
+                    },
+                }).trim();
+        } catch (e) {
+            if (App.getInstance().getConfigFactory().isDebugEnabled()) {
+                App.getInstance().getModal().modalInfo(
+                    'Erreur',
+                    `Le moteur de template a rencontré l'erreur suivante: ${e}`,
+                    { isError: true },
+                );
+                console.error(e);
+            }
+
+            return '<div style="padding: 10px;"></di><strong style="color: red">L\'application a rencontré une erreur interne :(</strong></div>';
+        }
     }
 }

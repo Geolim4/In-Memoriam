@@ -1,5 +1,7 @@
+import Cookies from 'js-cookie';
 import { Definitions, Settings } from '../models';
 import { App } from '../app';
+import { UserConfig } from '../models/userConfig.model';
 
 const TextObfuscator = require('text-obfuscator');
 
@@ -9,6 +11,8 @@ const TextObfuscator = require('text-obfuscator');
  */
 export class ConfigFactory {
     public config: Settings;
+
+    public userConfig: UserConfig;
 
     public definitions: Definitions;
 
@@ -21,8 +25,14 @@ export class ConfigFactory {
         this.init(onceInitialized);
     }
 
+    public setUserConfig(userConfig: UserConfig):void {
+        this.userConfig = { ...this.config.defaultUserConfig, ...userConfig };
+        Cookies.set('userConfig', JSON.stringify(this.userConfig));
+        document.dispatchEvent(new CustomEvent('user-config-changed', { detail: userConfig }));
+    }
+
     public isDebugEnabled(): boolean {
-        return this.config.appDebug || document.cookie.includes(`${this.config.debugCookieName}=1`);
+        return this.config.appDebug || Cookies.get(this.config.debugCookieName) === '1';
     }
 
     public getSearchMinLength(): number {
@@ -36,10 +46,9 @@ export class ConfigFactory {
             .then((response): any => response.json())
             .then((responseData: { settings: Settings, hostSettings: {[name: string]: any} }): void => {
                 this.config = this.decodeConfigs(responseData.settings);
-
                 /**
-       * Override of settings per environments
-       */
+                * Override of settings per environments
+                */
                 if (typeof responseData.hostSettings[hostname] === 'object') {
                     for (const key of Object.keys(responseData.hostSettings[hostname])) {
                         let configData = responseData.hostSettings[hostname][key];
@@ -48,6 +57,15 @@ export class ConfigFactory {
                         }
                         this.config[key] = configData;
                     }
+                }
+
+                try {
+                    const userConfig = JSON.parse(String(Cookies.get('userConfig')));
+                    if (typeof userConfig === 'object') {
+                        this.userConfig = { ...this.config.defaultUserConfig, ...userConfig };
+                    }
+                } catch {
+                    this.setUserConfig(this.config.defaultUserConfig);
                 }
 
                 fetch(this.config.definitionsSrc, { cache: 'force-cache' })

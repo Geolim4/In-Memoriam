@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "target": "es2020",
     "typeRoots": ["node_modules/@types"],
+    "sourceMap": true,
     "allowSyntheticDefaultImports": true
   },
   "exclude": ["node_modules"],

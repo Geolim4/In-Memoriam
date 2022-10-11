@@ -1,6 +1,5 @@
 import { Filters } from './models';
 import { AppCore } from './appCore';
-import { Permalink } from './Components/permalink';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
 import { MethodCallNotAllowedError } from './errors/methodCallNotAllowedError.model';
 import { AppStatic } from './appStatic';
@@ -124,7 +123,7 @@ export class App extends AppCore {
             }
         });
 
-        Permalink.build(filters, true);
+        this.getPermalink().build(filters);
 
         return filters;
     }
