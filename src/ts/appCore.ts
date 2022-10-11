@@ -765,17 +765,19 @@ export abstract class AppCore extends AppAbstract {
                 let definitionText = '';
                 if (configDefinitions[fieldKey]['#exposed']) {
                     for (const [fieldValue, count] of Object.entries(field).sort((a, b): number => b[1] - a[1])) { // Filter values left-to-right from greater to lower
-                        const plurality = (count > 0 ? (count > 1 ? 'plural' : 'singular') : 'none');
-                        if (configDefinitions[fieldKey]['#number'][fieldValue]) {
-                            const text = configDefinitions[fieldKey]['#number'][fieldValue][plurality];
-                            definitionText += (definitionText ? ', ' : '') + text.replace('%d', String(count)).replace(`%${fieldKey}%`, fieldValue);
-                        } else if (configDefinitions[fieldKey]['#number']['#any']) {
-                            const text = configDefinitions[fieldKey]['#number']['#any'][plurality];
-                            definitionText += (definitionText ? ', ' : '') + text.replace('%d', String(count)).replace(`%${fieldKey}%`, fieldValue);
-                        } else {
-                            definitionText += `${definitionText ? ', ' : ''}[${fieldValue}] (${count})`;
+                        if (count > 0) {
+                            const plurality = (count > 1 ? 'plural' : 'singular');
+                            if (configDefinitions[fieldKey]['#number'][fieldValue]) {
+                                const text = configDefinitions[fieldKey]['#number'][fieldValue][plurality];
+                                definitionText += (definitionText ? ', ' : '') + text.replace('%d', String(count)).replace(`%${fieldKey}%`, fieldValue);
+                            } else if (configDefinitions[fieldKey]['#number']['#any']) {
+                                const text = configDefinitions[fieldKey]['#number']['#any'][plurality];
+                                definitionText += (definitionText ? ', ' : '') + text.replace('%d', String(count)).replace(`%${fieldKey}%`, fieldValue);
+                            } else {
+                                definitionText += `${definitionText ? ', ' : ''}[${fieldValue}] (${count})`;
+                            }
+                            definitionText = definitionText.replace(/%([a-zA-Z_]+)%/, (arg1, arg2): string => (filters && filters[arg2] !== undefined ? filters[arg2] : arg1));
                         }
-                        definitionText = definitionText.replace(/%([a-zA-Z_]+)%/, (arg1, arg2): string => (filters && filters[arg2] !== undefined ? filters[arg2] : arg1));
                     }
                     definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
                 }

@@ -1,9 +1,11 @@
 import { LoaderOptions } from '@googlemaps/js-api-loader';
 import { HoverTitleUrl } from './hoverTitleUrl.model';
+import { UserConfig } from './userConfig.model';
 
 export interface Settings {
     appDebug: boolean;
     appVersion: string;
+    defaultUserConfig: UserConfig;
     deathsSrc: string;
     debugCookieName: string;
     definitionsSrc: string;
@@ -36,6 +38,7 @@ export interface Settings {
         house: string;
         random: string;
         refresh: string;
+        userConfig: string;
     };
     passFiltersToQuery: boolean;
     supportAssociations: HoverTitleUrl[];

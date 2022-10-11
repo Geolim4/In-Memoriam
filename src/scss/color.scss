@@ -19,6 +19,10 @@ body {
     .form-control[readonly] {
       color: $white;
       background-color: $dark-grey;
+      &[disabled] {
+        text-decoration: line-through;
+        opacity: 0.6;
+      }
     }
     .choices__list--dropdown {
       > .choices__list {

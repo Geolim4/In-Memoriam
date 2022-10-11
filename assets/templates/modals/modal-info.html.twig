@@ -10,10 +10,10 @@
             </header>
             <main class="modal__content" id="modal-info-content">{{ nl2brContent ? modalContent|nl2br : modalContent }}</main>
             <footer class="modal__footer">
-                <button class="modal__btn{% if confirmButtonColor %} modal__btn-{{confirmButtonColor  }}{% endif %}" data-micromodal-close aria-label="Fermer la popup" data-micromodal-role="validate">{{ okLabel }}</button>
                 {% if hasConfirm or hasCancel %}
                     <button class="modal__btn{% if cancelButtonColor %} modal__btn-{{cancelButtonColor  }}{% endif %}" data-micromodal-close aria-label="Fermer la popup" data-micromodal-role="cancel">{{ cancelLabel }}</button>
                 {% endif %}
+                <button class="modal__btn{% if confirmButtonColor %} modal__btn-{{confirmButtonColor  }}{% endif %}" data-micromodal-close aria-label="Fermer la popup" data-micromodal-role="validate">{{ okLabel }}</button>
             </footer>
         </div>
     </div>

@@ -12,6 +12,10 @@ import { Death } from '../models/Death/death.model';
 import { DeathPeer } from '../models/Death/deathPeer.model';
 import { Filters } from '../models';
 import { IntUtilsHelper } from '../helper/intUtils.helper';
+import { ModalContentTemplate } from './modalContentTemplate';
+
+const formSerialize = require('form-serialize');
+const Snackbar = require('node-snackbar');
 
 export class MapButtons {
     private localizationMarker: google.maps.Marker;
@@ -42,6 +46,7 @@ export class MapButtons {
         // Right side buttons
         this.bindRefreshButton(map);
         this.bindDownloadButton(map);
+        this.bindUserConfigButton(map);
     }
 
     private bindLocalizationButton(map: google.maps.Map): void {
@@ -198,7 +203,7 @@ export class MapButtons {
             ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
             defaultCtrlChildBgPos: '-2px -2px',
             defaultCtrlChildBgSize: '120%',
-            imagePath: App.getInstance().getConfigFactory().config.imagePath.heatmap.on,
+            imagePath: App.getInstance().getConfigFactory().config.imagePath.heatmap[App.getInstance().isHeatmapEnabled() ? 'on' : 'off'],
             title: 'Thermographie',
         };
 
@@ -361,6 +366,42 @@ export class MapButtons {
 
         GmapUtils.bindButton(map, (): void => {
             this.promptDataDownloadExport();
+        }, buttonOptions);
+    }
+
+    private bindUserConfigButton(map: google.maps.Map): void {
+        const buttonOptions = {
+            ctrlChildId: 'userConfigImg',
+            ctrlClasses: [],
+            ctrlPosition: google.maps.ControlPosition.RIGHT_TOP,
+            defaultCtrlChildBgPos: '0px 0px',
+            defaultCtrlChildBgSize: '100%',
+            imagePath: App.getInstance().getConfigFactory().config.imagePath.userConfig,
+            title: 'Configuration de vos préférences',
+        };
+
+        GmapUtils.bindButton(map, (): void => {
+            App.getInstance().getModal().modalInfo(
+                'Configuration de vos préférences',
+                new ModalContentTemplate('form/user-config', { userConfig: App.getInstance().getConfigFactory().userConfig }),
+                {
+                    cancelButtonColor: 'danger',
+                    cancelCallback: (): void => {
+                        App.getInstance().getConfigFactory().setUserConfig(
+                            App.getInstance().getConfigFactory().config.defaultUserConfig,
+                        );
+                        Snackbar.show({ actionText: 'Fermer', actionTextColor: '#d85d5d', pos: 'bottom-center', text: 'Vos préférences ont été réinitialisées' });
+                    },
+                    cancelLabel: 'Réinitialiser vos préférences',
+                    confirmCallback: (): void => {
+                        App.getInstance().getConfigFactory().setUserConfig(
+                            formSerialize(document.querySelector('#form-user-config'), { empty: true, hash: true }),
+                        );
+                        Snackbar.show({ actionText: 'Fermer', pos: 'bottom-center', text: 'Vos préférences ont été sauvegardées' });
+                    },
+                    requiresExplicitCancel: true,
+                },
+            );
         }, buttonOptions);
     }
 

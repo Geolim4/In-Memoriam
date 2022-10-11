@@ -2769,6 +2769,11 @@ foreachasync@^3.0.0:
   resolved "https://registry.yarnpkg.com/foreachasync/-/foreachasync-3.0.0.tgz#5502987dc8714be3392097f32e0071c9dee07cf6"
   integrity sha512-J+ler7Ta54FwwNcx6wQRDhTIbNeyDcARMkOcguEqnEdtm0jKvN3Li3PDAb2Du3ubJYEWfYL83XMROXdsXAXycw==
 
+form-serialize@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/form-serialize/-/form-serialize-0.7.2.tgz#b0a2ff0c22026fb6d3d15c9d33f6de6a432e4732"
+  integrity sha512-ohEA4Crzd/+hSREjGf4kSsy73WhAtQ7H+blGEz2DVd+JCi0TV5nZBSn9PaPlvrl9m29fa6xclAfpRkqZ57b1bw==
+
 fragment-cache@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/fragment-cache/-/fragment-cache-0.2.1.tgz#4290fad27f13e89be7f33799c6bc5a0abfff0d19"
@@ -4559,6 +4564,11 @@ node-releases@^1.1.71:
   version "1.1.72"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.72.tgz#14802ab6b1039a79a0c7d662b610a5bbd76eacbe"
   integrity sha512-LLUo+PpH3dU6XizX3iVoubUNheF/owjXCZZ5yACDxNnPtgFuludV1ZL3ayK1kVep42Rmm0+R9/Y60NQbZ2bifw==
+
+node-snackbar@^0.1.16:
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/node-snackbar/-/node-snackbar-0.1.16.tgz#72baa02d40afc4dfe5621137850b80246d8078d5"
+  integrity sha512-3s43QMKgABXdnqUfpKAXG+WlvS8bbuO6n6LAOmmLNZs87CGdpexqfGYCktFVi9NHFgREwNJARgeVTLOFAf2MQg==
 
 nodemon@^1.18.7:
   version "1.19.1"

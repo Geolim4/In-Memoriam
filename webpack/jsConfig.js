@@ -2,12 +2,13 @@ const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+  devtool: "source-map",
   performance: {
     maxEntrypointSize: 1048576,
     maxAssetSize: 1048576
   },
   entry: path.resolve(__dirname, '../src/ts/main.ts'),
-  mode: "production",
+  mode: 'development',// development|production
   module: {
     rules: [{
       loader: "ts-loader",
