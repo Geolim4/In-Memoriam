@@ -4067,6 +4067,51 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "10",
+      "day": "12",
+      "keywords": "",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme du PSIG de Valence a mis fin à ses jours avec son arme de service.",
+      "section": "PSIG",
+      "location": "Valence",
+      "county": "26",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.934450296449334,
+        "lng": 4.896536005353368
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/valence-un-gendarme-du-psig-sest-suicide-avec-son-arme-de-service.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/suicide-un-gendarme-de-la-drome-se-donne-la-mort-a-valence",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2022/10/11/un-gendarme-met-fin-a-ses-jours",
+          "title": "Le Dauphiné",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
