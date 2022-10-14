@@ -4076,6 +4076,45 @@
       "unpublished_reason": "",
       "year": "2022",
       "month": "10",
+      "day": "11",
+      "keywords": "Swann LE NGOC HUE",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme de l'EGM 33/7 à Vouziers a mis fin à ses jours avec son arme de service dans son logement de service.",
+      "section": "EGM 33/7",
+      "location": "Vouziers",
+      "county": "08",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.40391438312525,
+        "lng": 4.70189834775721
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.instagram.com/p/CjnjOUIjdtn/",
+          "title": "@36quaidesorfevres (Instagram)",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/un-gendarme-mobile-met-fin-a-ses-jours-a-l-escadron-de-vouziers",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "10",
       "day": "12",
       "keywords": "",
       "house": "gd",
@@ -4108,6 +4147,60 @@
         {
           "url": "https://www.ledauphine.com/faits-divers-justice/2022/10/11/un-gendarme-met-fin-a-ses-jours",
           "title": "Le Dauphiné",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "10",
+      "day": "13",
+      "keywords": "Thomas Cavaillon-Pinod",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme de la BMo de Biarritz est mort dans un accident de la route lors d'un convoi d'escorte de la Banque de France.",
+      "section": "EDSR 64",
+      "location": "Bayonne",
+      "county": "64",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.48632162440501,
+        "lng": -1.4665226823389048
+      },
+      "homage": {
+        "title": "Ministère de l'Intérieur",
+        "url": "https://www.interieur.gouv.fr/actualites/communiques/deces-dun-gendarme-dans-pyrenees-atlantiques"
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/bayonne-un-motard-de-la-gendarmerie-tue-dans-une-violente-collision-avec-une-ambulance.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/operationnel/un-motocycliste-de-la-gendarmerie-decede-apres-avoir-ete-percute-par-une-ambulance-privee-a-bayonne",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/Gendarmerie/status/1580546972855205888",
+          "title": "@Gendarmerie",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.sudouest.fr/pyrenees-atlantiques/bayonne/bayonne-percute-par-une-ambulance-un-motard-de-la-gendarmerie-trouve-la-mort-12589594.php",
+          "title": "Sud Ouest",
           "paywall": false,
           "trustful": true
         }
