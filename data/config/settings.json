@@ -25,7 +25,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "3.4.0",
+    "appVersion": "3.4.1",
     "defaultUserConfig": {
       "browserHistoryReplaceState": "",
       "themeColor": "auto"
