@@ -68,6 +68,7 @@
     "jsonminify": "^0.4.2",
     "micromodal": "^0.4.2",
     "node-snackbar": "^0.1.16",
+    "object-merge": "^2.5.1",
     "popper.js": "^1.15.0",
     "pure-css-loader": "^3.3.3",
     "qs": "^6.11.0",

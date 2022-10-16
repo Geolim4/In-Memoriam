@@ -2,7 +2,9 @@ import Cookies from 'js-cookie';
 import { Definitions, Settings } from '../models';
 import { App } from '../app';
 import { UserConfig } from '../models/userConfig.model';
+import { SettingsResponse } from '../models/settingsResponse.model';
 
+const ObjectMerge = require('object-merge');
 const TextObfuscator = require('text-obfuscator');
 
 /**
@@ -16,19 +18,21 @@ export class ConfigFactory {
 
     public definitions: Definitions;
 
-    private configPath: string;
+    private readonly configPath: string;
 
-    public constructor(onceInitialized: VoidFunction) {
+    public constructor(onceLoaded: VoidFunction) {
         this.config = { appDebug: true } as Settings;
         this.definitions = {};
         this.configPath = './data/config/settings.json';
-        this.init(onceInitialized);
+        this.load(onceLoaded);
     }
 
     public setUserConfig(userConfig: UserConfig):void {
         this.userConfig = { ...this.config.defaultUserConfig, ...userConfig };
         Cookies.set('userConfig', JSON.stringify(this.userConfig));
-        document.dispatchEvent(new CustomEvent('user-config-changed', { detail: userConfig }));
+        this.reload((): void => {
+            document.dispatchEvent(new CustomEvent('user-config-changed', { detail: userConfig }));
+        });
     }
 
     public isDebugEnabled(): boolean {
@@ -39,24 +43,39 @@ export class ConfigFactory {
         return this.config.searchMinLength;
     }
 
-    private init(onceInitialized: VoidFunction): void {
+    public reload(onceLoaded?: VoidFunction): void {
+        this.config = { appDebug: true } as Settings;
+        this.definitions = {};
+        this.load(onceLoaded);
+    }
+
+    protected load(onceLoaded?: VoidFunction): void {
         const { hostname } = window.location;
 
         fetch(this.configPath, { cache: 'no-cache' })
             .then((response): any => response.json())
-            .then((responseData: { settings: Settings, hostSettings: {[name: string]: any} }): void => {
+            .then((responseData: SettingsResponse): void => {
+                const darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
                 this.config = this.decodeConfigs(responseData.settings);
                 /**
                 * Override of settings per environments
                 */
                 if (typeof responseData.hostSettings[hostname] === 'object') {
-                    for (const key of Object.keys(responseData.hostSettings[hostname])) {
-                        let configData = responseData.hostSettings[hostname][key];
-                        if (typeof configData === 'string') { // @todo Maybe loop recursively ?
-                            configData = configData.replace(`%${key}%`, this.config[key]);
-                        }
-                        this.config[key] = configData;
-                    }
+                    this.config = ObjectMerge(this.config, responseData.hostSettings[hostname]);
+
+                    /**
+                     * Special appVersion treatment
+                     */
+                    this.config.appVersion = this.config.appVersion.replace('%appVersion%', responseData.settings.appVersion);
+                }
+
+                /**
+                 * Override of settings per browser's theme
+                 */
+                if (darkTheme && typeof responseData.themeSettings.dark === 'object') {
+                    this.config = ObjectMerge(this.config, responseData.themeSettings.dark);
+                } else if (!darkTheme && typeof responseData.themeSettings.light === 'object') {
+                    this.config = ObjectMerge(this.config, responseData.themeSettings.light);
                 }
 
                 try {
@@ -66,6 +85,13 @@ export class ConfigFactory {
                     }
                 } catch {
                     this.setUserConfig(this.config.defaultUserConfig);
+                } finally {
+                    /**
+                     * Override of settings per user theme
+                     */
+                    if (this.userConfig.themeColor !== 'auto') {
+                        this.config = ObjectMerge(this.config, responseData.themeSettings[this.userConfig.themeColor]);
+                    }
                 }
 
                 fetch(this.config.definitionsSrc, { cache: 'force-cache' })
@@ -79,7 +105,9 @@ export class ConfigFactory {
                         App.getInstance().getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des définitions.', { isError: true });
                     })
                     .finally((): void => {
-                        onceInitialized();
+                        if (onceLoaded) {
+                            onceLoaded();
+                        }
                     });
             }).catch((e): void => {
                 // No debug check here since it's stored in configuration

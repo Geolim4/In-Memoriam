@@ -291,15 +291,19 @@ export abstract class AppCore extends AppAbstract {
     }
 
     private loadAppComponents(): void {
-        const mapElement = <HTMLInputElement>document.getElementById('map');
-        this.map = new google.maps.Map(mapElement, this.getConfigFactory().config.googleMapsOptions);
+        this.map = new google.maps.Map(
+            <HTMLInputElement>document.getElementById('map'),
+            this.getConfigFactory().config.googleMapsOptions,
+        );
 
         fetch(this.getConfigFactory().config.filtersSrc, { cache: 'force-cache' })
             .then((response): any => response.json())
             .then((responseData: { filters: FormFilters }): void => {
+                this.bindUserConfigChangedEvent();
                 this.loadGlossary();
                 this.setFormFilters(responseData.filters);
                 this.setupSkeleton(this.getFilters(true));
+                this.setupHtmlDocumentTheme();
                 this.bindAnchorEvents();
                 this.bindFilters();
                 this.getMapButtons().bindCustomButtons();
@@ -319,6 +323,37 @@ export abstract class AppCore extends AppAbstract {
             });
 
         this.loadActivityDetectorMonitoring();
+    }
+
+    private bindUserConfigChangedEvent(): void {
+        Events.addEventHandler(document, 'user-config-changed', (): void => {
+            const reDraw = ():void => {
+                this.map = new google.maps.Map(
+                    <HTMLInputElement>document.getElementById('map'),
+                    this.getConfigFactory().config.googleMapsOptions,
+                );
+                this.setupHtmlDocumentTheme();
+                this.getMapButtons().bindCustomButtons();
+                this.reloadMarkers(false);
+            };
+
+            if (document.fullscreenElement || this.getModal().isModalOpened()) {
+                document.exitFullscreen().then((): void => {
+                    if (this.getModal().isModalOpened()) {
+                        this.getModal().closeModalInfo();
+                    }
+                }).finally((): void => {
+                    const i = setInterval((): void => {
+                        if (!this.getModal().isModalOpened()) {
+                            reDraw();
+                            clearInterval(i);
+                        }
+                    }, 10);
+                });
+            } else {
+                reDraw();
+            }
+        });
     }
 
     private getDefinitions(response: Bloodbath): DefinitionsCount {
@@ -707,6 +742,23 @@ export abstract class AppCore extends AppAbstract {
             */
             appSettingsElements.innerHTML = this.getConfigFactory().config[appSettingsElements.dataset.appSettings];
         });
+
+        Events.addEventHandler(window.matchMedia('(prefers-color-scheme: dark)'), 'change', (): void => {
+            const userConfig = this.getConfigFactory().userConfig;
+            if (userConfig.themeColor === 'auto') {
+                this.getConfigFactory().setUserConfig(userConfig);
+            }
+        });
+    }
+
+    private setupHtmlDocumentTheme(): void {
+        const themeColor = this.getConfigFactory().userConfig.themeColor;
+        const HtmlDocument = document.querySelector('html');
+
+        HtmlDocument.className = HtmlDocument.className.replace(new RegExp('\\b' + 'prefers-color-scheme-' + '[^ ]*[ ]?\\b', 'g'), '');
+        if (themeColor !== 'auto') {
+            HtmlDocument.classList.add(`prefers-color-scheme-${themeColor}`);
+        }
     }
 
     private clearMapObjects(): void {

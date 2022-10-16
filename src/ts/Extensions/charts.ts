@@ -280,10 +280,10 @@ export class Charts {
             colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
             legend: {
                 itemHoverStyle: {
-                    color: '#ffffff',
+                    color: 'var(--text-color-ligher)',
                 },
                 itemStyle: {
-                    color: '#ececec',
+                    color: 'var(--text-color)',
                     fontFamily: 'Roboto, "Trebuchet MS", Verdana, sans-serif',
                     fontSize: '12px',
                     fontWeight: 'normal',
@@ -293,17 +293,18 @@ export class Charts {
                 series: {
                     dataLabels: {
                         style: {
-                            color: '#ececec',
+                            color: 'var(--text-color-ligher)',
                             fontFamily: 'Roboto, "Trebuchet MS", Verdana, sans-serif',
                             fontSize: '12px',
                             fontWeight: 'normal',
+                            textOutline: '0',
                         },
                     },
                 },
             },
             subtitle: {
                 style: {
-                    color: '#ececec',
+                    color: 'var(--text-color)',
                     fontFamily: 'Roboto, "Trebuchet MS", Verdana, sans-serif',
                     fontSize: '15px',
                     fontWeight: 'bold',
@@ -312,7 +313,7 @@ export class Charts {
             },
             title: {
                 style: {
-                    color: '#ececec',
+                    color: 'var(--text-color)',
                     fontFamily: 'Roboto, "Trebuchet MS", Verdana, sans-serif',
                     fontSize: '20px',
                     fontWeight: 'bold',
@@ -321,20 +322,30 @@ export class Charts {
             xAxis: {
                 labels: {
                     style: {
-                        color: '#ececec',
+                        color: 'var(--text-color)',
                         fontFamily: 'Roboto, "Trebuchet MS", Verdana, sans-serif',
                         fontSize: '12px',
                         fontWeight: 'bold',
+                    },
+                },
+                title: {
+                    style: {
+                        color: 'var(--text-color)',
                     },
                 },
             },
             yAxis: {
                 labels: {
                     style: {
-                        color: '#ececec',
+                        color: 'var(--text-color)',
                         fontFamily: 'Roboto, "Trebuchet MS", Verdana, sans-serif',
                         fontSize: '16px',
                         fontWeight: 'bold',
+                    },
+                },
+                title: {
+                    style: {
+                        color: 'var(--text-color)',
                     },
                 },
             },

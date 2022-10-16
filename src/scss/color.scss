@@ -1,12 +1,56 @@
 @charset "UTF-8";
 @import './variables';
 
-:root {
-  --background-color: #{$medium-grey};
-  --text-color: #{$white};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color-inversed: #{$less-white};
+    --background-color: #{$medium-grey};
+    --background-color-higher: #{$dark-grey};
+    --text-color: #{$white};
+    --text-color-ligher: #{$less-white};
+    --text-color-inversed: #{$dark-grey};
+    --border-color: #{$light-grey};
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color-inversed: #{$medium-grey};
+    --background-color: #{$less-white};
+    --background-color-higher: #{$light-grey};
+    --text-color: #{$dark-grey};
+    --text-color-ligher: #{$medium-grey};
+    --text-color-inversed: #{$less-white};
+    --border-color: #{$dark-grey};
+  }
+}
+
+html.prefers-color-scheme-dark {
+  &:root {
+    --background-color-inversed: #{$less-white};
+    --background-color: #{$medium-grey};
+    --background-color-higher: #{$dark-grey};
+    --text-color: #{$white};
+    --text-color-ligher: #{$less-white};
+    --text-color-inversed: #{$dark-grey};
+    --border-color: #{$light-grey};
+  }
+}
+
+html.prefers-color-scheme-light {
+  &:root {
+    --background-color-inversed: #{$medium-grey};
+    --background-color: #{$less-white};
+    --background-color-higher: #{$light-grey};
+    --text-color: #{$dark-grey};
+    --text-color-ligher: #{$medium-grey};
+    --text-color-inversed: #{$less-white};
+    --border-color: #{$dark-grey};
+  }
 }
 
 body {
+  transition: background-color 0.8s ease, color 0.5s ease;
   background-color: var(--background-color);
   color: var(--text-color);
 
@@ -17,16 +61,19 @@ body {
     select.form-control,
     .form-control[disabled],
     .form-control[readonly] {
-      color: $white;
-      background-color: $dark-grey;
+      color: var(--text-color);
+      background-color: var(--background-color-higher);
       &[disabled] {
         text-decoration: line-through;
         opacity: 0.6;
       }
+      &::placeholder {
+        color: var(--text-color-ligher);
+      }
     }
     .choices__list--dropdown {
       > .choices__list {
-        color: $dark-grey;
+        color: $black;
         font-weight: normal;
       }
       z-index: 10;
@@ -34,10 +81,10 @@ body {
 
     .choices[data-type*="select-one"] {
       &:after {
-        border-top-color: $light-grey;
+        border-top-color: var(--border-color);
       }
       &.is-open:after {
-        border-bottom-color: $light-grey;
+        border-bottom-color: var(--border-color);
       }
     }
   }
@@ -51,37 +98,44 @@ body {
   h1 a,
   h1 a:hover,
   h1 a:focus {
-    color: $white;
+    color: var(--text-color-ligher);
   }
 
   > header,
   > footer,
   code {
-    background-color: $dark-grey;
+    background-color: var(--background-color-higher);
   }
 
   .text-primary,
   .text-info {
-    color: $white;
+    color: var(--text-color);
   }
 
   .modal__container {
-    background-color: $dark-grey;
+    background-color: var(--background-color);
   }
 
   .modal__title,
   .modal__content {
-    color: $white;
+    color: var(--text-color);
   }
 
-  .modal__btn-danger {
-    background-color: #9e0000;
-    color: #fff;
-  }
+  .modal__btn {
+    &:not(.modal__btn-primary) {
+      background-color: var(--background-color-inversed);
+      color: var(--text-color-inversed);
+    }
 
-  .modal__btn-warning {
-    background-color: #ca5702;
-    color: #fff;
+    &.modal__btn-danger {
+      background-color: #9e0000;
+      color: $white;
+    }
+
+    &.modal__btn-warning {
+      background-color: #ca5702;
+      color: $white;
+    }
   }
 
   .tippy-tooltip {
@@ -104,13 +158,13 @@ body {
       .poi-info-window {
         div,
         a {
-          background-color: $medium-grey;
+          background-color: var(--background-color);
           color: $blue;
         }
         div {
           color: $white;
         }
-        color: $white;
+        color: var(--text-color);
         background-color: $medium-grey;
       }
       .gm-style-iw-c {
@@ -119,7 +173,7 @@ body {
       .gm-style-iw-tc {
         filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.4));
         &:after {
-          background: linear-gradient(45deg, $medium-grey 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%) $medium-grey;
+          background: linear-gradient(45deg, var(--background-color) 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%) var(--background-color);
         }
         &.gm-style-iw-red:after {
           background: rgba(255, 0, 0, 0.7);
@@ -136,7 +190,7 @@ body {
       background: $blue;
     }
 
-    background: $dark-grey;
+    background: var(--background-color);
     color: var(--text-color);
   }
 }
