@@ -1,4 +1,18 @@
 {
+  "themeSettings": {
+    "dark": {
+      "googleMapsOptions": {
+        "backgroundColor": "#343A40",
+        "mapId": "42179193e08de91e"
+      }
+    },
+    "light": {
+      "googleMapsOptions": {
+        "backgroundColor": "#dadada",
+        "mapId": "b1c7f4b5d3981e34"
+      }
+    }
+  },
   "hostSettings": {
     "localhost": {
       "appDebug": true,
@@ -11,7 +25,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "3.3.1",
+    "appVersion": "3.4.0",
     "defaultUserConfig": {
       "browserHistoryReplaceState": "",
       "themeColor": "auto"

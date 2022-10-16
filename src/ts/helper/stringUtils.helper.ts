@@ -83,4 +83,8 @@ export class StringUtilsHelper {
         }
         return str.replace(new RegExp(find, 'g'), replace);
     }
+
+    public propertyAccessor(path: string, obj: object): any {
+        return path.split('.').reduce((prev: object, curr: string): any => prev ? prev[curr] : null, obj || self);
+    }
 }

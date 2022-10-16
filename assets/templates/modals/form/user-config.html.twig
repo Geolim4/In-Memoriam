@@ -10,10 +10,10 @@
         </div>
         <div class="row mtop">
             <fieldset class="col-md-4">
-                <label for="themeColor"><abbr data-tippy-content="Cette option sera très bientôt disponible :)">Thème:</abbr></label>
+                <label for="themeColor">Thème <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true" data-tippy-content="Le fait de forcer le thème peut entrainer un léger flash au chargement de la cartographie qui peut être résolu en privilégiant la modification de vos paramètres d'affichage système."></span></label>
             </fieldset>
             <div class="col-md-8">
-                <select name="themeColor" id="themeColor" class="form-control" disabled>
+                <select name="themeColor" id="themeColor" class="form-control">
                     <option value="auto"{% if userConfig.themeColor == 'auto' %} selected{% endif %}>Automatique</option>
                     <option value="dark"{% if userConfig.themeColor == 'dark' %} selected{% endif %}>Sombre</option>
                     <option value="light"{% if userConfig.themeColor == 'light' %} selected{% endif %}>Clair</option>
@@ -21,4 +21,10 @@
             </div>
         </div>
     </form>
+    <div class="mtop">
+        <small>
+            <em>La mise à jour de vos préférences entrainera le rechargement complet de la carte.<br />
+                Toutefois vos filtres appliqués seront conservés.</em>
+        </small>
+    </div>
 </div>
