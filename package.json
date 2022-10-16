@@ -51,6 +51,7 @@
     "@googlemaps/js-api-loader": "^1.14.3",
     "@googlemaps/markerclusterer": "^1.0.21",
     "@typescript-eslint/parser": "^5.38.0",
+    "@ungap/structured-clone": "^1.0.1",
     "activity-detector": "^3.0.0",
     "array-unique": "^0.3.2",
     "autocompleter": "^6.1.3",

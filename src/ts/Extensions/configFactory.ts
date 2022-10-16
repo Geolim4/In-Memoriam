@@ -1,4 +1,5 @@
 import Cookies from 'js-cookie';
+import structuredClone from '@ungap/structured-clone';
 import { Definitions, Settings } from '../models';
 import { App } from '../app';
 import { UserConfig } from '../models/userConfig.model';
@@ -28,10 +29,16 @@ export class ConfigFactory {
     }
 
     public setUserConfig(userConfig: UserConfig):void {
+        const oldConfig = structuredClone(this.userConfig);
         this.userConfig = { ...this.config.defaultUserConfig, ...userConfig };
         Cookies.set('userConfig', JSON.stringify(this.userConfig));
+        if (this.userConfig.themeColor !== 'auto') {
+            Cookies.set('htmlColorSchemePreload', `prefers-color-scheme-${this.userConfig.themeColor}`);
+        } else {
+            Cookies.remove('htmlColorSchemePreload');
+        }
         this.reload((): void => {
-            document.dispatchEvent(new CustomEvent('user-config-changed', { detail: userConfig }));
+            document.dispatchEvent(new CustomEvent('user-config-changed', { detail: oldConfig }));
         });
     }
 

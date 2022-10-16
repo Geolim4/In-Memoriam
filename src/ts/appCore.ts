@@ -326,32 +326,39 @@ export abstract class AppCore extends AppAbstract {
     }
 
     private bindUserConfigChangedEvent(): void {
-        Events.addEventHandler(document, 'user-config-changed', (): void => {
-            const reDraw = ():void => {
-                this.map = new google.maps.Map(
-                    <HTMLInputElement>document.getElementById('map'),
-                    this.getConfigFactory().config.googleMapsOptions,
-                );
-                this.setupHtmlDocumentTheme();
-                this.getMapButtons().bindCustomButtons();
-                this.reloadMarkers(false);
-            };
+        Events.addEventHandler(document, 'user-config-changed', (evt: CustomEvent): void => {
+            const newUserConfig = this.getConfigFactory().userConfig;
+            /**
+             * Reload the map only if the user has
+             * really changed its theme preferences.
+             */
+            if (newUserConfig.themeColor !== evt.detail.themeColor) {
+                const reDraw = ():void => {
+                    this.map = new google.maps.Map(
+                        <HTMLInputElement>document.getElementById('map'),
+                        this.getConfigFactory().config.googleMapsOptions,
+                    );
+                    this.setupHtmlDocumentTheme();
+                    this.getMapButtons().bindCustomButtons();
+                    this.reloadMarkers(false);
+                };
 
-            if (document.fullscreenElement || this.getModal().isModalOpened()) {
-                document.exitFullscreen().then((): void => {
-                    if (this.getModal().isModalOpened()) {
-                        this.getModal().closeModalInfo();
-                    }
-                }).finally((): void => {
-                    const i = setInterval((): void => {
-                        if (!this.getModal().isModalOpened()) {
-                            reDraw();
-                            clearInterval(i);
+                if (document.fullscreenElement || this.getModal().isModalOpened()) {
+                    document.exitFullscreen().then((): void => {
+                        if (this.getModal().isModalOpened()) {
+                            this.getModal().closeModalInfo();
                         }
-                    }, 10);
-                });
-            } else {
-                reDraw();
+                    }).finally((): void => {
+                        const i = setInterval((): void => {
+                            if (!this.getModal().isModalOpened()) {
+                                reDraw();
+                                clearInterval(i);
+                            }
+                        }, 10);
+                    });
+                } else {
+                    reDraw();
+                }
             }
         });
     }
