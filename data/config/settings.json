@@ -25,9 +25,10 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "3.4.1",
+    "appVersion": "3.5.0",
     "defaultUserConfig": {
       "browserHistoryReplaceState": "",
+      "saveFiltersInSession": "",
       "themeColor": "auto"
     },
     "circleOptions": {

@@ -2,15 +2,23 @@
     <form id="form-user-config">
         <div class="row mtop">
             <fieldset class="col-xs-9">
-                <label for="browserHistoryReplaceState">URL du navigateur dynamique:</label>
+                <label for="browserHistoryReplaceState">URL du navigateur dynamique <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-tippy-content="Cette option actualisera l'URL du navigateur en temps réel pour chaque filtres appliqués."></span></label>
             </fieldset>
             <div class="col-xs-3">
                 <input type="checkbox" name="browserHistoryReplaceState" id="browserHistoryReplaceState" class="form-control" {% if userConfig.browserHistoryReplaceState == 'on' %} checked{% endif %}/>
             </div>
         </div>
         <div class="row mtop">
+            <fieldset class="col-xs-9">
+                <label for="saveFiltersInSession">Garder les filtres en mémoire <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-tippy-content="Garder les filtres en mémoire vous permettra de conserver les filtres appliqués si vous quittez le site et décidez de revenir plus tard."></span></label>
+            </fieldset>
+            <div class="col-xs-3">
+                <input type="checkbox" name="saveFiltersInSession" id="saveFiltersInSession" class="form-control" {% if userConfig.saveFiltersInSession == 'on' %} checked{% endif %}/>
+            </div>
+        </div>
+        <div class="row mtop">
             <fieldset class="col-md-4">
-                <label for="themeColor">Thème <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true" data-tippy-content="Le fait de forcer le thème peut entrainer un léger flash au chargement de la cartographie qui peut être résolu en privilégiant la modification de vos paramètres d'affichage système."></span></label>
+                <label for="themeColor">Thème <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-tippy-content="Le fait de forcer le thème peut entrainer un léger flash au chargement de la cartographie qui peut être résolu en privilégiant la modification de vos paramètres d'affichage système."></span></label>
             </fieldset>
             <div class="col-md-8">
                 <select name="themeColor" id="themeColor" class="form-control">
