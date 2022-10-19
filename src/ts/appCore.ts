@@ -328,6 +328,12 @@ export abstract class AppCore extends AppAbstract {
     private bindUserConfigChangedEvent(): void {
         Events.addEventHandler(document, 'user-config-changed', (evt: CustomEvent): void => {
             const newUserConfig = this.getConfigFactory().userConfig;
+
+            if (newUserConfig.themeColor !== 'auto') {
+                Cookies.set('htmlColorSchemePreload', `prefers-color-scheme-${newUserConfig.themeColor}`);
+            } else {
+                Cookies.remove('htmlColorSchemePreload');
+            }
             /**
              * Reload the map only if the user has
              * really changed its theme preferences.
@@ -359,6 +365,12 @@ export abstract class AppCore extends AppAbstract {
                 } else {
                     reDraw();
                 }
+            }
+
+            if (newUserConfig.saveFiltersInSession === 'on') {
+                Cookies.set('userSavedFilters', this.getFilters(false));
+            } else {
+                Cookies.remove('userSavedFilters');
             }
         });
     }

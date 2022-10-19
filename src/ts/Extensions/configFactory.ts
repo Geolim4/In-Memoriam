@@ -32,11 +32,6 @@ export class ConfigFactory {
         const oldConfig = structuredClone(this.userConfig);
         this.userConfig = { ...this.config.defaultUserConfig, ...userConfig };
         Cookies.set('userConfig', JSON.stringify(this.userConfig));
-        if (this.userConfig.themeColor !== 'auto') {
-            Cookies.set('htmlColorSchemePreload', `prefers-color-scheme-${this.userConfig.themeColor}`);
-        } else {
-            Cookies.remove('htmlColorSchemePreload');
-        }
         this.reload((): void => {
             document.dispatchEvent(new CustomEvent('user-config-changed', { detail: oldConfig }));
         });
