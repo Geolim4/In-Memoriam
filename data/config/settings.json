@@ -28,6 +28,7 @@
     "appVersion": "3.4.1",
     "defaultUserConfig": {
       "browserHistoryReplaceState": "",
+      "saveFiltersInSession": "",
       "themeColor": "auto"
     },
     "circleOptions": {

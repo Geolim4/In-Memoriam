@@ -15,7 +15,6 @@ import { IntUtilsHelper } from '../helper/intUtils.helper';
 import { ModalContentTemplate } from './modalContentTemplate';
 
 const formSerialize = require('form-serialize');
-const Snackbar = require('node-snackbar');
 
 export class MapButtons {
     private localizationMarker: google.maps.Marker;
@@ -390,14 +389,14 @@ export class MapButtons {
                         App.getInstance().getConfigFactory().setUserConfig(
                             App.getInstance().getConfigFactory().config.defaultUserConfig,
                         );
-                        Snackbar.show({ actionText: 'Fermer', actionTextColor: '#d85d5d', pos: 'bottom-center', text: 'Vos préférences ont été réinitialisées' });
+                        App.getInstance().getSnackbar().show('Vos préférences ont été réinitialisées');
                     },
                     cancelLabel: 'Réinitialiser vos préférences',
                     confirmCallback: (): void => {
                         App.getInstance().getConfigFactory().setUserConfig(
                             formSerialize(document.querySelector('#form-user-config'), { empty: true, hash: true }),
                         );
-                        Snackbar.show({ actionText: 'Fermer', pos: 'bottom-center', text: 'Vos préférences ont été sauvegardées' });
+                        App.getInstance().getSnackbar().show('Vos préférences ont été sauvegardées');
                     },
                     requiresExplicitCancel: true,
                 },

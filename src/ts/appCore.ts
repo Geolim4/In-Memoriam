@@ -299,15 +299,21 @@ export abstract class AppCore extends AppAbstract {
         fetch(this.getConfigFactory().config.filtersSrc, { cache: 'force-cache' })
             .then((response): any => response.json())
             .then((responseData: { filters: FormFilters }): void => {
+                this.setFormFilters(responseData.filters); // Must come before any call to getFilters()
                 this.bindUserConfigChangedEvent();
+                this.bindFilterChangedEvent();
                 this.loadGlossary();
-                this.setFormFilters(responseData.filters);
-                this.setupSkeleton(this.getFilters(true));
+                this.setupSkeleton(this.getFilters(true, true));
                 this.setupHtmlDocumentTheme();
                 this.bindAnchorEvents();
                 this.bindFilters();
                 this.getMapButtons().bindCustomButtons();
-                this.bindMarkers(this.getFilters(true));
+                /**
+                 *  getFilters() must be called again because
+                 *  setupSkeleton() will set default values
+                 *  to our fields from our configuration file
+                 */
+                this.bindMarkers(this.getFilters(true, true));
                 this.bindMapEvents();
                 this.bindFullscreenFormFilterListener();
                 this.printSupportAssociations();
@@ -328,6 +334,16 @@ export abstract class AppCore extends AppAbstract {
     private bindUserConfigChangedEvent(): void {
         Events.addEventHandler(document, 'user-config-changed', (evt: CustomEvent): void => {
             const newUserConfig = this.getConfigFactory().userConfig;
+
+            if (newUserConfig.themeColor !== 'auto') {
+                Cookies.set(
+                    'htmlColorSchemePreload',
+                    `prefers-color-scheme-${newUserConfig.themeColor}`,
+                    { expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)), sameSite: 'strict' },
+                );
+            } else {
+                Cookies.remove('htmlColorSchemePreload');
+            }
             /**
              * Reload the map only if the user has
              * really changed its theme preferences.
@@ -359,6 +375,28 @@ export abstract class AppCore extends AppAbstract {
                 } else {
                     reDraw();
                 }
+            }
+
+            if (newUserConfig.saveFiltersInSession === 'on') {
+                Cookies.set(
+                    'userSavedFilters',
+                    JSON.stringify(this.getFilters(false)),
+                    { expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)), sameSite: 'strict', signed: true },
+                );
+            } else {
+                Cookies.remove('userSavedFilters', { signed: true });
+            }
+        });
+    }
+
+    private bindFilterChangedEvent(): void {
+        Events.addEventHandler(document, 'filter-changed', (evt: CustomEvent): void => {
+            if (this.getConfigFactory().userConfig.saveFiltersInSession === 'on') {
+                Cookies.set(
+                    'userSavedFilters',
+                    JSON.stringify(evt.detail),
+                    { expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)), sameSite: 'strict', signed: true },
+                );
             }
         });
     }
@@ -618,8 +656,9 @@ export abstract class AppCore extends AppAbstract {
                 }
                 setTimeout((): void => {
                     if (this.formElement.checkValidity()) {
-                        this.bindMarkers(this.getFilters(false));
-                        document.dispatchEvent(new CustomEvent('filter-changed'));
+                        const filters = this.getFilters(false);
+                        this.bindMarkers(filters);
+                        document.dispatchEvent(new CustomEvent('filter-changed', { detail: filters }));
                     } else {
                         this.formElement.dispatchEvent(new Event('submit', { cancelable: true }));
                     }
@@ -888,7 +927,7 @@ export abstract class AppCore extends AppAbstract {
 
     public abstract getFilterValueLabel(filterName: string, filterValue: string): string; // Only used in Twig templates
 
-    public abstract getFilters(fromAnchor: boolean): Filters;
+    public abstract getFilters(fromAnchor: boolean, fromStorage?: boolean): Filters;
 
     public abstract loadGlossary(): void;
 

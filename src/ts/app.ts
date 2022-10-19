@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie';
 import { Filters } from './models';
 import { AppCore } from './appCore';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
@@ -73,7 +74,7 @@ export class App extends AppCore {
         this.bindMarkers(this.getFilters(fromAnchor));
     }
 
-    public getFilters(fromAnchor: boolean): Filters {
+    public getFilters(fromAnchor: boolean, fromStorage: boolean = false): Filters {
         const anchor = decodeURIComponent(location.hash).substr(1).split('&');
         const exposedFilters = {} as {[name: string]: string};
         const filters = {};
@@ -89,10 +90,22 @@ export class App extends AppCore {
         });
 
         fields.forEach((field): void => {
-            if (fromAnchor) {
-                filters[field.id] = '';
+            filters[field.id] = '';
+            if (fromStorage) {
+                try {
+                    const userFilters = JSON.parse(Cookies.get('userSavedFilters', { signed: true }));
+                    if (typeof userFilters[field.id] !== 'undefined') {
+                        filters[field.id] = userFilters[field.id];
+                    }
+                } catch {}
 
+                if (!fromAnchor && (!field.required || filters[field.id])) {
+                    return;
+                }
+            }
+            if (fromAnchor) {
                 if (exposedFilters[field.id]) {
+                    filters[field.id] = '';
                     exposedFilters[field.id].split(',').forEach((val): void => {
                         if ((field.tagName === 'SELECT' && StringUtilsHelper.arrayContainsString(val, formFilters[field.id].map((v): string => v.value), 'one', true)) || field.tagName === 'INPUT') {
                             filters[field.id] += (filters[field.id] ? `,${val}` : val);
@@ -125,6 +138,7 @@ export class App extends AppCore {
 
         this.getPermalink().build(filters);
 
+        console.log(filters);
         return filters;
     }
 
