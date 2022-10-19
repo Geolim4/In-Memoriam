@@ -10,6 +10,7 @@ import { Death } from './models/Death/death.model';
 import { Renderer } from './Extensions/renderer';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
 import { Permalink } from './Components/permalink';
+import { Snackbar } from './Extensions/snackbar';
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -44,6 +45,8 @@ export abstract class AppAbstract {
 
     private readonly modal: Modal;
 
+    private readonly snackbar: Snackbar;
+
     private readonly charts: Charts;
 
     private readonly mapButtons: MapButtons;
@@ -63,6 +66,7 @@ export abstract class AppAbstract {
         this.configFactory = null;
         this.glossary = {};
         this.modal = new Modal();
+        this.snackbar = new Snackbar();
         this.charts = new Charts();
         this.mapButtons = new MapButtons();
         this.permalink = new Permalink();
@@ -123,6 +127,10 @@ export abstract class AppAbstract {
 
     public getModal(): Modal {
         return this.modal;
+    }
+
+    public getSnackbar(): Snackbar {
+        return this.snackbar;
     }
 
     public getCharts(): Charts {
