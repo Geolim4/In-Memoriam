@@ -28,7 +28,6 @@ export class Links {
         } else if (link.href.includes('#fwd2:')) {
             const forwardLink = document.querySelector(`a#${link.href.split('#fwd2:')[1]}`);
             if (forwardLink) {
-                console.log(forwardLink);
                 e.preventDefault();
                 forwardLink.dispatchEvent(new Event('click', { bubbles: true, cancelable: true }));
             }

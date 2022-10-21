@@ -4,6 +4,7 @@ import { Definitions, Settings } from '../models';
 import { App } from '../app';
 import { UserConfig } from '../models/userConfig.model';
 import { SettingsResponse } from '../models/settingsResponse.model';
+import { IntUtilsHelper } from '../helper/intUtils.helper';
 
 const ObjectMerge = require('object-merge');
 const TextObfuscator = require('text-obfuscator');
@@ -26,6 +27,7 @@ export class ConfigFactory {
         this.definitions = {};
         this.configPath = './data/config/settings.json';
         this.load(onceLoaded);
+        this.bindAppUpdater();
     }
 
     public setUserConfig(userConfig: UserConfig):void {
@@ -56,24 +58,12 @@ export class ConfigFactory {
     }
 
     protected load(onceLoaded?: VoidFunction): void {
-        const { hostname } = window.location;
-
         fetch(this.configPath, { cache: 'no-cache' })
             .then((response): any => response.json())
             .then((responseData: SettingsResponse): void => {
                 const darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                this.config = this.decodeConfigs(responseData.settings);
-                /**
-                * Override of settings per environments
-                */
-                if (typeof responseData.hostSettings[hostname] === 'object') {
-                    this.config = ObjectMerge(this.config, responseData.hostSettings[hostname]);
-
-                    /**
-                     * Special appVersion treatment
-                     */
-                    this.config.appVersion = this.config.appVersion.replace('%appVersion%', responseData.settings.appVersion);
-                }
+                responseData.settings = this.decodeConfigs(responseData.settings);
+                this.config = this.overrideSettingsPerHost(responseData);
 
                 /**
                  * Override of settings per browser's theme
@@ -120,6 +110,65 @@ export class ConfigFactory {
                 console.error(`Failed to load the configuration: ${e}`);
                 App.getInstance().getModal().modalInfo('Erreur', 'Impossible de récupérer le modèle de configuration.', { isError: true });
             });
+    }
+
+    protected overrideSettingsPerHost(settingsResponse: SettingsResponse): Settings {
+        const { hostname } = window.location;
+        let settings = settingsResponse.settings;
+
+        /**
+         * Override of settings per environments
+         */
+        if (typeof settingsResponse.hostSettings[hostname] === 'object') {
+            settings = ObjectMerge(settings, settingsResponse.hostSettings[hostname]);
+
+            /**
+             * Special appVersion treatment
+             */
+            settings.appVersion = settings.appVersion.replace('%appVersion%', settingsResponse.settings.appVersion);
+        }
+
+        return settings;
+    }
+
+    protected bindAppUpdater(): void {
+        let lastVersionFound = '';
+        setInterval((): void => {
+            fetch(`${this.configPath}?_=${IntUtilsHelper.getRandomInt(1000, 1000000)}`, { cache: 'no-store' })
+                .then((response): any => response.json())
+                .then((responseData: SettingsResponse): void => {
+                    responseData.settings = this.decodeConfigs(responseData.settings);
+                    const config = this.overrideSettingsPerHost(responseData);
+                    if (config.appVersion !== this.config.appVersion && lastVersionFound !== config.appVersion) {
+                        lastVersionFound = config.appVersion;
+                        App.getInstance().getModal().modalInfo(
+                            'Mise à jour disponible',
+                            "Une mise à jour de l'application est disponible, souhaitez-vous la mettre à jour maintenant ?",
+                            {
+                                confirmCallback: (): void => {
+                                    if (this.isDebugEnabled()) {
+                                        console.log(`Upgrading app to v${config.appVersion}...`);
+                                    }
+                                    if (typeof window.caches !== 'undefined') {
+                                        window.caches.keys().then((keys): void => {
+                                            keys.forEach((key): void => {
+                                                caches.delete(key);
+                                            });
+                                        }).finally((): void => {
+                                            window.location.reload();
+                                        });
+                                    } else {
+                                        window.location.reload();
+                                    }
+                                },
+                                noStacking: true,
+                            },
+                        );
+                    }
+                }).catch((e): void => {
+                    console.error(`Failed to check for app update: ${e}`);
+                });
+        }, 60000); // Every minute
     }
 
     private decodeConfigs(settings: Settings): Settings {

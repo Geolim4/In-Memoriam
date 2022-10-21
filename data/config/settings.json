@@ -16,8 +16,7 @@
   "hostSettings": {
     "localhost": {
       "appDebug": true,
-      "appVersion": "%appVersion%-dev",
-      "passFiltersToQuery": true
+      "appVersion": "%appVersion%-dev"
     },
     "in.memoriam.forces-francaises.fr": {
       "deathsSrc": "./assets/json/deaths/%year%.min.json"
@@ -25,7 +24,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "3.5.0",
+    "appVersion": "3.5.1",
     "defaultUserConfig": {
       "browserHistoryReplaceState": "",
       "saveFiltersInSession": "",

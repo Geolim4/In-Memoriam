@@ -138,7 +138,6 @@ export class App extends AppCore {
 
         this.getPermalink().build(filters);
 
-        console.log(filters);
         return filters;
     }
 
