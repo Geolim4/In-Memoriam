@@ -3667,6 +3667,39 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "09",
+      "day": "04",
+      "keywords": "Alain Tai",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier volontaire du CIS de Châtellerault a mis fin a ses jours près d'un lac de Châtellerault.\nIl était père d'un enfant.",
+      "section": "SDIS 86",
+      "location": "Châtellerault",
+      "county": "86",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.802518878848595,
+        "lng": 0.5474193250918571
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.lanouvellerepublique.fr/chatellerault/chatellerault-un-homme-retrouve-pendu-au-lac-de-la-foret",
+          "title": "Centre Presse",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
       "orphans": 0,
       "unpublished_reason": "",
       "year": "2022",
