@@ -4205,6 +4205,39 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "09",
+      "day": "04",
+      "keywords": "Alain Tai",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un Caporal Chef du CSP de Châtellerault a mis fin a ses jours.",
+      "section": "CPS de Châtellerault - 86",
+      "location": "Châtellerault",
+      "county": "86",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 150,
+        "lat": 46.8177334,
+        "lng": 0.5459586
+      },
+      "homage": null,
+      "sources": [
+       {
+          "url": "https://www.lanouvellerepublique.fr/chatellerault/chatellerault-un-homme-retrouve-pendu-au-lac-de-la-foret",
+          "title": "Centre Presse",
+          "paywall": false,
+          "trustful": true
+        },
+      ]
     }
   ]
 }
