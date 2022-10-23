@@ -70,8 +70,8 @@ export class App extends AppCore {
             });
     }
 
-    public reloadMarkers(fromAnchor: boolean): void {
-        this.bindMarkers(this.getFilters(fromAnchor));
+    public reloadMarkers(fromAnchor: boolean, useCache: boolean = true): void {
+        this.bindMarkers(this.getFilters(fromAnchor), (useCache ? 'force-cache' : 'reload'));
     }
 
     public getFilters(fromAnchor: boolean, fromStorage: boolean = false): Filters {

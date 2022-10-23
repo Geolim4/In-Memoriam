@@ -72,10 +72,10 @@ export abstract class AppCore extends AppAbstract {
         return url;
     }
 
-    protected bindMarkers(filters: Filters): void {
+    protected bindMarkers(filters: Filters, cacheStrategy: RequestCache = 'default'): void {
         const stopwatchStart = window.performance.now();
         this.showLoaderWall(this.map.getDiv());
-        fetch(this.buildMarkersQuery(filters), { cache: 'no-store' })
+        fetch(this.buildMarkersQuery(filters), { cache: cacheStrategy })
             .then((response):any => response.json())
             .then((responseData: Bloodbath): void => {
                 const bounds = new google.maps.LatLngBounds();
@@ -356,7 +356,7 @@ export abstract class AppCore extends AppAbstract {
                     );
                     this.setupHtmlDocumentTheme();
                     this.getMapButtons().bindCustomButtons();
-                    this.reloadMarkers(false);
+                    this.reloadMarkers(false, false);
                 };
 
                 if (document.fullscreenElement || this.getModal().isModalOpened()) {
@@ -590,7 +590,7 @@ export abstract class AppCore extends AppAbstract {
                 console.log('User is now idle...');
             }
             handler = setInterval((): void => {
-                this.bindMarkers(this.getFilters(false));
+                this.bindMarkers(this.getFilters(false), 'force-cache');
                 if (this.getConfigFactory().isDebugEnabled()) {
                     console.log('Reloading map...');
                 }
@@ -609,7 +609,7 @@ export abstract class AppCore extends AppAbstract {
         window.addEventListener('hashchange', (): void => {
             const filters = this.getFilters(true);
             this.drawCustomSelectors(this.formElement.querySelectorAll('form select'), filters);
-            this.bindMarkers(filters);
+            this.bindMarkers(filters, 'force-cache');
         }, false);
     }
 
@@ -657,7 +657,7 @@ export abstract class AppCore extends AppAbstract {
                 setTimeout((): void => {
                     if (this.formElement.checkValidity()) {
                         const filters = this.getFilters(false);
-                        this.bindMarkers(filters);
+                        this.bindMarkers(filters, 'force-cache');
                         document.dispatchEvent(new CustomEvent('filter-changed', { detail: filters }));
                     } else {
                         this.formElement.dispatchEvent(new Event('submit', { cancelable: true }));
@@ -931,7 +931,7 @@ export abstract class AppCore extends AppAbstract {
 
     public abstract loadGlossary(): void;
 
-    public abstract reloadMarkers(fromAnchor: boolean): void;
+    public abstract reloadMarkers(fromAnchor: boolean, useCache?: boolean): void;
 
     public abstract getFormFiltersKeyed(): { [name: string]: { [name: string]: string } };
 

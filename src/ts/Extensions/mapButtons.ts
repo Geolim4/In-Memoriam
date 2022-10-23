@@ -190,7 +190,7 @@ export class MapButtons {
 
         GmapUtils.bindButton(map, (): void => {
             App.getInstance().loadGlossary();
-            App.getInstance().reloadMarkers(false);
+            App.getInstance().reloadMarkers(false, false);
             App.getInstance().getRenderer().purgeTemplateCache();
         }, buttonOptions);
     }
