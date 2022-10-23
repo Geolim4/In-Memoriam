@@ -46,8 +46,8 @@ export class Charts {
                 }
             }
             /**
-       * Join the peers, if applicable
-       */
+            * Join the peers, if applicable
+            */
             if (peersList[criteriaFilter.value]) {
                 for (const peerCounty in peersList[criteriaFilter.value]) {
                     data[countyGroups.indexOf(counties[peerCounty])] += peersList[criteriaFilter.value][peerCounty];
@@ -118,8 +118,8 @@ export class Charts {
                 }
             }
             /**
-       * Join the peers, if applicable
-       */
+            * Join the peers, if applicable
+            */
             if (peersList[criteriaFilter.value]) {
                 for (const peerMonth in peersList[criteriaFilter.value]) {
                     data[parseInt(peerMonth, 10) - 1] += peersList[criteriaFilter.value][peerMonth];
@@ -188,8 +188,8 @@ export class Charts {
                 }
             }
             /**
-       * Join the peers, if applicable
-       */
+            * Join the peers, if applicable
+            */
             if (peersList[criteriaFilter.value]) {
                 for (const peerMonth in peersList[criteriaFilter.value]) {
                     counter += peersList[criteriaFilter.value][peerMonth];
@@ -245,11 +245,10 @@ export class Charts {
                             peersList[peer[criteria]][marker.death[indexKey]] = 0;
                         }
                         peersList[peer[criteria]][marker.death[indexKey]] += peer.count;
-
                         /**
-             * If the criteria does not exist in peer (e.g: "cause" criteria)
-             * then check in the parent object if it exists
-             */
+                        * If the criteria does not exist in peer (e.g: "cause" criteria)
+                        * then check in the parent object if it exists
+                        */
                     } else if (typeof marker.death[criteria] !== 'undefined') {
                         if (typeof peersList[marker.death[criteria]] === 'undefined') {
                             peersList[marker.death[criteria]] = {};

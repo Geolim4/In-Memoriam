@@ -151,11 +151,22 @@ export class ConfigFactory {
                                     }
                                     if (typeof window.caches !== 'undefined') {
                                         window.caches.keys().then((keys): void => {
-                                            keys.forEach((key): void => {
-                                                caches.delete(key);
-                                            });
-                                        }).finally((): void => {
-                                            window.location.reload();
+                                            /**
+                                             * If our cache has some keys
+                                             * then we wait for theirs
+                                             * deletions before reloading
+                                             */
+                                            if (keys.length) {
+                                                keys.forEach((key): void => {
+                                                    caches.delete(key).then((): void => {
+                                                        if (keys.indexOf(key) === keys.length - 1) {
+                                                            window.location.reload();
+                                                        }
+                                                    });
+                                                });
+                                            } else {
+                                                window.location.reload();
+                                            }
                                         });
                                     } else {
                                         window.location.reload();

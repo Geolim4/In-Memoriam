@@ -3667,6 +3667,39 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "09",
+      "day": "04",
+      "keywords": "Alain Tai",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un pompier volontaire du CIS de Châtellerault a mis fin a ses jours près d'un lac de Châtellerault.\nIl était père d'un enfant.",
+      "section": "SDIS 86",
+      "location": "Châtellerault",
+      "county": "86",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.802518878848595,
+        "lng": 0.5474193250918571
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.lanouvellerepublique.fr/chatellerault/chatellerault-un-homme-retrouve-pendu-au-lac-de-la-foret",
+          "title": "Centre Presse",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
       "orphans": 0,
       "unpublished_reason": "",
       "year": "2022",
@@ -4201,6 +4234,39 @@
         {
           "url": "https://www.sudouest.fr/pyrenees-atlantiques/bayonne/bayonne-percute-par-une-ambulance-un-motard-de-la-gendarmerie-trouve-la-mort-12589594.php",
           "title": "Sud Ouest",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "10",
+      "day": "21",
+      "keywords": "Véronique",
+      "house": "pn",
+      "peers": [],
+      "text": "Une policière du commissariat de Villeneuve-lès-Avignon a mis fin à ses jours à son domicile.\nElle était mariée et mère de deux enfants.",
+      "section": "CSP Villeneuve-lès-Av.",
+      "location": "Villeneuve-lès-Avignon",
+      "county": "30",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.96779521817778,
+        "lng": 4.794668949576992
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/gard-une-policiere-du-commissariat-de-villeneuve-les-avignon-sest-suicidee.html",
+          "title": "Actu17",
           "paywall": false,
           "trustful": true
         }
