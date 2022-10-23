@@ -4238,6 +4238,39 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "10",
+      "day": "21",
+      "keywords": "Véronique",
+      "house": "pn",
+      "peers": [],
+      "text": "Une policière du commissariat de Villeneuve-lès-Avignon a mis fin à ses jours à son domicile.\nElle était mariée et mère de deux enfants.",
+      "section": "CSP Villeneuve-lès-Av.",
+      "location": "Villeneuve-lès-Avignon",
+      "county": "30",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.96779521817778,
+        "lng": 4.794668949576992
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/gard-une-policiere-du-commissariat-de-villeneuve-les-avignon-sest-suicidee.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
