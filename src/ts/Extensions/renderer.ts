@@ -41,6 +41,10 @@ export class Renderer {
             } else {
                 targetElement.insertAdjacentHTML('afterbegin', htmlContent);
             }
+        }).catch((e): void => {
+            if (App.getInstance().getConfigFactory().isDebugEnabled()) {
+                console.error(`The DOM rendering has encountered the following error: ${e}`);
+            }
         });
     }
 
