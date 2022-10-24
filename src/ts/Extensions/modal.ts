@@ -36,6 +36,15 @@ export class Modal {
         const okLabel = (typeof options === 'object' && options.okLabel) || 'Ok';
         const cancelLabel = (typeof options === 'object' && options.cancelLabel) || 'Annuler';
 
+        /**
+         * Always consider the modal as unopened if for an
+         * X reason the modal-info element has disappeared
+         * E.g: because of a network disruption during fetch
+         */
+        if (!document.getElementById('modal-info')) {
+            this.modelOpened = false;
+        }
+
         if (content instanceof ModalContentTemplate) {
             App.getInstance()
                 .getRenderer()
@@ -46,11 +55,11 @@ export class Modal {
             return;
         }
 
-        if (noStacking && this.modelOpened) {
+        if (noStacking && this.isModalOpened()) {
             this.closeModalInfo();
         }
 
-        if (!this.modelOpened) {
+        if (!this.isModalOpened()) {
             this.modelOpened = true;
             let hasConfirmed = false;
             let hasExplicitelyCanceled = false;
@@ -142,13 +151,14 @@ export class Modal {
     }
 
     public closeModalInfo(): void {
-        if (document.getElementById('modal-info').classList.contains('is-open')) {
+        if (this.isModalOpened()) {
             micromodal.close('modal-info');
         }
     }
 
     public isModalOpened(): boolean {
-        return this.modelOpened;
+        const modal = document.getElementById('modal-info');
+        return this.modelOpened && modal && modal.classList.contains('is-open');
     }
 
     protected bindFullscreenMicromodalListener(): void {
