@@ -58,7 +58,7 @@ export class ConfigFactory {
     }
 
     protected load(onceLoaded?: VoidFunction): void {
-        fetch(this.configPath, { cache: 'no-cache' })
+        fetch(this.configPath, { cache: 'default' })
             .then((response): any => response.json())
             .then((responseData: SettingsResponse): void => {
                 const darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -134,7 +134,7 @@ export class ConfigFactory {
     protected bindAppUpdater(): void {
         let lastVersionFound = '';
         setInterval((): void => {
-            fetch(`${this.configPath}?_=${IntUtilsHelper.getRandomInt(1000, 1000000)}`, { cache: 'no-store' })
+            fetch(`${this.configPath}?_=${IntUtilsHelper.getRandomInt(1000, 1000000)}`, { cache: 'reload' })
                 .then((response): any => response.json())
                 .then((responseData: SettingsResponse): void => {
                     responseData.settings = this.decodeConfigs(responseData.settings);
