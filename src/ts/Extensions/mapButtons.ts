@@ -49,6 +49,7 @@ export class MapButtons {
     }
 
     private bindLocalizationButton(map: google.maps.Map): void {
+        console.log(App.getInstance().getConfigFactory().config);
         const buttonOptions = <GmapsOptions> {
             ctrlChildId: 'localizationImg',
             ctrlPosition: google.maps.ControlPosition.LEFT_TOP,

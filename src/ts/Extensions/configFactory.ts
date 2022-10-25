@@ -5,6 +5,7 @@ import { App } from '../app';
 import { UserConfig } from '../models/userConfig.model';
 import { SettingsResponse } from '../models/settingsResponse.model';
 import { IntUtilsHelper } from '../helper/intUtils.helper';
+import { UserConfigEventDetailModel } from '../models/userConfigEventDetailModel.model';
 
 const ObjectMerge = require('object-merge');
 const TextObfuscator = require('text-obfuscator');
@@ -30,7 +31,7 @@ export class ConfigFactory {
         this.bindAppUpdater();
     }
 
-    public setUserConfig(userConfig: UserConfig):void {
+    public setUserConfig(userConfig: UserConfig, forceRedraw: boolean = false):void {
         const oldConfig = structuredClone(this.userConfig);
         this.userConfig = { ...this.config.defaultUserConfig, ...userConfig };
         Cookies.set(
@@ -39,7 +40,11 @@ export class ConfigFactory {
             { expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)), sameSite: 'strict' },
         );
         this.reload((): void => {
-            document.dispatchEvent(new CustomEvent('user-config-changed', { detail: oldConfig }));
+            const userConfigEventDetailModel = {
+                eventParameters: { forceRedraw },
+                userConfig: oldConfig,
+            } as UserConfigEventDetailModel;
+            document.dispatchEvent(new CustomEvent('user-config-changed', { detail: userConfigEventDetailModel }));
         });
     }
 
