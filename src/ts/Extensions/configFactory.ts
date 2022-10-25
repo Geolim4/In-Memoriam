@@ -165,16 +165,16 @@ export class ConfigFactory {
                                                 keys.forEach((key): void => {
                                                     caches.delete(key).then((): void => {
                                                         if (keys.indexOf(key) === keys.length - 1) {
-                                                            window.location.reload();
+                                                            App.getInstance().hardLocationReload();
                                                         }
                                                     });
                                                 });
                                             } else {
-                                                window.location.reload();
+                                                App.getInstance().hardLocationReload();
                                             }
                                         });
                                     } else {
-                                        window.location.reload();
+                                        App.getInstance().hardLocationReload();
                                     }
                                 },
                                 noStacking: true,
