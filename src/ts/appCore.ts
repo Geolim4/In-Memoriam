@@ -17,6 +17,7 @@ import { AppStatic } from './appStatic';
 import { Renderer } from './Extensions/renderer';
 import { Links } from './Extensions/links';
 import { ModalContentTemplate } from './Extensions/modalContentTemplate';
+import { UserConfigEventDetailModel } from './models/userConfigEventDetailModel.model';
 
 const unique = require('array-unique');
 const Choices = require('choices.js');
@@ -334,6 +335,7 @@ export abstract class AppCore extends AppAbstract {
     private bindUserConfigChangedEvent(): void {
         Events.addEventHandler(document, 'user-config-changed', (evt: CustomEvent): void => {
             const newUserConfig = this.getConfigFactory().userConfig;
+            const evtDetail = evt.detail as UserConfigEventDetailModel;
 
             if (newUserConfig.themeColor !== 'auto') {
                 Cookies.set(
@@ -348,17 +350,7 @@ export abstract class AppCore extends AppAbstract {
              * Reload the map only if the user has
              * really changed its theme preferences.
              */
-            if (newUserConfig.themeColor !== evt.detail.themeColor) {
-                const reDraw = ():void => {
-                    this.map = new google.maps.Map(
-                        <HTMLInputElement>document.getElementById('map'),
-                        this.getConfigFactory().config.googleMapsOptions,
-                    );
-                    this.setupHtmlDocumentTheme();
-                    this.getMapButtons().bindCustomButtons();
-                    this.reloadMarkers(false, false);
-                };
-
+            if (newUserConfig.themeColor !== evtDetail.userConfig.themeColor || evtDetail.eventParameters.forceRedraw) {
                 if (document.fullscreenElement || this.getModal().isModalOpened()) {
                     document.exitFullscreen().then((): void => {
                         if (this.getModal().isModalOpened()) {
@@ -367,13 +359,13 @@ export abstract class AppCore extends AppAbstract {
                     }).finally((): void => {
                         const i = setInterval((): void => {
                             if (!this.getModal().isModalOpened()) {
-                                reDraw();
+                                this.reDrawGoogleMap();
                                 clearInterval(i);
                             }
                         }, 10);
                     });
                 } else {
-                    reDraw();
+                    this.reDrawGoogleMap();
                 }
             }
 
@@ -387,6 +379,16 @@ export abstract class AppCore extends AppAbstract {
                 Cookies.remove('userSavedFilters', { signed: true });
             }
         });
+    }
+
+    private reDrawGoogleMap(): void {
+        this.map = new google.maps.Map(
+            <HTMLInputElement>document.getElementById('map'),
+            this.getConfigFactory().config.googleMapsOptions,
+        );
+        this.setupHtmlDocumentTheme();
+        this.getMapButtons().bindCustomButtons();
+        this.reloadMarkers(false, false);
     }
 
     private bindFilterChangedEvent(): void {
@@ -792,7 +794,7 @@ export abstract class AppCore extends AppAbstract {
         Events.addEventHandler(window.matchMedia('(prefers-color-scheme: dark)'), 'change', (): void => {
             const userConfig = this.getConfigFactory().userConfig;
             if (userConfig.themeColor === 'auto') {
-                this.getConfigFactory().setUserConfig(userConfig);
+                this.getConfigFactory().setUserConfig(userConfig, true);
             }
         });
     }
