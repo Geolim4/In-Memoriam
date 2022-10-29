@@ -4273,6 +4273,57 @@
       ]
     },
     {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "10",
+      "day": "24",
+      "keywords": "DAUGUET Amand",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme du Groupe d'Investigation Cynophile de Senlis a mis fin à ses jours avec son arme de service au sein de sa brigade.\nVeuf depuis peu de temps, il était père de deux enfants.",
+      "section": "GIC",
+      "location": "Senlis",
+      "county": "60",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.195541046538125,
+        "lng": 2.5754866110077383
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.oisehebdo.fr/2022/10/27/un-gendarme-de-senlis-amand-dauguet-se-donne-la-mort-avec-son-arme-de-service/",
+          "title": "Oise Hebdo",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/oise-un-gendarme-de-senlis-se-suicide-avec-son-arme-de-service.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/deces-tragique-dun-gendarme-de-loise/",
+          "title": "La Voix du Gendarme",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lunion.fr/id421635/article/2022-10-27/dans-loise-un-gendarme-se-suicide-avec-son-arme-de-service",
+          "title": "L'Union",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
       "cause": "deathOnDuty",
       "count": 1,
       "published": true,

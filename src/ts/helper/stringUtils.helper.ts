@@ -76,7 +76,7 @@ export class StringUtilsHelper {
     * @param replace
     */
     public static replaceAll(str: string, find: string, replace: string): string {
-    // @ts-ignore
+        // @ts-ignore
         if (typeof String.replaceAll === 'function') {
             // @ts-ignore
             return String.replaceAll(str, find, replace);

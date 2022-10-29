@@ -257,6 +257,13 @@ export abstract class AppAbstract {
         this.setSearchByExpression(false);
     }
 
+    public hardLocationReload(): void {
+        fetch(window.location.href.split('#')[0], { cache: 'reload' })
+            .finally(():void => {
+                window.location.reload();
+            });
+    }
+
     protected enableAdvancedSearch(): void {
         const searchElement = <HTMLInputElement>document.getElementById('search');
         this.getRenderer().renderTo('advanced-search-link', {}, searchElement.parentElement, 'appendChild').then((): void => {
