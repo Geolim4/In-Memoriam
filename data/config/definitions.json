@@ -29,17 +29,19 @@
           "plural": "<span class=\"label label-danger\">%d</span> suicides"
         },
         "deathOnDuty": {
+          "none": "<span class=\"label label-danger\">%d</span> mort en service",
           "singular": "<span class=\"label label-danger\">%d</span> mort en service",
           "plural": "<span class=\"label label-danger\">%d</span> morts en service"
         },
         "deathViaDuty": {
+          "none": "<span class=\"label label-danger\">%d</span> mort lié au service",
           "singular": "<span class=\"label label-danger\">%d</span> mort lié au service",
           "plural": "<span class=\"label label-danger\">%d</span> morts liés au service"
         },
         "accident": {
-          "none": "<span class=\"label label-success\">%d</span> mort accidentelle",
-          "singular": "<span class=\"label label-danger\">%d</span> mort accidentelle",
-          "plural": "<span class=\"label label-danger\">%d</span> morts accidentelles"
+          "none": "<span class=\"label label-success\">%d</span> accident",
+          "singular": "<span class=\"label label-danger\">%d</span> accident",
+          "plural": "<span class=\"label label-danger\">%d</span> accidents"
         },
         "malaise": {
           "none": "<span class=\"label label-success\">%d</span> malaise cardiaque",
@@ -53,8 +55,8 @@
         },
         "other": {
           "none": "",
-          "singular": "<span class=\"label label-danger\">%d</span> décès divers",
-          "plural": "<span class=\"label label-danger\">%d</span> décès divers"
+          "singular": "<span class=\"label label-danger\">%d</span> mort inclassable",
+          "plural": "<span class=\"label label-danger\">%d</span> morts inclassables"
         }
       }
     },
@@ -132,9 +134,9 @@
           "plural": "<span class=\"label label-danger\"> %d</span> disparitions en DOM-TOM"
         },
         "opex": {
-          "none": "<span class=\"label label-success\">%d</span> disparition en opération extérieure (OPEX)",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition en opération extérieure (OPEX)",
-          "plural": "<span class=\"label label-danger\"> %d</span> disparitions en opération extérieure (OPEX)"
+          "none": "<span class=\"label label-success\">%d</span> disparition en OPEX",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition en OPEX",
+          "plural": "<span class=\"label label-danger\"> %d</span> disparitions en OPEX"
         }
       }
     },

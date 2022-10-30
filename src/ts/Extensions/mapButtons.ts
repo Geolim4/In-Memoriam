@@ -191,7 +191,7 @@ export class MapButtons {
 
         GmapUtils.bindButton(map, (): void => {
             App.getInstance().getRenderer().purgeTemplateCache();
-            App.getInstance().loadGlossary();
+            App.getInstance().loadGlossary('reload');
             App.getInstance().reloadMarkers(false, false);
         }, buttonOptions);
     }

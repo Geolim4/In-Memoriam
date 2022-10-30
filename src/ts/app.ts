@@ -51,8 +51,8 @@ export class App extends AppCore {
         return formFiltersKeyed;
     }
 
-    public loadGlossary(): void {
-        fetch(this.getConfigFactory().config.glossarySrc, { cache: 'force-cache' })
+    public loadGlossary(cache: RequestCache = 'default'): void {
+        fetch(this.getConfigFactory().config.glossarySrc, { cache })
             .then((response): any => response.json())
             .then((responseData: { glossary: { [name: string]: string } }): void => {
                 this.setGlossary(responseData.glossary);

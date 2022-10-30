@@ -300,10 +300,10 @@ export abstract class AppCore extends AppAbstract {
         fetch(this.getConfigFactory().config.filtersSrc, { cache: 'force-cache' })
             .then((response): any => response.json())
             .then((responseData: { filters: FormFilters }): void => {
+                this.loadGlossary();
                 this.setFormFilters(responseData.filters); // Must come before any call to getFilters()
                 this.bindUserConfigChangedEvent();
                 this.bindFilterChangedEvent();
-                this.loadGlossary();
                 this.setupSkeleton(this.getFilters(true, true));
                 this.setupHtmlDocumentTheme();
                 this.bindAnchorEvents();
@@ -879,7 +879,10 @@ export abstract class AppCore extends AppAbstract {
                             definitionText = definitionText.replace(/%([a-zA-Z_]+)%/, (arg1, arg2): string => (filters && filters[arg2] !== undefined ? filters[arg2] : arg1));
                         }
                     }
-                    definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(`%${fieldKey}%`, definitionText));
+                    definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(
+                        `%${fieldKey}%`,
+                        StringUtilsHelper.replaceAcronyms(definitionText, this.getGlossary()),
+                    ));
                 }
             }
             definitionTexts.push('');
