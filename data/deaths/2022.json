@@ -3109,6 +3109,48 @@
       ]
     },
     {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "07",
+      "day": "05",
+      "keywords": "Frédéric COUDERC",
+      "house": "pompier",
+      "peers": [],
+      "text": "Un sapeur-pompier professionnel du CIS de Libourne est décédé dans un accident de la route pendant sa prise de garde.\nIl était pacsé et père de trois enfants.",
+      "section": "SDIS 33",
+      "location": "Tourcoing",
+      "county": "33",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.91502557561392,
+        "lng": -0.22262940622537702
+      },
+      "homage": {
+        "title": "Préfecture de la Gironde",
+        "url": "https://www.gironde.gouv.fr/Actualites/Communique-de-presse2/Deces-d-un-sapeur-pompier-professionnel-du-SDIS-de-la-Gironde"
+      },
+      "sources": [
+        {
+          "url": "https://actu.fr/nouvelle-aquitaine/saint-denis-de-pile_33393/gironde-un-pompier-de-libourne-est-mort-dans-un-accident-de-la-circulation_52271369.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.sudouest.fr/gironde/saint-denis-de-pile/gironde-un-pompier-perd-la-vie-dans-un-accident-de-la-route-a-saint-denis-de-pile-11555100.php",
+          "title": "Sud Ouest",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
@@ -3568,7 +3610,7 @@
       "house": "pompier",
       "peers": [],
       "text": "Un pompier du CIS de Nancy-Tomblaine a mis fin à ses jours en sautant de la grande échelle.\nIl était père d'une jeune enfant.",
-      "section": "CIS Nancy-Tomblaine - SDIS 54",
+      "section": "SDIS 54",
       "location": "Tomblaine",
       "county": "54",
       "origin": "interieur",
