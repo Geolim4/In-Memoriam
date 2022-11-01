@@ -1,5 +1,5 @@
-/** SW auto-generated on 2022-10-30T01:25:02.155Z **/
-const CACHE_KEY = 'im-3.5.8+20221030T012502';
+/** SW auto-generated on 2022-11-01T20:00:08.717Z **/
+const CACHE_KEY = 'im-3.6.0+20221101T200008';
 const assets = [
   'assets/css/fonts/glyphicons-halflings-regular.eot',
   'assets/css/fonts/glyphicons-halflings-regular.svg',
