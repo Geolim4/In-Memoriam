@@ -24,7 +24,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "3.5.8",
+    "appVersion": "3.6.0",
     "defaultUserConfig": {
       "browserHistoryReplaceState": "",
       "saveFiltersInSession": "",
