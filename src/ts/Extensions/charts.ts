@@ -4,6 +4,7 @@ import { FormFilters } from '../models/Filters/formFilters.model';
 import { Definitions } from '../models';
 import { DeathPeerList } from '../models/Death/deathPeerList.model';
 import { App } from '../app';
+import { StringUtilsHelper } from '../helper/stringUtils.helper';
 
 const unique = require('array-unique');
 
@@ -81,7 +82,7 @@ export class Charts {
                 text: 'Données contextualisées par les filtres appliqués',
             },
             title: {
-                text: `Décès géographiques par ${definitions[criteria]['#name_plural']} sur l'année ${year}`,
+                text: `Décès géographiques par ${definitions[criteria]['#name_plural']} sur la période ${StringUtilsHelper.formatArrayOfStringForReading(year)}`,
             },
             tooltip: {
                 backgroundColor: 'rgba(226,226,226,0.98)',
@@ -152,7 +153,7 @@ export class Charts {
                 text: 'Données contextualisées par les filtres appliqués',
             },
             title: {
-                text: `Décès mensuels par ${definitions[criteria]['#name_plural']} sur l'année ${year}`,
+                text: `Décès mensuels par ${definitions[criteria]['#name_plural']} sur la période ${StringUtilsHelper.formatArrayOfStringForReading(year)}`,
             },
             tooltip: {
                 backgroundColor: 'rgba(226,226,226,0.98)',
@@ -218,7 +219,7 @@ export class Charts {
                 text: 'Données contextualisées par les filtres appliqués',
             },
             title: {
-                text: `Décès totaux par ${definitions[criteria]['#name_plural']} sur l'année ${year}`,
+                text: `Décès totaux par ${definitions[criteria]['#name_plural']} sur la période ${StringUtilsHelper.formatArrayOfStringForReading(year)}`,
             },
             tooltip: {
                 backgroundColor: 'rgba(226,226,226,0.98)',
