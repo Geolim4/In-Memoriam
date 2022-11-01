@@ -76,163 +76,181 @@ export abstract class AppCore extends AppAbstract {
     protected bindMarkers(filters: Filters, cacheStrategy: RequestCache = 'default'): void {
         const stopwatchStart = window.performance.now();
         this.showLoaderWall(this.map.getDiv());
-        fetch(this.buildMarkersQuery(filters), { cache: cacheStrategy })
-            .then((response):any => response.json())
-            .then((responseData: Bloodbath): void => {
-                const bounds = new google.maps.LatLngBounds();
-                const domTomOrOpexMarkers = <ExtendedGoogleMapsMarker[]>[];
-                const heatMapData = <{ location: google.maps.LatLng, weight: number }[]>[];
-                const nationalMarkers = <ExtendedGoogleMapsMarker[]>[];
-                const filteredResponse = this.getFilteredResponse(responseData, filters);
 
-                this.clearMapObjects();
-
-                if (!filteredResponse.response.deaths || !filteredResponse.response.deaths.length) {
-                    if (!filteredResponse.errored) {
-                        const messageText = 'Aucun r&eacute;sultat trouv&eacute;, essayez avec d\'autres crit&egrave;res de recherche.';
-                        this.getModal().modalInfo('Information', messageText);
-                    } else {
-                        const messageText = 'La recherche a rencontr&eacute; une erreur, essayez de corriger votre saisie.';
-                        this.getModal().modalInfo('Information', messageText, { isError: true });
-                    }
-                    this.printDefinitionsText(null);
-                    return;
+        Promise.all(
+            filters.year.split(',')
+                .map(
+                    (year: string): Promise<Bloodbath> => fetch(this.getConfigFactory().config.deathsSrc.replace('%year%', year), { cache: cacheStrategy })
+                        .then((resp):any => resp.json()),
+                ),
+        ).then((responseDataArray: Bloodbath[]): Bloodbath => {
+            const responseData: Bloodbath = {
+                deaths: [],
+                settings: {
+                    up_to_date: true,
+                },
+            };
+            responseDataArray.forEach((data: Bloodbath): void => {
+                if (!data.settings.up_to_date) {
+                    responseData.settings.up_to_date = false;
                 }
+                responseData.deaths.push(...data.deaths);
+            });
+            return responseData;
+        }).then((responseData: Bloodbath): void => {
+            const bounds = new google.maps.LatLngBounds();
+            const domTomOrOpexMarkers = <ExtendedGoogleMapsMarker[]>[];
+            const heatMapData = <{ location: google.maps.LatLng, weight: number }[]>[];
+            const nationalMarkers = <ExtendedGoogleMapsMarker[]>[];
+            const filteredResponse = this.getFilteredResponse(responseData, filters);
 
-                for (const key in filteredResponse.response.deaths) {
-                    const death = <Death>filteredResponse.response.deaths[key];
-                    const totalDeathCount = this.getTotalDeathCount(death);
-                    const houseImage = this.getConfigFactory().config.imagePath.house.replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
-                    const marker = new google.maps.Marker({
-                        animation: google.maps.Animation.DROP,
-                        icon: new (google.maps as any).MarkerImage(houseImage),
+            this.clearMapObjects();
+
+            if (!filteredResponse.response.deaths || !filteredResponse.response.deaths.length) {
+                if (!filteredResponse.errored) {
+                    const messageText = 'Aucun r&eacute;sultat trouv&eacute;, essayez avec d\'autres crit&egrave;res de recherche.';
+                    this.getModal().modalInfo('Information', messageText);
+                } else {
+                    const messageText = 'La recherche a rencontr&eacute; une erreur, essayez de corriger votre saisie.';
+                    this.getModal().modalInfo('Information', messageText, { isError: true });
+                }
+                this.printDefinitionsText(null);
+                return;
+            }
+
+            for (const key in filteredResponse.response.deaths) {
+                const death = <Death>filteredResponse.response.deaths[key];
+                const totalDeathCount = this.getTotalDeathCount(death);
+                const houseImage = this.getConfigFactory().config.imagePath.house.replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
+                const marker = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    icon: new (google.maps as any).MarkerImage(houseImage),
+                    map: this.map,
+                    opacity: 1,
+                    position: new google.maps.LatLng(death.gps.lat, death.gps.lng),
+                    title: death.text,
+                }) as ExtendedGoogleMapsMarker;
+
+                if (!death.gps.accurate) {
+                    const circle = new google.maps.Circle({
+                        center: new google.maps.LatLng(death.gps.lat, death.gps.lng),
+                        fillColor: this.getConfigFactory().config.circleOptions.fillColor,
+                        fillOpacity: this.getConfigFactory().config.circleOptions.fillOpacity,
                         map: this.map,
-                        opacity: 1,
-                        position: new google.maps.LatLng(death.gps.lat, death.gps.lng),
-                        title: death.text,
-                    }) as ExtendedGoogleMapsMarker;
-
-                    if (!death.gps.accurate) {
-                        const circle = new google.maps.Circle({
-                            center: new google.maps.LatLng(death.gps.lat, death.gps.lng),
-                            fillColor: this.getConfigFactory().config.circleOptions.fillColor,
-                            fillOpacity: this.getConfigFactory().config.circleOptions.fillOpacity,
-                            map: this.map,
-                            radius: Math.max(100, death.gps.radius), // Radius can't be set at less than 100 meters
-                            strokeColor: this.getConfigFactory().config.circleOptions.strokeColor,
-                            strokeOpacity: this.getConfigFactory().config.circleOptions.strokeOpacity,
-                            strokeWeight: this.getConfigFactory().config.circleOptions.strokeWeight,
-                        });
-
-                        this.circles.push(circle);
-                    }
-
-                    marker.linkHash = AppStatic.getMarkerHash(death);
-                    marker.death = death;
-
-                    const infoWindow = new google.maps.InfoWindow({
-                        content: '',
-                        position: marker.getPosition(),
+                        radius: Math.max(100, death.gps.radius), // Radius can't be set at less than 100 meters
+                        strokeColor: this.getConfigFactory().config.circleOptions.strokeColor,
+                        strokeOpacity: this.getConfigFactory().config.circleOptions.strokeOpacity,
+                        strokeWeight: this.getConfigFactory().config.circleOptions.strokeWeight,
                     });
 
-                    google.maps.event.addListener(infoWindow, 'domready', (): void => {
-                        const multipleDeathContainer = document.querySelector('.death-container.multiple-deaths');
+                    this.circles.push(circle);
+                }
 
-                        if (multipleDeathContainer) {
-                            try {
-                                multipleDeathContainer.closest('.gm-style-iw-t').querySelector('.gm-style-iw-tc').classList.add('gm-style-iw-red');
-                            } catch {
-                                if (this.getConfigFactory().isDebugEnabled()) {
-                                    console.error('Google Maps Infowindow DOM structure has changed !');
-                                }
+                marker.linkHash = AppStatic.getMarkerHash(death);
+                marker.death = death;
+
+                const infoWindow = new google.maps.InfoWindow({
+                    content: '',
+                    position: marker.getPosition(),
+                });
+
+                google.maps.event.addListener(infoWindow, 'domready', (): void => {
+                    const multipleDeathContainer = document.querySelector('.death-container.multiple-deaths');
+
+                    if (multipleDeathContainer) {
+                        try {
+                            multipleDeathContainer.closest('.gm-style-iw-t').querySelector('.gm-style-iw-tc').classList.add('gm-style-iw-red');
+                        } catch {
+                            if (this.getConfigFactory().isDebugEnabled()) {
+                                console.error('Google Maps Infowindow DOM structure has changed !');
                             }
                         }
-                        AppStatic.bindTooltip();
-                    });
-                    google.maps.event.addListener(marker, 'click', (): void => {
-                        if (this.getCurrentInfoWindow()) {
-                            this.getCurrentInfoWindow().close();
-                        }
-
-                        const reference = `${death.section}, ${death.location} ${this.getCountyByCode(death.county, true, [])} le ${death.day}/${death.month}/${death.year}`;
-                        this.getRenderer().renderAsDom('infowindow-death', { death, reference }).then((infoWindowContent): void => {
-                            infoWindow.setContent(infoWindowContent);
-                            infoWindow.open(this.map, marker);
-                            this.setCurrentInfoWindow(infoWindow);
-                        });
-                    });
-
-                    google.maps.event.addListener(marker, 'dblclick', (): void => {
-                        this.map.setCenter(marker.getPosition());
-                        this.map.setZoom(this.getConfigFactory().config.clusteringOptions.maxZoom);
-                    });
-
-                    this.infoWindows.push(infoWindow);
-                    if (death.origin === DeathOrigin.Interieur) {
-                        nationalMarkers.push(marker);
-                    } else {
-                        domTomOrOpexMarkers.push(marker);
                     }
-                    heatMapData.push({
-                        location: new google.maps.LatLng(death.gps.lat, death.gps.lng),
-                        weight: 15 * (totalDeathCount > 1 ? (totalDeathCount > 5 ? 20 : 5) : 1),
+                    AppStatic.bindTooltip();
+                });
+                google.maps.event.addListener(marker, 'click', (): void => {
+                    if (this.getCurrentInfoWindow()) {
+                        this.getCurrentInfoWindow().close();
+                    }
+
+                    const reference = `${death.section}, ${death.location} ${this.getCountyByCode(death.county, true, [])} le ${death.day}/${death.month}/${death.year}`;
+                    this.getRenderer().renderAsDom('infowindow-death', { death, reference }).then((infoWindowContent): void => {
+                        infoWindow.setContent(infoWindowContent);
+                        infoWindow.open(this.map, marker);
+                        this.setCurrentInfoWindow(infoWindow);
                     });
+                });
 
-                    this.markers.push(marker);
-                    this.pushSuggestionFromDeath(death);
-                    this.markerHashIndex[marker.linkHash] = this.markers.length - 1;
-                }
+                google.maps.event.addListener(marker, 'dblclick', (): void => {
+                    this.map.setCenter(marker.getPosition());
+                    this.map.setZoom(this.getConfigFactory().config.clusteringOptions.maxZoom);
+                });
 
-                // We assume that if only have a single result
-                // that the infoWindow should be opened by default
-                if (this.markers.length === 1 && this.infoWindows.length === 1) {
-                    google.maps.event.trigger(this.markers[0], 'click');
+                this.infoWindows.push(infoWindow);
+                if (death.origin === DeathOrigin.Interieur) {
+                    nationalMarkers.push(marker);
+                } else {
+                    domTomOrOpexMarkers.push(marker);
                 }
+                heatMapData.push({
+                    location: new google.maps.LatLng(death.gps.lat, death.gps.lng),
+                    weight: 15 * (totalDeathCount > 1 ? (totalDeathCount > 5 ? 20 : 5) : 1),
+                });
 
-                if (this.isClusteringEnabled()) {
-                    this.markerCluster = new MarkerClusterer({
-                        algorithm: new SuperClusterAlgorithm({
-                            maxZoom: this.getConfigFactory().config.clusteringOptions.maxZoom,
-                            minPoints: this.getConfigFactory().config.clusteringOptions.minPoints,
-                            radius: this.getConfigFactory().config.clusteringOptions.radius,
-                        }),
-                        map: this.map,
-                        markers: this.markers,
-                    });
-                }
+                this.markers.push(marker);
+                this.pushSuggestionFromDeath(death);
+                this.markerHashIndex[marker.linkHash] = this.markers.length - 1;
+            }
 
-                /**
-                * National marker prioritization:
-                * We only bounds to DomTom/Opex if there's
-                * nothing else on national territory
-                */
-                const boundsMarkers = (nationalMarkers.length ? nationalMarkers : domTomOrOpexMarkers);
-                for (const key in boundsMarkers) {
-                    bounds.extend(boundsMarkers[key].getPosition());
-                }
-                this.map.fitBounds(bounds);
+            // We assume that if only have a single result
+            // that the infoWindow should be opened by default
+            if (this.markers.length === 1 && this.infoWindows.length === 1) {
+                google.maps.event.trigger(this.markers[0], 'click');
+            }
 
-                if (heatMapData.length && this.isHeatmapEnabled()) {
-                    this.heatMap = new google.maps.visualization.HeatmapLayer({
-                        ...{ data: heatMapData },
-                        ...this.getConfigFactory().config.heatmapOptions,
-                    });
-                    this.heatMap.setMap(this.map);
-                }
-                if (this.getConfigFactory().isDebugEnabled()) {
-                    console.log(`${this.markers.length} marker${this.markers.length === 1 ? '' : 's'} loaded in ${(window.performance.now() - stopwatchStart) / 1000}s`);
-                }
-                this.printDefinitionsText(responseData, filters);
-            }).catch((e): void => {
-                if (this.getConfigFactory().isDebugEnabled()) {
-                    console.error(e);
-                    console.error(`Failed to load the death list: ${e}`);
-                }
-                this.getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des décès.', { isError: true });
-            })
-            .finally((): void => {
-                this.hideLoaderWall(this.map.getDiv());
-            });
+            if (this.isClusteringEnabled()) {
+                this.markerCluster = new MarkerClusterer({
+                    algorithm: new SuperClusterAlgorithm({
+                        maxZoom: this.getConfigFactory().config.clusteringOptions.maxZoom,
+                        minPoints: this.getConfigFactory().config.clusteringOptions.minPoints,
+                        radius: this.getConfigFactory().config.clusteringOptions.radius,
+                    }),
+                    map: this.map,
+                    markers: this.markers,
+                });
+            }
+
+            /**
+             * National marker prioritization:
+             * We only bounds to DomTom/Opex if there's
+             * nothing else on national territory
+             */
+            const boundsMarkers = (nationalMarkers.length ? nationalMarkers : domTomOrOpexMarkers);
+            for (const key in boundsMarkers) {
+                bounds.extend(boundsMarkers[key].getPosition());
+            }
+            this.map.fitBounds(bounds);
+
+            if (heatMapData.length && this.isHeatmapEnabled()) {
+                this.heatMap = new google.maps.visualization.HeatmapLayer({
+                    ...{ data: heatMapData },
+                    ...this.getConfigFactory().config.heatmapOptions,
+                });
+                this.heatMap.setMap(this.map);
+            }
+            if (this.getConfigFactory().isDebugEnabled()) {
+                console.log(`${this.markers.length} marker${this.markers.length === 1 ? '' : 's'} loaded in ${(window.performance.now() - stopwatchStart) / 1000}s`);
+            }
+            this.printDefinitionsText(responseData, filters);
+        }).catch((e): void => {
+            if (this.getConfigFactory().isDebugEnabled()) {
+                console.error(e);
+                console.error(`Failed to load the death list: ${e}`);
+            }
+            this.getModal().modalInfo('Erreur', 'Impossible de récupérer la liste des décès.', { isError: true });
+        }).finally((): void => {
+            this.hideLoaderWall(this.map.getDiv());
+        });
     }
 
     private run(): void {
@@ -549,6 +567,7 @@ export abstract class AppCore extends AppAbstract {
             deathsRemovedBySearch.filter((death): boolean => (!deathsRemovedByFilters.includes(death))).forEach((death): void => (
                 this.pushSuggestionFromDeath(death)
             ));
+            filteredResponse.response.deaths = this.orderDeathsByDate(filteredResponse.response.deaths);
         } catch (e) {
             if (e instanceof EvaluationError && this.isSearchByExpressionEnabled()) {
                 if (this.isSearchByExpressionEnabled()) {
@@ -565,6 +584,24 @@ export abstract class AppCore extends AppAbstract {
         }
 
         return filteredResponse;
+    }
+
+    private orderDeathsByDate(deaths: Death[], order: 'ASC'|'DESC' = 'ASC'): Death[] {
+        const orderedDeaths: Array<Death> = [...deaths];
+        const base: number = (order === 'ASC' ? 1 : -1);
+
+        return orderedDeaths.sort((a: Death, b: Death): number => {
+            if (a.year === b.year) {
+                if (a.month === b.month) {
+                    if (a.day === b.day) {
+                        return 0;
+                    }
+                    return parseInt(a.day, 10) > parseInt(b.day, 10) ? base : -base;
+                }
+                return parseInt(a.month, 10) > parseInt(b.month, 10) ? base : -base;
+            }
+            return parseInt(a.year, 10) > parseInt(b.year, 10) ? base : -base;
+        });
     }
 
     private bindFullscreenFormFilterListener(): void {
@@ -616,7 +653,7 @@ export abstract class AppCore extends AppAbstract {
     }
 
     private bindFilters(fromAnchor?: boolean): void {
-        const selectsAndFields = <NodeListOf<HTMLInputElement>> this.formElement.querySelectorAll('form select, form input');
+        const selectsAndFields = <NodeListOf<HTMLInputElement|HTMLSelectElement>> this.formElement.querySelectorAll('form select, form input');
         const resetButtons = <NodeListOf<HTMLButtonElement>> this.formElement.querySelectorAll('form button[data-reset-field-target]');
         const searchElement = <HTMLInputElement>document.getElementById('search');
         const filters = this.getFilters(fromAnchor);
@@ -641,17 +678,17 @@ export abstract class AppCore extends AppAbstract {
             });
         });
 
-        selectsAndFields.forEach((selector): void => {
-            const hasResetButton = selector.nextElementSibling && selector.nextElementSibling.hasAttribute('data-reset-field-target');
-            if (!selector.multiple) {
-                selector.value = (typeof filters[selector.name] !== 'undefined' ? filters[selector.name] : '');
+        selectsAndFields.forEach((field): void => {
+            const hasResetButton = field.nextElementSibling && field.nextElementSibling.hasAttribute('data-reset-field-target');
+            if (!field.multiple) {
+                field.value = (typeof filters[field.name] !== 'undefined' ? filters[field.name] : '');
             }
 
-            if (typeof (this.eventHandlers[selector.id]) === 'function') {
-                Events.removeEventHandler(selector, 'change', this.eventHandlers[selector.id]);
+            if (typeof (this.eventHandlers[field.id]) === 'function') {
+                Events.removeEventHandler(field, 'change', this.eventHandlers[field.id]);
             }
 
-            this.eventHandlers[selector.id] = (e): void => {
+            this.eventHandlers[field.id] = (e): void => {
                 if (ignoreNextChange && e.isTrusted) {
                     ignoreNextChange = false;
                     return;
@@ -661,12 +698,15 @@ export abstract class AppCore extends AppAbstract {
                         const filters = this.getFilters(false);
                         this.bindMarkers(filters, 'force-cache');
                         document.dispatchEvent(new CustomEvent('filter-changed', { detail: filters }));
+                        if (field instanceof HTMLSelectElement && field.parentElement.classList.contains('choices__inner')) {
+                            field.parentElement.dataset.selectedOptions = String(field.selectedOptions.length);
+                        }
                     } else {
                         this.formElement.dispatchEvent(new Event('submit', { cancelable: true }));
                     }
-                }, (document.activeElement.id === selector.id || !hasResetButton) ? 0 : 150); // Allow to capture reset button clicks
+                }, (document.activeElement.id === field.id || !hasResetButton) ? 0 : 150); // Allow to capture reset button clicks
             };
-            Events.addEventHandler(selector, 'change', this.eventHandlers[selector.id]);
+            Events.addEventHandler(field, 'change', this.eventHandlers[field.id]);
         });
 
         Events.addDoubleKeypressHandler('Home', searchElement, (): void => {
@@ -729,13 +769,16 @@ export abstract class AppCore extends AppAbstract {
         });
     }
 
-    private drawCustomSelectors(selectors: NodeListOf<HTMLInputElement>, filters: Filters): void {
+    private drawCustomSelectors(selectors: NodeListOf<HTMLInputElement|HTMLSelectElement>, filters: Filters): void {
         selectors.forEach((selector): void => {
             if (selector.type !== 'text') {
                 if (!this.customChoicesInstances[selector.id]) {
+                    const maxItemCount = typeof selector.dataset.maxItemCount !== 'undefined' ? selector.dataset.maxItemCount : -1;
                     this.customChoicesInstances[selector.id] = new Choices(selector, {
                         duplicateItemsAllowed: false,
                         itemSelectText: '',
+                        maxItemCount,
+                        maxItemText: `${maxItemCount} valeurs maximum`,
                         removeItemButton: selector.multiple,
                         removeItems: true,
                         resetScrollPosition: false,
@@ -743,6 +786,17 @@ export abstract class AppCore extends AppAbstract {
                         shouldSort: selector.dataset.autosort === 'true',
                         shouldSortItems: selector.dataset.autosort === 'true',
                     });
+                    if (selector instanceof HTMLSelectElement && selector.parentNode.querySelector('input.choices__input')) {
+                        selector.parentElement.dataset.selectedOptions = String(selector.selectedOptions.length);
+                        Events.addEventHandler(selector, 'change', (): void => {
+                            if (selector.multiple && selector.required && selector.selectedOptions.length > 1) {
+                                const choiceInput = <HTMLInputElement> selector.parentNode.querySelector('input.choices__input');
+                                if (choiceInput && document.activeElement !== choiceInput) {
+                                    setTimeout((): void => (choiceInput.focus()), 150);
+                                }
+                            }
+                        });
+                    }
                 }
 
                 this.customChoicesInstances[selector.id].removeActiveItems(null);
@@ -759,7 +813,7 @@ export abstract class AppCore extends AppAbstract {
         for (const [filterName, filterValuesArray] of Object.entries(this.getFormFilters())) {
             const optGroups = {} as { [name: string] : HTMLOptGroupElement };
             for (const filterValueObject of filterValuesArray) {
-                const selector = this.formElement.querySelector(`select[name="${filterName}"]`);
+                const selector = <HTMLSelectElement> this.formElement.querySelector(`select[name="${filterName}"]`);
                 if (selector !== null) {
                     const option = document.createElement('option');
                     option.value = filterValueObject.value;
@@ -774,6 +828,13 @@ export abstract class AppCore extends AppAbstract {
                         optGroups[filterValueObject.group].appendChild(option);
                     } else {
                         selector.appendChild(option);
+                    }
+                    if (selector.required && selector.multiple && !selector.value) {
+                        const firstOption = <HTMLOptionElement> selector.querySelector('option:first-of-type');
+                        if (selector) {
+                            selector.value = firstOption.value;
+                            firstOption.selected = true;
+                        }
                     }
                 }
             }
@@ -858,7 +919,7 @@ export abstract class AppCore extends AppAbstract {
         const definitionTexts = [];
         if (response) {
             const definitions = this.getDefinitions(response);
-            const latestDeath = AppStatic.getLatestDeath(response);
+            const latestDeath = response.deaths[response.deaths.length - 1];
             const configDefinitions = this.getConfigDefinitions();
 
             for (const [fieldKey, field] of Object.entries(definitions)) {
@@ -876,7 +937,12 @@ export abstract class AppCore extends AppAbstract {
                             } else {
                                 definitionText += `${definitionText ? ', ' : ''}[${fieldValue}] (${count})`;
                             }
-                            definitionText = definitionText.replace(/%([a-zA-Z_]+)%/, (arg1, arg2): string => (filters && filters[arg2] !== undefined ? filters[arg2] : arg1));
+                            definitionText = definitionText.replace(/%([a-zA-Z_]+)%/, (arg1: string, arg2: string): string => {
+                                if (filters && typeof filters[arg2] === 'string') {
+                                    return StringUtilsHelper.formatArrayOfStringForReading(filters[arg2]);
+                                }
+                                return arg1;
+                            });
                         }
                     }
                     definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(

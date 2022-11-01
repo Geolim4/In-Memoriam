@@ -69,22 +69,26 @@ export class StringUtilsHelper {
         return str.replace(/./gm, (s): string => ((s.match(/[a-z0-9\s]+/i)) ? s : `&#${s.charCodeAt(0)};`));
     }
 
-    /**
-    * replaceAll is pretty recent (2021) so we must polyfill it at least for a while
-    * @param str
-    * @param find
-    * @param replace
-    */
-    public static replaceAll(str: string, find: string, replace: string): string {
-        // @ts-ignore
-        if (typeof String.replaceAll === 'function') {
-            // @ts-ignore
-            return String.replaceAll(str, find, replace);
-        }
-        return str.replace(new RegExp(find, 'g'), replace);
+    public static propertyAccessor(path: string, obj: object): any {
+        return path.split('.').reduce((prev: object, curr: string): any => prev ? prev[curr] : null, obj || self);
     }
 
-    public propertyAccessor(path: string, obj: object): any {
-        return path.split('.').reduce((prev: object, curr: string): any => prev ? prev[curr] : null, obj || self);
+    public static replaceLast(str: string, pattern: string|RegExp, replacement: string): string {
+        const match = typeof pattern === 'string'
+            ? pattern
+            : (str.match(new RegExp(pattern.source, 'g')) || []).slice(-1)[0];
+        if (!match) {
+            return str;
+        }
+        const last = str.lastIndexOf(match);
+        return last !== -1 ? `${str.slice(0, last)}${replacement}${str.slice(last + match.length)}` : str;
+    }
+
+    public static formatArrayOfStringForReading(delimitedString: string, separator: string = ','): string {
+        const formattedString = delimitedString.split(separator).sort().join(', ');
+        if ((formattedString.match(/,/g) || []).length > 0) {
+            return StringUtilsHelper.replaceLast(formattedString, ', ', ' et ');
+        }
+        return formattedString;
     }
 }

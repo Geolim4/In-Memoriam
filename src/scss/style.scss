@@ -258,6 +258,20 @@ a abbr[data-title] {
   }
   .choices__inner {
     border: none;
+
+    select[multiple][required] {
+      & + .choices__list {
+        .choices__item:only-child {
+          padding: 4px 10px; /* Reset for data-deletable CSS */
+          .choices__button {
+            display: none;
+          }
+        }
+      }
+    }
+    &[data-selected-options="1"] select[multiple][required] + .choices__list + .choices__input {
+      display: none;
+    }
   }
   input.choices__input[role="textbox"] {
     width: 1ch;

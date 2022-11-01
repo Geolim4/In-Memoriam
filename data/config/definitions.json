@@ -164,9 +164,9 @@
       "#counter_strategy": "sum",
       "#number": {
         "#any": {
-          "none": "<span class=\"label label-success\">%d</span> enfant orphelin sur l'année %year%",
-          "singular": "<span class=\"label label-danger\">%d</span> enfant orphelin sur l'année %year%",
-          "plural": "<span class=\"label label-danger\">%d</span> enfants orphelins <strong>connus au minimum</strong> sur l'année %year%"
+          "none": "<span class=\"label label-success\">%d</span> enfant orphelin sur la période %year%",
+          "singular": "<span class=\"label label-danger\">%d</span> enfant orphelin sur la période %year%",
+          "plural": "<span class=\"label label-danger\">%d</span> enfants orphelins <strong>connus au minimum</strong> sur la période %year%"
         }
       }
     },

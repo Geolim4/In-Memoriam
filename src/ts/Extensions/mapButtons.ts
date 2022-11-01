@@ -49,7 +49,6 @@ export class MapButtons {
     }
 
     private bindLocalizationButton(map: google.maps.Map): void {
-        console.log(App.getInstance().getConfigFactory().config);
         const buttonOptions = <GmapsOptions> {
             ctrlChildId: 'localizationImg',
             ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
@@ -261,7 +260,7 @@ export class MapButtons {
                     })
                     .then((htmlContent): void => {
                         App.getInstance().getModal().modalInfo(
-                            "Liste des décès pour l'année %year%: %count% décès".replace('%year%', filters.year).replace('%count%', String(modalBloodbathCounter)),
+                            'Liste des décès pour la période %period%: %count% décès'.replace('%period%', StringUtilsHelper.formatArrayOfStringForReading(filters.year)).replace('%count%', String(modalBloodbathCounter)),
                             htmlContent,
                             {
                                 cancelLabel: 'Fermer',
@@ -447,10 +446,10 @@ export class MapButtons {
                                 }).join(', ');
                                 let formFiltersSuffix = formFiltersBuilt ? ` (filtre: ${formFiltersBuilt})` : '';
                                 /**
-                 *  Due to a bug in the "export-to-csv" package that does not
-                 *  escape headers as quoted string, we must do it manually :(
-                 *  (The same apply for date build few lines below)
-                 */
+                                *  Due to a bug in the "export-to-csv" package that does not
+                                *  escape headers as quoted string, we must do it manually :(
+                                *  (The same apply for date build few lines below)
+                                */
                                 if (indexName === 'text') {
                                     formFiltersSuffix = formFilters.search ? ` (recherche: ${formFilters.search})` : '';
                                 }
@@ -458,8 +457,9 @@ export class MapButtons {
                             };
 
                             const months = formFilters.month.split(',').map((m): string => formFiltersKeyed.month[m]).join(', ');
+                            const year = StringUtilsHelper.formatArrayOfStringForReading(formFilters.year);
 
-                            build[`"Date${months ? ` (mois: ${months})` : ''}"`] = `${death.year}-${death.month}-${death.day}`; // ISO 8601
+                            build[`"Date${year ? ` (année${formFilters.year.split(',').length > 1 ? 's' : ''}: ${year})` : ''}${months ? ` (mois: ${months})` : ''}"`] = `${death.year}-${death.month}-${death.day}`; // ISO 8601
                             build[indexNameBuilder('cause', formFilters)] = formFiltersKeyed.cause[death.cause];
                             build[indexNameBuilder('house', formFilters)] = peer ? formFiltersKeyed.house[peer.house] : formFiltersKeyed.house[death.house];
                             build[indexNameBuilder('section', formFilters)] = peer ? peer.section : death.section;
