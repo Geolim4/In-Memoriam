@@ -390,7 +390,7 @@ export abstract class AppCore extends AppAbstract {
             if (newUserConfig.saveFiltersInSession === 'on') {
                 Cookies.set(
                     'userSavedFilters',
-                    JSON.stringify(this.getFilters(false)),
+                    JSON.stringify(this.buildFiltersForStorage(this.getFilters(false))),
                     { expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)), sameSite: 'strict', signed: true },
                 );
             } else {
@@ -414,7 +414,7 @@ export abstract class AppCore extends AppAbstract {
             if (this.getConfigFactory().userConfig.saveFiltersInSession === 'on') {
                 Cookies.set(
                     'userSavedFilters',
-                    JSON.stringify(evt.detail),
+                    JSON.stringify(this.buildFiltersForStorage(evt.detail)),
                     { expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)), sameSite: 'strict', signed: true },
                 );
             }
@@ -994,6 +994,20 @@ export abstract class AppCore extends AppAbstract {
             .then((): void => {
                 AppStatic.bindTooltip();
             });
+    }
+
+    private buildFiltersForStorage(filters: Filters): Filters {
+        const newFilters = { ...filters };
+        /**
+         * Avoid saving the (exact) current year as it
+         * can prevent the user to automatically switch
+         * to the next year as of the 1st January
+         */
+        if (newFilters.year === String((new Date()).getFullYear())) {
+            newFilters.year = '';
+        }
+
+        return newFilters;
     }
 
     public abstract getFilterValueLabel(filterName: string, filterValue: string): string; // Only used in Twig templates
