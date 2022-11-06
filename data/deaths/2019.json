@@ -1,5 +1,9 @@
 {
   "settings": {
+    "aggregatable": true,
+    "download_enabled": true,
+    "list_enabled": true,
+    "stats_enabled": true,
     "up_to_date": true
   },
   "deaths": [
@@ -328,8 +332,14 @@
       "month": "01",
       "day": "12",
       "keywords": "IDF",
-      "house": "pompier",
-      "peers": [],
+      "house": "armee",
+      "peers": [
+        {
+          "house": "pompier",
+          "count": 0,
+          "section": ""
+        }
+      ],
       "text": "Deux pompiers de la BSPP ont péri dans une violente explosion due à une fuite de gaz en plein coeur de Paris. Le caporal-chef Simon Cartannaz et le première classe Nathanaël Josselin, en arrêt cardio-respiratoire, n'ont pas survécu à leurs blessures.",
       "section": "BSPP",
       "location": "Paris 9e",

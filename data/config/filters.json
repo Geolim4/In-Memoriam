@@ -5,31 +5,79 @@
         "value": "2022",
         "label": "2022",
         "color": "",
-        "group": null
+        "group": "Années détaillés"
       },
       {
         "value": "2021",
         "label": "2021",
         "color": "",
-        "group": null
+        "group": "Années détaillés"
       },
       {
         "value": "2020",
         "label": "2020",
         "color": "",
-        "group": null
+        "group": "Années détaillés"
       },
       {
         "value": "2019",
         "label": "2019",
         "color": "",
-        "group": null
+        "group": "Années détaillés"
       },
       {
         "value": "2018",
         "label": "2018",
         "color": "",
-        "group": null
+        "group": "Années détaillés"
+      },
+      {
+        "value": "2017",
+        "label": "2017",
+        "color": "",
+        "group": "Années non détaillées"
+      },
+      {
+        "value": "2016",
+        "label": "2016",
+        "color": "",
+        "group": "Années non détaillées"
+      },
+      {
+        "value": "2015",
+        "label": "2015",
+        "color": "",
+        "group": "Années non détaillées"
+      },
+      {
+        "value": "2014",
+        "label": "2014",
+        "color": "",
+        "group": "Années non détaillées"
+      },
+      {
+        "value": "2013",
+        "label": "2013",
+        "color": "",
+        "group": "Années non détaillées"
+      },
+      {
+        "value": "2012",
+        "label": "2012",
+        "color": "",
+        "group": "Années non détaillées"
+      },
+      {
+        "value": "2011",
+        "label": "2011",
+        "color": "",
+        "group": "Années non détaillées"
+      },
+      {
+        "value": "2010",
+        "label": "2010",
+        "color": "",
+        "group": "Années non détaillées"
       }
     ],
     "month": [

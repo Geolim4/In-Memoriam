@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@import './variables';
+
+.ts-wrapper,
+.ts-wrapper.single.input-active {
+  &.single {
+    .ts-control {
+      > div {
+        line-height: 2;
+      }
+    }
+  }
+  &.multi {
+    .ts-control {
+      > div {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+  .ts-control {
+    background-color: var(--background-color-higher);
+    color: var(--text-color-ligher);
+  }
+
+  .ts-dropdown {
+    font-size: 14px;
+    font-weight: bolder;
+    .optgroup-header {
+      font-weight: bolder;
+    }
+  }
+}

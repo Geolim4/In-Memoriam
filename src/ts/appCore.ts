@@ -2,6 +2,7 @@ import { MarkerClusterer, SuperClusterAlgorithm } from '@googlemaps/markercluste
 import { Loader } from '@googlemaps/js-api-loader';
 import activityDetector from 'activity-detector';
 import Cookies from 'js-cookie';
+import TomSelect from 'tom-select';
 import { AppAbstract } from './appAbstract';
 import { ConfigFactory } from './Extensions/configFactory';
 import { FormFilters } from './models/Filters/formFilters.model';
@@ -20,7 +21,6 @@ import { ModalContentTemplate } from './Extensions/modalContentTemplate';
 import { UserConfigEventDetailModel } from './models/userConfigEventDetailModel.model';
 
 const unique = require('array-unique');
-const Choices = require('choices.js');
 const autocomplete = require('autocompleter');
 const qs = require('qs');
 
@@ -41,14 +41,14 @@ export abstract class AppCore extends AppAbstract {
 
     protected readonly formElement: HTMLFormElement;
 
-    protected readonly customChoicesInstances: { [name: string]: any };
+    protected readonly customSelectsInstances: { [name: string]: TomSelect };
 
     protected readonly eventHandlers: { [name: string]: EventListenerOrEventListenerObject };
 
     protected constructor() {
         super();
         this.circles = [];
-        this.customChoicesInstances = {};
+        this.customSelectsInstances = {};
         this.eventHandlers = {};
         this.heatMap = null;
         this.infoWindows = [];
@@ -75,10 +75,11 @@ export abstract class AppCore extends AppAbstract {
 
     protected bindMarkers(filters: Filters, cacheStrategy: RequestCache = 'default'): void {
         const stopwatchStart = window.performance.now();
+        const filterYears = filters.year.split(',');
         this.showLoaderWall(this.map.getDiv());
 
         Promise.all(
-            filters.year.split(',')
+            filterYears
                 .map(
                     (year: string): Promise<Bloodbath> => fetch(this.getConfigFactory().config.deathsSrc.replace('%year%', year), { cache: cacheStrategy })
                         .then((resp):any => resp.json()),
@@ -86,16 +87,45 @@ export abstract class AppCore extends AppAbstract {
         ).then((responseDataArray: Bloodbath[]): Bloodbath => {
             const responseData: Bloodbath = {
                 deaths: [],
-                settings: {
-                    up_to_date: true,
-                },
+                settings: { aggregatable: true, download_enabled: true, list_enabled: true, stats_enabled: true, up_to_date: true },
             };
-            responseDataArray.forEach((data: Bloodbath): void => {
-                if (!data.settings.up_to_date) {
-                    responseData.settings.up_to_date = false;
+            this.setUnaggregatableYears([]);
+
+            responseDataArray.forEach((data: Bloodbath, index: number): void => {
+                const year = filterYears[index];
+
+                for (const prop in data.settings) {
+                    if (filterYears.length < 2 || prop === 'up_to_date') {
+                        if (typeof data.settings[prop] === 'boolean' && data.settings[prop] === false) {
+                            responseData.settings[prop] = false;
+                        }
+                    }
                 }
-                responseData.deaths.push(...data.deaths);
+
+                if (data.settings.aggregatable || filterYears.length < 2) {
+                    responseData.deaths.push(...data.deaths);
+                } else {
+                    this.addUnaggregatableYears(year);
+                }
             });
+
+            if (this.getUnaggregatableYears().length === filterYears.length && typeof responseDataArray[0] !== 'undefined') {
+                const unaggregatableYears = [...this.getUnaggregatableYears()];
+                unaggregatableYears.shift();
+                this.setUnaggregatableYears(unaggregatableYears);
+                responseData.deaths.push(...responseDataArray[0].deaths);
+            }
+
+            if (this.getUnaggregatableYears().length) {
+                this.getSnackbar().show(
+                    `Les données de la période ${StringUtilsHelper.formatArrayOfStringForReading(this.getUnaggregatableYears())} ont été ignorées car elle ne peuvent pas être aggrégées avec d'autres années !`,
+                    'Fermer',
+                    true,
+                );
+            } else {
+                this.getSnackbar().close();
+            }
+
             return responseData;
         }).then((responseData: Bloodbath): void => {
             const bounds = new google.maps.LatLngBounds();
@@ -105,11 +135,13 @@ export abstract class AppCore extends AppAbstract {
             const filteredResponse = this.getFilteredResponse(responseData, filters);
 
             this.clearMapObjects();
+            this.setStatsEnabled(responseData.settings.stats_enabled);
+            this.setDownloadEnabled(responseData.settings.download_enabled);
+            this.setListEnabled(responseData.settings.list_enabled);
 
             if (!filteredResponse.response.deaths || !filteredResponse.response.deaths.length) {
                 if (!filteredResponse.errored) {
-                    const messageText = 'Aucun r&eacute;sultat trouv&eacute;, essayez avec d\'autres crit&egrave;res de recherche.';
-                    this.getModal().modalInfo('Information', messageText);
+                    this.getSnackbar().show('Aucun r&eacute;sultat trouv&eacute;, essayez avec d\'autres crit&egrave;res de recherche.');
                 } else {
                     const messageText = 'La recherche a rencontr&eacute; une erreur, essayez de corriger votre saisie.';
                     this.getModal().modalInfo('Information', messageText, { isError: true });
@@ -647,7 +679,7 @@ export abstract class AppCore extends AppAbstract {
     private bindAnchorEvents(): void {
         window.addEventListener('hashchange', (): void => {
             const filters = this.getFilters(true);
-            this.drawCustomSelectors(this.formElement.querySelectorAll('form select'), filters);
+            this.drawCustomSelectors(this.formElement.querySelectorAll('form select'));
             this.bindMarkers(filters, 'force-cache');
         }, false);
     }
@@ -740,7 +772,7 @@ export abstract class AppCore extends AppAbstract {
             showOnFocus: true,
         });
 
-        this.drawCustomSelectors(selectsAndFields, filters);
+        this.drawCustomSelectors(selectsAndFields);
     }
 
     private bindInternalLinksEvent(): void {
@@ -769,38 +801,40 @@ export abstract class AppCore extends AppAbstract {
         });
     }
 
-    private drawCustomSelectors(selectors: NodeListOf<HTMLInputElement|HTMLSelectElement>, filters: Filters): void {
+    private drawCustomSelectors(selectors: NodeListOf<HTMLInputElement|HTMLSelectElement>): void {
         selectors.forEach((selector): void => {
-            if (selector.type !== 'text') {
-                if (!this.customChoicesInstances[selector.id]) {
-                    const maxItemCount = typeof selector.dataset.maxItemCount !== 'undefined' ? selector.dataset.maxItemCount : -1;
-                    this.customChoicesInstances[selector.id] = new Choices(selector, {
-                        duplicateItemsAllowed: false,
-                        itemSelectText: '',
-                        maxItemCount,
-                        maxItemText: `${maxItemCount} valeurs maximum`,
-                        removeItemButton: selector.multiple,
-                        removeItems: true,
-                        resetScrollPosition: false,
-                        searchEnabled: false,
-                        shouldSort: selector.dataset.autosort === 'true',
-                        shouldSortItems: selector.dataset.autosort === 'true',
-                    });
-                    if (selector instanceof HTMLSelectElement && selector.parentNode.querySelector('input.choices__input')) {
-                        selector.parentElement.dataset.selectedOptions = String(selector.selectedOptions.length);
-                        Events.addEventHandler(selector, 'change', (): void => {
-                            if (selector.multiple && selector.required && selector.selectedOptions.length > 1) {
-                                const choiceInput = <HTMLInputElement> selector.parentNode.querySelector('input.choices__input');
-                                if (choiceInput && document.activeElement !== choiceInput) {
-                                    setTimeout((): void => (choiceInput.focus()), 150);
-                                }
+            if (selector instanceof HTMLSelectElement) {
+                if (!this.customSelectsInstances[selector.id]) {
+                    const settings: any = {
+                        allowEmptyOption: !selector.required,
+                        copyClassesToDropdown: false,
+                        maxItems: 1,
+                        maxOptions: null,
+                        plugins: {
+                            dropdown_header: {
+                                title: StringUtilsHelper.ucFirst(this.getConfigDefinitions()[selector.id]['#name_plural']),
+                            },
+                        },
+                    };
+                    if (selector.multiple) {
+                        settings.maxItems = typeof selector.dataset.maxItemCount !== 'undefined' ? parseInt(selector.dataset.maxItemCount, 10) : null;
+                        settings.plugins = {
+                            ...settings.plugins,
+                            ...{
+                                change_listener: {},
+                                checkbox_options: {},
+                                clear_button: { title: 'Tout supprimer' },
+                                remove_button: { title: 'Supprimer' },
+                            },
+                        };
+                        settings.onChange = (values: string[]): void => {
+                            if (!values.length && selector.required && selector.multiple) {
+                                selector.options[selector.options.length - 1].selected = true;
                             }
-                        });
+                        };
                     }
+                    this.customSelectsInstances[selector.id] = new TomSelect(selector, settings);
                 }
-
-                this.customChoicesInstances[selector.id].removeActiveItems(null);
-                this.customChoicesInstances[selector.id].setChoiceByValue(filters[selector.id].split(','));
             }
         });
     }
@@ -829,7 +863,8 @@ export abstract class AppCore extends AppAbstract {
                     } else {
                         selector.appendChild(option);
                     }
-                    if (selector.required && selector.multiple && !selector.value) {
+
+                    if (selector.required && selector.multiple && !selector.value && !filters[selector.id]) {
                         const firstOption = <HTMLOptionElement> selector.querySelector('option:first-of-type');
                         if (selector) {
                             selector.value = firstOption.value;
@@ -945,20 +980,22 @@ export abstract class AppCore extends AppAbstract {
                             });
                         }
                     }
-                    definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(
-                        `%${fieldKey}%`,
-                        StringUtilsHelper.replaceAcronyms(definitionText, this.getGlossary()),
-                    ));
+                    if (definitionText) {
+                        definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(
+                            `%${fieldKey}%`,
+                            StringUtilsHelper.replaceAcronyms(definitionText, this.getGlossary()),
+                        ));
+                    }
                 }
             }
             definitionTexts.push('');
 
-            const latestDeathLabel = ` ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${this.getFilterValueLabel('house', latestDeath.house)} - ${latestDeath.location} - ${StringUtilsHelper.replaceAcronyms(
-                latestDeath.section,
-                this.getGlossary(),
-            )}`;
-            const latestDeathLink = AppStatic.getMarkerLink(latestDeath, latestDeathLabel);
-            definitionTexts.push(`<em>Dernier décès indexé:</em> ${latestDeathLink}`);
+            if (latestDeath) {
+                const latestDeathLabel = ` ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${this.getFilterValueLabel('house', latestDeath.house)} - ${latestDeath.location}
+                ${latestDeath.section ? ` - ${StringUtilsHelper.replaceAcronyms(latestDeath.section, this.getGlossary())}` : ''}`;
+                const latestDeathLink = AppStatic.getMarkerLink(latestDeath, latestDeathLabel);
+                definitionTexts.push(`<em>Dernier décès indexé:</em> ${latestDeathLink}`);
+            }
 
             if (!response.settings.up_to_date) {
                 definitionTexts.push(`<div class="mtop">

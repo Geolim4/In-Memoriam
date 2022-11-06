@@ -64,8 +64,6 @@ body {
   color: var(--text-color);
 
   form {
-    .choices[role$="box"] > .choices__inner,
-    .choices[role$="box"] .choices__input,
     input.form-control,
     select.form-control,
     .form-control[disabled],
@@ -78,22 +76,6 @@ body {
       }
       &::placeholder {
         color: var(--text-color-ligher);
-      }
-    }
-    .choices__list--dropdown {
-      > .choices__list {
-        color: $black;
-        font-weight: normal;
-      }
-      z-index: 10;
-    }
-
-    .choices[data-type*="select-one"] {
-      &:after {
-        border-top-color: var(--border-color);
-      }
-      &.is-open:after {
-        border-bottom-color: var(--border-color);
       }
     }
   }

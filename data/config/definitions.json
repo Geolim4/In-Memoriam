@@ -15,6 +15,81 @@
         }
       }
     },
+    "month": {
+      "#exposed": false,
+      "#name": "mois",
+      "#name_plural": "mois",
+      "#label": "<strong>Décompte mensuel</strong>: %month%",
+      "#counter_property": "count",
+      "#counter_strategy": "distinct",
+      "#number": {
+        "#any": {
+          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois %month%",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois %month%",
+          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois %month%"
+        },
+        "01": {
+          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Janvier",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Janvier",
+          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Janvier"
+        },
+        "02": {
+          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Février",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Février",
+          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Février"
+        },
+        "03": {
+          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Mars",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Mars",
+          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Mars"
+        },
+        "04": {
+          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois d'Avril",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois d'Avril",
+          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois d'Avril"
+        },
+        "05": {
+          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Mai",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Mai",
+          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Mai"
+        },
+        "06": {
+          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Juin",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Juin",
+          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Juin"
+        },
+        "07": {
+          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Juillet",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Juillet",
+          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Juillet"
+        },
+        "08": {
+          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois d'Aout",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois d'Aout",
+          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois d'Aout"
+        },
+        "09": {
+          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Septembre",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Septembre",
+          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Septembre"
+        },
+        "10": {
+          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois d'Octobre",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois d'Octobre",
+          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois d'Octobre"
+        },
+        "11": {
+          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Novembre",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Novembre",
+          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Novembre"
+        },
+        "12": {
+          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Décembre",
+          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Décembre",
+          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Décembre"
+        }
+      }
+    },
     "cause": {
       "#exposed": true,
       "#name": "cause",

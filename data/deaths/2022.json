@@ -1,5 +1,9 @@
 {
   "settings": {
+    "aggregatable": true,
+    "download_enabled": true,
+    "list_enabled": true,
+    "stats_enabled": true,
     "up_to_date": true
   },
   "deaths": [
@@ -4195,7 +4199,7 @@
       "house": "gd",
       "peers": [],
       "text": "Un gendarme du PSIG de Valence a mis fin à ses jours avec son arme de service.",
-      "section": "PSIG",
+      "section": "PSIG Valence",
       "location": "Valence",
       "county": "26",
       "origin": "interieur",
