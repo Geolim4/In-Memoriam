@@ -1,5 +1,5 @@
-/** SW auto-generated on 2022-11-06T18:10:27.532Z **/
-const CACHE_KEY = 'im-4.0.0+20221106T181027';
+/** SW auto-generated on 2022-11-06T23:32:20.219Z **/
+const CACHE_KEY = 'im-4.1.0+20221106T233220';
 const assets = [
   'assets/css/fonts/fa-solid-900.ttf',
   'assets/css/fonts/fa-solid-900.woff2',
@@ -46,6 +46,14 @@ const assets = [
   'assets/images/pwa/in-memoriam_512_maskable.png',
   'assets/images/pwa/in-memoriam_512.png',
   'assets/js/app.js',
+  'assets/json/deaths/2010.min.json',
+  'assets/json/deaths/2011.min.json',
+  'assets/json/deaths/2012.min.json',
+  'assets/json/deaths/2013.min.json',
+  'assets/json/deaths/2014.min.json',
+  'assets/json/deaths/2015.min.json',
+  'assets/json/deaths/2016.min.json',
+  'assets/json/deaths/2017.min.json',
   'assets/json/deaths/2018.min.json',
   'assets/json/deaths/2019.min.json',
   'assets/json/deaths/2020.min.json',
