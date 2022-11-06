@@ -1,7 +1,18 @@
+<div class="sticky-top">
+    <div class="float-right">
+        <a href="javascript:;"
+           class="btn btn-primary"
+           data-controller="copy-element"
+           data-target-element="#modal-bloodbath-list-content"
+           data-tippy-content="Copier les données ci-dessus vers votre presse-papier">
+            <i class="fa-solid fa-copy"></i>
+        </a>
+    </div>
+</div>
 <div>
     <small>
         <i class="fa-solid fa-circle-exclamation"></i>
-        La liste affichée ci-dessous est contextualisée en fonction des filtres appliqués.
+        <span>La liste affichée ci-dessous est contextualisée en fonction des filtres appliqués.</span>
     </small>
 </div>
 
@@ -11,7 +22,9 @@
         {% set deathLabel = (marker.death.section ? acronymise(marker.death.section) ~ ', ' : '') ~ marker.death.location ~ app.getCountyByCode(marker.death.county, true) %}
         {% set deathLabel = deathLabel ~ (totalDeath > 1 ? ' (<strong style="color: red">' ~ totalDeath ~ ' décès</strong>)': '') %}
         <p>
-            <strong>{{ marker.death.day }}/{{ marker.death.month }}/{{ marker.death.year }} - [{{ app.getFilterValueLabel('cause', marker.death.cause) }}] {{ app.getFilterValueLabel('house', marker.death.house) }}:</strong>
+            <strong>{{ marker.death.day }}/{{ marker.death.month }}/{{ marker.death.year }} -
+                [{{ app.getFilterValueLabel('cause', marker.death.cause) }}
+                ] {{ app.getFilterValueLabel('house', marker.death.house) }}:</strong>
             <span>{{ marker_link(marker.death, deathLabel) }}</span>
         </p>
     {% endfor %}

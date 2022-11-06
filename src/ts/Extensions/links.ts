@@ -1,5 +1,6 @@
 import { App } from '../app';
 import { ModalOptions } from '../models/Modal/modalOptions.model';
+import { StringUtilsHelper } from '../helper/stringUtils.helper';
 import { ModalContentTemplate } from './modalContentTemplate';
 
 /**
@@ -21,6 +22,9 @@ export class Links {
                     break;
                 case 'proxy-call':
                     this.handleProxyCallLink(link);
+                    break;
+                case 'copy-element':
+                    this.handleCopyElementLink(link);
                     break;
                 default:
                     App.getInstance().getModal().modalInfo('Erreur', `Contrôleur "${link.dataset.controller}" inconnu.`, { isError: true });
@@ -115,6 +119,26 @@ export class Links {
 
         if (proxyMethod) {
             App.getInstance().exposedProxyCall(proxyMethod, ...proxyMethodArgs);
+        }
+    }
+
+    protected static handleCopyElementLink(link: HTMLAnchorElement): void {
+        const { targetElement } = link.dataset;
+
+        if (targetElement) {
+            StringUtilsHelper.copyToClipboard(
+                targetElement,
+                (): void => {
+                    App.getInstance().getSnackbar().show('Le texte a bien été copié dans le presse-papier !');
+                },
+                (): void => {
+                    App.getInstance().getSnackbar().show("Le texte n'a pas pû être copié dans le presse-papier.", 'Fermer', true);
+                    const range = document.createRange();
+                    range.selectNode(document.querySelector(targetElement));
+                    window.getSelection().removeAllRanges();
+                    window.getSelection().addRange(range);
+                },
+            );
         }
     }
 }

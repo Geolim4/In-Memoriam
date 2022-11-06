@@ -51,7 +51,7 @@ export class Renderer {
     public async render(tplName: string, variables: object): Promise<string|null> {
         if (typeof this.templates[tplName] === 'undefined') {
             App.getInstance().showLoaderWall();
-            return fetch(this.templateDir.replace('%tpl%', tplName), { cache: 'force-cache' })
+            return fetch(this.templateDir.replace('%tpl%', tplName), { cache: 'default' })
                 .then((response): any => response.text())
                 .then((responseData: string): string => {
                     this.templates[tplName] = responseData;
