@@ -97,7 +97,7 @@ export class ConfigFactory {
                     }
                 }
 
-                fetch(this.config.definitionsSrc, { cache: 'force-cache' })
+                fetch(this.config.definitionsSrc, { cache: 'default' })
                     .then((response): any => response.json())
                     .then((responseData: { definitions: Definitions }): void => {
                         this.definitions = responseData.definitions;

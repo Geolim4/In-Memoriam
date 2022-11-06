@@ -91,4 +91,13 @@ export class StringUtilsHelper {
         }
         return formattedString;
     }
+
+    public static copyToClipboard(element: string|HTMLElement, onSuccess: VoidFunction, onFailure?: VoidFunction): boolean {
+        if (window.getSelection) {
+            const targetElement = (typeof element === 'string' ? document.querySelector(element) : element) as HTMLElement;
+
+            navigator.clipboard.writeText(targetElement.innerText.trim()).then(onSuccess, onFailure);
+        }
+        return false;
+    }
 }
