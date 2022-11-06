@@ -1,11 +1,11 @@
 <div>
     <small>
-        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <i class="fa-solid fa-circle-exclamation"></i>
         La liste affichée ci-dessous est contextualisée en fonction des filtres appliqués.
     </small>
 </div>
 
-<div id="modal-bloodbath-list-content" class="mtop">
+<div id="modal-bloodbath-list-content" class="mt-3">
     {% for marker in markers %}
         {% set totalDeath = app.getTotalDeathCount(marker.death) %}
         {% set deathLabel = (marker.death.section ? acronymise(marker.death.section) ~ ', ' : '') ~ marker.death.location ~ app.getCountyByCode(marker.death.county, true) %}

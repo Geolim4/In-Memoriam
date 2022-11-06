@@ -9,9 +9,9 @@
       "#counter_strategy": "distinct",
       "#number": {
         "#any": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur l'année %year%",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur l'année %year%",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur l'année %year%"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur l'année %year%",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur l'année %year%",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur l'année %year%"
         }
       }
     },
@@ -24,69 +24,69 @@
       "#counter_strategy": "distinct",
       "#number": {
         "#any": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois %month%",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois %month%",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois %month%"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le mois %month%",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le mois %month%",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le mois %month%"
         },
         "01": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Janvier",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Janvier",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Janvier"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le mois de Janvier",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le mois de Janvier",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le mois de Janvier"
         },
         "02": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Février",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Février",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Février"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le mois de Février",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le mois de Février",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le mois de Février"
         },
         "03": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Mars",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Mars",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Mars"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le mois de Mars",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le mois de Mars",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le mois de Mars"
         },
         "04": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois d'Avril",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois d'Avril",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois d'Avril"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le mois d'Avril",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le mois d'Avril",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le mois d'Avril"
         },
         "05": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Mai",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Mai",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Mai"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le mois de Mai",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le mois de Mai",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le mois de Mai"
         },
         "06": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Juin",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Juin",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Juin"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le mois de Juin",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le mois de Juin",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le mois de Juin"
         },
         "07": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Juillet",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Juillet",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Juillet"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le mois de Juillet",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le mois de Juillet",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le mois de Juillet"
         },
         "08": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois d'Aout",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois d'Aout",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois d'Aout"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le mois d'Aout",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le mois d'Aout",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le mois d'Aout"
         },
         "09": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Septembre",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Septembre",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Septembre"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le mois de Septembre",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le mois de Septembre",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le mois de Septembre"
         },
         "10": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois d'Octobre",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois d'Octobre",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois d'Octobre"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le mois d'Octobre",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le mois d'Octobre",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le mois d'Octobre"
         },
         "11": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Novembre",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Novembre",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Novembre"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le mois de Novembre",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le mois de Novembre",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le mois de Novembre"
         },
         "12": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le mois de Décembre",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le mois de Décembre",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions sur le mois de Décembre"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le mois de Décembre",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le mois de Décembre",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le mois de Décembre"
         }
       }
     },
@@ -99,39 +99,39 @@
       "#counter_strategy": "distinct",
       "#number": {
         "suicide": {
-          "none": "<span class=\"label label-success\">%d</span> suicide",
-          "singular": "<span class=\"label label-danger\">%d</span> suicide",
-          "plural": "<span class=\"label label-danger\">%d</span> suicides"
+          "none": "<span class=\"badge badge-success\">%d</span> suicide",
+          "singular": "<span class=\"badge badge-danger\">%d</span> suicide",
+          "plural": "<span class=\"badge badge-danger\">%d</span> suicides"
         },
         "deathOnDuty": {
-          "none": "<span class=\"label label-danger\">%d</span> mort en service",
-          "singular": "<span class=\"label label-danger\">%d</span> mort en service",
-          "plural": "<span class=\"label label-danger\">%d</span> morts en service"
+          "none": "<span class=\"badge badge-danger\">%d</span> mort en service",
+          "singular": "<span class=\"badge badge-danger\">%d</span> mort en service",
+          "plural": "<span class=\"badge badge-danger\">%d</span> morts en service"
         },
         "deathViaDuty": {
-          "none": "<span class=\"label label-danger\">%d</span> mort lié au service",
-          "singular": "<span class=\"label label-danger\">%d</span> mort lié au service",
-          "plural": "<span class=\"label label-danger\">%d</span> morts liés au service"
+          "none": "<span class=\"badge badge-danger\">%d</span> mort lié au service",
+          "singular": "<span class=\"badge badge-danger\">%d</span> mort lié au service",
+          "plural": "<span class=\"badge badge-danger\">%d</span> morts liés au service"
         },
         "accident": {
-          "none": "<span class=\"label label-success\">%d</span> accident",
-          "singular": "<span class=\"label label-danger\">%d</span> accident",
-          "plural": "<span class=\"label label-danger\">%d</span> accidents"
+          "none": "<span class=\"badge badge-success\">%d</span> accident",
+          "singular": "<span class=\"badge badge-danger\">%d</span> accident",
+          "plural": "<span class=\"badge badge-danger\">%d</span> accidents"
         },
         "malaise": {
-          "none": "<span class=\"label label-success\">%d</span> malaise cardiaque",
-          "singular": "<span class=\"label label-danger\">%d</span> malaise cardiaque",
-          "plural": "<span class=\"label label-danger\">%d</span> malaises cardiaques"
+          "none": "<span class=\"badge badge-success\">%d</span> malaise cardiaque",
+          "singular": "<span class=\"badge badge-danger\">%d</span> malaise cardiaque",
+          "plural": "<span class=\"badge badge-danger\">%d</span> malaises cardiaques"
         },
         "murdered": {
-          "none": "<span class=\"label label-success\">%d</span> meurtre",
-          "singular": "<span class=\"label label-danger\">%d</span> meurtre",
-          "plural": "<span class=\"label label-danger\">%d</span> meurtres"
+          "none": "<span class=\"badge badge-success\">%d</span> meurtre",
+          "singular": "<span class=\"badge badge-danger\">%d</span> meurtre",
+          "plural": "<span class=\"badge badge-danger\">%d</span> meurtres"
         },
         "other": {
           "none": "",
-          "singular": "<span class=\"label label-danger\">%d</span> mort inclassable",
-          "plural": "<span class=\"label label-danger\">%d</span> morts inclassables"
+          "singular": "<span class=\"badge badge-danger\">%d</span> mort inclassable",
+          "plural": "<span class=\"badge badge-danger\">%d</span> morts inclassables"
         }
       }
     },
@@ -144,49 +144,49 @@
       "#counter_strategy": "distinct",
       "#number": {
         "gd": {
-          "none": "<span class=\"label label-success\">%d</span> gendarme",
-          "singular": "<span class=\"label label-danger\">%d</span> gendarme",
-          "plural": "<span class=\"label label-danger\">%d</span> gendarmes"
+          "none": "<span class=\"badge badge-success\">%d</span> gendarme",
+          "singular": "<span class=\"badge badge-danger\">%d</span> gendarme",
+          "plural": "<span class=\"badge badge-danger\">%d</span> gendarmes"
         },
         "pn": {
-          "none": "<span class=\"label label-success\">%d</span> policier",
-          "singular": "<span class=\"label label-danger\">%d</span> policier",
-          "plural": "<span class=\"label label-danger\">%d</span> policiers"
+          "none": "<span class=\"badge badge-success\">%d</span> policier",
+          "singular": "<span class=\"badge badge-danger\">%d</span> policier",
+          "plural": "<span class=\"badge badge-danger\">%d</span> policiers"
         },
         "pm": {
-          "none": "<span class=\"label label-success\">%d</span> policier municipal",
-          "singular": "<span class=\"label label-danger\">%d</span> policier municipal",
-          "plural": "<span class=\"label label-danger\">%d</span> policiers municipaux"
+          "none": "<span class=\"badge badge-success\">%d</span> policier municipal",
+          "singular": "<span class=\"badge badge-danger\">%d</span> policier municipal",
+          "plural": "<span class=\"badge badge-danger\">%d</span> policiers municipaux"
         },
         "douane": {
-          "none": "<span class=\"label label-success\">%d</span> douanier",
-          "singular": "<span class=\"label label-danger\">%d</span> douanier",
-          "plural": "<span class=\"label label-danger\">%d</span> douaniers"
+          "none": "<span class=\"badge badge-success\">%d</span> douanier",
+          "singular": "<span class=\"badge badge-danger\">%d</span> douanier",
+          "plural": "<span class=\"badge badge-danger\">%d</span> douaniers"
         },
         "pompier": {
-          "none": "<span class=\"label label-success\">%d</span> pompier",
-          "singular": "<span class=\"label label-danger\">%d</span> pompier",
-          "plural": "<span class=\"label label-danger\">%d</span> pompiers"
+          "none": "<span class=\"badge badge-success\">%d</span> pompier",
+          "singular": "<span class=\"badge badge-danger\">%d</span> pompier",
+          "plural": "<span class=\"badge badge-danger\">%d</span> pompiers"
         },
         "armee": {
-          "none": "<span class=\"label label-success\">%d</span> militaire",
-          "singular": "<span class=\"label label-danger\">%d</span> militaire",
-          "plural": "<span class=\"label label-danger\">%d</span> militaires"
+          "none": "<span class=\"badge badge-success\">%d</span> militaire",
+          "singular": "<span class=\"badge badge-danger\">%d</span> militaire",
+          "plural": "<span class=\"badge badge-danger\">%d</span> militaires"
         },
         "admpen": {
-          "none": "<span class=\"label label-success\">%d</span> surveillant pénitentiaire",
-          "singular": "<span class=\"label label-danger\">%d</span> surveillant pénitentiaire",
-          "plural": "<span class=\"label label-danger\">%d</span> surveillants pénitentiaire"
+          "none": "<span class=\"badge badge-success\">%d</span> surveillant pénitentiaire",
+          "singular": "<span class=\"badge badge-danger\">%d</span> surveillant pénitentiaire",
+          "plural": "<span class=\"badge badge-danger\">%d</span> surveillants pénitentiaire"
         },
         "secciv": {
-          "none": "<span class=\"label label-success\">%d</span> personnel de la sécurité civile",
-          "singular": "<span class=\"label label-danger\">%d</span> personnel de la sécurité civile",
-          "plural": "<span class=\"label label-danger\">%d</span> personnels de la sécurité civile"
+          "none": "<span class=\"badge badge-success\">%d</span> personnel de la sécurité civile",
+          "singular": "<span class=\"badge badge-danger\">%d</span> personnel de la sécurité civile",
+          "plural": "<span class=\"badge badge-danger\">%d</span> personnels de la sécurité civile"
         },
         "misc": {
-          "none": "<span class=\"label label-success\">%d</span> fonctionnaire ou bénévole civil",
-          "singular": "<span class=\"label label-danger\">%d</span> fonctionnaire ou bénévole civil",
-          "plural": "<span class=\"label label-danger\">%d</span> fonctionnaires ou bénévoles civils"
+          "none": "<span class=\"badge badge-success\">%d</span> fonctionnaire ou bénévole civil",
+          "singular": "<span class=\"badge badge-danger\">%d</span> fonctionnaire ou bénévole civil",
+          "plural": "<span class=\"badge badge-danger\">%d</span> fonctionnaires ou bénévoles civils"
         }
       }
     },
@@ -199,19 +199,19 @@
       "#counter_strategy": "distinct",
       "#number": {
         "interieur": {
-          "none": "<span class=\"label label-success\">%d</span> disparition sur le territoire national",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition sur le territoire national",
-          "plural": "<span class=\"label label-danger\">%d</span> disparitions en territoire national"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le territoire national",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le territoire national",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions en territoire national"
         },
         "domtom": {
-          "none": "<span class=\"label label-success\">%d</span> disparition en DOM-TOM",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition en DOM-TOM",
-          "plural": "<span class=\"label label-danger\"> %d</span> disparitions en DOM-TOM"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition en DOM-TOM",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition en DOM-TOM",
+          "plural": "<span class=\"badge badge-danger\"> %d</span> disparitions en DOM-TOM"
         },
         "opex": {
-          "none": "<span class=\"label label-success\">%d</span> disparition en OPEX",
-          "singular": "<span class=\"label label-danger\">%d</span> disparition en OPEX",
-          "plural": "<span class=\"label label-danger\"> %d</span> disparitions en OPEX"
+          "none": "<span class=\"badge badge-success\">%d</span> disparition en OPEX",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition en OPEX",
+          "plural": "<span class=\"badge badge-danger\"> %d</span> disparitions en OPEX"
         }
       }
     },
@@ -239,9 +239,9 @@
       "#counter_strategy": "sum",
       "#number": {
         "#any": {
-          "none": "<span class=\"label label-success\">%d</span> enfant orphelin sur la période %year%",
-          "singular": "<span class=\"label label-danger\">%d</span> enfant orphelin sur la période %year%",
-          "plural": "<span class=\"label label-danger\">%d</span> enfants orphelins <strong>connus au minimum</strong> sur la période %year%"
+          "none": "<span class=\"badge badge-success\">%d</span> enfant orphelin sur la période %year%",
+          "singular": "<span class=\"badge badge-danger\">%d</span> enfant orphelin sur la période %year%",
+          "plural": "<span class=\"badge badge-danger\">%d</span> enfants orphelins <strong>connus au minimum</strong> sur la période %year%"
         }
       }
     },

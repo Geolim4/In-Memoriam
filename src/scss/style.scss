@@ -6,12 +6,22 @@
 body {
   font-family: Roboto, system-ui;
   font-weight: 300;
+  font-size: 0.95em;
+
+  b,
+  strong {
+    font-weight: bold;
+  }
 
   .autocomplete {
     > div {
       padding: 4px 6px;
     }
     font-family: Roboto, system-ui;
+  }
+
+  blockquote {
+    border-left: 5px solid gray;
   }
 }
 
@@ -45,6 +55,7 @@ body:not(.loaded) {
     &:after {
       content: "";
       position: absolute;
+      z-index: 1000;
       top: 0;
       left: 0;
       width: 100%;
@@ -94,10 +105,6 @@ body:not(.loaded) {
   }
 }
 
-.mtop {
-  margin-top: 1.25em;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -134,9 +141,11 @@ header.top-menu {
 
 .death-container,
 .info-window-container {
-  padding: 8px 8px 8px 12px;
   background-color: var(--background-color);
 
+  &.info-window-container {
+    padding: 8px 8px 8px 12px;
+  }
   .death-sources {
     padding-right: 70px;
     .glyphicon {
@@ -222,6 +231,7 @@ a abbr[data-title] {
   display: none;
   .modal__title {
     margin-right: 20px;
+    font-size: 1.5em;
   }
 }
 
@@ -262,7 +272,7 @@ a abbr[data-title] {
   .ts-control {
     min-height: 45px;
     & > input {
-      min-width: 2rem;
+      min-width: 1rem;
     }
   }
 }
@@ -270,6 +280,10 @@ a abbr[data-title] {
 #form-filters {
   #search {
     height: 45px;
+    &::placeholder {
+      font-size: 0.85em;
+      font-weight: 300;/* This is only to remove blink effect on page load */
+    }
   }
 
   small.advanced-search-enabled {
@@ -292,7 +306,7 @@ a abbr[data-title] {
     display: none;
     position: absolute;
     right: 25px;
-    top: 36px;
+    top: 40px;
     width: auto;
   }
   input:not(:placeholder-shown) + button[data-reset-field-target] {

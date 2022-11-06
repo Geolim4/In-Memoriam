@@ -998,9 +998,9 @@ export abstract class AppCore extends AppAbstract {
             }
 
             if (!response.settings.up_to_date) {
-                definitionTexts.push(`<div class="mtop">
+                definitionTexts.push(`<div class="mt-3">
                      <span class="text text-warning">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;
+                        <i class="fa-solid fa-circle-exclamation"></i>
                         <strong>Les r&eacute;sultats de cette ann&eacute;e peuvent &ecirc;tre incomplets car tous les d&eacute;c&egrave;s n'ont pas encore &eacute;t&eacute; ind&eacute;x&eacute;s.</strong>
                      </span>
                   </div>`);
@@ -1008,7 +1008,7 @@ export abstract class AppCore extends AppAbstract {
         } else {
             const messageText = 'Aucun r&eacute;sultat trouv&eacute;, essayez avec d\'autres crit&egrave;res de recherche.';
             definitionTexts.push(
-                `<span class="text text-warning"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp; <strong>${messageText}</strong></span>`,
+                `<span class="text text-warning"><i class="fa-solid fa-circle-exclamation"></i>&nbsp; <strong>${messageText}</strong></span>`,
             );
         }
 

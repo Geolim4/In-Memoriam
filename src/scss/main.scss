@@ -1,4 +1,7 @@
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~tippy.js/dist/tippy.css';
 @import '~tippy.js/dist/backdrop.css';
 @import '~tippy.js/themes/material.css';

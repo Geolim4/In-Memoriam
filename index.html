@@ -39,7 +39,7 @@
         </div>
         <div class="need-help">
             <div class="red-border">
-                <a href="tel:0805230405"><span class="label label-danger"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;<span>0805 230 405</span></span></a>
+                <a href="tel:0805230405"><span class="badge badge-danger"><i class="fa-solid fa-phone"></i>&nbsp;<span>0805 230 405</span></span></a>
                 <strong>Être fort, c'est aussi savoir demander de l'aide ❤️</strong>
             </div>
         </div>
@@ -49,7 +49,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
-                <blockquote class="text text-primary">
+                <blockquote class="pl-2">
                     <em>Car les années se suivent et se ressemblent tristement, cette cartographie vous permettra de lister
                     l'ensemble des décès des forces de sécurité intérieures, civiles ou militaires, toutes causes confondues et de façon la plus exhaustive possible.<br />
                     Afin qu'aucun d'eux ne soit jamais oublié 🕊️
@@ -57,15 +57,15 @@
                 </blockquote>
             </div>
         </div>
-        <div class="row mtop">
+        <div class="row mt-3">
             <div data-role="definitionsText" class="col-md-12">
-                <div class="   h150 w50"></div>
+                <div class="shimmer-loader h150 w50"></div>
             </div>
         </div>
         <div id="form-filters-wrapper" class="shimmer-loader">
-            <form id="form-filters" class="row mtop">
+            <form id="form-filters" class="row mt-3">
                 <fieldset class="col-md-3">
-                    <label for="search">Recherche</label>
+                    <label class="font-weight-bold" for="search">Recherche</label>
                     <input class="form-control"
                            type="text"
                            name="search"
@@ -76,49 +76,49 @@
                            autocomplete="off"
                            pattern=""/>
                     <button type="button" data-reset-field-target="#search" data-tippy-content="Réinitialiser le champ de recherche">
-                        <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+                        <i class="fa-solid fa-xmark"></i>
                     </button>
                 </fieldset>
                 <fieldset class="col-md-2">
                     <div class="row">
-                        <div class="col-xs-5">
-                            <label for="year">Année</label>
+                        <div class="col-5">
+                            <label class="font-weight-bold" for="year">Année</label>
                             <select name="year" id="year" data-filterable="true" data-max-item-count="4" required="required" multiple></select>
                         </div>
-                        <div class="col-xs-7">
-                            <label for="month">Mois</label>
+                        <div class="col-7">
+                            <label class="font-weight-bold" for="month">Mois</label>
                             <select name="month" id="month" data-filterable="true" data-countable="true" multiple></select>
                         </div>
                     </div>
                 </fieldset>
                 <fieldset class="col-md-2">
-                    <label for="house">Corps</label>
+                    <label class="font-weight-bold" for="house">Corps</label>
                     <select name="house" id="house" data-filterable="true" data-countable="true" multiple></select>
                 </fieldset>
                 <fieldset class="col-md-2">
-                    <label for="cause">Cause</label>
+                    <label class="font-weight-bold" for="cause">Cause</label>
                     <select name="cause" id="cause" data-filterable="true" data-countable="true" multiple></select>
                 </fieldset>
                 <fieldset class="col-md-1">
-                    <label for="county">Département/Pays</label>
+                    <label class="font-weight-bold" for="county">Département/Pays</label>
                     <select name="county" id="county" data-filterable="true" data-countable="false" data-autosort="true" multiple></select>
                 </fieldset>
                 <fieldset class="col-md-1">
-                    <label for="origin">Théatre d'action</label>
+                    <label class="font-weight-bold" for="origin">Théatre d'action</label>
                     <select name="origin" id="origin" data-filterable="true" data-countable="true" multiple></select>
                 </fieldset>
                 <fieldset class="col-md-1">
-                    <label for="homage">Hommage</label>
+                    <label class="font-weight-bold" for="homage">Hommage</label>
                     <select name="homage" id="homage" data-filterable="true" data-countable="false"></select>
                 </fieldset>
             </form>
         </div>
-        <div class="row mtop">
-            <div class="col-xs-12 ">
+        <div class="row mt-3">
+            <div class="col-12 ">
                 <div id="map" class="shimmer-loader h500"></div>
             </div>
         </div>
-        <div class="row mtop">
+        <div class="row mt-3">
             <div class="col-md-8">
                 <div class="shadowed">
                     <h3>
@@ -146,16 +146,16 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-4 mtop">
-                <div class="shimmer-loader h150">
+            <div class="col-md-4 mt-3">
+                <div class="shimmer-loader h200">
                     <div class="shadowed">
                         <div>
                             <strong>Association de soutien des forces armées et intérieures</strong>
                             <p></p>
                             <p class="association-list"></p>
                         </div>
-                        <form id="form-permalink" class="mtop">
-                            <label for="permalink">Permalien</label>
+                        <form id="form-permalink" class="mt-3">
+                            <label class="font-weight-bold" for="permalink">Permalien</label>
                             <input id="permalink" class="form-control" type="text" title="Permalien" value="" data-role="permalink" onclick="select()" size="30" readonly>
                         </form>
                     </div>
@@ -165,44 +165,46 @@
     </div>
 </div>
 
-<footer class="mtop">
+<footer class="mt-3">
     <div class="container-fluid">
-        <div class="col-md-4 mtop">
-            <p class="text-center">
-                <strong>
-                    <a href="javascript:;"
-                       id="confidentiality-link"
-                       data-controller="advanced-modal"
-                       data-modal-title="Politique de confidentialité"
-                       data-modal-content-template="pages/confidentiality"
-                       data-modal-options='{}'
-                       data-modal-content-vars='{}'>Politique de confidentialité</a>
-                </strong>
-            </p>
-        </div>
-        <div class="col-md-4 mtop">
-            <p class="text text-info text-center">
-                <span><small>Cartographie conçue avec ❤️ par <a href="https://twitter.com/geo_bzh44" target="_blank">@geo_bzh44</a></small></span>
-            </p>
-            <p class="text-center hide-until-loaded">
-                <small data-tippy-content="Version actuelle de l'application :)">
-                    <em>In-Memoriam</em>
-                    <code>v<em data-app-settings="appVersion"></em></code>
-                </small>
-            </p>
-        </div>
-        <div class="col-md-4 mtop">
-            <p class="text-center">
-                <strong>
-                    <a href="javascript:;"
-                       id="legal-notice-link"
-                       data-controller="advanced-modal"
-                       data-modal-title="Mentions Légales"
-                       data-modal-content-template="pages/legal-notice"
-                       data-modal-options='{}'
-                       data-modal-content-vars='{}'>Mentions Légales</a>
-                </strong>
-            </p>
+        <div class="row">
+            <div class="col-md-4 mt-3">
+                <p class="text-center">
+                    <strong>
+                        <a href="javascript:;"
+                           id="confidentiality-link"
+                           data-controller="advanced-modal"
+                           data-modal-title="Politique de confidentialité"
+                           data-modal-content-template="pages/confidentiality"
+                           data-modal-options='{}'
+                           data-modal-content-vars='{}'>Politique de confidentialité</a>
+                    </strong>
+                </p>
+            </div>
+            <div class="col-md-4 mt-3">
+                <p class="text text-center">
+                    <span><small>Cartographie conçue avec ❤️ par <a href="https://twitter.com/geo_bzh44" target="_blank">@geo_bzh44</a></small></span>
+                </p>
+                <p class="text-center hide-until-loaded">
+                    <small data-tippy-content="Version actuelle de l'application :)">
+                        <em>In-Memoriam</em>
+                        <code>v<em data-app-settings="appVersion"></em></code>
+                    </small>
+                </p>
+            </div>
+            <div class="col-md-4 mt-3">
+                <p class="text-center">
+                    <strong>
+                        <a href="javascript:;"
+                           id="legal-notice-link"
+                           data-controller="advanced-modal"
+                           data-modal-title="Mentions Légales"
+                           data-modal-content-template="pages/legal-notice"
+                           data-modal-options='{}'
+                           data-modal-content-vars='{}'>Mentions Légales</a>
+                    </strong>
+                </p>
+            </div>
         </div>
     </div>
 </footer>
