@@ -142,8 +142,8 @@ export class App extends AppCore {
     }
 
     /**
-   * Only used in Twig templates
-   */
+    * Only used in Twig templates
+    */
     public getFilterValueLabel(filterName: string, filterValue: string): string {
         for (const filterValues of this.getFormFilters()[filterName]) {
             if (filterValues.value === filterValue) {
@@ -151,7 +151,7 @@ export class App extends AppCore {
             }
         }
 
-        return `["${filterValue}]`;
+        return `[${filterValue}]`.toUpperCase();
     }
 
     public isOnSmallScreen(): boolean {

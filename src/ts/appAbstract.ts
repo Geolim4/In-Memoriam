@@ -53,6 +53,14 @@ export abstract class AppAbstract {
 
     private searchByExpression: boolean;
 
+    private statsEnabled: boolean;
+
+    private downloadEnabled: boolean;
+
+    private listEnabled: boolean;
+
+    private unaggregatableYears: string[];
+
     protected constructor() {
         this.map = null;
         this.markers = [];
@@ -71,6 +79,9 @@ export abstract class AppAbstract {
         this.mapButtons = new MapButtons();
         this.permalink = new Permalink();
         this.searchByExpression = false;
+        this.statsEnabled = true;
+        this.downloadEnabled = true;
+        this.listEnabled = true;
     }
 
     public getMap(): google.maps.Map {
@@ -147,6 +158,42 @@ export abstract class AppAbstract {
 
     public setSearchByExpression(searchByExpression: boolean): void {
         this.searchByExpression = searchByExpression;
+    }
+
+    public isStatsEnabled(): boolean {
+        return this.statsEnabled;
+    }
+
+    public setStatsEnabled(statsEnabled: boolean): void {
+        this.statsEnabled = statsEnabled;
+    }
+
+    public isDownloadEnabled(): boolean {
+        return this.downloadEnabled;
+    }
+
+    public setDownloadEnabled(value: boolean): void {
+        this.downloadEnabled = value;
+    }
+
+    public isListEnabled(): boolean {
+        return this.listEnabled;
+    }
+
+    public setListEnabled(value: boolean): void {
+        this.listEnabled = value;
+    }
+
+    public getUnaggregatableYears(): string[] {
+        return this.unaggregatableYears;
+    }
+
+    public setUnaggregatableYears(value: string[]): void {
+        this.unaggregatableYears = value;
+    }
+
+    public addUnaggregatableYears(value: string): void {
+        this.unaggregatableYears.push(value);
     }
 
     public getMarkers(): ExtendedGoogleMapsMarker[] {

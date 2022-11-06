@@ -59,7 +59,7 @@ export class Modal {
             this.closeModalInfo();
         }
 
-        if (!this.isModalOpened()) {
+        if (!this.modelOpened) {
             this.modelOpened = true;
             let hasConfirmed = false;
             let hasExplicitelyCanceled = false;

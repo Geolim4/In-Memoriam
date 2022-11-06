@@ -1,5 +1,9 @@
 {
   "settings": {
+    "aggregatable": true,
+    "download_enabled": true,
+    "list_enabled": true,
+    "stats_enabled": true,
     "up_to_date": false
   },
   "deaths": [
@@ -14,7 +18,7 @@
       "keywords": "",
       "house": "pn",
       "peers": [],
-      "text": "Un policier de la brigade nuit du commissariat de Dunkerque nord s'est suicidé avec son arme de service. Père de trois enfants il était arrivé dans sa circonscription en 2004.",
+      "text": "Un policier de la brigade nuit du commissariat de Dunkerque nord s'est suicidé avec son arme de service.\nPère de trois enfants il était arrivé dans sa circonscription en 2004.",
       "section": "BN - CSP Dunkerque",
       "location": "Dunkerque",
       "county": "59",
@@ -392,6 +396,102 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2018",
+      "month": "05",
+      "day": "16",
+      "keywords": "Karim",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme du PMo de Cerans-Foulletourte (Dijon) mis fin à ses jours avec son arme administrative dans son logement de fonction.\nIl était père d'un enfant.",
+      "section": "PMo de Cerans-Foulletourte",
+      "location": "Cerans-Foulletourte",
+      "county": "72",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.83131797737455,
+        "lng": 0.07866082697801559
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.leparisien.fr/faits-divers/dijon-un-gendarme-se-suicide-dans-son-logement-de-fonction-22-05-2018-7729089.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/bourgogne-franche-comte/gendarmerie-deux-cas-suicide-cote-sarthe-1479589.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/deux-gendarmes-se-suicident-dans-la-sarthe-et-la-cote-dor",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.profession-gendarme.com/41791/",
+          "title": "Profession Gendarme",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2018",
+      "month": "05",
+      "day": "20",
+      "keywords": "Lionel",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme du PSPG de Valduc (Dijon) mis fin à ses jours avec son arme administrative dans son logement de fonction.\nIl était père de deux enfants.",
+      "section": "PSPG Valduc",
+      "location": "Dijon",
+      "county": "21",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.34523674969943,
+        "lng": 5.048017569289524
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.leparisien.fr/faits-divers/dijon-un-gendarme-se-suicide-dans-son-logement-de-fonction-22-05-2018-7729089.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/bourgogne-franche-comte/gendarmerie-deux-cas-suicide-cote-sarthe-1479589.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/deux-gendarmes-se-suicident-dans-la-sarthe-et-la-cote-dor",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
       "orphans": 0,
       "unpublished_reason": "",
       "year": "2018",
@@ -423,6 +523,57 @@
           "url": "https://www.republicain-lorrain.fr/edition-de-metz-ville/2018/08/17/suicide-d-un-douanier",
           "title": "Républicain Lorrain",
           "paywall": true,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2018",
+      "month": "11",
+      "day": "05",
+      "keywords": "",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme de la Compagnie de Sécurité de l'Hôtel de Matignon mis fin à ses jours avec son arme administrative dans le jardin de l'hôtel de Matignon.\nIl était marié père de deux enfants.",
+      "section": "CSHM (2e RIGR)",
+      "location": "Paris 7e",
+      "county": "75",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.85301990661739,
+        "lng": 2.3203896312926173
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.lefigaro.fr/actualite-france/2018/11/05/01016-20181105ARTFIG00279-malaise-apres-le-suicide-d-un-garde-republicain-a-matignon.php",
+          "title": "Le Figaro",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/politique/defense/gendarmerie/un-gendarme-retrouve-mort-dans-les-jardins-de-matignon-6052491",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lemonde.fr/police-justice/article/2018/11/05/un-gendarme-retrouve-mort-dans-l-enceinte-de-l-hotel-de-matignon_5379052_1653578.html",
+          "title": "le Monde",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/deux-gendarmes-se-suicident-dans-la-sarthe-et-la-cote-dor",
+          "title": "L'Essor",
+          "paywall": false,
           "trustful": true
         }
       ]

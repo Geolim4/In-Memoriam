@@ -250,25 +250,29 @@ export class MapButtons {
             const markers = App.getInstance().getMarkers();
 
             if (markers.length) {
-                const filters = App.getInstance().getFilters(false);
-                const modalBloodbathCounter = markers.map((m): number => (m.death.count + m.death.peers.map((p): number => (p.count)).reduce((partSum, a): number => partSum + a, 0))).reduce((partSum, a): number => partSum + a, 0);
+                if (App.getInstance().isListEnabled()) {
+                    const filters = App.getInstance().getFilters(false);
+                    const modalBloodbathCounter = markers.map((m): number => (m.death.count + m.death.peers.map((p): number => (p.count)).reduce((partSum, a): number => partSum + a, 0))).reduce((partSum, a): number => partSum + a, 0);
 
-                App.getInstance()
-                    .getRenderer()
-                    .render('bloodbath-list', {
-                        markers,
-                    })
-                    .then((htmlContent): void => {
-                        App.getInstance().getModal().modalInfo(
-                            'Liste des décès pour la période %period%: %count% décès'.replace('%period%', StringUtilsHelper.formatArrayOfStringForReading(filters.year)).replace('%count%', String(modalBloodbathCounter)),
-                            htmlContent,
-                            {
-                                cancelLabel: 'Fermer',
-                                confirmCallback: (): void => (this.promptDataDownloadExport()),
-                                okLabel: 'Télécharger les données',
-                            },
-                        );
-                    });
+                    App.getInstance()
+                        .getRenderer()
+                        .render('bloodbath-list', {
+                            markers,
+                        })
+                        .then((htmlContent): void => {
+                            App.getInstance().getModal().modalInfo(
+                                'Liste des décès pour la période %period%: %count% décès'.replace('%period%', StringUtilsHelper.formatArrayOfStringForReading(filters.year)).replace('%count%', String(modalBloodbathCounter)),
+                                htmlContent,
+                                {
+                                    cancelLabel: 'Fermer',
+                                    confirmCallback: (): void => (this.promptDataDownloadExport()),
+                                    okLabel: 'Télécharger les données',
+                                },
+                            );
+                        });
+                } else {
+                    App.getInstance().getModal().modalInfo('Information', "Les données d'une ou plusieurs années sélectionnées ne permettent pas le listing de données pertinentes :(");
+                }
             } else {
                 App.getInstance().getModal().modalInfo('Information', this.emptyMarkerMessage);
             }
@@ -289,28 +293,32 @@ export class MapButtons {
         GmapUtils.bindButton(map, (): void => {
             const markers = App.getInstance().getMarkers();
             if (markers.length) {
-                App.getInstance()
-                    .getRenderer()
-                    .render('bloodbath-chart', {})
-                    .then((htmlContent): void => {
-                        App.getInstance().getModal().modalInfo(
-                            '',
-                            htmlContent,
-                            {
-                                isLarge: true,
-                                okLabel: 'Fermer',
-                                onceShown: (): void => {
-                                    const definitions = App.getInstance().getConfigDefinitions();
-                                    const { year } = App.getInstance().getFilters(false);
-                                    App.getInstance().runActionWithNeededLoaderWall((): void => {
-                                        App.getInstance().getCharts().buildChartPerCause(markers, App.getInstance().getFormFilters(), definitions, year);
-                                        App.getInstance().getCharts().buildChartPerHouse(markers, App.getInstance().getFormFilters(), definitions, year);
-                                        App.getInstance().getCharts().buildChartPerCounty(markers, App.getInstance().getFormFilters(), definitions, year);
-                                    });
+                if (App.getInstance().isStatsEnabled()) {
+                    App.getInstance()
+                        .getRenderer()
+                        .render('bloodbath-chart', {})
+                        .then((htmlContent): void => {
+                            App.getInstance().getModal().modalInfo(
+                                '',
+                                htmlContent,
+                                {
+                                    isLarge: true,
+                                    okLabel: 'Fermer',
+                                    onceShown: (): void => {
+                                        const definitions = App.getInstance().getConfigDefinitions();
+                                        const { year } = App.getInstance().getFilters(false);
+                                        App.getInstance().runActionWithNeededLoaderWall((): void => {
+                                            App.getInstance().getCharts().buildChartPerCause(markers, App.getInstance().getFormFilters(), definitions, year);
+                                            App.getInstance().getCharts().buildChartPerHouse(markers, App.getInstance().getFormFilters(), definitions, year);
+                                            App.getInstance().getCharts().buildChartPerCounty(markers, App.getInstance().getFormFilters(), definitions, year);
+                                        });
+                                    },
                                 },
-                            },
-                        );
-                    });
+                            );
+                        });
+                } else {
+                    App.getInstance().getModal().modalInfo('Information', "Les données d'une ou plusieurs années sélectionnées ne permettent pas l'affichage de données statistiques pertinentes :(");
+                }
             } else {
                 App.getInstance().getModal().modalInfo('Information', this.emptyMarkerMessage);
             }
@@ -408,89 +416,93 @@ export class MapButtons {
         const markers = App.getInstance().getMarkers();
 
         if (markers.length) {
-            App.getInstance().getModal().modalInfo(
-                'Téléchargement des données',
-                'Les données que vous allez télécharger seront contextualisées selon les filtres appliqués. Continuer ?',
-                {
-                    confirmCallback: (): void => {
-                        App.getInstance().showLoaderWall();
-                        const now = new Date();
-                        const filenameDate = `${now.getFullYear()}${now.getMonth()}${now.getDay()}${now.getHours()}${now.getMinutes()}${now.getSeconds()}`;
-                        const definitions = App.getInstance().getConfigDefinitions();
-                        const formFiltersKeyed = App.getInstance().getFormFiltersKeyed();
-                        const formFilters = App.getInstance().getFilters(false);
+            if (App.getInstance().isDownloadEnabled()) {
+                App.getInstance().getModal().modalInfo(
+                    'Téléchargement des données',
+                    'Les données que vous allez télécharger seront contextualisées selon les filtres appliqués. Continuer ?',
+                    {
+                        confirmCallback: (): void => {
+                            App.getInstance().showLoaderWall();
+                            const now = new Date();
+                            const filenameDate = `${now.getFullYear()}${now.getMonth()}${now.getDay()}${now.getHours()}${now.getMinutes()}${now.getSeconds()}`;
+                            const definitions = App.getInstance().getConfigDefinitions();
+                            const formFiltersKeyed = App.getInstance().getFormFiltersKeyed();
+                            const formFilters = App.getInstance().getFilters(false);
 
-                        const options = {
-                            decimalSeparator: '.',
-                            fieldSeparator: ',',
-                            filename: `In-Memoriam-Export-${App.getInstance().getFilters(false).year}.${filenameDate}`,
-                            quoteStrings: '"',
-                            showLabels: true,
-                            showTitle: false,
-                            title: null,
-                            useBom: false,
-                            useKeysAsHeaders: true,
-                            useTextFile: false,
-                        };
-
-                        const csvExporter = new ExportToCsv(options);
-                        const csvData = [];
-                        const csvDataBuilder = (death: Death, peer?: DeathPeer): object => {
-                            const build = {};
-                            const indexNameBuilder = (indexName: string, filters: Filters): string => {
-                                const formFiltersBuilt = (filters[indexName] ? filters[indexName] as string : '').split(',').map((val): string => {
-                                    if (val !== '') {
-                                        return formFiltersKeyed[indexName] ? formFiltersKeyed[indexName][val] : val;
-                                    }
-                                    return '';
-                                }).join(', ');
-                                let formFiltersSuffix = formFiltersBuilt ? ` (filtre: ${formFiltersBuilt})` : '';
-                                /**
-                                *  Due to a bug in the "export-to-csv" package that does not
-                                *  escape headers as quoted string, we must do it manually :(
-                                *  (The same apply for date build few lines below)
-                                */
-                                if (indexName === 'text') {
-                                    formFiltersSuffix = formFilters.search ? ` (recherche: ${formFilters.search})` : '';
-                                }
-                                return `"${StringUtilsHelper.ucFirst(definitions[indexName]['#name'])}${formFiltersSuffix}"`;
+                            const options = {
+                                decimalSeparator: '.',
+                                fieldSeparator: ',',
+                                filename: `In-Memoriam-Export-${App.getInstance().getFilters(false).year}.${filenameDate}`,
+                                quoteStrings: '"',
+                                showLabels: true,
+                                showTitle: false,
+                                title: null,
+                                useBom: false,
+                                useKeysAsHeaders: true,
+                                useTextFile: false,
                             };
 
-                            const months = formFilters.month.split(',').map((m): string => formFiltersKeyed.month[m]).join(', ');
-                            const year = StringUtilsHelper.formatArrayOfStringForReading(formFilters.year);
+                            const csvExporter = new ExportToCsv(options);
+                            const csvData = [];
+                            const csvDataBuilder = (death: Death, peer?: DeathPeer): object => {
+                                const build = {};
+                                const indexNameBuilder = (indexName: string, filters: Filters): string => {
+                                    const formFiltersBuilt = (filters[indexName] ? filters[indexName] as string : '').split(',').map((val): string => {
+                                        if (val !== '') {
+                                            return formFiltersKeyed[indexName] ? formFiltersKeyed[indexName][val] : val;
+                                        }
+                                        return '';
+                                    }).join(', ');
+                                    let formFiltersSuffix = formFiltersBuilt ? ` (filtre: ${formFiltersBuilt})` : '';
+                                    /**
+                                     *  Due to a bug in the "export-to-csv" package that does not
+                                     *  escape headers as quoted string, we must do it manually :(
+                                     *  (The same apply for date build few lines below)
+                                     */
+                                    if (indexName === 'text') {
+                                        formFiltersSuffix = formFilters.search ? ` (recherche: ${formFilters.search})` : '';
+                                    }
+                                    return `"${StringUtilsHelper.ucFirst(definitions[indexName]['#name'])}${formFiltersSuffix}"`;
+                                };
 
-                            build[`"Date${year ? ` (année${formFilters.year.split(',').length > 1 ? 's' : ''}: ${year})` : ''}${months ? ` (mois: ${months})` : ''}"`] = `${death.year}-${death.month}-${death.day}`; // ISO 8601
-                            build[indexNameBuilder('cause', formFilters)] = formFiltersKeyed.cause[death.cause];
-                            build[indexNameBuilder('house', formFilters)] = peer ? formFiltersKeyed.house[peer.house] : formFiltersKeyed.house[death.house];
-                            build[indexNameBuilder('section', formFilters)] = peer ? peer.section : death.section;
-                            build[indexNameBuilder('location', formFilters)] = death.location;
-                            build[indexNameBuilder('text', formFilters)] = peer ? '' : death.text;
-                            build[indexNameBuilder('origin', formFilters)] = formFiltersKeyed.origin[death.origin];
-                            build[indexNameBuilder('county', formFilters)] = App.getInstance().getCountyByCode(death.county, false, []);
-                            build[indexNameBuilder('gps', formFilters)] = `${Number((death.gps.lat).toFixed(8))},${Number((death.gps.lng).toFixed(8))}`;
-                            build[indexNameBuilder('count', formFilters)] = peer ? peer.count : death.count;
-                            build[indexNameBuilder('orphans', formFilters)] = peer ? 0 : death.orphans;
-                            build[indexNameBuilder('homage', formFilters)] = death.homage ? `${death.homage.title}: ${death.homage.url}` : 'Non communiqué';
-                            build[indexNameBuilder('sources', formFilters)] = death.sources.map((s): string => (s.url ? s.url : s.title)).join('\n');
+                                const months = formFilters.month.split(',').map((m): string => formFiltersKeyed.month[m]).join(', ');
+                                const year = StringUtilsHelper.formatArrayOfStringForReading(formFilters.year);
 
-                            return build;
-                        };
+                                build[`"Date${year ? ` (année${formFilters.year.split(',').length > 1 ? 's' : ''}: ${year})` : ''}${months ? ` (mois: ${months})` : ''}"`] = `${death.year}-${death.month}-${death.day}`; // ISO 8601
+                                build[indexNameBuilder('cause', formFilters)] = formFiltersKeyed.cause[death.cause];
+                                build[indexNameBuilder('house', formFilters)] = peer ? formFiltersKeyed.house[peer.house] : formFiltersKeyed.house[death.house];
+                                build[indexNameBuilder('section', formFilters)] = peer ? peer.section : death.section;
+                                build[indexNameBuilder('location', formFilters)] = death.location;
+                                build[indexNameBuilder('text', formFilters)] = peer ? '' : death.text;
+                                build[indexNameBuilder('origin', formFilters)] = formFiltersKeyed.origin[death.origin];
+                                build[indexNameBuilder('county', formFilters)] = App.getInstance().getCountyByCode(death.county, false, []);
+                                build[indexNameBuilder('gps', formFilters)] = `${Number((death.gps.lat).toFixed(8))},${Number((death.gps.lng).toFixed(8))}`;
+                                build[indexNameBuilder('count', formFilters)] = peer ? peer.count : death.count;
+                                build[indexNameBuilder('orphans', formFilters)] = peer ? 0 : death.orphans;
+                                build[indexNameBuilder('homage', formFilters)] = death.homage ? `${death.homage.title}: ${death.homage.url}` : 'Non communiqué';
+                                build[indexNameBuilder('sources', formFilters)] = death.sources.map((s): string => (s.url ? s.url : s.title)).join('\n');
 
-                        for (const marker of markers) {
-                            csvData.push(csvDataBuilder(marker.death));
-                            for (const peer of marker.death.peers) {
-                                if (peer.count > 0) {
-                                    csvData.push(csvDataBuilder(marker.death, peer));
+                                return build;
+                            };
+
+                            for (const marker of markers) {
+                                csvData.push(csvDataBuilder(marker.death));
+                                for (const peer of marker.death.peers) {
+                                    if (peer.count > 0) {
+                                        csvData.push(csvDataBuilder(marker.death, peer));
+                                    }
                                 }
                             }
-                        }
 
-                        csvExporter.generateCsv(csvData);
-                        App.getInstance().hideLoaderWall();
+                            csvExporter.generateCsv(csvData);
+                            App.getInstance().hideLoaderWall();
+                        },
+                        okLabel: 'Télécharger au format CSV',
                     },
-                    okLabel: 'Télécharger au format CSV',
-                },
-            );
+                );
+            } else {
+                App.getInstance().getModal().modalInfo('Information', "Les données d'une ou plusieurs années sélectionnées ne permettent pas le téléchargement de données pertinentes :(");
+            }
         } else {
             App.getInstance().getModal().modalInfo('Information', this.emptyMarkerMessage);
         }

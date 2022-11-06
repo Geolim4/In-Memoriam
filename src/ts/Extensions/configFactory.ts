@@ -32,20 +32,22 @@ export class ConfigFactory {
     }
 
     public setUserConfig(userConfig: UserConfig, forceRedraw: boolean = false):void {
-        const oldConfig = structuredClone(this.userConfig);
-        this.userConfig = { ...this.config.defaultUserConfig, ...userConfig };
-        Cookies.set(
-            'userConfig',
-            JSON.stringify(this.userConfig),
-            { expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)), sameSite: 'strict' },
-        );
-        this.reload((): void => {
-            const userConfigEventDetailModel = {
-                eventParameters: { forceRedraw },
-                userConfig: oldConfig,
-            } as UserConfigEventDetailModel;
-            document.dispatchEvent(new CustomEvent('user-config-changed', { detail: userConfigEventDetailModel }));
-        });
+        if (Cookies.get('cookiebar') === 'CookieAllowed') {
+            const oldConfig = structuredClone(this.userConfig);
+            this.userConfig = { ...this.config.defaultUserConfig, ...userConfig };
+            Cookies.set(
+                'userConfig',
+                JSON.stringify(this.userConfig),
+                { expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)), sameSite: 'strict' },
+            );
+            this.reload((): void => {
+                const userConfigEventDetailModel = {
+                    eventParameters: { forceRedraw },
+                    userConfig: oldConfig,
+                } as UserConfigEventDetailModel;
+                document.dispatchEvent(new CustomEvent('user-config-changed', { detail: userConfigEventDetailModel }));
+            });
+        }
     }
 
     public isDebugEnabled(): boolean {
@@ -85,7 +87,7 @@ export class ConfigFactory {
                         this.userConfig = { ...this.config.defaultUserConfig, ...userConfig };
                     }
                 } catch {
-                    this.setUserConfig(this.config.defaultUserConfig);
+                    this.userConfig = this.config.defaultUserConfig;
                 } finally {
                     /**
                      * Override of settings per user theme

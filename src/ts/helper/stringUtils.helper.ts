@@ -84,8 +84,8 @@ export class StringUtilsHelper {
         return last !== -1 ? `${str.slice(0, last)}${replacement}${str.slice(last + match.length)}` : str;
     }
 
-    public static formatArrayOfStringForReading(delimitedString: string, separator: string = ','): string {
-        const formattedString = delimitedString.split(separator).sort().join(', ');
+    public static formatArrayOfStringForReading(delimitedString: string|string[], separator: string = ','): string {
+        const formattedString = (typeof delimitedString === 'string' ? delimitedString.split(separator) : delimitedString).sort().join(', ');
         if ((formattedString.match(/,/g) || []).length > 0) {
             return StringUtilsHelper.replaceLast(formattedString, ', ', ' et ');
         }

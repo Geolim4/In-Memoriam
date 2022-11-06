@@ -64,12 +64,11 @@ body {
   color: var(--text-color);
 
   form {
-    .choices[role$="box"] > .choices__inner,
-    .choices[role$="box"] .choices__input,
     input.form-control,
     select.form-control,
     .form-control[disabled],
-    .form-control[readonly] {
+    .form-control[readonly],
+    .form-control:focus {
       color: var(--text-color);
       background-color: var(--background-color-higher);
       &[disabled] {
@@ -78,22 +77,6 @@ body {
       }
       &::placeholder {
         color: var(--text-color-ligher);
-      }
-    }
-    .choices__list--dropdown {
-      > .choices__list {
-        color: $black;
-        font-weight: normal;
-      }
-      z-index: 10;
-    }
-
-    .choices[data-type*="select-one"] {
-      &:after {
-        border-top-color: var(--border-color);
-      }
-      &.is-open:after {
-        border-bottom-color: var(--border-color);
       }
     }
   }
@@ -114,6 +97,8 @@ body {
   > footer,
   code {
     background-color: var(--background-color-higher);
+    padding: 2px 6px;
+    border-radius: 3px;
   }
 
   .text-primary,
@@ -123,6 +108,9 @@ body {
 
   .modal__container {
     background-color: var(--background-color);
+    button.modal__close {
+      color: var(--text-color);
+    }
   }
 
   .modal__title,
