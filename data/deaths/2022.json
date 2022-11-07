@@ -4440,6 +4440,69 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "unknown",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "11",
+      "day": "06",
+      "keywords": "",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire d'un de la mission Aigle (OTAN) est décédé dans sa chambre de l'hôtel Pullman de Bucarest dans des conditions inconnues.\nLe régiment de ce sous-officier est également inconnu.",
+      "section": "Mission Aigle",
+      "location": "Bucarest",
+      "county": "RO",
+      "origin": "opex",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.47587431302098,
+        "lng": 26.07014866092392
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/international/un-militaire-francais-de-41-ans-retrouve-mort-en-roumanie.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/europe/roumanie/un-militaire-francais-de-41-ans-retrouve-mort-en-roumanie-1bed70d8-5de8-11ed-9cf9-ac215ad008b8",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/roumanie-un-militaire-francais-en-mission-retrouve-mort-dans-une-chambre-dhotel-06-11-2022-RPFUUUOOF5GFZLRUL3UZRNZGVM.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ladepeche.fr/2022/11/06/roumanie-un-militaire-francais-retrouve-mort-avec-un-ciseau-plante-dans-le-cou-une-enquete-ouverte-10786224.php",
+          "title": "La Dépêche",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.rtl.fr/actu/international/roumanie-un-militaire-francais-retrouve-mort-dans-un-hotel-de-bucarest-7900203020",
+          "title": "RTL",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "http://www.opex360.com/2022/11/06/mission-aigle-un-militaire-francais-retrouve-mort-dans-un-hotel-de-bucarest/",
+          "title": "Opex 360",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }

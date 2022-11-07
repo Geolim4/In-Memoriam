@@ -196,6 +196,12 @@
         "label": "Autre",
         "color": "#bcbdbb",
         "group": null
+      },
+      {
+        "value": "unknown",
+        "label": "Cause inconnue",
+        "color": "#b38e64",
+        "group": null
       }
     ],
     "house": [

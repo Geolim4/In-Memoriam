@@ -132,6 +132,11 @@
           "none": "",
           "singular": "<span class=\"badge badge-danger\">%d</span> mort inclassable",
           "plural": "<span class=\"badge badge-danger\">%d</span> morts inclassables"
+        },
+        "unknown": {
+          "none": "",
+          "singular": "<span class=\"badge badge-danger\">%d</span> mort de cause inconnue",
+          "plural": "<span class=\"badge badge-danger\">%d</span> morts cause inconnue"
         }
       }
     },
