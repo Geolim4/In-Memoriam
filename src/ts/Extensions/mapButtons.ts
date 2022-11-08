@@ -494,6 +494,7 @@ export class MapButtons {
                                 }
                             }
 
+                            App.getInstance().getSnackbar().show('Le téléchargement du fichier va commencer...');
                             csvExporter.generateCsv(csvData);
                             App.getInstance().hideLoaderWall();
                         },
