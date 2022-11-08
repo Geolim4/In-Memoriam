@@ -130,6 +130,10 @@ export class Links {
                 targetElement,
                 (): void => {
                     App.getInstance().getSnackbar().show('Le texte a bien été copié dans le presse-papier !');
+                    document.querySelector(targetElement).classList.add('text-copied');
+                    setTimeout((): void => {
+                        document.querySelector(targetElement).classList.remove('text-copied');
+                    }, 200);
                 },
                 (): void => {
                     App.getInstance().getSnackbar().show("Le texte n'a pas pû être copié dans le presse-papier.", 'Fermer', true);
