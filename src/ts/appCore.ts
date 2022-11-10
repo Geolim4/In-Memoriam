@@ -288,7 +288,14 @@ export abstract class AppCore extends AppAbstract {
     private run(): void {
         this.setRenderer(new Renderer(this.getConfigFactory().config.templateDir));
         this.bindInternalLinksEvent();
+        this.setupPwaConfiguration();
         this.runGDPRComplianceScript();
+    }
+
+    private setupPwaConfiguration(): void {
+        /**
+         * Work In Progress
+         */
     }
 
     private runGDPRComplianceScript(): void {

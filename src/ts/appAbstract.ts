@@ -61,6 +61,8 @@ export abstract class AppAbstract {
 
     private unaggregatableYears: string[];
 
+    private pwaContext: boolean;
+
     protected constructor() {
         this.map = null;
         this.markers = [];
@@ -82,6 +84,7 @@ export abstract class AppAbstract {
         this.statsEnabled = true;
         this.downloadEnabled = true;
         this.listEnabled = true;
+        this.pwaContext = (new URLSearchParams(location.search)).get('pwa') === '';
     }
 
     public getMap(): google.maps.Map {
@@ -309,6 +312,10 @@ export abstract class AppAbstract {
             .finally(():void => {
                 window.location.reload();
             });
+    }
+
+    public isPwa(): boolean {
+        return this.pwaContext;
     }
 
     protected enableAdvancedSearch(): void {

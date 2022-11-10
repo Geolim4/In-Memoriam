@@ -154,9 +154,19 @@
                             <p></p>
                             <p class="association-list"></p>
                         </div>
-                        <form id="form-permalink" class="mt-3">
-                            <label class="font-weight-bold" for="permalink">Permalien</label>
-                            <input id="permalink" class="form-control" type="text" title="Permalien" value="" data-role="permalink" onclick="select()" size="30" readonly>
+                        <form id="form-permalink" class="mt-3 row no-gutters">
+                            <div class="col-md-12">
+                                <label class="font-weight-bold" for="permalink">Permalien</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input id="permalink" class="form-control" type="text" title="Permalien" value="" data-role="permalink" onclick="select()" size="30" readonly>
+                            </div>
+                            <div class="col-md-3 d-sm-none d-md-block">
+                                <label></label>
+                                <a href="javascript:;" class="btn btn-primary" data-controller="copy-element" data-target-element="#permalink" data-tippy-content="Copier le lien vers votre presse-papier">
+                                    <i class="fa-solid fa-copy"></i>
+                                </a>
+                            </div>
                         </form>
                     </div>
                 </div>

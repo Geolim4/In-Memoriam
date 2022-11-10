@@ -95,8 +95,9 @@ export class StringUtilsHelper {
     public static copyToClipboard(element: string|HTMLElement, onSuccess: VoidFunction, onFailure?: VoidFunction): boolean {
         if (window.getSelection) {
             const targetElement = (typeof element === 'string' ? document.querySelector(element) : element) as HTMLElement;
+            const value = (targetElement instanceof HTMLSelectElement || targetElement instanceof HTMLInputElement ? targetElement.value : targetElement.innerText);
 
-            navigator.clipboard.writeText(targetElement.innerText.trim()).then(onSuccess, onFailure);
+            navigator.clipboard.writeText(value.trim()).then(onSuccess, onFailure);
         }
         return false;
     }
