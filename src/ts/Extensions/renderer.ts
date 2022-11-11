@@ -86,7 +86,7 @@ export class Renderer {
                 .render({
                     ...variables,
                     ...{
-                        acronymise: (str: string): {} => StringUtilsHelper.replaceAcronyms(str, App.getInstance().getGlossary()),
+                        acronymise: (str: string): {} => StringUtilsHelper.replaceAcronyms(str, App.getInstance().getConfigFactory().glossary),
                         app: App.getInstance(),
                         config: App.getInstance().getConfigFactory().config,
                         marker_link: (death: Death, label: string): string => AppStatic.getMarkerLink(death, label),

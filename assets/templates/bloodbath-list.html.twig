@@ -23,8 +23,7 @@
         {% set deathLabel = deathLabel ~ (totalDeath > 1 ? ' (<strong style="color: red">' ~ totalDeath ~ ' décès</strong>)': '') %}
         <p>
             <strong>{{ marker.death.day }}/{{ marker.death.month }}/{{ marker.death.year }} -
-                [{{ app.getFilterValueLabel('cause', marker.death.cause) }}
-                ] {{ app.getFilterValueLabel('house', marker.death.house) }}:</strong>
+                [{{ app.getFilterValueLabel('cause', marker.death.cause) }}] {{ app.getFilterValueLabel('house', marker.death.house) }}:</strong>
             <span>{{ marker_link(marker.death, deathLabel) }}</span>
         </p>
     {% endfor %}

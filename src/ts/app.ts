@@ -3,7 +3,6 @@ import { Filters } from './models';
 import { AppCore } from './appCore';
 import { StringUtilsHelper } from './helper/stringUtils.helper';
 import { MethodCallNotAllowedError } from './errors/methodCallNotAllowedError.model';
-import { AppStatic } from './appStatic';
 
 /**
  * @description Main app code
@@ -49,25 +48,6 @@ export class App extends AppCore {
         }
 
         return formFiltersKeyed;
-    }
-
-    public loadGlossary(cache: RequestCache = 'default'): void {
-        fetch(this.getConfigFactory().config.glossarySrc, { cache })
-            .then((response): any => response.json())
-            .then((responseData: { glossary: { [name: string]: string } }): void => {
-                this.setGlossary(responseData.glossary);
-            }).catch((e): void => {
-                if (this.getConfigFactory().isDebugEnabled()) {
-                    console.error(`Failed to load the glossary: ${e}`);
-                }
-                this.getModal().modalInfo(
-                    'Erreur',
-                    'Impossible de récupérer le dictionnaire des termes.',
-                    { isError: true },
-                );
-            }).finally((): void => {
-                AppStatic.bindTooltip();
-            });
     }
 
     public reloadMarkers(fromAnchor: boolean, useCache: boolean = true): void {
