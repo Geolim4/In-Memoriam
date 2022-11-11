@@ -288,7 +288,14 @@ export abstract class AppCore extends AppAbstract {
     private run(): void {
         this.setRenderer(new Renderer(this.getConfigFactory().config.templateDir));
         this.bindInternalLinksEvent();
+        this.setupPwaConfiguration();
         this.runGDPRComplianceScript();
+    }
+
+    private setupPwaConfiguration(): void {
+        /**
+         * Work In Progress
+         */
     }
 
     private runGDPRComplianceScript(): void {
@@ -350,7 +357,6 @@ export abstract class AppCore extends AppAbstract {
         fetch(this.getConfigFactory().config.filtersSrc, { cache: 'force-cache' })
             .then((response): any => response.json())
             .then((responseData: { filters: FormFilters }): void => {
-                this.loadGlossary();
                 this.setFormFilters(responseData.filters); // Must come before any call to getFilters()
                 this.bindUserConfigChangedEvent();
                 this.bindFilterChangedEvent();
@@ -983,7 +989,7 @@ export abstract class AppCore extends AppAbstract {
                     if (definitionText) {
                         definitionTexts.push(configDefinitions[fieldKey]['#label'].replace(
                             `%${fieldKey}%`,
-                            StringUtilsHelper.replaceAcronyms(definitionText, this.getGlossary()),
+                            StringUtilsHelper.replaceAcronyms(definitionText, this.getConfigFactory().glossary),
                         ));
                     }
                 }
@@ -992,7 +998,7 @@ export abstract class AppCore extends AppAbstract {
 
             if (latestDeath) {
                 const latestDeathLabel = ` ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${this.getFilterValueLabel('house', latestDeath.house)} - ${latestDeath.location}
-                ${latestDeath.section ? ` - ${StringUtilsHelper.replaceAcronyms(latestDeath.section, this.getGlossary())}` : ''}`;
+                ${latestDeath.section ? ` - ${StringUtilsHelper.replaceAcronyms(latestDeath.section, this.getConfigFactory().glossary)}` : ''}`;
                 const latestDeathLink = AppStatic.getMarkerLink(latestDeath, latestDeathLabel);
                 definitionTexts.push(`<em>Dernier décès indexé:</em> ${latestDeathLink}`);
             }
@@ -1050,8 +1056,6 @@ export abstract class AppCore extends AppAbstract {
     public abstract getFilterValueLabel(filterName: string, filterValue: string): string; // Only used in Twig templates
 
     public abstract getFilters(fromAnchor: boolean, fromStorage?: boolean): Filters;
-
-    public abstract loadGlossary(): void;
 
     public abstract reloadMarkers(fromAnchor: boolean, useCache?: boolean): void;
 

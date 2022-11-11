@@ -6,6 +6,7 @@ import { UserConfig } from '../models/userConfig.model';
 import { SettingsResponse } from '../models/settingsResponse.model';
 import { IntUtilsHelper } from '../helper/intUtils.helper';
 import { UserConfigEventDetailModel } from '../models/userConfigEventDetailModel.model';
+import { AppStatic } from '../appStatic';
 
 const ObjectMerge = require('object-merge');
 const TextObfuscator = require('text-obfuscator');
@@ -20,6 +21,8 @@ export class ConfigFactory {
     public userConfig: UserConfig;
 
     public definitions: Definitions;
+
+    public glossary: { [name: string]: string };
 
     private readonly configPath: string;
 
@@ -111,6 +114,23 @@ export class ConfigFactory {
                         if (onceLoaded) {
                             onceLoaded();
                         }
+                    });
+
+                fetch(this.config.glossarySrc, { cache: 'default' })
+                    .then((response): any => response.json())
+                    .then((responseData: { glossary: { [name: string]: string } }): void => {
+                        this.glossary = responseData.glossary;
+                    }).catch((e): void => {
+                        if (this.isDebugEnabled()) {
+                            console.error(`Failed to load the glossary: ${e}`);
+                        }
+                        App.getInstance().getModal().modalInfo(
+                            'Erreur',
+                            'Impossible de récupérer le dictionnaire des termes.',
+                            { isError: true },
+                        );
+                    }).finally((): void => {
+                        AppStatic.bindTooltip();
                     });
             }).catch((e): void => {
                 // No debug check here since it's stored in configuration

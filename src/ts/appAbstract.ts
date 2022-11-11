@@ -39,8 +39,6 @@ export abstract class AppAbstract {
 
     private permalink: Permalink;
 
-    private glossary: { [name: string]: string };
-
     private renderer: Renderer;
 
     private readonly modal: Modal;
@@ -61,6 +59,8 @@ export abstract class AppAbstract {
 
     private unaggregatableYears: string[];
 
+    private pwaContext: boolean;
+
     protected constructor() {
         this.map = null;
         this.markers = [];
@@ -72,7 +72,6 @@ export abstract class AppAbstract {
         this.heatmapEnabled = false;
         this.clusteringEnabled = true;
         this.configFactory = null;
-        this.glossary = {};
         this.modal = new Modal();
         this.snackbar = new Snackbar();
         this.charts = new Charts();
@@ -82,6 +81,7 @@ export abstract class AppAbstract {
         this.statsEnabled = true;
         this.downloadEnabled = true;
         this.listEnabled = true;
+        this.pwaContext = (new URLSearchParams(location.search)).get('pwa') === '';
     }
 
     public getMap(): google.maps.Map {
@@ -126,14 +126,6 @@ export abstract class AppAbstract {
 
     public getConfigDefinitions(): Definitions {
         return this.getConfigFactory().definitions;
-    }
-
-    public getGlossary(): { [name: string]: string } {
-        return this.glossary;
-    }
-
-    public setGlossary(glossary: { [name: string]: string }): void {
-        this.glossary = glossary;
     }
 
     public getModal(): Modal {
@@ -309,6 +301,10 @@ export abstract class AppAbstract {
             .finally(():void => {
                 window.location.reload();
             });
+    }
+
+    public isPwa(): boolean {
+        return this.pwaContext;
     }
 
     protected enableAdvancedSearch(): void {

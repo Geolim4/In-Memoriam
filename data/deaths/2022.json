@@ -4503,6 +4503,90 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "11",
+      "day": "10",
+      "keywords": "Eddy",
+      "house": "pn",
+      "peers": [],
+      "text": "Un autre policier de la CRS 33 a mis fin à ses jours dans son véhicule après plusieurs jours de recherche.\nMarié et père d'un enfant, il avait été très affecté par le suicide de son collègue dans cette même compagnie en avril 2022.",
+      "section": "CRS 33",
+      "location": "Reims",
+      "county": "51",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.22376917359081,
+        "lng": 4.019691212851497
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/marne-disparu-depuis-trois-jours-un-policier-de-la-crs-33-retrouve-mort-dans-son-vehicule.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lunion.fr/id425953/article/2022-11-10/un-policier-de-la-crs-33-de-reims-retrouve-mort-hermonville-dans-son-vehicule",
+          "title": "L'Union",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://allo17.fr/actualites/11/11/2022/marne-eddy-de-la-compagnie-33-des-crs-retrouve-mort-dans-son-vehicule-par-intoxication-au-monoxyde-de-carbone/",
+          "title": "Allo17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/grand-est/marne/reims/appel-a-temoins-disparition-d-eddy-un-crs-entre-bazancourt-et-berru-dans-la-marne-2652404.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "10",
+      "day": "28",
+      "keywords": "Benjamin GOMMARD",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme de l'EGM 16/3 a mis fin à ses jours avec son arme de service au sein de son logement de fonction.",
+      "section": "EGM 16/3",
+      "location": "Mamers",
+      "county": "72",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 100,
+        "lat": 48.353874835971695,
+        "lng": 0.36615290490675556
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.ouest-france.fr/pays-de-la-loire/mamers-72600/mamers-un-gendarme-de-l-escadron-mobile-se-suicide-avec-une-arme-a-feu-a-l-interieur-de-la-caserne-265722fc-60dc-11ed-bd7d-093981143012",
+          "title": "Ouest France",
+          "paywall": true,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
