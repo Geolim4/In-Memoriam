@@ -474,7 +474,7 @@ export class MapButtons {
                                 build[indexNameBuilder('location', formFilters)] = death.location;
                                 build[indexNameBuilder('text', formFilters)] = peer ? '' : death.text;
                                 build[indexNameBuilder('origin', formFilters)] = formFiltersKeyed.origin[death.origin];
-                                build[indexNameBuilder('county', formFilters)] = App.getInstance().getCountyByCode(death.county, false, []);
+                                build[indexNameBuilder('county', formFilters)] = App.getInstance().getCountyByCode(death.county, { excludedCountyCodes: [], wrappedCounty: false });
                                 build[indexNameBuilder('gps', formFilters)] = `${Number((death.gps.lat).toFixed(8))},${Number((death.gps.lng).toFixed(8))}`;
                                 build[indexNameBuilder('count', formFilters)] = peer ? peer.count : death.count;
                                 build[indexNameBuilder('orphans', formFilters)] = peer ? 0 : death.orphans;

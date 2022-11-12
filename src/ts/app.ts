@@ -27,12 +27,16 @@ export class App extends AppCore {
         return this.appInstance;
     }
 
-    public getCountyByCode(countyCode: string, wrappedCounty: boolean = false, excludedCountyCodes: string[] = ['75']): string {
+    public getCountyByCode(countyCode: string, options: {wrappedCounty?: boolean, excludedCountyCodes?: string[], removeCountyPrefix?: boolean}): string {
+        const wrappedCounty = (typeof options === 'object' && options.wrappedCounty) || false;
+        const excludedCountyCodes = (typeof options === 'object' && options.excludedCountyCodes) || ['75'];
+        const removeCountyPrefix = (typeof options === 'object' && options.removeCountyPrefix) || false;
+
         if (countyCode && !excludedCountyCodes.includes(countyCode)) {
             if (this.cachedCountyCodes === null) {
                 this.cachedCountyCodes = this.getFormFiltersKeyed().county;
             }
-            return `${wrappedCounty ? ' (' : ''}${this.cachedCountyCodes[countyCode]}${wrappedCounty ? ')' : ''}`;
+            return `${wrappedCounty ? ' (' : ''}${removeCountyPrefix ? this.cachedCountyCodes[countyCode].replace(/^(\d+ - )/, '') : this.cachedCountyCodes[countyCode]}${wrappedCounty ? ')' : ''}`;
         }
         return '';
     }

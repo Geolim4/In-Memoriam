@@ -205,7 +205,7 @@ export abstract class AppCore extends AppAbstract {
                         this.getCurrentInfoWindow().close();
                     }
 
-                    const reference = `${death.section}, ${death.location} ${this.getCountyByCode(death.county, true, [])} le ${death.day}/${death.month}/${death.year}`;
+                    const reference = `${death.section}, ${death.location} ${this.getCountyByCode(death.county, { excludedCountyCodes: [], wrappedCounty: true })} le ${death.day}/${death.month}/${death.year}`;
                     this.getRenderer().renderAsDom('infowindow-death', { death, reference }).then((infoWindowContent): void => {
                         infoWindow.setContent(infoWindowContent);
                         infoWindow.open(this.map, marker);
@@ -1061,5 +1061,5 @@ export abstract class AppCore extends AppAbstract {
 
     public abstract getFormFiltersKeyed(): { [name: string]: { [name: string]: string } };
 
-    public abstract getCountyByCode(countyCode: string, wrappedCounty: boolean, excludedCountyCodes: string[]): string;
+    public abstract getCountyByCode(countyCode: string, options: {wrappedCounty?: boolean, excludedCountyCodes?: [], removeCountyPrefix?: boolean}): string;
 }

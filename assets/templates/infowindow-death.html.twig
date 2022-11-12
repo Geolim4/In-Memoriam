@@ -35,7 +35,7 @@
         {% endif %}
     {% endfor %}
     <div class="mt-3">
-       <strong>Emplacement</strong>: {{ death.location ~ app.getCountyByCode(death.county, true) }}
+        <strong>Emplacement</strong>: {{ death.location }} (<abbr data-tippy-content="Code département ou pays: {{ death.county }}">{{ app.getCountyByCode(death.county, {removeCountyPrefix: true}) }}</abbr>)
         {% if not death.gps.accurate %}
             <strong style="color: orangered;"><abbr data-tippy-content="Indique que l'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>
         {% endif %}
