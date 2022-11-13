@@ -205,7 +205,7 @@ export abstract class AppCore extends AppAbstract {
                         this.getCurrentInfoWindow().close();
                     }
 
-                    const reference = `${death.section}, ${death.location} ${this.getCountyByCode(death.county, true, [])} le ${death.day}/${death.month}/${death.year}`;
+                    const reference = `${death.section}, ${death.location} ${this.getCountyByCode(death.county, { excludedCountyCodes: [], wrappedCounty: true })} le ${death.day}/${death.month}/${death.year}`;
                     this.getRenderer().renderAsDom('infowindow-death', { death, reference }).then((infoWindowContent): void => {
                         infoWindow.setContent(infoWindowContent);
                         infoWindow.open(this.map, marker);
@@ -271,7 +271,7 @@ export abstract class AppCore extends AppAbstract {
                 this.heatMap.setMap(this.map);
             }
             if (this.getConfigFactory().isDebugEnabled()) {
-                console.log(`${this.markers.length} marker${this.markers.length === 1 ? '' : 's'} loaded in ${(window.performance.now() - stopwatchStart) / 1000}s`);
+                console.log(`${this.markers.length} marker${this.markers.length === 1 ? '' : 's'} loaded in ${((window.performance.now() - stopwatchStart) / 1000).toFixed(3)}s.`);
             }
             this.printDefinitionsText(responseData, filters);
         }).catch((e): void => {
@@ -293,9 +293,24 @@ export abstract class AppCore extends AppAbstract {
     }
 
     private setupPwaConfiguration(): void {
-        /**
-         * Work In Progress
-         */
+        if (this.isPwa()) {
+            const startUrl = new URL(window.location.toString());
+            if (typeof startUrl.searchParams.get('pwa') === 'string' && startUrl.searchParams.get('pwa') !== '') {
+                startUrl.searchParams.set('pwa', '');
+                window.history.replaceState({}, null, startUrl.toString());
+            }
+            window.addEventListener('popstate', (): void => {
+                const currentUrl = new URL(window.location.toString());
+                if (this.getModal().isModalOpened()) {
+                    this.getModal().closeModalInfo();
+                } else if (!this.getModal().isModalOpened() && currentUrl.searchParams.get('pwa') !== '') {
+                    window.history.back();
+                }
+            });
+            if (this.getConfigFactory().isDebugEnabled()) {
+                console.log('PWA device detected: History API configuration has been successfully enabled.');
+            }
+        }
     }
 
     private runGDPRComplianceScript(): void {
@@ -1061,5 +1076,5 @@ export abstract class AppCore extends AppAbstract {
 
     public abstract getFormFiltersKeyed(): { [name: string]: { [name: string]: string } };
 
-    public abstract getCountyByCode(countyCode: string, wrappedCounty: boolean, excludedCountyCodes: string[]): string;
+    public abstract getCountyByCode(countyCode: string, options: {wrappedCounty?: boolean, excludedCountyCodes?: [], removeCountyPrefix?: boolean}): string;
 }

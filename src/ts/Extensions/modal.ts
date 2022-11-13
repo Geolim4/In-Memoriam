@@ -94,6 +94,13 @@ export class Modal {
                                 Events.hardRemoveEventHandler(document.querySelector('#modal-info button[data-micromodal-role="validate"]'));
                                 this.modelOpened = false;
 
+                                if (App.getInstance().isPwa()) {
+                                    const currentUrl = new URL(window.location.toString());
+                                    if (currentUrl.searchParams.get('pwa') === 'modal-opened') {
+                                        window.history.back();
+                                    }
+                                }
+
                                 if (this.modelStack.length) {
                                     setTimeout((): void => {
                                         const stack = this.modelStack.shift();
@@ -133,6 +140,13 @@ export class Modal {
                                     onceShown();
                                 }
                                 AppStatic.bindTooltip();
+                                if (App.getInstance().isPwa()) {
+                                    const currentUrl = new URL(window.location.toString());
+                                    if (currentUrl.searchParams.get('pwa') !== 'modal-opened') {
+                                        currentUrl.searchParams.set('pwa', 'modal-opened');
+                                        window.history.pushState({}, '', currentUrl.toString());
+                                    }
+                                }
                             },
                         });
                     } else {

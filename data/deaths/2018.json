@@ -531,6 +531,51 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2018",
+      "month": "10",
+      "day": "10",
+      "keywords": "",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme du PSIG de La Châtre mis fin à ses jours dans la gare SNCF d'Argenton-sur-Creuse.",
+      "section": "PSIG La Châtre",
+      "location": "La Châtre",
+      "county": "36",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.57634695781382,
+        "lng": 1.9835089956511034
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://lessor.org/lactualite-centre-val-de-loire/un-gendarme-mortellement-percute-par-un-train-dans-lindre-la-piste-du-suicide-privilegiee",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lanouvellerepublique.fr/la-chatre/le-desespere-de-la-gare-d-argenton-sur-creuse-etait-un-gendarme",
+          "title": "La Nouvelle République",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/suicide-en-gare-d-argenton-sur-creuse-une-personne-se-jette-sous-un-train-1539097773",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
       "orphans": 2,
       "unpublished_reason": "",
       "year": "2018",
@@ -589,8 +634,8 @@
       "keywords": "IDF",
       "house": "pn",
       "peers": [],
-      "text": "Maggy Biskupski, figure emblématique de l'association MPC et gardienne de la paix à la BAC de Sartrouville, a mis fin à ses jours à son domicile. Elle laisse une lettre derrière expliquant les raisons de son geste. Son décès a provoqué une très vive émotion dans les rangs des forces de l'ordre.",
-      "section": "BAC - CSP Sartrouville",
+      "text": "Maggy Biskupski, figure emblématique de l'association MPC et gardienne de la paix à la BAC de Sartrouville, a mis fin à ses jours à son domicile.\n Elle laisse une lettre derrière expliquant les raisons de son geste.\n Son décès a provoqué une très vive émotion dans les rangs des forces de l'ordre.",
+      "section": "BAC Sartrouville",
       "location": "Carrières-sous-Poissy",
       "county": "78",
       "origin": "interieur",
@@ -615,7 +660,7 @@
           "trustful": true
         },
         {
-          "url": "http://www.leparisien.fr/faits-divers/suicide-de-maggy-biskupski-la-policiere-evoquait-des-problemes-avec-son-association-13-11-2018-7941549.php",
+          "url": "https://www.leparisien.fr/faits-divers/suicide-de-maggy-biskupski-la-policiere-evoquait-des-problemes-avec-son-association-13-11-2018-7941549.php",
           "title": "Le Parisien",
           "paywall": false,
           "trustful": true

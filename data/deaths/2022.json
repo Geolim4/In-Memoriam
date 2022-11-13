@@ -4552,6 +4552,12 @@
           "title": "France Info",
           "paywall": false,
           "trustful": true
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/marne-le-crs-disparu-depuis-lundi-retrouve-mort-dans-son-vehicule-20221111",
+          "title": "Le Figaro",
+          "paywall": false,
+          "trustful": true
         }
       ]
     },

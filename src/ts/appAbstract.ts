@@ -81,7 +81,7 @@ export abstract class AppAbstract {
         this.statsEnabled = true;
         this.downloadEnabled = true;
         this.listEnabled = true;
-        this.pwaContext = (new URLSearchParams(location.search)).get('pwa') === '';
+        this.pwaContext = typeof (new URLSearchParams(location.search)).get('pwa') === 'string';
     }
 
     public getMap(): google.maps.Map {
