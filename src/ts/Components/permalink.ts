@@ -16,7 +16,7 @@ export class Permalink {
 
     public build(filters: Filters, selector?: string): void {
         const permalinkElement = <HTMLInputElement>document.querySelector(selector || '[data-role="permalink"]');
-        const url = window.location.href.split('#')[0];
+        const url = new URL(window.location.href.split('#')[0]);
         let anchor = '';
 
         for (const key in filters) {
@@ -26,11 +26,15 @@ export class Permalink {
             }
         }
 
-        permalinkElement.value = url + anchor;
+        if (url.searchParams.has('pwa')) {
+            url.searchParams.delete('pwa');
+        }
+
+        permalinkElement.value = url.toString() + anchor;
         if (App.getInstance().getConfigFactory().userConfig.browserHistoryReplaceState === 'on') {
-            window.history.replaceState(null, null, url + anchor);
+            window.history.replaceState(null, null, url.toString() + anchor);
         } else if (window.location.hash) {
-            window.history.replaceState(null, null, url);
+            window.history.replaceState(null, null, url.toString());
         }
     }
 }

@@ -281,12 +281,7 @@ a abbr[data-title] {
 #form-filters {
   #search {
     height: 45px;
-    &::placeholder {
-      font-size: 0.85em;
-      font-weight: 300;/* This is only to remove blink effect on page load */
-    }
   }
-
   small.advanced-search-enabled {
     span {
       color: orange;
@@ -312,6 +307,15 @@ a abbr[data-title] {
   }
   input:not(:placeholder-shown) + button[data-reset-field-target] {
     display: block;
+  }
+}
+
+form {
+  input.form-control {
+    &::placeholder {
+      font-size: 0.85em;
+      font-weight: 300;/* This is only to remove blink effect on page load */
+    }
   }
 }
 
