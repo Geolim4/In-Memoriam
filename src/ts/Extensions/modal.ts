@@ -12,11 +12,13 @@ import { ModalContentTemplate } from './modalContentTemplate';
  */
 export class Modal {
     private modelOpened : boolean;
+    private unstackedModalOngoing : boolean;
 
     private modelStack : ModalInfoParameters[];
 
     public constructor() {
         this.modelOpened = false;
+        this.unstackedModalOngoing = false;
         this.modelStack = [];
         this.bindFullscreenMicromodalListener();
     }
@@ -56,6 +58,7 @@ export class Modal {
         }
 
         if (noStacking && this.isModalOpened()) {
+            this.unstackedModalOngoing = true;
             this.closeModalInfo();
         }
 
@@ -94,23 +97,22 @@ export class Modal {
                                 Events.hardRemoveEventHandler(document.querySelector('#modal-info button[data-micromodal-role="validate"]'));
                                 this.modelOpened = false;
 
-                                if (App.getInstance().isPwa()) {
-                                    const currentUrl = new URL(window.location.toString());
-                                    if (currentUrl.searchParams.get('pwa') === 'modal-opened') {
-                                        window.history.back();
-                                    }
-                                }
-
                                 if (this.modelStack.length) {
                                     setTimeout((): void => {
                                         const stack = this.modelStack.shift();
                                         this.modalInfo(stack.title, stack.content, stack.options);
                                     }, 300);
+                                } else if (App.getInstance().isPwa() && !this.unstackedModalOngoing) {
+                                    const currentUrl = new URL(window.location.toString());
+                                    if (currentUrl.searchParams.get('pwa') === 'modal-opened') {
+                                        window.history.back();
+                                    }
                                 }
                             },
                             onShow: (): void => {
                                 const validateButton = <HTMLInputElement> document.querySelector('#modal-info button[data-micromodal-role="validate"]');
                                 const cancelButton = <HTMLInputElement> document.querySelector('#modal-info button[data-micromodal-role="cancel"]');
+                                this.unstackedModalOngoing = false;
                                 if (validateButton) {
                                     Events.addEventHandler(
                                         validateButton,

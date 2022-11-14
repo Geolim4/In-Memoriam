@@ -301,7 +301,7 @@ export abstract class AppCore extends AppAbstract {
             }
             window.addEventListener('popstate', (): void => {
                 const currentUrl = new URL(window.location.toString());
-                if (this.getModal().isModalOpened()) {
+                if (this.getModal().isModalOpened() && currentUrl.searchParams.get('pwa') === '') {
                     this.getModal().closeModalInfo();
                 } else if (!this.getModal().isModalOpened() && currentUrl.searchParams.get('pwa') !== '') {
                     window.history.back();
@@ -422,11 +422,9 @@ export abstract class AppCore extends AppAbstract {
              * really changed its theme preferences.
              */
             if (newUserConfig.themeColor !== evtDetail.userConfig.themeColor || evtDetail.eventParameters.forceRedraw) {
-                if (document.fullscreenElement || this.getModal().isModalOpened()) {
+                if (document.fullscreenElement && this.getModal().isModalOpened()) {
                     document.exitFullscreen().then((): void => {
-                        if (this.getModal().isModalOpened()) {
-                            this.getModal().closeModalInfo();
-                        }
+                        this.getModal().closeModalInfo();
                     }).finally((): void => {
                         const i = setInterval((): void => {
                             if (!this.getModal().isModalOpened()) {
