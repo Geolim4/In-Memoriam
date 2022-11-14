@@ -100,10 +100,14 @@ body {
 
   > header,
   > footer,
-  code {
+  code, {
     background-color: var(--background-color-higher);
     padding: 2px 6px;
     border-radius: 3px;
+  }
+
+  pre {
+    color: var(--text-color);
   }
 
   .text-primary,

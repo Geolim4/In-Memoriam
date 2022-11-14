@@ -24,6 +24,10 @@ body {
   blockquote {
     border-left: 5px solid gray;
   }
+
+  pre {
+    overflow: unset;
+  }
 }
 
 body:not(.loaded) {
