@@ -77,7 +77,6 @@ export abstract class AppCore extends AppAbstract {
         const stopwatchStart = window.performance.now();
         const filterYears = filters.year.split(',');
         this.showLoaderWall(this.map.getDiv());
-
         Promise.all(
             filterYears
                 .map(
@@ -198,7 +197,7 @@ export abstract class AppCore extends AppAbstract {
                             }
                         }
                     }
-                    AppStatic.bindTooltip();
+                    AppStatic.bindUiWidgets();
                 });
                 google.maps.event.addListener(marker, 'click', (): void => {
                     if (this.getCurrentInfoWindow()) {
@@ -1033,7 +1032,7 @@ export abstract class AppCore extends AppAbstract {
 
         this.getRenderer().renderTo('definitions', { definitions: definitionTexts }, document.querySelector('[data-role="definitionsText"]'))
             .then((): void => {
-                AppStatic.bindTooltip();
+                AppStatic.bindUiWidgets();
                 /**
                  * Definition printing is considered as last step of app load.
                  */
@@ -1048,7 +1047,7 @@ export abstract class AppCore extends AppAbstract {
             document.querySelector('.association-list'),
         )
             .then((): void => {
-                AppStatic.bindTooltip();
+                AppStatic.bindUiWidgets();
             });
     }
 

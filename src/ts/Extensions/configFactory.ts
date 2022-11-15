@@ -130,7 +130,7 @@ export class ConfigFactory {
                             { isError: true },
                         );
                     }).finally((): void => {
-                        AppStatic.bindTooltip();
+                        AppStatic.bindUiWidgets();
                     });
             }).catch((e): void => {
                 // No debug check here since it's stored in configuration
