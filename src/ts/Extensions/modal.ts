@@ -141,7 +141,7 @@ export class Modal {
                                 if (onceShown) {
                                     onceShown();
                                 }
-                                AppStatic.bindTooltip();
+                                AppStatic.bindUiWidgets();
                                 if (App.getInstance().isPwa()) {
                                     const currentUrl = new URL(window.location.toString());
                                     if (currentUrl.searchParams.get('pwa') !== 'modal-opened') {

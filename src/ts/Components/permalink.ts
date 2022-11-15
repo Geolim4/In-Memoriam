@@ -1,5 +1,6 @@
 import { Filters } from '../models';
 import { App } from '../app';
+import { Death } from '../models/Death/death.model';
 import { Events } from './events';
 
 /**
@@ -9,8 +10,8 @@ import { Events } from './events';
  */
 export class Permalink {
     public constructor() {
-        Events.addEventHandler(document, 'user-config-changed', (): void => {
-            App.getInstance().getFilters(false);
+        Events.addEventHandler(document, ['app-loaded', 'filters-built'], (evt: CustomEvent): void => {
+            this.build(evt.detail.filters);
         });
     }
 
@@ -26,15 +27,29 @@ export class Permalink {
             }
         }
 
+        if (App.getInstance().isAppLoaded()) {
+            if (App.getInstance().getConfigFactory().userConfig.browserHistoryReplaceState === 'on') {
+                window.history.replaceState(null, null, url.toString() + anchor);
+            } else if (window.location.hash) {
+                window.history.replaceState(null, null, url.toString());
+            }
+        }
+
         if (url.searchParams.has('pwa')) {
             url.searchParams.delete('pwa');
         }
 
         permalinkElement.value = url.toString() + anchor;
-        if (App.getInstance().getConfigFactory().userConfig.browserHistoryReplaceState === 'on') {
-            window.history.replaceState(null, null, url.toString() + anchor);
-        } else if (window.location.hash) {
-            window.history.replaceState(null, null, url.toString());
+    }
+
+    public getDeathMarkerLink(death: Death, removePwaParameter: boolean = true): string {
+        const url = new URL(window.location.href.split('#')[0]);
+        url.hash = `#search=${death.section}&year=${death.year}&month=${death.month}&house=${death.house}&cause=${death.cause}`;
+
+        if (removePwaParameter && url.searchParams.has('pwa')) {
+            url.searchParams.delete('pwa');
         }
+
+        return url.toString();
     }
 }

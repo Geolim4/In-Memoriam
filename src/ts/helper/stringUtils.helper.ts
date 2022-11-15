@@ -92,12 +92,19 @@ export class StringUtilsHelper {
         return formattedString;
     }
 
-    public static copyToClipboard(element: string|HTMLElement, onSuccess: VoidFunction, onFailure?: VoidFunction): boolean {
+    public static copyElementToClipboard(element: string|HTMLElement, onSuccess: VoidFunction, onFailure?: VoidFunction): boolean {
         if (window.getSelection) {
             const targetElement = (typeof element === 'string' ? document.querySelector(element) : element) as HTMLElement;
             const value = (targetElement instanceof HTMLSelectElement || targetElement instanceof HTMLInputElement ? targetElement.value : targetElement.innerText);
 
             navigator.clipboard.writeText(value.trim()).then(onSuccess, onFailure);
+        }
+        return false;
+    }
+
+    public static copyToClipboard(str: string, onSuccess: VoidFunction, onFailure?: VoidFunction): boolean {
+        if (window.getSelection) {
+            navigator.clipboard.writeText(str.trim()).then(onSuccess, onFailure);
         }
         return false;
     }

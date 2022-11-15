@@ -26,6 +26,9 @@ export class Links {
                 case 'copy-element':
                     this.handleCopyElementLink(link);
                     break;
+                case 'copy-text':
+                    this.handleCopyTextLink(link);
+                    break;
                 default:
                     App.getInstance().getModal().modalInfo('Erreur', `Contrôleur "${link.dataset.controller}" inconnu.`, { isError: true });
             }
@@ -126,7 +129,7 @@ export class Links {
         const { targetElement } = link.dataset;
 
         if (targetElement) {
-            StringUtilsHelper.copyToClipboard(
+            StringUtilsHelper.copyElementToClipboard(
                 targetElement,
                 (): void => {
                     App.getInstance().getSnackbar().show('Le texte a bien été copié dans le presse-papier !');
@@ -141,6 +144,23 @@ export class Links {
                     range.selectNode(document.querySelector(targetElement));
                     window.getSelection().removeAllRanges();
                     window.getSelection().addRange(range);
+                },
+            );
+        }
+    }
+
+    protected static handleCopyTextLink(link: HTMLAnchorElement): void {
+        const { contentText } = link.dataset;
+        const { successMsg } = link.dataset;
+
+        if (contentText) {
+            StringUtilsHelper.copyToClipboard(
+                contentText,
+                (): void => {
+                    App.getInstance().getSnackbar().show(successMsg || 'Le texte a bien été copié dans le presse-papier !');
+                },
+                (): void => {
+                    App.getInstance().getSnackbar().show("Le texte n'a pas pû être copié dans le presse-papier.", 'Fermer', true);
                 },
             );
         }

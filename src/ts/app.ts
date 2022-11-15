@@ -120,7 +120,7 @@ export class App extends AppCore {
             }
         });
 
-        this.getPermalink().build(filters);
+        document.dispatchEvent(new CustomEvent('filters-built', { detail: { filters, fromAnchor, fromStorage } }));
 
         return filters;
     }

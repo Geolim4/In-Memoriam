@@ -40,3 +40,17 @@
     }
   }
 }
+.dropdown-menu {
+  color: var(--text-color);
+  background-color: var(--background-color-higher);
+}
+
+.dropdown-item {
+  color: var(--text-color);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: var(--text-color-ligher);
+  background-color: var(--background-color);
+}

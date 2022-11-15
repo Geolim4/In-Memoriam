@@ -1,3 +1,5 @@
+import $ from 'jquery';
+import 'bootstrap/js/dist/dropdown';
 import tippyJs from 'tippy.js';
 import { Death } from './models/Death/death.model';
 
@@ -6,7 +8,8 @@ import { Death } from './models/Death/death.model';
  * @licence GPL-2.0
  */
 export class AppStatic {
-    public static bindTooltip(): void {
+    public static bindUiWidgets(): void {
+        $('.dropdown-toggle').dropdown();
         tippyJs('[data-tippy-content]', {
             appendTo: document.fullscreenElement ? document.fullscreenElement : document.body,
         });

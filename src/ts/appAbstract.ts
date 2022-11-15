@@ -325,6 +325,7 @@ export abstract class AppAbstract {
             });
 
             this.setAppLoaded(true);
+            document.dispatchEvent(new CustomEvent('app-loaded', { detail: {} }));
             console.log(`App loaded in ${((window.performance.now()) / 1000).toFixed(3)}s.`);
             console.log(`
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-

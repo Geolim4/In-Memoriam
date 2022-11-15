@@ -152,7 +152,6 @@ header.top-menu {
     padding: 8px 8px 8px 12px;
   }
   .death-sources {
-    padding-right: 70px;
     .glyphicon {
       color: var(--text-color-ligher);
     }
@@ -198,9 +197,7 @@ header.top-menu {
   position: absolute;
   bottom: 6px;
   right: 10px;
-  background: var(--background-color);
-  padding: 4px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0 0 4px 1px;
+  font-size: 1.2em;
 }
 
 .multiple-deaths {
