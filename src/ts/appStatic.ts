@@ -13,6 +13,9 @@ export class AppStatic {
         tippyJs('[data-tippy-content]', {
             appendTo: document.fullscreenElement ? document.fullscreenElement : document.body,
         });
+        if (document.activeElement instanceof HTMLElement && document.activeElement.dataset.toggle === 'dropdown') {
+            document.activeElement.blur();
+        }
     }
 
     public static getMarkerHash(death: Death): string {
