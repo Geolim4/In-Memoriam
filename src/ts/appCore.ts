@@ -313,16 +313,13 @@ export abstract class AppCore extends AppAbstract {
     }
 
     private runGDPRComplianceScript(): void {
-        setTimeout((): void => {
-            const cookieDenyBtn = document.querySelector('a#cookie-bar-button-no');
-            if (cookieDenyBtn) {
-                Events.addEventHandler(cookieDenyBtn, ['click', 'touchstart'], (): void => {
-                    if (Cookies.get('cookiebar') === 'CookieDisallowed') {
-                        location.reload();
-                    }
-                });
+        Events.addEventHandler(document, 'cookiebarConsent', (e: CustomEvent): void => {
+            if (e.detail.consent === 'CookieDisallowed') {
+                location.reload();
+            } else if (e.detail.consent === 'CookieAllowed') {
+                this.getSnackbar().show('Vos préférences en matière de cookies ont été sauvegardées !');
             }
-        }, 500);
+        });
 
         if (!Cookies.get('cookiebar') || Cookies.get('cookiebar') === 'CookieAllowed') {
             this.runGoogleMapsLoader();
@@ -342,14 +339,17 @@ export abstract class AppCore extends AppAbstract {
                             if (!this.getModal().isModalOpened()) {
                                 location.reload();
                             }
-                        }, 1000);
+                        }, 500);
                     },
                     cancelLabel: 'Conserver mon refus',
                     confirmCallback: (): void => {
                         Cookies.set('cookiebar', 'CookieAllowed');
                         this.runGoogleMapsLoader();
+                        setTimeout((): void => {
+                            this.getSnackbar().show('Vos préférences en matière de cookies ont été sauvegardées !');
+                        }, 500);
                     },
-                    isError: true,
+                    isError: false,
                     okLabel: 'Donner mon consentement',
                 },
             );
