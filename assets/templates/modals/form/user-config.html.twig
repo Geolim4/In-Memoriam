@@ -17,6 +17,14 @@
             </div>
         </div>
         <div class="row mt-3">
+            <fieldset class="col-10">
+                <label for="backgroundRefresh">Actualiser les données en arrière-plan <i class="fa-solid fa-circle-question" data-tippy-content="Cette option permet d'activer l'actualisation des données en arrière-plan lorsque vous n'êtes pas actif sur la cartographie."></i></label>
+            </fieldset>
+            <div class="col-2">
+                <input type="checkbox" name="backgroundRefresh" id="backgroundRefresh" class="form-control" {% if userConfig.backgroundRefresh == 'on' %} checked{% endif %}/>
+            </div>
+        </div>
+        <div class="row mt-3">
             <fieldset class="col-md-4">
                 <label for="themeColor">Thème <i class="fa-solid fa-circle-question" data-tippy-content="Le fait de forcer le thème peut entrainer un léger flash au chargement de la cartographie qui peut être résolu en privilégiant la modification de vos paramètres d'affichage système."></i></label>
             </fieldset>

@@ -670,27 +670,32 @@ export abstract class AppCore extends AppAbstract {
 
     private loadActivityDetectorMonitoring(): void {
         const activityDetectorMonitoring = activityDetector({
-            timeToIdle: 2 * 60 * 1000, // wait 2min of inactivity to consider the user is idle
+            timeToIdle: 5 * 60 * 1000, // wait 5min of inactivity to consider the user is idle
         });
-        let handler;
+        let handler = null;
 
         activityDetectorMonitoring.on('idle', (): void => {
-            if (this.getConfigFactory().isDebugEnabled()) {
-                console.log('User is now idle...');
-            }
-            handler = setInterval((): void => {
-                this.bindMarkers(this.getFilters(false), 'force-cache');
+            if (this.getConfigFactory().userConfig.backgroundRefresh === 'on') {
                 if (this.getConfigFactory().isDebugEnabled()) {
-                    console.log('Reloading map...');
+                    console.log('User is now idle...');
                 }
-            }, 300 * 1000); // Reload every 5min
+                handler = setInterval((): void => {
+                    this.bindMarkers(this.getFilters(false), 'force-cache');
+                    if (this.getConfigFactory().isDebugEnabled()) {
+                        console.log('Reloading map...');
+                    }
+                }, 300 * 1000); // Reload every 5min
+            }
         });
 
         activityDetectorMonitoring.on('active', (): void => {
-            if (this.getConfigFactory().isDebugEnabled()) {
-                console.log('User is now active...');
+            if (handler !== null) {
+                if (this.getConfigFactory().isDebugEnabled()) {
+                    console.log('User is now active...');
+                }
+                clearInterval(handler);
+                handler = null;
             }
-            clearInterval(handler);
         });
     }
 
