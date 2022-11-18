@@ -26,6 +26,7 @@
     "appDebug": false,
     "appVersion": "4.3.2",
     "defaultUserConfig": {
+      "backgroundRefresh": "on",
       "browserHistoryReplaceState": "",
       "saveFiltersInSession": "",
       "themeColor": "auto"
