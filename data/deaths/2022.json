@@ -4593,6 +4593,66 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "11",
+      "day": "17",
+      "keywords": "",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 35e RAP a été tué, percuté par un train, à hauteur de la ville de Puget-sur-Argens durant un exercice Formation Générale Élémentaire (FGE).",
+      "section": "35e RAP",
+      "location": "Puget-sur-Argens",
+      "county": "83",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 100,
+        "lat": 43.45893377907588,
+        "lng": 6.667929747338576
+      },
+      "homage": {
+        "title": "Ministère des Armées",
+        "url": "https://twitter.com/Armees_Gouv/status/1593618624610291713"
+      },
+      "sources": [
+        {
+          "url": "https://www.ouest-france.fr/politique/defense/un-militaire-meurt-percute-par-un-train-lors-d-un-exercice-dans-le-var-3c3231c0-6744-11ed-8d02-f374de6baa45",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/var-un-militaire-meurt-percute-par-un-train-lors-dun-exercice-deux-autres-blesses.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/4010645-20221118-var-militaire-tue-deux-blesses-accident-train",
+          "title": "20 minutes",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.bfmtv.com/var/var-un-militaire-meurt-apres-avoir-ete-percute-par-un-train-lors-d-un-exercice-deux-autres-blesses_AN-202211180422.html",
+          "title": "BFMTV",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-militaire-meurt-percute-par-un-train-et-deux-autres-blesses-a-puget-sur-argens-1668771321",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
