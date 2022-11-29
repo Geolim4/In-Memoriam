@@ -4598,6 +4598,45 @@
       "cause": "accident",
       "count": 1,
       "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "11",
+      "day": "15",
+      "keywords": "Christophe Georget",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme réserviste du Groupement de Gendarmerie Départementale du Loir et Cher est décédé dans un accident de voiture sur son trajet domicile-travail.\nTrès peu d'informations disponibles sur ce décès.",
+      "section": "GGD 41",
+      "location": "Blois",
+      "county": "41",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 100,
+        "lat": 47.59819973954613,
+        "lng": 1.3405355343657575
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": null,
+          "title": "FFOC",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": null,
+          "title": "Fondation MG",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
       "orphans": 0,
       "unpublished_reason": "",
       "year": "2022",
@@ -4648,6 +4687,51 @@
         },
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-militaire-meurt-percute-par-un-train-et-deux-autres-blesses-a-puget-sur-argens-1668771321",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "11",
+      "day": "27",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier rattaché à la DDSI du commissariat Chambéry, a mis fin à ses jours à en pleine rue des Abrets-en-Dauphiné (Isère) avec son arme de service.",
+      "section": "DDSI 73",
+      "location": "Abrets-en-Dauphiné",
+      "county": "38",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 750,
+        "lat": 45.53744784518264,
+        "lng": 5.5912053857677675
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/isere-un-policier-se-suicide-en-pleine-rue-aux-abrets-en-dauphine.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2022/11/28/un-policier-se-suicide-dans-la-rue",
+          "title": "Le Dauphiné",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-savoyard-de-la-dgsi-se-suicide-avec-son-arme-de-service-en-isere-3670702",
           "title": "France Bleu",
           "paywall": false,
           "trustful": true
