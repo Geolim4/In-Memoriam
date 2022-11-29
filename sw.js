@@ -1,5 +1,5 @@
-/** SW auto-generated on 2022-11-18T22:28:50.842Z **/
-const CACHE_KEY = 'im-4.3.3+20221118T222850';
+/** SW auto-generated on 2022-11-29T12:39:51.577Z **/
+const CACHE_KEY = 'im-4.3.4+20221129T123951';
 const assets = [
   'assets/css/fonts/fa-solid-900.ttf',
   'assets/css/fonts/fa-solid-900.woff2',
