@@ -4737,6 +4737,45 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "12",
+      "day": "13",
+      "keywords": "",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policière municipale de ville de Quimper a mis fins à ses jours avec une arme de poing.\nElle a été retrouvé par une amie dans un logement à Maisons-Alfort (Val-de-Marne).",
+      "section": "PM",
+      "location": "Quimper",
+      "county": "29",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.99402897515637,
+        "lng": -4.099087059380711
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.instagram.com/p/CmH2sJ4rBU-/",
+          "title": "@36quaidesorfevres",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.profession-gendarme.com/val-de-marne-le-corps-sans-vie-dune-policiere-municipale-decouvert-dans-son-logement/",
+          "title": "Profession Gendarme",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
