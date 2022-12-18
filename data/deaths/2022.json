@@ -4776,6 +4776,39 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2022",
+      "month": "12",
+      "day": "17",
+      "keywords": "Olivier",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier de la CRS 15 basée à Béthune a mis fins à ses jours.\nPeu d'informations disponibles sur ce suicide.",
+      "section": "CRS 15",
+      "location": "Béthune",
+      "county": "62",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 50.517061133623116,
+        "lng": 2.6416437290410424
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/pas-de-calais-un-policier-de-la-crs-15-a-bethune-sest-suicide.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
