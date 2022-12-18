@@ -74,6 +74,14 @@
   .vss {
     display: block;
   }
+
+  .ts-wrapper {
+    .ts-control {
+      & > input {
+        display: none !important;
+      }
+    }
+  }
 }
 
 @media (min-width: 500px) {

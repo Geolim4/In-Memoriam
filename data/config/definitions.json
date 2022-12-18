@@ -90,6 +90,21 @@
         }
       }
     },
+    "day": {
+      "#exposed": false,
+      "#name": "jour",
+      "#name_plural": "jours",
+      "#label": "",
+      "#counter_property": "count",
+      "#counter_strategy": "distinct",
+      "#number": {
+        "#any": {
+          "none": "<span class=\"badge badge-success\">%d</span> disparition sur le jour %day%",
+          "singular": "<span class=\"badge badge-danger\">%d</span> disparition sur le jour %day%",
+          "plural": "<span class=\"badge badge-danger\">%d</span> disparitions sur le jour %day%"
+        }
+      }
+    },
     "cause": {
       "#exposed": true,
       "#name": "cause",
