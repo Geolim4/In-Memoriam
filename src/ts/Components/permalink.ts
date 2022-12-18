@@ -44,7 +44,13 @@ export class Permalink {
 
     public getDeathMarkerLink(death: Death, removePwaParameter: boolean = true): string {
         const url = new URL(window.location.href.split('#')[0]);
-        url.hash = `#search=${death.section}&year=${death.year}&month=${death.month}&house=${death.house}&cause=${death.cause}`;
+        const searchMinLength = App.getInstance().getConfigFactory().getSearchMinLength();
+        const searchText = `${death.section.length >= searchMinLength ? death.section : death.location}`;
+        url.hash = `#year=${death.year}&month=${death.month}&day=${death.day}&house=${death.house}&cause=${death.cause}`;
+
+        if (searchText.length >= searchMinLength) {
+            url.hash += `&search=${searchText}`;
+        }
 
         if (removePwaParameter && url.searchParams.has('pwa')) {
             url.searchParams.delete('pwa');

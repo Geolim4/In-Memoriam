@@ -68,7 +68,7 @@
         </div>
         <div id="form-filters-wrapper" class="shimmer-loader">
             <form id="form-filters" class="row mt-3">
-                <fieldset class="col-md-3">
+                <fieldset class="col-md-2 px-2">
                     <label class="font-weight-bold" for="search">Recherche</label>
                     <input class="form-control"
                            type="text"
@@ -78,48 +78,53 @@
                            placeholder="Saisissez %d caractères minimum pour rechercher un nom, une circonscription, etc."
                            minlength=""
                            autocomplete="off"
-                           pattern=""/>
+                           pattern=""
+                           tabindex="1"/>
                     <button type="button" data-reset-field-target="#search" data-tippy-content="Réinitialiser le champ de recherche">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </fieldset>
-                <fieldset class="col-md-2">
+                <fieldset class="col-md-3  px-2">
                     <div class="row">
-                        <div class="col-5">
+                        <div class="col-4 pr-2">
                             <label class="font-weight-bold" for="year">Année</label>
-                            <select name="year" id="year" data-filterable="true" data-max-item-count="4" required="required" multiple></select>
+                            <select name="year" id="year" data-filterable="true" data-max-item-count="4" required="required" multiple tabindex="2"></select>
                         </div>
-                        <div class="col-7">
+                        <div class="col-5 pl-0 pr-2">
                             <label class="font-weight-bold" for="month">Mois</label>
-                            <select name="month" id="month" data-filterable="true" data-countable="true" multiple></select>
+                            <select name="month" id="month" data-filterable="true" data-countable="true" multiple tabindex="3"></select>
+                        </div>
+                        <div class="col-3 pl-0">
+                            <label class="font-weight-bold" for="day">Jour</label>
+                            <select name="day" id="day" data-filterable="true" data-countable="true" multiple tabindex="4"></select>
                         </div>
                     </div>
                 </fieldset>
-                <fieldset class="col-md-2">
+                <fieldset class="col-md-2 px-2">
                     <label class="font-weight-bold" for="house">Corps</label>
-                    <select name="house" id="house" data-filterable="true" data-countable="true" multiple></select>
+                    <select name="house" id="house" data-filterable="true" data-countable="true" multiple tabindex="5"></select>
                 </fieldset>
-                <fieldset class="col-md-2">
+                <fieldset class="col-md-2 px-2">
                     <label class="font-weight-bold" for="cause">Cause</label>
-                    <select name="cause" id="cause" data-filterable="true" data-countable="true" multiple></select>
+                    <select name="cause" id="cause" data-filterable="true" data-countable="true" multiple tabindex="6"></select>
                 </fieldset>
-                <fieldset class="col-md-1">
+                <fieldset class="col-md-1 px-2">
                     <label class="font-weight-bold" for="county">Département/Pays</label>
-                    <select name="county" id="county" data-filterable="true" data-countable="false" data-autosort="true" multiple></select>
+                    <select name="county" id="county" data-filterable="true" data-countable="false" data-autosort="true" multiple tabindex="7"></select>
                 </fieldset>
-                <fieldset class="col-md-1">
+                <fieldset class="col-md-1 px-2">
                     <label class="font-weight-bold" for="origin">Théatre d'action</label>
-                    <select name="origin" id="origin" data-filterable="true" data-countable="true" multiple></select>
+                    <select name="origin" id="origin" data-filterable="true" data-countable="true" multiple tabindex="8"></select>
                 </fieldset>
-                <fieldset class="col-md-1">
+                <fieldset class="col-md-1 px-2">
                     <label class="font-weight-bold" for="homage">Hommage</label>
-                    <select name="homage" id="homage" data-filterable="true" data-countable="false"></select>
+                    <select name="homage" id="homage" data-filterable="true" data-countable="false" tabindex="9"></select>
                 </fieldset>
             </form>
         </div>
         <div class="row mt-3">
             <div class="col-12 ">
-                <div id="map" class="shimmer-loader h500"></div>
+                <div id="map" class="shimmer-loader h500" tabindex="10"></div>
             </div>
         </div>
         <div class="row mt-3">
@@ -144,9 +149,10 @@
                            data-controller="advanced-modal"
                            data-modal-title="Nous Contacter"
                            data-modal-content-template="pages/contact-us"
-                           data-modal-options='{}'
-                           data-modal-content-vars='{}'>Contactez-nous</a> ou
-                            envoyez-nous un "pull request" sur <a href="https://github.com/Geolim4/In-Memoriam/compare" target="_blank">Github</a>.
+                           data-modal-options="{}"
+                           data-modal-content-vars="{}"
+                           tabindex="11">Contactez-nous</a> ou
+                            envoyez-nous un "pull request" sur <a href="https://github.com/Geolim4/In-Memoriam/compare" target="_blank" tabindex="12">Github</a>.
                     </p>
                 </div>
             </div>
@@ -163,10 +169,10 @@
                                 <label class="font-weight-bold" for="permalink">Permalien</label>
                             </div>
                             <div class="col-md-9 col-lg-10">
-                                <input id="permalink" class="form-control" type="text" title="Permalien" value="" data-role="permalink" onclick="select()" size="30" readonly>
+                                <input id="permalink" class="form-control" type="text" title="Permalien" value="" data-role="permalink" onclick="select()" size="30" readonly tabindex="13">
                             </div>
                             <div class="col-md-3 col-lg-2 px-md-1 mt-1 mt-md-0">
-                                <a href="javascript:;" class="btn btn-primary btn-block" data-controller="copy-element" data-target-element="#permalink" data-tippy-content="Copier le lien vers votre presse-papier">
+                                <a href="javascript:;" class="btn btn-primary btn-block" data-controller="copy-element" data-target-element="#permalink" data-tippy-content="Copier le lien vers votre presse-papier" tabindex="14">
                                     <i class="fa-solid fa-copy"></i>
                                 </a>
                             </div>
@@ -189,8 +195,9 @@
                            data-controller="advanced-modal"
                            data-modal-title="Politique de confidentialité"
                            data-modal-content-template="pages/confidentiality"
-                           data-modal-options='{}'
-                           data-modal-content-vars='{}'>Politique de confidentialité</a>
+                           data-modal-options="{}"
+                           data-modal-content-vars="{}"
+                           tabindex="15">Politique de confidentialité</a>
                     </strong>
                 </p>
             </div>
@@ -213,8 +220,9 @@
                            data-controller="advanced-modal"
                            data-modal-title="Mentions Légales"
                            data-modal-content-template="pages/legal-notice"
-                           data-modal-options='{}'
-                           data-modal-content-vars='{}'>Mentions Légales</a>
+                           data-modal-options="{}"
+                           data-modal-content-vars="{}"
+                           tabindex="16">Mentions Légales</a>
                     </strong>
                 </p>
             </div>

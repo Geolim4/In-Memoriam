@@ -154,6 +154,194 @@
         "group": null
       }
     ],
+    "day": [
+      {
+        "value": "01",
+        "label": "01",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "02",
+        "label": "02",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "03",
+        "label": "03",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "04",
+        "label": "04",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "05",
+        "label": "05",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "06",
+        "label": "06",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "07",
+        "label": "07",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "08",
+        "label": "08",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "09",
+        "label": "09",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "10",
+        "label": "10",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "11",
+        "label": "11",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "12",
+        "label": "12",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "13",
+        "label": "13",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "14",
+        "label": "14",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "15",
+        "label": "15",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "16",
+        "label": "16",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "17",
+        "label": "17",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "18",
+        "label": "18",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "19",
+        "label": "19",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "20",
+        "label": "20",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "21",
+        "label": "21",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "22",
+        "label": "22",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "23",
+        "label": "23",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "24",
+        "label": "24",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "25",
+        "label": "25",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "26",
+        "label": "26",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "27",
+        "label": "27",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "28",
+        "label": "28",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "29",
+        "label": "29",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "30",
+        "label": "30",
+        "color": "",
+        "group": null
+      },
+      {
+        "value": "31",
+        "label": "31",
+        "color": "",
+        "group": null
+      }
+    ],
     "cause": [
       {
         "value": "suicide",
