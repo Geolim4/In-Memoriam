@@ -11,6 +11,7 @@ export interface FormFilters {
             label: string;
             color: string;
             group: string|null;
+            setup: string|null;
         }
     ];
 }

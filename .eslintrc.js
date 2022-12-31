@@ -157,7 +157,10 @@ module.exports = {
         "no-underscore-dangle": "off",
         "no-unused-expressions": "off",
         "no-unused-vars": "off",
-        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            { "argsIgnorePattern": "^_" }
+        ],
         "no-prototype-builtins": "off",
         "no-useless-constructor": "error",
         "no-var": "error",
