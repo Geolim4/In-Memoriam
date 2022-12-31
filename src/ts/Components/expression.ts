@@ -15,7 +15,7 @@ export class Expression {
         return match && match[1] ? match[1] : null;
     }
 
-    public static evaluate(expression: string, context: object): any {
+    public static evaluate(expression: string, context: object = {}): any {
         return this.sandboxRun(expression, context, 'expression-evaluator-sandbox');
     }
 

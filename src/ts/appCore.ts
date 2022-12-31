@@ -140,7 +140,15 @@ export abstract class AppCore extends AppAbstract {
 
             if (!filteredResponse.response.deaths || !filteredResponse.response.deaths.length) {
                 if (!filteredResponse.errored) {
-                    this.getSnackbar().show('Aucun r&eacute;sultat trouv&eacute;, essayez avec d\'autres crit&egrave;res de recherche.');
+                    const filterCopy = { ...Object.fromEntries(Object.entries(filters).filter(([_k, v]: [string, any]):boolean => v !== '')) };
+                    delete filterCopy.year;
+
+                    console.log(filterCopy);
+                    if (Object.keys(filterCopy).length) {
+                        this.getSnackbar().show("Aucun résultat trouvé, essayez avec d'autres critères de recherche.");
+                    } else {
+                        this.getSnackbar().show('Aucun donnée actuellement référencée pour cette année, essayez une autre année.');
+                    }
                 } else {
                     const messageText = 'La recherche a rencontr&eacute; une erreur, essayez de corriger votre saisie.';
                     this.getModal().modalInfo('Information', messageText, { isError: true });
@@ -871,6 +879,12 @@ export abstract class AppCore extends AppAbstract {
             const optGroups = {} as { [name: string] : HTMLOptGroupElement };
             for (const filterValueObject of filterValuesArray) {
                 const selector = <HTMLSelectElement> this.formElement.querySelector(`select[name="${filterName}"]`);
+                if (filterValueObject.setup !== null && filterValueObject.setup) {
+                    const filterExpression = Expression.getEvaluable(filterValueObject.setup);
+                    if (filterExpression && !Expression.evaluate(filterValueObject.setup, { filter: filterValueObject })) {
+                        continue;
+                    }
+                }
                 if (selector !== null) {
                     const option = document.createElement('option');
                     option.value = filterValueObject.value;
