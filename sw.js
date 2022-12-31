@@ -1,5 +1,5 @@
-/** SW auto-generated on 2022-12-31T22:23:04.172Z **/
-const CACHE_KEY = 'im-4.5.0+20221231T222304';
+/** SW auto-generated on 2022-12-31T23:17:11.929Z **/
+const CACHE_KEY = 'im-4.5.1+20221231T231711';
 const assets = [
   'assets/css/fonts/fa-solid-900.ttf',
   'assets/css/fonts/fa-solid-900.woff2',
@@ -60,6 +60,7 @@ const assets = [
   'assets/json/deaths/2021.min.json',
   'assets/json/deaths/2022.min.json',
   'assets/json/deaths/2023.min.json',
+  'assets/json/deaths/2024.min.json',
   'assets/templates/advanced-search-link.html.twig',
   'assets/templates/associations.html.twig',
   'assets/templates/bloodbath-chart.html.twig',
