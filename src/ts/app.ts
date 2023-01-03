@@ -55,7 +55,7 @@ export class App extends AppCore {
     }
 
     public reloadMarkers(fromAnchor: boolean, useCache: boolean = true): void {
-        this.bindMarkers(this.getFilters(fromAnchor), (useCache ? 'force-cache' : 'reload'));
+        this.bindMarkers(this.getFilters(fromAnchor), useCache ? 'default' : 'reload');
     }
 
     public getFilters(fromAnchor: boolean, fromStorage: boolean = false): Filters {

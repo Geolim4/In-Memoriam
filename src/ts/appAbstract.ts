@@ -320,10 +320,6 @@ export abstract class AppAbstract {
         if (!this.isAppLoaded()) {
             document.querySelector('body').classList.add('loaded');
 
-            document.querySelectorAll('.shimmer-loader').forEach((element): void => {
-                element.classList.remove('shimmer-loader');
-            });
-
             this.setAppLoaded(true);
             document.dispatchEvent(new CustomEvent('app-loaded', { detail: {} }));
             console.log(`App loaded in ${((window.performance.now()) / 1000).toFixed(3)}s.`);
