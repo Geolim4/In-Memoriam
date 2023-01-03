@@ -68,7 +68,7 @@ export class ConfigFactory {
     }
 
     protected load(onceLoaded?: VoidFunction): void {
-        fetch(this.configPath, { cache: 'default' })
+        fetch(this.configPath, { cache: 'no-cache' })
             .then((response): any => response.json())
             .then((responseData: SettingsResponse): void => {
                 const darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;

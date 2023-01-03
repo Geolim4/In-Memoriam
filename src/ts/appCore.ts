@@ -2,6 +2,7 @@ import { MarkerClusterer, SuperClusterAlgorithm } from '@googlemaps/markercluste
 import { Loader } from '@googlemaps/js-api-loader';
 import activityDetector from 'activity-detector';
 import Cookies from 'js-cookie';
+import structuredClone from '@ungap/structured-clone';
 import TomSelect from 'tom-select';
 import { AppAbstract } from './appAbstract';
 import { ConfigFactory } from './Extensions/configFactory';
@@ -140,11 +141,7 @@ export abstract class AppCore extends AppAbstract {
 
             if (!filteredResponse.response.deaths || !filteredResponse.response.deaths.length) {
                 if (!filteredResponse.errored) {
-                    const filterCopy = { ...Object.fromEntries(Object.entries(filters).filter(([_k, v]: [string, any]):boolean => v !== '')) };
-                    delete filterCopy.year;
-
-                    console.log(filterCopy);
-                    if (Object.keys(filterCopy).length) {
+                    if (filteredResponse.original_response.deaths.length) {
                         this.getSnackbar().show("Aucun résultat trouvé, essayez avec d'autres critères de recherche.");
                     } else {
                         this.getSnackbar().show('Aucun donnée actuellement référencée pour cette année, essayez une autre année.');
@@ -153,7 +150,7 @@ export abstract class AppCore extends AppAbstract {
                     const messageText = 'La recherche a rencontr&eacute; une erreur, essayez de corriger votre saisie.';
                     this.getModal().modalInfo('Information', messageText, { isError: true });
                 }
-                this.printDefinitionsText(null);
+                this.printDefinitionsText(filteredResponse);
                 return;
             }
 
@@ -280,7 +277,7 @@ export abstract class AppCore extends AppAbstract {
             if (this.getConfigFactory().isDebugEnabled()) {
                 console.log(`${this.markers.length} marker${this.markers.length === 1 ? '' : 's'} loaded in ${((window.performance.now() - stopwatchStart) / 1000).toFixed(3)}s.`);
             }
-            this.printDefinitionsText(responseData, filters);
+            this.printDefinitionsText(filteredResponse, filters);
         }).catch((e): void => {
             if (this.getConfigFactory().isDebugEnabled()) {
                 console.error(e);
@@ -376,7 +373,7 @@ export abstract class AppCore extends AppAbstract {
             this.getConfigFactory().config.googleMapsOptions,
         );
 
-        fetch(this.getConfigFactory().config.filtersSrc, { cache: 'force-cache' })
+        fetch(this.getConfigFactory().config.filtersSrc, { cache: 'default' })
             .then((response): any => response.json())
             .then((responseData: { filters: FormFilters }): void => {
                 this.setFormFilters(responseData.filters); // Must come before any call to getFilters()
@@ -392,7 +389,7 @@ export abstract class AppCore extends AppAbstract {
                  *  setupSkeleton() will set default values
                  *  to our fields from our configuration file
                  */
-                this.bindMarkers(this.getFilters(true, true));
+                this.bindMarkers(this.getFilters(true, true), 'reload');
                 this.bindMapEvents();
                 this.bindFullscreenFormFilterListener();
                 this.printSupportAssociations();
@@ -520,7 +517,7 @@ export abstract class AppCore extends AppAbstract {
     }
 
     private getFilteredResponse(response: Bloodbath, filters: Filters): FilteredResponse {
-        const filteredResponse = <FilteredResponse>{ errored: false, response };
+        const filteredResponse = <FilteredResponse>{ errored: false, original_response: structuredClone(response), response };
         const deathsRemovedBySearch = <Death[]>[];
         const deathsRemovedByFilters = <Death[]>[];
 
@@ -688,7 +685,7 @@ export abstract class AppCore extends AppAbstract {
                     console.log('User is now idle...');
                 }
                 handler = setInterval((): void => {
-                    this.bindMarkers(this.getFilters(false), 'force-cache');
+                    this.bindMarkers(this.getFilters(false), 'default');
                     if (this.getConfigFactory().isDebugEnabled()) {
                         console.log('Reloading map...');
                     }
@@ -711,7 +708,7 @@ export abstract class AppCore extends AppAbstract {
         window.addEventListener('hashchange', (): void => {
             const filters = this.getFilters(true);
             this.drawCustomSelectors(this.formElement.querySelectorAll('form select'));
-            this.bindMarkers(filters, 'force-cache');
+            this.bindMarkers(filters, 'default');
         }, false);
     }
 
@@ -759,7 +756,7 @@ export abstract class AppCore extends AppAbstract {
                 setTimeout((): void => {
                     if (this.formElement.checkValidity()) {
                         const filters = this.getFilters(false);
-                        this.bindMarkers(filters, 'force-cache');
+                        this.bindMarkers(filters, 'default');
                         document.dispatchEvent(new CustomEvent('filter-changed', { detail: filters }));
                         if (field instanceof HTMLSelectElement && field.parentElement.classList.contains('choices__inner')) {
                             field.parentElement.dataset.selectedOptions = String(field.selectedOptions.length);
@@ -987,9 +984,11 @@ export abstract class AppCore extends AppAbstract {
         return this;
     }
 
-    private printDefinitionsText(response?: Bloodbath, filters?: Filters): void {
+    private printDefinitionsText(filteredResponse: FilteredResponse, filters?: Filters): void {
         const definitionTexts = [];
-        if (response) {
+        const response = filteredResponse.response;
+
+        if (response.deaths.length) {
             const definitions = this.getDefinitions(response);
             const latestDeath = response.deaths[response.deaths.length - 1];
             const configDefinitions = this.getConfigDefinitions();
@@ -1043,7 +1042,12 @@ export abstract class AppCore extends AppAbstract {
                   </div>`);
             }
         } else {
-            const messageText = 'Aucun r&eacute;sultat trouv&eacute;, essayez avec d\'autres crit&egrave;res de recherche.';
+            let messageText;
+            if (filteredResponse.original_response.deaths.length) {
+                messageText = "Aucun résultat trouvé, essayez avec d'autres critères de recherche.";
+            } else {
+                messageText = 'Aucun donnée actuellement référencée pour cette année, essayez une autre année.';
+            }
             definitionTexts.push(
                 `<span class="text text-warning"><i class="fa-solid fa-circle-exclamation"></i>&nbsp; <strong>${messageText}</strong></span>`,
             );
