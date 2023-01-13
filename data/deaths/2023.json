@@ -6,5 +6,39 @@
     "stats_enabled": true,
     "up_to_date": true
   },
-  "deaths": []
+  "deaths": [
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "01",
+      "day": "07",
+      "keywords": "Nicolas ACQUIER",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme affecté à la BTA de Canet-en-Roussillon aurait mit fin à ses jours.\nIl était père de deux enfants.",
+      "section": "BTA",
+      "location": "Canet-en-Roussillon",
+      "county": "66",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 42.701913861648976,
+        "lng": 3.029656033010255
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://lessor.org/vie-des-personnels/occitanie-un-gendarme-retrouve-mort-a-la-brigade-de-canet-en-roussillon",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    }
+  ]
 }
