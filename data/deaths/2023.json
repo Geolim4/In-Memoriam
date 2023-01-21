@@ -39,6 +39,104 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "01",
+      "day": "20",
+      "keywords": "Maximilien MAES",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme en service affecté à la BMo a perdu la vie dans un accident de la route à Saint-Priest.\nIl était pacsé d'une jeune fille.",
+      "section": "BMo",
+      "location": "Aubenas",
+      "county": "07",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.624508028299694,
+        "lng": 4.396418734148162
+      },
+      "homage": {
+        "title": "Ministère de l'Intérieur",
+        "url": "https://www.interieur.gouv.fr/actualites/communiques/deces-dun-sous-officier-de-gendarmerie-de-brigade-motorisee-daubenas-07"
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/Gendarmerie/status/1616438599460818944",
+          "title": "@Gendarmerie",
+          "paywall": false,
+          "trustful": true
+        },{
+          "url": "https://actu17.fr/faits-divers/ardeche-un-gendarme-en-service-meurt-dans-un-accident-de-la-route.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/ardeche-deces-dun-gendarme-en-service-dans-un-accident-de-moto-20-01-2023-WUN2YV43INAR3DKHFV74372JJU.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/ardeche-un-motard-de-la-gendarmerie-gravement-blesse-apres-une-collision-avec-un-poids-lourd-3244930",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/politique/defense/gendarmerie/gerald-darmanin-reagit-a-la-mort-d-un-gendarme-dans-une-collision-avec-un-poids-lourd-en-ardeche-e066ab48-98d3-11ed-838e-db5cb73079c3",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ardeche.gouv.fr/deces-du-gendarme-maximilien-maes-a11917.html",
+          "title": "Préfecture Ardèche",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "01",
+      "day": "20",
+      "keywords": "Olivier",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier affecté à la CRS 20 de Limoges aurait mit fin à ses jours.\nIl était père de deux enfants.",
+      "section": "CRS 20",
+      "location": "Limoges",
+      "county": "87",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.85768192287332,
+        "lng": 1.2929769601913392
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/haute-vienne-un-policier-de-la-crs-20-de-limoges-sest-suicide.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
