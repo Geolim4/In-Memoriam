@@ -33,10 +33,13 @@ export class Links {
                     App.getInstance().getModal().modalInfo('Erreur', `Contrôleur "${link.dataset.controller}" inconnu.`, { isError: true });
             }
         } else if (link.href.includes('#fwd2:')) {
-            const forwardLink = document.querySelector(`a#${link.href.split('#fwd2:')[1]}`);
-            if (forwardLink) {
+            const targetElement = link.href.split('#fwd2:')[1];
+            const forwardElement = document.querySelector(`#${targetElement}`);
+            if (forwardElement) {
                 e.preventDefault();
-                forwardLink.dispatchEvent(new Event('click', { bubbles: true, cancelable: true }));
+                forwardElement.dispatchEvent(new Event('click', { bubbles: true, cancelable: true }));
+            } else {
+                console.warn(`Target element "${targetElement}" not found...`);
             }
         }
     }

@@ -5,21 +5,26 @@ const NodeSnackbar = require('node-snackbar');
  * @licence GPL-2.0
  */
 export class Snackbar {
-    public show(content: string, actionText: string = 'Fermer', isError: boolean = false): void {
+    protected latestSnabackar: string;
+
+    public show(content: string, actionText: string = 'Fermer', isError: boolean = false, duration: number = null, position: string = 'bottom-center'): void {
+        this.latestSnabackar = content;
         NodeSnackbar.show(
             {
                 actionText,
                 actionTextColor: isError ? '#481919' : '#4CAF50',
                 backgroundColor: isError ? '#a94442' : '#323232',
-                duration: isError ? 8000 : 5000,
-                pos: 'bottom-center',
+                duration: duration || (isError ? 8000 : 5000),
+                pos: position,
                 text: content,
                 textColor: '#FFF',
             },
         );
     }
 
-    public close(): void {
-        NodeSnackbar.close();
+    public close(content: string = null): void {
+        if (content === null || content === this.latestSnabackar) {
+            NodeSnackbar.close();
+        }
     }
 }

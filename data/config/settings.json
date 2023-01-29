@@ -24,10 +24,11 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "4.5.4",
+    "appVersion": "4.6.0",
     "defaultUserConfig": {
       "backgroundRefresh": "on",
       "browserHistoryReplaceState": "",
+      "filtersType": "simple",
       "saveFiltersInSession": "",
       "themeColor": "auto"
     },
@@ -103,11 +104,6 @@
         "hover": "Femme des Force De l'Ordre en Colère (Twitter)",
         "title": "FFOC",
         "url": "https://twitter.com/_FFOC_"
-      },
-      {
-        "hover": "Compte de soutien des FDOs (Twitter)",
-        "title": "Uniformes en danger",
-        "url": "https://twitter.com/UniformesEn"
       },
       {
         "hover": "Association d'aide aux policiers en détresse",

@@ -41,6 +41,45 @@
       ]
     },
     {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "01",
+      "day": "16",
+      "keywords": "Franck HOUVENAGHEL",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme affecté à la SAJ de Villeneuve d’Ascq a mit fin à ses jours avec son arme administrative.\nIl était père de deux enfants.",
+      "section": "SAJ 59",
+      "location": "Villeneuve d’Ascq",
+      "county": "59",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 50.64603877868893,
+        "lng": 3.129638033957228
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://lavoixdugendarme.fr/deces-tragique-dun-gendarme-de-villeneuve-dascq/",
+          "title": "La Voix du Gendarme",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "",
+          "title": "Fondation MG",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
       "cause": "deathOnDuty",
       "count": 1,
       "published": true,
@@ -109,7 +148,7 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
-      "orphans": 0,
+      "orphans": 2,
       "unpublished_reason": "",
       "year": "2023",
       "month": "01",
