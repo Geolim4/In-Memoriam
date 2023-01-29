@@ -15,6 +15,7 @@ export class GmapUtils {
 
         controlDiv.classList.add(...(opts.ctrlClasses ? opts.ctrlClasses : []));
 
+        firstChild.id = `${opts.ctrlChildId}Btn`;
         firstChild.classList.add('app-button');
         firstChild.style.backgroundColor = '#FFF';
         firstChild.style.color = '#666666';
@@ -32,7 +33,7 @@ export class GmapUtils {
         firstChild.title = opts.title;
         controlDiv.appendChild(firstChild);
 
-        secondChild.id = (opts.ctrlChildId ? opts.ctrlChildId : `ctrl-child-${Math.floor(Math.random() * 1000)}`);
+        secondChild.id = `${opts.ctrlChildId ? opts.ctrlChildId : `ctrl-child-${Math.floor(Math.random() * 1000)}`}BtnImg`;
         secondChild.className = 'ctrl-child';
         secondChild.innerText = hasText ? opts.text : '';
         if (opts.imagePath) {

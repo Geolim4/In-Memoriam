@@ -116,14 +116,15 @@ export abstract class AppCore extends AppAbstract {
                 responseData.deaths.push(...responseDataArray[0].deaths);
             }
 
+            const snackbarMessage = `Les données de la période ${StringUtilsHelper.formatArrayOfStringForReading(this.getUnaggregatableYears())} ont été ignorées car elle ne peuvent pas être aggrégées avec d'autres années !`;
             if (this.getUnaggregatableYears().length) {
                 this.getSnackbar().show(
-                    `Les données de la période ${StringUtilsHelper.formatArrayOfStringForReading(this.getUnaggregatableYears())} ont été ignorées car elle ne peuvent pas être aggrégées avec d'autres années !`,
+                    snackbarMessage,
                     'Fermer',
                     true,
                 );
             } else {
-                this.getSnackbar().close();
+                this.getSnackbar().close(snackbarMessage);
             }
 
             return responseData;
@@ -393,6 +394,17 @@ export abstract class AppCore extends AppAbstract {
                 this.bindMapEvents();
                 this.bindFullscreenFormFilterListener();
                 this.printSupportAssociations();
+                /**
+                 * Temporary
+                 */
+
+                this.getSnackbar().show(
+                    'Désormais, les filtres multiples ont été remplacés par des filtres simples, mais vous pouvez toujours les réactiver dans vos <a href="#fwd2:userConfigBtn">préférences</a> !',
+                    'Fermer',
+                    false,
+                    12000,
+                    'top-center',
+                );
             }).catch((reason): void => {
                 if (this.getConfigFactory().isDebugEnabled()) {
                     console.error(reason);
@@ -409,9 +421,11 @@ export abstract class AppCore extends AppAbstract {
 
     private bindUserConfigChangedEvent(): void {
         Events.addEventHandler(document, 'user-config-changed', (evt: CustomEvent): void => {
+            const filters = this.getFilters(false, false);
             const newUserConfig = this.getConfigFactory().userConfig;
             const evtDetail = evt.detail as UserConfigEventDetailModel;
 
+            console.log(filters);
             if (newUserConfig.themeColor !== 'auto') {
                 Cookies.set(
                     'htmlColorSchemePreload',
@@ -451,6 +465,8 @@ export abstract class AppCore extends AppAbstract {
             } else {
                 Cookies.remove('userSavedFilters', { signed: true });
             }
+
+            this.setupSkeleton(filters);
         });
     }
 
@@ -707,7 +723,7 @@ export abstract class AppCore extends AppAbstract {
     private bindAnchorEvents(): void {
         window.addEventListener('hashchange', (): void => {
             const filters = this.getFilters(true);
-            this.drawCustomSelectors(this.formElement.querySelectorAll('form select'));
+            this.setupSkeleton(filters);
             this.bindMarkers(filters, 'default');
         }, false);
     }
@@ -799,8 +815,6 @@ export abstract class AppCore extends AppAbstract {
             },
             showOnFocus: true,
         });
-
-        this.drawCustomSelectors(selectsAndFields);
     }
 
     private bindInternalLinksEvent(): void {
@@ -830,39 +844,40 @@ export abstract class AppCore extends AppAbstract {
     }
 
     private drawCustomSelectors(selectors: NodeListOf<HTMLInputElement|HTMLSelectElement>): void {
+        const userConfig = this.getConfigFactory().userConfig;
         selectors.forEach((selector): void => {
             if (selector instanceof HTMLSelectElement) {
-                if (!this.customSelectsInstances[selector.id]) {
-                    const settings: any = {
-                        allowEmptyOption: !selector.required,
-                        copyClassesToDropdown: false,
-                        maxItems: 1,
-                        maxOptions: null,
-                        plugins: {
-                            dropdown_header: {
-                                title: StringUtilsHelper.ucFirst(this.getConfigDefinitions()[selector.id]['#name_plural']),
-                            },
+                const settings: any = {
+                    allowEmptyOption: !selector.required,
+                    copyClassesToDropdown: false,
+                    maxItems: 1,
+                    maxOptions: null,
+                    onChange: null,
+                    plugins: {
+                        dropdown_header: {
+                            title: StringUtilsHelper.ucFirst(this.getConfigDefinitions()[selector.id]['#name_plural']),
+                        },
+                    },
+                };
+
+                if (selector.multiple && userConfig.filtersType === 'multiple') {
+                    settings.maxItems = typeof selector.dataset.maxItemCount !== 'undefined' ? parseInt(selector.dataset.maxItemCount, 10) : null;
+                    settings.plugins = {
+                        ...settings.plugins,
+                        ...{
+                            change_listener: {},
+                            checkbox_options: {},
+                            clear_button: { title: 'Tout supprimer' },
+                            remove_button: { title: 'Supprimer' },
                         },
                     };
-                    if (selector.multiple) {
-                        settings.maxItems = typeof selector.dataset.maxItemCount !== 'undefined' ? parseInt(selector.dataset.maxItemCount, 10) : null;
-                        settings.plugins = {
-                            ...settings.plugins,
-                            ...{
-                                change_listener: {},
-                                checkbox_options: {},
-                                clear_button: { title: 'Tout supprimer' },
-                                remove_button: { title: 'Supprimer' },
-                            },
-                        };
-                        settings.onChange = (values: string[]): void => {
-                            if (!values.length && selector.required && selector.multiple) {
-                                selector.options[selector.options.length - 1].selected = true;
-                            }
-                        };
-                    }
-                    this.customSelectsInstances[selector.id] = new TomSelect(selector, settings);
+                    settings.onChange = (values: string[]): void => {
+                        if (!values.length && selector.required && selector.multiple) {
+                            selector.options[selector.options.length - 1].selected = true;
+                        }
+                    };
                 }
+                this.customSelectsInstances[selector.id] = new TomSelect(selector, settings);
             }
         });
     }
@@ -871,22 +886,43 @@ export abstract class AppCore extends AppAbstract {
         const searchInput = this.formElement.querySelector('input#search') as HTMLInputElement;
         const searchMinLength = String(this.getConfigFactory().getSearchMinLength());
         const appSettingsElements = document.querySelectorAll('[data-app-settings]') as NodeListOf<HTMLElement>;
+        const userConfig = this.getConfigFactory().userConfig;
 
+        console.log(userConfig);
         for (const [filterName, filterValuesArray] of Object.entries(this.getFormFilters())) {
+            const selector = <HTMLSelectElement> this.formElement.querySelector(`select[name="${filterName}"]`);
             const optGroups = {} as { [name: string] : HTMLOptGroupElement };
-            for (const filterValueObject of filterValuesArray) {
-                const selector = <HTMLSelectElement> this.formElement.querySelector(`select[name="${filterName}"]`);
-                if (filterValueObject.setup !== null && filterValueObject.setup) {
-                    const filterExpression = Expression.getEvaluable(filterValueObject.setup);
-                    if (filterExpression && !Expression.evaluate(filterValueObject.setup, { filter: filterValueObject })) {
-                        continue;
-                    }
+            if (selector !== null) {
+                if (this.customSelectsInstances[selector.id]) {
+                    this.customSelectsInstances[selector.id].destroy();
+                    delete this.customSelectsInstances[selector.id];
                 }
-                if (selector !== null) {
+                // Clear all existing elements
+                selector.value = '';
+                selector.innerHTML = '';
+
+                if (!selector.required && userConfig.filtersType === 'simple') {
+                    console.log('Adding ---');
+                    const emptyOption = document.createElement('option');
+                    emptyOption.text = '---';
+                    emptyOption.value = '';
+                    emptyOption.selected = (filters[filterName] === '');
+                    selector.prepend(emptyOption);
+                }
+
+                for (const filterValueObject of filterValuesArray) {
+                    if (filterValueObject.setup !== null && filterValueObject.setup) {
+                        const filterExpression = Expression.getEvaluable(filterValueObject.setup);
+                        if (filterExpression && !Expression.evaluate(filterValueObject.setup, { filter: filterValueObject })) {
+                            continue;
+                        }
+                    }
+
                     const option = document.createElement('option');
                     option.value = filterValueObject.value;
                     option.text = filterValueObject.label;
                     option.selected = filters[filterName].split(',').includes(filterValueObject.value);
+
                     if (filterValueObject.group !== null && filterValueObject.group.trim() !== '') {
                         if (typeof optGroups[filterValueObject.group] === 'undefined') {
                             optGroups[filterValueObject.group] = document.createElement('optgroup');
@@ -897,13 +933,15 @@ export abstract class AppCore extends AppAbstract {
                     } else {
                         selector.appendChild(option);
                     }
-
-                    if (selector.required && selector.multiple && !selector.value && !filters[selector.id]) {
-                        const firstOption = <HTMLOptionElement> selector.querySelector('option:first-of-type');
-                        if (selector) {
-                            selector.value = firstOption.value;
-                            firstOption.selected = true;
-                        }
+                }
+                console.log(`Selector ${selector.id} has "${selector.value}" !!`);
+                if (selector.required && !selector.value) {
+                    console.log(`Selector ${selector.id} has no value !!`);
+                    const firstOption = <HTMLOptionElement>selector.querySelector(`option:first-of-type${filters[selector.id] ? `[value="${filters[selector.id]}"]` : ''}`);
+                    if (firstOption) {
+                        console.log(`Selecting ${firstOption.value} value !!`);
+                        selector.value = firstOption.value;
+                        firstOption.selected = true;
                     }
                 }
             }
@@ -921,17 +959,19 @@ export abstract class AppCore extends AppAbstract {
             appSettingsElements.innerHTML = this.getConfigFactory().config[appSettingsElements.dataset.appSettings];
         });
 
+        this.drawCustomSelectors(this.formElement.querySelectorAll('form select'));
+    }
+
+    private setupHtmlDocumentTheme(): void {
+        const themeColor = this.getConfigFactory().userConfig.themeColor;
+        const HtmlDocument = document.querySelector('html');
+
         Events.addEventHandler(window.matchMedia('(prefers-color-scheme: dark)'), 'change', (): void => {
             const userConfig = this.getConfigFactory().userConfig;
             if (userConfig.themeColor === 'auto') {
                 this.getConfigFactory().setUserConfig(userConfig, true);
             }
         });
-    }
-
-    private setupHtmlDocumentTheme(): void {
-        const themeColor = this.getConfigFactory().userConfig.themeColor;
-        const HtmlDocument = document.querySelector('html');
 
         HtmlDocument.className = HtmlDocument.className.replace(new RegExp('\\b' + 'prefers-color-scheme-' + '[^ ]*[ ]?\\b', 'g'), '');
         if (themeColor !== 'auto') {

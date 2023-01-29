@@ -28,6 +28,7 @@
     "defaultUserConfig": {
       "backgroundRefresh": "on",
       "browserHistoryReplaceState": "",
+      "filtersType": "simple",
       "saveFiltersInSession": "",
       "themeColor": "auto"
     },

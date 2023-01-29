@@ -50,7 +50,7 @@ export class MapButtons {
 
     private bindLocalizationButton(map: google.maps.Map): void {
         const buttonOptions = <GmapsOptions> {
-            ctrlChildId: 'localizationImg',
+            ctrlChildId: 'localization',
             ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
             defaultCtrlChildBgSize: '180px 18px',
             imagePath: App.getInstance().getConfigFactory().config.imagePath.localize,
@@ -73,7 +73,7 @@ export class MapButtons {
                 });
                 let imgX = '0';
                 const animationInterval = setInterval((): void => {
-                    const localizationImgElmt = document.querySelector('#localizationImg') as HTMLInputElement;
+                    const localizationImgElmt = document.querySelector('#localizationBtnImg') as HTMLInputElement;
                     imgX = (+imgX === -18 ? '0' : '-18');
                     localizationImgElmt.style.backgroundPosition = `${imgX}px 0px`;
                 }, 500);
@@ -113,16 +113,16 @@ export class MapButtons {
                     }
 
                     /**
-           * If the search returned no result
-           * then closest marker is null
-           */
+                    * If the search returned no result
+                    * then closest marker is null
+                    */
                     if (closestMarker) {
                         google.maps.event.trigger(closestMarker, 'click');
                         bounds.extend(closestMarker.getPosition());
                         map.fitBounds(bounds);
                     }
 
-                    (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '-144px 0px';
+                    (document.querySelector('#localizationBtnImg') as HTMLInputElement).style.backgroundPosition = '-144px 0px';
                     clearInterval(animationInterval);
 
                     this.userPosition = position;
@@ -137,7 +137,7 @@ export class MapButtons {
                         {
                             cancelCallback: (): void => {
                                 clearInterval(animationInterval);
-                                (document.querySelector('#localizationImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
+                                (document.querySelector('#localizationBtnImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
                             },
                             confirmCallback: (): void => {
                                 navigator.geolocation.getCurrentPosition(geolocationCallback);
@@ -153,7 +153,7 @@ export class MapButtons {
 
     private bindRandomizationButton(map: google.maps.Map): void {
         const buttonOptions = {
-            ctrlChildId: 'ramdomImg',
+            ctrlChildId: 'ramdom',
             ctrlClasses: [],
             ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
             defaultCtrlChildBgPos: '-2px -2px',
@@ -179,7 +179,7 @@ export class MapButtons {
 
     private bindRefreshButton(map: google.maps.Map): void {
         const buttonOptions = {
-            ctrlChildId: 'refreshImg',
+            ctrlChildId: 'refresh',
             ctrlClasses: [],
             ctrlPosition: google.maps.ControlPosition.RIGHT_TOP,
             defaultCtrlChildBgPos: '0px 0px',
@@ -196,7 +196,7 @@ export class MapButtons {
 
     private bindHeatmapButton(map: google.maps.Map): void {
         const buttonOptions = {
-            ctrlChildId: 'heatmapImg',
+            ctrlChildId: 'heatmap',
             ctrlClasses: [],
             ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
             defaultCtrlChildBgPos: '-2px -2px',
@@ -207,7 +207,7 @@ export class MapButtons {
 
         GmapUtils.bindButton(map, (): void => {
             App.getInstance().setHeatmapEnabled(!App.getInstance().isHeatmapEnabled());
-            const heatmapImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}`) as HTMLInputElement;
+            const heatmapImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}BtnImg`) as HTMLInputElement;
             const imgUrl = App.getInstance().getConfigFactory().config.imagePath.heatmap[App.getInstance().isHeatmapEnabled() ? 'on' : 'off'];
             heatmapImgElmt.style.backgroundImage = `url("${imgUrl}")`;
             App.getInstance().reloadMarkers(false);
@@ -216,7 +216,7 @@ export class MapButtons {
 
     private bindClusteringButton(map: google.maps.Map): void {
         const buttonOptions = {
-            ctrlChildId: 'clusteringImg',
+            ctrlChildId: 'clustering',
             ctrlClasses: [],
             ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
             defaultCtrlChildBgPos: '-2px -2px',
@@ -227,7 +227,7 @@ export class MapButtons {
 
         GmapUtils.bindButton(map, (): void => {
             App.getInstance().setClusteringEnabled(!App.getInstance().isClusteringEnabled());
-            const clusteringImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}`) as HTMLInputElement;
+            const clusteringImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}BtnImg`) as HTMLInputElement;
             const imgUrl = App.getInstance().getConfigFactory().config.imagePath.clustering[App.getInstance().isClusteringEnabled() ? 'on' : 'off'];
             clusteringImgElmt.style.backgroundImage = `url("${imgUrl}")`;
             App.getInstance().reloadMarkers(false);
@@ -236,7 +236,7 @@ export class MapButtons {
 
     private bindListButton(map: google.maps.Map): void {
         const buttonOptions = {
-            ctrlChildId: 'listImg',
+            ctrlChildId: 'list',
             ctrlClasses: [],
             ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
             defaultCtrlChildBgPos: '0px 2px',
@@ -280,7 +280,7 @@ export class MapButtons {
 
     private bindChartButton(map: google.maps.Map): void {
         const buttonOptions = {
-            ctrlChildId: 'chartImg',
+            ctrlChildId: 'chart',
             ctrlClasses: [],
             ctrlPosition: google.maps.ControlPosition.LEFT_TOP,
             defaultCtrlChildBgPos: '0px 2px',
@@ -361,7 +361,7 @@ export class MapButtons {
 
     private bindDownloadButton(map: google.maps.Map): void {
         const buttonOptions = {
-            ctrlChildId: 'downloadImg',
+            ctrlChildId: 'download',
             ctrlClasses: [],
             ctrlPosition: google.maps.ControlPosition.RIGHT_TOP,
             defaultCtrlChildBgPos: '0px 0px',
@@ -377,7 +377,7 @@ export class MapButtons {
 
     private bindUserConfigButton(map: google.maps.Map): void {
         const buttonOptions = {
-            ctrlChildId: 'userConfigImg',
+            ctrlChildId: 'userConfig',
             ctrlClasses: [],
             ctrlPosition: google.maps.ControlPosition.RIGHT_TOP,
             defaultCtrlChildBgPos: '0px 0px',

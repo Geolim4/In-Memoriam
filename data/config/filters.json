@@ -5,49 +5,49 @@
         "value": "2024",
         "label": "2024",
         "color": "",
-        "group": "Années détaillés",
+        "group": "Années détaillées",
         "setup": "expr:(new Date().getFullYear() >= filter.value)"
       },
       {
         "value": "2023",
         "label": "2023",
         "color": "",
-        "group": "Années détaillés",
+        "group": "Années détaillées",
         "setup": "expr:(new Date().getFullYear() >= filter.value)"
       },
       {
         "value": "2022",
         "label": "2022",
         "color": "",
-        "group": "Années détaillés",
+        "group": "Années détaillées",
         "setup": "expr:(new Date().getFullYear() >= filter.value)"
       },
       {
         "value": "2021",
         "label": "2021",
         "color": "",
-        "group": "Années détaillés",
+        "group": "Années détaillées",
         "setup": "expr:(new Date().getFullYear() >= filter.value)"
       },
       {
         "value": "2020",
         "label": "2020",
         "color": "",
-        "group": "Années détaillés",
+        "group": "Années détaillées",
         "setup": "expr:(new Date().getFullYear() >= filter.value)"
       },
       {
         "value": "2019",
         "label": "2019",
         "color": "",
-        "group": "Années détaillés",
+        "group": "Années détaillées",
         "setup": "expr:(new Date().getFullYear() >= filter.value)"
       },
       {
         "value": "2018",
         "label": "2018",
         "color": "",
-        "group": "Années détaillés",
+        "group": "Années détaillées",
         "setup": "expr:(new Date().getFullYear() >= filter.value)"
       },
       {
