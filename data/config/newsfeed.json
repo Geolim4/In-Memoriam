@@ -1,0 +1,12 @@
+{
+  "newsfeed": [
+    {
+      "code": "filter-notification",
+      "title": "Information sur les filtres !",
+      "content": "Désormais, les filtres multiples ont été remplacés par des filtres simples, mais vous pouvez toujours les réactiver dans vos <a href=\"#fwd2:userConfigBtn\">préférences</a> !",
+      "type": "snackbar",
+      "once": true,
+      "isError": false
+    }
+  ]
+}

@@ -37,6 +37,7 @@ export class Links {
             const forwardElement = document.querySelector(`#${targetElement}`);
             if (forwardElement) {
                 e.preventDefault();
+                App.getInstance().getModal().closeModalInfo();
                 forwardElement.dispatchEvent(new Event('click', { bubbles: true, cancelable: true }));
             } else {
                 console.warn(`Target element "${targetElement}" not found...`);

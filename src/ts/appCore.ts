@@ -20,6 +20,7 @@ import { Renderer } from './Extensions/renderer';
 import { Links } from './Extensions/links';
 import { ModalContentTemplate } from './Extensions/modalContentTemplate';
 import { UserConfigEventDetailModel } from './models/userConfigEventDetailModel.model';
+import { Newsfeed } from './Extensions/newsfeed';
 
 const unique = require('array-unique');
 const autocomplete = require('autocompleter');
@@ -394,17 +395,8 @@ export abstract class AppCore extends AppAbstract {
                 this.bindMapEvents();
                 this.bindFullscreenFormFilterListener();
                 this.printSupportAssociations();
-                /**
-                 * Temporary
-                 */
 
-                this.getSnackbar().show(
-                    'Désormais, les filtres multiples ont été remplacés par des filtres simples, mais vous pouvez toujours les réactiver dans vos <a href="#fwd2:userConfigBtn">préférences</a> !',
-                    'Fermer',
-                    false,
-                    12000,
-                    'top-center',
-                );
+                Newsfeed.load();
             }).catch((reason): void => {
                 if (this.getConfigFactory().isDebugEnabled()) {
                     console.error(reason);
@@ -888,7 +880,6 @@ export abstract class AppCore extends AppAbstract {
         const appSettingsElements = document.querySelectorAll('[data-app-settings]') as NodeListOf<HTMLElement>;
         const userConfig = this.getConfigFactory().userConfig;
 
-        console.log(userConfig);
         for (const [filterName, filterValuesArray] of Object.entries(this.getFormFilters())) {
             const selector = <HTMLSelectElement> this.formElement.querySelector(`select[name="${filterName}"]`);
             const optGroups = {} as { [name: string] : HTMLOptGroupElement };
@@ -902,7 +893,6 @@ export abstract class AppCore extends AppAbstract {
                 selector.innerHTML = '';
 
                 if (!selector.required && userConfig.filtersType === 'simple') {
-                    console.log('Adding ---');
                     const emptyOption = document.createElement('option');
                     emptyOption.text = '---';
                     emptyOption.value = '';
@@ -934,12 +924,10 @@ export abstract class AppCore extends AppAbstract {
                         selector.appendChild(option);
                     }
                 }
-                console.log(`Selector ${selector.id} has "${selector.value}" !!`);
+
                 if (selector.required && !selector.value) {
-                    console.log(`Selector ${selector.id} has no value !!`);
                     const firstOption = <HTMLOptionElement>selector.querySelector(`option:first-of-type${filters[selector.id] ? `[value="${filters[selector.id]}"]` : ''}`);
                     if (firstOption) {
-                        console.log(`Selecting ${firstOption.value} value !!`);
                         selector.value = firstOption.value;
                         firstOption.selected = true;
                     }

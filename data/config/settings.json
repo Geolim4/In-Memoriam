@@ -24,7 +24,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "4.6.0",
+    "appVersion": "4.7.0",
     "defaultUserConfig": {
       "backgroundRefresh": "on",
       "browserHistoryReplaceState": "",
@@ -50,6 +50,7 @@
     "definitionsSrc": "./data/config/definitions.json",
     "filtersSrc": "./data/config/filters.json",
     "glossarySrc": "./data/config/glossary.json",
+    "newsfeedSrc": "./data/config/newsfeed.json",
     "searchMinLength": 3,
     "googleMapsLoaderOptions": {
       "apiKey": "V3cXdfN2RZUkNGRlY2SXdDZjd0NlFWOE1CNGxRcWlJQUl6YVN5Qk",
