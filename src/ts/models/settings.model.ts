@@ -11,6 +11,7 @@ export interface Settings {
     definitionsSrc: string;
     contactEmail: string;
     filtersSrc: string;
+    newsfeedSrc: string;
     glossarySrc: string;
     googleMapsLoaderOptions: LoaderOptions;
     googleMapsOptions: google.maps.MapOptions;
