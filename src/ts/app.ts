@@ -64,6 +64,7 @@ export class App extends AppCore {
         const filters = {};
         const fields = <NodeListOf<HTMLSelectElement>> this.formElement.querySelectorAll('select[data-filterable="true"], input[data-filterable="true"]');
         const formFilters = this.getFormFilters();
+        const userConfig = this.getConfigFactory().userConfig;
 
         anchor.forEach((value): void => {
             const filter = value.split(/=(.*)/s).filter(Boolean);
@@ -90,6 +91,15 @@ export class App extends AppCore {
             if (fromAnchor) {
                 if (exposedFilters[field.id]) {
                     filters[field.id] = '';
+                    if (userConfig.filtersType === 'simple' && exposedFilters[field.id].includes(',')) {
+                        this.getModal().modalInfo(
+                            'Filtres simples activés',
+                            `Les valeurs du filtre <code>${StringUtilsHelper.ucFirst(this.getConfigDefinitions()[field.id]['#name'])}</code> ne peuvent pas être toutes utilisées car les filtres simples sont activés.
+                      <br />Sélection de la première valeur uniquement.`,
+                            { isError: true },
+                        );
+                        exposedFilters[field.id] = exposedFilters[field.id].split(',')[0];
+                    }
                     exposedFilters[field.id].split(',').forEach((val): void => {
                         if ((field.tagName === 'SELECT' && StringUtilsHelper.arrayContainsString(val, formFilters[field.id].map((v): string => v.value), 'one', true)) || field.tagName === 'INPUT') {
                             filters[field.id] += (filters[field.id] ? `,${val}` : val);
