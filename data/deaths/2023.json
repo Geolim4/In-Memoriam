@@ -176,6 +176,45 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "01",
+      "day": "30",
+      "keywords": "Alexandre Signorotto",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme affecté à la SAG de Nîmes a mit fin à ses jours avec son arme administrative.\nIl était père de trois enfants.\nPeu de sources disponibles sur ce décès.",
+      "section": "SAG",
+      "location": "Nîmes",
+      "county": "30",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.75807808624317,
+        "lng": 4.422971455071867
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "",
+          "title": "Fondation MG",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "",
+          "title": "Cagnotte Leetchi",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }

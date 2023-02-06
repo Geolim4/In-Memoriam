@@ -417,7 +417,6 @@ export abstract class AppCore extends AppAbstract {
             const newUserConfig = this.getConfigFactory().userConfig;
             const evtDetail = evt.detail as UserConfigEventDetailModel;
 
-            console.log(filters);
             if (newUserConfig.themeColor !== 'auto') {
                 Cookies.set(
                     'htmlColorSchemePreload',
@@ -448,6 +447,8 @@ export abstract class AppCore extends AppAbstract {
                 }
             }
 
+            this.setupSkeleton(filters);
+
             if (newUserConfig.saveFiltersInSession === 'on') {
                 Cookies.set(
                     'userSavedFilters',
@@ -457,8 +458,6 @@ export abstract class AppCore extends AppAbstract {
             } else {
                 Cookies.remove('userSavedFilters', { signed: true });
             }
-
-            this.setupSkeleton(filters);
         });
     }
 
