@@ -30,6 +30,7 @@ export interface Settings {
             off: string;
         };
         download: string;
+        gallery: string;
         heatmap: {
             on: string;
             off: string;

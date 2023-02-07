@@ -17,6 +17,7 @@ export interface Death {
     house: string;
     keywords: string;
     location: string;
+    image: string;
     month: string;
     origin: DeathOrigin;
     county: string;

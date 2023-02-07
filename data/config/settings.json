@@ -84,6 +84,7 @@
     "imagePath": {
       "chart": "./assets/images/map/chart.png",
       "house": "./assets/images/house/%house%.png",
+      "gallery": "./assets/images/gallery/",
       "random": "./assets/images/map/random.png",
       "list": "./assets/images/map/list.png",
       "clustering": {

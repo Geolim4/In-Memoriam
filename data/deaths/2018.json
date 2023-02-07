@@ -21,6 +21,7 @@
       "text": "Un policier de la brigade nuit du commissariat de Dunkerque nord s'est suicidé avec son arme de service.\nPère de trois enfants il était arrivé dans sa circonscription en 2004.",
       "section": "BN - CSP Dunkerque",
       "location": "Dunkerque",
+      "image": "",
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -77,6 +78,7 @@
       "text": "Un policier de la brigade nuit du commisariant de Quimper s'est suicidé avec son arme de service.\nPeu d'informations disponibles sur ce suicide",
       "section": "CSP Quimper",
       "location": "Quimper",
+      "image": "",
       "county": "29",
       "origin": "interieur",
       "gps": {
@@ -140,6 +142,7 @@
       "text": "Un policier de la CRS 11 de Lambersart (Nord) s'est suicidé avec son arme de service.\nIl était marié et père de famille.",
       "section": "CRS 11",
       "location": "Lambersart",
+      "image": "",
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -179,6 +182,7 @@
       "text": "Un policier affecté à la BN de de la circonscription de Nantes s'est suicidé à son domicile sans faire usage de son arme de service.\nIl était marié et père de trois enfants.",
       "section": "BN - CSP Nantes",
       "location": "Nantes",
+      "image": "",
       "county": "44",
       "origin": "interieur",
       "gps": {
@@ -224,6 +228,7 @@
       "text": "Un policier de la CSP de Saint-Avold s'est suicidé avec son arme de service au bord d'un étang à Puttelange-aux-lacs. En conflit avec sa hiérarchie il était à la ête de la BN de Freyming-Merlebach.",
       "section": "CSP St Avold",
       "location": "Puttelange-aux-Lacs",
+      "image": "",
       "county": "57",
       "origin": "interieur",
       "gps": {
@@ -275,6 +280,7 @@
       "text": "Un gendarme du CSTAG a retourné son arme contre lui lors d'une séance de tir.\nIl était affecté l’état-major de la région de gendarmerie",
       "section": "CSTAG - État-major",
       "location": "Marseille",
+      "image": "",
       "county": "13",
       "origin": "interieur",
       "gps": {
@@ -332,6 +338,7 @@
       "text": "Une jeune douanière a mis fin à ses jours avec son arme administrative son service de L'aéroport de Paris-Vatry (Marne) à l'issue de son service.\nElle était affecté a la Brigade Aéroportuaire depuis une semaine après être sortie d'école.",
       "section": "Brigade Aéroportuaire",
       "location": "Bussy-Lettrée, Aéroport de Paris-Vatry",
+      "image": "",
       "county": "51",
       "origin": "interieur",
       "gps": {
@@ -407,6 +414,7 @@
       "text": "Un gendarme du PMo de Cerans-Foulletourte (Dijon) mis fin à ses jours avec son arme administrative dans son logement de fonction.\nIl était père d'un enfant.",
       "section": "PMo de Cerans-Foulletourte",
       "location": "Cerans-Foulletourte",
+      "image": "",
       "county": "72",
       "origin": "interieur",
       "gps": {
@@ -458,6 +466,7 @@
       "text": "Un gendarme du PSPG de Valduc (Dijon) mis fin à ses jours avec son arme administrative dans son logement de fonction.\nIl était père de deux enfants.",
       "section": "PSPG Valduc",
       "location": "Dijon",
+      "image": "",
       "county": "21",
       "origin": "interieur",
       "gps": {
@@ -503,6 +512,7 @@
       "text": "Un jeune douanier a mis fin à ses jours avec son arme de service dans le parking de la place Saint-Thiébaut à Metz.\nIl était affecté à la brigade ferroviaire des douanes de Metz.",
       "section": "Brigade Ferroviaire",
       "location": "Metz",
+      "image": "",
       "county": "57",
       "origin": "interieur",
       "gps": {
@@ -542,6 +552,7 @@
       "text": "Un gendarme du PSIG de La Châtre mis fin à ses jours dans la gare SNCF d'Argenton-sur-Creuse.",
       "section": "PSIG La Châtre",
       "location": "La Châtre",
+      "image": "",
       "county": "36",
       "origin": "interieur",
       "gps": {
@@ -587,6 +598,7 @@
       "text": "Un gendarme de la Compagnie de Sécurité de l'Hôtel de Matignon mis fin à ses jours avec son arme administrative dans le jardin de l'hôtel de Matignon.\nIl était marié père de deux enfants.",
       "section": "CSHM (2e RIGR)",
       "location": "Paris 7e",
+      "image": "",
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -637,6 +649,7 @@
       "text": "Maggy Biskupski, figure emblématique de l'association MPC et gardienne de la paix à la BAC de Sartrouville, a mis fin à ses jours à son domicile.\n Elle laisse une lettre derrière expliquant les raisons de son geste.\n Son décès a provoqué une très vive émotion dans les rangs des forces de l'ordre.",
       "section": "BAC Sartrouville",
       "location": "Carrières-sous-Poissy",
+      "image": "",
       "county": "78",
       "origin": "interieur",
       "gps": {
@@ -700,6 +713,7 @@
       "text": "Un jeune gendarme de la BT de Saint-Astier a retourné son arme de service contre lui dans son logement de fonction.\nIl était affecté a cette brigade depuis 2 mois.",
       "section": "BT Saint-Astier",
       "location": "Saint-Astier",
+      "image": "",
       "county": "24",
       "origin": "interieur",
       "gps": {
@@ -763,6 +777,7 @@
       "text": "Un GAV de la CoB de Ambérieu-en-Bugey a retourné son arme de service contre lui au moment de commencer son service. Il aurait laissé un écrit pour justifier son geste.",
       "section": "CoB Ambérieu-en-Bugey",
       "location": "Ambérieu-en-Bugey",
+      "image": "",
       "county": "01",
       "origin": "interieur",
       "gps": {
