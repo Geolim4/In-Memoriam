@@ -22,6 +22,7 @@
       "text": "Un gendarme affecté à la BTA de Canet-en-Roussillon aurait mit fin à ses jours.\nIl était père de deux enfants.",
       "section": "BTA",
       "location": "Canet-en-Roussillon",
+      "image": "",
       "county": "66",
       "origin": "interieur",
       "gps": {
@@ -55,6 +56,7 @@
       "text": "Un gendarme affecté à la SAJ de Villeneuve d’Ascq a mit fin à ses jours avec son arme administrative.\nIl était père de deux enfants.",
       "section": "SAJ 59",
       "location": "Villeneuve d’Ascq",
+      "image": "",
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -94,6 +96,7 @@
       "text": "Un gendarme en service affecté à la BMo a perdu la vie dans un accident de la route à Saint-Priest.\nIl était pacsé d'une jeune fille.",
       "section": "BMo",
       "location": "Aubenas",
+      "image": "maximilien-maes.jpg",
       "county": "07",
       "origin": "interieur",
       "gps": {
@@ -159,6 +162,7 @@
       "text": "Un policier affecté à la CRS 20 de Limoges aurait mit fin à ses jours.\nIl était père de deux enfants.",
       "section": "CRS 20",
       "location": "Limoges",
+      "image": "",
       "county": "87",
       "origin": "interieur",
       "gps": {
@@ -192,6 +196,7 @@
       "text": "Un gendarme affecté à la SAG de Nîmes a mit fin à ses jours avec son arme administrative.\nIl était père de trois enfants.\nPeu de sources disponibles sur ce décès.",
       "section": "SAG",
       "location": "Nîmes",
+      "image": "alexandre-signorotto.jpg",
       "county": "30",
       "origin": "interieur",
       "gps": {
@@ -211,6 +216,12 @@
         {
           "url": "",
           "title": "Cagnotte Leetchi",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.instagram.com/p/CoO9OdgMEBH/",
+          "title": "@36quaidesorfevres",
           "paywall": false,
           "trustful": true
         }

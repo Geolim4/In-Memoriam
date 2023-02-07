@@ -22,6 +22,7 @@
       "text": "Deux militaires du 2eme RH sont décédés à bord de leur VBL d'une attaque par IED lors d'un opération de contrôle dans la région de Ménaka au Mali.",
       "section": "2eme RH",
       "location": "Région de Ménaka, Mali",
+      "image": "",
       "county": "ML",
       "origin": "opex",
       "gps": {
@@ -82,6 +83,7 @@
       "text": "Un policier de la PAF de Montgenèvre a mis fin à ses jours avec son arme de service dans son logement situé à Puy-Saint-Pierre (Hautes-Alpes).",
       "section": "DIDPAF 04-05",
       "location": "Montgenèvre",
+      "image": "",
       "county": "05",
       "origin": "interieur",
       "gps": {
@@ -127,6 +129,7 @@
       "text": "Le major de Gendarmerie de la BMo de Toulouse a mis fin à ses jours avec son arme de service.\nMarié et père de deux filles il était l'adjoint au peloton motorisé de la BMo.",
       "section": "BMo (EDSR 31)",
       "location": "Toulouse",
+      "image": "",
       "county": "31",
       "origin": "interieur",
       "gps": {
@@ -184,6 +187,7 @@
       "text": "Une gendarme de la caserne Général Guy-Delfosse à Lyon a mis fin à ses jours avec son arme de service.\nElle était mère d'un enfant et cheffe de la BPDJ de Lyon.",
       "section": "BPDJ (GGD 69)",
       "location": "Lyon 2e",
+      "image": "",
       "county": "69",
       "origin": "interieur",
       "gps": {
@@ -241,6 +245,7 @@
       "text": "Un gendarme adjoint volontaire a perdu la vie dans un accident de la route en se rendant au CNEFG de Saint-Astier.",
       "section": "CNEFG Saint-Astier",
       "location": "Saint-Léon-sur-l’Isle",
+      "image": "",
       "county": "24",
       "origin": "interieur",
       "gps": {
@@ -286,6 +291,7 @@
       "text": "Un pompier est décédé dans un grave accident de la circulation en se rendant sur une intervention.\nMarié et père de trois enfants, il était volontaire au CIS Mirecourt.",
       "section": "SDIS 88",
       "location": "Vroville",
+      "image": "",
       "county": "88",
       "origin": "interieur",
       "gps": {
@@ -349,6 +355,7 @@
       "text": "Un pompier est décédé d'un arrêt cardiaque après son séance de sport pendant son service.\nIl était pompier volontaire depuis plus de 24 ans à la caserne de Givors.",
       "section": "SDIS 69",
       "location": "Givors",
+      "image": "",
       "county": "69",
       "origin": "interieur",
       "gps": {
@@ -394,6 +401,7 @@
       "text": "Un policier de la CSP de Calais a mis fin a mis fin à ses jours avec son arme administrative à son domicile.\nPère de deux enfants il était en poste à Calais depuis une dizaine d'années.",
       "section": "CSP Calais",
       "location": "Zutkerque",
+      "image": "",
       "county": "62",
       "origin": "interieur",
       "gps": {
@@ -445,6 +453,7 @@
       "text": "Un pompier est décédé d'un arrêt cardiaque après son séance de sport pendant son service.\nIl était marié et père de trois enfants.",
       "section": "SDIS 987",
       "location": "Mahina",
+      "image": "",
       "county": "987",
       "origin": "domtom",
       "gps": {
@@ -484,6 +493,7 @@
       "text": "Un commandant de police de l’unité de lutte contre l’immigration irrégulière de la préfecture de police de Paris a mis fin à ses jours avec son arme administrative.",
       "section": "ULII (Préfecture de Police)",
       "location": "Saint-Maur-des-Fossés",
+      "image": "",
       "county": "94",
       "origin": "interieur",
       "gps": {
@@ -529,6 +539,7 @@
       "text": "Un policier de la PAF de Mayotte a mis fin à ses jours avec son arme administrative.\nPère de deux enfants il était Formateur aux techniques et à la sécurité en intervention (FTSI) et ancien champion de Judo.",
       "section": "DDPAF",
       "location": "Petite-Terre",
+      "image": "",
       "county": "976",
       "origin": "domtom",
       "gps": {
@@ -574,6 +585,7 @@
       "text": "Un militaire du Régiment de marche du Tchad a mis fin à ses jours par arme à feu.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Régiment de marche du Tchad",
       "location": "Meyenheim",
+      "image": "",
       "county": "68",
       "origin": "interieur",
       "gps": {
@@ -607,6 +619,7 @@
       "text": "Un policier du commissariat de Paris 8e a mis fin à ses jours à son domicile avec son arme administrative.\nIl était père de deux enfants.",
       "section": "CSP Paris 8e",
       "location": "Maisons-Laffitte",
+      "image": "",
       "county": "78",
       "origin": "interieur",
       "gps": {
@@ -646,6 +659,7 @@
       "text": "Un gendarme de l'école de Gendarmerie de Tulle a mis fin à ses jours avec son arme administrative.\nIl était marié et père de trois enfants.",
       "section": "École de Gendarmerie de Tulle",
       "location": "Tulle",
+      "image": "",
       "county": "19",
       "origin": "interieur",
       "gps": {
@@ -691,6 +705,7 @@
       "text": "Un pompier du l'Ain aurait mit fin à ses jours dans la campagne de Saint-Georges-de-Reneins.\nPeu d'informations disponibles sur ce suicide.",
       "section": "SDIS 01",
       "location": "Saint-Georges-de-Reneins",
+      "image": "",
       "county": "01",
       "origin": "interieur",
       "gps": {
@@ -736,6 +751,7 @@
       "text": "Un jeune policier du commissariat central de Mulhouse a mis fin à ses jours avec son arme administrative à son domicile.",
       "section": "CSP Mulhouse",
       "location": "Mulhouse",
+      "image": "",
       "county": "68",
       "origin": "interieur",
       "gps": {
@@ -775,6 +791,7 @@
       "text": "Un militaire est décédé en service lors d'un entrainement sans plus de détails données par le ministère des armées.",
       "section": "92e RI",
       "location": "Dzaoudzi",
+      "image": "",
       "county": "976",
       "origin": "opex",
       "gps": {
@@ -829,6 +846,7 @@
       "text": "Un militaire est décédé en service des suite d'un malaise cardiaque à bord d'une frégate de défense aérienne.",
       "section": "Frégate de Défense Aérienne Chevalier Paul",
       "location": "Mer Méditerranée",
+      "image": "",
       "county": "EA",
       "origin": "opex",
       "gps": {
@@ -871,6 +889,7 @@
       "text": "Un policier municipal de la ville de Saint-Mandé (Val-de-Marne) a mis fins à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Poste de Police",
       "location": "Saint-Mandé",
+      "image": "",
       "county": "94",
       "origin": "interieur",
       "gps": {
@@ -916,6 +935,7 @@
       "text": "Un formateur de police de l'ENP de Nîmes a mis fin à ses jours à son domicile.\nPeu d'informations disponibles sur ce suicide.",
       "section": "ENP Nîmes",
       "location": "Blauzac",
+      "image": "",
       "county": "30",
       "origin": "interieur",
       "gps": {
@@ -955,6 +975,7 @@
       "text": "Un gendarme de la section aérienne d’Occitanie a mis fin à ses jours à son domicile.\nPeu d'informations disponibles sur ce suicide.",
       "section": "SAG Occitanie",
       "location": "Mauguio",
+      "image": "",
       "county": "34",
       "origin": "interieur",
       "gps": {
@@ -1000,6 +1021,7 @@
       "text": "Un pompier est décédé au feu lors d'une intervention sur un bâtiment en proie aux flammes.",
       "section": "SDIS 80",
       "location": "Feuquières-en-Vimeu",
+      "image": "",
       "county": "80",
       "origin": "interieur",
       "gps": {
@@ -1057,6 +1079,7 @@
       "text": "Un major de la Compagnie Autoroutière Nord Ile-de-France a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "CRS 7",
       "location": "Deuil-la-Barre",
+      "image": "",
       "county": "95",
       "origin": "interieur",
       "gps": {
@@ -1090,6 +1113,7 @@
       "text": "Un major de la brigade jour de la CSP d'Épinal a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Police Secours",
       "location": "Épinal",
+      "image": "",
       "county": "88",
       "origin": "interieur",
       "gps": {
@@ -1123,6 +1147,7 @@
       "text": "Un policier de la CRS Alpes est décédé dans une avalanche aux côtés d'une championne de snowboard.",
       "section": "CRS 47 / CRS-Alpes",
       "location": "Canton d'Uri (Suisse)",
+      "image": "",
       "county": "",
       "origin": "interieur",
       "gps": {
@@ -1162,6 +1187,7 @@
       "text": "Un fusilier marin est décédé lors d'une opération en mer dans la baie de Cherbourg.",
       "section": "Marine Nationale",
       "location": "Cherbourg",
+      "image": "",
       "county": "50",
       "origin": "interieur",
       "gps": {
@@ -1213,6 +1239,7 @@
       "text": "Un policier affecté à l’antenne du SDLP de Bastia a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "SDLP",
       "location": "Bastia",
+      "image": "",
       "county": "2B",
       "origin": "interieur",
       "gps": {
@@ -1252,6 +1279,7 @@
       "text": "Un pompier de la caserne de Tourcoing a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "SDIS 59",
       "location": "Tourcoing",
+      "image": "",
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -1285,6 +1313,7 @@
       "text": "Un pompier de la caserne de Denain a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "SDIS 59",
       "location": "Denain",
+      "image": "",
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -1318,6 +1347,7 @@
       "text": "Un policier municipal de la ville de Nice a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Bureau d'Ordre",
       "location": "Nice",
+      "image": "",
       "county": "06",
       "origin": "interieur",
       "gps": {
@@ -1357,6 +1387,7 @@
       "text": "Un policier municipal de la ville de Roquemaure a mis fin à ses jours.",
       "section": "Hôtel de ville",
       "location": "Roquemaure",
+      "image": "",
       "county": "30",
       "origin": "interieur",
       "gps": {
@@ -1402,6 +1433,7 @@
       "text": "Un policier de la ville d'Arcachon a mis fin à ses jours à son domicile.\nPeu d'informations disponibles sur ce suicide.",
       "section": "CSP Arcachon",
       "location": "Arcachon",
+      "image": "",
       "county": "33",
       "origin": "interieur",
       "gps": {
@@ -1435,6 +1467,7 @@
       "text": "Une policière du commissariat de Rambouillet a été tué par un terroriste islamiste.\nAdjointe administrative et mère de deux enfants est décédé de ses blessures sur le trajet vers l'hôpital.",
       "section": "CSP Rambouillet",
       "location": "Rambouillet",
+      "image": "",
       "county": "78",
       "origin": "interieur",
       "gps": {
@@ -1486,6 +1519,7 @@
       "text": "Un pompier est décédé dans un accident de la route.",
       "section": "SDIS 78",
       "location": "",
+      "image": "",
       "county": "78",
       "origin": "interieur",
       "gps": {
@@ -1525,6 +1559,7 @@
       "text": "Une policier du GRI 84 a été tué par balles par un trafiquant de drogue lors d'une opération anti-drogue.\nIl était père de deux fillettes.",
       "section": "GRI 84",
       "location": "Avignon",
+      "image": "",
       "county": "84",
       "origin": "interieur",
       "gps": {
@@ -1582,6 +1617,7 @@
       "text": "Un gendarme du PSIG de Compiègne a mis fin à ses jours avec son arme administrative.\nIl était père de deux enfants.",
       "section": "PSIG Compiègne",
       "location": "Compiègne",
+      "image": "",
       "county": "60",
       "origin": "interieur",
       "gps": {
@@ -1621,6 +1657,7 @@
       "text": "Un militaire du SSA a mis fin à ses jours par arme à feu.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Direction SSA",
       "location": "Bordeaux",
+      "image": "",
       "county": "33",
       "origin": "interieur",
       "gps": {
@@ -1654,6 +1691,7 @@
       "text": "Un policier Strasbourgeois a mis fins à ses jours avec une arme à feu.\nAffecté à la BST, il était père de plusieurs enfants.",
       "section": "BST",
       "location": "Strasbourg",
+      "image": "",
       "county": "67",
       "origin": "interieur",
       "gps": {
@@ -1711,6 +1749,7 @@
       "text": "Un policier Amienois a mis fins à ses jours avec une arme à feu.\nIl était père de plusieurs enfants.",
       "section": "SDRT",
       "location": "Amiens",
+      "image": "",
       "county": "80",
       "origin": "interieur",
       "gps": {
@@ -1756,6 +1795,7 @@
       "text": "Un policier Rennais a mis fins à ses jours avec une arme à feu.\nIl était père d'une fille.",
       "section": "CSP Rennes",
       "location": "Rennes",
+      "image": "",
       "county": "35",
       "origin": "interieur",
       "gps": {
@@ -1813,6 +1853,7 @@
       "text": "Un policier du CRF de Draveil a mis fins à ses jours avec une arme à feu.\nIl était père de deux enfants.",
       "section": "CRF Draveil (Essonne)",
       "location": "Saint-Romain-la-Motte",
+      "image": "",
       "county": "42",
       "origin": "interieur",
       "gps": {
@@ -1858,6 +1899,7 @@
       "text": "Un militaire est décédé suite à un accident de tir avec un autre militaire lors d'un exercice en montagne.",
       "section": "3e RPIMa",
       "location": "Complexe de tir de Villemaury",
+      "image": "",
       "county": "11",
       "origin": "interieur",
       "gps": {
@@ -1915,6 +1957,7 @@
       "text": "Un gendarme de la caserne Abadie à Pau a mis fin à ses jours avec son arme de service.\nIl était pacsé et père de famille.",
       "section": "GGD 64",
       "location": "Pau",
+      "image": "",
       "county": "64",
       "origin": "interieur",
       "gps": {
@@ -1972,6 +2015,7 @@
       "text": "Un policière du commissariat de Cahors a mis fin à ses jours avec son arme de service.\nElle était mère de trois jeunes enfants.",
       "section": "CSP Cahors",
       "location": "Cahors",
+      "image": "",
       "county": "46",
       "origin": "interieur",
       "gps": {
@@ -2023,6 +2067,7 @@
       "text": "Un surveillant pénitentiaire de la maison centrale de Lannemezan a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Maison centrale de Lannemezan",
       "location": "Lannemezan",
+      "image": "",
       "county": "65",
       "origin": "interieur",
       "gps": {
@@ -2056,6 +2101,7 @@
       "text": "Lors d'un entrainement, un militaire du 2e REG est décédé en service dans une coulée de neige dans la pointe de Gargan dans le massif du Beaufortain.\nIl était marié et père de deux enfants.",
       "section": "2e REG (27e BIM)",
       "location": "Pointe de Gargan, massif du Beaufortain",
+      "image": "",
       "county": "73",
       "origin": "interieur",
       "gps": {
@@ -2113,6 +2159,7 @@
       "text": "Un gendarme de la brigade de recherche de Cosne-Cours-sur-Loire a mis fin à ses jours avec son arme de service.",
       "section": "BR",
       "location": "Cosne-Cours-sur-Loire",
+      "image": "",
       "county": "58",
       "origin": "interieur",
       "gps": {
@@ -2158,6 +2205,7 @@
       "text": "Un policier de la CRS 47 en déplacement à proximité de Nice a mis fin à ses jours avec son arme de service dans un des véhicules situé sur le parking de leur hôtel.",
       "section": "CRS 47",
       "location": "Valbonne",
+      "image": "",
       "county": "83",
       "origin": "interieur",
       "gps": {
@@ -2209,6 +2257,7 @@
       "text": "Un gendarme mobile de la caserne de Niort a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide. (Source: SOFT-ONG)",
       "section": "EGM 1/12",
       "location": "Niort",
+      "image": "",
       "county": "79",
       "origin": "interieur",
       "gps": {
@@ -2242,6 +2291,7 @@
       "text": "Un policier de la DRCPN a mis fin à ses jours avec son arme de service.\nIl était père d'un jeune enfant.",
       "section": "SCA - DRCPN",
       "location": "Paris",
+      "image": "",
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -2281,6 +2331,7 @@
       "text": "Un gendarme de la BMo de Saint-Lô a mis fin à ses jours sur un parking de la commune de Champrépus.",
       "section": "BMo Saint-Lô",
       "location": "Champrépus",
+      "image": "",
       "county": "50",
       "origin": "interieur",
       "gps": {
@@ -2332,6 +2383,7 @@
       "text": "Un pompier est décédé lors d'un exercice en pleine mer au large de Pornic.",
       "section": "SDIS 44",
       "location": "Pornic",
+      "image": "",
       "county": "44",
       "origin": "interieur",
       "gps": {
@@ -2383,6 +2435,7 @@
       "text": "Un gendarme de la BP de Baupame a mis fin à ses jours dans son logement de fonction avec son arme de service.",
       "section": "BP Baupame",
       "location": "Champrépus",
+      "image": "",
       "county": "50",
       "origin": "interieur",
       "gps": {
@@ -2428,6 +2481,7 @@
       "text": "Un commissaire de l'antenne DGSI de Rennes a mis fin à ses jours avec son arme de service sur le parking du commissariat de Rennes.",
       "section": "DGSI Rennes",
       "location": "Rennes",
+      "image": "",
       "county": "35",
       "origin": "interieur",
       "gps": {
@@ -2473,6 +2527,7 @@
       "text": "Une capitaine de police a été retrouvé décédée dans son appartement (circonstances à confirmer ?).",
       "section": "Courbevoie (Hauts-de-Seine)",
       "location": "Verdun",
+      "image": "",
       "county": "55",
       "origin": "interieur",
       "gps": {
@@ -2512,6 +2567,7 @@
       "text": "Un policier du commissariat de Verdun a mis fin à ses jours.\nMari et père de famille il était proche de la retraite.",
       "section": "CSP Verdun",
       "location": "Verdun",
+      "image": "",
       "county": "55",
       "origin": "interieur",
       "gps": {
@@ -2557,6 +2613,7 @@
       "text": "Un militaire du 3e RH est décédé des suite d'un arrêt cardique en opérations au Sud-Liban.\nIl était marié et père d'un enfant.",
       "section": "3e RH (BFA)",
       "location": "Région Sud",
+      "image": "",
       "county": "LB",
       "origin": "opex",
       "gps": {
@@ -2605,6 +2662,7 @@
       "text": "Un jeune ADS en formation au CRF de Draveil a mis fin à ses jours avec une arme à feu à son domicile.",
       "section": "CRF Draveil",
       "location": "Draveil",
+      "image": "",
       "county": "91",
       "origin": "interieur",
       "gps": {
@@ -2650,6 +2708,7 @@
       "text": "Une jeune policière du 12e est décédée dans un accident de trottinette en se rendant à son commissariat pour prendre son service.",
       "section": "CSP Paris 12e",
       "location": "Paris",
+      "image": "",
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -2701,6 +2760,7 @@
       "text": "Un policier de Carpentras (Vaucluse) a mis fin à ses jours avec son arme de service en lisière de forêt à Divajeu, dans la Drôme.\nIl était marié et père de deux enfants.",
       "section": "CSP Carpentras",
       "location": "Divajeu",
+      "image": "",
       "county": "26",
       "origin": "interieur",
       "gps": {
@@ -2752,6 +2812,7 @@
       "text": "Un policier de la CRS 51 a mis fin à ses jours avec son arme de service dans sa chambre d'hôtel lors d'un déplacement à Perpignan.",
       "section": "CRS 51",
       "location": "Perpignan",
+      "image": "",
       "county": "66",
       "origin": "interieur",
       "gps": {
@@ -2803,6 +2864,7 @@
       "text": "Un gendarme du PMo Sélestat a mis fin à ses jours avec son arme de service dans son logement de service.\nPère d'un enfant il était à un mois de la retraite.",
       "section": "PMo Sélestat",
       "location": "Sélestat",
+      "image": "",
       "county": "67",
       "origin": "interieur",
       "gps": {
@@ -2854,6 +2916,7 @@
       "text": "Un mécanicien de la sécurité civile est décédé lors d'un crash d'hélicoptère en Isère.\nIl était marié et père d'un petit garçon.",
       "section": "Dragon 38",
       "location": "Villard-de-Lans",
+      "image": "",
       "county": "38",
       "origin": "interieur",
       "gps": {
@@ -2905,6 +2968,7 @@
       "text": "Un marin du GPD Atlantique a perdu la vie en mer lors d'un exercice de plongée situé sur le site de Pénnou-Pell, au sud de Brest.",
       "section": "GPD Atlantique (Marine Nationale)",
       "location": "Pénnou-Pell",
+      "image": "",
       "county": "29",
       "origin": "interieur",
       "gps": {
@@ -2953,6 +3017,7 @@
       "text": "Un militaire du 7e BCA est decédé en opération dans la région de Gossi, au sud du Mali, lors d'une opération au sein de la force BARKHANE.\nIl était pacsé et père d’un enfant.",
       "section": "GCM - 7e BCA",
       "location": "Région de Gossi",
+      "image": "",
       "county": "ML",
       "origin": "opex",
       "gps": {
@@ -3001,6 +3066,7 @@
       "text": "Une jeune policière récemment affectée au commissariat de Choisy-le-Roi est décédé après avoir absorbé des médicaments.",
       "section": "CSP Choisy-le-Roi",
       "location": "Choisy-le-Roi",
+      "image": "",
       "county": "94",
       "origin": "interieur",
       "gps": {
@@ -3040,6 +3106,7 @@
       "text": "Un gendarme de la BT de Saint-Laurent-sur-Gore a mis fin à ses jours avec son arme de service.\nIl était marié et père de deux jeunes jumeaux.",
       "section": "BT Saint-Laurent-sur-Gore",
       "location": "Saint-Laurent-sur-Gore",
+      "image": "",
       "county": "87",
       "origin": "interieur",
       "gps": {
@@ -3085,6 +3152,7 @@
       "text": "Une gendarme de 35 ans se tue accidentellement avec son arme de service lors d'une manipulation dans la chambre forte de la caserne.\nElle était mariée et mère d'un bébé de 10 mois.",
       "section": "CGD Hyères",
       "location": "Hyères",
+      "image": "",
       "county": "83",
       "origin": "interieur",
       "gps": {
@@ -3136,6 +3204,7 @@
       "text": "Une officier de gendarmerie a mis fin à ses jours avec son arme de service.\nIl était marié et père de deux enfants.",
       "section": "COB Issoudun",
       "location": "Issoudun",
+      "image": "",
       "county": "36",
       "origin": "interieur",
       "gps": {
@@ -3187,6 +3256,7 @@
       "text": "Un policier municipal a mis fin à ses jours avec son arme de service dans un véhicule de service.\nIl était père de deux jeunes enfants.",
       "section": "Poste de police",
       "location": "Chambourcy",
+      "image": "",
       "county": "78",
       "origin": "interieur",
       "gps": {
@@ -3226,6 +3296,7 @@
       "text": "Un gendarme décède d'un arrêt cardiaque lors d'une épreuve sportive pour devenir maître-chien.",
       "section": "BP Port-Jérôme-sur-Seine",
       "location": "Port-Jérôme-sur-Seine",
+      "image": "",
       "county": "76",
       "origin": "interieur",
       "gps": {
@@ -3277,6 +3348,7 @@
       "text": "Un militaire du 4e RCh est décédé accidentellement au Mali le 12 octobre dans le cadre de l’opération Barkhane.",
       "section": "4e RCh",
       "location": "Tombouctou",
+      "image": "",
       "county": "ML",
       "origin": "opex",
       "gps": {
@@ -3325,6 +3397,7 @@
       "text": "Une surveillante pénitentiaire du centre de détention de Joux-la-Ville de a mis fins à ses jours à son domicile.",
       "section": "Centre de Détention",
       "location": "Joux-la-Ville (Yonne)",
+      "image": "",
       "county": "89",
       "origin": "interieur",
       "gps": {
@@ -3358,6 +3431,7 @@
       "text": "Un policier a mis fin à ses jours avec son arme de service à son domicile.\nIl était père de deux enfants.",
       "section": "BSU",
       "location": "Anglet",
+      "image": "",
       "county": "64",
       "origin": "interieur",
       "gps": {
@@ -3397,6 +3471,7 @@
       "text": "Un policier a mis fin à ses jours avec son arme de service à son domicile.\nIl était père d'une jeune fille.",
       "section": "CSP Reims",
       "location": "Reims",
+      "image": "",
       "county": "51",
       "origin": "interieur",
       "gps": {
@@ -3436,6 +3511,7 @@
       "text": "Un officier du PSIG de Mulhouse a mis fins à ses jours avec son arme de service.\nIl était marié et père de deux enfants.",
       "section": "PSIG",
       "location": "Mulhouse",
+      "image": "",
       "county": "68",
       "origin": "interieur",
       "gps": {
@@ -3481,6 +3557,7 @@
       "text": "Un policier a mis fin à ses jours avec son arme de service à son domicile.\nPeu d'informations disponibles sur ce suicide.",
       "section": "BMR (PAF 77)",
       "location": "Chessy",
+      "image": "",
       "county": "77",
       "origin": "interieur",
       "gps": {
@@ -3514,6 +3591,7 @@
       "text": "Un policier a mis fin à ses jours avec son arme de service dans la cour du commissariat.\nIl était père de deux enfants.",
       "section": "Brigade Nuit, CSP Malartic",
       "location": "Saint-Denis",
+      "image": "",
       "county": "974",
       "origin": "domtom",
       "gps": {
@@ -3559,6 +3637,7 @@
       "text": "Un militaire de la légion étrangère décède lors d'un exercice de préparation opérationnelle.",
       "section": "2e REI",
       "location": "Bellegarde",
+      "image": "",
       "county": "30",
       "origin": "interieur",
       "gps": {
@@ -3610,6 +3689,7 @@
       "text": "Un policier municipal de la ville de Saint-Émilion a mis fin à ses jours avec son arme de service sur son lieu de travail.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Police Municipale",
       "location": "Saint-Émilion",
+      "image": "",
       "county": "33",
       "origin": "interieur",
       "gps": {
@@ -3655,6 +3735,7 @@
       "text": "Un policier municipal de la ville de Saint-Émilion a mis fin à ses jours sans faire usage de son arme de service.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Police Municipale Corbehem",
       "location": "Vitry-en-Artois",
+      "image": "",
       "county": "62",
       "origin": "interieur",
       "gps": {
@@ -3700,6 +3781,7 @@
       "text": "Pablo, un EGPX en formation à l'ENP de Nîmes est décédé des suites d'un arrêt cardiaque après un footing au sein de son école.\nIl était en formation depuis plusieurs mois après avoir été ADS pendant presque 3 ans à Lyon.",
       "section": "ENP Nîmes",
       "location": "Nîmes",
+      "image": "",
       "county": "30",
       "origin": "interieur",
       "gps": {
@@ -3751,6 +3833,7 @@
       "text": "Un policier de la DIPJ de Rennes a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "DIPJ Rennes",
       "location": "Rennes",
+      "image": "",
       "county": "35",
       "origin": "interieur",
       "gps": {
@@ -3790,6 +3873,7 @@
       "text": "Un policier de la PAF de Beauvais a mis fin à ses jours à son domicile à Sarnois.\nPeu d'informations disponibles sur ce suicide.",
       "section": "PAF Beauvais",
       "location": "Sarnois",
+      "image": "",
       "county": "60",
       "origin": "interieur",
       "gps": {
@@ -3841,6 +3925,7 @@
       "text": "Un policier de la CRS 60 a mis fin à ses jours par pendaison.\nPeu d'informations disponibles sur ce suicide.",
       "section": "CRS 60",
       "location": "Montfavet",
+      "image": "",
       "county": "84",
       "origin": "interieur",
       "gps": {
@@ -3874,6 +3959,7 @@
       "text": "Un jeune élève gendarme a mis fins à ses jours avec son arme de service dans son logement de fonction.",
       "section": "BTA",
       "location": "Malesherbois",
+      "image": "",
       "county": "45",
       "origin": "interieur",
       "gps": {
@@ -3925,6 +4011,7 @@
       "text": "Un militaire du 13e BCA décède d'un malaise cardiaque pendant un entraînement sur le sentier de la Chapelle sur île de La Réunion.\nIl était marié et père de trois enfants.",
       "section": "13e BCA",
       "location": "Hyères",
+      "image": "",
       "county": "83",
       "origin": "opex",
       "gps": {
@@ -3976,6 +4063,7 @@
       "text": "Un policier de la brigade motocycliste de Nantes est décédé d'un malaise cardiaque en service.\nIl était papa d'un jeune enfant.",
       "section": "CSP Nantes",
       "location": "Nantes",
+      "image": "",
       "county": "44",
       "origin": "interieur",
       "gps": {
@@ -4030,6 +4118,7 @@
       "text": "Un policier de la circonscription de Cagnes-sur-Mer a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "CSP Cagnes-sur-Mer",
       "location": "Cagnes-sur-Mer",
+      "image": "",
       "county": "06",
       "origin": "interieur",
       "gps": {

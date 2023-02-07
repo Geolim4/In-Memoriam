@@ -17,6 +17,17 @@
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuDeathInfoWindow">
+                    {% if death.image %}
+                        <a href="javascript:;"
+                           class="dropdown-item d-block d-md-none"
+                           data-controller="advanced-modal"
+                           data-modal-title="Photo d'hommage"
+                           data-modal-content-template="content/photo"
+                           data-modal-options='{{ {okLabel: "Fermer"}|json_encode|url_encode }}'
+                           data-modal-content-vars='{{ {src: config.imagePath.gallery ~ death.image, alt: death.image, copyright: true}|json_encode|url_encode }}'>
+                            <i class="fa-solid fa-image d-none d-sm-inline-block"></i> Voir la photo d'hommage
+                        </a>
+                    {% endif %}
                     <a href="javascript:;"
                        class="dropdown-item"
                        data-controller="copy-text"
@@ -68,45 +79,61 @@
             </p>
         {% endif %}
     {% endfor %}
-    <div class="mt-3">
-        <strong>Emplacement</strong>: {{ death.location }} (<abbr data-tippy-content="Code département ou pays: {{ death.county }}">{{ app.getCountyByCode(death.county, {removeCountyPrefix: true}) }}</abbr>)
-        {% if not death.gps.accurate %}
-            <strong style="color: orangered;"><abbr data-tippy-content="Indique que l'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>
-        {% endif %}
-       <a href="https://maps.google.com/?ll={{ death.gps.lat }},{{ death.gps.lng }}&amp;q={{ death.location }}, {{ app.getCountyByCode(death.county) }}" target="_blank" tabindex="0">
-           <i class="fa-solid fa-location-dot fa-lg"></i>
-       </a>
-       <br><br>
-       <strong>Date</strong>: {{ death.day }}/{{ death.month }}/{{ death.year }}
-       <br><br>
-       <strong>Cause</strong>: {{ app.getFilterValueLabel('cause', death.cause) }}
-       <br><br>
-       <strong>Hommage</strong>:
+    <div class="row no-gutters">
+        <div class="mt-3 {% if death.image %}col-12 col-md-8 pr-2{% else %}col-12{% endif %}">
+            <strong>Emplacement</strong>: {{ death.location }} (<abbr data-tippy-content="Code département ou pays: {{ death.county }}">{{ app.getCountyByCode(death.county, {removeCountyPrefix: true}) }}</abbr>)
+            {% if not death.gps.accurate %}
+                <strong style="color: orangered;"><abbr data-tippy-content="Indique que l'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>
+            {% endif %}
+            <a href="https://maps.google.com/?ll={{ death.gps.lat }},{{ death.gps.lng }}&amp;q={{ death.location }}, {{ app.getCountyByCode(death.county) }}" target="_blank" tabindex="0">
+                <i class="fa-solid fa-location-dot fa-lg"></i>
+            </a>
+            <br><br>
+            <strong>Date</strong>: {{ death.day }}/{{ death.month }}/{{ death.year }}
+            <br><br>
+            <strong>Cause</strong>: {{ app.getFilterValueLabel('cause', death.cause) }}
+            <br><br>
+            <strong>Hommage</strong>:
             {% if death.homage %}
                 <a href="{{ death.homage.url }}" target="_blank">{{ acronymise(death.homage.title) }}</a>
                 <i class="fa-solid fa-circle-check" data-tippy-content="Source officielle"></i>
             {% else %}
                 <em>Non communiqué</em>
             {% endif %}
-       <br><br>
-       <strong>Circonstances</strong>: {{ acronymise(death.text|nl2br) }}
-   </div>
-    <div class="death-sources mt-3 pr-5">
-        {% if death.sources|length == 1 and death.sources[0].title == '__CONFIDENTIAL__' %}
-            <i class="fa-solid fa-triangle-exclamation" style="color: orangered;"></i>&nbsp;
-            <strong data-tippy-content="La source étant anonyme, ce décès peut ne pas être fiable à 100%.">Source anonyme</strong>
-        {% else %}
-            <strong>Sources</strong>:
-            {% for source in death.sources %}
-                {% if source.url %}
-                <a href="{{ source.url }}" target="_blank">{{ source.title }}</a>
-                {% else %}
-                    <span>{{ source.title }}</span>
-                {% endif %}
-                {% if source.paywall %} <i class="fa-solid fa-lock" data-tippy-content="Article réservé aux abonnés"></i>{% endif %}{% if not source.trustful %} <i class="fa-solid fa-triangle-exclamation" style="color: orangered;" data-tippy-content="Prudence, une partie du contenu de cet article peut être inexact"></i>{% endif %}{% if not loop.last %}, {% endif %}
-            {% else %}
-                <strong><i class="fa-solid fa-triangle-exclamation" style="color: orangered;"></i> Aucune source renseignée</strong>
-            {% endfor %}
+            <br><br>
+            <strong>Circonstances</strong>: {{ acronymise(death.text|nl2br) }}
+        </div>
+        {% if death.image %}
+            <div class="col-4 align-self-center d-none d-md-block">
+                <a href="javascript:;"
+                   style="cursor: zoom-in;"
+                   class="d-block"
+                   data-controller="advanced-modal"
+                   data-modal-title="Photo d'hommage"
+                   data-modal-content-template="content/photo"
+                   data-modal-options='{{ {okLabel: "Fermer"}|json_encode|url_encode }}'
+                   data-modal-content-vars='{{ {src: config.imagePath.gallery ~ death.image, alt: death.image, copyright: true}|json_encode|url_encode }}'>
+                    <img src="{{ config.imagePath.gallery ~ death.image}}" alt="{{ death.image }}" class="mw-100 rounded border border-dark" />
+                </a>
+            </div>
         {% endif %}
+        <div class="death-sources mt-3 pr-5 col-12">
+            {% if death.sources|length == 1 and death.sources[0].title == '__CONFIDENTIAL__' %}
+                <i class="fa-solid fa-triangle-exclamation" style="color: orangered;"></i>&nbsp;
+                <strong data-tippy-content="La source étant anonyme, ce décès peut ne pas être fiable à 100%.">Source anonyme</strong>
+            {% else %}
+                <strong>Sources</strong>:
+                {% for source in death.sources %}
+                    {% if source.url %}
+                        <a href="{{ source.url }}" target="_blank">{{ source.title }}</a>
+                    {% else %}
+                        <span>{{ source.title }}</span>
+                    {% endif %}
+                    {% if source.paywall %} <i class="fa-solid fa-lock" data-tippy-content="Article réservé aux abonnés"></i>{% endif %}{% if not source.trustful %} <i class="fa-solid fa-triangle-exclamation" style="color: orangered;" data-tippy-content="Prudence, une partie du contenu de cet article peut être inexact"></i>{% endif %}{% if not loop.last %}, {% endif %}
+                {% else %}
+                    <strong><i class="fa-solid fa-triangle-exclamation" style="color: orangered;"></i> Aucune source renseignée</strong>
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
 </div>
