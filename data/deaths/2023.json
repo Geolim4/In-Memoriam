@@ -226,6 +226,110 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "02",
+      "day": "13",
+      "keywords": "Joshua ALLOY",
+      "house": "gd",
+      "peers": [],
+      "text": "Un élève-gendarme de l'école de Gendarmerie de Tulle a mis fin à ses jours avec son arme administrative.\nIl était âgé de 22 ans.",
+      "section": "École de Gendarmerie de Tulle",
+      "location": "Tulle",
+      "image": "",
+      "county": "19",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.25816320869087,
+        "lng": 1.7677660932485417
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/tulle-un-eleve-gendarme-de-22-ans-sest-suicide-a-lecole-de-gendarmerie.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/suicide-d-un-eleve-gendarme-a-l-ecole-de-gendarmerie-de-tulle",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "",
+          "title": "Fondation MG",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "02",
+      "day": "20",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier, chef du groupe \"Crim\" à la police judiciaire du Var, a mis fin à ses jours avec son arme administrative.\nIl était marié et père de deux enfants dont un bébé.",
+      "section": "PJ 83",
+      "location": "Toulon",
+      "image": "",
+      "county": "83",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.12523213342591,
+        "lng": 5.928140299759682
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/toulon-un-policier-se-suicide-avec-son-arme-de-service-dans-son-bureau.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/PoliceNat83/status/1627679634119614465",
+          "title": "@PoliceNat83",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/societe/4024598-20230220-toulon-policier-suicide-bureau",
+          "title": "20 Minutes",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-de-toulon-se-suicide-dans-son-bureau-avec-son-arme-de-service-9944301",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.varmatin.com/faits-divers/il-y-a-beaucoup-demotion-les-policiers-sous-le-choc-apres-le-suicide-dun-commandant-a-toulon-829488",
+          "title": "Var Matin",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
