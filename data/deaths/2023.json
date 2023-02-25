@@ -19,7 +19,7 @@
       "keywords": "Nicolas ACQUIER",
       "house": "gd",
       "peers": [],
-      "text": "Un gendarme affecté à la BTA de Canet-en-Roussillon aurait mit fin à ses jours.\nIl était père de deux enfants.",
+      "text": "Un gendarme affecté à la BTA de Canet-en-Roussillon a mit fin à ses jours.\nIl était père de deux enfants.",
       "section": "BTA",
       "location": "Canet-en-Roussillon",
       "image": "",
@@ -115,7 +115,8 @@
           "title": "@Gendarmerie",
           "paywall": false,
           "trustful": true
-        },{
+        },
+        {
           "url": "https://actu17.fr/faits-divers/ardeche-un-gendarme-en-service-meurt-dans-un-accident-de-la-route.html",
           "title": "Actu17",
           "paywall": false,
@@ -242,7 +243,7 @@
       "text": "Un élève-gendarme de l'école de Gendarmerie de Tulle a mis fin à ses jours avec son arme administrative.\nIl était âgé de 22 ans.",
       "section": "École de Gendarmerie de Tulle",
       "location": "Tulle",
-      "image": "",
+      "image": "joshua-alloy.jpg",
       "county": "19",
       "origin": "interieur",
       "gps": {
@@ -326,6 +327,92 @@
         {
           "url": "https://www.varmatin.com/faits-divers/il-y-a-beaucoup-demotion-les-policiers-sous-le-choc-apres-le-suicide-dun-commandant-a-toulon-829488",
           "title": "Var Matin",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "02",
+      "day": "23",
+      "keywords": "André Dominé",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier réserviste est décédé dans un accident de la route en allant prendre son service.\nIl était marié et père de famille.",
+      "section": "CSP Nantes",
+      "location": "Nantes",
+      "image": "",
+      "county": "44",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.227579,
+        "lng": -1.551646
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://twitter.com/PoliceNat44/status/1628722362836189185",
+          "title": "@PoliceNat44",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/faits-divers/un-policier-reserviste-par-ailleurs-huissier-au-tribunal-tue-dans-un-accident-25469384-b39d-11ed-84bc-d9a7b26c7afb",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/pays-de-la-loire/aigrefeuille-sur-maine_44002/accident-mortel-au-sud-de-nantes-le-pilote-du-scooter-etait-policier_57608072.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "02",
+      "day": "23",
+      "keywords": "Sandy, IDF",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier de la CRS autoroutière Nord de Paris a mis fin à ses jours avec son arme administrative.",
+      "section": "CRS Autoroute Nord",
+      "location": "Deuil-la-Barre",
+      "image": "",
+      "county": "95",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.96163834398642,
+        "lng": 2.321452252894184
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/val-doise-un-policier-de-la-crs-autoroutiere-nord-ile-de-france-sest-suicide.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/Alternative_PN/status/1629112767411019777",
+          "title": "@Alternative_PN",
           "paywall": false,
           "trustful": true
         }
