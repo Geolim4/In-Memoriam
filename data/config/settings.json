@@ -24,7 +24,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "4.8.3",
+    "appVersion": "4.8.4",
     "defaultUserConfig": {
       "backgroundRefresh": "on",
       "browserHistoryReplaceState": "",
