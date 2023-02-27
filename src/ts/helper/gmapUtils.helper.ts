@@ -33,7 +33,7 @@ export class GmapUtils {
         firstChild.title = opts.title;
         controlDiv.appendChild(firstChild);
 
-        secondChild.id = `${opts.ctrlChildId ? opts.ctrlChildId : `ctrl-child-${Math.floor(Math.random() * 1000)}`}BtnImg`;
+        secondChild.id = `${opts.ctrlChildId ? opts.ctrlChildId : `ctrl-child-${Math.floor(Math.random() * 1000)}`}BtnChild`;
         secondChild.className = 'ctrl-child';
         secondChild.innerText = hasText ? opts.text : '';
         if (opts.imagePath) {

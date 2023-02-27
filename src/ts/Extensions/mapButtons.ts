@@ -73,7 +73,7 @@ export class MapButtons {
                 });
                 let imgX = '0';
                 const animationInterval = setInterval((): void => {
-                    const localizationImgElmt = document.querySelector('#localizationBtnImg') as HTMLInputElement;
+                    const localizationImgElmt = document.querySelector('#localizationBtnChild') as HTMLInputElement;
                     imgX = (+imgX === -18 ? '0' : '-18');
                     localizationImgElmt.style.backgroundPosition = `${imgX}px 0px`;
                 }, 500);
@@ -122,7 +122,7 @@ export class MapButtons {
                         map.fitBounds(bounds);
                     }
 
-                    (document.querySelector('#localizationBtnImg') as HTMLInputElement).style.backgroundPosition = '-144px 0px';
+                    (document.querySelector('#localizationBtnChild') as HTMLInputElement).style.backgroundPosition = '-144px 0px';
                     clearInterval(animationInterval);
 
                     this.userPosition = position;
@@ -137,7 +137,7 @@ export class MapButtons {
                         {
                             cancelCallback: (): void => {
                                 clearInterval(animationInterval);
-                                (document.querySelector('#localizationBtnImg') as HTMLInputElement).style.backgroundPosition = '0px 0px';
+                                (document.querySelector('#localizationBtnChild') as HTMLInputElement).style.backgroundPosition = '0px 0px';
                             },
                             confirmCallback: (): void => {
                                 navigator.geolocation.getCurrentPosition(geolocationCallback);
@@ -207,7 +207,7 @@ export class MapButtons {
 
         GmapUtils.bindButton(map, (): void => {
             App.getInstance().setHeatmapEnabled(!App.getInstance().isHeatmapEnabled());
-            const heatmapImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}BtnImg`) as HTMLInputElement;
+            const heatmapImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}BtnChild`) as HTMLInputElement;
             const imgUrl = App.getInstance().getConfigFactory().config.imagePath.heatmap[App.getInstance().isHeatmapEnabled() ? 'on' : 'off'];
             heatmapImgElmt.style.backgroundImage = `url("${imgUrl}")`;
             App.getInstance().reloadMarkers(false);
@@ -227,7 +227,7 @@ export class MapButtons {
 
         GmapUtils.bindButton(map, (): void => {
             App.getInstance().setClusteringEnabled(!App.getInstance().isClusteringEnabled());
-            const clusteringImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}BtnImg`) as HTMLInputElement;
+            const clusteringImgElmt = document.querySelector(`#${buttonOptions.ctrlChildId}BtnChild`) as HTMLInputElement;
             const imgUrl = App.getInstance().getConfigFactory().config.imagePath.clustering[App.getInstance().isClusteringEnabled() ? 'on' : 'off'];
             clusteringImgElmt.style.backgroundImage = `url("${imgUrl}")`;
             App.getInstance().reloadMarkers(false);
@@ -325,12 +325,12 @@ export class MapButtons {
     }
 
     private bindFilterButtonOnSmallScreens(map: google.maps.Map): void {
-        const buttonId = 'filtersBtn';
+        const buttonId = 'filtersToggle';
         const hideFiltersText = 'Cacher les filtres';
         const showFiltersText = 'Afficher les filtres';
         const buttonOptions = {
             ctrlChildId: buttonId,
-            ctrlClasses: ['mss'],
+            ctrlClasses: ['d-block', 'd-lg-none', 'hide-fs'],
             ctrlPosition: google.maps.ControlPosition.TOP_CENTER,
             text: hideFiltersText,
             title: '',
@@ -345,15 +345,15 @@ export class MapButtons {
             const smallScreen = App.getInstance().isOnSmallScreen();
             if (document.getElementById('form-filters').classList.contains('user-hidden')) {
                 document.getElementById('form-filters').classList.remove('user-hidden');
-                document.getElementById(buttonId).innerText = hideFiltersText;
+                document.getElementById(`${buttonId}BtnChild`).innerText = hideFiltersText;
                 if (smallScreen) {
-                    document.getElementById('form-filters').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+                    document.getElementById('form-filters-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             } else {
                 document.getElementById('form-filters').classList.add('user-hidden');
-                document.getElementById(buttonId).innerText = showFiltersText;
+                document.getElementById(`${buttonId}BtnChild`).innerText = showFiltersText;
                 if (smallScreen) {
-                    document.getElementById('form-filters-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+                    document.getElementById('map').scrollIntoView({ behavior: 'smooth', block: 'end' });
                 }
             }
         }, buttonOptions);
