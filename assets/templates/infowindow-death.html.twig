@@ -93,14 +93,16 @@
             <br><br>
             <strong>Cause</strong>: {{ app.getFilterValueLabel('cause', death.cause) }}
             <br><br>
-            <strong>Hommage</strong>:
-            {% if death.homage %}
-                <a href="{{ death.homage.url }}" target="_blank">{{ acronymise(death.homage.title) }}</a>
-                <i class="fa-solid fa-circle-check" data-tippy-content="Source officielle"></i>
-            {% else %}
-                <em>Non communiqué</em>
+            {% if death.cause != 'suicide' %}
+                <strong>Hommage</strong>:
+                {% if death.homage %}
+                    <a href="{{ death.homage.url }}" target="_blank">{{ acronymise(death.homage.title) }}</a>
+                    <i class="fa-solid fa-circle-check" data-tippy-content="Source officielle"></i>
+                {% else %}
+                    <em>Non communiqué</em>
+                {% endif %}
+                <br><br>
             {% endif %}
-            <br><br>
             <strong>Circonstances</strong>: {{ acronymise(death.text|nl2br) }}
         </div>
         {% if death.image %}
