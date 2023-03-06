@@ -417,6 +417,92 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "02",
+      "day": "27",
+      "keywords": "",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire sous-officier de la caserne Kléber a mis fin à ses jours avec son arme administrative.\nIl laisse une lettre expliquant les raisons de son geste derrière lui.",
+      "section": "Caserne Kléber",
+      "location": "Lille",
+      "image": "",
+      "county": "59",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 50.64538997465988,
+        "lng": 3.065769046429719
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/lille-un-militaire-se-suicide-apres-avoir-envoye-un-e-mail-dexplications.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/1297035/article/2023-02-28/lille-un-militaire-age-de-45-ans-se-suicide-avec-son-arme-de-service",
+          "title": "La Voix du Nord",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/lille-une-enquete-en-cours-apres-le-suicide-d-un-militaire-avec-son-arme-de-service-dans-son-bureau-6252675",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "03",
+      "day": "02",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Une policière de la circonscription de Pointe-à-Pitre a mis fin à ses jours avec son arme administrative.\nElle laisse une lettre expliquant les raisons de son geste derrière elle.",
+      "section": "CSP Pointe-à-Pitre",
+      "location": "Pointe-à-Pitre",
+      "image": "",
+      "county": "971",
+      "origin": "domtom",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 16.239200457724042,
+        "lng": -61.52748408471146
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/guadeloupe-une-policiere-retrouvee-morte-sur-un-parking-a-petit-bourg.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://la1ere.francetvinfo.fr/guadeloupe/le-corps-d-une-fonctionnaire-de-police-retrouve-sur-le-parking-d-un-supermarche-a-petit-bourg-1371342.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
