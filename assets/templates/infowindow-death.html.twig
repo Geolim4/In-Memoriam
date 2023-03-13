@@ -81,7 +81,8 @@
     {% endfor %}
     <div class="row no-gutters">
         <div class="mt-3 {% if death.image %}col-12 col-md-8 pr-2{% else %}col-12{% endif %}">
-            <strong>Emplacement</strong>: {{ death.location }} (<abbr data-tippy-content="Code département ou pays: {{ death.county }}">{{ app.getCountyByCode(death.county, {removeCountyPrefix: true}) }}</abbr>)
+            {% set countyName = app.getCountyByCode(death.county, {removeCountyPrefix: true}) %}
+            <strong>Emplacement</strong>: {{ death.location }} {% if countyName is not empty %}(<abbr data-tippy-content="Code département ou pays: {{ death.county }}">{{ countyName }}</abbr>){% endif %}
             {% if not death.gps.accurate %}
                 <strong style="color: orangered;"><abbr data-tippy-content="Indique que l'emplacement du décès est inconnu ou approximatif">(Position approximative)</abbr></strong>
             {% endif %}
