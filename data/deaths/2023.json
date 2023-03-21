@@ -521,7 +521,7 @@
       "location": "Valdahon",
       "image": "",
       "county": "25",
-      "origin": "domtom",
+      "origin": "interieur",
       "gps": {
         "accurate": true,
         "radius": 0,
@@ -557,6 +557,80 @@
         {
           "url": "https://www.bfmtv.com/police-justice/doubs-un-militaire-de-21-ans-se-suicide-en-plein-exercice-de-tir_AN-202303060733.html",
           "title": "BFMTV",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "03",
+      "day": "17",
+      "keywords": "Romain TROCMÉ",
+      "house": "gd",
+      "peers": [],
+      "text": "Un jeune gendarme de la brigade de Saint-Pol-sur-Ternoise a mis fin à ses jours avec son arme administrative.\nIl laisse derrière lui une fillette de 18 mois.",
+      "section": "BP Saint-Pol-sur-Ternoise",
+      "location": "Saint-Pol-sur-Ternoise",
+      "image": "",
+      "county": "62",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 50.37580116312206,
+        "lng": 2.3327599983378318
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/pas-de-calais-un-gendarme-de-26-ans-se-suicide-a-son-domicile.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/1304428/article/2023-03-17/un-gendarme-de-saint-pol-age-de-26-ans-met-fin-ses-jours",
+          "title": "La Voix du Nord",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "03",
+      "day": "18",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un jeune policier de la CRS 37 a mis fin à ses jours avec son arme administrative pendant un déplacement avec sa compagnie au cantonnement de Pondorly (Val-de-Marne).",
+      "section": "CRS 37",
+      "location": "Strasbourg",
+      "image": "",
+      "county": "67",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.60515855118521,
+        "lng": 7.76881284923002
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/val-de-marne-un-policier-de-la-crs-37-sest-suicide-au-cantonnement-de-pondorly.html",
+          "title": "Actu17",
           "paywall": false,
           "trustful": true
         }

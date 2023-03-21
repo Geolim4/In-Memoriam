@@ -13,6 +13,8 @@ export class GmapUtils {
         const secondChild = document.createElement('div');
         const hasText = typeof opts.text === 'string' && opts.text.trim() !== '';
 
+        controlDiv.id = `${opts.ctrlChildId}BtnContainer`;
+        controlDiv.classList.add('custom-btn-container');
         controlDiv.classList.add(...(opts.ctrlClasses ? opts.ctrlClasses : []));
 
         firstChild.id = `${opts.ctrlChildId}Btn`;
