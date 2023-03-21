@@ -1,5 +1,5 @@
-/** SW auto-generated on 2023-03-13T02:31:00.864Z **/
-const CACHE_KEY = 'im-4.8.6+20230313T023100';
+/** SW auto-generated on 2023-03-21T01:11:41.709Z **/
+const CACHE_KEY = 'im-4.9.0+20230321T011141';
 const assets = [
   'assets/css/fonts/fa-solid-900.ttf',
   'assets/css/fonts/fa-solid-900.woff2',
@@ -66,6 +66,7 @@ const assets = [
   'assets/templates/bloodbath-chart.html.twig',
   'assets/templates/bloodbath-list.html.twig',
   'assets/templates/definitions.html.twig',
+  'assets/templates/infowindow-contextmenu.html.twig',
   'assets/templates/infowindow-death.html.twig',
   'assets/templates/modals/content/advanced-search.html.twig',
   'assets/templates/modals/content/cookie-consent-declined.html.twig',
