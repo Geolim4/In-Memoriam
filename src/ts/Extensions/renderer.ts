@@ -27,7 +27,7 @@ export class Renderer {
         });
     }
 
-    public async renderTo(tplName: string, variables: object, element: Element|string, strategy: 'innerHTML'|'appendChild'|'prependChild' = 'innerHTML'): Promise<void> {
+    public async renderTo(tplName: string, variables: object, element: Element|string, strategy: 'innerHTML'|'appendChild'|'prependChild'|'before'|'after' = 'innerHTML'): Promise<void> {
         return this.render(tplName, variables).then((htmlContent: string): void => {
             let targetElement = element;
             if (typeof targetElement === 'string') {
@@ -38,9 +38,14 @@ export class Renderer {
                 targetElement.innerHTML = htmlContent;
             } else if (strategy === 'appendChild') {
                 targetElement.insertAdjacentHTML('beforeend', htmlContent);
+            } else if (strategy === 'before') {
+                targetElement.insertAdjacentHTML('beforebegin', htmlContent);
+            } else if (strategy === 'after') {
+                targetElement.insertAdjacentHTML('afterend', htmlContent);
             } else {
                 targetElement.insertAdjacentHTML('afterbegin', htmlContent);
             }
+            AppStatic.bindUiWidgets();
         }).catch((e): void => {
             if (App.getInstance().getConfigFactory().isDebugEnabled()) {
                 console.error(`The DOM rendering has encountered the following error: ${e}`);
@@ -89,6 +94,7 @@ export class Renderer {
                         acronymise: (str: string): {} => StringUtilsHelper.replaceAcronyms(str, App.getInstance().getConfigFactory().glossary),
                         app: App.getInstance(),
                         config: App.getInstance().getConfigFactory().config,
+                        marker_hash: (death: Death): string => AppStatic.getMarkerHash(death),
                         marker_link: (death: Death, label: string): string => AppStatic.getMarkerLink(death, label),
                     },
                 }).trim();

@@ -51,11 +51,14 @@ export class Links {
         const { deathHash } = link.dataset; // decodeURIComponent(escape(atob(origin.dataset.deathHash)));
         const markers = app.getMarkers();
         const markerHashIndex = app.getMarkerHashIndex();
+        const autoZoom = link.dataset.autoZoom;
 
         if (markers[markerHashIndex[deathHash]]) {
             const marker = markers[markerHashIndex[deathHash]];
             app.getModal().closeModalInfo();
-            map.setZoom(app.getConfigFactory().config.googleMapsOptions.maxZoom);
+            if (autoZoom === undefined || autoZoom === 'true') {
+                map.setZoom(app.getConfigFactory().config.googleMapsOptions.maxZoom);
+            }
             google.maps.event.trigger(marker, 'click');
             map.setCenter(marker.getPosition());
 

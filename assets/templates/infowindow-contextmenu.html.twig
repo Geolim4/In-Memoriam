@@ -1,0 +1,48 @@
+<div class="dropdown-menu infowindow-contextmenu position-absolute" aria-labelledby="dropdownMenuDeathInfoWindow" style="width: auto;height: auto; overflow: hidden; cursor: pointer; touch-action: none;z-index: 10" aria-expanded="false">
+    <a href="javascript:;"
+       class="dropdown-item"
+       data-controller="map-marker"
+       data-death-hash="{{ marker_hash(death) }}"
+       data-auto-zoom="false">
+        <img src="{{ config.imagePath.house|replace({"%house%": death.count >= 2 ? death.house ~ '-m' : death.house}) }}"
+             alt="Corps: {{ houseName }}"
+             title="Corps: {{ houseName }}"
+             class="d-none d-sm-inline-block"
+             height="16" />
+        {{ acronymise(death.section) }}, {{ death.location }}
+    </a>
+    <div class="dropdown-divider"></div>
+    {% if death.image %}
+        <a href="javascript:;"
+           class="dropdown-item"
+           data-controller="advanced-modal"
+           data-modal-title="Photo d'hommage"
+           data-modal-content-template="content/photo"
+           data-modal-options='{{ {okLabel: "Fermer"}|json_encode|url_encode }}'
+           data-modal-content-vars='{{ {src: config.imagePath.gallery ~ death.image, alt: death.image, copyright: true}|json_encode|url_encode }}'>
+            <i class="fa-solid fa-image d-none d-sm-inline-block"></i> Photo d'hommage
+        </a>
+    {% endif %}
+    <a href="javascript:;"
+       class="dropdown-item"
+       data-controller="copy-text"
+       data-success-msg="Le lien a bien été copié dans le presse-papier !"
+       data-content-text="{{ app.permalink.getDeathMarkerLink(death) }}">
+        <i class="fa-solid fa-link d-none d-sm-inline-block"></i> Copier le permalien
+    </a>
+    <a href="javascript:;"
+       class="dropdown-item"
+       data-controller="copy-text"
+       data-content-text="{{ death.day }}/{{ death.month }}/{{ death.year }} {{ death.section}} - {{ app.getFilterValueLabel('house', death.house) }} ({{ app.getFilterValueLabel('cause', death.cause) }}): {{ death.text }}">
+        <i class="fa-solid fa-copy d-none d-sm-inline-block"></i> Copier le texte (simplifié)
+    </a>
+    <div class="dropdown-divider"></div>
+    <a href="javascript:;"
+       class="dropdown-item text-danger"
+       data-controller="advanced-modal"
+       data-modal-title="Vous avez trouvé une erreur ?"
+       data-modal-content-template="content/infowindow-error"
+       data-modal-content-vars='{{ {reference: reference}|json_encode|url_encode }}'>
+        <i class="fa-solid fa-circle-exclamation d-none d-sm-inline-block"></i> Signaler une erreur
+    </a>
+</div>
