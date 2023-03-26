@@ -126,7 +126,23 @@
                 <strong data-tippy-content="La source étant anonyme, ce décès peut ne pas être fiable à 100%.">Source anonyme</strong>
             {% else %}
                 <strong>Sources</strong>:
-                {% for source in death.sources %}{% if source.url %}<a href="{{ source.url }}" target="_blank">{{ source.title }}</a>{% else %}<span>{{ source.title }}</span>{% endif %}{% if source.paywall %} <i class="fa-solid fa-lock" data-tippy-content="Article réservé aux abonnés"></i>{% endif %}{% if not source.trustful %} <i class="fa-solid fa-triangle-exclamation" style="color: orangered;" data-tippy-content="Prudence, une partie du contenu de cet article peut être inexact"></i>{% endif %}{% if not loop.last %}, {% endif %}{% else %}<strong><i class="fa-solid fa-triangle-exclamation" style="color: orangered;"></i> Aucune source renseignée</strong>{% endfor %}
+                {% for source in death.sources %}
+                    {% apply spaceless %}
+                        {% if source.url %}
+                            <a href="{{ source.url }}" target="_blank">{{ source.title }}</a>
+                        {% else %}
+                            <span>{{ source.title }}</span>
+                        {% endif %}
+                        {% if source.paywall %}
+                            <i class="fa-solid fa-lock" data-tippy-content="Article réservé aux abonnés"></i>
+                        {% endif %}
+                        {% if not source.trustful %}
+                            <i class="fa-solid fa-triangle-exclamation" style="color: orangered;" data-tippy-content="Prudence, une partie du contenu de cet article peut être inexact"></i>
+                        {% endif %}
+                    {% endapply %}{% if not loop.last %}, {% endif %}
+                {% else %}
+                    <strong><i class="fa-solid fa-triangle-exclamation" style="color: orangered;"></i> Aucune source renseignée</strong>
+                {% endfor %}
             {% endif %}
         </div>
     </div>

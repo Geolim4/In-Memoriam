@@ -27,6 +27,7 @@
     "appVersion": "4.9.0",
     "defaultUserConfig": {
       "backgroundRefresh": "on",
+      "markerContextMenu": "",
       "browserHistoryReplaceState": "",
       "filtersType": "simple",
       "saveFiltersInSession": "",

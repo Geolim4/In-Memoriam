@@ -25,6 +25,14 @@
             </div>
         </div>
         <div class="row mt-3">
+            <fieldset class="col-10">
+                <label for="markerContextMenu">Activer le menu contextuel sur les marqueurs <i class="fa-solid fa-circle-question" data-tippy-content="Cette option permet d'activer le menu contextuel rapide lorsque vous faites un clic droit sur un marqueur."></i></label>
+            </fieldset>
+            <div class="col-2">
+                <input type="checkbox" name="markerContextMenu" id="markerContextMenu" class="form-control" {% if userConfig.markerContextMenu == 'on' %} checked{% endif %}/>
+            </div>
+        </div>
+        <div class="row mt-3">
             <fieldset class="col-md-4">
                 <label for="themeColor">Thème <i class="fa-solid fa-circle-question" data-tippy-content="Le fait de forcer le thème peut entrainer un léger flash au chargement de la cartographie qui peut être résolu en privilégiant la modification de vos paramètres d'affichage système."></i></label>
             </fieldset>

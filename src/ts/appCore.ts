@@ -227,37 +227,41 @@ export abstract class AppCore extends AppAbstract {
                 });
 
                 google.maps.event.addListener(marker, 'contextmenu', (evt): void => {
-                    document.querySelectorAll('.infowindow-contextmenu').forEach((element): void => {
-                        element.remove();
-                    });
-                    if (evt.domEvent.target.tagName === 'IMG') {
-                        const parent = evt.domEvent.target.parentNode as HTMLElement;
-                        const mapDiv = this.map.getDiv() as HTMLElement;
-                        this.getRenderer().renderTo('infowindow-contextmenu', { death, reference }, parent, 'appendChild').then((): void => {
-                            const infowindowContextmenu = document.querySelector('.infowindow-contextmenu') as HTMLElement;
-                            if (infowindowContextmenu) {
-                                parent.style.overflow = 'visible';
-                                parent.style.zIndex = '9999999';
-                                infowindowContextmenu.style.top = `${Math.round(parent.offsetHeight / 2)}px`;
-                                infowindowContextmenu.style.left = `${Math.round(parent.offsetWidth / 2)}px`;
-                                infowindowContextmenu.classList.add('show');
-                                Events.addEventHandler(infowindowContextmenu, 'click', (): void => {
-                                    this.preventInfoWindowsOpening = true;
-                                    infowindowContextmenu.remove();
-                                });
-                            }
-                            const infowindowsYposition = ((evt.pixel.y - parent.offsetHeight) + (mapDiv.offsetHeight / 2)) + infowindowContextmenu.offsetHeight + parseInt(infowindowContextmenu.style.top.replace('px', ''), 10) + 5;
-                            if (infowindowsYposition >= mapDiv.offsetHeight) {
-                                this.map.panBy(0, (infowindowsYposition - mapDiv.offsetHeight) + 15); // 15 for bottom copyright height
-                            }
+                    if (this.getConfigFactory().userConfig.markerContextMenu === 'on') {
+                        document.querySelectorAll('.infowindow-contextmenu').forEach((element): void => {
+                            element.remove();
                         });
+                        if (evt.domEvent.target.tagName === 'IMG') {
+                            const parent = evt.domEvent.target.parentNode as HTMLElement;
+                            const mapDiv = this.map.getDiv() as HTMLElement;
+                            this.getRenderer().renderTo('infowindow-contextmenu', { death, reference }, parent, 'appendChild').then((): void => {
+                                const infowindowContextmenu = document.querySelector('.infowindow-contextmenu') as HTMLElement;
+                                if (infowindowContextmenu) {
+                                    parent.style.overflow = 'visible';
+                                    parent.style.zIndex = '9999999';
+                                    infowindowContextmenu.style.top = `${Math.round(parent.offsetHeight / 2)}px`;
+                                    infowindowContextmenu.style.left = `${Math.round(parent.offsetWidth / 2)}px`;
+                                    infowindowContextmenu.classList.add('show');
+                                    Events.addEventHandler(infowindowContextmenu, 'click', (): void => {
+                                        this.preventInfoWindowsOpening = true;
+                                        infowindowContextmenu.remove();
+                                    });
+                                }
+                                const infowindowsYposition = ((evt.pixel.y - parent.offsetHeight) + (mapDiv.offsetHeight / 2)) + infowindowContextmenu.offsetHeight + parseInt(infowindowContextmenu.style.top.replace('px', ''), 10) + 5;
+                                if (infowindowsYposition >= mapDiv.offsetHeight) {
+                                    this.map.panBy(0, (infowindowsYposition - mapDiv.offsetHeight) + 15); // 15 for bottom copyright height
+                                }
+                            });
+                        }
                     }
                 });
 
                 google.maps.event.addListener(this.map, 'click', (): void => {
-                    document.querySelectorAll('.infowindow-contextmenu').forEach((element): void => {
-                        element.remove();
-                    });
+                    if (this.getConfigFactory().userConfig.markerContextMenu === 'on') {
+                        document.querySelectorAll('.infowindow-contextmenu').forEach((element): void => {
+                            element.remove();
+                        });
+                    }
                 });
 
                 google.maps.event.addListener(marker, 'dblclick', (): void => {

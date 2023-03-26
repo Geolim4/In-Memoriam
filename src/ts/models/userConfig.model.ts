@@ -3,5 +3,6 @@ export interface UserConfig {
     filtersType: 'multiple'|'simple';
     saveFiltersInSession: 'on'|'';
     backgroundRefresh: 'on'|'';
+    markerContextMenu: 'on'|'';
     themeColor: 'light'|'dark'|'auto';
 }
