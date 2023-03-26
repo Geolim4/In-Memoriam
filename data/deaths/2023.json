@@ -240,7 +240,7 @@
       "keywords": "Joshua ALLOY",
       "house": "gd",
       "peers": [],
-      "text": "Un élève-gendarme de l'école de Gendarmerie de Tulle a mis fin à ses jours avec son arme administrative.\nIl était âgé de 22 ans.",
+      "text": "Un élève-gendarme de l'école de Gendarmerie de Tulle a mit fin à ses jours avec son arme administrative.\nIl était âgé de 22 ans.",
       "section": "École de Gendarmerie de Tulle",
       "location": "Tulle",
       "image": "joshua-alloy.jpg",
@@ -286,7 +286,7 @@
       "keywords": "",
       "house": "pn",
       "peers": [],
-      "text": "Un policier, chef du groupe \"Crim\" à la police judiciaire du Var, a mis fin à ses jours avec son arme administrative.\nIl était marié et père de deux enfants dont un bébé.",
+      "text": "Un policier, chef du groupe \"Crim\" à la police judiciaire du Var, a mit fin à ses jours avec son arme administrative.\nIl était marié et père de deux enfants dont un bébé.",
       "section": "PJ 83",
       "location": "Toulon",
       "image": "",
@@ -390,7 +390,7 @@
       "keywords": "Sandy, IDF",
       "house": "pn",
       "peers": [],
-      "text": "Un policier de la CRS autoroutière Nord de Paris a mis fin à ses jours avec son arme administrative.",
+      "text": "Un policier de la CRS autoroutière Nord de Paris a mit fin à ses jours avec son arme administrative.",
       "section": "CRS Autoroute Nord",
       "location": "Deuil-la-Barre",
       "image": "",
@@ -430,7 +430,7 @@
       "keywords": "",
       "house": "armee",
       "peers": [],
-      "text": "Un militaire sous-officier de la caserne Kléber a mis fin à ses jours avec son arme administrative.\nIl laisse une lettre expliquant les raisons de son geste derrière lui.",
+      "text": "Un militaire sous-officier de la caserne Kléber a mit fin à ses jours avec son arme administrative.\nIl laisse une lettre expliquant les raisons de son geste derrière lui.",
       "section": "Caserne Kléber",
       "location": "Lille",
       "image": "",
@@ -476,7 +476,7 @@
       "keywords": "",
       "house": "pn",
       "peers": [],
-      "text": "Une policière de la circonscription de Pointe-à-Pitre a mis fin à ses jours avec son arme administrative.\nElle laisse une lettre expliquant les raisons de son geste derrière elle.",
+      "text": "Une policière de la circonscription de Pointe-à-Pitre a mit fin à ses jours avec son arme administrative.\nElle laisse une lettre expliquant les raisons de son geste derrière elle.",
       "section": "CSP Pointe-à-Pitre",
       "location": "Pointe-à-Pitre",
       "image": "",
@@ -516,7 +516,7 @@
       "keywords": "",
       "house": "armee",
       "peers": [],
-      "text": "Un jeune militaire en formation au CFIM du 13e RG a mis fin à ses jours avec un fusil d'assaut pendant un exercice.",
+      "text": "Un jeune militaire en formation au CFIM du 13e RG a mit fin à ses jours avec un fusil d'assaut pendant un exercice.",
       "section": "CFIM du 13e RG (7e BB)",
       "location": "Valdahon",
       "image": "",
@@ -574,7 +574,7 @@
       "keywords": "Romain TROCMÉ",
       "house": "gd",
       "peers": [],
-      "text": "Un jeune gendarme de la brigade de Saint-Pol-sur-Ternoise a mis fin à ses jours avec son arme administrative.\nIl laisse derrière lui une fillette de 18 mois.",
+      "text": "Un jeune gendarme de la brigade de Saint-Pol-sur-Ternoise a mit fin à ses jours avec son arme administrative.\nIl laisse derrière lui une fillette de 18 mois.",
       "section": "BP Saint-Pol-sur-Ternoise",
       "location": "Saint-Pol-sur-Ternoise",
       "image": "",
@@ -614,7 +614,7 @@
       "keywords": "",
       "house": "pn",
       "peers": [],
-      "text": "Un jeune policier de la CRS 37 a mis fin à ses jours avec son arme administrative pendant un déplacement avec sa compagnie au cantonnement de Pondorly (Val-de-Marne).",
+      "text": "Un jeune policier de la CRS 37 a mit fin à ses jours avec son arme administrative pendant un déplacement avec sa compagnie au cantonnement de Pondorly (Val-de-Marne).",
       "section": "CRS 37",
       "location": "Strasbourg",
       "image": "",
@@ -631,6 +631,107 @@
         {
           "url": "https://actu17.fr/faits-divers/val-de-marne-un-policier-de-la-crs-37-sest-suicide-au-cantonnement-de-pondorly.html",
           "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "03",
+      "day": "23",
+      "keywords": "Arnaud Blanc",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme, commandant de brigade de la BTA de Basse-Goulaine a mit fin à ses jours avec son arme administrative.\nTrès peu d'informations sur ce décès car la source est confidentielle.",
+      "section": "BTA",
+      "location": "Basse-Goulaine",
+      "image": "",
+      "county": "44",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.208476291706525,
+        "lng": -1.4612934121885368
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "",
+          "title": "__CONFIDENTIAL__",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "03",
+      "day": "25",
+      "keywords": "",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme de l'antenne GIGN de Guyane est mort en service lors d'une intervention dans le cadre de l'opération Harpie.\nIl était pacsé et père de deux jeunes enfants.",
+      "section": "AGIGN Cayenne",
+      "location": "Dorlin, Maripasoula",
+      "image": "arnaud-blanc.jpg",
+      "county": "973",
+      "origin": "domtom",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 3.7531277058263988,
+        "lng": -53.5558670932547
+      },
+      "homage": {
+        "title": "Gendarmerie Nationale",
+        "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/actualites/2023/la-gendarmerie-endeuillee-par-le-deces-en-mission-d-un-gendarme-de-l-agign-de-cayenne"
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/info-actu17-un-gendarme-du-gign-tue-lors-dune-operation-contre-les-orpailleurs-en-guyane.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/Gendarmerie/status/1639627265045590019",
+          "title": "@Gendarmerie",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.elysee.fr/emmanuel-macron/2023/03/25/deces-du-marechal-des-logis-chef-arnaud-blanc",
+          "title": "Élysée",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lemonde.fr/societe/article/2023/03/25/en-guyane-un-gendarme-tue-dans-une-operation-contre-l-orpaillage-illegal_6166984_3224.html",
+          "title": "Le Monde",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://la1ere.francetvinfo.fr/un-gendarme-tue-par-balle-en-guyane-lors-d-une-operation-contre-l-orpaillage-illegal-1378790.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/guyane-un-gendarme-du-gign-tue-par-balle-lors-d-une-operation-contre-l-orpaillage-illegal-20230325",
+          "title": "Figaro",
           "paywall": false,
           "trustful": true
         }
