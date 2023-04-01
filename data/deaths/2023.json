@@ -679,7 +679,7 @@
       "year": "2023",
       "month": "03",
       "day": "25",
-      "keywords": "",
+      "keywords": "Arnaud Blanc",
       "house": "gd",
       "peers": [],
       "text": "Un gendarme de l'antenne GIGN de Guyane est mort en service lors d'une intervention dans le cadre de l'opération Harpie.\nIl était pacsé et père de deux jeunes enfants.",
@@ -732,6 +732,67 @@
         {
           "url": "https://www.lefigaro.fr/flash-actu/guyane-un-gendarme-du-gign-tue-par-balle-lors-d-une-operation-contre-l-orpaillage-illegal-20230325",
           "title": "Figaro",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "03",
+      "day": "29",
+      "keywords": "Brice Caron",
+      "house": "armee",
+      "peers": [
+        {
+          "house": "pompier",
+          "count": 0,
+          "section": ""
+        }
+      ],
+      "text": "Un sapeur-pompier de la BSPP détaché au centre au Centre Spatial Guyanais (CSG) est mort dans un accident de la route en se rendant sur intervention au CSG de Kourou.\nIl était marié et père de trois enfants.",
+      "section": "BSPP (CSG)",
+      "location": "Kourou, Guyane",
+      "image": "brice-caron.jpg",
+      "county": "973",
+      "origin": "domtom",
+      "gps": {
+        "accurate": false,
+        "radius": 5000,
+        "lat": 5.193332458889401,
+        "lng": -52.758860561778825
+      },
+      "homage": {
+        "title": "Ministère de l'Intérieur",
+        "url": "https://www.interieur.gouv.fr/actualites/communiques-de-presse/deces-dun-militaire-sapeur-pompier-en-guyane"
+      },
+      "sources": [
+        {
+          "url": "https://www.ouest-france.fr/societe/pompiers/un-sapeur-pompier-de-paris-meurt-lors-dune-intervention-au-centre-spatial-de-kourou-en-guyane-23d709de-ce55-11ed-8922-c50b96804298",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/PompiersParis/status/1641171312197476352",
+          "title": "@PompiersParis",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/paris_75056/mort-d-un-sapeur-pompier-de-paris-lors-d-une-intervention-en-guyane_58531690.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.franceguyane.fr/actualite/faitsdivers/deces-dun-pompier-sur-la-route-de-lespace-a-kourou-929799.php",
+          "title": "France Guyane",
           "paywall": false,
           "trustful": true
         }
