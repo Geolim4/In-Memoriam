@@ -640,15 +640,15 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
-      "orphans": 0,
+      "orphans": 3,
       "unpublished_reason": "",
       "year": "2023",
       "month": "03",
       "day": "23",
-      "keywords": "Arnaud Blanc",
+      "keywords": "Stéphane GOUYER",
       "house": "gd",
       "peers": [],
-      "text": "Un gendarme, commandant de brigade de la BTA de Basse-Goulaine a mit fin à ses jours avec son arme administrative.\nTrès peu d'informations sur ce décès car la source est confidentielle.",
+      "text": "Un gendarme, commandant de brigade de la BTA de Basse-Goulaine a mit fin à ses jours avec son arme administrative.\nIl était marié et père de 3 enfants.",
       "section": "BTA",
       "location": "Basse-Goulaine",
       "image": "",
@@ -663,8 +663,14 @@
       "homage": null,
       "sources": [
         {
+          "url": "https://lessor.org/vie-des-personnels/un-commandant-de-brigade-se-donne-la-mort-en-loire-atlantique",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
           "url": "",
-          "title": "__CONFIDENTIAL__",
+          "title": "FondationMG",
           "paywall": false,
           "trustful": true
         }
@@ -793,6 +799,113 @@
         {
           "url": "https://www.franceguyane.fr/actualite/faitsdivers/deces-dun-pompier-sur-la-route-de-lespace-a-kourou-929799.php",
           "title": "France Guyane",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "04",
+      "day": "04",
+      "keywords": "Anthony PIRE",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme, de la brigade de Lutterbach a mit fin à ses jours avec son arme administrative.\nIl était marié et père de deux jeunes filles.",
+      "section": "CoB Lutterbach",
+      "location": "Lutterbach",
+      "image": "",
+      "county": "68",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.758768994817856,
+        "lng": 7.279074663280872
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/haut-rhin-un-gendarme-de-43-ans-sest-suicide-a-son-domicile.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/un-gendarme-d-alsace-met-fin-a-ses-jours-2023-04",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lalsace.fr/faits-divers-justice/2023/04/04/un-gendarme-met-fin-a-ses-jours",
+          "title": "Alsace.fr",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "04",
+      "day": "11",
+      "keywords": "Patrick HERVE",
+      "house": "gd",
+      "peers": [],
+      "text": "Un gendarme réserviste, ancien gendarme d'active, est décédé dans un accident de la route lors d'une opération de contrôle routier.\nIl était marié et père de deux enfants.",
+      "section": "PMo Labouheyre (ROGN)",
+      "location": "Sabres",
+      "image": "",
+      "county": "40",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 1500,
+        "lat": 44.15161153025667,
+        "lng": -0.8202153596962128
+      },
+      "homage": {
+        "title": "Gendarmerie Nationale",
+        "url": "https://twitter.com/PorteparoleGN/status/1645859921274216448"
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/un-gendarme-tue-et-un-second-grievement-blesse-dans-un-accident-de-la-route-dans-les-landes.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/landes/un-gendarme-tue-un-autre-grievement-blesse-dans-un-accident-de-circulation-dans-les-landes-2751746.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/landes-un-gendarme-tue-un-autre-gravement-blesse-dans-un-accident-de-la-route-5881458",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/landes-un-gendarme-meurt-dans-un-carambolage-un-autre-gravement-blesse-11-04-2023-3WI5ONJUJRD33MP6P2T73DX7JM.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ladepeche.fr/2023/04/11/landes-un-gendarme-tue-dans-un-accident-de-la-route-un-second-entre-la-vie-et-la-mort-11126613.php",
+          "title": "La Dépêche",
           "paywall": false,
           "trustful": true
         }
