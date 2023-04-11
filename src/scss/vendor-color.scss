@@ -22,14 +22,14 @@
         background-color: $blue;
         color: $white;
       }
-      > input {
-        color: var(--text-color-ligher);
-      }
     }
   }
   .ts-control {
     background-color: var(--background-color-higher);
     color: var(--text-color-ligher);
+    input[role="combobox"] {
+      color: var(--text-color-ligher);
+    }
   }
 
   .ts-dropdown {
