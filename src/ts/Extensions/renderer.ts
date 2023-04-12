@@ -2,7 +2,8 @@ import { AppStatic } from '../appStatic';
 import { App } from '../app';
 import { StringUtilsHelper } from '../helper/stringUtils.helper';
 import { Death } from '../models/Death/death.model';
-const Twig = require('twig').twig;
+const Twig = require('twig');
+const markdown = require('markdown').markdown;
 
 /**
  * @author Georges.L <contact@geolim4.com>
@@ -17,6 +18,8 @@ export class Renderer {
     public constructor(templateDir: string) {
         this.templateDir = templateDir;
         this.templates = {};
+        Twig.extendFilter('markdown', (str): string => (this.parseMarkdown(str)));
+        Twig.extendFilter('acronymise', (str): string => (this.parseAcronyms(str)));
     }
 
     public async renderAsDom(tplName: string, variables: object): Promise<Element> {
@@ -87,11 +90,10 @@ export class Renderer {
 
     private doRender(templateContent: string, variables: object): string {
         try {
-            return Twig({ data: templateContent })
+            return Twig.twig({ data: templateContent })
                 .render({
                     ...variables,
                     ...{
-                        acronymise: (str: string): {} => StringUtilsHelper.replaceAcronyms(str, App.getInstance().getConfigFactory().glossary),
                         app: App.getInstance(),
                         config: App.getInstance().getConfigFactory().config,
                         marker_hash: (death: Death): string => AppStatic.getMarkerHash(death),
@@ -110,5 +112,13 @@ export class Renderer {
 
             return '<div style="padding: 10px;"></di><strong style="color: red">L\'application a rencontré une erreur interne :(</strong></div>';
         }
+    }
+
+    private parseAcronyms(str: String): string {
+        return StringUtilsHelper.replaceAcronyms(str.toString(), App.getInstance().getConfigFactory().glossary);
+    }
+
+    private parseMarkdown(str: String): string {
+        return markdown.toHTML(String(str)).replace(/(?:\r\n|\r|\n)/g, '<br>');
     }
 }

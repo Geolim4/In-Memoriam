@@ -17,7 +17,7 @@
       "month": "01",
       "day": "07",
       "keywords": "Nicolas ACQUIER",
-      "house": "gd",
+      "house": "gn",
       "peers": [],
       "text": "Un gendarme affecté à la BTA de Canet-en-Roussillon a mit fin à ses jours.\nIl était père de deux enfants.",
       "section": "BTA",
@@ -51,7 +51,7 @@
       "month": "01",
       "day": "16",
       "keywords": "Franck HOUVENAGHEL",
-      "house": "gd",
+      "house": "gn",
       "peers": [],
       "text": "Un gendarme affecté à la SAJ de Villeneuve d’Ascq a mit fin à ses jours avec son arme administrative.\nIl était père de deux enfants.",
       "section": "SAJ 59",
@@ -91,7 +91,7 @@
       "month": "01",
       "day": "20",
       "keywords": "Maximilien MAES",
-      "house": "gd",
+      "house": "gn",
       "peers": [],
       "text": "Un gendarme en service affecté à la BMo a perdu la vie dans un accident de la route à Saint-Priest.\nIl était pacsé d'une jeune fille.",
       "section": "BMo",
@@ -192,7 +192,7 @@
       "month": "01",
       "day": "30",
       "keywords": "Alexandre Signorotto",
-      "house": "gd",
+      "house": "gn",
       "peers": [],
       "text": "Un gendarme affecté à la SAG de Nîmes a mit fin à ses jours avec son arme administrative.\nIl était père de trois enfants.\nPeu de sources disponibles sur ce décès.",
       "section": "SAG",
@@ -238,7 +238,7 @@
       "month": "02",
       "day": "13",
       "keywords": "Joshua ALLOY",
-      "house": "gd",
+      "house": "gn",
       "peers": [],
       "text": "Un élève-gendarme de l'école de Gendarmerie de Tulle a mit fin à ses jours avec son arme administrative.\nIl était âgé de 22 ans.",
       "section": "École de Gendarmerie de Tulle",
@@ -572,7 +572,7 @@
       "month": "03",
       "day": "17",
       "keywords": "Romain TROCMÉ",
-      "house": "gd",
+      "house": "gn",
       "peers": [],
       "text": "Un jeune gendarme de la brigade de Saint-Pol-sur-Ternoise a mit fin à ses jours avec son arme administrative.\nIl laisse derrière lui une fillette de 18 mois.",
       "section": "BP Saint-Pol-sur-Ternoise",
@@ -646,7 +646,7 @@
       "month": "03",
       "day": "23",
       "keywords": "Stéphane GOUYER",
-      "house": "gd",
+      "house": "gn",
       "peers": [],
       "text": "Un gendarme, commandant de brigade de la BTA de Basse-Goulaine a mit fin à ses jours avec son arme administrative.\nIl était marié et père de 3 enfants.",
       "section": "BTA",
@@ -686,7 +686,7 @@
       "month": "03",
       "day": "25",
       "keywords": "Arnaud Blanc",
-      "house": "gd",
+      "house": "gn",
       "peers": [],
       "text": "Un gendarme de l'antenne GIGN de Guyane est mort en service lors d'une intervention dans le cadre de l'opération Harpie.\nIl était pacsé et père de deux jeunes enfants.",
       "section": "AGIGN Cayenne",
@@ -814,7 +814,7 @@
       "month": "04",
       "day": "04",
       "keywords": "Anthony PIRE",
-      "house": "gd",
+      "house": "gn",
       "peers": [],
       "text": "Un gendarme, de la brigade de Lutterbach a mit fin à ses jours avec son arme administrative.\nIl était marié et père de deux jeunes filles.",
       "section": "CoB Lutterbach",
@@ -859,11 +859,17 @@
       "year": "2023",
       "month": "04",
       "day": "11",
-      "keywords": "Patrick HERVE",
-      "house": "gd",
-      "peers": [],
-      "text": "Un gendarme réserviste, ancien gendarme d'active, est décédé dans un accident de la route lors d'une opération de contrôle routier.\nIl était marié et père de deux enfants.",
-      "section": "PMo Labouheyre (ROGN)",
+      "keywords": "Patrick HERVE, ROGN, Yannick Pierre",
+      "house": "gn",
+      "peers": [
+        {
+          "house": "gn",
+          "count": 1,
+          "section": "PMo Labouheyre"
+        }
+      ],
+      "text": "Un gendarme réserviste de la CRT 40/3 de Mont de Marsan et ancien gendarme d'active, est décédé dans un accident de la route lors d'une opération de contrôle routier.\nIl était marié et père de deux enfants.\n**Mise à jour 12/04/2023**: Son camarade d'active est également décédé le lendemain des suites de ses blessures.",
+      "section": "CRT 40/3 Mont de Marsan",
       "location": "Sabres",
       "image": "",
       "county": "40",
@@ -875,10 +881,22 @@
         "lng": -0.8202153596962128
       },
       "homage": {
-        "title": "Gendarmerie Nationale",
-        "url": "https://twitter.com/PorteparoleGN/status/1645859921274216448"
+        "title": "Ministère de l'Intérieur",
+        "url": "https://www.interieur.gouv.fr/actualites/communiques-de-presse/deces-dun-sous-officier-de-reserve-de-gendarmerie-dans-accident-de"
       },
       "sources": [
+        {
+          "url": "https://www.interieur.gouv.fr/actualites/communiques-de-presse/deces-du-gendarme-yannick-pierre",
+          "title": "2e Hommage Ministère de l'Intérieur",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/PorteparoleGN/status/1645859921274216448",
+          "title": "@PorteparoleGN",
+          "paywall": false,
+          "trustful": true
+        },
         {
           "url": "https://actu17.fr/faits-divers/un-gendarme-tue-et-un-second-grievement-blesse-dans-un-accident-de-la-route-dans-les-landes.html",
           "title": "Actu17",
@@ -894,12 +912,6 @@
         {
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/landes-un-gendarme-tue-un-autre-gravement-blesse-dans-un-accident-de-la-route-5881458",
           "title": "France Bleu",
-          "paywall": false,
-          "trustful": true
-        },
-        {
-          "url": "https://www.leparisien.fr/faits-divers/landes-un-gendarme-meurt-dans-un-carambolage-un-autre-gravement-blesse-11-04-2023-3WI5ONJUJRD33MP6P2T73DX7JM.php",
-          "title": "Le Parisien",
           "paywall": false,
           "trustful": true
         },

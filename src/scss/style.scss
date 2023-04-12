@@ -170,6 +170,19 @@ header.top-menu {
         color: #1d9bf0;
         font-weight: bold;
       }
+      &[href*=".gouv.fr/"] {
+        &:after {
+          content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAH3SURBVDhPfVNLSxtRFP7GWLSgdhbSCqa6Ki3duHRbwUQFRdzGZbZdirhoOtJuiiDS4sIH+AMKWhE04EIQqXYhFkSESqqmJQWDwUiMacIkp+eeuTNNNOSDk5zndx7cMYCPhAqUWG4RjY6iv78TRBw2DNiJP7j5NI/rqXcw0MJSJ9l3CJSa46IJx1LFLpiEk1H4cYLEi+fwwRS3Q+Mhg62tUdEqihW0fft5Fb76Vm5VFLuMwMbgYBd6ep7eL9ZQfjMyDt/jVrbuERQRCHRovTYe9r7iCQqilxH4sLkZ13p1GHyHr4eHyHa08z28CdTV/7LYWF+PibMWrpJJ+AeCXK7XnJk5oOXlE4pE9sg051iP8apEpVKpqrhIDofoDA2Evr4v5Pcv0dHRJdl2kWKxK0moVizCsWI+T6d803M8InVZgfMe3murCoHyOSHKbe8IQRwm1Q0NrfFx3iIcfslkb3B8nMLFRVYO5sF9RPsHYua/7bPtxT/Q2NgOxeNp2t1NUDC4Qpa1J53c7gq/nzyjn9xVyRkM6a7ECIWilE4XsLHxnclymJwcgWV1/39M3J1usjhtbsKDsm+gDNOcaVEgsEKpVE66VeyuJ7gMv5a9neO1eBOgrW2RMpm8JCncLXbFxfXsgiZpclZQTjWH/qsNfUyV+cto5N8G/AMoaaY8qYkt5QAAAABJRU5ErkJggg==");
+          padding-left: 2px;
+          top: 2px;
+          position: relative;
+          height: 16px;
+          width: 16px;
+          display: inline-block;
+        }
+        color: #1d9bf0;
+        font-weight: bold;
+      }
       &[href^="https://actu17.fr"] {
         color: #0c0f2a;
         font-weight: bold;

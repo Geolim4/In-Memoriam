@@ -9,7 +9,7 @@
              title="Corps: {{ houseName }}"
              class="d-none d-sm-inline-block"
              height="16" />
-        {{ acronymise(death.section) }}, {{ death.location }}
+        {{ death.section|acronymise }}, {{ death.location }}
     </a>
     <div class="dropdown-divider"></div>
     {% if death.image %}
