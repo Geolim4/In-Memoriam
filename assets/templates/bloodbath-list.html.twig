@@ -19,7 +19,7 @@
 <div id="modal-bloodbath-list-content" class="mt-3">
     {% for marker in markers %}
         {% set totalDeath = app.getTotalDeathCount(marker.death) %}
-        {% set deathLabel = (marker.death.section ? acronymise(marker.death.section) ~ ', ' : '') ~ marker.death.location ~ app.getCountyByCode(marker.death.county, { wrappedCounty: true }) %}
+        {% set deathLabel = (marker.death.section ? (marker.death.section|acronymise) ~ ', ' : '') ~ marker.death.location ~ app.getCountyByCode(marker.death.county, { wrappedCounty: true }) %}
         {% set deathLabel = deathLabel ~ (totalDeath > 1 ? ' (<strong style="color: red">' ~ totalDeath ~ ' décès</strong>)': '') %}
         <p>
             <strong>{{ marker.death.day }}/{{ marker.death.month }}/{{ marker.death.year }} -

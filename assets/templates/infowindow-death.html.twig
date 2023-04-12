@@ -7,7 +7,7 @@
                  title="Corps: {{ houseName }}"
                  class="d-none d-sm-inline-block"
                  height="24" />
-            {% if death.section %}{{ acronymise(death.section) }} - {% endif %}
+            {% if death.section %}{{ death.section|acronymise }} - {% endif %}
             {% if death.count > 1 %}<strong style="color: red;">{{ death.count }} décès</strong> - {% endif %}
             {{ houseName }}
         </h5>
@@ -62,7 +62,7 @@
                      alt="Corps: {{ peerHouseName }}"
                      title="Corps: {{ peerHouseName }}"
                      height="20" />
-                {% if peer.section %}{{ acronymise(peer.section) }} - {% endif %}
+                {% if peer.section %}{{ peer.section|acronymise }} - {% endif %}
                 {% if peer.count > 1 %}<strong style="color: red;">{{ peer.count }} décès</strong> - {% endif %}
                 {{ peerHouseName }}
                 {% if peer.count == 0 %}<em>(affiliation statutaire)</em>{% endif %}
@@ -73,7 +73,7 @@
                      alt="House: {{ peerHouseName }}"
                      title="House: {{ peerHouseName }}"
                      height="20" />
-                {% if peer.section %}{{ acronymise(peer.section) }} - {% endif %}
+                {% if peer.section %}{{ peer.section|acronymise }} - {% endif %}
                 {{ peerHouseName }}
                 <em>(affiliation statutaire)</em>
             </p>
@@ -97,14 +97,14 @@
             {% if death.cause != 'suicide' %}
                 <strong>Hommage</strong>:
                 {% if death.homage %}
-                    <a href="{{ death.homage.url }}" target="_blank">{{ acronymise(death.homage.title) }}</a>
+                    <a href="{{ death.homage.url }}" target="_blank">{{ death.homage.title|acronymise }}</a>
                     <i class="fa-solid fa-circle-check" data-tippy-content="Source officielle"></i>
                 {% else %}
                     <em>Non communiqué</em>
                 {% endif %}
                 <br><br>
             {% endif %}
-            <strong>Circonstances</strong>: {{ acronymise(death.text|nl2br) }}
+            <strong>Circonstances</strong>: {{ death.text|markdown|acronymise }}
         </div>
         {% if death.image %}
             <div class="col-4 align-self-center d-none d-md-block">

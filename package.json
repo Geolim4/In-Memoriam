@@ -67,6 +67,7 @@
     "jquery": "^3.5.0",
     "js-cookie": "^3.0.1",
     "jsonminify": "^0.4.2",
+    "markdown": "^0.5.0",
     "micromodal": "^0.4.2",
     "node-snackbar": "^0.1.16",
     "object-merge": "^2.5.1",

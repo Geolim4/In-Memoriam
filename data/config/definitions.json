@@ -163,7 +163,7 @@
       "#counter_property": "count",
       "#counter_strategy": "distinct",
       "#number": {
-        "gd": {
+        "gn": {
           "none": "<span class=\"badge badge-success\">%d</span> gendarme",
           "singular": "<span class=\"badge badge-danger\">%d</span> gendarme",
           "plural": "<span class=\"badge badge-danger\">%d</span> gendarmes"
