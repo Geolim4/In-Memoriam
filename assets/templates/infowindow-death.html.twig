@@ -97,8 +97,8 @@
             {% if death.cause != 'suicide' %}
                 <strong>Hommage</strong>:
                 {% if death.homage %}
-                    <a href="{{ death.homage.url }}" target="_blank">{{ death.homage.title|acronymise }}</a>
-                    <i class="fa-solid fa-circle-check" data-tippy-content="Source officielle"></i>
+                    <a href="{{ death.homage.url }}" target="_blank" class="font-weight-bolder text-success">{{ death.homage.title|acronymise }}</a>
+                    <i class="fa-solid fa-circle-check text-primary" data-tippy-content="Source officielle"></i>
                 {% else %}
                     <em>Non communiqué</em>
                 {% endif %}
