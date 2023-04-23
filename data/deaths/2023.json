@@ -805,6 +805,43 @@
       ]
     },
     {
+      "cause": "malaise",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "03",
+      "day": "30",
+      "keywords": "Nicolas Mory",
+      "house": "gn",
+      "peers": [],
+      "text": "Un gendarme de la BR de Meaux est décédé des suites d'un malaise cardiaque survenu pendant sa permanence d'OPJ.\nIl était pacsé et père de trois enfants.",
+      "section": "BR Meaux",
+      "location": "Meaux",
+      "image": "",
+      "county": "77",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.95780932193714,
+        "lng": 2.8920954711785933
+      },
+      "homage": {
+        "title": "Ministère de l'Intérieur",
+        "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/actualites/2023/ceremonie-militaire-en-hommage-a-l-adjudant-chef-nicolas-mory"
+      },
+      "sources": [
+        {
+          "url": "https://lessor.org/vie-des-personnels/meaux-un-gendarme-de-41-ans-decede-dun-malaise-cardiaque",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
@@ -918,6 +955,113 @@
         {
           "url": "https://www.ladepeche.fr/2023/04/11/landes-un-gendarme-tue-dans-un-accident-de-la-route-un-second-entre-la-vie-et-la-mort-11126613.php",
           "title": "La Dépêche",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "04",
+      "day": "11",
+      "keywords": "Benjamin",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier, de la circonscription de Briançon a mit fin à ses jours avec son arme administrative après de vaines négociation du RAID pour le raisonner.\nIl était pacsé et père d'une petite fille.",
+      "section": "CSP Briançon",
+      "location": "Briançon",
+      "image": "",
+      "county": "05",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.89795545466914,
+        "lng": 6.637947055237232
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://france3-regions.francetvinfo.fr/provence-alpes-cote-d-azur/hautes-alpes/briancon/briancon-un-policier-se-suicide-avec-son-arme-de-service-2756234.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2023/04/18/briancon-un-policier-a-mis-fin-a-ses-jours-indique-le-prefet",
+          "title": "Le Dauphiné",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/briancon-un-policier-se-retranche-chez-lui-et-se-suicide-avec-son-arme-de-service.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.bfmtv.com/bfm-dici/vive-emotion-au-commissariat-de-briancon-apres-le-suicide-du-gardien-de-la-paix-benjamin_AN-202304200889.html",
+          "title": "BFMTV",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "04",
+      "day": "22",
+      "keywords": "Loïc Jeansanetas",
+      "house": "gn",
+      "peers": [],
+      "text": "Un gendarme du PSIG de Vichy est décédé de ses blessures survenues le 15 mars lors d'une intervention à La Chapelle (Allier) où un forcené avait fait exploser sa maison.\nIl était pacsé et futur père d'un bébé.",
+      "section": "PSIG Vichy",
+      "location": "La Chapelle",
+      "image": "",
+      "county": "03",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.89795545466914,
+        "lng": 6.637947055237232
+      },
+      "homage": {
+        "title": "Ministère de l'Intérieur",
+        "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/actualites/2023/la-gendarmerie-endeuillee-par-le-deces-d-un-gendarme-du-psig-de-vichy-dans-l-exercice-de-ses-fonctions"
+      },
+      "sources": [
+        {
+          "url": "https://www.liberation.fr/societe/police-justice/darmanin-annonce-le-deces-du-gendarme-loic-jeansanetas-blesse-dans-lallier-lors-dun-traquenard-meurtrier-20230423_O4ZGSPIJKVE4VIV4IEDIEWN4UU/",
+          "title": "Libération",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/allier/vichy/explosion-d-une-maison-dans-l-allier-en-mars-un-gendarme-est-mort-des-suites-de-ses-blessures-2759138.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/allier-lun-des-gendarmes-blesses-dans-lexplosion-lors-dune-intervention-est-decede.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/4033899-20230422-allier-darmanin-annonce-deces-gendarme-blesse-mars",
+          "title": "20 minutes",
           "paywall": false,
           "trustful": true
         }
