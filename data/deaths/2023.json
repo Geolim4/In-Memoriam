@@ -1066,6 +1066,92 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "04",
+      "day": "24",
+      "keywords": "",
+      "house": "armee",
+      "peers": [],
+      "text": "Un légionnaire du 2e REI de Nîmes a mit fin à ses jours avec son arme de dotation.\nIl était âgé de 19 ans et était engagé depuis quelques mois.",
+      "section": "2e REI (6e BLB)",
+      "location": "Nîmes",
+      "image": "",
+      "county": "30",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.846638618316,
+        "lng": 4.372021718299936
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/nimes-un-legionnaire-retrouve-mort-dans-sa-caserne-20230424",
+          "title": "Figaro",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-legionnaire-retrouve-mort-dans-la-caserne-de-nimes-6477251",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/nimes-un-jeune-legionnaire-decouvert-mort-par-arme-a-feu-dans-sa-caserne.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/societe/4034156-20230424-nimes-legionnaire-19-ans-retrouve-mort-caserne",
+          "title": "20 minutes",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "04",
+      "day": "28",
+      "keywords": "",
+      "house": "douane",
+      "peers": [],
+      "text": "Un douanier de la brigade des Douanes de Toulon a mit fin à ses jours avec son arme de service dans la salle d'armement.",
+      "section": "Douanes Portuaires",
+      "location": "Toulon",
+      "image": "",
+      "county": "83",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.117929616003416,
+        "lng": 5.934896222292129
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/toulon-un-agent-des-douanes-se-suicide-dans-les-locaux-de-sa-brigade.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
