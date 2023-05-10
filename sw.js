@@ -1,5 +1,5 @@
-/** SW auto-generated on 2023-05-02T17:48:41.895Z **/
-const CACHE_KEY = 'im-4.11.2+20230502T174841';
+/** SW auto-generated on 2023-05-10T23:44:50.033Z **/
+const CACHE_KEY = 'im-4.12.0+20230510T234450';
 const assets = [
   'assets/css/fonts/fa-solid-900.ttf',
   'assets/css/fonts/fa-solid-900.woff2',
@@ -70,8 +70,8 @@ const assets = [
   'assets/templates/infowindow-death.html.twig',
   'assets/templates/modals/content/advanced-search.html.twig',
   'assets/templates/modals/content/cookie-consent-declined.html.twig',
+  'assets/templates/modals/content/file.html.twig',
   'assets/templates/modals/content/infowindow-error.html.twig',
-  'assets/templates/modals/content/photo.html.twig',
   'assets/templates/modals/form/user-config.html.twig',
   'assets/templates/modals/modal-info.html.twig',
   'assets/templates/modals/pages/confidentiality.html.twig',
