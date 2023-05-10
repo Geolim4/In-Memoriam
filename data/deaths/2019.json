@@ -22,7 +22,7 @@
       "text": "Un policier de la CSP se suicide avec son arme de service.\nIl était père de deux enfants.",
       "section": "CSP La Rochelle",
       "location": "La Rochelle",
-      "image": "",
+      "image": null,
       "county": "17",
       "origin": "interieur",
       "gps": {
@@ -62,7 +62,7 @@
       "text": "Un policier de la PAF se suicide sans faire usage de son arme de service.\nIl était marié et père de famille.",
       "section": "PAF Cherbourg",
       "location": "Querqueville",
-      "image": "",
+      "image": null,
       "county": "50",
       "origin": "interieur",
       "gps": {
@@ -102,7 +102,7 @@
       "text": "Une jeune GAV est décédée de ses blessures à la suite d'une blessure en service dans des circonstances encore inconnues, elle était affecté à la Garde Républicaine.\nPeu d'informations disponibles sur ce décès.",
       "section": "1er peloton, 2ème escadron du RC de la GR",
       "location": "Château-Salins",
-      "image": "",
+      "image": null,
       "county": "57",
       "origin": "interieur",
       "gps": {
@@ -148,7 +148,7 @@
       "text": "Un policier du CIC se suicide à son domicile avec son arme de service.\nIl était marié et père d'un enfant'.",
       "section": "CIC Reims",
       "location": "Reims",
-      "image": "",
+      "image": null,
       "county": "51",
       "origin": "interieur",
       "gps": {
@@ -188,7 +188,7 @@
       "text": "Un policier du CIC de la Rochelle se suicide.\nPeu d'informations disponibles sur ce suicide.",
       "section": "CIC La Rochelle",
       "location": "La Rochelle",
-      "image": "",
+      "image": null,
       "county": "17",
       "origin": "interieur",
       "gps": {
@@ -222,7 +222,7 @@
       "text": "Le 1ère classe Bertrand PIME, affecté au service d'incendie et de secours du Syndicat intercommunal à vocation multiple (SIVM) Nord, en Nouvelle-Calédonie, est décédé en service commandé ce mercredi 9 janvier 2019, des suites de ses blessures. Mardi 8 janvier 2019, il avait été grièvement brûlé en combattant un important feu de végétation qui menaçait des habitations, sur la commune de Koumac.\nIl était en couple et père de deux enfants.",
       "section": "SIVM Nord",
       "location": "Koumac",
-      "image": "",
+      "image": null,
       "county": "988",
       "origin": "domtom",
       "gps": {
@@ -280,7 +280,7 @@
       "text": "Le capitaine Baptiste Chirié et la lieutenant Audrey Michelon ont péri lors du crash de leur Mirage 2000D à la frontière du Doubs et du Jura, dans la Combe Noire. Les circonstances du crash sont pour l'heure toujours inconnues. Le capitaine était père de deux enfants.",
       "section": "BA 113",
       "location": "Mignovillard",
-      "image": "",
+      "image": null,
       "county": "39",
       "origin": "interieur",
       "gps": {
@@ -350,7 +350,7 @@
       "text": "Deux pompiers de la BSPP ont péri dans une violente explosion due à une fuite de gaz en plein coeur de Paris. Le caporal-chef Simon Cartannaz et le première classe Nathanaël Josselin, en arrêt cardio-respiratoire, n'ont pas survécu à leurs blessures.",
       "section": "BSPP",
       "location": "Paris 9e",
-      "image": "",
+      "image": null,
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -414,7 +414,7 @@
       "text": "Un policier de la BAC se suicide à son domicile de Brunoy (Essonne), avec son arme de service.\nIl était père d'une petite fille.",
       "section": "BAC Haÿ-les-Roses",
       "location": "Haÿ-les-Roses",
-      "image": "",
+      "image": null,
       "county": "94",
       "origin": "interieur",
       "gps": {
@@ -460,7 +460,7 @@
       "text": "Un policier de la CRS 16 se suicide à son domicile de Saint-Omer (Pas-de-Calais) avec son arme de service.\nIl était père de trois enfants.",
       "section": "CRS 16",
       "location": "Saint-Omer",
-      "image": "",
+      "image": null,
       "county": "62",
       "origin": "interieur",
       "gps": {
@@ -506,7 +506,7 @@
       "text": "Un policier de la CSG (BRF Paris) se suicide à son domicile avec son arme de service.",
       "section": "CSG BRF Paris",
       "location": "Paris 18e",
-      "image": "",
+      "image": null,
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -558,7 +558,7 @@
       "text": "Un policier de la BCF se suicide.\nPeu d'informations disponibles sur ce suicide.",
       "section": "BCF Gare du Nord - Paris",
       "location": "Paris 20e",
-      "image": "",
+      "image": null,
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -592,7 +592,7 @@
       "text": "Un surveillant pénitentiaire du centre de détention de Bédenac s'est suicidé par pendaison.\nIl était marié et père de trois enfants.",
       "section": "Centre de détention",
       "location": "Bédenac",
-      "image": "",
+      "image": null,
       "county": "17",
       "origin": "interieur",
       "gps": {
@@ -644,7 +644,7 @@
       "text": "Un policier se suicide avec son arme de service. Il laisse une lettre derrière lui dénonçant les conditions de travail et les problèmes d'évolutions de carrière.",
       "section": "CRS 10",
       "location": "Le Mans",
-      "image": "",
+      "image": null,
       "county": "72",
       "origin": "interieur",
       "gps": {
@@ -684,7 +684,7 @@
       "text": "Informations issues de l’Administration, pour deux policiers suicidés mais dont nous n’avons aucune information à ce jour.",
       "section": "Ministère de l'Intérieur",
       "location": "Emplacement inconnu",
-      "image": "",
+      "image": null,
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -718,7 +718,7 @@
       "text": "Le sergent Jessy ÈVE, sapeur-pompier professionnel au corps départemental de La Réunion (Sdis974), affecté au centre d’incendie et de secours de Saint-André, et décédé en service commandé, suite à un sur-accident survenu alors qu'il intervenait sur un accident de la circulation et mettait en place le balisage de sécurité et de protection.\nIl était père de deux garçon.",
       "section": "SDIS 974",
       "location": "Saint-André",
-      "image": "",
+      "image": null,
       "county": "974",
       "origin": "domtom",
       "gps": {
@@ -770,7 +770,7 @@
       "text": "Une Maréchale des Logis-Chef de la section équipements et logistique du bureau des soutiens et des finances de Nouméa (DSF) a succombé à une infection de la dingue.\nMère de deux enfants elle était affecté à la DSF depuis plus d'un an.",
       "section": "DSF",
       "location": "Nouméa",
-      "image": "",
+      "image": null,
       "county": "988",
       "origin": "domtom",
       "gps": {
@@ -828,7 +828,7 @@
       "text": "Un policier en poste en Martinique se suicide.\nIl était père de famille",
       "section": "UAAJ",
       "location": "Fort de France",
-      "image": "",
+      "image": null,
       "county": "972",
       "origin": "domtom",
       "gps": {
@@ -868,7 +868,7 @@
       "text": "Un major de police se suicide à son domicile après avoir tué son ex-compagne. Le parquet de Laval s'est saisi de l'affaire mais s'est refusé à tout commentaire.",
       "section": "CSP Laval",
       "location": "Louverné",
-      "image": "",
+      "image": null,
       "county": "53",
       "origin": "interieur",
       "gps": {
@@ -914,7 +914,7 @@
       "text": "Un policier de la SU de Grand Quevilly se suicide.\nPeu d'informations disponibles.",
       "section": "SU Grand Quevilly / DDSP 76",
       "location": "Grand Quevilly",
-      "image": "",
+      "image": null,
       "county": "76",
       "origin": "interieur",
       "gps": {
@@ -948,7 +948,7 @@
       "text": "Un policier se suicide en se tirant une balle dans la poitrine dans les vestiaires du CSP.\nIl était marié et père d'un petit garçon.",
       "section": "BMo Limoges",
       "location": "Limoges",
-      "image": "",
+      "image": null,
       "county": "87",
       "origin": "interieur",
       "gps": {
@@ -1000,7 +1000,7 @@
       "text": "Un policier s'est suicidé, il était affecté à la CSP de Dunkerque.\nPeu d'informations disponibles sur ce suicide.",
       "section": "CSP Dunkerque",
       "location": "Dunkerque",
-      "image": "",
+      "image": null,
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -1034,7 +1034,7 @@
       "text": "Un policier d’Elancourt se suicide avec son arme de service. Son corps a été retrouvé dans des bois à proximité de son domicile par les gendarmes.\nIl était père de deux jeunes filles",
       "section": "CSP Elancourt",
       "location": "Elancourt",
-      "image": "",
+      "image": null,
       "county": "78",
       "origin": "interieur",
       "gps": {
@@ -1080,7 +1080,7 @@
       "text": "Un policier se suicide après une violente dispute conjugale.\nIl était père de deux enfants.",
       "section": "CSP Rouen",
       "location": "Saint-Saëns",
-      "image": "",
+      "image": null,
       "county": "76",
       "origin": "interieur",
       "gps": {
@@ -1126,7 +1126,7 @@
       "text": "Un gendarme se suicide avec son arme de service dans son bureau de la CoB de Selles-sur-Cher.",
       "section": "CoB Selles-sur-Cher",
       "location": "Selles-sur-Cher",
-      "image": "",
+      "image": null,
       "county": "41",
       "origin": "interieur",
       "gps": {
@@ -1172,7 +1172,7 @@
       "text": "Un ADS du 36' aurait tué accidentellement une gardienne de la paix avec son, arme de service en la touchant à la tête.",
       "section": "DRPJ",
       "location": "Paris 17e",
-      "image": "",
+      "image": null,
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -1224,7 +1224,7 @@
       "text": "Une militaire engagée dans l’opération intérieure Sentinelle a mis fin à ses jours avec son arme de service dans les locaux occupés par son unité à l’aéroport de Roissy.",
       "section": "Opération Sentinelle",
       "location": "Aéroport Roissy",
-      "image": "",
+      "image": null,
       "county": "95",
       "origin": "interieur",
       "gps": {
@@ -1276,7 +1276,7 @@
       "text": "Un policier de la CSI de Limay (Yvelines) se suicide avec son arme de service.\nDécouvert sans vie à son domicile par ses collègues, il était père de deux enfants.",
       "section": "CSI Limay",
       "location": "Nézel",
-      "image": "",
+      "image": null,
       "county": "78",
       "origin": "interieur",
       "gps": {
@@ -1322,7 +1322,7 @@
       "text": "Un policier de la 22e CI de Paris se suicide avec son arme de service.\nDécouvert sans vie à son domicile par ses collègues, il était père d'un petit garçon.",
       "section": "22e CI (DOPC)",
       "location": "Paris 12e",
-      "image": "",
+      "image": null,
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -1374,7 +1374,7 @@
       "text": "Un policier se suicide à son domicile après s'être retranché à son domicile dans l'Oise. Affecté dans un CSP parisien le GIGN n'a pu négocier sa reddition.",
       "section": "CSP Paris (inconnu)",
       "location": "Louveaucourt, Bailleval",
-      "image": "",
+      "image": null,
       "county": "60",
       "origin": "interieur",
       "gps": {
@@ -1426,7 +1426,7 @@
       "text": "Un policier de la BCF s'est suicidé à son domicile en Seine-et-Marne.\nPeu d'informations disponibles sur ce suicide.",
       "section": "BCF Paris",
       "location": "Lieu inconnu",
-      "image": "",
+      "image": null,
       "county": "77",
       "origin": "interieur",
       "gps": {
@@ -1466,7 +1466,7 @@
       "text": "Un surveillant pénitentiaire affecté au Quartier Disciplinaire de l’établissement du centre de détention de Toulouse-Seysses s'est suicidé par pendaisonc à son domicile. Il père de deux enfants.",
       "section": "Centre de détention",
       "location": "Toulouse-Seysses",
-      "image": "",
+      "image": null,
       "county": "31",
       "origin": "interieur",
       "gps": {
@@ -1512,7 +1512,7 @@
       "text": "Le médecin Marc Laycuras est décédé des suite de ses bléssures occasionnées un engin explosif détruisant son véhicule au cours d'une mission au Mali le 12 février dans le cadre de l'opération Barkhane.\nIl était marié et titulaire de la médaille de la Défense nationale.",
       "section": "2e RIMa (Armée de Terre)",
       "location": "Zone Inconnue",
-      "image": "",
+      "image": null,
       "county": "ML",
       "origin": "opex",
       "gps": {
@@ -1561,7 +1561,7 @@
       "text": "Un policier de la BAC s'est suicidé chez lui sans faire usage de son arme de service.\nIl était père de 4 enfants.",
       "section": "BAC D Lyon",
       "location": "Marlieux",
-      "image": "",
+      "image": null,
       "county": "01",
       "origin": "interieur",
       "gps": {
@@ -1619,7 +1619,7 @@
       "text": "Deux policiers municipaux, un homme et une femme, ont été retrouvés morts au sein de leurs locaux. Après enquête le féminicide suivi du suicide a été confirmé par les enquêteurs. L'auteur du coup de feu s'était depuis marié et était père d'un enfant.",
       "section": "Poste de Police",
       "location": "Avignon",
-      "image": "",
+      "image": null,
       "county": "84",
       "origin": "interieur",
       "gps": {
@@ -1677,7 +1677,7 @@
       "text": "Une policière de la brigade de nuit se suicide dans un champ.\nMère de 2 enfants elle laisse derrière elle une lettre.",
       "section": "BN Conflans-Sainte-Honorine (Yvelines)",
       "location": "Guainville",
-      "image": "",
+      "image": null,
       "county": "28",
       "origin": "interieur",
       "gps": {
@@ -1729,7 +1729,7 @@
       "text": "Un policier d'Alès se suicide sans faire usage de son arme de service. Son corps a été retrouvé dans les bois à l'issue d'une longue battue",
       "section": "CSP Ales",
       "location": "La Calmette",
-      "image": "",
+      "image": null,
       "county": "30",
       "origin": "interieur",
       "gps": {
@@ -1793,7 +1793,7 @@
       "text": " Un gendarme de l’Essonne a mis fin à ses jours avec son arme de service à l'extérieur de la caserne.\nIl était père de deux enfants",
       "section": "BT Orsay",
       "location": "Orsay",
-      "image": "",
+      "image": null,
       "county": "91",
       "origin": "interieur",
       "gps": {
@@ -1839,7 +1839,7 @@
       "text": "Un policier de l'UTJDR se suicide à son domicile avec son arme de service.",
       "section": "UTJDR (DOPC)",
       "location": "Paris 13e",
-      "image": "",
+      "image": null,
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -1879,7 +1879,7 @@
       "text": "Un lieutenant de la caserne de Saint-Paul, était porté disparu depuis dimanche après-midi. Le corps du pompier a été retrouvé par la suite à Marla.",
       "section": "SDIS 974",
       "location": "Marla",
-      "image": "",
+      "image": null,
       "county": "974",
       "origin": "domtom",
       "gps": {
@@ -1937,7 +1937,7 @@
       "text": "Un policier du CRA se suicide à son domicile.\nIl était père d'un petit garçon.",
       "section": "Centre de Rétention Administrative",
       "location": "Metz",
-      "image": "",
+      "image": null,
       "county": "57",
       "origin": "interieur",
       "gps": {
@@ -1989,7 +1989,7 @@
       "text": "Un policier municipal se suicide avec son arme de service dans la nuit sur son lieu de travail.\nTrès fusionnel avec sa fille, il avait envisagé une réorientation professionnelle au Canada.",
       "section": "Poste de Police",
       "location": "Béziers",
-      "image": "",
+      "image": null,
       "county": "34",
       "origin": "interieur",
       "gps": {
@@ -2035,7 +2035,7 @@
       "text": "Une capitaine de police de la sûreté départementale se tire une balle dans le coeur avec son arme de service. Elle était mère de deux jeunes enfants",
       "section": "Sûreté Départementale",
       "location": "Montpellier",
-      "image": "",
+      "image": null,
       "county": "34",
       "origin": "interieur",
       "gps": {
@@ -2087,7 +2087,7 @@
       "text": "Un jeune policier de la DOPC se suicide avec son arme de service.\nIl était chargé des actions de sensibilisation et préventions dans les écoles, les salons et autres événements.",
       "section": "DRSR (DOPC)",
       "location": "Paris 4e",
-      "image": "",
+      "image": null,
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -2139,7 +2139,7 @@
       "text": "Un commandant de gendarmerie se suicide avec son arme de service, il était marié et père de famille de 4 enfants.",
       "section": "Caserne de l’Entre-Deux",
       "location": "Entre-Deux",
-      "image": "",
+      "image": null,
       "county": "974",
       "origin": "domtom",
       "gps": {
@@ -2197,7 +2197,7 @@
       "text": "Un militaire du 4e régiment de Chasseurs basé à Gap (Hautes-Alpes) s’est suicidé avec son arme de service. Il se serait éloigné de son groupe pour s’isoler et se donner la mort.",
       "section": "4e RCh (Armée de Terre)",
       "location": "Gap",
-      "image": "",
+      "image": null,
       "county": "05",
       "origin": "interieur",
       "gps": {
@@ -2255,7 +2255,7 @@
       "text": "Un policier municipal de Paray-le-Monial s'est suicidé.\nIl était père de deux enfants et divorcé.",
       "section": "Poste de Police",
       "location": "Paray-le-Monial",
-      "image": "",
+      "image": null,
       "county": "71",
       "origin": "interieur",
       "gps": {
@@ -2307,7 +2307,7 @@
       "text": "Un gendarme de l'escadron mobile de Aunay-sur-Odon s'est suicidé avec son arme de service.\nIl était père d'un enfant.",
       "section": "EGM 24/3",
       "location": "Aunay-sur-Odon",
-      "image": "",
+      "image": null,
       "county": "14",
       "origin": "interieur",
       "gps": {
@@ -2359,7 +2359,7 @@
       "text": "Lors d'une opération de libération d'otages au Burkina Faso, le maître Cédric de Pierrepont et le maître Alain Bertoncello ont perdu la vie lors du raid. Tout deux étaient des militaires hautement expérimentés et décorés.",
       "section": "Commando Hubert - Marine Nationale (COS)",
       "location": "Sahel Nord",
-      "image": "",
+      "image": null,
       "county": "BF",
       "origin": "opex",
       "gps": {
@@ -2417,7 +2417,7 @@
       "text": "Un policier municipal commissariat de Cholet s'est suicidé sans faire usage de son arme de service. Père de trois enfants il avait été désarmé par sa hiérarchie pour des problèmes familliaux.",
       "section": "Poste de Police",
       "location": "Cholet",
-      "image": "",
+      "image": null,
       "county": "49",
       "origin": "interieur",
       "gps": {
@@ -2463,7 +2463,7 @@
       "text": "Un gendarme adjoint volontaire (GAV) des Hautes-Alpes s’est suicidé sans faire usage de son arme de service.\nIl était affecté au PSIG de Briançon.",
       "section": "PSIG Briançon (Hautes-Alpes)",
       "location": "Sassenage",
-      "image": "",
+      "image": null,
       "county": "38",
       "origin": "interieur",
       "gps": {
@@ -2509,7 +2509,7 @@
       "text": "Un officier de gendarmerie s’est suicidé dans son logement avec son arme de service. Marié et sans enfant il avait été promu capitaine en 2014 avant de prendre le commandement de la compagnie de Lons-le-Saunier en mars 2019.",
       "section": "CGD Jura",
       "location": "Lons-le-Saunier",
-      "image": "",
+      "image": null,
       "county": "39",
       "origin": "interieur",
       "gps": {
@@ -2561,7 +2561,7 @@
       "text": "Un chasseur du 501e régiment de chars de combat de Moumelon-le-Grand dans la Marne est décédé des suites de ses blessures dans une OPEX au sud du Liban en février 2018.",
       "section": "501e RCC (Armée de Terre)",
       "location": "Mourmelon-le-Grand",
-      "image": "",
+      "image": null,
       "county": "51",
       "origin": "opex",
       "gps": {
@@ -2625,7 +2625,7 @@
       "text": "Un policier du Groupe d'Appui Judiciaire (GAJ) a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "GAJ",
       "location": "Lille",
-      "image": "",
+      "image": null,
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -2671,7 +2671,7 @@
       "text": "Un policier affecté au commissariat du 7e arrondissement de Paris s’est donné la mort.\nIl était père de deux très jeunes enfants.",
       "section": "CSP paris 7e",
       "location": "Meaux",
-      "image": "",
+      "image": null,
       "county": "77",
       "origin": "interieur",
       "gps": {
@@ -2723,7 +2723,7 @@
       "text": "Un policier municipal commissariat de Nice s'est suicidé.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Poste de Police",
       "location": "Nice",
-      "image": "",
+      "image": null,
       "county": "06",
       "origin": "interieur",
       "gps": {
@@ -2757,7 +2757,7 @@
       "text": "Un commandant de police du SDN 77 s'est suicide à son domicile.\nSon corps a été retrouvé près du CSP de la commune de Chessy.",
       "section": "SDN 77",
       "location": "Chessy",
-      "image": "",
+      "image": null,
       "county": "77",
       "origin": "interieur",
       "gps": {
@@ -2809,7 +2809,7 @@
       "text": "Un adjudant du Peloté Motorisé de Fougère s’est suicidé avec son arme de service.\nIl était marié et père de 5 enfants.",
       "section": "EDSR (PMo Fougères)",
       "location": "Fougères",
-      "image": "",
+      "image": null,
       "county": "35",
       "origin": "interieur",
       "gps": {
@@ -2855,7 +2855,7 @@
       "text": "En pleine tempête Miguel, trois sauveteurs de la SNSM des Sables d'Olonnes ont péri lors d'une intervention pour secourir un bateau de pêche. La navette des sauveteurs, le SNS 061 Jack Morisseau, a chaviré à 800m des côtes.",
       "section": "SNSM",
       "location": "Sables-d’Olonne",
-      "image": "",
+      "image": null,
       "county": "85",
       "origin": "interieur",
       "gps": {
@@ -2913,7 +2913,7 @@
       "text": "Un Gardien de la Paix du commissariat de police du 19e à Paris se suicide sur son lieu de villégiature près de Nîmes.",
       "section": "CSP Paris 19e",
       "location": "Saint-Gervasy",
-      "image": "",
+      "image": null,
       "county": "30",
       "origin": "interieur",
       "gps": {
@@ -2953,7 +2953,7 @@
       "text": "Un policier municipal qui venait de finir sa formation (FIA) a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Poste de Police",
       "location": "Fos-sur-Mer",
-      "image": "",
+      "image": null,
       "county": "13",
       "origin": "interieur",
       "gps": {
@@ -2999,7 +2999,7 @@
       "text": "Un policier de la compagnie de CRS 61 est décédé à son domicile à la suite d'une coupure accidentelle sur le bras.",
       "section": "CRS 61",
       "location": "Vélizy-Villacoublay",
-      "image": "",
+      "image": null,
       "county": "78",
       "origin": "interieur",
       "gps": {
@@ -3051,7 +3051,7 @@
       "text": "Un brigadier de police s’est suicidé à son domicile en utilisant son arme de service.\nIl était affecté au STJN (Service de traitement judiciaire de nuit) du 2ème district de la préfecture de police.",
       "section": "STJN",
       "location": "Paris 18e",
-      "image": "",
+      "image": null,
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -3097,7 +3097,7 @@
       "text": "Un policier de la BT centrale a mis fin à ses jours sans faire usage de son arme.\nIl était père de trois enfants.",
       "section": "CSP Toulouse (BT centrale)",
       "location": "Toulouse",
-      "image": "",
+      "image": null,
       "county": "31",
       "origin": "interieur",
       "gps": {
@@ -3149,7 +3149,7 @@
       "text": "Un gendarme décède accidentellement lors d'une épreuve sportive.\nPeu d'informations disponibles sur ce décès.",
       "section": "CoB Attichy",
       "location": "Attichy",
-      "image": "",
+      "image": null,
       "county": "60",
       "origin": "interieur",
       "gps": {
@@ -3207,7 +3207,7 @@
       "text": "Un adjudant-chef du PSIG de Nîmes se suicide avec son arme de service. Adjoint du commandant du PSIG, il était marié et père de deux enfants.",
       "section": "PSIG",
       "location": "Nîmes",
-      "image": "",
+      "image": null,
       "county": "30",
       "origin": "interieur",
       "gps": {
@@ -3259,7 +3259,7 @@
       "text": "Un jeune soldat du 27ème Bataillon de Chasseurs Alpins d’Annecy se suicide avec une arme à feu durant un exercice au camp militaire de Caylus, dans le Tarn-et-Garonne.",
       "section": "27ème BCA (Armée de Terre)",
       "location": "Caylus",
-      "image": "",
+      "image": null,
       "county": "82",
       "origin": "interieur",
       "gps": {
@@ -3299,7 +3299,7 @@
       "text": "Un capitaine de police âgé de 58 ans a mis fin à ses jours sans son arme de service à son domicile situé à Burbure. Il a été découvert par l'un de ses quatre enfants.",
       "section": "BSU Bruay-La-Buissière",
       "location": "Burbure",
-      "image": "",
+      "image": null,
       "county": "62",
       "origin": "interieur",
       "gps": {
@@ -3345,7 +3345,7 @@
       "text": "Un policier de la division sud de la DDSP des Bouches-du-Rhône a mis fin à ses jours sans faire usage de son arme de service.\nIl était père de deux enfants.",
       "section": "Division Sud / DDSP 13",
       "location": "Marseille",
-      "image": "",
+      "image": null,
       "county": "13",
       "origin": "interieur",
       "gps": {
@@ -3403,7 +3403,7 @@
       "text": "Une policière s'est suicide sans faire usage de son arme de service. B/C de la CSP de Bordeaux, elle laisse derrière elle une fillette de 12ans.",
       "section": "CSP Bordeaux",
       "location": "Bordeaux",
-      "image": "",
+      "image": null,
       "county": "33",
       "origin": "interieur",
       "gps": {
@@ -3455,7 +3455,7 @@
       "text": "Un sapeur-pompier du centre de secours de Béziers s’est donné la mort dans des circonstances qui restent encore inconnues.",
       "section": "SDIS 34",
       "location": "Béziers",
-      "image": "",
+      "image": null,
       "county": "34",
       "origin": "interieur",
       "gps": {
@@ -3507,7 +3507,7 @@
       "text": "Un policier de la CSP d'Annecy s'est suicide avec son arme de service dans son véhicule personnel sur le parking du commissariat.",
       "section": "BAC - CSP",
       "location": "Annecy",
-      "image": "",
+      "image": null,
       "county": "74",
       "origin": "interieur",
       "gps": {
@@ -3565,7 +3565,7 @@
       "text": "Un adjudant-chef de la BTA de Castelnau-du-Médoc (Gironde) a mis fin à ses jours sans faire usage de son arme de service.\nIl était marié et père de trois enfants.",
       "section": "BTA",
       "location": "Castelnau de Médoc",
-      "image": "",
+      "image": null,
       "county": "33",
       "origin": "interieur",
       "gps": {
@@ -3623,7 +3623,7 @@
       "text": "Un caporal-chef réserviste s’est donné la mort avec son arme de service dans l’enceinte des Ecoles militaires de Saumur (EMS) en marge des cérémonies du 14-Juillet.\nUn problème familial serait à l'origine du drame.",
       "section": "RICM (9e BIMa)",
       "location": "Saumur",
-      "image": "",
+      "image": null,
       "county": "49",
       "origin": "interieur",
       "gps": {
@@ -3681,7 +3681,7 @@
       "text": "Trois militaires français sont décédés accidentellement dans le cadre de la mission « Harpie » de lutte contre l’orpaillage illégal en Guyane lors d'une opération « Wilau » dans une zone isolée en forêt du secteur « Saint-Jean/Abounami » dans la région de Maripasoula.",
       "section": "9e RIMa (Dét. 19e RG, Armée de Terre)",
       "location": "St-Jean d’Abounami",
-      "image": "",
+      "image": null,
       "county": "973",
       "origin": "domtom",
       "gps": {
@@ -3745,7 +3745,7 @@
       "text": "Un policier de la CSP de Douai a mis fin à ses jours.\nPeu d'informations disponibles sur ce suicide.",
       "section": "CSP",
       "location": "Douai",
-      "image": "",
+      "image": null,
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -3791,7 +3791,7 @@
       "text": "Un policier de la CRS 15 de Béthune a mis fin à ses jours avec son arme de service en se tirant une balle dans le coeur dans la chambre de la compagnie.\nPeu d'informations disponibles sur ce suicide.",
       "section": "CRS 15",
       "location": "Béthune",
-      "image": "",
+      "image": null,
       "county": "62",
       "origin": "interieur",
       "gps": {
@@ -3849,7 +3849,7 @@
       "text": "Un policier formateur à l'ENP de Nîmes s'est suicidé à son domicile sans faire usage de son arme de service.\nSon corps a été retrouvé en début de semaine à son domicile de Poulx.",
       "section": "ENP Nîmes",
       "location": "Poulx",
-      "image": "",
+      "image": null,
       "county": "30",
       "origin": "interieur",
       "gps": {
@@ -3907,7 +3907,7 @@
       "text": "Un policier du Groupe d’appui judiciaire (GAJ) s'est suicidé avec son arme de service à son domicile situé à La Buisse.\nIl était père de 3 enfants.",
       "section": "GAJ - DDSP 38",
       "location": "La Buisse",
-      "image": "",
+      "image": null,
       "county": "38",
       "origin": "interieur",
       "gps": {
@@ -3953,7 +3953,7 @@
       "text": "Un commandant de la PJ de Versaille (Antenne Cergy) a mis fin à ses jours en faisant usage d'une arme à feu.\nPère de famille, il avait travaillé plus de 25ans au sein de la PJ et a laissé un courrier derrière lui.",
       "section": "PJ Versaille (Antenne Cergy)",
       "location": "Cergy",
-      "image": "",
+      "image": null,
       "county": "95",
       "origin": "interieur",
       "gps": {
@@ -4017,7 +4017,7 @@
       "text": "Un policier du commissariat d’Aulnay-sous-Bois (Seine-Saint-Denis) s'est suicidé avec son arme de service à son domicile.\nRécemment nommé brigadier de police il laisse un terrible mot derrière lui: \"Ne pas me ranimer\".",
       "section": "CSP",
       "location": "Aulnay-sous-Bois",
-      "image": "",
+      "image": null,
       "county": "93",
       "origin": "interieur",
       "gps": {
@@ -4081,7 +4081,7 @@
       "text": "Un policier de la CRS 9 de Saint-Jacques-de-la-Lande (Ille-et-Vilaine) s'est suicidé avec son arme de service.\nIl était marié et père de trois enfants.",
       "section": "CRS 9",
       "location": "Saint-Jacques-de-la-Lande",
-      "image": "",
+      "image": null,
       "county": "35",
       "origin": "interieur",
       "gps": {
@@ -4139,7 +4139,7 @@
       "text": "Un élève Gardien de la Paix s'est tué sur la route de Lyon à Charvieu-Chavagneux en rentrant à son domicile.\nIl était père de deux enfants.",
       "section": "ENP",
       "location": "Charvieu-Chavagneux",
-      "image": "",
+      "image": null,
       "county": "38",
       "origin": "interieur",
       "gps": {
@@ -4185,7 +4185,7 @@
       "text": "Un policier de la CRS 11 de Lambersart (Nord) s'est suicidé avec son arme de service.\nIl était marié et père de trois enfants.",
       "section": "CRS 11",
       "location": "Lambersart",
-      "image": "",
+      "image": null,
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -4249,7 +4249,7 @@
       "text": "Un pilote de bombardier d'eau (type Tracker) s'est crashé près de Générac lors d'une intervention sur un incendie.\nIl a été tué sur le coup.",
       "section": "Sécurité Civile",
       "location": "Générac",
-      "image": "",
+      "image": null,
       "county": "30",
       "origin": "interieur",
       "gps": {
@@ -4313,7 +4313,7 @@
       "text": "Un policier municipal d’Orléans (Loiret) a mis fin à ses jours à son domicile de Neung-sur-Beuvron (Loir-et-Cher). Aux premières constatations, l'arme utilisé n'était pas son arme de service.",
       "section": "Poste de police",
       "location": "Neung-sur-Beuvron",
-      "image": "",
+      "image": null,
       "county": "41",
       "origin": "interieur",
       "gps": {
@@ -4359,7 +4359,7 @@
       "text": "Un policier affecté à la Direction générale de la sécurité intérieure s'est tué dans un accident en moto en quittant son travail.\nIl était pacsé et en poste à la DGSI depuis plusieurs années.",
       "section": "DGSI",
       "location": "Asnières-sur-Seine",
-      "image": "",
+      "image": null,
       "county": "92",
       "origin": "interieur",
       "gps": {
@@ -4405,7 +4405,7 @@
       "text": "Un gendarme décède dans un accident de la circulation en se rendant sur une opération judiciaire planifiée près de Noyon.\nPère de deux enfants il était en poste au PSIG de Compiègne (Oise).",
       "section": "PSIG Compiègne",
       "location": "Clairoix",
-      "image": "",
+      "image": null,
       "county": "60",
       "origin": "interieur",
       "gps": {
@@ -4475,7 +4475,7 @@
       "text": "Un gendarme du Peloton Spécialisé de Protection de la gendarmerie s'est suicidé dans son logement de fonction avec son arme de service.\nPère de 5 enfants il était affecté au PSPG depuis 10 ans.",
       "section": "PSPG",
       "location": "Cruas",
-      "image": "",
+      "image": null,
       "county": "07",
       "origin": "interieur",
       "gps": {
@@ -4551,7 +4551,7 @@
       "text": "Un surveillant du centre pénitentiaire de la Santé s'est suicidé en se jetant sous un train. Père de deux enfants il avait intégré le centre pénitentiaire de la Santé à sa réouverture.",
       "section": "Centre de détention de la santé",
       "location": "Paris 14e",
-      "image": "",
+      "image": null,
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -4591,7 +4591,7 @@
       "text": "Une policière s'est suicidé avec son arme de service sur le parking de son logement à Drancy.\nRetrouvée sans vie par son compagnon en état de choc, elle était affectée à la 21e CI de la DOPC.",
       "section": "21e CI (DOPC)",
       "location": "Paris 19e",
-      "image": "",
+      "image": null,
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -4655,7 +4655,7 @@
       "text": "Le Major Christophe Pensec s’est éteint à Biarritz lors de son détachement au G7 pendant son sommeil.\nMilitaire hautement décoré il était père de trois enfants.",
       "section": "CoB Gacé (Orne)",
       "location": "Biarritz",
-      "image": "",
+      "image": null,
       "county": "64",
       "origin": "interieur",
       "gps": {
@@ -4701,7 +4701,7 @@
       "text": "Un policier s’est suicidé avec son arme de service dans son véhicule, près de son domicile à Aulnoy.\nIl était affecté à la BJN 94 (brigade judiciaire de nuit).",
       "section": "BJN 94",
       "location": "Aulnoy",
-      "image": "",
+      "image": null,
       "county": "94",
       "origin": "interieur",
       "gps": {
@@ -4765,7 +4765,7 @@
       "text": "Un gendarme adjoint volontaire s’est suicidé avec son arme de service, ce mercredi.\nAffecté à la base aérienne 126, son corps a été retrouvé sur la plage de Quarcione.",
       "section": "BA 126",
       "location": "Ventiseri",
-      "image": "",
+      "image": null,
       "county": "2B",
       "origin": "domtom",
       "gps": {
@@ -4810,7 +4810,7 @@
       "text": "Un ancien policier du Port s'est suicidé avec son arme de service alors qu'il se battait pour obtenir sa réintégration dans la police après sa révocation. Père de quatre enfants il a été retrouvé sans vie à son domicile à Saint-Leu",
       "section": "CSP Saint-Pierre",
       "location": "Saint-Leu (Réunion)",
-      "image": "",
+      "image": null,
       "county": "974",
       "origin": "domtom",
       "gps": {
@@ -4856,7 +4856,7 @@
       "text": "Un capitaine du SDIS à Foulayronnes a trouvé la mort dans un violent accident de circulation. Père de deux enfants il était en poste au service prévention du groupement opération-prévention-prévision du SDIS 47.",
       "section": "SDIS 47",
       "location": "Foulayronnes",
-      "image": "",
+      "image": null,
       "county": "47",
       "origin": "interieur",
       "gps": {
@@ -4913,7 +4913,7 @@
       "text": "Un motard de la police affecté à la DDSP de la Seine-Maritime a mis fin à ses jours.\nCelui-ci était en arrêt de travail depuis sa mission au G7.",
       "section": "CSP Le havre / DDSP 76",
       "location": "Le havre",
-      "image": "",
+      "image": null,
       "county": "76",
       "origin": "interieur",
       "gps": {
@@ -4977,7 +4977,7 @@
       "text": "Un gendarme de la caserne de gendarmerie mobile de Maisons-Alfort s'est suicidé dans son logement avec son arme de service.\nPeu d'informations disponibles sur ce suicide.",
       "section": "GGM II/1  (Escadron Inconnu)",
       "location": "Maisons-Alfort",
-      "image": "",
+      "image": null,
       "county": "94",
       "origin": "interieur",
       "gps": {
@@ -5023,7 +5023,7 @@
       "text": "Un commissaire de police de la circonscription de Cergy s'est suicidé avec une arme autre que son arme administrative. Père de deux enfants il était affecté à ce commissariat depuis avril 2017.",
       "section": "CSP Cergy",
       "location": "Cergy",
-      "image": "",
+      "image": null,
       "county": "95",
       "origin": "interieur",
       "gps": {
@@ -5081,7 +5081,7 @@
       "text": "Un surveillant Brigadier du centre pénitentiaire de Borgo s'est suicidé.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Maison d'arrêt de Borgo",
       "location": "Borgo",
-      "image": "",
+      "image": null,
       "county": "2B",
       "origin": "domtom",
       "gps": {
@@ -5115,7 +5115,7 @@
       "text": "Un policier du Ciat de Louvroil a mis fin à ses jours avec son arme de service.\nAffecté depuis deux ans au Ciat de Louvroil il était marié et père de deux enfants.",
       "section": "CSP Louvroil",
       "location": "Louvroil",
-      "image": "",
+      "image": null,
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -5173,7 +5173,7 @@
       "text": "Un agent administratif a attaqués des policiers et agents administratifs de la Préfecture de Police.\nTrois policiers de la DRPP ainsi qu'un agent administratif sont décédés des suites de leurs blessures. L'attaquant a été abattu par un policier après plusieurs sommations. Sur les quatres fonctionnaires tués, 3 d'entre eux étaient chacun parent de deux enfants.",
       "section": "Préfecture de Police",
       "location": "Paris",
-      "image": "",
+      "image": null,
       "county": "75",
       "origin": "interieur",
       "gps": {
@@ -5237,7 +5237,7 @@
       "text": "Un agent de la DGSE est décédé à la suite d'un accident de tir au CPES de Cercottes. Au cours d’un entraînement à balles réelles, l’agent a été mortellement touché par un tir accidentel. Aucune information disponible quand à la l'identité de la personne de par la nature de ses missions.",
       "section": "DGSE (Ministère des Armées)",
       "location": "Cercottes",
-      "image": "",
+      "image": null,
       "county": "45",
       "origin": "interieur",
       "gps": {
@@ -5301,7 +5301,7 @@
       "text": "Un gardien de la paix du dépôt du TGI de Bobigny (Seine-Saint-Denis), s’est suicidé dans les locaux du TGI avec son arme de service tôt le matin. Célibataire et sans enfant, il était affecté à la brigade nuit (BN) du dépôt.",
       "section": "Dépôt de police TGI (DSPAP)",
       "location": "Bobigny",
-      "image": "",
+      "image": null,
       "county": "93",
       "origin": "interieur",
       "gps": {
@@ -5371,7 +5371,7 @@
       "text": "Un secouriste expérimenté de la CRS-Alpes (Grenoble) est décédé lors d'un intervention de secours à des alpinistes en difficulté. Il aurait dévissé d'une chute de 150m, pris en charge par le médecin d'intervention il est décédé à l'hôpital de Grenoble. Père de deux enfants il était affecté à l'unité de secours en montagne depuis une vingtaine d'années.",
       "section": "CRS 47 / CRS-Alpes",
       "location": "Grenoble",
-      "image": "",
+      "image": null,
       "county": "38",
       "origin": "interieur",
       "gps": {
@@ -5441,7 +5441,7 @@
       "text": "Un gendarme s’est suicidé avec son arme de service dans l’enceinte du pôle régional de gendarmerie à Sathonay-Camp.\nIl laisse derrière lui un lettre expliquant son geste.",
       "section": "GGM I/5 (Escadron Inconnu)",
       "location": "Sathonay-Camp",
-      "image": "",
+      "image": null,
       "county": "69",
       "origin": "interieur",
       "gps": {
@@ -5505,7 +5505,7 @@
       "text": "Un gardien de la paix de la Formation Motocycliste Urbaine (FMU) c'est suicidé avec son arme de service.\nPère de famille il était en fonction au poste de Trith-Saint-Léger.",
       "section": "FMU Valenciennes",
       "location": "Cambrésis",
-      "image": "",
+      "image": null,
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -5557,7 +5557,7 @@
       "text": "Un gendarme adjoint volontaire (GAV) de la compagnie de Paris-Orly s'est suicidé.\n« H. » avait 19ans.\nTrès peu d'informations disponibles sur ce suicide.",
       "section": "Compagnie de Paris-Orly",
       "location": "Orly",
-      "image": "",
+      "image": null,
       "county": "94",
       "origin": "interieur",
       "gps": {
@@ -5591,7 +5591,7 @@
       "text": "Un gendarme du PSIG d'Ancenis est décédé suite à un malaise pendant une patrouille de surveillance nocturne.\nMarié et père d'une fille le maréchal des logis-chef n'a pu être réanimé.",
       "section": "PSIG Ancenis",
       "location": "Ancenis",
-      "image": "",
+      "image": null,
       "county": "44",
       "origin": "interieur",
       "gps": {
@@ -5637,7 +5637,7 @@
       "text": "Un militaire français du 1er régiment de spahis de Valence a été tué au Mali, dans la région de Menaka. Son convoi a été pris au piège dans une IED improvisé.",
       "section": "1er RS (6e BLB, Armée de Terre)",
       "location": "Région de Menaka",
-      "image": "",
+      "image": null,
       "county": "ML",
       "origin": "opex",
       "gps": {
@@ -5707,7 +5707,7 @@
       "text": "Un policier affecté à la BSTC de de la circonscription de Nantes s'est suicidé à son domicile avec son arme de service.\nAgé de 38 ans et sans enfants, il aurait laissé une lettre derrière lui expliquant les raisons de son geste.",
       "section": "BSTC - CSP Nantes",
       "location": "Nantes",
-      "image": "",
+      "image": null,
       "county": "44",
       "origin": "interieur",
       "gps": {
@@ -5777,7 +5777,7 @@
       "text": "Un gendarme adjudant-chef, commandant la brigade de proximité (BP) de Saint Vallier de Thiey (CoB de Peymeinade-compagnie de Grasse), s'est suicidé avec son arme de service.\nIl était âgé de 53 ans, marié et père de quatre enfants.",
       "section": "Brigade de Proximité",
       "location": "Saint Vallier de Thiey",
-      "image": "",
+      "image": null,
       "county": "06",
       "origin": "interieur",
       "gps": {
@@ -5835,7 +5835,7 @@
       "text": "Un surveillant du centre de détention de Roanne s'est suicidé par pendaison en bordure de Loire à proximité de Cordelle.\nSurveillant pénitentiaire depuis 2012 il avait été affecté au centre de détention de Roanne depuis 2015.",
       "section": "Centre de Détention ",
       "location": "Roanne",
-      "image": "",
+      "image": null,
       "county": "42",
       "origin": "interieur",
       "gps": {
@@ -5893,7 +5893,7 @@
       "text": "Un gendarme de la brigade territoriale autonome (BTA) des Arcs a mis fins à ses jours avec son arme de service.\nPère d'une petite fille de 10 ans il a été retrouvé par ses camarades en fin de soirée.",
       "section": "BTA des Arcs",
       "location": "Les Arcs",
-      "image": "",
+      "image": null,
       "county": "83",
       "origin": "interieur",
       "gps": {
@@ -5951,7 +5951,7 @@
       "text": "Un Adjudant de la communauté de brigades (CoB) de Châteauvillain s'est suicidé dans des causes qui demeurent encore inconnues. Affecté à cette brigade depuis de nombreuses années, il était père de 3 enfants.",
       "section": "CoB Chateauvillain",
       "location": "Chateauvillain",
-      "image": "",
+      "image": null,
       "county": "52",
       "origin": "interieur",
       "gps": {
@@ -6009,7 +6009,7 @@
       "text": "Un militaire de la 7e brigade blindée (BB) s’est suicidé son arme de service à Valdahon dans le Doubs. L'adjudant-chef aurait mit fin à ses jours après son tour de garde.",
       "section": "7e BB",
       "location": "Valdahon",
-      "image": "",
+      "image": null,
       "county": "25",
       "origin": "interieur",
       "gps": {
@@ -6055,7 +6055,7 @@
       "text": "A la suite d'une collision de deux hélicoptères, treize militaires de plusieurs régiments ont périt pendant une opération de combat visant à épauler des troupes au sol. L'accident est survenu à Liptako dans la région de Ménaka, frontalière du Burkina Faso et du Niger. Plus d'informations dans les sources ci-dessous.",
       "section": "5e RHC (4e BAC), 4e RCh, 93e RAM, 2e REG (27e BIM)",
       "location": "Liptako, Région de Ménaka",
-      "image": "",
+      "image": null,
       "county": "ML",
       "origin": "opex",
       "gps": {
@@ -6113,7 +6113,7 @@
       "text": "Une gendarme de la caserne d'Evry a mis fin à ses jours.\nPeu de détails disponibles sur ce décès au vu de la \"douleur\" provoquée par cet évènement comme expliqué par la Commandante de groupement de l’Essonne.",
       "section": "BTA Evry",
       "location": "Evry",
-      "image": "",
+      "image": null,
       "county": "91",
       "origin": "interieur",
       "gps": {
@@ -6165,7 +6165,7 @@
       "text": "Un gardien de la paix du Ciat du Bouscat s'est suicidé avec son arme de service à son domicile.\nIl était marié et père de deux enfants.",
       "section": "CSP du Bouscat",
       "location": "Le Bouscat",
-      "image": "",
+      "image": null,
       "county": "33",
       "origin": "interieur",
       "gps": {
@@ -6223,7 +6223,7 @@
       "text": "Deux secouristes de la sécurité civile et un pompier sont morts dans un accident d'hélicoptère EC145 de la Sécurité civile alors qu'ils se dirigeaient vers Le Luc-Le Cannet.\nLes trois secouristes étaient des professionnels expérimentés et décorés comptabilisant de très nombreuses heures de vol.",
       "section": "Sécurité Civile",
       "location": "Massif de la Nerthe, Rove",
-      "image": "",
+      "image": null,
       "county": "13",
       "origin": "interieur",
       "gps": {
@@ -6287,7 +6287,7 @@
       "text": "Un policier municipal a mis fin à ses jours dans des circonstances qui demeurent inconnues alors qu'il était porté disparu depuis le samedi précédent.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Poste de Police",
       "location": "La Couronne",
-      "image": "",
+      "image": null,
       "county": "16",
       "origin": "interieur",
       "gps": {
@@ -6327,7 +6327,7 @@
       "text": "Un Sergent-Chef âgé de la caserne de Crécy-la-Chapelle est décédé d'un malaise cardique alors qu'il s’apprêtait à prendre sa garde à Crécy-la-Chapelle.\nMarié et père de six enfants, il était en poste depuis 2012.",
       "section": "SDIS 77",
       "location": "Crécy-la-Chapelle",
-      "image": "",
+      "image": null,
       "county": "77",
       "origin": "interieur",
       "gps": {
@@ -6379,7 +6379,7 @@
       "text": "Un élève de l'ENP de Nîmes aurait mis fin à ses jours dans des circonstances inexpliquées.",
       "section": "ENP Nîmes",
       "location": "Poulx",
-      "image": "",
+      "image": null,
       "county": "30",
       "origin": "interieur",
       "gps": {
@@ -6413,7 +6413,7 @@
       "text": "Un motard de la police décède dans un accident de la route en rentrant de son service.\nPeu d'informations disponibles sur ce décès.",
       "section": "CSP Menton",
       "location": "Èze",
-      "image": "",
+      "image": null,
       "county": "83",
       "origin": "interieur",
       "gps": {
@@ -6453,7 +6453,7 @@
       "text": "Un policier du CIC de Nanterre a mis fins à ses jours avec son arme de service dans les locaux de l’état-major des Hauts-de-Seine.\nMarié et père de deux enfants il était en poste depuis une dizaine d'années.",
       "section": "CIC Nanterre",
       "location": "Nanterre",
-      "image": "",
+      "image": null,
       "county": "92",
       "origin": "interieur",
       "gps": {
@@ -6523,7 +6523,7 @@
       "text": "Une policière municipale a mis fins à ses jours dans des circonstances encore indéterminées.\nPeu d'informations disponibles sur ce suicide.",
       "section": "Poste de Police",
       "location": "Marseille",
-      "image": "",
+      "image": null,
       "county": "13",
       "origin": "interieur",
       "gps": {

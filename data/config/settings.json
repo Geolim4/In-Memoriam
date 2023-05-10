@@ -83,6 +83,7 @@
       "radius": 0.4
     },
     "imagePath": {
+      "root":  "./assets/images/",
       "chart": "./assets/images/map/chart.png",
       "house": "./assets/images/house/%house%.png",
       "gallery": "./assets/images/gallery/",

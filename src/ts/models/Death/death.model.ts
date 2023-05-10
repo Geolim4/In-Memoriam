@@ -1,4 +1,5 @@
 import { TitleUrl } from '../titleUrl.model';
+import { Image } from '../image.model';
 import { DeathPeer } from './deathPeer.model';
 import { DeathSource } from './deathSource.model';
 import { DeathGps } from './deathGps.model';
@@ -17,7 +18,7 @@ export interface Death {
     house: string;
     keywords: string;
     location: string;
-    image: string;
+    image?: Image;
     month: string;
     origin: DeathOrigin;
     county: string;

@@ -615,6 +615,8 @@ export abstract class AppCore extends AppAbstract {
                                         && !StringUtilsHelper.arrayContainsString(death.keywords, safeFilterSplited, 'one')
                                         && !StringUtilsHelper.arrayContainsString(death.section, safeFilterSplited, 'all')
                                         && !StringUtilsHelper.arrayContainsString(death.location, safeFilterSplited, 'all')
+                                        && !(death.image !== null && StringUtilsHelper.arrayContainsString(death.image.desc, safeFilterSplited, 'all'))
+                                        && !(death.image !== null && StringUtilsHelper.arrayContainsString(death.image.origin, safeFilterSplited, 'all'))
                                         && !(this.isSearchByExpressionEnabled() && filterExpression && Expression.evaluate(filterExpression, filterExpressionContext))
                                     )
                                 )
@@ -625,6 +627,8 @@ export abstract class AppCore extends AppAbstract {
                                         || StringUtilsHelper.arrayContainsString(death.keywords, negatedFilterSplited, 'one')
                                         || StringUtilsHelper.arrayContainsString(death.section, negatedFilterSplited, 'all')
                                         || StringUtilsHelper.arrayContainsString(death.location, negatedFilterSplited, 'all')
+                                        || (death.image !== null && StringUtilsHelper.arrayContainsString(death.image.desc, negatedFilterSplited, 'all'))
+                                        || (death.image !== null && StringUtilsHelper.arrayContainsString(death.image.origin, negatedFilterSplited, 'all'))
                                     )
                                 )
                             ) {
@@ -791,6 +795,7 @@ export abstract class AppCore extends AppAbstract {
         });
 
         selectsAndFields.forEach((field): void => {
+            const eventTypes = ['change'];
             const hasResetButton = field.nextElementSibling && field.nextElementSibling.hasAttribute('data-reset-field-target');
             if (!field.multiple) {
                 field.value = (typeof filters[field.name] !== 'undefined' ? filters[field.name] : '');
@@ -818,7 +823,11 @@ export abstract class AppCore extends AppAbstract {
                     }
                 }, (document.activeElement.id === field.id || !hasResetButton) ? 0 : 150); // Allow to capture reset button clicks
             };
-            Events.addEventHandler(field, 'change', this.eventHandlers[field.id]);
+
+            if (field.tagName === 'INPUT') {
+                eventTypes.push('paste');
+            }
+            Events.addEventHandler(field, eventTypes, this.eventHandlers[field.id]);
         });
 
         Events.addDoubleKeypressHandler('Home', searchElement, (): void => {
