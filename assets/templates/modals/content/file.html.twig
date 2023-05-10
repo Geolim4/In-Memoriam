@@ -1,0 +1,19 @@
+{% if file.kind == 'image' %}
+    <div>
+        <img src="{{ config.imagePath.root ~ file.directory ~ '/' ~ file.filename }}" alt="{{ file.desc }}" class="mw-100 rounded border border-dark" />
+    </div>
+    {% if file.desc %}
+        <em>{{ file.desc }}</em>
+    {% endif %}
+    {% if file.origin or file.licence %}
+    <div>
+        <small>
+            <em class="text-warning">
+                <span>Source: {{ file.origin }}</span>
+                {% if file.licence|trim %} | <span><i class="fa-solid fa-warning d-none d-sm-inline-block"></i> Photo sous licence {{ file.licence }}.</span>{% endif %}
+            </em>
+        </small>
+    </div>
+    {% endif %}
+    {# @todo for other file kinds #}
+{% endif %}

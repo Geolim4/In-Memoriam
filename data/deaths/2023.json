@@ -22,7 +22,7 @@
       "text": "Un gendarme affecté à la BTA de Canet-en-Roussillon a mit fin à ses jours.\nIl était père de deux enfants.",
       "section": "BTA",
       "location": "Canet-en-Roussillon",
-      "image": "",
+      "image": null,
       "county": "66",
       "origin": "interieur",
       "gps": {
@@ -56,7 +56,7 @@
       "text": "Un gendarme affecté à la SAJ de Villeneuve d’Ascq a mit fin à ses jours avec son arme administrative.\nIl était père de deux enfants.",
       "section": "SAJ 59",
       "location": "Villeneuve d’Ascq",
-      "image": "",
+      "image": null,
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -93,10 +93,17 @@
       "keywords": "Maximilien MAES",
       "house": "gn",
       "peers": [],
-      "text": "Un gendarme en service affecté à la BMo a perdu la vie dans un accident de la route à Saint-Priest.\nIl était pacsé d'une jeune fille.",
+      "text": "Un gendarme en service affecté à la BMo a perdu la vie dans un accident de la route à Saint-Priest.\nIl était pacsé et père d'une jeune fille.",
       "section": "BMo",
       "location": "Aubenas",
-      "image": "maximilien-maes.jpg",
+      "image": {
+        "filename": "maximilien-maes.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "",
+        "origin": "La Voix Du Gendarme",
+        "licence": "CC BY-ND 2.0"
+      },
       "county": "07",
       "origin": "interieur",
       "gps": {
@@ -163,7 +170,7 @@
       "text": "Un policier affecté à la CRS 20 de Limoges aurait mit fin à ses jours.\nIl était père de deux enfants.",
       "section": "CRS 20",
       "location": "Limoges",
-      "image": "",
+      "image": null,
       "county": "87",
       "origin": "interieur",
       "gps": {
@@ -197,7 +204,14 @@
       "text": "Un gendarme affecté à la SAG de Nîmes a mit fin à ses jours avec son arme administrative.\nIl était père de trois enfants.\nPeu de sources disponibles sur ce décès.",
       "section": "SAG",
       "location": "Nîmes",
-      "image": "alexandre-signorotto.jpg",
+      "image": {
+        "filename": "alexandre-signorotto.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "",
+        "origin": "@36quaidesorfevres",
+        "licence": "CC BY-ND 2.0"
+      },
       "county": "30",
       "origin": "interieur",
       "gps": {
@@ -243,7 +257,14 @@
       "text": "Un élève-gendarme de l'école de Gendarmerie de Tulle a mit fin à ses jours avec son arme administrative.\nIl était âgé de 22 ans.",
       "section": "École de Gendarmerie de Tulle",
       "location": "Tulle",
-      "image": "joshua-alloy.jpg",
+      "image": {
+        "filename": "joshua-alloy.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "",
+        "origin": "EGN Tulle",
+        "licence": "CC BY-ND 2.0"
+      },
       "county": "19",
       "origin": "interieur",
       "gps": {
@@ -289,7 +310,7 @@
       "text": "Un policier, chef du groupe \"Crim\" à la police judiciaire du Var, a mit fin à ses jours avec son arme administrative.\nIl était marié et père de deux enfants dont un bébé.",
       "section": "PJ 83",
       "location": "Toulon",
-      "image": "",
+      "image": null,
       "county": "83",
       "origin": "interieur",
       "gps": {
@@ -347,7 +368,7 @@
       "text": "Un policier réserviste est décédé dans un accident de la route en allant prendre son service.\nIl était marié et père de famille.",
       "section": "CSP Nantes",
       "location": "Nantes",
-      "image": "",
+      "image": null,
       "county": "44",
       "origin": "interieur",
       "gps": {
@@ -393,7 +414,7 @@
       "text": "Un policier de la CRS autoroutière Nord de Paris a mit fin à ses jours avec son arme administrative.",
       "section": "CRS Autoroute Nord",
       "location": "Deuil-la-Barre",
-      "image": "",
+      "image": null,
       "county": "95",
       "origin": "interieur",
       "gps": {
@@ -433,7 +454,7 @@
       "text": "Un militaire sous-officier de la caserne Kléber a mit fin à ses jours avec son arme administrative.\nIl laisse une lettre expliquant les raisons de son geste derrière lui.",
       "section": "Caserne Kléber",
       "location": "Lille",
-      "image": "",
+      "image": null,
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -479,7 +500,7 @@
       "text": "Une policière de la circonscription de Pointe-à-Pitre a mit fin à ses jours avec son arme administrative.\nElle laisse une lettre expliquant les raisons de son geste derrière elle.",
       "section": "CSP Pointe-à-Pitre",
       "location": "Pointe-à-Pitre",
-      "image": "",
+      "image": null,
       "county": "971",
       "origin": "domtom",
       "gps": {
@@ -519,7 +540,7 @@
       "text": "Un jeune militaire en formation au CFIM du 13e RG a mit fin à ses jours avec un fusil d'assaut pendant un exercice.",
       "section": "CFIM du 13e RG (7e BB)",
       "location": "Valdahon",
-      "image": "",
+      "image": null,
       "county": "25",
       "origin": "interieur",
       "gps": {
@@ -577,7 +598,7 @@
       "text": "Un jeune gendarme de la brigade de Saint-Pol-sur-Ternoise a mit fin à ses jours avec son arme administrative.\nIl laisse derrière lui une fillette de 18 mois.",
       "section": "BP Saint-Pol-sur-Ternoise",
       "location": "Saint-Pol-sur-Ternoise",
-      "image": "",
+      "image": null,
       "county": "62",
       "origin": "interieur",
       "gps": {
@@ -617,7 +638,7 @@
       "text": "Un jeune policier de la CRS 37 a mit fin à ses jours avec son arme administrative pendant un déplacement avec sa compagnie au cantonnement de Pondorly (Val-de-Marne).",
       "section": "CRS 37",
       "location": "Strasbourg",
-      "image": "",
+      "image": null,
       "county": "67",
       "origin": "interieur",
       "gps": {
@@ -651,7 +672,7 @@
       "text": "Un gendarme, commandant de brigade de la BTA de Basse-Goulaine a mit fin à ses jours avec son arme administrative.\nIl était marié et père de 3 enfants.",
       "section": "BTA",
       "location": "Basse-Goulaine",
-      "image": "",
+      "image": null,
       "county": "44",
       "origin": "interieur",
       "gps": {
@@ -691,7 +712,14 @@
       "text": "Un gendarme de l'antenne GIGN de Guyane est mort en service lors d'une intervention dans le cadre de l'opération Harpie.\nIl était pacsé et père de deux jeunes enfants.",
       "section": "AGIGN Cayenne",
       "location": "Dorlin, Maripasoula",
-      "image": "arnaud-blanc.jpg",
+      "image": {
+        "filename": "arnaud-blanc.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "",
+        "origin": "GIGN",
+        "licence": "CC BY-ND 2.0"
+      },
       "county": "973",
       "origin": "domtom",
       "gps": {
@@ -764,7 +792,14 @@
       "text": "Un sapeur-pompier de la BSPP détaché au centre au Centre Spatial Guyanais (CSG) est mort dans un accident de la route en se rendant sur intervention au CSG de Kourou.\nIl était marié et père de trois enfants.",
       "section": "BSPP (CSG)",
       "location": "Kourou, Guyane",
-      "image": "brice-caron.jpg",
+      "image": {
+        "filename": "brice-caron.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "",
+        "origin": "BSPP / Pompiers de France",
+        "licence": "CC BY-ND 2.0"
+      },
       "county": "973",
       "origin": "domtom",
       "gps": {
@@ -819,7 +854,7 @@
       "text": "Un gendarme de la BR de Meaux est décédé des suites d'un malaise cardiaque survenu pendant sa permanence d'OPJ.\nIl était pacsé et père de trois enfants.",
       "section": "BR Meaux",
       "location": "Meaux",
-      "image": "",
+      "image": null,
       "county": "77",
       "origin": "interieur",
       "gps": {
@@ -856,7 +891,7 @@
       "text": "Un gendarme, de la brigade de Lutterbach a mit fin à ses jours avec son arme administrative.\nIl était marié et père de deux jeunes filles.",
       "section": "CoB Lutterbach",
       "location": "Lutterbach",
-      "image": "",
+      "image": null,
       "county": "68",
       "origin": "interieur",
       "gps": {
@@ -908,7 +943,14 @@
       "text": "Un gendarme réserviste de la CRT 40/3 de Mont de Marsan et ancien gendarme d'active, est décédé dans un accident de la route lors d'une opération de contrôle routier.\nIl était marié et père de deux enfants.\n**Mise à jour 12/04/2023**: Son camarade d'active est également décédé le lendemain des suites de ses blessures.",
       "section": "CRT 40/3 Mont de Marsan",
       "location": "Sabres",
-      "image": "",
+      "image": {
+        "filename": "yannick-pierre.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Yannick Pierre devant l’avion de l’ex base aérienne 106 à Dijon.",
+        "origin": "Jean-Jacques Pierre (Sud Ouest)",
+        "licence": "CC BY-ND 2.0"
+      },
       "county": "40",
       "origin": "interieur",
       "gps": {
@@ -975,7 +1017,7 @@
       "text": "Un policier, de la circonscription de Briançon a mit fin à ses jours avec son arme administrative après de vaines négociation du RAID pour le raisonner.\nIl était pacsé et père d'une petite fille.",
       "section": "CSP Briançon",
       "location": "Briançon",
-      "image": "",
+      "image": null,
       "county": "05",
       "origin": "interieur",
       "gps": {
@@ -1027,7 +1069,7 @@
       "text": "Un gendarme du PSIG de Vichy est décédé de ses blessures survenues le 15 mars lors d'une intervention à La Chapelle (Allier) où un forcené avait fait exploser sa maison.\nIl était pacsé et futur père d'un bébé.",
       "section": "PSIG Vichy",
       "location": "La Chapelle",
-      "image": "",
+      "image": null,
       "county": "03",
       "origin": "interieur",
       "gps": {
@@ -1082,7 +1124,7 @@
       "text": "Un légionnaire du 2e REI de Nîmes a mit fin à ses jours avec son arme de dotation.\nIl était âgé de 19 ans et était engagé depuis quelques mois.",
       "section": "2e REI (6e BLB)",
       "location": "Nîmes",
-      "image": "",
+      "image": null,
       "county": "30",
       "origin": "interieur",
       "gps": {
@@ -1134,7 +1176,7 @@
       "text": "Un douanier de la brigade des Douanes de Toulon a mit fin à ses jours avec son arme de service dans la salle d'armement.",
       "section": "Douanes Portuaires",
       "location": "Toulon",
-      "image": "",
+      "image": null,
       "county": "83",
       "origin": "interieur",
       "gps": {
@@ -1148,6 +1190,127 @@
         {
           "url": "https://actu17.fr/faits-divers/toulon-un-agent-des-douanes-se-suicide-dans-les-locaux-de-sa-brigade.html",
           "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "05",
+      "day": "03",
+      "keywords": "Juliette Basque",
+      "house": "gn",
+      "peers": [],
+      "text": "Une jeune gendarme de la brigade de proximité de Saint-Amand-Montrond a mit fin à ses jours avec son arme administrative..\nElle était âgé de 25 ans et était engagé depuis quelques mois.",
+      "section": "BP Saint-Amand-Montrond",
+      "location": "Saint-Amand-Montrond",
+      "image": {
+        "filename": "juliette-basque.jpeg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Juliette Basque devant la cour d'honneur de l'EGN de Tulle.",
+        "origin": "Promotion EGN Tulle",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "18",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.71997553961316,
+        "lng": 2.5044621272468355
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://lessor.org/vie-des-personnels/une-gendarme-de-25-ans-sest-suicidee-a-la-caserne-de-saint-amand-montrond-cher",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/centre-val-de-loire/cher/une-jeune-gendarme-de-25-ans-se-suicide-dans-sa-caserne-2766970.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/centre-val-de-loire/saint-amand-montrond-18200/cher-une-gendarme-de-25-ans-se-suicide-dans-sa-caserne-avec-son-arme-de-service-bb00d33a-eb29-11ed-ba6c-c1a117a37e6b",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lefigaro.fr/flash-actu/cher-une-jeune-gendarme-se-suicide-dans-sa-caserne-20230504",
+          "title": "Figaro",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/une-jeune-gendarme-se-suicide-dans-sa-caserne-du-cher-04-05-2023-OQTPRHXMDRGWXINBWOLGKDEXPU.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 6,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "05",
+      "day": "03",
+      "keywords": "Guy Barcarel Opération Harpie",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 3e REI (Légion étrangère) a perdu la vie suite à un accident de pirogue pendant une opération de lutte contre l'orpaillage illégal..\nMarié et père de six enfants, il était chef coutumier de la communauté Teko et piroguier militaire.",
+      "section": "3e REI",
+      "location": "Crique Jalbot",
+      "image": {
+        "filename": "guy-barcarel.jpeg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Guy Barcarel en pirogue sur le fleuve Guyanais.",
+        "origin": "Préfet de la région Guyane",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "973",
+      "origin": "domtom",
+      "gps": {
+        "accurate": false,
+        "radius": 10000,
+        "lat": 4.198373594760746,
+        "lng": -52.6170100221199
+      },
+      "homage": {
+        "title": "Ministère des Armées",
+        "url": "https://www.defense.gouv.fr/actualites/deces-dun-officier-cadre-dune-operation-lutte-contre-lorpaillage-illegal-guyane"
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/Prefet973/status/1656418986764955649",
+          "title": "@Prefet973",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.franceguyane.fr/actualite/faitsdivers/camopi-le-corps-du-chef-coutumier-guy-barcarel-retrouve-sans-vie-935178.php",
+          "title": "France Guyane",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://la1ere.francetvinfo.fr/guyane/accident-de-pirogue-guy-barcarel-chef-coutumier-et-piroguier-de-la-legion-etrangere-est-porte-disparu-1393630.html",
+          "title": "France Info",
           "paywall": false,
           "trustful": true
         }

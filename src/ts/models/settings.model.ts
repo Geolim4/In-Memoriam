@@ -23,6 +23,7 @@ export interface Settings {
         radius: number;
     };
     imagePath: {
+        root: string;
         bluedot: string;
         chart: string;
         clustering: {
@@ -30,7 +31,6 @@ export interface Settings {
             off: string;
         };
         download: string;
-        gallery: string;
         heatmap: {
             on: string;
             off: string;

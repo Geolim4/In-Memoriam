@@ -107,17 +107,21 @@
             <strong>Circonstances</strong>: {{ death.text|markdown|acronymise }}
         </div>
         {% if death.image %}
-            <div class="col-4 align-self-center d-none d-md-block">
+            <div class="col-4 align-self-center d-none d-md-block text-center small">
                 <a href="javascript:;"
                    style="cursor: zoom-in;"
                    class="d-block"
                    data-controller="advanced-modal"
                    data-modal-title="Photo d'hommage"
-                   data-modal-content-template="content/photo"
-                   data-modal-options='{{ {okLabel: "Fermer"}|json_encode|url_encode }}'
-                   data-modal-content-vars='{{ {src: config.imagePath.gallery ~ death.image, alt: death.image, copyright: true}|json_encode|url_encode }}'>
-                    <img src="{{ config.imagePath.gallery ~ death.image}}" alt="{{ death.image }}" class="mw-100 rounded border border-dark" />
+                   data-modal-content-template="content/file"
+                   data-modal-options="{{ {okLabel: "Fermer"}|json_encode|url_encode }}"
+                   data-modal-content-vars="{{ { file: death.image, embedded: true}|json_encode|url_encode }}">
+                    <img src="{{ config.imagePath.root ~ death.image.directory ~ '/' ~ death.image.filename }}"
+                         alt="{{ death.image.desc }}"
+                         class="mw-100 rounded border border-dark"
+                         {% if death.image.desc|trim  %}title="{{ death.image.desc }}" {% endif %}/>
                 </a>
+                {% if death.image.licence|trim %} <small data-tippy-content="Licence {{ death.image.licence }}"><i class="fa-solid fa-warning d-none d-sm-inline-block"></i> Photo sous licence</small>{% endif %}
             </div>
         {% endif %}
         <div class="death-sources mt-3 pr-5 col-12">
