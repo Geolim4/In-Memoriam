@@ -1,9 +1,9 @@
 {
   "newsfeed": [
     {
-      "code": "filter-notification",
-      "title": "Information sur les filtres !",
-      "content": "Désormais, les filtres multiples ont été remplacés par des filtres simples, mais vous pouvez toujours les réactiver dans vos <a href=\"#fwd2:userConfigBtn\">préférences</a> !",
+      "code": "contributors-notification",
+      "title": "Aidez-nous à maintenir cette carte à jour !",
+      "content": "Si vous avez connaissance d'un décès qui n'est pas mentionné sur cette carte, n'hésitez pas <a href=\"#fwd2:contact-us\">à me le faire savoir</a> !",
       "type": "snackbar",
       "once": true,
       "isError": false

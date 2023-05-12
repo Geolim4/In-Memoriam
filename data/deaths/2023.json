@@ -167,7 +167,7 @@
       "keywords": "Olivier",
       "house": "pn",
       "peers": [],
-      "text": "Un policier affecté à la CRS 20 de Limoges aurait mit fin à ses jours.\nIl était père de deux enfants.",
+      "text": "Un policier affecté à la CRS 20 de Limoges a mit fin à ses jours.\nIl était père de deux enfants.",
       "section": "CRS 20",
       "location": "Limoges",
       "image": null,
@@ -1311,6 +1311,86 @@
         {
           "url": "https://la1ere.francetvinfo.fr/guyane/accident-de-pirogue-guy-barcarel-chef-coutumier-et-piroguier-de-la-legion-etrangere-est-porte-disparu-1393630.html",
           "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "05",
+      "day": "11",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier affecté à la CRS 16 de Saint-Omer a mit fin à ses jours avec son arme administrative.",
+      "section": "CRS 16",
+      "location": "Saint-Omer",
+      "image": null,
+      "county": "62",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 50.753494308890716,
+        "lng": 2.2493943998189803
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/pas-de-calais-un-crs-se-suicide-a-son-domicile-de-sangatte.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-crs-se-suicide-chez-lui-a-sangatte-dans-le-pas-de-calais-4831303",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/1327021/article/2023-05-12/un-crs-de-saint-omer-met-fin-ses-jours-son-domicile-sangatte",
+          "title": "La Voix du Nord",
+          "paywall": true,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "05",
+      "day": "12",
+      "keywords": "IDF",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier affecté à la SDLII (Paris 20e) a mit fin à ses jours avec son arme administrative à son domicile de Chatou (Yvelines).",
+      "section": "SDLII (DSPAP)",
+      "location": "Paris 20e",
+      "image": null,
+      "county": "75",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.849447595657786,
+        "lng": 2.40685163545362
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/pas-de-calais-un-crs-se-suicide-a-son-domicile-de-sangatte.html",
+          "title": "Actu17",
           "paywall": false,
           "trustful": true
         }
