@@ -1395,6 +1395,113 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "05",
+      "day": "19",
+      "keywords": "IDF, Hugo",
+      "house": "admpen",
+      "peers": [],
+      "text": "Un surveillant de la Maison d’Arrêt de Fleury-Mérogis a mit fin à ses jours.\nPeu de sources disponibles sur ce décès",
+      "section": "Maison d’Arrêt",
+      "location": "Fleury-Mérogis",
+      "image": null,
+      "county": "91",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.63913292528692,
+        "lng": 2.3754357901843997
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actuforcesdelordre.fr/2023/05/19/ladministration-penitentiaire-est-en-deuil-un-surveillant-age-de-34-ans-est-tragiquement-decede/",
+          "title": "Actu FDO",
+          "paywall": false,
+          "trustful": false
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 3,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "05",
+      "day": "21",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Trois policiers sont décédés dans un accident de la route causé par une voiture en contresens en emmenant une victime à l'hôpital.\nLes trois policiers dont une policières ont été tués sur le coup.\nL'un d'eux était jeune papa et l'autre futur père.",
+      "section": "UPS Roubaix",
+      "location": "Villeneuve-d'Ascq",
+      "image": null,
+      "county": "59",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 50.64721309492627,
+        "lng": 3.162747966487321
+      },
+      "homage": {
+        "title": "@Interieur_Gouv",
+        "url": "https://twitter.com/Interieur_Gouv/status/1660223188368760833"
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/nord-quatre-morts-dont-trois-policiers-dans-un-grave-accident-de-la-route.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/PoliceNationale/status/1660208665742266373",
+          "title": "@PoliceNationale",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lemonde.fr/societe/article/2023/05/21/quatre-morts-dont-trois-policiers-dans-un-accident-de-la-route-dans-le-nord-deux-blesses-en-urgence-absolue_6174209_3224.html",
+          "title": "Le Monde",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/faits-divers/nord-quatre-morts-dont-trois-policiers-dans-un-accident-de-la-route-177c539a-f7ab-11ed-b93a-2101918fa4a7",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francetvinfo.fr/faits-divers/accident/nord-quatre-morts-dont-trois-policiers-dans-un-accident-de-la-route_5839034.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/4-morts-dont-3-policiers-dans-un-accident-de-la-route-a-villeneuve-d-ascq-3752767",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/nord-quatre-morts-dont-trois-policiers-dans-un-accident-de-la-route-20230521",
+          "title": "Figaro",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
