@@ -1,6 +1,6 @@
 {% if file.kind == 'image' %}
     <div>
-        <img src="{{ config.imagePath.root ~ file.directory ~ '/' ~ file.filename }}" alt="{{ file.desc }}" class="mw-100 rounded border border-dark" />
+        <img src="{{ config.imagePath.root ~ file.directory ~ '/' ~ file.filename }}" alt="{{ file.desc }}" class="mw-100 rounded border border-dark" style="max-height: 1000px" />
     </div>
     {% if file.desc %}
         <em>{{ file.desc }}</em>

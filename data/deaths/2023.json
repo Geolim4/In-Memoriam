@@ -1439,13 +1439,20 @@
       "year": "2023",
       "month": "05",
       "day": "21",
-      "keywords": "",
+      "keywords": "Manon, Steven, Paul",
       "house": "pn",
       "peers": [],
-      "text": "Trois policiers sont décédés dans un accident de la route causé par une voiture en contresens en emmenant une victime à l'hôpital.\nLes trois policiers dont une policières ont été tués sur le coup.\nL'un d'eux était jeune papa et l'autre futur père.",
+      "text": "Trois policiers sont décédés dans un accident de la route causé par une voiture en contresens en emmenant une victime à l'hôpital.\nLes trois policiers dont une policière ont été tués sur le coup.\nL'un d'eux était jeune papa et l'autre futur père.",
       "section": "UPS Roubaix",
       "location": "Villeneuve-d'Ascq",
-      "image": null,
+      "image": {
+        "filename": "paul-manon-steven.jpeg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Paul, Manon et Steven",
+        "origin": "@36quaidesorfevres (Instagram)",
+        "licence": "CC BY-ND 2.0"
+      },
       "county": "59",
       "origin": "interieur",
       "gps": {
@@ -1468,6 +1475,12 @@
         {
           "url": "https://twitter.com/PoliceNationale/status/1660208665742266373",
           "title": "@PoliceNationale",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/PoliceNat59/status/1660360061259067398",
+          "title": "@PoliceNat59",
           "paywall": false,
           "trustful": true
         },
