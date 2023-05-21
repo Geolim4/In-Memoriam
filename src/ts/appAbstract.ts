@@ -211,6 +211,9 @@ export abstract class AppAbstract {
     public pushSuggestionFromDeath(death: Death): void {
         this.suggestions.push(death.location);
         this.suggestions.push(death.section);
+        if (death.keywords.includes('IDF') && !this.suggestions.includes('IDF')) {
+            this.pushSuggestion('IDF');
+        }
         death.peers.forEach((peer): number => this.suggestions.push(peer.section));
     }
 

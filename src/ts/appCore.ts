@@ -282,6 +282,7 @@ export abstract class AppCore extends AppAbstract {
 
                 this.markers.push(marker);
                 this.pushSuggestionFromDeath(death);
+
                 this.markerHashIndex[marker.linkHash] = this.markers.length - 1;
             }
 
@@ -854,7 +855,7 @@ export abstract class AppCore extends AppAbstract {
             input: searchElement,
             // minLength: this.getConfigFactory().getSearchMinLength(), // Overridden by "showOnFocus" configuration
             onSelect: (item): void => {
-                searchElement.value = item.label;
+                searchElement.value = item.value;
                 searchElement.dispatchEvent(new Event('change'));
                 ignoreNextChange = true;
             },
