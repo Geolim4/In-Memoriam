@@ -1515,6 +1515,77 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "murdered",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "05",
+      "day": "22",
+      "keywords": "Carène Mézino",
+      "house": "misc",
+      "peers": [],
+      "text": "Une infirmière du CHU de Reims a été grièvement poignardée par un schizophrène et est décédée le lendemain des suite de ses blessures.\nElle était mariée et mère de deux enfants",
+      "section": "CHU Reims",
+      "location": "Reims",
+      "image": {
+        "filename": "carene-mezino.jpeg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Carène Mézino entourée de son conjoint et de ses enfants",
+        "origin": "TF1 Info",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "51",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.22974183661907,
+        "lng": 4.019548683079951
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/enquetes/reims-linfirmiere-de-38-ans-poignardee-a-lhopital-est-decedee-le-suspect-toujours-en-garde-a-vue.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lemonde.fr/societe/article/2023/05/24/infirmiere-tuee-au-chu-de-reims-le-suspect-a-affirme-en-vouloir-au-personnel-hospitalier_6174658_3224.html",
+          "title": "Le Monde",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/faits-divers/infirmiere-tuee-a-reims-une-minute-de-silence-sera-observee-a-midi-dans-les-hopitaux-francais-5190cfb0-f9eb-11ed-a003-8290333685fd",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francetvinfo.fr/france/grand-est/marne/reims/attaque-au-couteau-au-chu-de-reims-apres-la-mort-de-l-infirmiere-des-soignants-sous-le-choc-sont-partages-entre-tristesse-et-colere_5842796.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/4038051-20230523-infirmiere-tuee-chu-reims-suspect-deja-agresse-quatre-personnes-couteau",
+          "title": "20 minutes",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ordre-infirmiers.fr/actualites-presse/articles/lordre-national-des-infirmiers-presente-ses-condoleances-aux-proches-de-linfirmiere-decedee-apres-lagression-au-chu-de-reims-et-appelle-a-la-mobilisation-contre-les-violences-faites-aux-soignants.html",
+          "title": "Ordre National des Infirmiers",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
