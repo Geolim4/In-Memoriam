@@ -1439,7 +1439,7 @@
       "year": "2023",
       "month": "05",
       "day": "21",
-      "keywords": "Manon, Steven, Paul",
+      "keywords": "Manon Raux, Steven Greblac, Paul Medeiros",
       "house": "pn",
       "peers": [],
       "text": "Trois policiers sont décédés dans un accident de la route causé par une voiture en contresens en emmenant une victime à l'hôpital.\nLes trois policiers dont une policière ont été tués sur le coup.\nL'un d'eux était jeune papa et l'autre futur père.",
@@ -1547,7 +1547,10 @@
         "lat": 49.22974183661907,
         "lng": 4.019548683079951
       },
-      "homage": null,
+      "homage": {
+        "title": "ARS Grand Est",
+        "url": "https://www.grand-est.ars.sante.fr/deces-de-carene-mezino-infimiere-au-chu-de-reims"
+      },
       "sources": [
         {
           "url": "https://actu17.fr/enquetes/reims-linfirmiere-de-38-ans-poignardee-a-lhopital-est-decedee-le-suspect-toujours-en-garde-a-vue.html",
@@ -1582,6 +1585,144 @@
         {
           "url": "https://www.ordre-infirmiers.fr/actualites-presse/articles/lordre-national-des-infirmiers-presente-ses-condoleances-aux-proches-de-linfirmiere-decedee-apres-lagression-au-chu-de-reims-et-appelle-a-la-mobilisation-contre-les-violences-faites-aux-soignants.html",
           "title": "Ordre National des Infirmiers",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "06",
+      "day": "01",
+      "keywords": "",
+      "house": "gn",
+      "peers": [],
+      "text": "Un jeune gendarme affecté à la BP de Baume-les-Dames a mit fin à ses jours avec son arme administrative.",
+      "section": "Brigade de Proximité",
+      "location": "Baume-les-Dames",
+      "image": null,
+      "county": "25",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.34947997916847,
+        "lng": 6.360201835062898
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/doubs-un-jeune-eleve-gendarme-se-suicide-avec-son-arme-de-service-a-baume-les-dames.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-jeune-gendarme-retrouve-mort-dans-les-locaux-de-la-brigade-de-baume-les-dames-6946785",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/bourgogne-franche-comte/doubs/baume-les-dames-un-jeune-gendarme-retrouve-mort-au-sein-de-la-caserne-de-baume-les-dames-2786866.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/operationnel/a-baume-les-dames-doubs-un-eleve-gendarme-sest-suicide-dans-larriere-cour-de-la-caserne",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.estrepublicain.fr/faits-divers-justice/2023/06/02/un-gendarme-se-suicide-avec-son-arme-a-la-caserne-de-baume-les-dames",
+          "title": "L'Est Républicain",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.cnews.fr/france/2023-06-03/doubs-un-gendarme-de-21-ans-sest-suicide-dans-la-cour-de-sa-caserne-avec-son-arme",
+          "title": "CNEWS",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "06",
+      "day": "01",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier affecté à la brigade cynophile du commissariat de Saint-Quentin a mit fin à ses jours avec son arme administrative.",
+      "section": "Brigade Cynophile",
+      "location": "Saint-Quentin",
+      "image": null,
+      "county": "02",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.84272719130372,
+        "lng": 3.296699173940013
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/aisne-un-policier-du-commissariat-de-saint-quentin-se-suicide.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "06",
+      "day": "06",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier affecté au renseignement territorial de Valence a mit fin à ses jours avec son arme administrative.",
+      "section": "Renseignement Territorial",
+      "location": "Valence",
+      "image": null,
+      "county": "26",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.93441400431243,
+        "lng": 4.892813089138606
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/valence-un-policier-met-fin-a-ses-jours-avec-son-arme-de-service.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/valence-un-officier-des-renseignements-territoriaux-met-fin-a-ses-jours-sur-son-lieu-de-travail-3383074",
+          "title": "France Bleu",
           "paywall": false,
           "trustful": true
         }
