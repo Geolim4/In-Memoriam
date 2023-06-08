@@ -24,7 +24,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "4.12.4",
+    "appVersion": "4.12.5",
     "defaultUserConfig": {
       "backgroundRefresh": "on",
       "markerContextMenu": "",
