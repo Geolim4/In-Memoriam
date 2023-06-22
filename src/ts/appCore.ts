@@ -162,10 +162,9 @@ export abstract class AppCore extends AppAbstract {
             for (const key in filteredResponse.response.deaths) {
                 const death = <Death>filteredResponse.response.deaths[key];
                 const totalDeathCount = this.getTotalDeathCount(death);
-                const houseImage = this.getConfigFactory().config.imagePath.house.replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house));
                 const marker = new google.maps.Marker({
                     animation: google.maps.Animation.DROP,
-                    icon: new (google.maps as any).MarkerImage(houseImage),
+                    icon: this.getConfigFactory().config.imagePath.house.replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house)),
                     map: this.map,
                     opacity: 1,
                     position: new google.maps.LatLng(death.gps.lat, death.gps.lng),
