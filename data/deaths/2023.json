@@ -316,8 +316,8 @@
       "gps": {
         "accurate": true,
         "radius": 0,
-        "lat": 43.12523213342591,
-        "lng": 5.928140299759682
+        "lat": 43.12527996660784,
+        "lng": 5.927959250596939
       },
       "homage": null,
       "sources": [
@@ -1724,6 +1724,104 @@
           "url": "https://www.francebleu.fr/infos/faits-divers-justice/valence-un-officier-des-renseignements-territoriaux-met-fin-a-ses-jours-sur-son-lieu-de-travail-3383074",
           "title": "France Bleu",
           "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "06",
+      "day": "19",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un formateur de police de l'ENP de Nîmes a mis fin à ses jours à son domicile.\nPeu d'informations disponibles sur ce suicide.",
+      "section": "ENP Nîmes",
+      "location": "Nîmes",
+      "image": null,
+      "county": "30",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.8600430000224,
+        "lng": 4.404456893285414
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/gard-un-policier-affecte-a-lecole-de-police-de-nimes-sest-suicide.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "06",
+      "day": "20",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier enquêteur à la brigade financière de la Sûreté Départementale du Var, a mit fin à ses jours avec son arme administrative.\nIl était marié et père de trois enfants.",
+      "section": "SD 83",
+      "location": "Toulon",
+      "image": null,
+      "county": "83",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.125097905906,
+        "lng": 5.927884148739521
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/toulon-un-policier-sest-suicide-par-arme-a-feu-au-commissariat.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/PoliceNat83/status/1671515756226379777",
+          "title": "@PoliceNat83",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/police/un-policier-se-suicide-avec-son-arme-de-service-dans-lenceinte-du-commissariat-de-toulon-48f9092a-100d-11ee-b31d-44275300541b",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ladepeche.fr/2023/06/20/toulon-un-policier-pere-de-trois-enfants-se-suicide-au-commissariat-11289329.php",
+          "title": "La dépêche",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.bfmtv.com/var/toulon-un-policier-d-une-cinquantaine-d-annees-se-suicide-au-commissariat_AN-202306200538.html",
+          "title": "BFM",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.varmatin.com/faits-divers/il-laisse-derriere-lui-un-grand-vide-la-police-rend-hommage-a-michel-qui-sest-suicide-au-commissariat-de-toulon-856136",
+          "title": "Var Matin",
+          "paywall": true,
           "trustful": true
         }
       ]
