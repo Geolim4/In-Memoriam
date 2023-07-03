@@ -64,8 +64,8 @@ export abstract class AppCore extends AppAbstract {
         this.setConfigFactory(new ConfigFactory((): void => this.run()));
     }
 
-    protected buildMarkersQuery(filters: Filters): string {
-        let url = this.getConfigFactory().config.deathsSrc.replace('%year%', filters.year);
+    protected buildMarkersQuery(filters: Filters, year?: string): string {
+        let url = this.getConfigFactory().config.deathsSrc.replace('%year%', (year || filters.year));
 
         if (this.getConfigFactory().config.passFiltersToQuery) {
             /**
@@ -85,7 +85,7 @@ export abstract class AppCore extends AppAbstract {
         Promise.all(
             filterYears
                 .map(
-                    (year: string): Promise<Bloodbath> => fetch(this.getConfigFactory().config.deathsSrc.replace('%year%', year), { cache: cacheStrategy })
+                    (year: string): Promise<Bloodbath> => fetch(this.buildMarkersQuery(filters, year), { cache: cacheStrategy })
                         .then((resp):any => resp.json()),
                 ),
         ).then((responseDataArray: Bloodbath[]): Bloodbath => {

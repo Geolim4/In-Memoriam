@@ -1825,6 +1825,172 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "07",
+      "day": "01",
+      "keywords": "",
+      "house": "gn",
+      "peers": [],
+      "text": "Un élève-gendarme de l'ESOG de Châteaulin a mit fin à ses jours avec son arme administrative au sein-même de l'école.",
+      "section": "ESOG Châteaulin",
+      "location": "Dinéault",
+      "image": null,
+      "county": "29",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.18995719944448,
+        "lng": -4.148362844882232
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://lessor.org/vie-des-personnels/un-eleve-gendarme-de-lecole-de-gendarmerie-de-chateaulin-met-fin-a-ses-jours",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/4043939-20230703-finistere-eleve-ecole-gendarmerie-donne-mort",
+          "title": "20 Minutes",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/politique/defense/gendarmerie/un-eleve-de-lecole-de-gendarmerie-se-donne-la-mort-dans-le-finistere-6ce05f64-18dc-11ee-a274-cd245df77ae9",
+          "title": "Ouest France",
+          "paywall": true,
+          "trustful": true
+        },
+        {
+          "url": "https://www.letelegramme.fr/finistere/dineault-29150/dans-la-region-de-chateaulin-une-enquete-ouverte-apres-le-suicide-du-jeune-eleve-gendarme-6385792.php",
+          "title": "Le Télégramme",
+          "paywall": true,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "07",
+      "day": "03",
+      "keywords": "",
+      "house": "pm",
+      "peers": [],
+      "text": "Un policier municipal de la ville de Écouflant a mit fin à ses jours avec son arme administrative au sein-même de l'école.\n**Peu de sources disponibles sur ce décès**.",
+      "section": "Poste de Police",
+      "location": "Écouflant",
+      "image": null,
+      "county": "49",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.52838624494253,
+        "lng": -0.530122708061057
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.ouest-france.fr/pays-de-la-loire/ecouflant-49000/au-nord-dangers-un-homme-retrouve-mort-par-balle-dans-une-mairie-04d4217e-198d-11ee-b34a-b36553860272",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "07",
+      "day": "03",
+      "keywords": "dorian damelincourt",
+      "house": "armee",
+      "peers": [
+        {
+          "house": "pompier",
+          "count": 0,
+          "section": ""
+        }
+      ],
+      "text": "Un pompier de la BSPP est décédé pendant une intervention de lutte contre un feu de parking souterrain.",
+      "section": "BSPP",
+      "location": "Saint-Denis",
+      "image": {
+        "filename": "dorian-damelincourt.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "",
+        "origin": "BSPP / Ministère des Armées",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "93",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.945198605810894,
+        "lng": 2.341929129474341
+      },
+      "homage": {
+        "title": "Ministère des Armées",
+        "url": "https://www.defense.gouv.fr/actualites/deces-dorian-damelincourt-sapeur-pompier-bspp-lors-dune-intervention"
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/PompiersParis/status/1675797110032138240",
+          "title": "@PompiersParis",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/saint-denis-un-jeune-pompier-de-24-ans-decede-lors-dune-intervention-pour-un-incendie.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/faits-divers/incendie/un-pompier-qui-luttait-contre-un-feu-de-voitures-est-mort-a-saint-denis-annonce-gerald-darmanin-0302ad98-196a-11ee-a274-cd245df77ae9",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/saint-denis-mort-dun-pompier-de-24-ans-qui-luttait-contre-un-feu-de-vehicules-03-07-2023-HMGK6X7LQVERXC6EEDDJB4MJNY.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lemonde.fr/societe/article/2023/07/03/saint-denis-un-pompier-de-24-ans-meurt-en-luttant-contre-un-incendie-de-vehicules-ouverture-d-une-enquete-pour-determiner-l-origine-du-sinistre_6180314_3224.html",
+          "title": "Le Monde",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francetvinfo.fr/faits-divers/adolescent-tue-par-un-policier-a-nanterre/un-pompier-de-24-ans-meurt-dans-un-incendie-en-seine-saint-denis-sans-lien-avec-les-emeutes-selon-les-sapeurs-pompiers-de-paris_5927501.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
