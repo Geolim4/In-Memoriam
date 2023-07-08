@@ -1833,6 +1833,58 @@
       "orphans": 0,
       "unpublished_reason": "",
       "year": "2023",
+      "month": "06",
+      "day": "28",
+      "keywords": "Fabrice Mirbel",
+      "house": "gn",
+      "peers": [],
+      "text": "Un gendarme du PMo de Saint-Astier a mit fin à ses jours avec son arme administrative pendant ses congés.\nAncien instructeur du CNICG, il était marié et père de 5 jeunes enfants.",
+      "section": "PMo St-Astier",
+      "location": "Saint-Astier",
+      "image": null,
+      "county": "24",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.14219896825467,
+        "lng": 0.5491733460335535
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://lessor.org/vie-des-personnels/un-maitre-chien-de-la-gendarmerie-se-donne-la-mort-en-dordogne",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/dordogne-un-gendarme-de-45-ans-se-suicide-avec-son-arme-de-service.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.sudouest.fr/dordogne/saint-astier/un-maitre-chien-de-la-gendarmerie-de-dordogne-s-est-suicide-dans-le-lot-15828315.php",
+          "title": "Sud Ouest",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-gendarme-de-dordogne-se-suicide-avec-son-arme-de-service-9091603",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
       "month": "07",
       "day": "01",
       "keywords": "",
