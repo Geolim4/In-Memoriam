@@ -16,7 +16,8 @@
   "hostSettings": {
     "localhost": {
       "appDebug": true,
-      "appVersion": "%appVersion%-dev"
+      "appVersion": "%appVersion%-dev",
+      "passFiltersToQuery": true
     },
     "in.memoriam.forces-francaises.fr": {
       "deathsSrc": "./assets/json/deaths/%year%.min.json"
@@ -24,7 +25,7 @@
   },
   "settings": {
     "appDebug": false,
-    "appVersion": "4.12.7",
+    "appVersion": "4.13.0",
     "defaultUserConfig": {
       "backgroundRefresh": "on",
       "markerContextMenu": "",
@@ -125,7 +126,7 @@
         "url": "https://projet-memorial.fr/"
       }
     ],
-    "passFiltersToQuery": true,
+    "passFiltersToQuery": false,
     "templateDir": "./assets/templates/%tpl%.html.twig"
   }
 }

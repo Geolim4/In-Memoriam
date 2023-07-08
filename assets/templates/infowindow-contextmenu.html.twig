@@ -2,7 +2,7 @@
     <a href="javascript:;"
        class="dropdown-item"
        data-controller="map-marker"
-       data-death-hash="{{ marker_hash(death) }}"
+       data-death-hash="{{ death.getMarkerHash() }}"
        data-auto-zoom="false">
         <img src="{{ config.imagePath.house|replace({"%house%": death.count >= 2 ? death.house ~ '-m' : death.house}) }}"
              alt="Corps: {{ houseName }}"
@@ -27,7 +27,7 @@
        class="dropdown-item"
        data-controller="copy-text"
        data-success-msg="Le lien a bien été copié dans le presse-papier !"
-       data-content-text="{{ app.permalink.getDeathMarkerLink(death) }}">
+       data-content-text="{{ death.getDeathMarkerLink() }}">
         <i class="fa-solid fa-link d-none d-sm-inline-block"></i> Copier le permalien
     </a>
     <a href="javascript:;"

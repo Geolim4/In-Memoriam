@@ -1,6 +1,5 @@
 import { Filters } from '../models';
 import { App } from '../app';
-import { Death } from '../models/Death/death.model';
 import { Events } from './events';
 
 /**
@@ -40,22 +39,5 @@ export class Permalink {
         }
 
         permalinkElement.value = url.toString() + anchor;
-    }
-
-    public getDeathMarkerLink(death: Death, removePwaParameter: boolean = true): string {
-        const url = new URL(window.location.href.split('#')[0]);
-        const searchMinLength = App.getInstance().getConfigFactory().getSearchMinLength();
-        const searchText = `${death.section.length >= searchMinLength ? death.section : death.location}`;
-        url.hash = `#year=${death.year}&month=${death.month}&day=${death.day}&house=${death.house}&cause=${death.cause}`;
-
-        if (searchText.length >= searchMinLength) {
-            url.hash += `&search=${searchText}`;
-        }
-
-        if (removePwaParameter && url.searchParams.has('pwa')) {
-            url.searchParams.delete('pwa');
-        }
-
-        return url.toString();
     }
 }
