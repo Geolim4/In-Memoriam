@@ -1,7 +1,6 @@
 import { AppStatic } from '../appStatic';
 import { App } from '../app';
 import { StringUtilsHelper } from '../helper/stringUtils.helper';
-import { Death } from '../models/Death/death.model';
 const Twig = require('twig');
 const markdown = require('markdown').markdown;
 
@@ -96,8 +95,6 @@ export class Renderer {
                     ...{
                         app: App.getInstance(),
                         config: App.getInstance().getConfigFactory().config,
-                        marker_hash: (death: Death): string => AppStatic.getMarkerHash(death),
-                        marker_link: (death: Death, label: string): string => AppStatic.getMarkerLink(death, label),
                     },
                 }).trim();
         } catch (e) {

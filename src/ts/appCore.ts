@@ -14,7 +14,7 @@ import { Expression } from './Components/expression';
 import { EvaluationError } from './errors/evaluationError.model';
 import { Events } from './Components/events';
 import { ExtendedGoogleMapsMarker } from './models/Gmaps/extendedGoogleMapsMarker.model';
-import { Death, DeathOrigin } from './models/Death/death.model';
+import { Death, DeathModel, DeathOrigin } from './models/Death/death.model';
 import { AppStatic } from './appStatic';
 import { Renderer } from './Extensions/renderer';
 import { Links } from './Extensions/links';
@@ -107,7 +107,7 @@ export abstract class AppCore extends AppAbstract {
                 }
 
                 if (data.settings.aggregatable || filterYears.length < 2) {
-                    responseData.deaths.push(...data.deaths);
+                    responseData.deaths.push(...data.deaths.map((deathModel: DeathModel): Death => Object.freeze(Object.assign(new Death(), deathModel))));
                 } else {
                     this.addUnaggregatableYears(year);
                 }
@@ -117,7 +117,7 @@ export abstract class AppCore extends AppAbstract {
                 const unaggregatableYears = [...this.getUnaggregatableYears()];
                 unaggregatableYears.shift();
                 this.setUnaggregatableYears(unaggregatableYears);
-                responseData.deaths.push(...responseDataArray[0].deaths);
+                responseData.deaths.push(...responseDataArray[0].deaths.map((deathModel: DeathModel): Death => Object.freeze(Object.assign(new Death(), deathModel))));
             }
 
             const snackbarMessage = `Les données de la période ${StringUtilsHelper.formatArrayOfStringForReading(this.getUnaggregatableYears())} ont été ignorées car elle ne peuvent pas être aggrégées avec d'autres années !`;
@@ -161,7 +161,7 @@ export abstract class AppCore extends AppAbstract {
 
             for (const key in filteredResponse.response.deaths) {
                 const death = <Death>filteredResponse.response.deaths[key];
-                const totalDeathCount = this.getTotalDeathCount(death);
+                const totalDeathCount = death.getTotalDeathCount();
                 const marker = new google.maps.Marker({
                     animation: google.maps.Animation.DROP,
                     icon: this.getConfigFactory().config.imagePath.house.replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house)),
@@ -186,7 +186,7 @@ export abstract class AppCore extends AppAbstract {
                     this.circles.push(circle);
                 }
 
-                marker.linkHash = AppStatic.getMarkerHash(death);
+                marker.linkHash = death.getMarkerHash();
                 marker.death = death;
 
                 const infoWindow = new google.maps.InfoWindow({
@@ -581,6 +581,7 @@ export abstract class AppCore extends AppAbstract {
                     const safeFilterBlocks = <string[]>StringUtilsHelper.normalizeString(fieldValue).split(' ').map((str): string => str.trim());
                     const safeFilterSplited = <string[]>[];
                     const negatedFilterSplited = <string[]>[];
+                    let hasExactMatch = false;
 
                     unique(safeFilterBlocks).forEach((safeBlock, i): void => {
                         const negated = safeBlock.charAt(0) === '!';
@@ -600,6 +601,10 @@ export abstract class AppCore extends AppAbstract {
 
                     let dKey = filteredResponse.response.deaths.length;
                     const filterExpression = Expression.getEvaluable(fieldValue);
+
+                    if (fieldName === 'search' && safeFilterBlocks.length && filteredResponse.response.deaths.map((death: Death): boolean => StringUtilsHelper.normalizeString(death.section) === safeFilterBlocks.join(' ')).filter((n): boolean => n).length > 0) {
+                        hasExactMatch = true;
+                    }
                     while (dKey--) {
                         const death = filteredResponse.response.deaths[dKey];
                         const filterExpressionContext = {
@@ -619,8 +624,7 @@ export abstract class AppCore extends AppAbstract {
                                         && !(death.image !== null && StringUtilsHelper.arrayContainsString(death.image.origin, safeFilterSplited, 'all'))
                                         && !(this.isSearchByExpressionEnabled() && filterExpression && Expression.evaluate(filterExpression, filterExpressionContext))
                                     )
-                                )
-                                || (
+                                ) || (
                                     negatedFilterSplited.length
                                     && (
                                         StringUtilsHelper.arrayContainsString(death.text, negatedFilterSplited, 'all')
@@ -630,6 +634,8 @@ export abstract class AppCore extends AppAbstract {
                                         || (death.image !== null && StringUtilsHelper.arrayContainsString(death.image.desc, negatedFilterSplited, 'all'))
                                         || (death.image !== null && StringUtilsHelper.arrayContainsString(death.image.origin, negatedFilterSplited, 'all'))
                                     )
+                                ) || (
+                                    hasExactMatch && StringUtilsHelper.normalizeString(death.section) !== safeFilterBlocks.join(' ')
                                 )
                             ) {
                                 if (death.peers.length) {
@@ -1110,7 +1116,7 @@ export abstract class AppCore extends AppAbstract {
             if (latestDeath) {
                 const latestDeathLabel = ` ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${this.getFilterValueLabel('house', latestDeath.house)} - ${latestDeath.location}
                 ${latestDeath.section ? ` - ${StringUtilsHelper.replaceAcronyms(latestDeath.section, this.getConfigFactory().glossary)}` : ''}`;
-                const latestDeathLink = AppStatic.getMarkerLink(latestDeath, latestDeathLabel);
+                const latestDeathLink = latestDeath.getMarkerLink(latestDeathLabel);
                 definitionTexts.push(`<em>Dernier décès indexé:</em> ${latestDeathLink}`);
             }
 

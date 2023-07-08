@@ -241,15 +241,6 @@ export abstract class AppAbstract {
         this.renderer = renderer;
     }
 
-    public getTotalDeathCount(death: Death): number {
-        let count = 0;
-        for (const peer of death.peers) {
-            count += peer.count;
-        }
-
-        return death.count + count;
-    }
-
     public runActionWithNeededLoaderWall(cbck: VoidFunction, target?: Element): void {
         (new Promise((resolve, reject): void => {
             try {

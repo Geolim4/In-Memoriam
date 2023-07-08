@@ -1,5 +1,5 @@
 {% set houseName = app.getFilterValueLabel('house', death.house) %}
-<div class="death-container{% if app.getTotalDeathCount(death) >= 2 %} multiple-deaths{% endif %} px-3 py-2">
+<div class="death-container{% if death.getTotalDeathCount() >= 2 %} multiple-deaths{% endif %} px-3 py-2">
     <div class="row no-gutters">
         <h5 class="col-10 col-sm-auto">
             <img src="{{ config.imagePath.house|replace({"%house%": death.count >= 2 ? death.house ~ '-m' : death.house}) }}"
@@ -32,7 +32,7 @@
                        class="dropdown-item"
                        data-controller="copy-text"
                        data-success-msg="Le lien a bien été copié dans le presse-papier !"
-                       data-content-text="{{ app.permalink.getDeathMarkerLink(death) }}">
+                       data-content-text="{{ death.getDeathMarkerLink() }}">
                         <i class="fa-solid fa-link d-none d-sm-inline-block"></i> Copier le permalien
                     </a>
                     <a href="javascript:;"
