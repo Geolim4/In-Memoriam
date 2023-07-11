@@ -1,12 +1,12 @@
 {
   "newsfeed": [
     {
-      "code": "contributors-notification",
-      "title": "Aidez-nous à maintenir cette carte à jour !",
-      "content": "Si vous avez connaissance d'un décès qui n'est pas mentionné sur cette carte, n'hésitez pas <a href=\"#fwd2:contact-us\">à me le faire savoir</a> !",
-      "type": "snackbar",
-      "once": true,
-      "isError": false
+      "code": "end-of-life",
+      "title": "Fermeture de cette cartographie",
+      "content": "[11/07/2023] A la suite de problèmes personnels, je ne suis plus en mesure de pouvoir alimenter ni maintenir cette cartographie.\nCelle-ci va donc fermer ses portes dans les semaines à venir.\n Si vous avez connaissance d'un développeur qui voudrait la reprendre, n'hésitez pas <a href=\"#fwd2:contact-us\">à me le faire savoir</a> !",
+      "type": "modal",
+      "once": false,
+      "isError": true
     }
   ]
 }
