@@ -427,6 +427,8 @@ export class MapButtons {
                             const definitions = App.getInstance().getConfigDefinitions();
                             const formFiltersKeyed = App.getInstance().getFormFiltersKeyed();
                             const formFilters = App.getInstance().getFilters(false);
+                            const config = App.getInstance().getConfigFactory().config;
+                            const urlPath = location.href.substring(0, location.href.lastIndexOf('/')).replace('#', '');
 
                             const options = {
                                 decimalSeparator: '.',
@@ -480,6 +482,7 @@ export class MapButtons {
                                 build[indexNameBuilder('orphans', formFilters)] = peer ? 0 : death.orphans;
                                 build[indexNameBuilder('homage', formFilters)] = death.homage ? `${death.homage.title}: ${death.homage.url}` : 'Non communiqué';
                                 build[indexNameBuilder('sources', formFilters)] = death.sources.map((s): string => (s.url ? s.url : s.title)).join('\n');
+                                build[indexNameBuilder('image', formFilters)] = death.image ? `${death.image.desc}${death.image.desc ? '\n' : ''}${urlPath}${config.imagePath.root.replace('./', '/')}${death.image.directory}/${death.image.filename}\n(${death.image.licence})` : '';
 
                                 return build;
                             };
