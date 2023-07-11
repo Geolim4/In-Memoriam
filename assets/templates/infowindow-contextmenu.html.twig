@@ -17,9 +17,9 @@
            class="dropdown-item"
            data-controller="advanced-modal"
            data-modal-title="Photo d'hommage"
-           data-modal-content-template="content/photo"
-           data-modal-options='{{ {okLabel: "Fermer"}|json_encode|url_encode }}'
-           data-modal-content-vars='{{ {src: config.imagePath.gallery ~ death.image, alt: death.image, copyright: true}|json_encode|url_encode }}'>
+           data-modal-content-template="content/file"
+           data-modal-options="{{ {okLabel: "Fermer"}|json_encode|url_encode }}"
+           data-modal-content-vars="{{ { file: death.image, embedded: true}|json_encode|url_encode }}">
             <i class="fa-solid fa-image d-none d-sm-inline-block"></i> Photo d'hommage
         </a>
     {% endif %}

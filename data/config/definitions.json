@@ -369,6 +369,21 @@
           "plural": ""
         }
       }
+    },
+    "image": {
+      "#exposed": false,
+      "#name": "image",
+      "#name_plural": "images",
+      "#label": "",
+      "#counter_property": "",
+      "#counter_strategy": "",
+      "#number": {
+        "#any": {
+          "none": "",
+          "singular": "",
+          "plural": ""
+        }
+      }
     }
   }
 }
