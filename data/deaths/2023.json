@@ -2043,6 +2043,77 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "07",
+      "day": "15",
+      "keywords": "manon labarre",
+      "house": "pompier",
+      "peers": [],
+      "text": "Une jeune pompier volontaire du SDIS 18 de Culan est décédé pendant une intervention de lutte contre un incendie causé par la foudre à Courçais (Allier).",
+      "section": "SDIS 18",
+      "location": "Culan",
+      "image": {
+        "filename": "manon-labarre.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "",
+        "origin": "@36quaidesorfevres",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "18",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.55081157976037,
+        "lng": 2.3495332405582348
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://twitter.com/SecCivileFrance/status/1680163257414295552",
+          "title": "@SecCivileFrance",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu17.fr/faits-divers/allier-une-jeune-sapeur-pompier-volontaire-de-19-ans-meurt-apres-une-intervention-pour-un-incendie.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francetvinfo.fr/france/auvergne-rhone-alpes/allier/allier-une-jeune-femme-sapeur-pompier-du-cher-meurt-apres-une-intervention-pour-un-feu-de-vegetation_5951918.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/une-sapeur-pompier-volontaire-du-cher-meurt-lors-d-une-intervention-sur-un-incendie-7553120",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lamontagne.fr/saint-desire-03370/actualites/grievement-blessee-lors-d-une-intervention-la-jeune-sapeur-pompier-est-decedee_14344132/",
+          "title": "La Montagne",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leberry.fr/reigny-18270/actualites/sapeur-pompier-du-cher-decedee-en-intervention-manon-etait-une-jeune-fille-petillante-et-attentive-aux-autres_14344155/",
+          "title": "Le Berry",
+          "paywall": true,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
