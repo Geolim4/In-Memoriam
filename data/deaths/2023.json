@@ -1603,7 +1603,7 @@
       "house": "gn",
       "peers": [],
       "text": "Un jeune gendarme affecté à la BP de Baume-les-Dames a mit fin à ses jours avec son arme administrative.",
-      "section": "Brigade de Proximité",
+      "section": "Brigade Baume-les-Dames",
       "location": "Baume-les-Dames",
       "image": null,
       "county": "25",
@@ -2045,6 +2045,50 @@
       ]
     },
     {
+      "cause": "malaise",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "07",
+      "day": "12",
+      "keywords": "Pascal Sellom",
+      "house": "gn",
+      "peers": [],
+      "text": "Un gendarme de la BP de Corcieux est décédé des suites d'un malaise cardiaque survenu pendant sa permanence de commandement.\nIl était marie et père de deux jeunes enfants.",
+      "section": "BP Corcieux",
+      "location": "Corcieux",
+      "image": {
+        "filename": "pascal-sellom.jpeg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "",
+        "origin": "@36quaidesorfevres",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "88",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.17533745874884,
+        "lng": 6.880908657182766
+      },
+      "homage": {
+        "title": "Gendarmerie Nationale",
+        "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/actualites/2023/vosges-deces-du-commandant-de-la-brigade-de-proximite-de-corcieux-dans-l-exercice-de-ses-fonctions"
+      },
+      "sources": [
+        {
+          "url": "https://lessor.org/operationnel/un-gendarme-de-39-ans-decede-dun-malaise-cardiaque",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
       "cause": "deathOnDuty",
       "count": 1,
       "published": true,
@@ -2111,6 +2155,209 @@
           "url": "https://www.leberry.fr/reigny-18270/actualites/sapeur-pompier-du-cher-decedee-en-intervention-manon-etait-une-jeune-fille-petillante-et-attentive-aux-autres_14344155/",
           "title": "Le Berry",
           "paywall": true,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "07",
+      "day": "16",
+      "keywords": "Alexandre STUKALA",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier du commissariat de Nevers a mis fin à ses jours.\nIl était marié et père de deux jeunes enfants.",
+      "section": "UPS Nevers",
+      "location": "Nevers",
+      "image": {
+        "filename": "alexandre-stukala.jpeg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "",
+        "origin": "@36quaidesorfevres",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "58",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 46.99171026551212,
+        "lng": 3.1583408982462835
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/nievre-un-policier-du-commissariat-de-nevers-a-mis-fin-a-ses-jours.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "",
+          "title": "Cagnotte Leetchi",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "07",
+      "day": "28",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier de 55 ans de la CRS 13 en mission de sécurisation des fêtes de Bayonne (Pyrénées-Atlantiques) a mis fin à ses jours.",
+      "section": "CRS 13",
+      "location": "Saint-Brieuc",
+      "image": null,
+      "county": "22",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.51742692461461,
+        "lng": -2.8021149208422336
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/anglet-un-policier-de-la-crs-13-affecte-a-la-securite-des-fetes-de-bayonne-sest-suicide.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/1357219/article/2023-07-29/un-crs-se-suicide-avant-de-prendre-son-service-pour-les-fetes-de-bayonne",
+          "title": "La Voix du Nord",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/un-crs-affecte-a-la-securite-des-fetes-de-bayonne-se-suicide-avant-sa-prise-de-service-20230729",
+          "title": "Le Figaro",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/anglet-un-crs-affecte-a-la-securite-des-fetes-se-suicide-dans-le-cadre-de-ses-fonctions-5551259",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/pyrenees-atlantiques-64/un-crs-affecte-a-la-securite-des-fetes-de-bayonne-sest-suicide-29-07-2023-KQH46MU6NNAANG4B2SL6SCSP7A.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.sudouest.fr/faits-divers/pays-basque-un-crs-affecte-a-la-securite-des-fetes-de-bayonne-met-fin-a-ses-jours-16109890.php",
+          "title": "Sud Ouest",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "07",
+      "day": "30",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier de la BAC de Soissons a mis fin à ses jours à son domicile.\n_Peu d'informations disponibles sur ce suicide._",
+      "section": "BAC",
+      "location": "Soissons",
+      "image": null,
+      "county": "02",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.385577744581695,
+        "lng": 3.3229210947293715
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/aisne-un-policier-de-la-bac-du-commissariat-de-soissons-sest-suicide.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.oisehebdo.fr/2023/07/31/soissons-policier-bac-suicide-arme-service/",
+          "title": "Oise Hebdo",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/aisne-un-policier-de-soissons-se-suicide-avec-son-arme-de-service-3620383",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "08",
+      "day": "01",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier de la circonscription de Valence a mis fin à ses jours dans une chambre d'hôtel de Béthune (Pas-de-Calais).\n_Peu d'informations disponibles sur ce suicide._",
+      "section": "CSP Valence",
+      "location": "Valence",
+      "image": null,
+      "county": "26",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.93439497130285,
+        "lng": 4.8928015571228824
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/pas-de-calais-un-policier-affecte-a-valence-sest-suicide-a-bethune.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/hauts-de-france/bethune_62119/drame-a-bethune-un-policier-sest-donne-la-mort-dans-sa-chambre-dhotel_59925943.html",
+          "title": "Actu.fr",
+          "paywall": true,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/pas-de-calais-un-policier-s-est-suicide-dans-sa-chambre-d-hotel-a-bethune-20230803",
+          "title": "Le Figaro",
+          "paywall": false,
           "trustful": true
         }
       ]
