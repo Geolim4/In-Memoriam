@@ -129,11 +129,11 @@
                 <i class="fa-solid fa-triangle-exclamation" style="color: orangered;"></i>&nbsp;
                 <strong data-tippy-content="La source étant anonyme, ce décès peut ne pas être fiable à 100%.">Source anonyme</strong>
             {% else %}
-                <strong>Sources</strong>:
+                <strong>Source{% if death.sources|length > 1 %}s{% endif %}</strong>:
                 {% for source in death.sources %}
                     {% apply spaceless %}
                         {% if source.url %}
-                            <a href="{{ source.url }}" target="_blank">{{ source.title }}</a>
+                            <a href="{{ source.url }}" target="_blank" rel="external" >{{ source.title }}</a>
                         {% else %}
                             <span>{{ source.title }}</span>
                         {% endif %}
