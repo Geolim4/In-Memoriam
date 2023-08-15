@@ -1973,7 +1973,7 @@
       "year": "2023",
       "month": "07",
       "day": "03",
-      "keywords": "dorian damelincourt",
+      "keywords": "dorian damelincourt, IDF",
       "house": "armee",
       "peers": [
         {
@@ -2357,6 +2357,64 @@
         {
           "url": "https://www.lefigaro.fr/faits-divers/pas-de-calais-un-policier-s-est-suicide-dans-sa-chambre-d-hotel-a-bethune-20230803",
           "title": "Le Figaro",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "08",
+      "day": "09",
+      "keywords": "idf",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier de la circonscription de Fontenay-sous-Bois a mis fin à ses jours au sein du commissariat où il était affecté.\nIl était Père de deux jeunes enfants.",
+      "section": "CSP Fontenay-sous-Bois",
+      "location": "Fontenay-sous-Bois",
+      "image": null,
+      "county": "94",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.84944392133596,
+        "lng": 2.4746309313622312
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/fontenay-sous-bois-un-policier-se-suicide-dans-le-commissariat-avec-son-arme-de-service.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/paris-ile-de-france/val-de-marne/un-policier-se-suicide-avec-son-arme-au-commissariat-de-fontenay-sous-bois-2823749.html",
+          "title": "France Info",
+          "paywall": true,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/fontenay-sous-bois-un-policier-se-suicide-dans-les-locaux-de-son-commissariat-6597436",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/ile-de-france/fontenay-sous-bois-94120/val-de-marne-un-policier-de-37-ans-se-donne-la-mort-dans-le-commissariat-de-fontenay-sous-bois-2ce85f26-3829-11ee-8a65-8765770d3c33",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lejdd.fr/societe/val-de-marne-un-policier-se-suicide-dans-son-commissariat-137666",
+          "title": "Le JDD",
           "paywall": false,
           "trustful": true
         }
