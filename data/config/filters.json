@@ -947,6 +947,12 @@
         "group": "Auvergne-Rhône-Alpes"
       },
       {
+        "value": "expr:(['75', '77', '78', '91', '92', '93', '94', '95'].includes(death.county))",
+        "label": "Île-de-France (entière)",
+        "color": "",
+        "group": "Île-de-France"
+      },
+      {
         "value": "75",
         "label": "75 - Paris",
         "color": "",
