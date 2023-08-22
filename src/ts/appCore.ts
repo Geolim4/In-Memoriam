@@ -1027,7 +1027,10 @@ export abstract class AppCore extends AppAbstract {
     }
 
     private clearMapObjects(): void {
-        this.clearMarkers().clearCircles().clearInfoWindows().clearHeatMap()
+        this.clearMarkers()
+            .clearCircles()
+            .clearInfoWindows()
+            .clearHeatMap()
             .clearMarkerCluster();
     }
 

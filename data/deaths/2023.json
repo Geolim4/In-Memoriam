@@ -848,7 +848,7 @@
       "year": "2023",
       "month": "03",
       "day": "30",
-      "keywords": "Nicolas Mory",
+      "keywords": "Nicolas Mory, IDF",
       "house": "gn",
       "peers": [],
       "text": "Un gendarme de la BR de Meaux est décédé des suites d'un malaise cardiaque survenu pendant sa permanence d'OPJ.\nIl était pacsé et père de trois enfants.",
@@ -2397,7 +2397,7 @@
         {
           "url": "https://france3-regions.francetvinfo.fr/paris-ile-de-france/val-de-marne/un-policier-se-suicide-avec-son-arme-au-commissariat-de-fontenay-sous-bois-2823749.html",
           "title": "France Info",
-          "paywall": true,
+          "paywall": false,
           "trustful": true
         },
         {
@@ -2415,6 +2415,204 @@
         {
           "url": "https://www.lejdd.fr/societe/val-de-marne-un-policier-se-suicide-dans-son-commissariat-137666",
           "title": "Le JDD",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "08",
+      "day": "11",
+      "keywords": "Mahyra Kalla",
+      "house": "gn",
+      "peers": [],
+      "text": "Une jeune gendarme adjoint est décédé des suites des ses blessures survenues lors d'un accident de la route en chemin pour prendre son service le 10 juin 2023.",
+      "section": "BTA",
+      "location": "Oraison",
+      "image": {
+        "filename": "mahyra-kalla.webp",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Mahyra Kalla",
+        "origin": "Gendarmerie Nationale",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "04",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.912660309803634,
+        "lng": 5.917748655835374
+      },
+      "homage": {
+        "title": "Gendarmerie Nationale",
+        "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/actualites/2023/alpes-de-haute-provence-deces-d-une-gendarme-de-la-brigade-territoriale-autonome-d-oraison-dans-l-exercice-de-ses-fonctions"
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/une-jeune-gendarme-victime-dun-accident-decede-apres-deux-mois-de-coma.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/victime-d-un-accident-en-juin-une-gendarme-adjointe-decede-apres-deux-mois-de-coma",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/deces-en-service-des-suites-dun-accident-dune-gendarme-adjointe-volontaire-doraison-04/",
+          "title": "La Voix du Gendarme",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "08",
+      "day": "18",
+      "keywords": "Baptiste Gauchot",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 19e Régiment du Génie a succombé à ses blessures survenues lors d'un accident de la route en participant à l'instruction des forces Irakiennes.",
+      "section": "19e RG",
+      "location": "Hôpital Militaire, Erbil",
+      "image": {
+        "filename": "baptiste-gauchot.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Baptiste Gauchot",
+        "origin": "Ministère des Armées",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "IQ",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "radius": 5000,
+        "lat": 36.18073281038277,
+        "lng": 43.99248299072253
+      },
+      "homage": {
+        "title": "Ministère des Armées",
+        "url": "https://www.defense.gouv.fr/terre/actualites/irak-deces-du-sergent-baptiste-gauchot-du-19e-regiment-genie"
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/international/un-militaire-francais-est-decede-lors-dune-mission-en-irak-annonce-lelysee.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.elysee.fr/emmanuel-macron/2023/08/18/deces-du-sergent-baptiste-gauchot",
+          "title": "Elysée",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/CEMAT_FR/status/1692659301398004061",
+          "title": "@CEMAT_FR",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/bourgogne-franche-comte/doubs/le-sergent-baptiste-gauchot-membre-du-19e-regiment-du-genie-de-besancon-tue-en-irak-2826977.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/lelysee-annonce-la-mort-dun-soldat-francais-lors-dune-mission-en-irak-18-08-2023-33HTF6LRBFH7RDCFGIKRF6BSO4.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "08",
+      "day": "20",
+      "keywords": "Nicolas Latourte",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 6e Régiment du Génie a succombé à ses blessures survenues lors d'un entrainement des forces Irakiennes en zone urbaine.",
+      "section": "6e RG",
+      "location": "Hôpital Militaire, Erbil",
+      "image": {
+        "filename": "nicolas-latourte.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Nicolas Latourte",
+        "origin": "Ministère des Armées",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "IQ",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "radius": 5000,
+        "lat": 36.20580779389492,
+        "lng": 44.01428398640074
+      },
+      "homage": {
+        "title": "Ministère des Armées",
+        "url": "https://www.defense.gouv.fr/terre/actualites/deces-ladjudant-nicolas-latourte-operation"
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/international/un-second-militaire-francais-est-decede-en-irak-annonce-emmanuel-macron.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.elysee.fr/emmanuel-macron/2023/08/21/deces-adjudant-nicolas-latourte",
+          "title": "Elysée",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/CEMAT_FR/status/1693569499033719090",
+          "title": "@CEMAT_FR",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/l-elysee-annonce-la-mort-d-un-deuxieme-militaire-francais-en-irak-7534168",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/politique/defense/mort-dun-militaire-en-irak-qui-etait-ladjudant-nicolas-latourte-decede-a-lage-de-29-ans-46340c32-4035-11ee-b15f-0ccb37fe4148",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/societe/4049607-20230821-militaire-francais-tue-lors-operation-irak",
+          "title": "20 minutes",
           "paywall": false,
           "trustful": true
         }
