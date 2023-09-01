@@ -691,7 +691,7 @@
         },
         {
           "url": "",
-          "title": "FondationMG",
+          "title": "Fondation MG",
           "paywall": false,
           "trustful": true
         }
@@ -2613,6 +2613,114 @@
         {
           "url": "https://www.20minutes.fr/societe/4049607-20230821-militaire-francais-tue-lors-operation-irak",
           "title": "20 minutes",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "08",
+      "day": "21",
+      "keywords": "Bernard Rouchouse",
+      "house": "gn",
+      "peers": [],
+      "text": "Un officier supérieur de la Région de Gendarmerie de Bretagne a mit fin à ses jours avec son arme administrative.\nIl était marié et père de 3 enfants.",
+      "section": "RGBRET",
+      "location": "Rennes",
+      "image": null,
+      "county": "35",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.094572409669155,
+        "lng": -1.678794485699422
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://lessor.org/vie-des-personnels/hommage-poignant-d-un-officier-de-gendarmerie-a-son-frere-qui-s-est-ote-la-vie",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "",
+          "title": "Fondation MG",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "08",
+      "day": "28",
+      "keywords": "Nicolas Mazier",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du CPA 10 est mort lors d'une opération anti-terroriste conjointe avec l'armée Irakienne.",
+      "section": "CPA 10",
+      "location": "Province de Kirkouk, Désert d’Al-Aïth",
+      "image": {
+        "filename": "nicolas-mazier.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Sergent Nicolas Mazier",
+        "origin": "Ministère des Armées",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "IQ",
+      "origin": "opex",
+      "gps": {
+        "accurate": false,
+        "radius": 10000,
+        "lat": 34.86516793913373,
+        "lng": 43.97038229450304
+      },
+      "homage": {
+        "title": "Ministère des Armées",
+        "url": "https://www.defense.gouv.fr/actualites/sergent-mazier-decede-irak-lors-dune-mission-dappui-lutte-anti-terroriste"
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/international/irak-un-soldat-des-forces-speciales-francaises-tue-dans-une-operation-antiterroriste.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.sudouest.fr/societe/defense/un-soldat-francais-des-forces-speciales-tue-dans-une-operation-antiterroriste-en-irak-16432384.php",
+          "title": "Sud Ouest",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lefigaro.fr/international/un-soldat-des-forces-francaises-speciales-tue-dans-une-operation-antiterroriste-en-irak-20230829",
+          "title": "Le Figaro",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-soldat-des-forces-francaises-speciales-tue-dans-une-operation-antiterroriste-en-irak-5108143",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.bfmtv.com/international/irak-un-soldat-des-forces-francaises-tue-dans-une-operation-antiterroriste_AN-202308290387.html",
+          "title": "BFMTV",
           "paywall": false,
           "trustful": true
         }
