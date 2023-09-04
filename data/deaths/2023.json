@@ -2659,6 +2659,58 @@
       ]
     },
     {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "08",
+      "day": "25",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un jeune policière stagiaire affecté en police secours de nuit dans le centre de Lyon a mit fin à ses jours avec son arme administrative.",
+      "section": "UPS Nuit",
+      "location": "Lyon Centre",
+      "image": null,
+      "county": "69",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.75088668884392,
+        "lng": 4.8307698655883895
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/lyon-une-jeune-policiere-de-25-ans-se-donne-la-mort-avec-son-arme-de-service.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lefigaro.fr/lyon/lyon-une-policiere-stagiaire-se-suicide-avec-son-arme-de-service-20230829",
+          "title": "Figaro",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/4050577-20230829-lyon-policiere-25-ans-suicide-arme-service",
+          "title": "20 minutes",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/auvergne-rhone-alpes/lyon_69123/lyon-une-policiere-de-25-ans-se-suicide-chez-elle-avec-son-arme-de-service_60016758.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
       "cause": "deathOnDuty",
       "count": 1,
       "published": true,
@@ -2720,6 +2772,58 @@
         },
         {
           "url": "https://www.bfmtv.com/international/irak-un-soldat-des-forces-francaises-tue-dans-une-operation-antiterroriste_AN-202308290387.html",
+          "title": "BFMTV",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "09",
+      "day": "03",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policer affecté à la PJ de Dijon a mit fin à ses jours avec son arme administrative dans son bureau.",
+      "section": "DTPJ",
+      "location": "Dijon",
+      "image": null,
+      "county": "21",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.31551330189952,
+        "lng": 5.033587408910999
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/dijon-un-policier-de-51-ans-se-donne-la-mort-avec-une-arme-de-service-dans-son-bureau.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/dijon-un-policier-se-suicide-dans-son-commissariat-20230904",
+          "title": "Figaro",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/4051479-20230904-dijon-policier-suicide-commissariat",
+          "title": "20 minutes",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/dijon-un-policier-se-suicide-avec-son-arme-dans-son-bureau_AN-202309040616.html",
           "title": "BFMTV",
           "paywall": false,
           "trustful": true
