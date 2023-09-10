@@ -2829,6 +2829,58 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "accident",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "09",
+      "day": "07",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policer affecté à la CRS 48 (Châtel-Guyon, 63) est décédé dans un accident de moto des suites d'un malaise pendant un entrainement avec sa compagnie.\n Il était pacsé et père de deux enfants.",
+      "section": "CRS 48",
+      "location": "Soucy",
+      "image": null,
+      "county": "89",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.26272528964402,
+        "lng": 3.316134431001421
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/sens-un-policier-decede-apres-un-malaise-durant-un-stage-a-moto.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/bourgogne-franche-comte/yonne/sens/un-policier-de-la-crs-48-meurt-lors-d-un-entrainement-pres-de-sens-2836388.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/yonne-un-policier-en-formation-motocycliste-a-sens-decede-lors-d-une-journee-d-entrainement-9757290#:~:text=Un%20policier%20de%2037%20ans,d%C3%A9but%20d'apr%C3%A8s%2Dmidi.",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lamontagne.fr/riom-63200/actualites/un-policier-de-la-crs-48-de-chatel-guyon-decede-a-l-entrainement-dans-l-yonne_14367742/",
+          "title": "La Montagne",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
