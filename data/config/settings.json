@@ -127,6 +127,7 @@
       }
     ],
     "passFiltersToQuery": false,
+    "passAggregatedYearsToQuery": false,
     "templateDir": "./assets/templates/%tpl%.html.twig"
   }
 }

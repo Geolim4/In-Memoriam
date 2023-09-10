@@ -83,7 +83,7 @@ export abstract class AppCore extends AppAbstract {
         const filterYears = filters.year.split(',');
         this.showLoaderWall(this.map.getDiv());
         Promise.all(
-            filterYears
+            (this.getConfigFactory().config.passAggregatedYearsToQuery ? [filters.year] : filterYears)
                 .map(
                     (year: string): Promise<Bloodbath> => fetch(this.buildMarkersQuery(filters, year), { cache: cacheStrategy })
                         .then((resp):any => resp.json()),
