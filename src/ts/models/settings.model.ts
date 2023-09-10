@@ -43,6 +43,7 @@ export interface Settings {
         userConfig: string;
     };
     passFiltersToQuery: boolean;
+    passAggregatedYearsToQuery: boolean;
     supportAssociations: HoverTitleUrl[];
     searchMinLength: number;
     templateDir: string;
