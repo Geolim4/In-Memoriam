@@ -107,7 +107,7 @@ export abstract class AppCore extends AppAbstract {
                 }
 
                 if (data.settings.aggregatable || filterYears.length < 2) {
-                    responseData.deaths.push(...data.deaths.map((deathModel: DeathModel): Death => Object.freeze(Object.assign(new Death(), deathModel))));
+                    responseData.deaths.push(...data.deaths.map((deathModel: DeathModel): Death => Object.assign(new Death(), deathModel)));
                 } else {
                     this.addUnaggregatableYears(year);
                 }
@@ -117,7 +117,7 @@ export abstract class AppCore extends AppAbstract {
                 const unaggregatableYears = [...this.getUnaggregatableYears()];
                 unaggregatableYears.shift();
                 this.setUnaggregatableYears(unaggregatableYears);
-                responseData.deaths.push(...responseDataArray[0].deaths.map((deathModel: DeathModel): Death => Object.freeze(Object.assign(new Death(), deathModel))));
+                responseData.deaths.push(...responseDataArray[0].deaths.map((deathModel: DeathModel): Death => Object.assign(new Death(), deathModel)));
             }
 
             const snackbarMessage = `Les données de la période ${StringUtilsHelper.formatArrayOfStringForReading(this.getUnaggregatableYears())} ont été ignorées car elle ne peuvent pas être aggrégées avec d'autres années !`;
@@ -152,7 +152,10 @@ export abstract class AppCore extends AppAbstract {
                         this.getSnackbar().show('Aucun donnée actuellement référencée pour cette année, essayez une autre année.');
                     }
                 } else {
-                    const messageText = 'La recherche a rencontr&eacute; une erreur, essayez de corriger votre saisie.';
+                    let messageText = 'La recherche a rencontr&eacute; une erreur, essayez de corriger votre saisie.';
+                    if (this.getConfigFactory().isDebugEnabled()) {
+                        messageText += `<br />Code d'erreur rencontré: <br /><code>[${filteredResponse.error.name}] ${filteredResponse.error.message}</code>`;
+                    }
                     this.getModal().modalInfo('Information', messageText, { isError: true });
                 }
                 this.printDefinitionsText(filteredResponse);
@@ -569,7 +572,7 @@ export abstract class AppCore extends AppAbstract {
     }
 
     private getFilteredResponse(response: Bloodbath, filters: Filters): FilteredResponse {
-        const filteredResponse = <FilteredResponse>{ errored: false, original_response: structuredClone(response), response };
+        const filteredResponse = <FilteredResponse>{ error: null, errored: false, original_response: structuredClone(response), response };
         const deathsRemovedBySearch = <Death[]>[];
         const deathsRemovedByFilters = <Death[]>[];
 
@@ -684,7 +687,7 @@ export abstract class AppCore extends AppAbstract {
             deathsRemovedBySearch.filter((death): boolean => (!deathsRemovedByFilters.includes(death))).forEach((death): void => (
                 this.pushSuggestionFromDeath(death)
             ));
-            filteredResponse.response.deaths = this.orderDeathsByDate(filteredResponse.response.deaths);
+            filteredResponse.response.deaths = this.mapDeathPrecedence(this.orderDeathsByDate(filteredResponse.response.deaths)).map((death: Death): Death => Object.freeze(death));
         } catch (e) {
             if (e instanceof EvaluationError && this.isSearchByExpressionEnabled()) {
                 if (this.isSearchByExpressionEnabled()) {
@@ -698,6 +701,7 @@ export abstract class AppCore extends AppAbstract {
 
             filteredResponse.response.deaths = [];
             filteredResponse.errored = true;
+            filteredResponse.error = e;
         }
 
         return filteredResponse;
@@ -719,6 +723,20 @@ export abstract class AppCore extends AppAbstract {
             }
             return parseInt(a.year, 10) > parseInt(b.year, 10) ? base : -base;
         });
+    }
+
+    private mapDeathPrecedence(deaths: Death[]): Death[] {
+        let previousDeath: Death = null;
+
+        for (const death of deaths) {
+            if (previousDeath !== null) {
+                death.previousDeath = previousDeath;
+                previousDeath.nextDeath = death;
+            }
+            previousDeath = death;
+        }
+
+        return deaths;
     }
 
     private bindFullscreenFormFilterListener(): void {

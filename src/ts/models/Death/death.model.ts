@@ -35,6 +35,8 @@ export enum DeathHouse{
 }
 
 export class DeathModel {
+    public previousDeath?: this;
+    public nextDeath?: this;
     public cause: DeathCause;
     public count: number;
     public day: string;
@@ -67,7 +69,11 @@ export class Death extends DeathModel {
     }
 
     public getMarkerLink(label: string): string {
-        return `<a href="javascript:;" class="marker-link" data-controller="map-marker" data-death-hash="${this.getMarkerHash()}">${label}</a>`;
+        const deathCount = this.getTotalDeathCount();
+        return `
+<a href="javascript:;" class="marker-link${deathCount > 1 ? ' text-danger' : ''}" data-controller="map-marker" data-death-hash="${this.getMarkerHash()}">
+    ${deathCount > 1 ? `<abbr data-tippy-content="${deathCount} décès"><i class="fa-solid fa-bolt"></i></abbr> ` : ''}${label}
+</a>`;
     }
 
     public getDeathMarkerLink(removePwaParameter: boolean = true): string {
@@ -94,5 +100,13 @@ export class Death extends DeathModel {
         }
 
         return this.count + count;
+    }
+
+    public getShortLabel(): string {
+        if (this.section.includes(this.location)) {
+            return `${this.day}/${this.month}/${this.year} ${this.section}`;
+        }
+
+        return `${this.day}/${this.month}/${this.year} ${this.section}, ${this.location}`;
     }
 }

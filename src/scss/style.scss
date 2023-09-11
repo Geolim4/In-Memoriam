@@ -236,6 +236,14 @@ abbr[data-title] {
   line-height: 18px;
 }
 
+.text-danger {
+  abbr[title],
+  abbr[data-tippy-content],
+  abbr[data-title] {
+    border-bottom: 2px dotted #dc3545;
+  }
+}
+
 a abbr[title],
 a abbr[data-tippy-content],
 a abbr[data-title] {
