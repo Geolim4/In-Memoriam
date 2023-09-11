@@ -150,4 +150,25 @@
             {% endif %}
         </div>
     </div>
+    {% if death.previousDeath or death.nextDeath %}
+        <hr />
+        <div class="clearfix mt-1">
+            {% if death.previousDeath %}
+                <div class="float-left text-left">
+                    <i class="fa-solid fa-angles-left fa-lg"></i>
+                    <span>
+                        {{ death.previousDeath.getMarkerLink(death.previousDeath.getShortLabel()|acronymise) }}
+                    </span>
+                </div>
+            {% endif %}
+            {% if death.nextDeath %}
+                <div class="float-right text-right">
+                    <span>
+                        {{ death.nextDeath.getMarkerLink(death.nextDeath.getShortLabel()|acronymise) }}
+                    </span>
+                    <i class="fa-solid  fa-angles-right fa-lg"></i>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
 </div>
