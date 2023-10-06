@@ -78,7 +78,7 @@
     "text-obfuscator": "^1.1.0",
     "tippy.js": "^5.1.1",
     "tom-select": "^2.2.2",
-    "twig": "^1.15.4",
+    "twig": "^1.16.0",
     "typescript": "4.0.8"
   },
   "devDependencies": {
