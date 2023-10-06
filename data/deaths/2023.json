@@ -2320,6 +2320,65 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "07",
+      "day": "30",
+      "keywords": "Delphine Pader",
+      "house": "admpen",
+      "peers": [],
+      "text": "Une surveillante pénitentiaire de la Maison d'Arrêt de Cuincy a mis fin à ses jours après avoir été accusée à tort d'avoir introduit des explosifs dans une prison. _La mise en examen qui a duré 4 ans révèlera qu'elle était finalement **innocente**._\n Elle était mariée et mère d'un enfant.",
+      "section": "Maison d'Arrêt de Cuincy",
+      "location": "Douai",
+      "image": {
+        "filename": "delphine-pader.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Delphine Pader",
+        "origin": "Le Parisien",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "59",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 50.37535517624326,
+        "lng": 3.059317203991912
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/jai-limpression-de-ne-plus-exister-une-surveillante-penitentiaire-se-suicide-apres-des-annees-de-mise-en-examen.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/delphine-pader-la-surveillante-de-prison-innocentee-apres-son-suicide-21-09-2023-EWOFTZWFIRCQTPOAAJ4PYG7IBM.php",
+          "title": "Le Parisien",
+          "paywall": true,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ladepeche.fr/2023/08/13/je-suis-a-bout-jai-limpression-de-ne-plus-exister-une-ancienne-surveillante-penitentiaire-se-suicide-apres-4-ans-de-mise-en-examen-11394033.php",
+          "title": "La Dépêche",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.bfmtv.com/police-justice/la-justice-n-a-pas-voulu-la-lacher-4-ans-apres-sa-mise-en-examen-un-surveillante-penitentiaire-se-suicide_AN-202308160446.html",
+          "title": "BFMTV",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
       "orphans": 0,
       "unpublished_reason": "",
       "year": "2023",
@@ -2839,7 +2898,7 @@
       "year": "2023",
       "month": "09",
       "day": "07",
-      "keywords": "",
+      "keywords": "Ivan",
       "house": "pn",
       "peers": [],
       "text": "Un policer affecté à la CRS 48 (Châtel-Guyon, 63) est décédé dans un accident de moto des suites d'un malaise pendant un entrainement avec sa compagnie.\n Il était pacsé et père de deux enfants.",
@@ -2869,7 +2928,7 @@
           "trustful": true
         },
         {
-          "url": "https://www.francebleu.fr/infos/faits-divers-justice/yonne-un-policier-en-formation-motocycliste-a-sens-decede-lors-d-une-journee-d-entrainement-9757290#:~:text=Un%20policier%20de%2037%20ans,d%C3%A9but%20d'apr%C3%A8s%2Dmidi.",
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/yonne-un-policier-en-formation-motocycliste-a-sens-decede-lors-d-une-journee-d-entrainement-9757290",
           "title": "France Bleu",
           "paywall": false,
           "trustful": true
@@ -2877,6 +2936,68 @@
         {
           "url": "https://www.lamontagne.fr/riom-63200/actualites/un-policier-de-la-crs-48-de-chatel-guyon-decede-a-l-entrainement-dans-l-yonne_14367742/",
           "title": "La Montagne",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "09",
+      "day": "29",
+      "keywords": "Nathanaël BONNEMERE",
+      "house": "armee",
+      "peers": [],
+      "text": "Un infirmier militaire affecté à la 172e antenne médicale est décédé lors d'un saut en parachute avec le 1er RCP.",
+      "section": "172e AM (11e CMA)",
+      "location": "Pamiers",
+      "image": {
+        "filename": "nathanael-bonnemere.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "ISG1G Nathanaël BONNEMERE",
+        "origin": "Ministère des Armées",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "09",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.13389115491348,
+        "lng": 1.650277472926292
+      },
+      "homage": {
+        "title": "Ministère des Armées",
+        "url": "https://www.defense.gouv.fr/actualites/deces-linfirmier-militaire-nathanael-bonnemere-lors-dun-saut-dentrainement-parachute"
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/santearmees/status/1707841587223449664",
+          "title": "@santearmees",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/occitanie/ariege/foix/mort-d-un-militaire-en-ariege-lors-d-un-saut-en-parachute-2848136.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ladepeche.fr/2023/10/05/lot-un-dernier-hommage-sera-rendu-a-linfirmier-militaire-nathanael-bonnemere-samedi-en-la-cathedrale-de-cahors-11498935.php",
+          "title": "La Dépêche",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.opex360.com/2023/09/29/un-infirmier-militaire-de-lantenne-medicale-de-pamiers-a-perdu-la-vie-lors-dun-saut-en-parachute/",
+          "title": "Opex 360",
           "paywall": false,
           "trustful": true
         }
