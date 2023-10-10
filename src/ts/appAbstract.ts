@@ -59,7 +59,7 @@ export abstract class AppAbstract {
 
     private unaggregatableYears: string[];
 
-    private pwaContext: boolean;
+    private readonly pwaContext: boolean;
 
     protected constructor() {
         this.map = null;

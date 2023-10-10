@@ -94,12 +94,13 @@ export class Death extends DeathModel {
     }
 
     public getTotalDeathCount(): number {
-        let count = 0;
+        let totalCount = this.count;
+
         for (const peer of this.peers) {
-            count += peer.count;
+            totalCount += peer.count;
         }
 
-        return this.count + count;
+        return totalCount;
     }
 
     public getShortLabel(): string {

@@ -4234,7 +4234,14 @@
       "text": "Deux militaires du 1er RHP sont décédés à bord de leur VBL d'une attaque par IED lors d'un opération de contrôle dans la région de Tessalit au Mali.",
       "section": "1er RHP",
       "location": "Tessalit",
-      "image": null,
+      "image": {
+        "filename": "arnaud-volpe.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Brigadier Arnaud Volpe",
+        "origin": "Ministère des Armées",
+        "licence": "CC BY-ND 2.0"
+      },
       "county": "ML",
       "origin": "opex",
       "gps": {
@@ -5342,7 +5349,14 @@
       "text": "Trois militaires du 1er RCh sont décédés à bord de leur VBL d'une attaque par IED lors d'un opération de contrôle dans la région de Hombori au Mali.",
       "section": "1er RCh",
       "location": "Région de Hombori",
-      "image": null,
+      "image": {
+        "filename": "tanerii-mauri-du-dorian-issakhanian-quentin-pauchet.jpeg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "1CL Dorian ISSAKHANIAN, BCH Tanerii MAURI et 1CL Quentin PAUCHET",
+        "origin": "Ministère des Armées",
+        "licence": "CC BY-ND 2.0"
+      },
       "county": "ML",
       "origin": "opex",
       "gps": {

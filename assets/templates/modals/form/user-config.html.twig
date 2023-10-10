@@ -53,10 +53,12 @@
                     <option value="multiple"{% if userConfig.filtersType == 'multiple' %} selected{% endif %}>Multiples</option>
                     <option value="simple"{% if userConfig.filtersType == 'simple' %} selected{% endif %}>Simples</option>
                 </select>
+                <small>L'activation de filtres multiples combinés à la sélection de plusieurs années permet d'afficher des statistiques annuelles comparatives.</small>
             </div>
         </div>
     </form>
-    <div class="mt-3">
+    <div class="mt-3 text-right">
+        <hr >
         <small>
             <em>La mise à jour de vos préférences est susceptible d'entrainer le rechargement complet de la carte.<br />
                 Toutefois vos filtres appliqués seront conservés.</em>

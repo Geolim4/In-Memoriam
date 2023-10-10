@@ -4,6 +4,17 @@
             <strong>Vous semblez naviguer sur mobile. L'affichage des statistiques pourrait ne pas être optimal.</strong>
     </span>
 </div>
+{% if years|length > 1 %}
+<div class="row mt-3">
+    {% if years|length <= 2 %}
+        <div id="chart-container-line-years-cause" class=" col-md-6"></div>
+        <div id="chart-container-line-years-house" class="col-md-6"></div>
+    {% else %}
+        <div id="chart-container-line-years-cause" class="col-md-12"></div>
+        <div id="chart-container-line-years-house" class="col-md-12"></div>
+    {% endif %}
+</div>
+{% endif %}
 <div class="row mt-3">
     <div id="chart-container-pie-criteria-cause" class="col-md-6"></div>
     <div id="chart-container-pie-criteria-house" class="col-md-6"></div>
@@ -13,4 +24,5 @@
 <div id="chart-container-bar-criteria-house" class="row mt-3"></div>
 <div id="chart-container-bar-county-house" class="row mt-3"></div>
 <div id="chart-container-bar-county-cause" class="row mt-3"></div>
+
 <div class="col-md-12"><em><a href="https://www.highcharts.com" target="_blank"><small>Highcharts.com</small></a></em></div>

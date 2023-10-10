@@ -5,6 +5,7 @@ import { Definitions } from '../models';
 import { DeathPeerList } from '../models/Death/deathPeerList.model';
 import { App } from '../app';
 import { StringUtilsHelper } from '../helper/stringUtils.helper';
+import { AppStatic } from '../appStatic';
 
 const unique = require('array-unique');
 
@@ -32,6 +33,11 @@ export class Charts {
         this.buildBarChartPerCounty(markers, filters, definitions, 'cause', year);
     }
 
+    public buildChartPerYears(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definitions, years: string[]): void {
+        this.buildYearsLineChartPerCriteria(markers, filters, definitions, 'house', years);
+        this.buildYearsLineChartPerCriteria(markers, filters, definitions, 'cause', years);
+    }
+
     protected buildBarChartPerCounty(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definitions, criteria: string, year: string): void {
         const series = [];
         const peersList = this.getPeersList(criteria, markers, 'county');
@@ -47,14 +53,18 @@ export class Charts {
                 }
             }
             /**
-            * Join the peers, if applicable
-            */
+             * Join the peers, if applicable
+             */
             if (peersList[criteriaFilter.value]) {
                 for (const peerCounty in peersList[criteriaFilter.value]) {
                     data[countyGroups.indexOf(counties[peerCounty])] += peersList[criteriaFilter.value][peerCounty];
                 }
             }
-            series.push({ color: this.getFilterCriteriaColor(criteria, criteriaFilter.value, filters), data, name: criteriaFilter.label });
+            series.push({
+                color: this.getFilterCriteriaColor(criteria, criteriaFilter.value, filters),
+                data,
+                name: criteriaFilter.label,
+            });
         }
 
         Highcharts.chart(`chart-container-bar-county-${criteria}`, {
@@ -71,7 +81,7 @@ export class Charts {
                 series: {
                     dataLabels: {
                         enabled: true,
-                        formatter: function (): string|number {
+                        formatter: function (): string | number {
                             return (this.y !== 0) ? this.y : '';
                         } as Highcharts.DataLabelsFormatterCallbackFunction,
                     },
@@ -89,7 +99,7 @@ export class Charts {
                 footerFormat: '</table>',
                 headerFormat: '<div style="font-size:15px; font-weight: bold;margin: 0 0 10px 0">Région: {point.key}</div><table>',
                 pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}:  </td>'
-            + '<td style="padding: 2px 10px 2px 20px"><b>{point.y} décès</b></td></tr>',
+                    + '<td style="padding: 2px 10px 2px 20px"><b>{point.y} décès</b></td></tr>',
                 shared: true,
                 useHTML: true,
             },
@@ -119,14 +129,18 @@ export class Charts {
                 }
             }
             /**
-            * Join the peers, if applicable
-            */
+             * Join the peers, if applicable
+             */
             if (peersList[criteriaFilter.value]) {
                 for (const peerMonth in peersList[criteriaFilter.value]) {
                     data[parseInt(peerMonth, 10) - 1] += peersList[criteriaFilter.value][peerMonth];
                 }
             }
-            series.push({ color: this.getFilterCriteriaColor(criteria, criteriaFilter.value, filters), data, name: criteriaFilter.label });
+            series.push({
+                color: this.getFilterCriteriaColor(criteria, criteriaFilter.value, filters),
+                data,
+                name: criteriaFilter.label,
+            });
         }
 
         Highcharts.chart(`chart-container-bar-criteria-${criteria}`, {
@@ -142,7 +156,7 @@ export class Charts {
                 series: {
                     dataLabels: {
                         enabled: true,
-                        formatter: function (): string|number {
+                        formatter: function (): string | number {
                             return (this.y !== 0) ? this.y : '';
                         } as Highcharts.DataLabelsFormatterCallbackFunction,
                     },
@@ -160,7 +174,7 @@ export class Charts {
                 footerFormat: '</table>',
                 headerFormat: '<div style="font-size:15px; font-weight: bold;margin: 0 0 10px 0">Mois: {point.key}</div><table>',
                 pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}:  </td>'
-          + '<td style="padding: 2px 10px 2px 20px"><b>{point.y} décès</b></td></tr>',
+                    + '<td style="padding: 2px 10px 2px 20px"><b>{point.y} décès</b></td></tr>',
                 shared: true,
                 useHTML: true,
             },
@@ -189,8 +203,8 @@ export class Charts {
                 }
             }
             /**
-            * Join the peers, if applicable
-            */
+             * Join the peers, if applicable
+             */
             if (peersList[criteriaFilter.value]) {
                 for (const peerMonth in peersList[criteriaFilter.value]) {
                     counter += peersList[criteriaFilter.value][peerMonth];
@@ -200,6 +214,7 @@ export class Charts {
                 seriesData.push([counter, criteriaFilter.label, this.getFilterCriteriaColor(criteria, criteriaFilter.value, filters)]);
             }
         }
+
         Highcharts.chart(`chart-container-pie-criteria-${criteria}`, {
             chart: {
                 backgroundColor: 'transparent',
@@ -232,8 +247,92 @@ export class Charts {
         });
     }
 
+    protected buildYearsLineChartPerCriteria(markers: ExtendedGoogleMapsMarker[], filters: FormFilters, definitions: Definitions, criteria: string, years: string[]): void {
+        const seriesData = [];
+        const peersList = this.getPeersList(criteria, markers, 'year');
+
+        console.log(years);
+        for (const criteriaFilter of filters[criteria]) {
+            const yearCounter = years.reduce((k, v): any => ({ ...k, [v]: 0 }), {});
+
+            for (const marker of markers) {
+                if (marker.death[criteria] === criteriaFilter.value) {
+                    yearCounter[marker.death.year] += marker.death.count;
+                }
+            }
+
+            /**
+             * Join the peers, if applicable
+             */
+            if (peersList[criteriaFilter.value]) {
+                for (const peerYear in peersList[criteriaFilter.value]) {
+                    yearCounter[peerYear] += peersList[criteriaFilter.value][peerYear];
+                }
+            }
+
+            seriesData.push({
+                color: this.getFilterCriteriaColor(criteria, criteriaFilter.value, filters),
+                data: Object.entries(yearCounter),
+                name: criteriaFilter.label,
+            });
+        }
+
+        Highcharts.chart(`chart-container-line-years-${criteria}`, {
+            chart: {
+                backgroundColor: 'transparent',
+                events: {
+                    render: (): void => (AppStatic.bindUiWidgets()),
+                },
+            },
+            exporting: {
+                enabled: false,
+            },
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false,
+                    },
+                },
+            },
+            responsive: {
+                rules: [{
+                    chartOptions: {
+                        legend: {
+                            align: 'center',
+                            layout: 'horizontal',
+                            verticalAlign: 'bottom',
+                        },
+                    },
+                    condition: {
+                        maxWidth: 500,
+                    },
+                }],
+            },
+            series: seriesData,
+
+            subtitle: {
+                text: 'Données contextualisées par les filtres appliqués',
+            },
+            title: {
+                text: `Décès annuels par ${definitions[criteria]['#name_plural']} sur la période ${StringUtilsHelper.formatArrayOfStringForReading(years)} ${this.getYearTooltip()}`,
+                useHTML: true,
+            },
+            xAxis: {
+                accessibility: {
+                    rangeDescription: `Années: ${StringUtilsHelper.formatArrayOfStringForReading(years)}`,
+                },
+                categories: years.sort(),
+            },
+            yAxis: {
+                title: {
+                    text: 'Nombre de décès',
+                },
+            },
+        });
+    }
+
     protected getPeersList(criteria: string, markers: ExtendedGoogleMapsMarker[], indexKey: string = 'month'): DeathPeerList {
-        const peersList = <DeathPeerList> {};
+        const peersList = <DeathPeerList>{};
 
         for (const marker of markers) {
             if (marker.death.peers) {
@@ -247,9 +346,9 @@ export class Charts {
                         }
                         peersList[peer[criteria]][marker.death[indexKey]] += peer.count;
                         /**
-                        * If the criteria does not exist in peer (e.g: "cause" criteria)
-                        * then check in the parent object if it exists
-                        */
+                         * If the criteria does not exist in peer (e.g: "cause" criteria)
+                         * then check in the parent object if it exists
+                         */
                     } else if (typeof marker.death[criteria] !== 'undefined') {
                         if (typeof peersList[marker.death[criteria]] === 'undefined') {
                             peersList[marker.death[criteria]] = {};
@@ -276,7 +375,7 @@ export class Charts {
     }
 
     protected setupHighchartStyle(): void {
-        const theme = <Highcharts.Options> {
+        const theme = <Highcharts.Options>{
             colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
             legend: {
                 itemHoverStyle: {
@@ -352,5 +451,10 @@ export class Charts {
         };
 
         Highcharts.setOptions(theme);
+        Highcharts.AST.allowedAttributes.push('data-tippy-content');
+    }
+
+    protected getYearTooltip(): string {
+        return '<i class="fa-solid fa-circle-question" data-tippy-content="L\'affichage des statistiques annuelles est disponible uniquement lorsque les filtres multiples sont activés et qu\'au moins deux années ont été choisies dans les filtres."></i>';
     }
 }
