@@ -154,16 +154,28 @@
         <hr />
         <div class="clearfix mt-1">
             {% if death.previousDeath %}
+                {% set houseName = app.getFilterValueLabel('house', death.previousDeath.house) %}
                 <div class="float-left text-left">
                     <i class="fa-solid fa-angles-left fa-lg"></i>
                     <span>
                         {{ death.previousDeath.getMarkerLink(death.previousDeath.getShortLabel()|acronymise) }}
+                        <img src="{{ config.imagePath.house|replace({"%house%": death.previousDeath.house}) }}"
+                             alt="Corps: {{ houseName }}"
+                             title="Corps: {{ houseName }}"
+                             class="d-none d-sm-inline-block"
+                             height="14" />
                     </span>
                 </div>
             {% endif %}
             {% if death.nextDeath %}
+                {% set houseName = app.getFilterValueLabel('house', death.nextDeath.house) %}
                 <div class="float-right text-right">
                     <span>
+                        <img src="{{ config.imagePath.house|replace({"%house%": death.nextDeath.house}) }}"
+                             alt="Corps: {{ houseName }}"
+                             title="Corps: {{ houseName }}"
+                             class="d-none d-sm-inline-block"
+                             height="14" />
                         {{ death.nextDeath.getMarkerLink(death.nextDeath.getShortLabel()|acronymise) }}
                     </span>
                     <i class="fa-solid  fa-angles-right fa-lg"></i>

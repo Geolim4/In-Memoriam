@@ -291,11 +291,13 @@ export class MapButtons {
 
         GmapUtils.bindButton(map, (): void => {
             const markers = App.getInstance().getMarkers();
+            const { year } = App.getInstance().getFilters(false);
+            const years = year.split(',');
             if (markers.length) {
                 if (App.getInstance().isStatsEnabled()) {
                     App.getInstance()
                         .getRenderer()
-                        .render('bloodbath-chart', {})
+                        .render('bloodbath-chart', { years })
                         .then((htmlContent): void => {
                             App.getInstance().getModal().modalInfo(
                                 '',
@@ -305,11 +307,13 @@ export class MapButtons {
                                     okLabel: 'Fermer',
                                     onceShown: (): void => {
                                         const definitions = App.getInstance().getConfigDefinitions();
-                                        const { year } = App.getInstance().getFilters(false);
                                         App.getInstance().runActionWithNeededLoaderWall((): void => {
                                             App.getInstance().getCharts().buildChartPerCause(markers, App.getInstance().getFormFilters(), definitions, year);
                                             App.getInstance().getCharts().buildChartPerHouse(markers, App.getInstance().getFormFilters(), definitions, year);
                                             App.getInstance().getCharts().buildChartPerCounty(markers, App.getInstance().getFormFilters(), definitions, year);
+                                            if (years.length > 1) {
+                                                App.getInstance().getCharts().buildChartPerYears(markers, App.getInstance().getFormFilters(), definitions, years);
+                                            }
                                         });
                                     },
                                 },

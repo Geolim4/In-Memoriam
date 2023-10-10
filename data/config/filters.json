@@ -2584,13 +2584,15 @@
         "value": "expr:(death.homage !== null)",
         "label": "Oui",
         "color": "",
-        "group": null
+        "group": null,
+        "param": "1"
       },
       {
         "value": "expr:(death.homage === null)",
         "label": "Non",
         "color": "",
-        "group": null
+        "group": null,
+        "param": "0"
       }
     ]
   }

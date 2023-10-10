@@ -47,7 +47,9 @@ export class App extends AppCore {
         for (const [criteria, criteriaValues] of Object.entries(this.getFormFilters())) {
             formFiltersKeyed[criteria] = {};
             for (const criteriaValue of criteriaValues) {
-                formFiltersKeyed[criteria][criteriaValue[indexKey]] = criteriaValue[labelKey];
+                if (typeof criteriaValue[indexKey] !== 'undefined') {
+                    formFiltersKeyed[criteria][criteriaValue[indexKey]] = criteriaValue[labelKey];
+                }
             }
         }
 
@@ -64,6 +66,7 @@ export class App extends AppCore {
         const filters = {};
         const fields = <NodeListOf<HTMLSelectElement>> this.formElement.querySelectorAll('select[data-filterable="true"], input[data-filterable="true"]');
         const formFilters = this.getFormFilters();
+        const exposableFilters = this.getFormFiltersKeyed('param', 'value');
         const userConfig = this.getConfigFactory().userConfig;
 
         anchor.forEach((value): void => {
@@ -94,7 +97,7 @@ export class App extends AppCore {
                     if (userConfig.filtersType === 'simple' && exposedFilters[field.id].includes(',')) {
                         this.getModal().modalInfo(
                             'Filtres simples activés',
-                            `Les valeurs du filtre <code>${StringUtilsHelper.ucFirst(this.getConfigDefinitions()[field.id]['#name'])}</code> ne peuvent pas être toutes utilisées car les filtres simples sont activés.
+                            `Les valeurs du filtre <code>${StringUtilsHelper.ucFirst(this.getConfigDefinitions()[field.id]['#name'])}</code> ne peuvent pas être toutes utilisées, car les filtres simples sont activés.
                       <br />Sélection de la première valeur uniquement.`,
                             { isError: true },
                         );
@@ -103,6 +106,11 @@ export class App extends AppCore {
                     exposedFilters[field.id].split(',').forEach((val): void => {
                         if ((field.tagName === 'SELECT' && StringUtilsHelper.arrayContainsString(val, formFilters[field.id].map((v): string => v.value), 'one', true)) || field.tagName === 'INPUT') {
                             filters[field.id] += (filters[field.id] ? `,${val}` : val);
+                        } else if (field.tagName === 'SELECT' && exposableFilters[field.id] && typeof exposableFilters[field.id][val] === 'string') {
+                            /**
+                             * Parameters exposed using the FormFilter.param property to make a clean exposed value instead of "expr:(...)"
+                             */
+                            filters[field.id] += (filters[field.id] ? `,${exposableFilters[field.id][val]}` : exposableFilters[field.id][val]);
                         } else {
                             this.getModal().modalInfo(
                                 'Valeur de filtre inconnue',
