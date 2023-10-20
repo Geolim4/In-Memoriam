@@ -1,5 +1,5 @@
-/** SW auto-generated on 2023-10-20T21:08:33.847Z **/
-const CACHE_KEY = 'im-4.19.0+20231020T210833';
+/** SW auto-generated on 2023-10-20T21:10:40.503Z **/
+const CACHE_KEY = 'im-4.20.0+20231020T211040';
 const assets = [
   'assets/css/fonts/fa-solid-900.ttf',
   'assets/css/fonts/fa-solid-900.woff2',
@@ -61,21 +61,6 @@ const assets = [
   'assets/json/database/2022.min.json',
   'assets/json/database/2023.min.json',
   'assets/json/database/2024.min.json',
-  'assets/json/deaths/2010.min.json',
-  'assets/json/deaths/2011.min.json',
-  'assets/json/deaths/2012.min.json',
-  'assets/json/deaths/2013.min.json',
-  'assets/json/deaths/2014.min.json',
-  'assets/json/deaths/2015.min.json',
-  'assets/json/deaths/2016.min.json',
-  'assets/json/deaths/2017.min.json',
-  'assets/json/deaths/2018.min.json',
-  'assets/json/deaths/2019.min.json',
-  'assets/json/deaths/2020.min.json',
-  'assets/json/deaths/2021.min.json',
-  'assets/json/deaths/2022.min.json',
-  'assets/json/deaths/2023.min.json',
-  'assets/json/deaths/2024.min.json',
   'assets/templates/advanced-search-link.html.twig',
   'assets/templates/associations.html.twig',
   'assets/templates/bloodbath-chart.html.twig',
