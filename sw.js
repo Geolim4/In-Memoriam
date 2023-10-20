@@ -1,5 +1,5 @@
-/** SW auto-generated on 2023-10-10T01:25:18.898Z **/
-const CACHE_KEY = 'im-4.19.0+20231010T012518';
+/** SW auto-generated on 2023-10-20T21:08:33.847Z **/
+const CACHE_KEY = 'im-4.19.0+20231020T210833';
 const assets = [
   'assets/css/fonts/fa-solid-900.ttf',
   'assets/css/fonts/fa-solid-900.woff2',
@@ -46,6 +46,21 @@ const assets = [
   'assets/images/pwa/in-memoriam_512_maskable.png',
   'assets/images/pwa/in-memoriam_512.png',
   'assets/js/app.js',
+  'assets/json/database/2010.min.json',
+  'assets/json/database/2011.min.json',
+  'assets/json/database/2012.min.json',
+  'assets/json/database/2013.min.json',
+  'assets/json/database/2014.min.json',
+  'assets/json/database/2015.min.json',
+  'assets/json/database/2016.min.json',
+  'assets/json/database/2017.min.json',
+  'assets/json/database/2018.min.json',
+  'assets/json/database/2019.min.json',
+  'assets/json/database/2020.min.json',
+  'assets/json/database/2021.min.json',
+  'assets/json/database/2022.min.json',
+  'assets/json/database/2023.min.json',
+  'assets/json/database/2024.min.json',
   'assets/json/deaths/2010.min.json',
   'assets/json/deaths/2011.min.json',
   'assets/json/deaths/2012.min.json',
