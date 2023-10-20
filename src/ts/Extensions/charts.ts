@@ -251,7 +251,6 @@ export class Charts {
         const seriesData = [];
         const peersList = this.getPeersList(criteria, markers, 'year');
 
-        console.log(years);
         for (const criteriaFilter of filters[criteria]) {
             const yearCounter = years.reduce((k, v): any => ({ ...k, [v]: 0 }), {});
 
@@ -287,13 +286,6 @@ export class Charts {
             exporting: {
                 enabled: false,
             },
-            plotOptions: {
-                series: {
-                    label: {
-                        connectorAllowed: false,
-                    },
-                },
-            },
             responsive: {
                 rules: [{
                     chartOptions: {
@@ -315,6 +307,15 @@ export class Charts {
             },
             title: {
                 text: `Décès annuels par ${definitions[criteria]['#name_plural']} sur la période ${StringUtilsHelper.formatArrayOfStringForReading(years)} ${this.getYearTooltip()}`,
+                useHTML: true,
+            },
+            tooltip: {
+                backgroundColor: 'rgba(226,226,226,0.98)',
+                footerFormat: '</table>',
+                headerFormat: '<div style="font-size:15px; font-weight: bold;margin: 0 0 10px 0">Année: {point.key}</div><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}:  </td>'
+                    + '<td style="padding: 2px 10px 2px 20px"><b>{point.y} décès</b></td></tr>',
+                shared: true,
                 useHTML: true,
             },
             xAxis: {

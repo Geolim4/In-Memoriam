@@ -20,7 +20,7 @@
       "passFiltersToQuery": true
     },
     "in.memoriam.forces-francaises.fr": {
-      "deathsSrc": "./assets/json/deaths/%year%.min.json"
+      "deathsSrc": "./assets/json/database/%year%.min.json"
     }
   },
   "settings": {
@@ -48,7 +48,7 @@
     },
     "contactEmail": "contact@geolim4.com",
     "debugCookieName": "_JS_DEBUG_ENABLED_",
-    "deathsSrc": "./data/deaths/%year%.json",
+    "deathsSrc": "./data/database/%year%.json",
     "definitionsSrc": "./data/config/definitions.json",
     "filtersSrc": "./data/config/filters.json",
     "glossarySrc": "./data/config/glossary.json",
