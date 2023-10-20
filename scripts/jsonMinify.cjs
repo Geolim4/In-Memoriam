@@ -3,9 +3,9 @@ const fs = require('fs');
 const path = require('path');
 const jsonminify = require("jsonminify");
 
-const deathPath = fs.realpathSync(__dirname + '/../data/deaths/');
+const deathPath = fs.realpathSync(__dirname + '/../data/database/');
 const projectDir =  fs.realpathSync(__dirname + '/../');
-let assetJsonPath = __dirname + '/../assets/json/deaths/';
+let assetJsonPath = __dirname + '/../assets/json/database/';
 
 console.log(clc.blue('Minifying JSON files...'));
 
