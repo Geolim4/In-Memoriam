@@ -3017,7 +3017,7 @@
       "peers": [],
       "text": "Un jeune gendarme affecté à la brigade de Mesnils-sur-Iton a mit fin à ses jours avec son arme administrative.",
       "section": "BP Mesnils-sur-Iton",
-      "location": "Rambouillet",
+      "location": "Mesnils-sur-Iton",
       "image": {
         "filename": "eva-millot.jpg",
         "kind": "image",
@@ -3026,13 +3026,13 @@
         "origin": "ESOG Tulle (Facebook)",
         "licence": "CC BY-ND 2.0"
       },
-      "county": "78",
+      "county": "27",
       "origin": "interieur",
       "gps": {
         "accurate": true,
         "radius": 0,
-        "lat": 48.64870810652472,
-        "lng":  1.8243520939140525
+        "lat": 48.86812955732353,
+        "lng": 1.071211562777813
       },
       "homage": null,
       "sources": [
