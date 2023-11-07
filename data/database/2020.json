@@ -2204,7 +2204,8 @@
         {
           "house": "armee",
           "count": 1,
-          "section": "186e AM"
+          "section": "186e AM",
+          "hidden": false
         }
       ],
       "text": "Deux militaires sont décédés accidentellement lors d'un entraînement de mission de sauvetage des suites d'une chute de plusieurs mètres.\nL'un était sauveteur-plongeur héliporté breveté depuis un an, le second était infirmier en soins généraux de premier grade (ISG 1G) au SSA.",
@@ -5100,7 +5101,8 @@
         {
           "house": "misc",
           "count": 3,
-          "section": "Secours Aérien Français"
+          "section": "Secours Aérien Français",
+          "hidden": false
         }
       ],
       "text": "Deux policiers de la CRS Alpes ainsi que trois membres du SAF ont péris dans un crash d'hélicoptère.",

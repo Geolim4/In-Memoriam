@@ -786,7 +786,8 @@
         {
           "house": "pompier",
           "count": 0,
-          "section": ""
+          "section": "",
+          "hidden": false
         }
       ],
       "text": "Un sapeur-pompier de la BSPP détaché au centre au Centre Spatial Guyanais (CSG) est mort dans un accident de la route en se rendant sur intervention au CSG de Kourou.\nIl était marié et père de trois enfants.",
@@ -937,7 +938,8 @@
         {
           "house": "gn",
           "count": 1,
-          "section": "PMo Labouheyre"
+          "section": "PMo Labouheyre",
+          "hidden": false
         }
       ],
       "text": "Un gendarme réserviste de la CRT 40/3 de Mont de Marsan et ancien gendarme d'active, est décédé dans un accident de la route lors d'une opération de contrôle routier.\nIl était marié et père de deux enfants.\n**Mise à jour 12/04/2023**: Son camarade d'active est également décédé le lendemain des suites de ses blessures.",
@@ -1979,7 +1981,8 @@
         {
           "house": "pompier",
           "count": 0,
-          "section": ""
+          "section": "",
+          "hidden": false
         }
       ],
       "text": "Un pompier de la BSPP est décédé pendant une intervention de lutte contre un feu de parking souterrain.",
@@ -3161,6 +3164,148 @@
         {
           "url": "https://www.lechorepublicain.fr/dreux-28100/actualites/un-policier-de-rambouillet-se-suicide-avec-son-arme-de-service-a-dreux_14390063/",
           "title": "L'écho Républicain",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "malaise",
+      "count": 1,
+      "published": true,
+      "orphans": 3,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "10",
+      "day": "28",
+      "keywords": "Cédric Lillo",
+      "house": "gn",
+      "peers": [],
+      "text": "Un gendarme du PSIG de est décédé des suites d'un malaise cardiaque après une séance d'entrainement programmée.",
+      "section": "PSIG Joigny",
+      "location": "Joigny",
+      "image": null,
+      "county": "89",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.981617726982385,
+        "lng": 3.403604808545274
+      },
+      "homage": {
+        "title": "GendInfo",
+        "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/actualites/2023/deces-d-un-gendarme-du-psig-de-joigny-dans-l-exercice-de-ses-fonctions"
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/yonne-un-gendarme-de-25-ans-decede-apres-une-seance-de-sport-durant-son-service.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/un-gendarme-d-un-psig-de-l-yonne-decede-a-25-ans-a-l-issue-d-une-seance-de-sport",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lavoixdugendarme.fr/une-cagnotte-pour-la-famille-du-gendarme-cedric-lillo-du-psig-de-joigny-yonne-decede-subitement/",
+          "title": "La Voix du Gendarme",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "11",
+      "day": "05",
+      "keywords": "",
+      "house": "pn",
+      "peers": [],
+      "text": "Un policier affecté au commissariat de Béziers a mit fin à ses jours à son domicile.\nIl était père de famille.",
+      "section": "Brigade Nuit",
+      "location": "Béziers",
+      "image": null,
+      "county": "34",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.345603062467156,
+        "lng": 3.2172503531416607
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/herault-un-policier-du-commissariat-de-beziers-se-suicide-a-son-domicile.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/occitanie/beziers_34032/herault-beziers-un-policier-national-se-suicide-le-23eme-depuis-le-debut-de-l-annee_60302108.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "11",
+      "day": "06",
+      "keywords": "Thierry",
+      "house": "pn",
+      "peers": [
+        {
+          "house": "pn",
+          "count": 0,
+          "section": "CRS 60",
+          "hidden": true
+        }
+      ],
+      "text": "Un policier récemment affecté à la CRS 81 a mit fin à ses jours à son domicile avec son arme administrative.\nAnciennement affecté à la CRS 60, il était père d'une petite fille.",
+      "section": "CRS 81",
+      "location": "Cavaillon",
+      "image": null,
+      "county": "84",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.345603062467156,
+        "lng": 3.2172503531416607
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/un-policier-affecte-a-la-nouvelle-crs-81-a-marseille-a-mis-fin-a-ses-jours.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2023/11/06/cavaillon-un-policier-crs-se-donne-la-mort-avec-son-arme-de-service",
+          "title": "Le Dauphiné",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-crs-met-fin-a-ses-jours-a-son-domicile-de-cavaillon-1789908",
+          "title": "France Bleu",
           "paywall": false,
           "trustful": true
         }
