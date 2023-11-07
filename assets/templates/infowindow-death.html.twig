@@ -55,28 +55,30 @@
         </div>
     </div>
     {% for peer in death.peers %}
-        {% set peerHouseName = app.getFilterValueLabel('house', peer.house) %}
-        {% if peer.count > 0 %}
-            <h5>
-                <img src="{{ config.imagePath.house|replace({"%house%": peer.count >= 2 ? peer.house ~ '-m' : peer.house}) }}"
-                     alt="Corps: {{ peerHouseName }}"
-                     title="Corps: {{ peerHouseName }}"
-                     height="20" />
-                {% if peer.section %}{{ peer.section|acronymise }} - {% endif %}
-                {% if peer.count > 1 %}<strong style="color: red;">{{ peer.count }} décès</strong> - {% endif %}
-                {{ peerHouseName }}
-                {% if peer.count == 0 %}<em>(affiliation statutaire)</em>{% endif %}
-            </h5>
-        {% else %}
-            <p>
-                <img src="{{ config.imagePath.house|replace({"%house%": peer.house}) }}"
-                     alt="House: {{ peerHouseName }}"
-                     title="House: {{ peerHouseName }}"
-                     height="20" />
-                {% if peer.section %}{{ peer.section|acronymise }} - {% endif %}
-                {{ peerHouseName }}
-                <em>(affiliation statutaire)</em>
-            </p>
+        {% if not peer.hidden %}
+            {% set peerHouseName = app.getFilterValueLabel('house', peer.house) %}
+            {% if peer.count > 0 %}
+                <h5>
+                    <img src="{{ config.imagePath.house|replace({"%house%": peer.count >= 2 ? peer.house ~ '-m' : peer.house}) }}"
+                         alt="Corps: {{ peerHouseName }}"
+                         title="Corps: {{ peerHouseName }}"
+                         height="20" />
+                    {% if peer.section %}{{ peer.section|acronymise }} - {% endif %}
+                    {% if peer.count > 1 %}<strong style="color: red;">{{ peer.count }} décès</strong> - {% endif %}
+                    {{ peerHouseName }}
+                    {% if peer.count == 0 %}<em>(affiliation statutaire)</em>{% endif %}
+                </h5>
+            {% else %}
+                <p>
+                    <img src="{{ config.imagePath.house|replace({"%house%": peer.house}) }}"
+                         alt="House: {{ peerHouseName }}"
+                         title="House: {{ peerHouseName }}"
+                         height="20" />
+                    {% if peer.section %}{{ peer.section|acronymise }} - {% endif %}
+                    {{ peerHouseName }}
+                    <em>(affiliation statutaire)</em>
+                </p>
+            {% endif %}
         {% endif %}
     {% endfor %}
     <div class="row no-gutters">
