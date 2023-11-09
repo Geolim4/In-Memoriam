@@ -8,7 +8,15 @@
                 </div>
                 <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
             </header>
-            <main class="modal__content" id="modal-info-content">{{ nl2brContent ? modalContent|nl2br : modalContent }}</main>
+            <main class="modal__content" id="modal-info-content">
+                {% if markdownContent %}
+                    {{ modalContent|markdown}}
+                {% elseif nl2brContent %}
+                    {{ modalContent|nl2br}}
+                {% else %}
+                    {{ modalContent }}
+                {% endif %}
+            </main>
             <footer class="modal__footer">
                 {% if hasConfirm or hasCancel %}
                     <button class="modal__btn{% if cancelButtonColor %} modal__btn-{{cancelButtonColor  }}{% endif %}" data-micromodal-close aria-label="Fermer la popup" data-micromodal-role="cancel">{{ cancelLabel }}</button>

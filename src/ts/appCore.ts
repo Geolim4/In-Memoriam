@@ -91,7 +91,7 @@ export abstract class AppCore extends AppAbstract {
         ).then((responseDataArray: Bloodbath[]): Bloodbath => {
             const responseData: Bloodbath = {
                 deaths: [],
-                settings: { aggregatable: true, download_enabled: true, list_enabled: true, stats_enabled: true, up_to_date: true },
+                settings: { aggregatable: true, download_enabled: true, list_enabled: true, search_messages: [], stats_enabled: true, up_to_date: true },
             };
             this.setUnaggregatableYears([]);
 
@@ -103,6 +103,9 @@ export abstract class AppCore extends AppAbstract {
                         if (typeof data.settings[prop] === 'boolean' && data.settings[prop] === false) {
                             responseData.settings[prop] = false;
                         }
+                    }
+                    if (typeof data.settings[prop] === 'object' && Array.isArray(data.settings[prop])) {
+                        responseData.settings[prop].push(...data.settings[prop]);
                     }
                 }
 
@@ -143,6 +146,17 @@ export abstract class AppCore extends AppAbstract {
             this.setStatsEnabled(responseData.settings.stats_enabled);
             this.setDownloadEnabled(responseData.settings.download_enabled);
             this.setListEnabled(responseData.settings.list_enabled);
+
+            if (filters.search.length) {
+                for (const message of responseData.settings.search_messages) {
+                    if (filters.search.match(new RegExp(message.regexp, 'gi'))) {
+                        this.getModal().modalInfo('Information', message.message, { isError: message.isError, markdownContent: true });
+                        this.getSnackbar().show("Aucun résultat trouvé, essayez avec d'autres critères de recherche.");
+                        this.printDefinitionsText(filteredResponse);
+                        return;
+                    }
+                }
+            }
 
             if (!filteredResponse.response.deaths || !filteredResponse.response.deaths.length) {
                 if (!filteredResponse.errored) {
@@ -848,9 +862,6 @@ export abstract class AppCore extends AppAbstract {
                 }, (document.activeElement.id === field.id || !hasResetButton) ? 0 : 150); // Allow to capture reset button clicks
             };
 
-            if (field.tagName === 'INPUT') {
-                eventTypes.push('paste');
-            }
             Events.addEventHandler(field, eventTypes, this.eventHandlers[field.id]);
         });
 

@@ -4,7 +4,14 @@
     "download_enabled": true,
     "list_enabled": true,
     "stats_enabled": true,
-    "up_to_date": true
+    "up_to_date": true,
+    "search_messages": [
+      {
+        "regexp": "(V[ée]mars|(?=.*\\bRoissy\\b)(?=.*\\bBGTA\\b).*)",
+        "message": "Ce suicide ne figure pas dans la base de données car son auteur s'est donné la mort après de multiples filicides.\nIn-Memoriam **n'a pas pour vocation** de rendre hommage à ce type de personne.",
+        "isError": true
+      }
+    ]
   },
   "deaths": [
     {
