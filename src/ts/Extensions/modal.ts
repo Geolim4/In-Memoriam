@@ -30,6 +30,7 @@ export class Modal {
         const cancelButtonColor = (typeof options === 'object' && options.cancelButtonColor) || '';
         const requiresExplicitCancel = (typeof options === 'object' && options.requiresExplicitCancel) || false;
         const nl2brContent = (typeof options === 'object' && options.nl2brContent) || false;
+        const markdownContent = (typeof options === 'object' && options.markdownContent) || false;
         const noStacking = (typeof options === 'object' && options.noStacking) || false;
         const escapeContent = (typeof options === 'object' && options.escapeContent) || false;
         const isError = (typeof options === 'object' && options.isError) || false;
@@ -81,6 +82,7 @@ export class Modal {
                         hasConfirm: !!confirmCallback,
                         isError,
                         isLarge,
+                        markdownContent,
                         nl2brContent,
                         okLabel,
                         title,

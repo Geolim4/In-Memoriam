@@ -7,6 +7,11 @@ export interface Bloodbath {
         list_enabled: boolean;
         stats_enabled: boolean;
         up_to_date: boolean;
+        search_messages: {
+            regexp: string;
+            message: string;
+            isError: boolean;
+        }[];
     };
     deaths: Death[];
 }

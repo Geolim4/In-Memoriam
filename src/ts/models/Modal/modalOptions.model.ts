@@ -5,6 +5,7 @@ export interface ModalOptions {
     cancelCallback?: VoidFunction;
     requiresExplicitCancel?: boolean;
     nl2brContent?: boolean;
+    markdownContent?: boolean;
     noStacking?: boolean;
     escapeContent?: boolean;
     isError?: boolean;
