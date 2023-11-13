@@ -3317,6 +3317,130 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "11",
+      "day": "09",
+      "keywords": "Clément Elard",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire de la FORFUSCO a trouvé la mort pendant un stage d'aguerrissement dans les montagnes de Hitiaa O Te Ra en Polynésie française.\nIl était âgé de 26 ans.",
+      "section": "FORFUSCO",
+      "location": "Hitiaa O Te Ra",
+      "image": {
+        "filename": "clement-elard.jpeg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Clément Elard",
+        "origin": "Ministère des Armées",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "987",
+      "origin": "domtom",
+      "gps": {
+        "accurate": false,
+        "radius": 5000,
+        "lat": -17.555249871826863,
+        "lng": -149.3820041642529
+      },
+      "homage": {
+        "title": "Ministère des Armées",
+        "url": "https://www.defense.gouv.fr/actualites/deces-du-quartier-maitre-1ere-classe-clement-elard-fusilier-marin-service-polynesie-francaise"
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/un-militaire-francais-decede-en-polynesie-lors-dun-exercice.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lefigaro.fr/faits-divers/un-soldat-francais-meurt-lors-d-un-exercice-en-polynesie-francaise-20231110",
+          "title": "Le Figaro",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.huffingtonpost.fr/france/article/un-militaire-de-la-marine-mort-pendant-son-service-en-polynesie-francaise-quatre-autres-helitreuilles_225578.html",
+          "title": "HuffPost",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.bfmtv.com/politique/gouvernement/un-militaire-francais-retrouve-mort-alors-qu-il-etait-en-service-en-polynesie-francaise_AN-202311100578.html",
+          "title": "BFMTV",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "11",
+      "day": "11",
+      "keywords": "Mathieu Gayot",
+      "house": "armee",
+      "peers": [],
+      "text": "Un militaire du 4e RHFS est décédé lors d'un exercice sur la base du quartier Guynemer à Uzein.\nIl était âgé de 30 ans et futur père de famille.",
+      "section": "4e RHFS",
+      "location": "Uzein",
+      "image": {
+        "filename": "mathieu-gayot.webp",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Mathieu Gayot",
+        "origin": "Ministère des Armées",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "64",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 500,
+        "lat": 43.35960526017191,
+        "lng": -0.4247715865541907
+      },
+      "homage": {
+        "title": "Ministère des Armées",
+        "url": "https://www.defense.gouv.fr/actualites/deces-du-capitaine-mathieu-gayot-du-4e-regiment-dhelicopteres-forces-speciales-lors-dun-exercice"
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/un-militaire-francais-decede-en-polynesie-lors-dun-exercice.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/un-militaire-de-30-ans-meurt-dans-un-accident-de-la-circulation-dans-les-pyrenees-atlantiques-12-11-2023-TCTGC2E2FJHPDL3JCZZ6WIE22Y.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/pyrenees-atlantiques/pau/un-militaire-des-forces-speciales-de-pau-est-mort-lors-d-un-exercice-2871614.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.bfmtv.com/societe/pyrenees-atlantiques-un-militaire-des-forces-speciales-decede-lors-d-un-exercice_AN-202311120273.html",
+          "title": "BFMTV",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }
