@@ -94,7 +94,7 @@
             <br><br>
             <strong>Date</strong>: {{ death.day }}/{{ death.month }}/{{ death.year }}
             <br><br>
-            <strong>Cause</strong>: {{ app.getFilterValueLabel('cause', death.cause) }}
+            <strong>Cause</strong>: {{ app.getFilterValueLabel('cause', death.cause) }} {% if death.origin != "interieur" %}<em>({{ app.getFilterValueLabel('origin', death.origin) }})</em>{% endif %}
             <br><br>
             {% if death.cause != 'suicide' %}
                 <strong>Hommage</strong>:
