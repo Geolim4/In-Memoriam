@@ -17,9 +17,11 @@
       "day": "31",
       "keywords": "",
       "house": "pn",
+      "houseLogo": null,
       "peers": [
         {
           "house": "gn",
+          "houseLogo": null,
           "count": 25,
           "section": "Ministère de l'intérieur"
         }

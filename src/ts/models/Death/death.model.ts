@@ -4,6 +4,7 @@ import { App } from '../../app';
 import { DeathPeer } from './deathPeer.model';
 import { DeathSource } from './deathSource.model';
 import { DeathGps } from './deathGps.model';
+import { DeathModelBase } from './deathModelBase';
 
 export enum DeathOrigin{
     DomTom = 'domtom',
@@ -34,14 +35,12 @@ export enum DeathHouse{
     Other = 'misc',
 }
 
-export class DeathModel {
+export class DeathModel extends DeathModelBase {
     public previousDeath?: this;
     public nextDeath?: this;
     public cause: DeathCause;
-    public count: number;
     public day: string;
     public gps: DeathGps;
-    public house: DeathHouse;
     public keywords: string;
     public location: string;
     public image?: Image;
@@ -49,9 +48,8 @@ export class DeathModel {
     public origin: DeathOrigin;
     public county: string;
     public orphans: number;
-    public peers: DeathPeer[];
+    public peers: DeathPeer[] = [];
     public published: boolean;
-    public section: string;
     public homage: TitleUrl;
     public sources: DeathSource[];
     public text: string;
@@ -60,6 +58,23 @@ export class DeathModel {
 }
 
 export class Death extends DeathModel {
+    protected causeName: string = '';
+
+    public constructor(deathModel: DeathModel) {
+        super();
+        Object.assign(this, deathModel);
+        for (const key in this.peers) {
+            this.peers[key] = new DeathPeer(this.peers[key]);
+        }
+    }
+
+    public getCauseName(): string {
+        if (!this.causeName) {
+            this.causeName = App.getInstance().getFilterValueLabel('cause', this.cause);
+        }
+        return this.causeName;
+    }
+
     public getMarkerHash(): string {
         return btoa(
             unescape(
@@ -68,11 +83,11 @@ export class Death extends DeathModel {
         );
     }
 
-    public getMarkerLink(label: string): string {
+    public getMarkerLink(label: string, icon: boolean|number = false): string {
         const deathCount = this.getTotalDeathCount();
         return `
 <a href="javascript:;" class="marker-link${deathCount > 1 ? ' text-danger' : ''}" data-controller="map-marker" data-death-hash="${this.getMarkerHash()}">
-    ${deathCount > 1 ? `<abbr data-tippy-content="${deathCount} décès"><i class="fa-solid fa-bolt"></i></abbr> ` : ''}${label}
+    ${icon ? this.getMarkerIcon(typeof icon === 'number' ? icon : 20) : ''} ${deathCount > 1 ? `<abbr data-tippy-content="${deathCount} décès"><i class="fa-solid fa-bolt"></i></abbr> ` : ''}${label}
 </a>`;
     }
 
