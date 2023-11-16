@@ -1,5 +1,5 @@
-/** SW auto-generated on 2023-11-13T12:49:28.655Z **/
-const CACHE_KEY = 'im-4.21.1+20231113T124928';
+/** SW auto-generated on 2023-11-16T00:27:57.717Z **/
+const CACHE_KEY = 'im-4.22.0+20231116T002757';
 const assets = [
   'assets/css/fonts/fa-solid-900.ttf',
   'assets/css/fonts/fa-solid-900.woff2',
@@ -15,12 +15,22 @@ const assets = [
   'assets/images/house/admpen.png',
   'assets/images/house/armee-m.png',
   'assets/images/house/armee.png',
+  'assets/images/house/bspp-m.png',
+  'assets/images/house/bspp.png',
+  'assets/images/house/cpa10-m.png',
+  'assets/images/house/cpa10.png',
+  'assets/images/house/crs-m.png',
+  'assets/images/house/crs.png',
   'assets/images/house/douane-m.png',
   'assets/images/house/douane.png',
   'assets/images/house/gn-m.png',
   'assets/images/house/gn.png',
   'assets/images/house/misc-m.png',
   'assets/images/house/misc.png',
+  'assets/images/house/mn-m.png',
+  'assets/images/house/mn.png',
+  'assets/images/house/pj-m.png',
+  'assets/images/house/pj.png',
   'assets/images/house/pm-m.png',
   'assets/images/house/pm.png',
   'assets/images/house/pn-m.png',
