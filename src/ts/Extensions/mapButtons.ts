@@ -494,7 +494,7 @@ export class MapButtons {
                             for (const marker of markers) {
                                 csvData.push(csvDataBuilder(marker.death));
                                 for (const peer of marker.death.peers) {
-                                    if (peer.count > 0) {
+                                    if (peer.count > 0 && !peer.hidden) {
                                         csvData.push(csvDataBuilder(marker.death, peer));
                                     }
                                 }

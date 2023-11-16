@@ -1,15 +1,10 @@
-{% set houseName = app.getFilterValueLabel('house', death.house) %}
 <div class="death-container{% if death.getTotalDeathCount() >= 2 %} multiple-deaths{% endif %} px-3 py-2">
     <div class="row no-gutters">
         <h5 class="col-10 col-sm-auto">
-            <img src="{{ config.imagePath.house|replace({"%house%": death.count >= 2 ? death.house ~ '-m' : death.house}) }}"
-                 alt="Corps: {{ houseName }}"
-                 title="Corps: {{ houseName }}"
-                 class="d-none d-sm-inline-block"
-                 height="24" />
+            {{ death.getMarkerIcon(24) }}
             {% if death.section %}{{ death.section|acronymise }} - {% endif %}
             {% if death.count > 1 %}<strong style="color: red;">{{ death.count }} décès</strong> - {% endif %}
-            {{ houseName }}
+            {{ death.getHouseName() }}
         </h5>
         <div class="col-2 col-sm-auto pl-2">
             <div class="dropdown show">
@@ -56,26 +51,19 @@
     </div>
     {% for peer in death.peers %}
         {% if not peer.hidden %}
-            {% set peerHouseName = app.getFilterValueLabel('house', peer.house) %}
             {% if peer.count > 0 %}
                 <h5>
-                    <img src="{{ config.imagePath.house|replace({"%house%": peer.count >= 2 ? peer.house ~ '-m' : peer.house}) }}"
-                         alt="Corps: {{ peerHouseName }}"
-                         title="Corps: {{ peerHouseName }}"
-                         height="20" />
+                    {{ peer.getMarkerIcon(20) }}
                     {% if peer.section %}{{ peer.section|acronymise }} - {% endif %}
                     {% if peer.count > 1 %}<strong style="color: red;">{{ peer.count }} décès</strong> - {% endif %}
-                    {{ peerHouseName }}
+                    {{ peer.getHouseName() }}
                     {% if peer.count == 0 %}<em>(affiliation statutaire)</em>{% endif %}
                 </h5>
             {% else %}
                 <p>
-                    <img src="{{ config.imagePath.house|replace({"%house%": peer.house}) }}"
-                         alt="House: {{ peerHouseName }}"
-                         title="House: {{ peerHouseName }}"
-                         height="20" />
+                    {{ peer.getMarkerIcon(20) }}
                     {% if peer.section %}{{ peer.section|acronymise }} - {% endif %}
-                    {{ peerHouseName }}
+                    {{ peer.getHouseName() }}
                     <em>(affiliation statutaire)</em>
                 </p>
             {% endif %}
@@ -156,29 +144,17 @@
         <hr />
         <div class="clearfix mt-1">
             {% if death.previousDeath %}
-                {% set houseName = app.getFilterValueLabel('house', death.previousDeath.house) %}
                 <div class="float-left text-left">
                     <i class="fa-solid fa-angles-left fa-lg"></i>
                     <span>
-                        {{ death.previousDeath.getMarkerLink(death.previousDeath.getShortLabel()|acronymise) }}
-                        <img src="{{ config.imagePath.house|replace({"%house%": death.previousDeath.house}) }}"
-                             alt="Corps: {{ houseName }}"
-                             title="Corps: {{ houseName }}"
-                             class="d-none d-sm-inline-block"
-                             height="14" />
+                        {{ death.previousDeath.getMarkerLink(death.previousDeath.getShortLabel()|acronymise, 14) }}
                     </span>
                 </div>
             {% endif %}
             {% if death.nextDeath %}
-                {% set houseName = app.getFilterValueLabel('house', death.nextDeath.house) %}
                 <div class="float-right text-right">
                     <span>
-                        <img src="{{ config.imagePath.house|replace({"%house%": death.nextDeath.house}) }}"
-                             alt="Corps: {{ houseName }}"
-                             title="Corps: {{ houseName }}"
-                             class="d-none d-sm-inline-block"
-                             height="14" />
-                        {{ death.nextDeath.getMarkerLink(death.nextDeath.getShortLabel()|acronymise) }}
+                        {{ death.nextDeath.getMarkerLink(death.nextDeath.getShortLabel()|acronymise, 14) }}
                     </span>
                     <i class="fa-solid  fa-angles-right fa-lg"></i>
                 </div>

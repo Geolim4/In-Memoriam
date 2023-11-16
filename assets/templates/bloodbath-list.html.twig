@@ -22,8 +22,10 @@
         {% set deathLabel = (marker.death.section ? (marker.death.section|acronymise) ~ ', ' : '') ~ marker.death.location ~ app.getCountyByCode(marker.death.county, { wrappedCounty: true }) %}
         <p>
             <strong>{{ marker.death.day }}/{{ marker.death.month }}/{{ marker.death.year }} -
-                [{{ app.getFilterValueLabel('cause', marker.death.cause) }}] {{ app.getFilterValueLabel('house', marker.death.house) }}:</strong>
-            <span>{{ marker.death.getMarkerLink(deathLabel) }}</span>
+                [{{ marker.death.getCauseName() }}] {{ marker.death.getHouseName() }}:</strong>
+            <span>
+                {{ marker.death.getMarkerLink(deathLabel, true) }}
+            </span>
         </p>
     {% endfor %}
 </div>

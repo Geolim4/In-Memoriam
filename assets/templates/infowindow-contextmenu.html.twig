@@ -4,7 +4,7 @@
        data-controller="map-marker"
        data-death-hash="{{ death.getMarkerHash() }}"
        data-auto-zoom="false">
-        <img src="{{ config.imagePath.house|replace({"%house%": death.count >= 2 ? death.house ~ '-m' : death.house}) }}"
+        <img src="{{ config.imagePath.house|replace({"%house%": death.getLogoName()}) }}"
              alt="Corps: {{ houseName }}"
              title="Corps: {{ houseName }}"
              class="d-none d-sm-inline-block"
@@ -33,7 +33,7 @@
     <a href="javascript:;"
        class="dropdown-item"
        data-controller="copy-text"
-       data-content-text="{{ death.day }}/{{ death.month }}/{{ death.year }} {{ death.section}} - {{ app.getFilterValueLabel('house', death.house) }} ({{ app.getFilterValueLabel('cause', death.cause) }}): {{ death.text }}">
+       data-content-text="{{ death.day }}/{{ death.month }}/{{ death.year }} {{ death.section}} - {{ death.getHouseName() }} ({{ death.getCauseName() }}): {{ death.text }}">
         <i class="fa-solid fa-copy d-none d-sm-inline-block"></i> Copier le texte (simplifié)
     </a>
     <div class="dropdown-divider"></div>

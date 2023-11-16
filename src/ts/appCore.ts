@@ -110,7 +110,7 @@ export abstract class AppCore extends AppAbstract {
                 }
 
                 if (data.settings.aggregatable || filterYears.length < 2) {
-                    responseData.deaths.push(...data.deaths.map((deathModel: DeathModel): Death => Object.assign(new Death(), deathModel)));
+                    responseData.deaths.push(...data.deaths.map((deathModel: DeathModel): Death => new Death(deathModel)));
                 } else {
                     this.addUnaggregatableYears(year);
                 }
@@ -120,7 +120,7 @@ export abstract class AppCore extends AppAbstract {
                 const unaggregatableYears = [...this.getUnaggregatableYears()];
                 unaggregatableYears.shift();
                 this.setUnaggregatableYears(unaggregatableYears);
-                responseData.deaths.push(...responseDataArray[0].deaths.map((deathModel: DeathModel): Death => Object.assign(new Death(), deathModel)));
+                responseData.deaths.push(...responseDataArray[0].deaths.map((deathModel: DeathModel): Death => new Death(deathModel)));
             }
 
             const snackbarMessage = `Les données de la période ${StringUtilsHelper.formatArrayOfStringForReading(this.getUnaggregatableYears())} ont été ignorées car elle ne peuvent pas être aggrégées avec d'autres années !`;
@@ -181,7 +181,7 @@ export abstract class AppCore extends AppAbstract {
                 const totalDeathCount = death.getTotalDeathCount();
                 const marker = new google.maps.Marker({
                     animation: google.maps.Animation.DROP,
-                    icon: this.getConfigFactory().config.imagePath.house.replace('%house%', (totalDeathCount > 1 ? `${death.house}-m` : death.house)),
+                    icon: this.getConfigFactory().config.imagePath.house.replace('%house%', death.getLogoName()),
                     map: this.map,
                     opacity: 1,
                     position: new google.maps.LatLng(death.gps.lat, death.gps.lng),
@@ -701,7 +701,7 @@ export abstract class AppCore extends AppAbstract {
             deathsRemovedBySearch.filter((death): boolean => (!deathsRemovedByFilters.includes(death))).forEach((death): void => (
                 this.pushSuggestionFromDeath(death)
             ));
-            filteredResponse.response.deaths = this.mapDeathPrecedence(this.orderDeathsByDate(filteredResponse.response.deaths)).map((death: Death): Death => Object.freeze(death));
+            filteredResponse.response.deaths = this.mapDeathPrecedence(this.orderDeathsByDate(filteredResponse.response.deaths));
         } catch (e) {
             if (e instanceof EvaluationError && this.isSearchByExpressionEnabled()) {
                 if (this.isSearchByExpressionEnabled()) {
@@ -1148,8 +1148,7 @@ export abstract class AppCore extends AppAbstract {
             if (latestDeath) {
                 const latestDeathLabel = ` ${latestDeath.day}/${latestDeath.month}/${latestDeath.year} - ${this.getFilterValueLabel('house', latestDeath.house)} - ${latestDeath.location}
                 ${latestDeath.section ? ` - ${StringUtilsHelper.replaceAcronyms(latestDeath.section, this.getConfigFactory().glossary)}` : ''}`;
-                const latestDeathLink = latestDeath.getMarkerLink(latestDeathLabel);
-                definitionTexts.push(`<em>Dernier décès indexé:</em> ${latestDeathLink}`);
+                definitionTexts.push(`<em>Dernier décès indexé:</em> ${latestDeath.getMarkerLink(latestDeathLabel, true)}`);
             }
 
             if (!response.settings.up_to_date) {
