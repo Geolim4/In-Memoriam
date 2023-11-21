@@ -3086,7 +3086,7 @@
       "house": "gn",
       "houseLogo": null,
       "peers": [],
-      "text": "Un jeune gendarme affecté à la brigade de Mesnils-sur-Iton a mit fin à ses jours avec son arme administrative.",
+      "text": "Une jeune gendarme affecté à la brigade de Mesnils-sur-Iton a mit fin à ses jours avec son arme administrative.",
       "section": "BP Mesnils-sur-Iton",
       "location": "Mesnils-sur-Iton",
       "image": {
@@ -3506,6 +3506,65 @@
         {
           "url": "https://www.bfmtv.com/societe/pyrenees-atlantiques-un-militaire-des-forces-speciales-decede-lors-d-un-exercice_AN-202311120273.html",
           "title": "BFMTV",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "11",
+      "day": "13",
+      "keywords": "Philippe Jacquot",
+      "house": "gn",
+      "houseLogo": null,
+      "peers": [],
+      "text": "Un gendarme mobile de l'EGM 31/7 de Reims a mit fin à ses jours avec son arme administrative lors de son déplacement à la caserne Rose à Dugny (Seine-Saint-Denis).\nÂgé de 50 ans il était marié et père de deux enfants.",
+      "section": "EGM 31/7",
+      "location": "Dugny",
+      "image": null,
+      "county": "93",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.95297233800875,
+        "lng": 2.4185085647256694
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/dugny-un-gendarme-se-suicide-durant-la-nuit-a-la-caserne-de-rose.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/un-gendarme-mobile-met-fin-a-ses-jours-en-seine-saint-denis",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/dugny_93030/suicide-d-un-gendarme-a-la-caserne-de-dugny_60332237.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lunion.fr/id540137/article/2023-11-16/un-militaire-de-la-gendarmerie-mobile-de-reims-mis-fin-ses-jours-il-aurait",
+          "title": "L'Union",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "",
+          "title": "Fondation MG",
           "paywall": false,
           "trustful": true
         }
