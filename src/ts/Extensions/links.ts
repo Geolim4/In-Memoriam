@@ -8,8 +8,16 @@ import { ModalContentTemplate } from './modalContentTemplate';
  * @licence GPL-2.0
  */
 export class Links {
-    public static handleHtmlAnchorElement(link: HTMLAnchorElement, e: Event): void {
+    public static handleHtmlAnchorElement(link: HTMLAnchorElement, e: MouseEvent): void {
         if (link.dataset.controller) {
+            // Handle specific middle clicks
+            if (e.type === 'auxclick' && e.button === 1) {
+                e.preventDefault();
+                if (link.dataset.controller === 'map-marker') {
+                    this.handleMapMarkerLink(link, true);
+                    return;
+                }
+            }
             switch (link.dataset.controller) {
                 case 'map-marker':
                     this.handleMapMarkerLink(link);
@@ -45,7 +53,7 @@ export class Links {
         }
     }
 
-    protected static handleMapMarkerLink(link: HTMLAnchorElement): void {
+    protected static handleMapMarkerLink(link: HTMLAnchorElement, newTab: boolean = false): void {
         const app = App.getInstance();
         const map = app.getMap();
         const { deathHash } = link.dataset; // decodeURIComponent(escape(atob(origin.dataset.deathHash)));
@@ -55,15 +63,20 @@ export class Links {
 
         if (markers[markerHashIndex[deathHash]]) {
             const marker = markers[markerHashIndex[deathHash]];
-            app.getModal().closeModalInfo();
-            if (autoZoom === undefined || autoZoom === 'true') {
-                map.setZoom(app.getConfigFactory().config.googleMapsOptions.maxZoom);
-            }
-            google.maps.event.trigger(marker, 'click');
-            map.setCenter(marker.getPosition());
+            if (newTab) {
+                window.open(marker.death.getDeathMarkerLink(), '_blank');
+                app.getSnackbar().show('Le marqueur a été ouvert dans un nouvel onglet.');
+            } else {
+                app.getModal().closeModalInfo();
+                if (autoZoom === undefined || autoZoom === 'true') {
+                    map.setZoom(app.getConfigFactory().config.googleMapsOptions.maxZoom);
+                }
+                google.maps.event.trigger(marker, 'click');
+                map.setCenter(marker.getPosition());
 
-            if (map.getDiv().getBoundingClientRect().top < 0 || map.getDiv().getBoundingClientRect().bottom > window.innerHeight) {
-                map.getDiv().scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+                if (map.getDiv().getBoundingClientRect().top < 0 || map.getDiv().getBoundingClientRect().bottom > window.innerHeight) {
+                    map.getDiv().scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+                }
             }
         } else {
             app.getModal().modalInfo('Erreur', 'Hash inconnu, impossible de charger le marqueur.', { isError: true });

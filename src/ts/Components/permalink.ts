@@ -11,7 +11,7 @@ import { Events } from './events';
  */
 export class Permalink {
     public constructor() {
-        Events.addEventHandler(document, ['filters-built'], (evt: CustomEvent): void => {
+        Events.addEventHandler(document, ['app-loaded', 'filters-built'], (evt: CustomEvent): void => {
             this.build(evt.detail.filters);
         });
     }
@@ -29,10 +29,12 @@ export class Permalink {
             }
         }
 
-        if (App.getInstance().getConfigFactory().userConfig.browserHistoryReplaceState === 'on') {
-            window.history.replaceState(null, null, url.toString() + anchor);
-        } else if (window.location.hash) {
-            window.history.replaceState(null, null, url.toString());
+        if (App.getInstance().isAppLoaded()) {
+            if (App.getInstance().getConfigFactory().userConfig.browserHistoryReplaceState === 'on') {
+                window.history.replaceState(null, null, url.toString() + anchor);
+            } else if (window.location.hash) {
+                window.history.replaceState(null, null, url.toString());
+            }
         }
 
         if (url.searchParams.has('pwa')) {
