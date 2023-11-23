@@ -898,12 +898,14 @@ export abstract class AppCore extends AppAbstract {
     }
 
     private bindInternalLinksEvent(): void {
-        document.addEventListener('click', (e): void => {
-            const target = e.target as HTMLAnchorElement;
-            const link = target.closest('a[data-controller], a[href*="#fwd2:"]') as HTMLAnchorElement;
-            if (link) {
-                Links.handleHtmlAnchorElement(link, e);
-            }
+        ['click', 'auxclick'].forEach((eventName: string): void => {
+            document.addEventListener(eventName, (e: MouseEvent): void => {
+                const target = e.target as HTMLAnchorElement;
+                const link = target.closest('a[data-controller], a[href*="#fwd2:"]') as HTMLAnchorElement;
+                if (link) {
+                    Links.handleHtmlAnchorElement(link, e);
+                }
+            });
         });
     }
 
