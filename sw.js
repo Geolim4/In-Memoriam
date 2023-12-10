@@ -1,5 +1,5 @@
-/** SW auto-generated on 2023-11-23T03:21:05.578Z **/
-const CACHE_KEY = 'im-4.23.0+20231123T032105';
+/** SW auto-generated on 2023-12-10T20:45:09.094Z **/
+const CACHE_KEY = 'im-4.24.0+20231210T204509';
 const assets = [
   'assets/css/fonts/fa-solid-900.ttf',
   'assets/css/fonts/fa-solid-900.woff2',
@@ -15,6 +15,8 @@ const assets = [
   'assets/images/house/admpen.png',
   'assets/images/house/armee-m.png',
   'assets/images/house/armee.png',
+  'assets/images/house/bmpm-m.png',
+  'assets/images/house/bmpm.png',
   'assets/images/house/bspp-m.png',
   'assets/images/house/bspp.png',
   'assets/images/house/cpa10-m.png',
