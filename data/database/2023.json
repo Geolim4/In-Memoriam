@@ -3569,6 +3569,116 @@
           "trustful": true
         }
       ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "11",
+      "day": "13",
+      "keywords": "Hervé Servius",
+      "house": "armee",
+      "houseLogo": null,
+      "peers": [],
+      "text": "Un militaire du 35e RAP est décédé des suites de ses blessures survenue lors d'un accident pendant un entraînement opérationnel après plus d'un an d'hospitalisation.\nIl était pacsé et père d'un enfant.",
+      "section": "35e RAP",
+      "location": "Tarbes",
+      "image": {
+        "filename": "herve-servius.jpeg ",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "Hervé Servius",
+        "origin": "Ministère des Armées",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "65",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.22193586527459,
+        "lng": 0.06862245726127676
+      },
+      "homage": {
+        "title": "Ministère des Armées",
+        "url": "https://twitter.com/armeedeterre/status/1730890962753233103"
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/dugny-un-gendarme-se-suicide-durant-la-nuit-a-la-caserne-de-rose.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/actualites/2023/deces-d-un-militaire-a-la-suite-d-un-accident-lors-d-un-entrainement-de-preparation-operationnelle",
+          "title": "GendInfo",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.midilibre.fr/2023/12/02/mort-dun-militaire-francais-herve-servius-est-decede-des-suites-dun-accident-survenu-lors-dun-entrainement-operationnel-11616649.php",
+          "title": "Midi Libre",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.sudouest.fr/faits-divers/un-soldat-francais-meurt-apres-un-accident-lors-d-un-entrainement-17675660.php",
+          "title": "Sud Ouest",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.huffingtonpost.fr/france/article/mort-du-soldat-herve-servius-apres-un-accident-survenu-en-entrainement-annonce-sebastien-lecornu_226529.html",
+          "title": "HuffPost",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lejdd.fr/societe/tarbes-deces-dun-militaire-victime-dun-accident-lors-dun-entrainement-operationnel-140075",
+          "title": "Le JDD",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "11",
+      "day": "13",
+      "keywords": "",
+      "house": "pn",
+      "houseLogo": null,
+      "peers": [],
+      "text": "Un policier du commissariat de Montluçon a mit fin à ses jours et a été retrouvé aux abords des bois de la commune de Domérat.\nIl était pacsé et père d'un enfant.",
+      "section": "CSP Montluçon",
+      "location": "Montluçon",
+      "image": null,
+      "county": "03",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 43.22193586527459,
+        "lng": 0.06862245726127676
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/allier-un-policier-affecte-au-commissariat-de-montlucon-sest-suicide.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
     }
   ]
 }

@@ -11,12 +11,14 @@ export class Links {
     public static handleHtmlAnchorElement(link: HTMLAnchorElement, e: MouseEvent): void {
         if (link.dataset.controller) {
             // Handle specific middle clicks
-            if (e.type === 'auxclick' && e.button === 1) {
-                e.preventDefault();
-                if (link.dataset.controller === 'map-marker') {
-                    this.handleMapMarkerLink(link, true);
-                    return;
+            if (e.type === 'auxclick') {
+                if (e.button === 1) {
+                    if (link.dataset.controller === 'map-marker') {
+                        this.handleMapMarkerLink(link, true);
+                    }
                 }
+                e.preventDefault();
+                return;
             }
             switch (link.dataset.controller) {
                 case 'map-marker':
