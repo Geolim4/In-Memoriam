@@ -1243,7 +1243,7 @@
       "house": "gn",
       "houseLogo": null,
       "peers": [],
-      "text": "Une jeune gendarme de la brigade de proximité de Saint-Amand-Montrond a mit fin à ses jours avec son arme administrative..\nElle était âgé de 25 ans et était engagé depuis quelques mois.",
+      "text": "Une jeune gendarme de la brigade de proximité de Saint-Amand-Montrond a mit fin à ses jours avec son arme administrative.\nElle était âgé de 25 ans et était engagé depuis quelques mois.",
       "section": "BP Saint-Amand-Montrond",
       "location": "Saint-Amand-Montrond",
       "image": {
@@ -3674,6 +3674,188 @@
       "sources": [
         {
           "url": "https://actu17.fr/faits-divers/allier-un-policier-affecte-au-commissariat-de-montlucon-sest-suicide.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "malaise",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "12",
+      "day": "07",
+      "keywords": "Sébastien Liotard",
+      "house": "gn",
+      "houseLogo": null,
+      "peers": [],
+      "text": "Un gendarme de la BP de Saint-Germain-l’Herm est décédé des suites d'un malaise cardiaque pendant son service.\nIl était divorcé et père d'un enfant.",
+      "section": "BP Saint-Germain-l’Herm",
+      "location": "Saint-Germain-l’Herm",
+      "image": null,
+      "county": "63",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.46105185235709,
+        "lng": 3.544547431295207
+      },
+      "homage": {
+        "title": "Gendarmerie Nationale",
+        "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/actualites/2023/deces-d-un-adjudant-de-la-communaute-de-brigades-de-saint-germain-l-herm-dans-l-exercice-de-ses-fonctions"
+      },
+      "sources": [
+        {
+          "url": "https://lavoixdugendarme.fr/deces-en-service-dun-malaise-de-ladjudant-sebastien-liotard-de-saint-germain-lherm-puy-de-dome/",
+          "title": "La Voix du Gendarme",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/puy-de-dome-un-gendarme-decede-en-service-apres-un-malaise-cardiaque",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "malaise",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "12",
+      "day": "10",
+      "keywords": "Franck Fontaine",
+      "house": "gn",
+      "houseLogo": null,
+      "peers": [],
+      "text": "Un gendarme du Groupe de Sécurité de l'Ambassade de France au Nigeria est décédé des suites d'un malaise cardiaque pendant son service.\nIl était marié et père de deux enfants.",
+      "section": "GSD CGOM/CGMEX",
+      "location": "Abuja",
+      "image": null,
+      "county": "NG",
+      "origin": "opex",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 9.044684893300353,
+        "lng": 7.45931721111428
+      },
+      "homage": {
+        "title": "Gendarmerie Nationale",
+        "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/actualites/2023/deces-d-un-adjudant-chef-chef-de-groupe-de-securite-a-l-ambassade-de-france-d-abuja-nigeria-dans-l-exercice-de-ses-fonctions"
+      },
+      "sources": [
+        {
+          "url": "https://www.leparisien.fr/international/nigeria-un-gendarme-meurt-dans-lexercice-de-ses-fonctions-a-lambassade-de-france-18-12-2023-OOI6ZHJDQRHLHGBQY23LOVZW5M.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/un-gendarme-francais-decede-en-service-a-l-ambassade-de-france-au-nigeria",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://twitter.com/PorteparoleGN/status/1736798394432045175",
+          "title": "@PorteparoleGN",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "12",
+      "day": "16",
+      "keywords": "IDF",
+      "house": "gn",
+      "houseLogo": null,
+      "peers": [],
+      "text": "Un jeune gendarme du GBGM de Versailles-Satory a mit fin à ses jours avec son arme administrative.",
+      "section": "GBGM",
+      "location": "Versailles-Satory",
+      "image": null,
+      "county": "78",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 400,
+        "lat": 48.783983396095536,
+        "lng": 2.1134179857619757
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/versailles-un-gendarme-de-26-ans-se-donne-la-mort-a-son-domicile.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/un-jeune-gendarme-des-yvelines-met-fin-a-ses-jours-12-2023",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/yvelines-un-gendarme-de-26-ans-s-est-suicide-3211445",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/versailles_78646/versailles-un-gendarme-se-suicide-avec-son-arme-de-service-2_60475163.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "12",
+      "day": "29",
+      "keywords": "IDF, Yves",
+      "house": "pn",
+      "houseLogo": null,
+      "peers": [],
+      "text": "Un policier de la Brigade de Délégation des Enquêtes de Proximité du 12e arrondissement de Paris à ses jours avec son arme administrative à Lyon.",
+      "section": "BDEP",
+      "location": "Paris 12e",
+      "image": null,
+      "county": "75",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.83492154544671,
+        "lng": 2.387152566871461
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/lyon-un-policier-affecte-a-paris-sest-suicide-par-arme-a-feu.html",
           "title": "Actu17",
           "paywall": false,
           "trustful": true
