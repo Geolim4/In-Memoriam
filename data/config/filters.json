@@ -2,6 +2,13 @@
   "filters": {
     "year": [
       {
+        "value": "2025",
+        "label": "2025",
+        "color": "",
+        "group": "Années détaillées",
+        "setup": "expr:(new Date().getFullYear() >= filter.value)"
+      },
+      {
         "value": "2024",
         "label": "2024",
         "color": "",

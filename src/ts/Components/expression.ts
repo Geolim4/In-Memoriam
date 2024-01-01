@@ -22,9 +22,7 @@ export class Expression {
     protected static sandboxRun(expression: string, context: object, sandboxName: string): any {
         let iframe = document.getElementById(sandboxName) as HTMLIFrameElement;
 
-        /**
-     * If the sandbox does not exist, create it
-     */
+        // If the sandbox does not exist, create it
         if (iframe === null) {
             if (App.getInstance().getConfigFactory().isDebugEnabled()) {
                 console.log(`Expression sandbox "${sandboxName}" does not exist and will be created.`);
@@ -55,16 +53,13 @@ export class Expression {
             win[key] = context[key];
         });
 
-        let result;
+        let result: any;
         try {
             result = wEval.call(win, expression);
         } catch (e) {
             throw new EvaluationError(e.message, expression);
         } finally {
-            /**
-       * Clear the vars once
-       * the sandbox has run
-       */
+            // Clear the vars once the sandbox ran
             Object.keys(context).forEach((key):void => {
                 delete win[key];
             });

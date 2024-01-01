@@ -123,6 +123,6 @@ export class Death extends DeathModel {
             return `${this.day}/${this.month}/${this.year} ${this.section}`;
         }
 
-        return `${this.day}/${this.month}/${this.year} ${this.section}, ${this.location}`;
+        return `${this.day}/${this.month}/${this.year} ${this.section ? this.section : this.getHouseName()}, ${this.location}`;
     }
 }
