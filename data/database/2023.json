@@ -7,7 +7,7 @@
     "up_to_date": true,
     "search_messages": [
       {
-        "regexp": "(V[ée]mars|(?=.*\\bRoissy\\b)(?=.*\\bBGTA\\b).*)",
+        "regexp": "(V[ée]mars|(?=.*\\bRoissy\\b)(?=.*\\bBG?TA\\b).*)",
         "message": "Ce suicide ne figure pas dans la base de données car son auteur s'est donné la mort après de multiples filicides.\nIn-Memoriam **n'a pas pour vocation** de rendre hommage à ce type de personne.",
         "isError": true
       }
@@ -1993,7 +1993,7 @@
       "houseLogo": null,
       "peers": [],
       "text": "Un policier municipal de la ville de Écouflant a mit fin à ses jours avec son arme administrative au sein-même de l'école.\n**Peu de sources disponibles sur ce décès**.",
-      "section": "Poste de Police",
+      "section": "",
       "location": "Écouflant",
       "image": null,
       "county": "49",
@@ -3011,6 +3011,53 @@
       ]
     },
     {
+      "cause": "malaise",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "09",
+      "day": "12",
+      "keywords": "",
+      "house": "pm",
+      "houseLogo": "",
+      "peers": [],
+      "text": "Un policier municipal de Saumur est décédé des suites d'un malaise cardiaque pendant une patrouille en centre-ville.",
+      "section": "",
+      "location": "Saumur",
+      "image": null,
+      "county": "49",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 47.25869114884885,
+        "lng": -0.07306500284508621
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://usppm.fr/actualites/drame-a-saumur-un-policier-municipal-de-38-ans-decede-lors-dune-patrouille/",
+          "title": "USPPM",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ouest-france.fr/societe/faits-divers/un-policier-municipal-decede-dun-malaise-cardiaque-lors-dune-patrouille-0ed9d65c-5167-11ee-bd2b-11d6ecd273da",
+          "title": "Ouest France",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://my-angers.info/09/13/un-policier-municipal-decede-lors-de-son-service-a-saumur/137795",
+          "title": "Angers Info",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
       "cause": "deathOnDuty",
       "count": 1,
       "published": true,
@@ -3836,11 +3883,70 @@
       "year": "2023",
       "month": "12",
       "day": "29",
+      "keywords": "",
+      "house": "pm",
+      "houseLogo": null,
+      "peers": [],
+      "text": "Un policier municipal de Carpentras a mit fin à ses jours avec un fusil de chasse près de son domicile au col de Notre-Dame des Abeilles.",
+      "section": "",
+      "location": "Carpentras",
+      "image": null,
+      "county": "84",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 44.05645944180264,
+        "lng": 5.05161900971366
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/carpentras-un-policier-municipal-de-43-ans-sest-suicide-avec-un-fusil-de-chasse.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/provence-alpes-cote-d-azur/vaucluse/un-policier-municipal-de-43-ans-s-est-suicide-avec-son-fusil-de-chasse-2894663.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-policier-de-carpentras-se-donne-la-mort-une-cellule-psychologique-ouverte-en-mairie-1924030",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.ledauphine.com/faits-divers-justice/2023/12/21/un-policier-municipal-de-carpentras-se-suicide-avec-un-fusil-de-chasse",
+          "title": "Le Dauphiné",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/faits_divers/4067949-20231222-carpentras-policier-municipal-met-fin-jours-cellule-psychologique-mise-place",
+          "title": "20 Minutes",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "12",
+      "day": "29",
       "keywords": "IDF, Yves",
       "house": "pn",
       "houseLogo": null,
       "peers": [],
-      "text": "Un policier de la Brigade de Délégation des Enquêtes de Proximité du 12e arrondissement de Paris à ses jours avec son arme administrative à Lyon.",
+      "text": "Un policier de la Brigade de Délégation des Enquêtes de Proximité du 12e arrondissement de Paris a mit fin à ses jours avec son arme administrative à Lyon.",
       "section": "BDEP",
       "location": "Paris 12e",
       "image": null,
