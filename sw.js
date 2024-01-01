@@ -1,5 +1,5 @@
-/** SW auto-generated on 2024-01-01T20:11:48.764Z **/
-const CACHE_KEY = 'im-4.24.1+20240101T201148';
+/** SW auto-generated on 2024-01-01T20:16:02.745Z **/
+const CACHE_KEY = 'im-4.24.2+20240101T201602';
 const assets = [
   'assets/css/fonts/fa-solid-900.ttf',
   'assets/css/fonts/fa-solid-900.woff2',
@@ -73,6 +73,7 @@ const assets = [
   'assets/json/database/2022.min.json',
   'assets/json/database/2023.min.json',
   'assets/json/database/2024.min.json',
+  'assets/json/database/2025.min.json',
   'assets/templates/advanced-search-link.html.twig',
   'assets/templates/associations.html.twig',
   'assets/templates/bloodbath-chart.html.twig',
