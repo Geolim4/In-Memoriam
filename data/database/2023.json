@@ -10,6 +10,16 @@
         "regexp": "(V[ée]mars|(?=.*\\bRoissy\\b)(?=.*\\bBG?TA\\b).*)",
         "message": "Ce suicide ne figure pas dans la base de données car son auteur s'est donné la mort après de multiples filicides.\nIn-Memoriam **n'a pas pour vocation** de rendre hommage à ce type de personne.",
         "isError": true
+      },
+      {
+        "regexp": "(Gange?s|Viols?( |-)le( |-)Fort)",
+        "message": "Ce suicide ne figure pas dans la base de données car son auteur s'est donné la mort après avoir abattu un pompier.\nIn-Memoriam **n'a pas pour vocation** de rendre hommage à ce type de personne.",
+        "isError": true
+      },
+      {
+        "regexp": "(Tagolsheim|Sundgau)",
+        "message": "Ce suicide ne figure pas dans la base de données car son auteur s'est donné la mort après avoir abattu un autre gendarme.\nIn-Memoriam **n'a pas pour vocation** de rendre hommage à ce type de personne.",
+        "isError": true
       }
     ]
   },
@@ -174,7 +184,7 @@
       "year": "2023",
       "month": "01",
       "day": "20",
-      "keywords": "Olivier",
+      "keywords": "Olivier Durant",
       "house": "pn",
       "houseLogo": "crs",
       "peers": [],
@@ -428,7 +438,7 @@
       "houseLogo": "crs",
       "peers": [],
       "text": "Un policier de la CRS autoroutière Nord de Paris a mit fin à ses jours avec son arme administrative.",
-      "section": "CRS Autoroute Nord",
+      "section": "CRS 7 (Autoroute Nord)",
       "location": "Deuil-la-Barre",
       "image": null,
       "county": "95",
@@ -1362,7 +1372,7 @@
       "year": "2023",
       "month": "05",
       "day": "11",
-      "keywords": "",
+      "keywords": "JEAN-CLAUDE MANFREDI",
       "house": "pn",
       "houseLogo": "crs",
       "peers": [],
@@ -1817,7 +1827,7 @@
       "year": "2023",
       "month": "06",
       "day": "20",
-      "keywords": "",
+      "keywords": "Michel",
       "house": "pn",
       "houseLogo": null,
       "peers": [],
@@ -2336,7 +2346,7 @@
       "year": "2023",
       "month": "07",
       "day": "30",
-      "keywords": "",
+      "keywords": "FABRICE PIERRET",
       "house": "pn",
       "houseLogo": null,
       "peers": [],
@@ -2482,6 +2492,50 @@
       ]
     },
     {
+      "cause": "malaise",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "08",
+      "day": "08",
+      "keywords": "RICHARD CHRETIEN, IDF",
+      "house": "gn",
+      "houseLogo": null,
+      "peers": [],
+      "text": "Un gendarme de l'antenne vétérinaire de la Garde Républicaine est décédé des suites d'un malaise cardiaque pendant son service.\nIl était marié et père de deux enfants.",
+      "section": "Antenne Vétérinaire - GR",
+      "location": "Paris 4e",
+      "image": null,
+      "county": "75",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.851402770373205,
+        "lng": 2.36394446639391
+      },
+      "homage": {
+        "title": "Gendarmerie Nationale",
+        "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/actualites/2023/deces-d-un-gendarme-du-regiment-de-cavalerie-de-la-garde-republicaine-dans-l-exercice-de-ses-fonctions"
+      },
+      "sources": [
+        {
+          "url": "https://lavoixdugendarme.fr/une-cagnotte-pour-un-garde-republicain-decede-en-service/",
+          "title": "La Voix du Gendarme",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/un-communique-de-la-gendarmerie-nationale-nous-apprend",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
       "cause": "suicide",
       "count": 1,
       "published": true,
@@ -2490,7 +2544,7 @@
       "year": "2023",
       "month": "08",
       "day": "09",
-      "keywords": "idf",
+      "keywords": "idf, Thomas",
       "house": "pn",
       "houseLogo": null,
       "peers": [],
@@ -2592,6 +2646,41 @@
         {
           "url": "https://lavoixdugendarme.fr/deces-en-service-des-suites-dun-accident-dune-gendarme-adjointe-volontaire-doraison-04/",
           "title": "La Voix du Gendarme",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "08",
+      "day": "17",
+      "keywords": "Robert",
+      "house": "pn",
+      "houseLogo": null,
+      "peers": [],
+      "text": "Un policier de la circonscription de Melun a mis fin à ses jours avec son arme administrative.\n_Peu d'informations disponibles sur ce suicide._",
+      "section": "CSP Melun",
+      "location": "Melun",
+      "image": null,
+      "county": "77",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.543240558098205,
+        "lng": 2.660601597754935
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "",
+          "title": "FFOC",
           "paywall": false,
           "trustful": true
         }
@@ -2791,7 +2880,7 @@
       "year": "2023",
       "month": "08",
       "day": "25",
-      "keywords": "",
+      "keywords": "CAMILLE",
       "house": "pn",
       "houseLogo": null,
       "peers": [],
@@ -2913,7 +3002,7 @@
       "year": "2023",
       "month": "09",
       "day": "03",
-      "keywords": "",
+      "keywords": "Fabien",
       "house": "pn",
       "houseLogo": "pj",
       "peers": [],
@@ -3005,6 +3094,53 @@
         {
           "url": "https://www.lamontagne.fr/riom-63200/actualites/un-policier-de-la-crs-48-de-chatel-guyon-decede-a-l-entrainement-dans-l-yonne_14367742/",
           "title": "La Montagne",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "09",
+      "day": "12",
+      "keywords": "Cyril",
+      "house": "pn",
+      "houseLogo": "crs",
+      "peers": [],
+      "text": "Un autre policier affecté à la CRS 20 de Limoges a mit fin à ses jours.\nIl était marié père de deux enfants.",
+      "section": "CRS 20",
+      "location": "Limoges",
+      "image": null,
+      "county": "87",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.858470207657525,
+        "lng": 1.2925826741424888
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.lanouvellerepublique.fr/haute-vienne/un-policier-se-suicide-avec-son-arme-de-service-a-limoges",
+          "title": "La Nouvelle République",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/limoges-un-policier-de-la-crs-20-se-suicide-avec-son-arme-de-service-2063958",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.20minutes.fr/societe/4052782-20230913-limoges-suicide-crs-arme-service",
+          "title": "20 minutes",
           "paywall": false,
           "trustful": true
         }
@@ -3189,7 +3325,7 @@
       "year": "2023",
       "month": "10",
       "day": "18",
-      "keywords": "",
+      "keywords": "David",
       "house": "pn",
       "houseLogo": null,
       "peers": [],
@@ -3701,12 +3837,12 @@
       "year": "2023",
       "month": "11",
       "day": "13",
-      "keywords": "",
+      "keywords": "CHRISTOPHE SARTIN",
       "house": "pn",
       "houseLogo": null,
       "peers": [],
       "text": "Un policier du commissariat de Montluçon a mit fin à ses jours et a été retrouvé aux abords des bois de la commune de Domérat.\nIl était pacsé et père d'un enfant.",
-      "section": "CSP Montluçon",
+      "section": "UPS",
       "location": "Montluçon",
       "image": null,
       "county": "03",
@@ -3722,6 +3858,12 @@
         {
           "url": "https://actu17.fr/faits-divers/allier-un-policier-affecte-au-commissariat-de-montlucon-sest-suicide.html",
           "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "",
+          "title": "FFOC",
           "paywall": false,
           "trustful": true
         }
@@ -3871,6 +4013,41 @@
           "title": "Actu.fr",
           "paywall": false,
           "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2023",
+      "month": "12",
+      "day": "24",
+      "keywords": "MICKAEL",
+      "house": "pn",
+      "houseLogo": "crs",
+      "peers": [],
+      "text": "Un policier de la CRS 48 a mit fin à ses jours par pendaison à son domicile.",
+      "section": "CRS 48",
+      "location": "Châtel-Guyon",
+      "image": null,
+      "county": "63",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 45.922903957393494,
+        "lng": 3.0697326208284763
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "",
+          "title": "FFOC",
+          "paywall": false,
+          "trustful": false
         }
       ]
     },
