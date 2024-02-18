@@ -4710,7 +4710,7 @@
       "cause": "suicide",
       "count": 1,
       "published": true,
-      "orphans": 0,
+      "orphans": 1,
       "unpublished_reason": "",
       "year": "2022",
       "month": "11",
