@@ -1,5 +1,5 @@
-/** SW auto-generated on 2024-01-02T19:17:38.505Z **/
-const CACHE_KEY = 'im-4.24.3+20240102T191738';
+/** SW auto-generated on 2024-02-18T16:53:37.191Z **/
+const CACHE_KEY = 'im-4.24.4+20240218T165337';
 const assets = [
   'assets/css/fonts/fa-solid-900.ttf',
   'assets/css/fonts/fa-solid-900.woff2',
@@ -25,6 +25,8 @@ const assets = [
   'assets/images/house/crs.png',
   'assets/images/house/douane-m.png',
   'assets/images/house/douane.png',
+  'assets/images/house/eris-m.png',
+  'assets/images/house/eris.png',
   'assets/images/house/gn-m.png',
   'assets/images/house/gn.png',
   'assets/images/house/misc-m.png',
@@ -41,6 +43,8 @@ const assets = [
   'assets/images/house/pompier.png',
   'assets/images/house/secciv-m.png',
   'assets/images/house/secciv.png',
+  'assets/images/house/snps-m.png',
+  'assets/images/house/snps.png',
   'assets/images/map/bluedot.png',
   'assets/images/map/chart.png',
   'assets/images/map/clustering_off.png',
