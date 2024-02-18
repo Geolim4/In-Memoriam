@@ -6,5 +6,437 @@
     "stats_enabled": true,
     "up_to_date": true
   },
-  "deaths": []
+  "deaths": [
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2024",
+      "month": "01",
+      "day": "05",
+      "keywords": "Boris Carel",
+      "house": "gn",
+      "houseLogo": null,
+      "peers": [],
+      "text": "Un gendarme mobile de l'escadron 24/2 de Bayonne a mit fins à ses jours lors d'une mission à Mayotte.\nIl était pacsé et père de deux enfants.",
+      "section": "EGM 24/2",
+      "location": "Kangani, Koungou",
+      "image": null,
+      "county": "976",
+      "origin": "domtom",
+      "gps": {
+        "accurate": false,
+        "radius": 800,
+        "lat": -12.735089011307235,
+        "lng": 45.18635762107003
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/mayotte-un-gendarme-mobile-de-31-ans-sest-suicide-avec-son-arme-de-service.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/suicide-d-un-gendarme-mobile-a-mayotte-2024-01",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://la1ere.francetvinfo.fr/mayotte/un-gendarme-mobile-s-est-suicide-avec-son-arme-de-service-1455011.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2024",
+      "month": "01",
+      "day": "24",
+      "keywords": "Alexandre Dousseau",
+      "house": "pompier",
+      "houseLogo": "",
+      "peers": [],
+      "text": "Un pompier du SDIS 67 a mit fin à ses jours.\nPompier professionnel à Strasbourg et également volontaire à Bischoffsheim, il était marié et père de deux jeunes filles.",
+      "section": "SDIS 67",
+      "location": "Strasbourg",
+      "image": null,
+      "county": "67",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.57905385253568,
+        "lng": 7.743801236107013
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.facebook.com/Sdis67/posts/395167162897060",
+          "title": "@Sdis67 (Facebook)",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2024",
+      "month": "01",
+      "day": "29",
+      "keywords": "Thomas Binder",
+      "house": "gn",
+      "houseLogo": null,
+      "peers": [],
+      "text": "Un gendarme de 43 ans du PGHM de Hohrod a perdu la vie lors d'un entraînement dans le Haut-Rhin à la suite d'un éboulement dans le secteur de Spitzkoepfe.\nIl était père d'un enfant.",
+      "section": "PGHM",
+      "location": "Hohrod",
+      "image": {
+        "filename": "thomas-binder.jpg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "",
+        "origin": "@36qdo",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "68",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.048324835782246,
+        "lng": 7.120266508568864
+      },
+      "homage": {
+        "title": "Ministère de l'Intérieur",
+        "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/actualites/2024/deces-d-un-sous-officier-du-pghm-d-hohrod-dans-l-exercice-de-ses-fonctions"
+      },
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/haut-rhin-un-gendarme-decede-durant-un-exercice-en-montagne.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://lessor.org/vie-des-personnels/suicide-d-un-gendarme-mobile-a-mayotte-2024-01",
+          "title": "L'Essor",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/grand-est/metzeral_68204/haut-rhin-un-gendarme-meurt-pendant-un-exercice-en-montagne_60632464.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/haut-rhin-un-gendarme-meurt-lors-d-un-exercice-en-montagne-8723256",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "malaise",
+      "count": 1,
+      "published": true,
+      "orphans": 1,
+      "unpublished_reason": "",
+      "year": "2024",
+      "month": "02",
+      "day": "02",
+      "keywords": "Fabrice Gaveriaux",
+      "house": "gn",
+      "houseLogo": null,
+      "peers": [],
+      "text": "Un gendarme de la brigade de Saint-Quentin est décédé des suite d'un malaise cardiaque.",
+      "section": "CoB",
+      "location": "Saint-Quentin",
+      "image": {
+        "filename": "fabrice-gaveriaux.jpeg",
+        "kind": "image",
+        "directory": "gallery",
+        "desc": "",
+        "origin": "@36qdo",
+        "licence": "CC BY-ND 2.0"
+      },
+      "county": "02",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.84488886637087,
+        "lng": 3.2950214576553503
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.lunion.fr/id565568/article/2024-02-04/un-gendarme-saint-quentinois-est-mort-dune-crise-cardiaque",
+          "title": "L'Union",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.aisnenouvelle.fr/id490732/article/2024-02-04/le-major-gaveriaux-gendarme-de-saint-quentin-decede-ce-vendredi-2-fevrier-laisse",
+          "title": "Aisne Nouvelle",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/grand-est/metzeral_68204/haut-rhin-un-gendarme-meurt-pendant-un-exercice-en-montagne_60632464.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/haut-rhin-un-gendarme-meurt-lors-d-un-exercice-en-montagne-8723256",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2024",
+      "month": "02",
+      "day": "08",
+      "keywords": "SNPS, Écully",
+      "house": "pn",
+      "houseLogo": "snps",
+      "peers": [],
+      "text": "Une policière scientifique du SDPTS de Rennes a mit fin à ses jours dans sa chambre d'hôtel du 14e arrondissement de Paris.",
+      "section": "SDPTS 35",
+      "location": "Rennes",
+      "image": null,
+      "county": "35",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.106196697341865,
+        "lng": -1.6853330020452995
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/paris-une-technicienne-de-la-police-scientifique-retrouvee-morte-dans-une-chambre-dhotel.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://actu.fr/ile-de-france/paris_75056/paris-mort-d-une-technicienne-de-la-police-scientifique-dans-un-hotel_60675601.html",
+          "title": "Actu.fr",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2024",
+      "month": "02",
+      "day": "08",
+      "keywords": "Grégory Lesecq",
+      "house": "admpen",
+      "houseLogo": "eris",
+      "peers": [],
+      "text": "Un agent pénitentiaire de l'antenne ERIS de Lille est décédé dans un accident de la route pendant un transfert de détenu.",
+      "section": "ERIS",
+      "location": "Uchizy",
+      "image": null,
+      "county": "71",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 100,
+        "lat": 46.50382837264367,
+        "lng": 4.905371221432053
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://www.lejsl.com/faits-divers-justice/2024/02/08/un-blesse-grave-et-trois-legers-dans-un-accident-sur-l-autoroute-a6",
+          "title": "Le JSL",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.lavoixdunord.fr/1428669/article/2024-02-09/un-agent-penitentiaire-de-lille-meurt-dans-un-accident-pres-de-macon-lors-d-un",
+          "title": "La Voix du Nord",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.instagram.com/p/C3I4458MDld/",
+          "title": "@36quaidesorfevres",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "deathOnDuty",
+      "count": 1,
+      "published": true,
+      "orphans": 2,
+      "unpublished_reason": "",
+      "year": "2024",
+      "month": "02",
+      "day": "10",
+      "keywords": " Jérémie Fontaine",
+      "house": "pompier",
+      "houseLogo": "",
+      "peers": [],
+      "text": "Un pompier volontaire du SDIS 02 est mort en intervention lors d'un accident de la route.",
+      "section": "SDIS 02",
+      "location": "Trélou-sur-Marne",
+      "image": null,
+      "county": "02",
+      "origin": "interieur",
+      "gps": {
+        "accurate": false,
+        "radius": 600,
+        "lat": 49.07676096222658,
+        "lng": 3.612125234535779
+      },
+      "homage": {
+        "title": "Préfecture de l'Aisne",
+        "url": "https://www.aisne.gouv.fr/Publications/Espace-presse/Communiques-et-dossiers-de-presse-2024/10-02-Deces-d-un-sapeur-pompier-volontaire-du-SDIS-de-l-Aisne"
+      },
+      "sources": [
+        {
+          "url": "https://twitter.com/Sdis02/status/1758511233962029154",
+          "title": "@Sdis02",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/aisne/mort-d-un-pompier-volontaire-dans-un-accident-de-la-route-alors-qu-il-partait-en-intervention-2922783.html",
+          "title": "France Info",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.leparisien.fr/faits-divers/aisne-un-pompier-volontaire-meurt-dans-un-accident-de-voiture-en-partant-en-intervention-11-02-2024-RL7LZFSUHNAMLFSZVXS4TU5ZFA.php",
+          "title": "Le Parisien",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/un-pompier-volontaire-de-35-ans-meurt-en-intervention-dans-l-aisne-4575201",
+          "title": "France Bleu",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2024",
+      "month": "02",
+      "day": "10",
+      "keywords": "",
+      "house": "gn",
+      "houseLogo": "",
+      "peers": [],
+      "text": "Un gendarme du PMo de Beaumont-sur-Oise a mit fin à ses jours avec son arme administrative.",
+      "section": "PMo",
+      "location": "Beaumont-sur-Oise",
+      "image": null,
+      "county": "95",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 49.1376798572056,
+        "lng": 2.283504034360499
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://lavoixdugendarme.fr/val-doise-deces-de-ladjudant-chef-cyril-c-du-peloton-motorise-de-beaumont-sur-oise/",
+          "title": "La Voix du Gendarme",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.facebook.com/gendarmerieduvaldoise/posts/705813295074790",
+          "title": "@gendarmerieduvaldoise (Facebook)",
+          "paywall": false,
+          "trustful": true
+        },
+        {
+          "url": "https://www.instagram.com/p/C3OJgSKsN9g/",
+          "title": "@36quaidesorfevres",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    },
+    {
+      "cause": "suicide",
+      "count": 1,
+      "published": true,
+      "orphans": 0,
+      "unpublished_reason": "",
+      "year": "2024",
+      "month": "02",
+      "day": "17",
+      "keywords": "",
+      "house": "pn",
+      "houseLogo": "",
+      "peers": [],
+      "text": "Un policier du CIC 78 a mit fin à ses jours avec son arme administrative.\nPeu d'informations disponibles sur ce suicide.",
+      "section": "CIC 78",
+      "location": "Viroflay",
+      "image": null,
+      "county": "78",
+      "origin": "interieur",
+      "gps": {
+        "accurate": true,
+        "radius": 0,
+        "lat": 48.80594174572074,
+        "lng": 2.1650405412718317
+      },
+      "homage": null,
+      "sources": [
+        {
+          "url": "https://actu17.fr/faits-divers/yvelines-un-policier-du-cic-78-se-suicide-a-son-domicile.html",
+          "title": "Actu17",
+          "paywall": false,
+          "trustful": true
+        }
+      ]
+    }
+  ]
 }
