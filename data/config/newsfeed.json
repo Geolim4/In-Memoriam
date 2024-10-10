@@ -1,3 +1,12 @@
 {
-  "newsfeed": []
+  "newsfeed": [
+    {
+      "code": "end-of-life",
+      "title": "Fermeture de cette cartographie",
+      "content": "<b>[18/02/2024]</b> Faute de temps et de soutien, je ne suis malheureusement plus en mesure de pouvoir alimenter ni maintenir cette cartographie.<br />J'ai passé 5 ans à la développer et la maintenir non sans une certaine motivation et fierté, mais je n'y arrive plus, désolé :( <br />Celle-ci restera en ligne, mais ne sera désormais plus alimentée.\n Si vous avez connaissance d'un développeur qui voudrait la reprendre ou m'accompagner sur le long terme, n'hésitez pas <a href=\"#fwd2:contact-us\">à me le faire savoir</a> !<br /><em>Amicalement, Georges.L.</em>",
+      "type": "modal",
+      "once": false,
+      "isError": true
+    }
+  ]
 }
